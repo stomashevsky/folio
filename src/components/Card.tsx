@@ -5,7 +5,7 @@ import { IconName } from '../constants/icons'
 
 export interface CardProps {
   icon: IconName
-  badge: string
+  badge?: string
   badgeVariant?: 'primary' | 'secondary' | BadgeColorVariant
   title: string
   description: string

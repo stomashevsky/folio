@@ -8,7 +8,6 @@ export const BADGE_LABELS = {
   PRE_AUTHORIZED: 'Pre-authorized',
   TRANSACTION_CODE: 'Transaction Code',
   PRESENTATION: 'Presentation',
-  VERIFIED_REQUESTER: 'Verified requester',
 } as const
 
 export const BADGE_LABEL_VALUES = Object.values(BADGE_LABELS)
