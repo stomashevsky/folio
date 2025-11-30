@@ -27,6 +27,14 @@ export default function DesktopNav() {
     }
   }
 
+  const handleNavClick = (e: React.MouseEvent, path: string) => {
+    const isCurrentPage = isActive(path)
+    if (isCurrentPage) {
+      e.preventDefault()
+      scrollToTop()
+    }
+  }
+
   return (
     <div className="hidden lg:flex flex-col items-center justify-center w-full">
       <div className="flex items-center justify-between relative w-full max-w-[1280px] px-6 mx-auto">
@@ -39,7 +47,7 @@ export default function DesktopNav() {
         </div>
 
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-1 items-center">
-          <Link to="/">
+          <Link to="/" onClick={(e) => handleNavClick(e, '/')}>
             <Button
               variant="ghost"
               className={isActive('/') && location.pathname === '/' ? 'bg-[#f5f5f5]' : ''}
@@ -48,7 +56,7 @@ export default function DesktopNav() {
               Personal Use
             </Button>
           </Link>
-          <Link to="/business">
+          <Link to="/business" onClick={(e) => handleNavClick(e, '/business')}>
             <Button
               variant="ghost"
               className={isActive('/business') ? 'bg-[#f5f5f5]' : ''}
@@ -57,7 +65,7 @@ export default function DesktopNav() {
               Business
             </Button>
           </Link>
-          <Link to="/government">
+          <Link to="/government" onClick={(e) => handleNavClick(e, '/government')}>
             <Button
               variant="ghost"
               className={isActive('/government') ? 'bg-[#f5f5f5]' : ''}
@@ -66,7 +74,7 @@ export default function DesktopNav() {
               Government
             </Button>
           </Link>
-          <Link to="/identity-lab">
+          <Link to="/identity-lab" onClick={(e) => handleNavClick(e, '/identity-lab')}>
             <Button
               variant="ghost"
               className={isActive('/identity-lab') ? 'bg-[#f5f5f5]' : ''}
@@ -75,7 +83,7 @@ export default function DesktopNav() {
               Identity Lab
             </Button>
           </Link>
-          <Link to="/blog">
+          <Link to="/blog" onClick={(e) => handleNavClick(e, '/blog')}>
             <Button
               variant="ghost"
               className={isActive('/blog') ? 'bg-[#f5f5f5]' : ''}

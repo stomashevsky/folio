@@ -13,8 +13,14 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const location = useLocation()
 
   const handleNavClick = (path: string) => {
-    onClose()
-    navigate(path)
+    const isCurrentPage = isActive(path)
+    if (isCurrentPage) {
+      onClose()
+      scrollToTop()
+    } else {
+      onClose()
+      navigate(path)
+    }
   }
 
   const isActive = (path: string) => {
