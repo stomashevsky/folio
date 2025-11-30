@@ -2,6 +2,7 @@ import facebookIcon from '../../assets/icons/facebook.svg'
 import instagramIcon from '../../assets/icons/instagram.svg'
 import linkedinIcon from '../../assets/icons/linkedin.svg'
 import xTwitterIcon from '../../assets/icons/x-twitter.svg'
+import { FOCUS_STYLES } from './focusStyles'
 
 interface SocialIconProps {
   name: 'instagram' | 'facebook' | 'linkedin' | 'x'
@@ -50,7 +51,7 @@ export default function SocialIcon({
         href={href}
         target={target}
         rel={rel}
-        className="transition-opacity duration-150 hover:opacity-70"
+        className={`transition-opacity duration-150 hover:opacity-70 rounded-md ${FOCUS_STYLES}`}
         aria-label={`${name} social media link`}
       >
         {icon}

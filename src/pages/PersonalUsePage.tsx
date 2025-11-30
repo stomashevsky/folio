@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Navbar from '../components/Navbar'
-import { SectionHeader } from '../components/ui'
+import { SectionHeader, Button } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import FAQSection, { FAQItem } from '../components/sections/FAQSection'
 import Accordion, { AccordionItemData } from '../components/ui/Accordion'
@@ -114,24 +114,22 @@ export default function PersonalUsePage() {
               </p>
             </div>
             <div className="flex flex-wrap gap-3 items-start relative">
-              <a
+              <Button
                 href="https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#171717] box-border flex gap-2 h-9 items-center justify-center px-4 py-2 relative rounded-md shrink-0 text-[#fafafa] text-sm font-medium leading-5 whitespace-nowrap hover:opacity-90 transition-opacity"
+                variant="primary"
+                icon={<img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />}
               >
-                <span>Download for iOS</span>
-                <img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />
-              </a>
-              <a
+                Download for iOS
+              </Button>
+              <Button
                 href="https://play.google.com/store/apps/details?id=com.folioltd"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#171717] box-border flex gap-2 h-9 items-center justify-center px-4 py-2 relative rounded-md shrink-0 text-[#fafafa] text-sm font-medium leading-5 whitespace-nowrap hover:opacity-90 transition-opacity"
+                variant="primary"
+                icon={<img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />}
               >
-                <span>Download for Android</span>
-                <img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />
-              </a>
+                Download for Android
+              </Button>
             </div>
           </div>
           <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
@@ -157,24 +155,22 @@ export default function PersonalUsePage() {
               </p>
             </div>
             <div className="flex flex-col gap-3 items-start relative shrink-0">
-              <a
+              <Button
                 href="https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#171717] box-border flex gap-2 h-9 items-center justify-center px-4 py-2 relative rounded-md shrink-0 text-[#fafafa] text-sm font-medium leading-5 whitespace-nowrap hover:opacity-90 transition-opacity"
+                variant="primary"
+                icon={<img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />}
               >
-                <span>Download for iOS</span>
-                <img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />
-              </a>
-              <a
+                Download for iOS
+              </Button>
+              <Button
                 href="https://play.google.com/store/apps/details?id=com.folioltd"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#171717] box-border flex gap-2 h-9 items-center justify-center px-4 py-2 relative rounded-md shrink-0 text-[#fafafa] text-sm font-medium leading-5 whitespace-nowrap hover:opacity-90 transition-opacity"
+                variant="primary"
+                icon={<img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />}
               >
-                <span>Download for Android</span>
-                <img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />
-              </a>
+                Download for Android
+              </Button>
             </div>
           </div>
           <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
@@ -525,24 +521,22 @@ function GetTheAppSection() {
           </p>
         </div>
         <div className="flex flex-1 flex-wrap gap-3 items-start justify-end relative min-w-0">
-          <a
+          <Button
             href="https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717"
             target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#171717] box-border flex gap-2 h-9 items-center justify-center px-4 py-2 relative rounded-md shrink-0 text-[#fafafa] text-sm font-medium leading-5 whitespace-nowrap hover:opacity-90 transition-opacity"
+            variant="primary"
+            icon={<img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />}
           >
-            <span>Download for iOS</span>
-            <img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />
-          </a>
-          <a
+            Download for iOS
+          </Button>
+          <Button
             href="https://play.google.com/store/apps/details?id=com.folioltd"
             target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#171717] box-border flex gap-2 h-9 items-center justify-center px-4 py-2 relative rounded-md shrink-0 text-[#fafafa] text-sm font-medium leading-5 whitespace-nowrap hover:opacity-90 transition-opacity"
+            variant="primary"
+            icon={<img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />}
           >
-            <span>Download for Android</span>
-            <img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />
-          </a>
+            Download for Android
+          </Button>
         </div>
       </div>
 
@@ -557,24 +551,24 @@ function GetTheAppSection() {
           </p>
         </div>
         <div className="flex flex-col gap-3 items-center relative shrink-0 w-full">
-          <a
+          <Button
             href="https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717"
             target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#171717] box-border flex gap-2 h-9 items-center justify-center px-4 py-2 relative rounded-md shrink-0 text-[#fafafa] text-sm font-medium leading-5 whitespace-nowrap hover:opacity-90 transition-opacity"
+            variant="primary"
+            fullWidth
+            icon={<img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />}
           >
-            <span>Download for iOS</span>
-            <img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />
-          </a>
-          <a
+            Download for iOS
+          </Button>
+          <Button
             href="https://play.google.com/store/apps/details?id=com.folioltd"
             target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#171717] box-border flex gap-2 h-9 items-center justify-center px-4 py-2 relative rounded-md shrink-0 text-[#fafafa] text-sm font-medium leading-5 whitespace-nowrap hover:opacity-90 transition-opacity"
+            variant="primary"
+            fullWidth
+            icon={<img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />}
           >
-            <span>Download for Android</span>
-            <img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />
-          </a>
+            Download for Android
+          </Button>
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { LogoButton, Button } from '../ui'
 import { scrollToTop } from '../../utils/scrollToTop'
 import { scrollToSection } from '../../utils/scrollToSection'
@@ -28,8 +28,7 @@ export default function DesktopNav() {
     }
   }
 
-  const handleNavClick = (e: React.MouseEvent, path: string) => {
-    e.preventDefault()
+  const handleNavClick = (path: string) => {
     const isCurrentPage = isActive(path)
     if (isCurrentPage) {
       scrollToTop()
@@ -67,51 +66,46 @@ export default function DesktopNav() {
         </div>
 
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-1 items-center">
-          <Link to="/" onClick={(e) => handleNavClick(e, '/')}>
-            <Button
-              variant="ghost"
-              className={isActive('/') && location.pathname === '/' ? 'bg-[#f5f5f5]' : ''}
-              aria-current={isActive('/') && location.pathname === '/' ? 'page' : undefined}
-            >
-              Personal Use
-            </Button>
-          </Link>
-          <Link to="/business" onClick={(e) => handleNavClick(e, '/business')}>
-            <Button
-              variant="ghost"
-              className={isActive('/business') ? 'bg-[#f5f5f5]' : ''}
-              aria-current={isActive('/business') ? 'page' : undefined}
-            >
-              Business
-            </Button>
-          </Link>
-          <Link to="/government" onClick={(e) => handleNavClick(e, '/government')}>
-            <Button
-              variant="ghost"
-              className={isActive('/government') ? 'bg-[#f5f5f5]' : ''}
-              aria-current={isActive('/government') ? 'page' : undefined}
-            >
-              Government
-            </Button>
-          </Link>
-          <Link to="/identity-lab" onClick={(e) => handleNavClick(e, '/identity-lab')}>
-            <Button
-              variant="ghost"
-              className={isActive('/identity-lab') ? 'bg-[#f5f5f5]' : ''}
-              aria-current={isActive('/identity-lab') ? 'page' : undefined}
-            >
-              Identity Lab
-            </Button>
-          </Link>
-          <Link to="/blog" onClick={(e) => handleNavClick(e, '/blog')}>
-            <Button
-              variant="ghost"
-              className={isActive('/blog') ? 'bg-[#f5f5f5]' : ''}
-              aria-current={isActive('/blog') ? 'page' : undefined}
-            >
-              Blog
-            </Button>
-          </Link>
+          <Button
+            variant="ghost"
+            onClick={() => handleNavClick('/')}
+            className={isActive('/') && location.pathname === '/' ? 'bg-[#f5f5f5]' : ''}
+            aria-current={isActive('/') && location.pathname === '/' ? 'page' : undefined}
+          >
+            Personal Use
+          </Button>
+          <Button
+            variant="ghost"
+            onClick={() => handleNavClick('/business')}
+            className={isActive('/business') ? 'bg-[#f5f5f5]' : ''}
+            aria-current={isActive('/business') ? 'page' : undefined}
+          >
+            Business
+          </Button>
+          <Button
+            variant="ghost"
+            onClick={() => handleNavClick('/government')}
+            className={isActive('/government') ? 'bg-[#f5f5f5]' : ''}
+            aria-current={isActive('/government') ? 'page' : undefined}
+          >
+            Government
+          </Button>
+          <Button
+            variant="ghost"
+            onClick={() => handleNavClick('/identity-lab')}
+            className={isActive('/identity-lab') ? 'bg-[#f5f5f5]' : ''}
+            aria-current={isActive('/identity-lab') ? 'page' : undefined}
+          >
+            Identity Lab
+          </Button>
+          <Button
+            variant="ghost"
+            onClick={() => handleNavClick('/blog')}
+            className={isActive('/blog') ? 'bg-[#f5f5f5]' : ''}
+            aria-current={isActive('/blog') ? 'page' : undefined}
+          >
+            Blog
+          </Button>
         </div>
 
         <div className="flex-shrink-0 z-10">

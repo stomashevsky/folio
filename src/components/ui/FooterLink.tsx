@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { FOCUS_STYLES } from './focusStyles'
 
 interface FooterLinkProps {
   to?: string
@@ -24,7 +25,7 @@ export default function FooterLink({
   className = '',
   onClick,
 }: FooterLinkProps) {
-  const baseClasses = 'text-sm font-normal leading-5 text-[#0a0a0a] no-underline transition-opacity duration-150 hover:opacity-60 cursor-pointer'
+  const baseClasses = `text-sm font-normal leading-5 text-[#0a0a0a] no-underline transition-opacity duration-150 hover:opacity-60 cursor-pointer rounded-md ${FOCUS_STYLES}`
   const combinedClasses = `${baseClasses} ${className}`
 
   // External link

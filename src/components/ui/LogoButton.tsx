@@ -1,6 +1,7 @@
 import { MouseEvent } from 'react'
 import Logo from './Logo'
 import { scrollToSection } from '../../utils/scrollToSection'
+import { FOCUS_STYLES } from './focusStyles'
 
 interface LogoButtonProps {
   href?: string
@@ -29,7 +30,7 @@ export default function LogoButton({
     }
   }
 
-  const baseClasses = 'flex items-center justify-center outline-none focus-visible:outline-none focus-visible:shadow-[0px_0px_0px_3px_rgba(163,163,163,0.5)]'
+  const baseClasses = `flex items-center justify-center rounded-md ${FOCUS_STYLES}`
 
   if (href) {
     return (
