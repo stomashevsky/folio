@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Navbar from '../components/Navbar'
-import { SectionHeader, Button } from '../components/ui'
+import { SectionHeader, Button, ToolCard } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import FAQSection, { FAQItem } from '../components/sections/FAQSection'
 import Accordion, { AccordionItemData } from '../components/ui/Accordion'
@@ -349,7 +349,7 @@ export default function PersonalUsePage() {
               description="Folio includes thoughtful features that make everyday use easier and help you track trips, find documents instantly, share with confidence and stay ahead of important dates."
               maxWidth="576px"
             />
-            <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start sm:items-stretch justify-center w-full">
+            <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
               <ToolCard
                 icon={calendarRangeIcon}
                 title="Travel Timeline"
@@ -485,27 +485,6 @@ function ImportMethod({ icon, title, description }: { icon: string; title: strin
   )
 }
 
-function ToolCard({ icon, title, description }: { icon: string; title: string; description: string }) {
-  return (
-    <div className="bg-white border border-[#e5e5e5] border-solid w-full sm:max-w-none relative rounded-2xl shrink-0 sm:h-full flex flex-col">
-      <div className="flex flex-col gap-6 items-start p-6 w-full flex-1">
-        <div className="flex gap-2 items-start w-full">
-          <div className="bg-white border border-[#e5e5e5] border-solid flex items-center justify-center relative rounded-md shrink-0 size-10">
-            <img src={icon} alt="" aria-hidden="true" className="w-5 h-5" />
-          </div>
-        </div>
-        <div className="flex flex-col gap-1.5 items-start w-full flex-1">
-          <p className="font-semibold leading-6 overflow-ellipsis overflow-hidden relative shrink-0 text-base text-[#0a0a0a] w-full whitespace-nowrap">
-            {title}
-          </p>
-          <p className="font-normal leading-5 sm:min-h-[80px] relative shrink-0 text-[#737373] text-sm w-full whitespace-pre-wrap">
-            {description}
-          </p>
-        </div>
-      </div>
-    </div>
-  )
-}
 
 function GetTheAppSection() {
   return (

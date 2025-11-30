@@ -1,8 +1,12 @@
 import Navbar from '../components/Navbar'
-import { SectionHeader, Button } from '../components/ui'
+import { SectionHeader, Button, ToolCard } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import checkIcon from '../assets/icons/check.svg'
+import calendarFoldIcon from '../assets/icons/calendar-fold.svg'
+import codeXmlIcon from '../assets/icons/code-xml.svg'
+import globeIcon from '../assets/icons/globe.svg'
+import sendIcon from '../assets/icons/send.svg'
 
 // TODO: Replace placeholder image with actual Business page images from Figma:
 // - business-hero.png (Hero section image)
@@ -160,6 +164,41 @@ export default function BusinessPage() {
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               loading="lazy"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Why Folio Section */}
+      <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
+        <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+          <div className="flex flex-col gap-10 items-center relative shrink-0 w-full">
+            <SectionHeader
+              title="Why Folio instead of Apple Wallet or Google Wallet"
+              description="A simpler and more universal way to deliver digital tickets without platform limits or complex formats."
+              maxWidth="576px"
+            />
+            <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
+              <ToolCard
+                icon={codeXmlIcon}
+                title="No special formats"
+                description="You do not need to create pass files or manage certificates. Folio works with simple data you already send."
+              />
+              <ToolCard
+                icon={sendIcon}
+                title="Fits your existing workflow"
+                description="If you can send a PDF or email, you can issue tickets for Folio. No new systems, no mobile team, no setup."
+              />
+              <ToolCard
+                icon={calendarFoldIcon}
+                title="Everything in one place"
+                description="All tickets and bookings appear in a simple timeline that helps customers see their plans at a glance."
+              />
+              <ToolCard
+                icon={globeIcon}
+                title="Available to everyone"
+                description="Your tickets work the same on iOS and Android in any region, even for users who do not use wallet apps."
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -397,3 +436,4 @@ function FeatureListItem({ text }: { text: string }) {
     </div>
   )
 }
+
