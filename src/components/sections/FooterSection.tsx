@@ -16,7 +16,7 @@ export default function FooterSection() {
         </div>
 
         {/* Main content grid */}
-        <div className="box-border flex flex-wrap gap-6 md:gap-12 items-start px-6 py-10 relative shrink-0 w-full">
+        <div className="box-border flex flex-wrap gap-12 items-start px-6 py-10 relative shrink-0 w-full">
           {/* Left column: Logo and contact info */}
           <div className="box-border flex flex-col gap-6 items-start min-h-px min-w-[200px] pr-0 md:pr-12 py-0 relative shrink-0 w-full md:flex-[1_0_0] md:w-auto">
             <Logo size={28} />
