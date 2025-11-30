@@ -39,13 +39,6 @@ export default function SectionHeader({
 
   return (
     <div className={`flex flex-col gap-4 md:gap-5 ${align === 'left' ? 'md:gap-6' : ''} ${alignClasses} ${maxWidthClass} relative shrink-0 w-full`}>
-      {label && (
-        <div className="flex gap-1 items-center justify-center">
-          <p className="font-medium leading-5 text-sm text-[#737373]">
-            {label}
-          </p>
-        </div>
-      )}
       <HeadingTag className={headingClasses}>
         {title}
       </HeadingTag>
