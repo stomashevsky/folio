@@ -105,7 +105,7 @@ export default function PersonalUsePage() {
       <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full">
         {/* Desktop Layout */}
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex flex-1 flex-col gap-8 items-start relative shrink-0">
+          <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
                 All documents, beautifully arranged
@@ -114,7 +114,7 @@ export default function PersonalUsePage() {
                 Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find. Your essential information is always at hand when you need it.
               </p>
             </div>
-            <div className="flex gap-3 items-start relative shrink-0">
+            <div className="flex flex-wrap gap-3 items-start relative">
               <a
                 href="https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717"
                 target="_blank"
@@ -135,7 +135,7 @@ export default function PersonalUsePage() {
               </a>
             </div>
           </div>
-          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl shrink-0 aspect-[240/240]">
+          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
             <img 
               src={personalUseHero} 
               alt="Folio documents preview" 
@@ -194,7 +194,7 @@ export default function PersonalUsePage() {
       <section id="everything-in-one-place" className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
         {/* Desktop Layout */}
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl shrink-0 aspect-[240/240]">
+          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
             <img 
               src={activeFeature.desktopImage} 
               alt={activeFeature.title}
@@ -202,7 +202,7 @@ export default function PersonalUsePage() {
               loading="lazy"
             />
           </div>
-          <div className="flex flex-1 flex-col gap-8 items-start relative shrink-0">
+          <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
             <SectionHeader
               label="Features"
               title="Everything in one place"
@@ -312,7 +312,7 @@ export default function PersonalUsePage() {
       <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
         {/* Desktop Layout */}
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl shrink-0 aspect-[240/240]">
+          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
             <img
               src={documentViewer}
               alt="Document viewer interface"
@@ -320,7 +320,7 @@ export default function PersonalUsePage() {
               loading="lazy"
             />
           </div>
-          <div className="flex flex-1 flex-col gap-8 items-start relative shrink-0">
+          <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
             <SectionHeader
               label="Document Viewer"
               title="A clean view of every document"
@@ -438,7 +438,7 @@ function TicketsAndBookingsSection() {
     <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-24 relative shrink-0 w-full">
       {/* Desktop Layout */}
       <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-        <div className="flex flex-1 flex-col gap-8 items-start relative shrink-0">
+        <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
           <SectionHeader
             label="Tickets and Bookings"
             title="Travel plans, thoughtfully organized"
@@ -452,7 +452,7 @@ function TicketsAndBookingsSection() {
             showMobileImages={false}
           />
         </div>
-        <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl shrink-0 aspect-[240/240]">
+        <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
           <img 
             src={activeItem.image} 
             alt={activeItem.title}
@@ -525,8 +525,8 @@ function GetTheAppSection() {
   return (
     <section id="get-the-app" className="flex flex-col gap-6 items-center overflow-hidden px-0 md:px-6 py-0 md:pb-24 relative shrink-0 w-full bg-white">
       {/* Desktop Layout */}
-      <div className="hidden md:flex gap-16 items-center max-w-[1280px] p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5]">
-        <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px]">
+      <div className="hidden md:flex gap-16 items-center max-w-[1280px] p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
+        <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px] min-w-0">
           <h2 className="font-bold leading-8 text-2xl text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
             Take Folio with you, wherever you go
           </h2>
@@ -534,7 +534,7 @@ function GetTheAppSection() {
             Your documents stay organized, synced and instantly accessible on iOS and Android.
           </p>
         </div>
-        <div className="flex gap-3 items-start relative shrink-0">
+        <div className="flex flex-1 flex-wrap gap-3 items-start justify-end relative min-w-0">
           <a
             href="https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717"
             target="_blank"
