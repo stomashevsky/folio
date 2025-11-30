@@ -63,7 +63,7 @@ export default function FAQSection({
   return (
     <div className="bg-white box-border flex flex-col gap-6 items-center px-0 py-16 md:py-24 relative shrink-0 w-full">
       <div className="box-border flex flex-col gap-10 md:gap-16 items-center max-w-[672px] px-6 py-0 relative shrink-0 w-full">
-        <div className="flex flex-col gap-10 md:gap-16 items-start relative shrink-0 w-full">
+        <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
           {/* Title Section */}
           <div className="flex flex-col gap-4 md:gap-5 items-center relative shrink-0 w-full">
             <p className="font-bold leading-[36px] md:leading-[40px] min-w-full relative shrink-0 text-[#0a0a0a] text-[30px] md:text-[36px] text-center tracking-[0px] w-[min-content] whitespace-pre-wrap">

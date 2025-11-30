@@ -197,7 +197,7 @@ export default function PersonalUsePage() {
               loading="lazy"
             />
           </div>
-          <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
+          <div className="flex flex-1 flex-col gap-6 items-start relative min-w-0">
             <SectionHeader
               title="Everything in one secure place"
               align="left"
@@ -213,7 +213,7 @@ export default function PersonalUsePage() {
         </div>
 
         {/* Mobile Layout */}
-        <div className="flex md:hidden flex-col gap-8 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+        <div className="flex md:hidden flex-col gap-6 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <SectionHeader
             title="Everything in one place"
             align="left"
@@ -426,7 +426,7 @@ function TicketsAndBookingsSection() {
     <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-24 relative shrink-0 w-full">
       {/* Desktop Layout */}
       <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-        <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
+        <div className="flex flex-1 flex-col gap-6 items-start relative min-w-0">
           <SectionHeader
             title="Your trips, neatly organized"
             align="left"
@@ -450,7 +450,7 @@ function TicketsAndBookingsSection() {
       </div>
 
       {/* Mobile Layout */}
-      <div className="flex md:hidden flex-col gap-8 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+      <div className="flex md:hidden flex-col gap-6 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
         <SectionHeader
           title="Travel plans, thoughtfully organized"
           align="left"
