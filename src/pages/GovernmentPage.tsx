@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import { SectionHeader, Button } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { scrollToTop } from '../utils/scrollToTop'
 import checkIcon from '../assets/icons/check.svg'
 import placeholderImage from '../assets/images/placeholder.png'
 import arrowUpRightIcon from '../assets/icons/arrow-up-right.svg'
@@ -39,7 +40,12 @@ export default function GovernmentPage() {
             </div>
             <div className="flex flex-wrap gap-3 items-start relative">
               <Button
-                onClick={() => navigate('/identity-lab')}
+                onClick={() => {
+                  navigate('/identity-lab')
+                  setTimeout(() => {
+                    scrollToTop()
+                  }, 100)
+                }}
                 variant="primary"
               >
                 Explore Identity Lab
@@ -70,7 +76,12 @@ export default function GovernmentPage() {
             </div>
             <div className="flex flex-col gap-3 items-start relative shrink-0">
               <Button
-                onClick={() => navigate('/identity-lab')}
+                onClick={() => {
+                  navigate('/identity-lab')
+                  setTimeout(() => {
+                    scrollToTop()
+                  }, 100)
+                }}
                 variant="primary"
                 fullWidth
               >
@@ -301,10 +312,15 @@ export default function GovernmentPage() {
             />
             <div className="flex gap-3 items-start relative shrink-0">
               <Button
-                onClick={() => navigate('/identity-lab')}
+                onClick={() => {
+                  navigate('/identity-lab')
+                  setTimeout(() => {
+                    scrollToTop()
+                  }, 100)
+                }}
                 variant="primary"
               >
-                Open Identity Lab
+                Explore Identity Lab
               </Button>
             </div>
           </div>
@@ -320,10 +336,15 @@ export default function GovernmentPage() {
             />
             <div className="flex gap-3 items-start relative shrink-0">
               <Button
-                onClick={() => navigate('/identity-lab')}
+                onClick={() => {
+                  navigate('/identity-lab')
+                  setTimeout(() => {
+                    scrollToTop()
+                  }, 100)
+                }}
                 variant="primary"
               >
-                Open Identity Lab
+                Explore Identity Lab
               </Button>
             </div>
           </div>
