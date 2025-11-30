@@ -109,7 +109,7 @@ export default function PersonalUsePage() {
               <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
                 Your documents, always with you
               </h1>
-              <p className="font-normal leading-7 text-[#737373] text-lg w-full whitespace-pre-wrap">
+              <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
                 Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find. Your essential information is always at hand when you need it.
               </p>
             </div>
@@ -150,7 +150,7 @@ export default function PersonalUsePage() {
               <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
                 Your documents, always with you
               </h1>
-              <p className="font-normal leading-7 text-[#737373] text-lg w-full whitespace-pre-wrap">
+              <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
                 Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find. Your essential information is always at hand when you need it.
               </p>
             </div>

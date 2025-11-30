@@ -30,7 +30,7 @@ export default function SectionHeader({
     : 'font-bold leading-[36px] md:leading-[40px] text-[30px] md:text-[36px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap'
   
   const descriptionClasses = headingLevel === 'h1'
-    ? `font-normal leading-7 min-w-full relative shrink-0 text-[#737373] text-lg ${align === 'center' ? 'text-center' : 'text-left'} w-[min-content] whitespace-pre-wrap`
+    ? `font-normal leading-6 min-w-full relative shrink-0 text-[#737373] text-base ${align === 'center' ? 'text-center' : 'text-left'} w-[min-content] whitespace-pre-wrap`
     : `font-normal leading-6 min-w-full relative shrink-0 text-[color:#737373] text-base ${align === 'center' ? 'text-center' : 'text-left'} w-[min-content] whitespace-pre-wrap`
 
   const HeadingTag = headingLevel
