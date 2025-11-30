@@ -1,6 +1,6 @@
 /**
- * Конфигурация модальных окон для Issue и Verify флоу
- * Использует константы вместо магических строк
+ * Modal window configurations for Issue and Verify flows
+ * Uses constants instead of magic strings
  */
 
 import { ComponentType } from 'react'
@@ -24,13 +24,13 @@ import VerifyMembershipCardModal from '../components/VerifyMembershipCardModal'
 import VerifyLibraryCardModal from '../components/VerifyLibraryCardModal'
 
 /**
- * Реэкспорт типов для удобства
+ * Re-export types for convenience
  */
 export type { DocumentType } from '../constants/documents'
 export type { FlowMode } from '../constants/flows'
 
 /**
- * Базовые пропсы для модальных окон
+ * Base props for modal windows
  */
 export interface BaseModalProps {
   isOpen: boolean
@@ -43,7 +43,7 @@ export interface BaseModalProps {
 export type ModalComponent = ComponentType<BaseModalProps>
 
 /**
- * Маппинг режимов флоу на компоненты модалок
+ * Mapping of flow modes to modal components
  */
 export interface ModalMapping {
   [FLOW_MODES.ISSUE]: ModalComponent
@@ -51,8 +51,8 @@ export interface ModalMapping {
 }
 
 /**
- * Маппинг документов на их модальные компоненты
- * Используется для динамического рендеринга модалок вместо длинных if-else цепочек
+ * Mapping of documents to their modal components
+ * Used for dynamic modal rendering instead of long if-else chains
  */
 export const MODAL_MAPPING: Record<DocumentType, ModalMapping> = {
   [DOCUMENT_TYPES.DIGITAL_IDENTITY]: {
@@ -90,7 +90,7 @@ export const MODAL_MAPPING: Record<DocumentType, ModalMapping> = {
 }
 
 /**
- * Получить компонент модалки по типу документа и режиму
+ * Get modal component by document type and mode
  */
 export function getModalComponent(
   documentType: DocumentType,

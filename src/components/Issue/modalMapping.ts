@@ -1,6 +1,6 @@
 /**
- * Реэкспорт типов и функций из configs/modals.ts для обратной совместимости
- * @deprecated Используйте напрямую из configs/modals.ts
+ * Re-export types and functions from configs/modals.ts for backward compatibility
+ * @deprecated Use directly from configs/modals.ts
  */
 
 export type { DocumentType, ModalComponent } from '../../configs/modals'

@@ -1,6 +1,6 @@
 /**
- * Реэкспорт конфигурации карточек для Issue флоу
- * @deprecated Используйте напрямую из configs/cards.ts
+ * Re-export card configurations for Issue flow
+ * @deprecated Use directly from configs/cards.ts
  */
 
 export { issueCardConfigs as cardData } from '../configs/cards'

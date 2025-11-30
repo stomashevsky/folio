@@ -1,6 +1,6 @@
 /**
- * Конфигурации карточек для Issue и Verify флоу
- * Использует константы вместо магических строк
+ * Card configurations for Issue and Verify flows
+ * Uses constants instead of magic strings
  */
 
 import { CardProps } from '../components/Card'
@@ -9,12 +9,12 @@ import { ICON_NAMES } from '../constants/icons'
 import { BADGE_LABELS } from '../constants/badges'
 
 /**
- * Тип для конфигурации карточки
+ * Type for card configuration
  */
 export type CardConfig = CardProps
 
 /**
- * Конфигурация карточек для Issue флоу
+ * Card configurations for Issue flow
  */
 export const issueCardConfigs: CardConfig[] = [
   {
@@ -76,7 +76,7 @@ export const issueCardConfigs: CardConfig[] = [
 ]
 
 /**
- * Конфигурация карточек для Verify флоу
+ * Card configurations for Verify flow
  */
 export const verifyCardConfigs: CardConfig[] = [
   {

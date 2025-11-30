@@ -34,6 +34,7 @@ export class ErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error to console in development
     if (import.meta.env.DEV) {
+      // eslint-disable-next-line no-console
       console.error('Error caught by ErrorBoundary:', error, errorInfo)
     }
     
@@ -61,7 +62,7 @@ export class ErrorBoundary extends Component<Props, State> {
               Something went wrong
             </h1>
             <p className="font-normal text-base text-[#737373]">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
+              We&apos;re sorry, but something unexpected happened. Please try refreshing the page.
             </p>
             {import.meta.env.DEV && this.state.error && (
               <details className="mt-4 p-4 bg-[#f5f5f5] rounded-lg text-left w-full">

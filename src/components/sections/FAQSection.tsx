@@ -72,7 +72,7 @@ export default function FAQSection({
           <div className="flex flex-col items-start relative shrink-0 w-full">
             {faqData.map((faq, index) => (
               <AccordionItem
-                key={index}
+                key={faq.q}
                 title={faq.q}
                 description={faq.a}
                 isOpen={isFaqOpen === index}

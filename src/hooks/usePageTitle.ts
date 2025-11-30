@@ -6,15 +6,15 @@ interface UsePageTitleOptions {
 }
 
 /**
- * Хук для управления title страницы и meta тегами
- * Обновляет document.title и опционально meta description
+ * Hook for managing page title and meta tags
+ * Updates document.title and optionally meta description
  */
 export function usePageTitle({ title, description }: UsePageTitleOptions) {
   useEffect(() => {
     const previousTitle = document.title
     document.title = title
 
-    // Обновляем meta description, если предоставлен
+    // Update meta description if provided
     if (description) {
       let metaDescription = document.querySelector('meta[name="description"]')
       
@@ -27,7 +27,7 @@ export function usePageTitle({ title, description }: UsePageTitleOptions) {
       metaDescription.setAttribute('content', description)
     }
 
-    // Восстанавливаем предыдущий title при размонтировании
+    // Restore previous title on unmount
     return () => {
       document.title = previousTitle
     }

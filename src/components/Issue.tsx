@@ -1,10 +1,10 @@
 import { useState, useMemo } from 'react'
 
 import Card from './Card'
-import { cardData } from './cardData'
-import { verifyCardData } from './verifyCardData'
+import { issueCardConfigs as cardData, verifyCardConfigs as verifyCardData } from '../configs/cards'
 import FlowTabs from './Issue/FlowTabs'
-import { getModalComponent, type DocumentType, type ModalMode } from './Issue/modalMapping'
+import { getModalComponent, type DocumentType } from '../configs/modals'
+import type { FlowMode as ModalMode } from '../constants/flows'
 import { SectionHeader } from './ui'
 import { useModalState } from '../hooks/useModalState'
 import { DOCUMENT_TYPE_VALUES, FLOW_MODES } from '../constants'
@@ -13,8 +13,12 @@ export default function Issue() {
   const [activeTab, setActiveTab] = useState<ModalMode>(FLOW_MODES.ISSUE)
 
   const documentTypes: DocumentType[] = DOCUMENT_TYPE_VALUES
-  const { openModal, closeModal, isOpen } = useModalState<DocumentType>(documentTypes)
-  const currentCardData = activeTab === FLOW_MODES.ISSUE ? cardData : verifyCardData
+  const { openModal, closeModal, isOpen } = useModalState<DocumentType>()
+  
+  const currentCardData = useMemo(
+    () => (activeTab === FLOW_MODES.ISSUE ? cardData : verifyCardData),
+    [activeTab]
+  )
 
   const cardClickHandlers = useMemo(() => {
     const handlers: Partial<Record<DocumentType, () => void>> = {}
@@ -48,9 +52,9 @@ export default function Issue() {
 
           {/* Cards Grid */}
           <div className="flex flex-wrap gap-6 items-start justify-center w-full">
-            {currentCardData.map((card, index) => (
+            {currentCardData.map((card) => (
               <Card
-                key={index}
+                key={card.title}
                 {...card}
                 onClick={cardClickHandlers[card.title as DocumentType]}
               />

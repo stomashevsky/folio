@@ -61,10 +61,11 @@ export default function VerifyAge18Modal({ isOpen, onClose }: VerifyAge18ModalPr
           <div className="flex flex-col gap-10 items-start w-full">
             <div className="flex flex-col gap-4 items-start w-full">
               <div className="flex flex-col gap-2 items-start w-full">
-                <label className="font-medium leading-5 text-sm text-[#0a0a0a]">
+                <label htmlFor="requester-name-age18" className="font-medium leading-5 text-sm text-[#0a0a0a]">
                   Requester Name
                 </label>
                 <TextInput
+                  id="requester-name-age18"
                   defaultValue="Venue"
                   placeholder="Requester Name"
                   className="bg-white border border-[#e5e5e5] border-solid box-border flex gap-1 h-9 items-center px-3 py-1 rounded-md w-full text-sm leading-5 text-[#0a0a0a] outline-none focus:border-[#0a0a0a]"
