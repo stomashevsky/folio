@@ -1,8 +1,10 @@
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { LogoButton, Button } from '../ui'
+import { scrollToTop } from '../../utils/scrollToTop'
 
 export default function DesktopNav() {
   const location = useLocation()
+  const navigate = useNavigate()
 
   const isActive = (path: string) => {
     if (path === '/') {
@@ -11,16 +13,29 @@ export default function DesktopNav() {
     return location.pathname.startsWith(path)
   }
 
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+    const isHomePage = location.pathname === '/' || location.pathname === '/folio' || location.pathname === '/folio/'
+    if (isHomePage) {
+      scrollToTop()
+    } else {
+      navigate('/')
+      // Скроллим после небольшой задержки, чтобы страница успела загрузиться
+      setTimeout(() => {
+        scrollToTop()
+      }, 100)
+    }
+  }
+
   return (
     <div className="hidden lg:flex flex-col items-center justify-center w-full">
       <div className="flex items-center justify-between relative w-full max-w-[1280px] px-6 mx-auto">
         <div className="flex-shrink-0 z-10">
-          <Link to="/" aria-label="Go to home">
-            <LogoButton
-              size={28}
-              aria-label="Go to home"
-            />
-          </Link>
+          <LogoButton
+            size={28}
+            aria-label="Go to home"
+            onClick={handleLogoClick}
+          />
         </div>
 
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-1 items-center">

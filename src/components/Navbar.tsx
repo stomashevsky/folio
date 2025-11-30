@@ -1,18 +1,35 @@
 import { useState, useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 import { LogoButton, Button } from './ui'
 import menuIcon from '../assets/icons/menu.svg'
 import { useBodyScrollLock } from './ui/useBodyScrollLock'
 import MobileMenu from './navbar/MobileMenu'
 import DesktopNav from './navbar/DesktopNav'
+import { scrollToTop } from '../utils/scrollToTop'
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const navbarRef = useRef<HTMLDivElement>(null)
+  const location = useLocation()
+  const navigate = useNavigate()
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+    const isHomePage = location.pathname === '/' || location.pathname === '/folio' || location.pathname === '/folio/'
+    if (isHomePage) {
+      scrollToTop()
+    } else {
+      navigate('/')
+      // Скроллим после небольшой задержки, чтобы страница успела загрузиться
+      setTimeout(() => {
+        scrollToTop()
+      }, 100)
+    }
   }
 
   useBodyScrollLock(isMobileMenuOpen)
@@ -51,15 +68,14 @@ export default function Navbar() {
           touchAction: 'pan-y'
         }}
       >
-        <div className="flex flex-col gap-6 lg:gap-0 items-center px-0 py-3.5 lg:py-4 w-full">
+        <div className="flex flex-col gap-6 lg:gap-0 items-center px-0 py-4 w-full">
           <div className="lg:hidden flex flex-col gap-6 items-start justify-center w-full px-6 py-0 relative shrink-0">
             <div className="flex items-center justify-between relative shrink-0 w-full">
-              <Link to="/" aria-label="Go to home">
-                <LogoButton
-                  size={28}
-                  aria-label="Go to home"
-                />
-              </Link>
+              <LogoButton
+                size={28}
+                aria-label="Go to home"
+                onClick={handleLogoClick}
+              />
 
               <Button
                 variant="ghost"

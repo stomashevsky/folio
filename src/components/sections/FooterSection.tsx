@@ -13,7 +13,7 @@ export default function FooterSection() {
     >
       <div className="flex flex-col gap-12 items-start max-w-[672px] md:max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
         <div className="flex flex-col md:flex-row gap-8 md:gap-0 items-center md:items-center justify-center md:justify-start relative shrink-0 w-full">
-          <div className="flex flex-col md:flex-row gap-8 md:gap-4 items-center relative shrink-0">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center relative shrink-0">
             <Logo size={28} />
             <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center justify-center md:justify-start relative shrink-0 text-sm text-[#737373]">
               <Button

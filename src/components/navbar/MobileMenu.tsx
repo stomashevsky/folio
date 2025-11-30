@@ -1,6 +1,7 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { LogoButton, Button } from '../ui'
 import xIcon from '../../assets/icons/x.svg'
+import { scrollToTop } from '../../utils/scrollToTop'
 
 interface MobileMenuProps {
   isOpen: boolean
@@ -9,6 +10,7 @@ interface MobileMenuProps {
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const navigate = useNavigate()
+  const location = useLocation()
 
   const handleNavClick = (path: string) => {
     onClose()
@@ -25,15 +27,26 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         aria-hidden="true"
       />
       <div className="lg:hidden fixed bg-white border-b border-[#e5e5e5] border-solid left-0 right-0 top-0 z-[4] w-full">
-        <div className="flex flex-col gap-6 items-start overflow-hidden px-0 py-3.5 w-full">
+        <div className="flex flex-col gap-8 items-start overflow-hidden px-0 py-4 w-full">
           <div className="flex flex-col gap-8 items-start justify-start w-full px-6 py-0 relative shrink-0">
             <div className="flex items-center justify-between relative shrink-0 w-full">
-              <Link to="/" onClick={onClose}>
-                <LogoButton
-                  size={28}
-                  aria-label="Go to home"
-                />
-              </Link>
+              <LogoButton
+                size={28}
+                aria-label="Go to home"
+                onClick={(e) => {
+                  e.preventDefault()
+                  onClose()
+                  const isHomePage = location.pathname === '/' || location.pathname === '/folio' || location.pathname === '/folio/'
+                  if (isHomePage) {
+                    scrollToTop()
+                  } else {
+                    navigate('/')
+                    setTimeout(() => {
+                      scrollToTop()
+                    }, 100)
+                  }
+                }}
+              />
               <Button
                 variant="ghost"
                 size="sm"
