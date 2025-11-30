@@ -11,14 +11,16 @@ interface VerificationTableProps {
  */
 export default function VerificationTable({ data }: VerificationTableProps) {
   return (
-    <div className="border border-[#e5e5e5] border-solid rounded-lg w-full">
+    <div className="border border-[#e5e5e5] border-solid rounded-lg overflow-hidden w-full">
       <div className="grid grid-cols-[1fr_1fr] w-full">
         {data.map((item, index) => (
           <>
             <div
               key={`${item.label}-label`}
               className={`border-b border-[#e5e5e5] border-solid border-l-0 border-r-0 border-t-0 box-border flex gap-[10px] items-start min-w-[85px] px-3 py-2.5 relative shrink-0 w-full bg-[#f5f5f5] ${
-                index === data.length - 1 ? 'border-b-0' : ''
+                index === 0 ? 'rounded-tl-lg' : ''
+              } ${
+                index === data.length - 1 ? 'border-b-0 rounded-bl-lg' : ''
               } ${item.isPhoto ? 'items-start' : 'items-center'}`}
             >
               <div className="flex flex-1 flex-col font-normal justify-center min-h-px min-w-px relative shrink-0 text-[#737373] text-sm">
