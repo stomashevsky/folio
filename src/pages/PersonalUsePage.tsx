@@ -268,14 +268,15 @@ export default function PersonalUsePage() {
           </div>
 
           {/* Mobile Layout */}
-          <div className="flex md:hidden flex-col gap-11 items-start relative shrink-0 w-full">
+          <div className="flex md:hidden flex-col gap-16 items-center relative shrink-0 w-full">
             <SectionHeader
               label="Quick Import"
               title="Add documents in seconds"
               description="Choose the easiest way to bring your documents into Folio."
-              align="left"
+              align="center"
+              maxWidth="576px"
             />
-            <div className="flex flex-col gap-11 items-start relative shrink-0 w-full">
+            <div className="flex flex-col gap-11 items-center relative shrink-0 w-full">
               <ImportMethod
                 icon={scanTextIcon}
                 title="Scan documents"
@@ -476,11 +477,11 @@ function TicketsAndBookingsSection() {
 
 function ImportMethod({ icon, title, description }: { icon: string; title: string; description: string }) {
   return (
-    <div className="flex flex-1 flex-col gap-5 items-center md:items-center relative shrink-0 w-full md:w-auto">
+    <div className="flex flex-1 flex-col gap-5 items-center relative shrink-0 w-full md:w-auto">
       <div className="bg-white border border-[#e5e5e5] border-solid flex items-center justify-center relative rounded-md shrink-0 size-10">
         <img src={icon} alt="" aria-hidden="true" className="w-5 h-5" />
       </div>
-      <div className="flex flex-col gap-2 items-start md:items-center leading-6 relative shrink-0 text-base text-left md:text-center w-full whitespace-pre-wrap">
+      <div className="flex flex-col gap-2 items-center leading-6 relative shrink-0 text-base text-center w-full whitespace-pre-wrap">
         <p className="font-semibold relative shrink-0 text-[#0a0a0a] w-full">
           {title}
         </p>
