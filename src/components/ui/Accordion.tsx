@@ -25,22 +25,17 @@ export default function Accordion({
   showMobileImages = false,
 }: AccordionProps) {
   const [openId, setOpenId] = useState<string | null>(
-    defaultOpenId || (allowCloseAll ? null : items[0]?.id || null)
+    defaultOpenId || items[0]?.id || null
   )
 
   const handleToggle = (itemId: string) => {
-    let newOpenId: string | null
-
-    if (allowCloseAll) {
-      // Can close all items
-      newOpenId = openId === itemId ? null : itemId
-    } else {
-      // Always keep one item open
-      // If clicking the same item, keep it open
-      // If clicking a different item, open that one and close the previous
-      newOpenId = itemId
+    // If clicking on an already open section, do nothing
+    if (openId === itemId) {
+      return
     }
 
+    // If clicking on a closed section, open it (this will automatically close the previous open one)
+    const newOpenId = itemId
     setOpenId(newOpenId)
     if (onItemChange) {
       onItemChange(newOpenId)

@@ -44,12 +44,20 @@ export default function FAQSection({
   faqData = DEFAULT_IDENTITY_LAB_FAQ,
   title = 'Frequently asked questions',
   description,
-  defaultOpenIndex = 0,
+  defaultOpenIndex,
 }: FAQSectionProps) {
-  const [isFaqOpen, setIsFaqOpen] = useState<number | null>(defaultOpenIndex)
+  const [isFaqOpen, setIsFaqOpen] = useState<number | null>(
+    defaultOpenIndex !== undefined && defaultOpenIndex !== null ? defaultOpenIndex : 0
+  )
 
   const toggleFaq = (index: number) => {
-    setIsFaqOpen(isFaqOpen === index ? null : index)
+    // If clicking on an already open section, do nothing
+    if (isFaqOpen === index) {
+      return
+    }
+
+    // If clicking on a closed section, open it (this will automatically close the previous open one)
+    setIsFaqOpen(index)
   }
 
   return (
