@@ -89,8 +89,8 @@ const featuresItems: AccordionItemData[] = [
 
 export default function PersonalUsePage() {
   usePageTitle({
-    title: 'Folio - All documents, beautifully arranged | Folio Wallet',
-    description: 'Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find.'
+    title: 'Folio - Your documents, always with you | Folio Wallet',
+    description: 'Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find. Your essential information is always at hand when you need it.'
   })
   
   const [activeFeatureId, setActiveFeatureId] = useState<string | null>('cards')
@@ -107,7 +107,7 @@ export default function PersonalUsePage() {
           <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
-                All documents, beautifully arranged
+                Your documents, always with you
               </h1>
               <p className="font-normal leading-7 text-[#737373] text-lg w-full whitespace-pre-wrap">
                 Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find. Your essential information is always at hand when you need it.
@@ -148,7 +148,7 @@ export default function PersonalUsePage() {
           <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
             <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
               <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
-                All documents, beautifully arranged
+                Your documents, always with you
               </h1>
               <p className="font-normal leading-7 text-[#737373] text-lg w-full whitespace-pre-wrap">
                 Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find. Your essential information is always at hand when you need it.
@@ -199,7 +199,7 @@ export default function PersonalUsePage() {
           </div>
           <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
             <SectionHeader
-              title="Everything in one place"
+              title="Everything in one secure place"
               align="left"
               maxWidth="100%"
             />
@@ -313,7 +313,7 @@ export default function PersonalUsePage() {
           </div>
           <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
             <SectionHeader
-              title="A clean view of every document"
+              title="A clear view of every document"
               description="Folio displays your documents in clean, readable layouts with key fields extracted automatically. You can browse photos in fullscreen, view attached PDFs and copy or share any detail with ease."
               align="left"
             />
@@ -324,7 +324,7 @@ export default function PersonalUsePage() {
         <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
             <SectionHeader
-              title="A clean view of every document"
+              title="A clear view of every document"
               description="Folio displays your documents in clean, readable layouts with key fields extracted automatically. You can browse photos in fullscreen, view attached PDFs and copy or share any detail with ease."
               align="left"
             />
@@ -345,7 +345,7 @@ export default function PersonalUsePage() {
         <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-col gap-10 items-center relative shrink-0 w-full">
             <SectionHeader
-              title="Tools that make a difference"
+              title="Smart tools that truly help"
               description="Folio includes thoughtful features that make everyday use easier and help you track trips, find documents instantly, share with confidence and stay ahead of important dates."
               maxWidth="576px"
             />
@@ -428,7 +428,7 @@ function TicketsAndBookingsSection() {
       <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
         <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
           <SectionHeader
-            title="Travel plans, thoughtfully organized"
+            title="Your trips, neatly organized"
             align="left"
           />
           <Accordion
