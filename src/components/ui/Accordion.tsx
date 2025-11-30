@@ -48,7 +48,7 @@ export default function Accordion({
   }
 
   return (
-    <div className="flex flex-col gap-2 items-start relative shrink-0 w-full">
+    <div className="flex flex-col gap-0 items-start relative shrink-0 w-full">
       {items.map((item) => {
         const isOpen = openId === item.id
         return (

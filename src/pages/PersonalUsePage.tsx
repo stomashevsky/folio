@@ -199,7 +199,7 @@ export default function PersonalUsePage() {
               loading="lazy"
             />
           </div>
-          <div className="flex flex-1 flex-col gap-12 items-start relative shrink-0">
+          <div className="flex flex-1 flex-col gap-8 items-start relative shrink-0">
             <div className="flex flex-col gap-5 items-start relative shrink-0 w-full">
               <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
                 Everything in one place
@@ -215,7 +215,7 @@ export default function PersonalUsePage() {
         </div>
 
         {/* Mobile Layout */}
-        <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+        <div className="flex md:hidden flex-col gap-8 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-col gap-5 items-start relative shrink-0 w-full">
             <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
               Everything in one place
@@ -429,7 +429,7 @@ function TicketsAndBookingsSection() {
     <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-24 relative shrink-0 w-full">
       {/* Desktop Layout */}
       <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-        <div className="flex flex-1 flex-col gap-12 items-start relative shrink-0">
+        <div className="flex flex-1 flex-col gap-8 items-start relative shrink-0">
           <SectionHeader
             label="Tickets and Bookings"
             title="Travel plans, thoughtfully organized"
@@ -454,7 +454,7 @@ function TicketsAndBookingsSection() {
       </div>
 
       {/* Mobile Layout */}
-      <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+      <div className="flex md:hidden flex-col gap-8 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
         <SectionHeader
           label="Tickets and Bookings"
           title="Travel plans, thoughtfully organized"

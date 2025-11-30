@@ -42,7 +42,7 @@ export default function Card({ icon, badge, badgeVariant = 'secondary', title, d
       aria-label={ariaLabel}
       className={`bg-white border border-[#e5e5e5] border-solid flex-[1_0_0] min-w-[280px] max-w-[400px] rounded-2xl overflow-hidden outline-none shadow-[0px_4px_6px_-1px_rgba(10,13,18,0.06),0px_2px_4px_-2px_rgba(10,13,18,0.06)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a3a3a3] focus-visible:ring-offset-2 focus-visible:shadow-[0px_0px_0px_3px_rgba(163,163,163,0.5)] transition-all duration-200 ease-spring-out transform-gpu ${
         onClick 
-          ? 'cursor-pointer hover:shadow-[0px_10px_15px_-3px_rgba(10,13,18,0.08),0px_4px_6px_-4px_rgba(10,13,18,0.06)] hover:border-[#a3a3a3] active:scale-[0.98] active:shadow-[0px_4px_6px_-1px_rgba(10,13,18,0.06),0px_2px_4px_-2px_rgba(10,13,18,0.06)]' 
+          ? 'cursor-pointer hover:shadow-[0px_10px_15px_-3px_rgba(10,13,18,0.08),0px_4px_6px_-4px_rgba(10,13,18,0.06)]' 
           : ''
       }`}
       style={{ borderWidth: '1px' }}
