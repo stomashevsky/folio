@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     
     <!-- Favicons -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="alternate icon" href="/favicon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/folio/favicon.svg" />
+    <link rel="alternate icon" href="/folio/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/folio/favicon.svg" />
+    <link rel="manifest" href="/folio/site.webmanifest" />
     <meta name="theme-color" content="#0A0A0A" />
     <meta name="msapplication-TileColor" content="#0A0A0A" />
     
@@ -59,32 +59,49 @@
     
     <!-- Content Security Policy -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self';" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    
     <!-- Redirect script for GitHub Pages SPA routing -->
     <script>
       // Single Page Apps for GitHub Pages
       // https://github.com/rafgraph/spa-github-pages
-      // This script checks to see if a redirect is present in the query string,
-      // converts it back into the correct url and adds it to the
-      // browser's history using window.history.replaceState(...),
-      // which won't cause the browser to attempt to load the new url.
-      // When the single page app is loaded further down in this file,
-      // the correct url will be waiting in the browser's history for
-      // the single page app to route to.
-      (function(l) {
-        if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) { 
-            return s.replace(/~and~/g, '&')
-          }).join('?');
-          window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + decoded + l.hash
-          );
-        }
-      }(window.location))
+      // This script takes the current url and converts the path and query
+      // string into just a query string, and then redirects the browser to the
+      // new url with only a query string and hash fragment,
+      // e.g., https://www.foo.com/one/two?a=b&c=d#qwe, becomes
+      // https://www.foo.com/404.html?/one/two&a=b~and~c=d#qwe
+      // Note: this 404.html file must be at least 512 bytes for it to work
+      // with Internet Explorer (it is currently > 512 bytes)
+
+      // If you're creating a Project Pages site and NOT using a custom domain,
+      // then set segmentCount to 1 (enterprise users may need to set it to > 1).
+      // This way the code will only replace the route part and not the
+      // project name. For example, if your repo name is 'my-repo' and your
+      // site is at https://username.github.io/my-repo/, then by default the
+      // segmentCount will be 1 and it will transform:
+      // https://username.github.io/my-repo/one/two
+      // into
+      // https://username.github.io/my-repo/404.html?/one/two
+      // But if you set segmentCount to 0, it will transform:
+      // https://username.github.io/my-repo/one/two
+      // into
+      // https://username.github.io/404.html?/one/two
+      // For Project Pages sites, we recommend setting segmentCount to 1.
+      // For User/Organization Pages sites using a custom domain, set segmentCount to 0.
+      var segmentCount = 1;
+
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
     </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Note: Scripts will be injected by Vite during build -->
   </body>
 </html>
 

@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
@@ -12,6 +13,8 @@ const BACKGROUND_STYLE = {
 }
 
 export default function GovernmentPage() {
+  const navigate = useNavigate()
+  
   usePageTitle({
     title: 'Government Solutions | Folio Wallet',
     description: 'Tools for governments to design, test and deploy next-generation digital credentials. Digital identity aligned with global standards.'
@@ -36,7 +39,7 @@ export default function GovernmentPage() {
             </div>
             <div className="flex flex-wrap gap-3 items-start relative">
               <Button
-                href="/identity-lab"
+                onClick={() => navigate('/identity-lab')}
                 variant="primary"
               >
                 Explore Identity Lab
@@ -67,7 +70,7 @@ export default function GovernmentPage() {
             </div>
             <div className="flex flex-col gap-3 items-start relative shrink-0">
               <Button
-                href="/identity-lab"
+                onClick={() => navigate('/identity-lab')}
                 variant="primary"
                 fullWidth
               >
@@ -298,7 +301,7 @@ export default function GovernmentPage() {
             />
             <div className="flex gap-3 items-start relative shrink-0">
               <Button
-                href="/identity-lab"
+                onClick={() => navigate('/identity-lab')}
                 variant="primary"
               >
                 Open Identity Lab
@@ -317,7 +320,7 @@ export default function GovernmentPage() {
             />
             <div className="flex gap-3 items-start relative shrink-0">
               <Button
-                href="/identity-lab"
+                onClick={() => navigate('/identity-lab')}
                 variant="primary"
               >
                 Open Identity Lab
