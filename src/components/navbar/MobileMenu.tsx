@@ -82,7 +82,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     e.stopPropagation()
                     handleNavClick('/')
                   }}
-                  className={`justify-start text-left ${isActive('/') && location.pathname === '/' ? 'bg-[#f5f5f5] font-semibold' : ''}`}
+                  className={`justify-start text-left ${isActive('/') && location.pathname === '/' ? 'bg-[#f5f5f5]' : ''}`}
                   aria-current={isActive('/') && location.pathname === '/' ? 'page' : undefined}
                 >
                   Personal Use
@@ -95,7 +95,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     e.stopPropagation()
                     handleNavClick('/business')
                   }}
-                  className={`justify-start text-left ${isActive('/business') ? 'bg-[#f5f5f5] font-semibold' : ''}`}
+                  className={`justify-start text-left ${isActive('/business') ? 'bg-[#f5f5f5]' : ''}`}
                   aria-current={isActive('/business') ? 'page' : undefined}
                 >
                   Business
@@ -108,7 +108,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     e.stopPropagation()
                     handleNavClick('/government')
                   }}
-                  className={`justify-start text-left ${isActive('/government') ? 'bg-[#f5f5f5] font-semibold' : ''}`}
+                  className={`justify-start text-left ${isActive('/government') ? 'bg-[#f5f5f5]' : ''}`}
                   aria-current={isActive('/government') ? 'page' : undefined}
                 >
                   Government
@@ -121,7 +121,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     e.stopPropagation()
                     handleNavClick('/identity-lab')
                   }}
-                  className={`justify-start text-left ${isActive('/identity-lab') ? 'bg-[#f5f5f5] font-semibold' : ''}`}
+                  className={`justify-start text-left ${isActive('/identity-lab') ? 'bg-[#f5f5f5]' : ''}`}
                   aria-current={isActive('/identity-lab') ? 'page' : undefined}
                 >
                   Identity Lab
@@ -134,7 +134,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     e.stopPropagation()
                     handleNavClick('/blog')
                   }}
-                  className={`justify-start text-left ${isActive('/blog') ? 'bg-[#f5f5f5] font-semibold' : ''}`}
+                  className={`justify-start text-left ${isActive('/blog') ? 'bg-[#f5f5f5]' : ''}`}
                   aria-current={isActive('/blog') ? 'page' : undefined}
                 >
                   Blog

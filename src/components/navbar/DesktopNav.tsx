@@ -42,7 +42,7 @@ export default function DesktopNav() {
           <Link to="/">
             <Button
               variant="ghost"
-              className={isActive('/') && location.pathname === '/' ? 'bg-[#f5f5f5] font-semibold' : ''}
+              className={isActive('/') && location.pathname === '/' ? 'bg-[#f5f5f5]' : ''}
               aria-current={isActive('/') && location.pathname === '/' ? 'page' : undefined}
             >
               Personal Use
@@ -51,7 +51,7 @@ export default function DesktopNav() {
           <Link to="/business">
             <Button
               variant="ghost"
-              className={isActive('/business') ? 'bg-[#f5f5f5] font-semibold' : ''}
+              className={isActive('/business') ? 'bg-[#f5f5f5]' : ''}
               aria-current={isActive('/business') ? 'page' : undefined}
             >
               Business
@@ -60,7 +60,7 @@ export default function DesktopNav() {
           <Link to="/government">
             <Button
               variant="ghost"
-              className={isActive('/government') ? 'bg-[#f5f5f5] font-semibold' : ''}
+              className={isActive('/government') ? 'bg-[#f5f5f5]' : ''}
               aria-current={isActive('/government') ? 'page' : undefined}
             >
               Government
@@ -69,7 +69,7 @@ export default function DesktopNav() {
           <Link to="/identity-lab">
             <Button
               variant="ghost"
-              className={isActive('/identity-lab') ? 'bg-[#f5f5f5] font-semibold' : ''}
+              className={isActive('/identity-lab') ? 'bg-[#f5f5f5]' : ''}
               aria-current={isActive('/identity-lab') ? 'page' : undefined}
             >
               Identity Lab
@@ -78,7 +78,7 @@ export default function DesktopNav() {
           <Link to="/blog">
             <Button
               variant="ghost"
-              className={isActive('/blog') ? 'bg-[#f5f5f5] font-semibold' : ''}
+              className={isActive('/blog') ? 'bg-[#f5f5f5]' : ''}
               aria-current={isActive('/blog') ? 'page' : undefined}
             >
               Blog
