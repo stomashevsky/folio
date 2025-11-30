@@ -38,7 +38,6 @@ export default function GovernmentPage() {
               <Button
                 href="/identity-lab"
                 variant="primary"
-                icon={<img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />}
               >
                 Explore Identity Lab
               </Button>
@@ -71,7 +70,6 @@ export default function GovernmentPage() {
                 href="/identity-lab"
                 variant="primary"
                 fullWidth
-                icon={<img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />}
               >
                 Explore Identity Lab
               </Button>
