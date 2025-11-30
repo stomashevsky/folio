@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'

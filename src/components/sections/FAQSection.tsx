@@ -1,6 +1,4 @@
 import { useState } from 'react'
-
-import { Button } from '../ui'
 import AccordionItem from '../ui/AccordionItem'
 
 export interface FAQItem {
