@@ -13,6 +13,7 @@ interface BaseButtonProps {
   href?: string
   target?: string
   rel?: string
+  loading?: boolean
 }
 
 type ButtonProps = BaseButtonProps & 
@@ -41,6 +42,7 @@ export default function Button({
   className = '',
   fullWidth = false,
   disabled = false,
+  loading = false,
   icon,
   href,
   target,
@@ -58,12 +60,12 @@ export default function Button({
     lg: 'h-11 px-6 py-3 text-base'
   }
   
-  // Variant classes
+  // Variant classes with improved states
   const variantClasses: Record<ButtonVariant, string> = {
-    primary: 'bg-[#171717] text-[#fafafa] hover:bg-[#171717]/90 active:bg-[#171717]/80 focus-visible:shadow-[0px_0px_0px_3px_rgba(163,163,163,0.5)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#171717] font-medium leading-5',
-    secondary: 'bg-white border border-[#e5e5e5] border-solid text-[#0a0a0a] hover:bg-[#f5f5f5] active:bg-[#e5e5e5] focus-visible:border-[#a3a3a3] focus-visible:shadow-[0px_0px_0px_3px_rgba(163,163,163,0.5)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white font-medium leading-5',
-    ghost: 'bg-transparent text-[#0a0a0a] hover:bg-[#f5f5f5] active:bg-[#e5e5e5] focus-visible:shadow-[0px_0px_0px_3px_rgba(163,163,163,0.5)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent font-medium leading-5',
-    subtle: 'bg-transparent text-[#737373] hover:text-[#0a0a0a] focus-visible:shadow-[0px_0px_0px_3px_rgba(163,163,163,0.5)] font-normal leading-5 transition-all duration-150 cursor-pointer'
+    primary: 'bg-[#171717] text-[#fafafa] hover:bg-[#171717]/90 active:bg-[#171717]/75 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a3a3a3] focus-visible:ring-offset-2 focus-visible:shadow-[0px_0px_0px_3px_rgba(163,163,163,0.5)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#171717] disabled:active:scale-100 font-medium leading-5 transition-all duration-150',
+    secondary: 'bg-white border border-[#e5e5e5] border-solid text-[#0a0a0a] hover:bg-[#f5f5f5] hover:border-[#a3a3a3] active:bg-[#e5e5e5] active:border-[#737373] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a3a3a3] focus-visible:ring-offset-2 focus-visible:border-[#a3a3a3] focus-visible:shadow-[0px_0px_0px_3px_rgba(163,163,163,0.5)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:border-[#e5e5e5] disabled:active:scale-100 font-medium leading-5 transition-all duration-150',
+    ghost: 'bg-transparent text-[#0a0a0a] hover:bg-[#f5f5f5] active:bg-[#e5e5e5] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a3a3a3] focus-visible:ring-offset-2 focus-visible:shadow-[0px_0px_0px_3px_rgba(163,163,163,0.5)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:active:scale-100 font-medium leading-5 transition-all duration-150',
+    subtle: 'bg-transparent text-[#737373] hover:text-[#0a0a0a] hover:bg-[#fafafa] active:text-[#0a0a0a] active:bg-[#f5f5f5] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a3a3a3] focus-visible:ring-offset-2 focus-visible:shadow-[0px_0px_0px_3px_rgba(163,163,163,0.5)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:text-[#737373] disabled:hover:bg-transparent disabled:active:scale-100 font-normal leading-5 transition-all duration-150 cursor-pointer'
   }
 
   const widthClasses = fullWidth ? 'w-full flex-1' : ''
@@ -87,7 +89,34 @@ export default function Button({
     ? baseClasses.replace('justify-center', '').trim()
     : baseClasses
   
-  const allClasses = `${adjustedBaseClasses} ${finalSizeClass} ${variantClass} ${widthClasses} whitespace-nowrap ${className}`
+  const isDisabled = disabled || loading
+  const allClasses = `${adjustedBaseClasses} ${finalSizeClass} ${variantClass} ${widthClasses} whitespace-nowrap ${className} ${loading ? 'relative' : ''}`
+
+  // Loading spinner component
+  const LoadingSpinner = () => (
+    <span className="absolute inset-0 flex items-center justify-center" aria-hidden="true">
+      <svg 
+        className="animate-spin h-4 w-4" 
+        xmlns="http://www.w3.org/2000/svg" 
+        fill="none" 
+        viewBox="0 0 24 24"
+      >
+        <circle 
+          className="opacity-25" 
+          cx="12" 
+          cy="12" 
+          r="10" 
+          stroke="currentColor" 
+          strokeWidth="4"
+        />
+        <path 
+          className="opacity-75" 
+          fill="currentColor" 
+          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+        />
+      </svg>
+    </span>
+  )
 
   // If href is provided, render as anchor tag
   if (href) {
@@ -101,8 +130,11 @@ export default function Button({
     
     return (
       <a {...anchorProps}>
-        {children}
-        {icon && <span className="shrink-0">{icon}</span>}
+        {loading && <LoadingSpinner />}
+        <span className={loading ? 'opacity-0' : ''}>
+          {children}
+          {icon && <span className="shrink-0">{icon}</span>}
+        </span>
       </a>
     )
   }
@@ -112,11 +144,15 @@ export default function Button({
     <button
       type={type}
       className={allClasses}
-      disabled={disabled}
+      disabled={isDisabled}
+      aria-busy={loading}
       {...(props as ButtonHTMLAttributes<HTMLButtonElement>)}
     >
-      {children}
-      {icon && <span className="shrink-0">{icon}</span>}
+      {loading && <LoadingSpinner />}
+      <span className={loading ? 'opacity-0' : ''}>
+        {children}
+        {icon && <span className="shrink-0">{icon}</span>}
+      </span>
     </button>
   )
 }

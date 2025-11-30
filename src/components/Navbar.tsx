@@ -84,7 +84,7 @@ export default function Navbar() {
                 aria-label="Toggle menu"
                 className="p-0"
               >
-                <img src={menuIcon} alt="Menu" className="w-5 h-5" />
+                <img src={menuIcon} alt="Menu" aria-hidden="true" className="w-5 h-5" />
               </Button>
             </div>
           </div>

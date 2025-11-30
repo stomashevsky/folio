@@ -38,7 +38,7 @@ export interface BaseModalProps {
 }
 
 /**
- * Тип компонента модального окна
+ * Modal component type
  */
 export type ModalComponent = ComponentType<BaseModalProps>
 

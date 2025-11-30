@@ -6,8 +6,8 @@ interface VerificationTableProps {
 }
 
 /**
- * Компонент таблицы результатов верификации
- * Отображает поля верификации в виде таблицы с поддержкой текста и изображений
+ * Verification results table component
+ * Displays verification fields in a table format with support for text and images
  */
 export default function VerificationTable({ data }: VerificationTableProps) {
   return (
@@ -41,6 +41,7 @@ export default function VerificationTable({ data }: VerificationTableProps) {
                       alt="ID document" 
                       className="absolute max-w-none object-center object-cover rounded-lg size-full" 
                       src={photographImage}
+                      loading="lazy"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement
                         target.style.display = 'none'

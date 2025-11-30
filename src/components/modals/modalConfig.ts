@@ -1,25 +1,25 @@
 /**
- * Константы для модальных окон
+ * Constants for modal windows
  * 
- * Стратегия responsive поведения:
+ * Responsive behavior strategy:
  * 
  * Mobile (< 768px):
- * - Модалка появляется снизу экрана (items-end)
- * - Занимает всю ширину (w-full)
- * - Скругление только сверху (rounded-t-2xl)
- * - Максимальная высота 90vh
- * - Нет padding у контейнера (p-0)
- * - Divider виден перед футером
- * - Контент в одну колонку
+ * - Modal appears from bottom of screen (items-end)
+ * - Takes full width (w-full)
+ * - Rounded only on top (rounded-t-2xl)
+ * - Max height 90vh
+ * - No container padding (p-0)
+ * - Divider visible before footer
+ * - Content in single column
  * 
  * Desktop (>= 768px):
- * - Модалка центрируется (items-center)
- * - Padding вокруг контейнера (p-4)
- * - Скругление со всех сторон (rounded-2xl)
- * - Максимальная ширина зависит от размера (400px или 740px)
- * - Максимальная высота calc(100vh - 2rem)
- * - Divider скрыт
- * - Контент может быть в две колонки (если используется двухколоночная раскладка)
+ * - Modal is centered (items-center)
+ * - Padding around container (p-4)
+ * - Rounded on all sides (rounded-2xl)
+ * - Max width depends on size (400px or 740px)
+ * - Max height calc(100vh - 2rem)
+ * - Divider hidden
+ * - Content can be in two columns (if two-column layout is used)
  */
 
 export const MODAL_SIZES = {
@@ -100,10 +100,10 @@ export const MODAL_RESPONSIVE_CLASSES = {
 } as const
 
 /**
- * Класс для двухколоночной раскладки контента в модалках
- * Используется в модалках с большим количеством полей
- * Mobile: одна колонка (flex-col)
- * Desktop: две колонки (flex-row) с большим отступом
+ * Class for two-column content layout in modals
+ * Used in modals with many fields
+ * Mobile: single column (flex-col)
+ * Desktop: two columns (flex-row) with large gap
  */
 export const MODAL_TWO_COLUMN_LAYOUT = 'flex flex-col md:flex-row gap-4 md:gap-12 items-start w-full'
 

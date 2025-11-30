@@ -1,3 +1,4 @@
+import { useId } from 'react'
 import ChevronIcon from './ChevronIcon'
 
 interface AccordionItemProps {
@@ -15,10 +16,24 @@ export default function AccordionItem({
   onToggle,
   children,
 }: AccordionItemProps) {
+  const contentId = useId()
+  const buttonId = useId()
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      onToggle()
+    }
+  }
+
   return (
     <button
+      id={buttonId}
       onClick={onToggle}
-      className="group border-b border-[#e5e5e5] border-l-0 border-r-0 border-t-0 border-solid flex flex-col items-start p-0 relative shrink-0 w-full outline-none focus-visible:outline-none cursor-pointer"
+      onKeyDown={handleKeyDown}
+      aria-expanded={isOpen}
+      aria-controls={contentId}
+      className="group border-b border-[#e5e5e5] border-l-0 border-r-0 border-t-0 border-solid flex flex-col items-start p-0 relative shrink-0 w-full outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a3a3a3] focus-visible:ring-offset-2 cursor-pointer hover:bg-[#fafafa] active:bg-[#f5f5f5] transition-colors duration-150"
     >
       <div className="flex items-center justify-between px-0 py-4 relative shrink-0 w-full">
         <p className="flex-1 font-normal leading-[28px] min-h-px min-w-px relative shrink-0 text-[#0a0a0a] text-lg whitespace-pre-wrap text-left">
@@ -29,7 +44,12 @@ export default function AccordionItem({
         </div>
       </div>
       {isOpen && (
-        <div className="flex flex-col items-center justify-center pb-4 pt-0 px-0 relative shrink-0 w-full">
+        <div 
+          id={contentId}
+          role="region"
+          aria-labelledby={buttonId}
+          className="flex flex-col items-center justify-center pb-4 pt-0 px-0 relative shrink-0 w-full"
+        >
           {description && (
             <p className="font-normal leading-5 relative shrink-0 text-[#737373] text-sm w-full whitespace-pre-wrap text-left">
               {description}

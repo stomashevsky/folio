@@ -65,6 +65,7 @@ export default function Accordion({
                   src={item.desktopImage || item.image}
                   alt={item.title}
                   className="absolute inset-0 w-full h-full object-center object-cover rounded-2xl"
+                  loading="lazy"
                 />
               </div>
             )}

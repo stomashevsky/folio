@@ -42,7 +42,8 @@ export default function DesktopNav() {
           <Link to="/">
             <Button
               variant="ghost"
-              className={isActive('/') && location.pathname === '/' ? 'bg-[#f5f5f5]' : ''}
+              className={isActive('/') && location.pathname === '/' ? 'bg-[#f5f5f5] font-semibold' : ''}
+              aria-current={isActive('/') && location.pathname === '/' ? 'page' : undefined}
             >
               Personal Use
             </Button>
@@ -50,7 +51,8 @@ export default function DesktopNav() {
           <Link to="/business">
             <Button
               variant="ghost"
-              className={isActive('/business') ? 'bg-[#f5f5f5]' : ''}
+              className={isActive('/business') ? 'bg-[#f5f5f5] font-semibold' : ''}
+              aria-current={isActive('/business') ? 'page' : undefined}
             >
               Business
             </Button>
@@ -58,7 +60,8 @@ export default function DesktopNav() {
           <Link to="/government">
             <Button
               variant="ghost"
-              className={isActive('/government') ? 'bg-[#f5f5f5]' : ''}
+              className={isActive('/government') ? 'bg-[#f5f5f5] font-semibold' : ''}
+              aria-current={isActive('/government') ? 'page' : undefined}
             >
               Government
             </Button>
@@ -66,7 +69,8 @@ export default function DesktopNav() {
           <Link to="/identity-lab">
             <Button
               variant="ghost"
-              className={isActive('/identity-lab') ? 'bg-[#f5f5f5]' : ''}
+              className={isActive('/identity-lab') ? 'bg-[#f5f5f5] font-semibold' : ''}
+              aria-current={isActive('/identity-lab') ? 'page' : undefined}
             >
               Identity Lab
             </Button>
@@ -74,7 +78,8 @@ export default function DesktopNav() {
           <Link to="/blog">
             <Button
               variant="ghost"
-              className={isActive('/blog') ? 'bg-[#f5f5f5]' : ''}
+              className={isActive('/blog') ? 'bg-[#f5f5f5] font-semibold' : ''}
+              aria-current={isActive('/blog') ? 'page' : undefined}
             >
               Blog
             </Button>

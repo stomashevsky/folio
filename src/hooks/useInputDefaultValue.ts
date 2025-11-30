@@ -1,8 +1,8 @@
 import { useCallback } from 'react'
 
 /**
- * Хук для обработки восстановления значения по умолчанию при blur
- * Используется в полях ввода, где нужно вернуть дефолтное значение, если поле пустое
+ * Hook for handling default value restoration on blur
+ * Used in input fields where default value should be restored if field is empty
  */
 export function useInputDefaultValue(defaultValue: string) {
   return useCallback((e: React.FocusEvent<HTMLInputElement>) => {

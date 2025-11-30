@@ -53,6 +53,7 @@ export default function TextInput({
       autoComplete={autoComplete}
       inputMode="text"
       disabled={disabled}
+      aria-invalid={error ? 'true' : 'false'}
       {...restProps}
     />
   )

@@ -17,16 +17,30 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     navigate(path)
   }
 
-  if (!isOpen) return null
+  const isActive = (path: string) => {
+    if (path === '/') {
+      return location.pathname === '/'
+    }
+    return location.pathname.startsWith(path)
+  }
 
   return (
     <>
       <div
-        className="lg:hidden fixed inset-0 bg-[rgba(10,10,10,0.3)] z-[3]"
+        className={`lg:hidden fixed inset-0 bg-[rgba(10,10,10,0.3)] z-[60] transition-opacity duration-200 ${
+          isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        }`}
         onClick={onClose}
         aria-hidden="true"
       />
-      <div className="lg:hidden fixed bg-white border-b border-[#e5e5e5] border-solid left-0 right-0 top-0 z-[4] w-full">
+      <div 
+        className={`lg:hidden fixed bg-white border-b border-[#e5e5e5] border-solid left-0 right-0 top-0 z-[70] w-full transition-transform duration-200 ease-spring-out ${
+          isOpen ? 'translate-y-0' : '-translate-y-full'
+        }`}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Navigation menu"
+      >
         <div className="flex flex-col gap-8 items-start overflow-hidden px-0 py-4 w-full">
           <div className="flex flex-col gap-8 items-start justify-start w-full px-6 py-0 relative shrink-0">
             <div className="flex items-center justify-between relative shrink-0 w-full">
@@ -54,7 +68,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 aria-label="Close menu"
                 className="p-0"
               >
-                <img src={xIcon} alt="Close" className="w-5 h-5" />
+                <img src={xIcon} alt="Close" aria-hidden="true" className="w-5 h-5" />
               </Button>
             </div>
 
@@ -68,7 +82,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     e.stopPropagation()
                     handleNavClick('/')
                   }}
-                  className="justify-start text-left"
+                  className={`justify-start text-left ${isActive('/') && location.pathname === '/' ? 'bg-[#f5f5f5] font-semibold' : ''}`}
+                  aria-current={isActive('/') && location.pathname === '/' ? 'page' : undefined}
                 >
                   Personal Use
                 </Button>
@@ -80,7 +95,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     e.stopPropagation()
                     handleNavClick('/business')
                   }}
-                  className="justify-start text-left"
+                  className={`justify-start text-left ${isActive('/business') ? 'bg-[#f5f5f5] font-semibold' : ''}`}
+                  aria-current={isActive('/business') ? 'page' : undefined}
                 >
                   Business
                 </Button>
@@ -92,7 +108,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     e.stopPropagation()
                     handleNavClick('/government')
                   }}
-                  className="justify-start text-left"
+                  className={`justify-start text-left ${isActive('/government') ? 'bg-[#f5f5f5] font-semibold' : ''}`}
+                  aria-current={isActive('/government') ? 'page' : undefined}
                 >
                   Government
                 </Button>
@@ -104,7 +121,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     e.stopPropagation()
                     handleNavClick('/identity-lab')
                   }}
-                  className="justify-start text-left"
+                  className={`justify-start text-left ${isActive('/identity-lab') ? 'bg-[#f5f5f5] font-semibold' : ''}`}
+                  aria-current={isActive('/identity-lab') ? 'page' : undefined}
                 >
                   Identity Lab
                 </Button>
@@ -116,7 +134,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     e.stopPropagation()
                     handleNavClick('/blog')
                   }}
-                  className="justify-start text-left"
+                  className={`justify-start text-left ${isActive('/blog') ? 'bg-[#f5f5f5] font-semibold' : ''}`}
+                  aria-current={isActive('/blog') ? 'page' : undefined}
                 >
                   Blog
                 </Button>

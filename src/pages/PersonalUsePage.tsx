@@ -137,6 +137,8 @@ export default function PersonalUsePage() {
               src={personalUseHero} 
               alt="Folio documents preview" 
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              fetchPriority="high"
+              loading="eager"
             />
           </div>
         </div>
@@ -178,6 +180,8 @@ export default function PersonalUsePage() {
               src={personalUseHero} 
               alt="Folio documents preview" 
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              fetchPriority="high"
+              loading="eager"
             />
           </div>
         </div>
@@ -192,6 +196,7 @@ export default function PersonalUsePage() {
               src={activeFeature.desktopImage} 
               alt={activeFeature.title}
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              loading="lazy"
             />
           </div>
           <div className="flex flex-1 flex-col gap-12 items-start relative shrink-0">
@@ -306,6 +311,7 @@ export default function PersonalUsePage() {
               src={documentViewer}
               alt="Document viewer interface"
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              loading="lazy"
             />
           </div>
           <div className="flex flex-1 flex-col gap-8 items-start relative shrink-0">
@@ -333,6 +339,7 @@ export default function PersonalUsePage() {
               src={documentViewer}
               alt="Document viewer interface"
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              loading="lazy"
             />
           </div>
         </div>
@@ -441,6 +448,7 @@ function TicketsAndBookingsSection() {
             src={activeItem.image} 
             alt={activeItem.title}
             className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+            loading="lazy"
           />
         </div>
       </div>
@@ -468,7 +476,7 @@ function ImportMethod({ icon, title, description }: { icon: string; title: strin
   return (
     <div className="flex flex-1 flex-col gap-5 items-center md:items-center relative shrink-0 w-full md:w-auto">
       <div className="bg-white border border-[#e5e5e5] border-solid flex items-center justify-center relative rounded-md shrink-0 size-10">
-        <img src={icon} alt="" className="w-5 h-5" />
+        <img src={icon} alt="" aria-hidden="true" className="w-5 h-5" />
       </div>
       <div className="flex flex-col gap-2 items-start md:items-center leading-6 relative shrink-0 text-base text-left md:text-center w-full whitespace-pre-wrap">
         <p className="font-semibold relative shrink-0 text-[#0a0a0a] w-full">
@@ -488,7 +496,7 @@ function ToolCard({ icon, title, description }: { icon: string; title: string; d
       <div className="flex flex-col gap-6 items-start p-6 w-full flex-1">
         <div className="flex gap-2 items-start w-full">
           <div className="bg-white border border-[#e5e5e5] border-solid flex items-center justify-center relative rounded-md shrink-0 size-10">
-            <img src={icon} alt="" className="w-5 h-5" />
+            <img src={icon} alt="" aria-hidden="true" className="w-5 h-5" />
           </div>
         </div>
         <div className="flex flex-col gap-1.5 items-start w-full flex-1">

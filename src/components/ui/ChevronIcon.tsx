@@ -10,7 +10,8 @@ export default function ChevronIcon({ isOpen = false, className = '' }: ChevronI
     <div className={`flex-none transition-transform duration-200 ${isOpen ? 'rotate-180' : ''} ${className}`}>
       <img 
         src={chevronDownIcon} 
-        alt="" 
+        alt=""
+        aria-hidden="true"
         className={`w-4 h-4 ${isOpen ? 'opacity-100' : 'opacity-60'}`}
       />
     </div>

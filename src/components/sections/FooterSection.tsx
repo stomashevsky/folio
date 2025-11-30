@@ -43,7 +43,13 @@ export default function FooterSection() {
         <div className="flex flex-col md:flex-row gap-12 md:gap-4 items-center md:items-center justify-center md:justify-between relative shrink-0 w-full">
           <Button
             variant="subtle"
+            href="#"
             className="relative shrink-0 text-center order-1 md:order-2"
+            onClick={(e) => {
+              e.preventDefault()
+              // TODO: Add actual Terms of Service page URL
+              console.log('Terms of Service clicked')
+            }}
           >
             Terms of Service
           </Button>
