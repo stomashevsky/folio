@@ -1,7 +1,6 @@
 import Button from './ui/Button'
 import { SectionHeader } from './ui'
-import heroPhoneDesktop from '../assets/images/hero-phone-desktop.png'
-import heroPhoneMobile from '../assets/images/hero-phone-mobile.png'
+import heroPhone from '../assets/images/hero-phone.png'
 import { scrollToSection } from '../utils/scrollToSection'
 import { useParallax } from '../hooks/useParallax'
 
@@ -56,20 +55,9 @@ export default function HeroSection() {
           style={parallaxStyle}
         >
           <img 
-            alt="Identity Lab mobile interface preview" 
-            className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full md:hidden" 
-            src={heroPhoneMobile}
-            fetchPriority="high"
-            loading="eager"
-            onError={(e) => {
-              const target = e.target as HTMLImageElement
-              target.style.display = 'none'
-            }}
-          />
-          <img 
-            alt="Identity Lab desktop interface preview" 
-            className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full hidden md:block" 
-            src={heroPhoneDesktop}
+            alt="Identity Lab interface preview" 
+            className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full" 
+            src={heroPhone}
             fetchPriority="high"
             loading="eager"
             onError={(e) => {

@@ -8,7 +8,6 @@ const BACKGROUND_STYLE = {
 export default function HowItWorksSection() {
   return (
     <section
-      id="how-it-works"
       className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full"
       style={BACKGROUND_STYLE}
     >

@@ -8,14 +8,16 @@ interface LogoButtonProps {
   className?: string
   size?: number
   'aria-label'?: string
+  logoName?: 'Folio' | 'Folio Wallet'
 }
 
 export default function LogoButton({ 
   href, 
   onClick, 
   className = '', 
-  size = 36,
-  'aria-label': ariaLabel = 'Go to top'
+  size = 28,
+  'aria-label': ariaLabel = 'Go to top',
+  logoName = 'Folio Wallet'
 }: LogoButtonProps) {
   const handleClick = (e: MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
     if (href) {
@@ -37,7 +39,7 @@ export default function LogoButton({
         className={`${baseClasses} ${className}`}
         aria-label={ariaLabel}
       >
-        <Logo size={size} />
+        <Logo size={size} name={logoName} />
       </a>
     )
   }
@@ -48,7 +50,7 @@ export default function LogoButton({
       className={`${baseClasses} ${className}`}
       aria-label={ariaLabel}
     >
-      <Logo size={size} />
+      <Logo size={size} name={logoName} />
     </button>
   )
 }

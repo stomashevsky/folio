@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 import { LogoButton, Button } from './ui'
 import menuIcon from '../assets/icons/menu.svg'
@@ -50,14 +51,15 @@ export default function Navbar() {
           touchAction: 'pan-y'
         }}
       >
-        <div className="flex flex-col gap-6 md:gap-0 items-center px-0 py-3.5 md:py-4 w-full">
-          <div className="md:hidden flex flex-col gap-6 items-start justify-center w-full px-6 py-0 relative shrink-0">
+        <div className="flex flex-col gap-6 lg:gap-0 items-center px-0 py-3.5 lg:py-4 w-full">
+          <div className="lg:hidden flex flex-col gap-6 items-start justify-center w-full px-6 py-0 relative shrink-0">
             <div className="flex items-center justify-between relative shrink-0 w-full">
-              <LogoButton
-                href="hero"
-                size={36}
-                aria-label="Go to top"
-              />
+              <Link to="/" aria-label="Go to home">
+                <LogoButton
+                  size={28}
+                  aria-label="Go to home"
+                />
+              </Link>
 
               <Button
                 variant="ghost"

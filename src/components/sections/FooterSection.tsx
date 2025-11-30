@@ -12,9 +12,9 @@ export default function FooterSection() {
       style={BACKGROUND_STYLE}
     >
       <div className="flex flex-col gap-12 items-start max-w-[672px] md:max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-        <div className="flex flex-col md:flex-row gap-12 items-center md:items-center justify-center md:justify-start relative shrink-0 w-full">
-          <div className="flex flex-col md:flex-row gap-12 items-center relative shrink-0">
-            <Logo size={40} />
+        <div className="flex flex-col md:flex-row gap-8 md:gap-0 items-center md:items-center justify-center md:justify-start relative shrink-0 w-full">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-4 items-center relative shrink-0">
+            <Logo size={28} />
             <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center justify-center md:justify-start relative shrink-0 text-sm text-[#737373]">
               <Button
                 variant="subtle"
@@ -40,16 +40,16 @@ export default function FooterSection() {
 
         <div className="border-t border-[#e5e5e5] w-full"></div>
 
-        <div className="flex flex-col md:flex-row gap-4 items-center md:items-center justify-center md:justify-between relative shrink-0 w-full">
-          <p className="font-normal leading-5 relative shrink-0 text-[#737373] text-sm text-center md:text-left order-2 md:order-1">
-            Copyright 2025 © Folio
-          </p>
+        <div className="flex flex-col md:flex-row gap-12 md:gap-4 items-center md:items-center justify-center md:justify-between relative shrink-0 w-full">
           <Button
             variant="subtle"
             className="relative shrink-0 text-center order-1 md:order-2"
           >
             Terms of Service
           </Button>
+          <p className="font-normal leading-5 relative shrink-0 text-[#737373] text-sm text-center md:text-left order-2 md:order-1">
+            Copyright 2025 © Folio
+          </p>
         </div>
       </div>
     </div>

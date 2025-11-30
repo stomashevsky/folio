@@ -1,6 +1,6 @@
+import { Link, useNavigate } from 'react-router-dom'
 import { LogoButton, Button } from '../ui'
 import xIcon from '../../assets/icons/x.svg'
-import { scrollToSection } from '../../utils/scrollToSection'
 
 interface MobileMenuProps {
   isOpen: boolean
@@ -8,11 +8,11 @@ interface MobileMenuProps {
 }
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
-  const handleNavClick = (section: string) => {
+  const navigate = useNavigate()
+
+  const handleNavClick = (path: string) => {
     onClose()
-    setTimeout(() => {
-      scrollToSection(section)
-    }, 150)
+    navigate(path)
   }
 
   if (!isOpen) return null
@@ -20,23 +20,20 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   return (
     <>
       <div
-        className="md:hidden fixed inset-0 bg-[rgba(10,10,10,0.3)] z-[3]"
+        className="lg:hidden fixed inset-0 bg-[rgba(10,10,10,0.3)] z-[3]"
         onClick={onClose}
         aria-hidden="true"
       />
-      <div className="md:hidden fixed bg-white border-b border-[#e5e5e5] border-solid left-0 right-0 top-0 z-[4] w-full">
+      <div className="lg:hidden fixed bg-white border-b border-[#e5e5e5] border-solid left-0 right-0 top-0 z-[4] w-full">
         <div className="flex flex-col gap-6 items-start overflow-hidden px-0 py-3.5 w-full">
           <div className="flex flex-col gap-8 items-start justify-start w-full px-6 py-0 relative shrink-0">
             <div className="flex items-center justify-between relative shrink-0 w-full">
-              <LogoButton
-                onClick={(e) => {
-                  e.preventDefault()
-                  e.stopPropagation()
-                  handleNavClick('hero')
-                }}
-                size={36}
-                aria-label="Go to top"
-              />
+              <Link to="/" onClick={onClose}>
+                <LogoButton
+                  size={28}
+                  aria-label="Go to home"
+                />
+              </Link>
               <Button
                 variant="ghost"
                 size="sm"
@@ -56,11 +53,11 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   onClick={(e) => {
                     e.preventDefault()
                     e.stopPropagation()
-                    handleNavClick('playground')
+                    handleNavClick('/')
                   }}
                   className="justify-start text-left"
                 >
-                  Playground
+                  Personal Use
                 </Button>
                 <Button
                   variant="ghost"
@@ -68,11 +65,11 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   onClick={(e) => {
                     e.preventDefault()
                     e.stopPropagation()
-                    handleNavClick('how-it-works')
+                    handleNavClick('/business')
                   }}
                   className="justify-start text-left"
                 >
-                  How it works
+                  Business
                 </Button>
                 <Button
                   variant="ghost"
@@ -80,11 +77,35 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   onClick={(e) => {
                     e.preventDefault()
                     e.stopPropagation()
-                    handleNavClick('faq')
+                    handleNavClick('/government')
                   }}
                   className="justify-start text-left"
                 >
-                  FAQ
+                  Government
+                </Button>
+                <Button
+                  variant="ghost"
+                  fullWidth
+                  onClick={(e) => {
+                    e.preventDefault()
+                    e.stopPropagation()
+                    handleNavClick('/identity-lab')
+                  }}
+                  className="justify-start text-left"
+                >
+                  Identity Lab
+                </Button>
+                <Button
+                  variant="ghost"
+                  fullWidth
+                  onClick={(e) => {
+                    e.preventDefault()
+                    e.stopPropagation()
+                    handleNavClick('/blog')
+                  }}
+                  className="justify-start text-left"
+                >
+                  Blog
                 </Button>
               </div>
 
