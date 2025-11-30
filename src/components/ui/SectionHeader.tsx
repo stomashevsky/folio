@@ -1,5 +1,4 @@
 interface SectionHeaderProps {
-  label?: string
   title: string
   description?: string
   align?: 'center' | 'left'
@@ -14,7 +13,6 @@ const maxWidthClassMap: Record<string, string> = {
 }
 
 export default function SectionHeader({
-  label,
   title,
   description,
   align = 'center',

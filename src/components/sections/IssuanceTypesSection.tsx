@@ -15,7 +15,6 @@ export default function IssuanceTypesSection() {
       <div className="flex flex-col gap-12 md:gap-16 items-center justify-center max-w-[672px] md:max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
         <div className="flex flex-col gap-10 md:gap-12 items-center relative shrink-0 w-full">
           <SectionHeader
-            label="Issuance types"
             title="How documents are issued in Identity Lab"
             description="Each document follows a specific issuance type. Color labels on the cards show which flow is used."
           />

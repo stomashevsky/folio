@@ -13,7 +13,6 @@ export default function HeroSection() {
       <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
         <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
           <SectionHeader
-            label="Inside Folio Wallet"
             title="Identity Lab"
             description="Issue and verify digital IDs in a safe sandbox that mirrors real European digital ID flows. Explore demo documents, test QR based verification and see exactly which data is shared."
             align="left"
@@ -50,7 +49,6 @@ export default function HeroSection() {
       <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
         <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
           <SectionHeader
-            label="Inside Folio Wallet"
             title="Identity Lab"
             description="Issue and verify digital IDs in a safe sandbox that mirrors real European digital ID flows. Explore demo documents, test QR based verification and see exactly which data is shared."
             align="left"

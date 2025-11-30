@@ -203,7 +203,6 @@ export default function PersonalUsePage() {
           </div>
           <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
             <SectionHeader
-              label="Features"
               title="Everything in one place"
               align="left"
               maxWidth="100%"
@@ -220,7 +219,6 @@ export default function PersonalUsePage() {
         {/* Mobile Layout */}
         <div className="flex md:hidden flex-col gap-8 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <SectionHeader
-            label="Features"
             title="Everything in one place"
             align="left"
             maxWidth="100%"
@@ -240,7 +238,6 @@ export default function PersonalUsePage() {
           {/* Desktop Layout */}
           <div className="hidden md:flex flex-col gap-12 items-center relative shrink-0 w-full">
             <SectionHeader
-              label="Quick Import"
               title="Add documents in seconds"
               description="Choose the easiest way to bring your documents into Folio."
               maxWidth="576px"
@@ -272,7 +269,6 @@ export default function PersonalUsePage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-16 items-center relative shrink-0 w-full">
             <SectionHeader
-              label="Quick Import"
               title="Add documents in seconds"
               description="Choose the easiest way to bring your documents into Folio."
               align="center"
@@ -321,7 +317,6 @@ export default function PersonalUsePage() {
           </div>
           <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
             <SectionHeader
-              label="Document Viewer"
               title="A clean view of every document"
               description="Folio displays your documents in clean, readable layouts with key fields extracted automatically. You can browse photos in fullscreen, view attached PDFs and copy or share any detail with ease."
               align="left"
@@ -333,7 +328,6 @@ export default function PersonalUsePage() {
         <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
             <SectionHeader
-              label="Document Viewer"
               title="A clean view of every document"
               description="Folio displays your documents in clean, readable layouts with key fields extracted automatically. You can browse photos in fullscreen, view attached PDFs and copy or share any detail with ease."
               align="left"
@@ -355,7 +349,6 @@ export default function PersonalUsePage() {
         <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-col gap-10 items-center relative shrink-0 w-full">
             <SectionHeader
-              label="Smart Tools"
               title="Tools that make a difference"
               description="Folio includes thoughtful features that make everyday use easier and help you track trips, find documents instantly, share with confidence and stay ahead of important dates."
               maxWidth="576px"
@@ -439,7 +432,6 @@ function TicketsAndBookingsSection() {
       <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
         <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
           <SectionHeader
-            label="Tickets and Bookings"
             title="Travel plans, thoughtfully organized"
             align="left"
           />
@@ -464,7 +456,6 @@ function TicketsAndBookingsSection() {
       {/* Mobile Layout */}
       <div className="flex md:hidden flex-col gap-8 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
         <SectionHeader
-          label="Tickets and Bookings"
           title="Travel plans, thoughtfully organized"
           align="left"
         />

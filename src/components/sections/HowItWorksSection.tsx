@@ -14,7 +14,6 @@ export default function HowItWorksSection() {
       <div className="flex flex-col gap-12 md:gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
         <div className="flex flex-col gap-10 md:gap-12 items-center relative shrink-0 w-full">
           <SectionHeader
-            label="How it works"
             title="How EUDI flows work"
             description="Identity Lab lets you issue demo documents, run verification flows and understand the European Digital Identity (EUDI) standards behind them."
           />
