@@ -43,7 +43,7 @@ export default function Issue() {
     <>
       <div className="flex flex-col gap-10 items-center w-full">
         <SectionHeader
-          title="Work with digital documents"
+          title="Playground"
           description="Issue demo documents and test verification flows."
         />
 

@@ -30,7 +30,7 @@ export default function LogoButton({
     }
   }
 
-  const baseClasses = `flex items-center justify-center rounded-md ${FOCUS_STYLES}`
+  const baseClasses = `flex items-center justify-center rounded-full ${FOCUS_STYLES}`
 
   if (href) {
     return (
