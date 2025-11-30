@@ -29,10 +29,16 @@ export default function DesktopNav() {
   }
 
   const handleNavClick = (e: React.MouseEvent, path: string) => {
+    e.preventDefault()
     const isCurrentPage = isActive(path)
     if (isCurrentPage) {
-      e.preventDefault()
       scrollToTop()
+    } else {
+      navigate(path)
+      // Scroll after a short delay to allow the page to load
+      setTimeout(() => {
+        scrollToTop()
+      }, 100)
     }
   }
 
