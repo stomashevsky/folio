@@ -40,9 +40,9 @@ export default function BusinessPage() {
           <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
-                Better tickets.
+                Better tickets
                 <br aria-hidden="true" />
-                No app to build.
+                No app to build
               </h1>
               <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
                 Give your customers modern mobile tickets that are easy to save, easy to find and easy to scan.
@@ -77,9 +77,9 @@ export default function BusinessPage() {
           <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
             <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
               <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
-                Better tickets.
+                Better tickets
                 <br aria-hidden="true" />
-                No app to build.
+                No app to build
               </h1>
               <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
                 Give your customers modern mobile tickets that are easy to save, easy to find and easy to scan.

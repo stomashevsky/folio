@@ -298,6 +298,14 @@ export default function GovernmentPage() {
               description="Test real digital identity flows in a safe sandbox where you can issue, verify and experiment with mobile credentials in a fully simulated environment."
               align="left"
             />
+            <div className="flex gap-3 items-start relative shrink-0">
+              <Button
+                href="/identity-lab"
+                variant="primary"
+              >
+                Open Identity Lab
+              </Button>
+            </div>
           </div>
         </div>
 
@@ -309,6 +317,14 @@ export default function GovernmentPage() {
               description="Test real digital identity flows in a safe sandbox where you can issue, verify and experiment with mobile credentials in a fully simulated environment."
               align="left"
             />
+            <div className="flex gap-3 items-start relative shrink-0">
+              <Button
+                href="/identity-lab"
+                variant="primary"
+              >
+                Open Identity Lab
+              </Button>
+            </div>
           </div>
           <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
             <img
