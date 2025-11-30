@@ -1,10 +1,9 @@
 import { useState } from 'react'
 import Navbar from '../components/Navbar'
-import { SectionHeader, Button } from '../components/ui'
+import { SectionHeader } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import FAQSection, { FAQItem } from '../components/sections/FAQSection'
 import Accordion, { AccordionItemData } from '../components/ui/Accordion'
-import { scrollToSection } from '../utils/scrollToSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import personalUseHero from '../assets/images/personal-use-hero.png'
 import featuresTickets from '../assets/images/features-tickets.png'
@@ -147,7 +146,7 @@ export default function PersonalUsePage() {
         </div>
 
         {/* Mobile Layout */}
-        <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[672px] px-6 py-0 relative shrink-0 w-full">
+        <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
             <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
               <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
@@ -157,7 +156,7 @@ export default function PersonalUsePage() {
                 Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find. Your essential information is always at hand when you need it.
               </p>
             </div>
-            <div className="flex flex-row flex-wrap gap-3 items-start relative shrink-0 w-full">
+            <div className="flex flex-col gap-3 items-start relative shrink-0">
               <a
                 href="https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717"
                 target="_blank"
@@ -566,12 +565,12 @@ function GetTheAppSection() {
             Your documents stay organized, synced and instantly accessible on iOS and Android.
           </p>
         </div>
-        <div className="flex flex-col gap-3 items-start relative shrink-0 w-full">
+        <div className="flex flex-col gap-3 items-center relative shrink-0 w-full">
           <a
             href="https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#171717] box-border flex gap-2 h-9 items-center justify-center px-4 py-2 relative rounded-md shrink-0 w-full text-[#fafafa] text-sm font-medium leading-5 whitespace-nowrap hover:opacity-90 transition-opacity"
+            className="bg-[#171717] box-border flex gap-2 h-9 items-center justify-center px-4 py-2 relative rounded-md shrink-0 text-[#fafafa] text-sm font-medium leading-5 whitespace-nowrap hover:opacity-90 transition-opacity"
           >
             <span>Download for iOS</span>
             <img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />
@@ -580,7 +579,7 @@ function GetTheAppSection() {
             href="https://play.google.com/store/apps/details?id=com.folioltd"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#171717] box-border flex gap-2 h-9 items-center justify-center px-4 py-2 relative rounded-md shrink-0 w-full text-[#fafafa] text-sm font-medium leading-5 whitespace-nowrap hover:opacity-90 transition-opacity"
+            className="bg-[#171717] box-border flex gap-2 h-9 items-center justify-center px-4 py-2 relative rounded-md shrink-0 text-[#fafafa] text-sm font-medium leading-5 whitespace-nowrap hover:opacity-90 transition-opacity"
           >
             <span>Download for Android</span>
             <img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />
