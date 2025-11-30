@@ -200,11 +200,12 @@ export default function PersonalUsePage() {
             />
           </div>
           <div className="flex flex-1 flex-col gap-8 items-start relative shrink-0">
-            <div className="flex flex-col gap-5 items-start relative shrink-0 w-full">
-              <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
-                Everything in one place
-              </h2>
-            </div>
+            <SectionHeader
+              label="Features"
+              title="Everything in one place"
+              align="left"
+              maxWidth="100%"
+            />
             <Accordion
               items={featuresItems}
               defaultOpenId="cards"
@@ -216,11 +217,12 @@ export default function PersonalUsePage() {
 
         {/* Mobile Layout */}
         <div className="flex md:hidden flex-col gap-8 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex flex-col gap-5 items-start relative shrink-0 w-full">
-            <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
-              Everything in one place
-            </h2>
-          </div>
+          <SectionHeader
+            label="Features"
+            title="Everything in one place"
+            align="left"
+            maxWidth="100%"
+          />
           <Accordion
             items={featuresItems}
             defaultOpenId="cards"
