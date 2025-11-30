@@ -2,6 +2,7 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import { LogoButton, Button } from '../ui'
 import xIcon from '../../assets/icons/x.svg'
 import { scrollToTop } from '../../utils/scrollToTop'
+import { scrollToSection } from '../../utils/scrollToSection'
 
 interface MobileMenuProps {
   isOpen: boolean
@@ -152,11 +153,15 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 onClick={(e) => {
                   e.preventDefault()
                   onClose()
-                  window.open(
-                    'https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717',
-                    '_blank',
-                    'noopener,noreferrer'
-                  )
+                  const isHomePage = location.pathname === '/' || location.pathname === '/folio' || location.pathname === '/folio/'
+                  if (isHomePage) {
+                    scrollToSection('get-the-app')
+                  } else {
+                    navigate('/')
+                    setTimeout(() => {
+                      scrollToSection('get-the-app')
+                    }, 100)
+                  }
                 }}
               >
                 Get the app

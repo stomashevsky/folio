@@ -22,4 +22,6 @@ export { default as AccordionItem } from './AccordionItem'
 export { default as ToastContainer } from './Toast'
 export type { Toast, ToastType } from './Toast'
 export { default as SkipToContentLink } from './SkipToContentLink'
+export { default as FooterLink } from './FooterLink'
+export { default as SocialIcon } from './SocialIcon'
 

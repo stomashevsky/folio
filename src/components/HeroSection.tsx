@@ -26,19 +26,7 @@ export default function HeroSection() {
           {/* Buttons */}
           <div className="flex flex-col md:flex-row gap-3 items-start relative shrink-0 w-full md:w-auto">
             <Button 
-              variant="primary" 
-              fullWidth
-              className="md:w-auto md:flex-initial"
-              onClick={() => {
-                window.open('https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717', '_blank', 'noopener,noreferrer')
-              }}
-            >
-              Get the app
-            </Button>
-            <Button 
-              variant="secondary"
-              fullWidth
-              className="md:w-auto md:flex-initial"
+              variant="primary"
               onClick={() => {
                 scrollToSection('playground')
               }}

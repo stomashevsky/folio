@@ -25,6 +25,7 @@ import calendarRangeIcon from '../assets/icons/calendar-range.svg'
 import tagIcon from '../assets/icons/tag.svg'
 import triangleAlertIcon from '../assets/icons/triangle-alert.svg'
 import shieldCheckIcon from '../assets/icons/shield-check.svg'
+import arrowUpRightIcon from '../assets/icons/arrow-up-right.svg'
 
 const BACKGROUND_STYLE = {
   backgroundImage:
@@ -114,22 +115,24 @@ export default function PersonalUsePage() {
               </p>
             </div>
             <div className="flex gap-3 items-start relative shrink-0">
-              <Button 
-                variant="primary" 
+              <a
                 href="https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="bg-[#171717] box-border flex gap-2 h-9 items-center justify-center px-4 py-2 relative rounded-md shrink-0 text-[#fafafa] text-sm font-medium leading-5 whitespace-nowrap hover:opacity-90 transition-opacity"
               >
-                Get the app
-              </Button>
-              <Button 
-                variant="secondary"
-                onClick={() => {
-                  scrollToSection('everything-in-one-place')
-                }}
+                <span>Download for iOS</span>
+                <img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.folioltd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#171717] box-border flex gap-2 h-9 items-center justify-center px-4 py-2 relative rounded-md shrink-0 text-[#fafafa] text-sm font-medium leading-5 whitespace-nowrap hover:opacity-90 transition-opacity"
               >
-                How it works
-              </Button>
+                <span>Download for Android</span>
+                <img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />
+              </a>
             </div>
           </div>
           <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl shrink-0 aspect-[240/240]">
@@ -154,25 +157,25 @@ export default function PersonalUsePage() {
                 Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find. Your essential information is always at hand when you need it.
               </p>
             </div>
-            <div className="flex flex-col gap-3 items-start relative shrink-0 w-full">
-              <Button 
-                variant="primary" 
-                fullWidth
+            <div className="flex flex-row flex-wrap gap-3 items-start relative shrink-0 w-full">
+              <a
                 href="https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="bg-[#171717] box-border flex gap-2 h-9 items-center justify-center px-4 py-2 relative rounded-md shrink-0 text-[#fafafa] text-sm font-medium leading-5 whitespace-nowrap hover:opacity-90 transition-opacity"
               >
-                Get the app
-              </Button>
-              <Button 
-                variant="secondary"
-                fullWidth
-                onClick={() => {
-                  scrollToSection('everything-in-one-place')
-                }}
+                <span>Download for iOS</span>
+                <img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.folioltd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#171717] box-border flex gap-2 h-9 items-center justify-center px-4 py-2 relative rounded-md shrink-0 text-[#fafafa] text-sm font-medium leading-5 whitespace-nowrap hover:opacity-90 transition-opacity"
               >
-                How it works
-              </Button>
+                <span>Download for Android</span>
+                <img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />
+              </a>
             </div>
           </div>
           <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
@@ -390,6 +393,9 @@ export default function PersonalUsePage() {
         title="Frequently asked questions"
       />
 
+      {/* Get The App Section */}
+      <GetTheAppSection />
+
       {/* Footer */}
       <FooterSection />
     </div>
@@ -512,6 +518,76 @@ function ToolCard({ icon, title, description }: { icon: string; title: string; d
         </div>
       </div>
     </div>
+  )
+}
+
+function GetTheAppSection() {
+  return (
+    <section id="get-the-app" className="flex flex-col gap-6 items-center overflow-hidden px-0 md:px-6 py-0 md:pb-24 relative shrink-0 w-full bg-white">
+      {/* Desktop Layout */}
+      <div className="hidden md:flex gap-16 items-center max-w-[1280px] p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5]">
+        <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px]">
+          <h2 className="font-bold leading-8 text-2xl text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+            Take Folio with you, wherever you go
+          </h2>
+          <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full whitespace-pre-wrap">
+            Your documents stay organized, synced and instantly accessible on iOS and Android.
+          </p>
+        </div>
+        <div className="flex gap-3 items-start relative shrink-0">
+          <a
+            href="https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#171717] box-border flex gap-2 h-9 items-center justify-center px-4 py-2 relative rounded-md shrink-0 text-[#fafafa] text-sm font-medium leading-5 whitespace-nowrap hover:opacity-90 transition-opacity"
+          >
+            <span>Download for iOS</span>
+            <img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.folioltd"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#171717] box-border flex gap-2 h-9 items-center justify-center px-4 py-2 relative rounded-md shrink-0 text-[#fafafa] text-sm font-medium leading-5 whitespace-nowrap hover:opacity-90 transition-opacity"
+          >
+            <span>Download for Android</span>
+            <img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />
+          </a>
+        </div>
+      </div>
+
+      {/* Mobile Layout */}
+      <div className="flex md:hidden flex-col gap-8 items-center w-full px-6 py-16 relative shrink-0" style={BACKGROUND_STYLE}>
+        <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full whitespace-pre-wrap">
+          <h2 className="font-bold leading-8 text-2xl text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+            Take Folio with you, wherever you go
+          </h2>
+          <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full whitespace-pre-wrap">
+            Your documents stay organized, synced and instantly accessible on iOS and Android.
+          </p>
+        </div>
+        <div className="flex flex-col gap-3 items-start relative shrink-0 w-full">
+          <a
+            href="https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#171717] box-border flex gap-2 h-9 items-center justify-center px-4 py-2 relative rounded-md shrink-0 w-full text-[#fafafa] text-sm font-medium leading-5 whitespace-nowrap hover:opacity-90 transition-opacity"
+          >
+            <span>Download for iOS</span>
+            <img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.folioltd"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#171717] box-border flex gap-2 h-9 items-center justify-center px-4 py-2 relative rounded-md shrink-0 w-full text-[#fafafa] text-sm font-medium leading-5 whitespace-nowrap hover:opacity-90 transition-opacity"
+          >
+            <span>Download for Android</span>
+            <img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />
+          </a>
+        </div>
+      </div>
+    </section>
   )
 }
 

@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { LogoButton, Button } from '../ui'
 import { scrollToTop } from '../../utils/scrollToTop'
+import { scrollToSection } from '../../utils/scrollToSection'
 
 export default function DesktopNav() {
   const location = useLocation()
@@ -32,6 +33,19 @@ export default function DesktopNav() {
     if (isCurrentPage) {
       e.preventDefault()
       scrollToTop()
+    }
+  }
+
+  const handleGetAppClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+    const isHomePage = location.pathname === '/' || location.pathname === '/folio' || location.pathname === '/folio/'
+    if (isHomePage) {
+      scrollToSection('get-the-app')
+    } else {
+      navigate('/')
+      setTimeout(() => {
+        scrollToSection('get-the-app')
+      }, 100)
     }
   }
 
@@ -97,9 +111,7 @@ export default function DesktopNav() {
         <div className="flex-shrink-0 z-10">
           <Button
             variant="primary"
-            href="https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717"
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={handleGetAppClick}
           >
             Get the app
           </Button>
