@@ -29,8 +29,15 @@ export default function Accordion({
   )
 
   const handleToggle = (itemId: string) => {
-    // If clicking on an already open section, do nothing
+    // If clicking on an already open section
     if (openId === itemId) {
+      // If allowCloseAll is true, close it; otherwise do nothing
+      if (allowCloseAll) {
+        setOpenId(null)
+        if (onItemChange) {
+          onItemChange(null)
+        }
+      }
       return
     }
 
