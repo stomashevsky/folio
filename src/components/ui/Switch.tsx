@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { FOCUS_STYLES } from './focusStyles'
 
 interface SwitchProps {
