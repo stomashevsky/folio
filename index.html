@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     
     <!-- Favicons -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="alternate icon" href="/favicon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/folio/favicon.svg" />
+    <link rel="alternate icon" href="/folio/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/folio/favicon.svg" />
+    <link rel="manifest" href="/folio/site.webmanifest" />
     <meta name="theme-color" content="#0A0A0A" />
     <meta name="msapplication-TileColor" content="#0A0A0A" />
     
@@ -79,8 +79,10 @@
           var decoded = l.search.slice(1).split('&').map(function(s) { 
             return s.replace(/~and~/g, '&')
           }).join('?');
+          // Ensure base path ends with /, then add decoded route
+          var basePath = l.pathname.endsWith('/') ? l.pathname.slice(0, -1) : l.pathname;
           window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + decoded + l.hash
+              basePath + decoded + l.hash
           );
         }
       }(window.location))

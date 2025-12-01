@@ -67,41 +67,41 @@
       // This script takes the current url and converts the path and query
       // string into just a query string, and then redirects the browser to the
       // new url with only a query string and hash fragment,
-      // e.g., https://www.foo.com/one/two?a=b&c=d#qwe, becomes
-      // https://www.foo.com/404.html?/one/two&a=b~and~c=d#qwe
+      // e.g., https://username.github.io/folio/government becomes
+      // https://username.github.io/folio/?/government
       // Note: this 404.html file must be at least 512 bytes for it to work
       // with Internet Explorer (it is currently > 512 bytes)
 
-      // If you're creating a Project Pages site and NOT using a custom domain,
-      // then set segmentCount to 1 (enterprise users may need to set it to > 1).
-      // This way the code will only replace the route part and not the
-      // project name. For example, if your repo name is 'my-repo' and your
-      // site is at https://username.github.io/my-repo/, then by default the
-      // segmentCount will be 1 and it will transform:
-      // https://username.github.io/my-repo/one/two
+      // For Project Pages sites, set segmentCount to 1 to keep the repo name (/folio/)
+      // This way the code will transform:
+      // https://username.github.io/folio/government
       // into
-      // https://username.github.io/my-repo/404.html?/one/two
-      // But if you set segmentCount to 0, it will transform:
-      // https://username.github.io/my-repo/one/two
-      // into
-      // https://username.github.io/404.html?/one/two
-      // For Project Pages sites, we recommend setting segmentCount to 1.
-      // For User/Organization Pages sites using a custom domain, set segmentCount to 0.
+      // https://username.github.io/folio/?/government
       var segmentCount = 1;
 
       var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') +
+      var pathSegments = l.pathname.split('/').filter(function(segment) {
+        return segment !== '';
+      });
+      
+      // Build the base path (e.g., '/folio')
+      var basePath = '/' + pathSegments.slice(0, segmentCount).join('/');
+      
+      // Get the remaining path segments after the base (e.g., ['government'])
+      var remainingPath = pathSegments.slice(segmentCount).join('/');
+      
+      // Build the redirect URL
+      var redirectUrl = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        basePath + '/?/' + remainingPath.replace(/&/g, '~and~') +
         (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
+        l.hash;
+      
+      // Redirect to index.html with the route in query string
+      l.replace(redirectUrl);
     </script>
   </head>
   <body>
-    <div id="root"></div>
-    <!-- Note: Scripts will be injected by Vite during build -->
+    <!-- Redirecting... -->
   </body>
 </html>
 
