@@ -91,8 +91,10 @@
       var remainingPath = pathSegments.slice(segmentCount).join('/');
       
       // Build the redirect URL
+      // Ensure basePath ends with / for proper URL construction
+      var basePathWithSlash = basePath.endsWith('/') ? basePath : basePath + '/';
       var redirectUrl = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        basePath + '/?/' + remainingPath.replace(/&/g, '~and~') +
+        basePathWithSlash + '?/' + remainingPath.replace(/&/g, '~and~') +
         (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
         l.hash;
       

@@ -6,7 +6,6 @@ import { usePageTitle } from '../hooks/usePageTitle'
 import { scrollToTop } from '../utils/scrollToTop'
 import checkIcon from '../assets/icons/check.svg'
 import placeholderImage from '../assets/images/placeholder.png'
-import arrowUpRightIcon from '../assets/icons/arrow-up-right.svg'
 
 const BACKGROUND_STYLE = {
   backgroundImage:

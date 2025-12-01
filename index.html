@@ -79,10 +79,12 @@
           var decoded = l.search.slice(1).split('&').map(function(s) { 
             return s.replace(/~and~/g, '&')
           }).join('?');
-          // Ensure base path ends with /, then add decoded route
-          var basePath = l.pathname.endsWith('/') ? l.pathname.slice(0, -1) : l.pathname;
+          // Get the base path from pathname (e.g., '/folio' from '/folio/')
+          var basePath = l.pathname.split('/').slice(0, -1).join('/') || '/';
+          // Ensure decoded route starts with /
+          var route = decoded.startsWith('/') ? decoded : '/' + decoded;
           window.history.replaceState(null, null,
-              basePath + decoded + l.hash
+              basePath + route + l.hash
           );
         }
       }(window.location))
