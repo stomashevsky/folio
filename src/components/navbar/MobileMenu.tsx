@@ -136,19 +136,6 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 >
                   Identity Lab
                 </Button>
-                <Button
-                  variant="ghost"
-                  fullWidth
-                  onClick={(e) => {
-                    e.preventDefault()
-                    e.stopPropagation()
-                    handleNavClick('/blog')
-                  }}
-                  className={`justify-start text-left ${isActive('/blog') ? 'bg-[#f5f5f5]' : ''}`}
-                  aria-current={isActive('/blog') ? 'page' : undefined}
-                >
-                  Blog
-                </Button>
               </div>
 
               <Button

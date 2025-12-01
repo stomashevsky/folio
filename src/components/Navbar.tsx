@@ -25,7 +25,7 @@ export default function Navbar() {
       scrollToTop()
     } else {
       navigate('/')
-      // Скроллим после небольшой задержки, чтобы страница успела загрузиться
+      // Scroll after a short delay to allow the page to load
       setTimeout(() => {
         scrollToTop()
       }, 100)

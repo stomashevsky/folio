@@ -104,15 +104,23 @@ export default function PersonalUsePage() {
   // Handle scroll to section when navigating from other pages
   useEffect(() => {
     // Check if we need to scroll to a specific section
+    let timeoutId: ReturnType<typeof setTimeout> | null = null
+    
     if (location.hash) {
       const sectionId = location.hash.slice(1) // Remove #
-      setTimeout(() => {
+      timeoutId = setTimeout(() => {
         scrollToSection(sectionId)
       }, 100)
     } else if (location.state?.scrollTo === 'get-the-app') {
-      setTimeout(() => {
+      timeoutId = setTimeout(() => {
         scrollToSection('get-the-app')
       }, 100)
+    }
+    
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId)
+      }
     }
   }, [location])
 

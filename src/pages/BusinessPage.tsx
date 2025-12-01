@@ -9,14 +9,15 @@ import codeXmlIcon from '../assets/icons/code-xml.svg'
 import globeIcon from '../assets/icons/globe.svg'
 import sendIcon from '../assets/icons/send.svg'
 
-// TODO: Replace placeholder image with actual Business page images from Figma:
+// TODO: Replace placeholder image with actual Business page images from Figma
+// Required images:
 // - business-hero.png (Hero section image)
 // - business-features-tickets.png (Features section image showing tickets)
 // - business-events.png (Events and Entertainment section image)
 // - business-transport.png (Transport Companies section image)
 // - business-tours.png (Tours and Activities section image)
 // - business-zero-setup.png (Zero Setup section image)
-// Temporarily using placeholder image for all sections
+// Note: Temporarily using placeholder image for all sections until design assets are available
 import placeholderImage from '../assets/images/placeholder.png'
 
 const BACKGROUND_STYLE = {

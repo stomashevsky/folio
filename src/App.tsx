@@ -7,7 +7,7 @@ import BlogPage from './pages/BlogPage'
 
 function App() {
   // Use Vite's BASE_URL which matches the base config
-  // In dev: '/', in production build: '/folio/'
+  // In dev: '/', in production build: '/folio'
   const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/'
   
   return (

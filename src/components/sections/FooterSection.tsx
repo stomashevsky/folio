@@ -44,7 +44,6 @@ export default function FooterSection() {
               <FooterLink to="/business">Business</FooterLink>
               <FooterLink to="/government">Government</FooterLink>
               <FooterLink to="/identity-lab">Identity Lab</FooterLink>
-              <FooterLink to="/blog">Blog</FooterLink>
             </div>
           </div>
 
@@ -82,7 +81,7 @@ export default function FooterSection() {
                 onClick={(e) => {
                   e.preventDefault()
                   // TODO: Add actual Terms of Use page URL
-                  console.log('Terms of Use clicked')
+                  // Issue: Terms of Use page needs to be created and linked
                 }}
               >
                 Terms of Use
@@ -92,7 +91,7 @@ export default function FooterSection() {
                 onClick={(e) => {
                   e.preventDefault()
                   // TODO: Add actual Privacy Policy page URL
-                  console.log('Privacy Policy clicked')
+                  // Issue: Privacy Policy page needs to be created and linked
                 }}
               >
                 Privacy Policy
