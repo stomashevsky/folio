@@ -17,7 +17,11 @@ export default function GovernmentPage() {
   
   usePageTitle({
     title: 'Government Solutions | Folio Wallet',
-    description: 'Tools for governments to design, test and deploy modern digital credentials. Digital identity aligned with global standards.'
+    description: 'Tools for governments to design, test and deploy modern digital credentials. Digital identity aligned with global standards.',
+    ogTitle: 'Government Solutions | Folio Wallet',
+    ogDescription: 'Tools for governments to design, test and deploy modern digital credentials. Digital identity aligned with global standards.',
+    ogImage: 'https://folio.id/src/assets/images/government-hero.png',
+    ogUrl: 'https://folio.id/government'
   })
 
   return (

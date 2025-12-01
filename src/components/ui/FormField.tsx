@@ -1,4 +1,4 @@
-import React, { useId, ReactNode } from 'react'
+import React, { useId, ReactNode, isValidElement, cloneElement } from 'react'
 
 export interface FormFieldProps {
   label: string
@@ -26,11 +26,11 @@ export default function FormField({
   const hasError = error || !!errorMessage
 
   // Clone children to add aria-describedby if errorMessage exists
-  const childrenWithProps = errorMessage 
-    ? React.cloneElement(children as React.ReactElement, {
+  const childrenWithProps = errorMessage && isValidElement(children)
+    ? cloneElement(children, {
         'aria-describedby': errorId,
         'aria-invalid': hasError ? 'true' : 'false'
-      })
+      } as React.HTMLAttributes<HTMLElement>)
     : children
 
   return (

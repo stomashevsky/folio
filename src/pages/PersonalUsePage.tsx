@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, memo } from 'react'
 import { useLocation } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard } from '../components/ui'
@@ -89,12 +89,16 @@ const featuresItems: AccordionItemData[] = [
   },
 ]
 
-export default function PersonalUsePage() {
+function PersonalUsePage() {
   const location = useLocation()
   
   usePageTitle({
     title: 'Folio - Your documents, always with you | Folio Wallet',
-    description: 'Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find. Your essential information is always at hand when you need it.'
+    description: 'Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find. Your essential information is always at hand when you need it.',
+    ogTitle: 'Folio - Your documents, always with you | Folio Wallet',
+    ogDescription: 'Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible.',
+    ogImage: 'https://folio.id/src/assets/images/personal-use-hero.png',
+    ogUrl: 'https://folio.id/'
   })
   
   const [activeFeatureId, setActiveFeatureId] = useState<string | null>('cards')
@@ -582,4 +586,6 @@ function GetTheAppSection() {
     </section>
   )
 }
+
+export default memo(PersonalUsePage)
 

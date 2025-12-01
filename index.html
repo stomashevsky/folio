@@ -58,7 +58,9 @@
     </script>
     
     <!-- Content Security Policy -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-XeNpbq034w0m3hU2IirnKxaUajbLaMP8wW80j2KdEoE=' 'sha256-CVwTVNhkb5sIYIpuGe3NZv4KPlAnMHencu06RxRIKOE='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self';" />
+    <!-- Note: 'unsafe-inline' for style-src is required for Tailwind CSS and dynamic inline styles -->
+    <!-- Consider using nonce-based CSP in production with proper server configuration -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-XeNpbq034w0m3hU2IirnKxaUajbLaMP8wW80j2KdEoE=' 'sha256-CVwTVNhkb5sIYIpuGe3NZv4KPlAnMHencu06RxRIKOE='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;" />
   </head>
   <body>
     <div id="root"></div>

@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from 'react'
+import { ReactNode, useEffect, useState, useId } from 'react'
 import { createPortal } from 'react-dom'
 import { Button, useFocusTrap, useBodyScrollLock } from '../ui'
 import { type ModalSize, MODAL_RESPONSIVE_CLASSES } from './modalConfig'
@@ -105,8 +105,9 @@ export default function ModalShell({
   if (!shouldRender) return null
 
   const maxWidthClass = MODAL_RESPONSIVE_CLASSES.modal.maxWidth[size]
-  const titleId = title ? `modal-title-${Math.random().toString(36).substr(2, 9)}` : undefined
-  const descriptionId = description ? `modal-description-${Math.random().toString(36).substr(2, 9)}` : undefined
+  const baseId = useId()
+  const titleId = title ? `${baseId}-title` : undefined
+  const descriptionId = description ? `${baseId}-description` : undefined
 
   /**
    * Responsive modal behavior:

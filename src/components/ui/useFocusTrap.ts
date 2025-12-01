@@ -10,7 +10,7 @@ const FOCUSABLE_SELECTORS = [
 ].join(', ')
 
 export function useFocusTrap<T extends HTMLElement>(isActive: boolean): RefObject<T> {
-  const containerRef = useRef<T>(null as unknown as T)
+  const containerRef = useRef<T | null>(null)
   const previousActiveElement = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
@@ -84,6 +84,6 @@ export function useFocusTrap<T extends HTMLElement>(isActive: boolean): RefObjec
     }
   }, [isActive])
 
-  return containerRef
+  return containerRef as RefObject<T>
 }
 

@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import Navbar from './Navbar'
 import HeroSection from './HeroSection'
 import IssuanceTypesSection from './sections/IssuanceTypesSection'
@@ -7,7 +8,7 @@ import FAQSection from './sections/FAQSection'
 import FooterSection from './sections/FooterSection'
 import { SkipToContentLink } from './ui'
 
-export default function LandingPage() {
+function LandingPage() {
   return (
     <div className="flex flex-col items-start relative w-full">
       <SkipToContentLink />
@@ -21,4 +22,6 @@ export default function LandingPage() {
     </div>
   )
 }
+
+export default memo(LandingPage)
 

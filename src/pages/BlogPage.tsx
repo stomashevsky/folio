@@ -6,7 +6,10 @@ import { usePageTitle } from '../hooks/usePageTitle'
 export default function BlogPage() {
   usePageTitle({
     title: 'Blog | Folio Wallet',
-    description: 'Blog coming soon.'
+    description: 'Blog coming soon.',
+    ogTitle: 'Blog | Folio Wallet',
+    ogDescription: 'Blog coming soon.',
+    ogUrl: 'https://folio.id/blog'
   })
   return (
     <div className="flex flex-col items-start min-h-screen relative w-full">

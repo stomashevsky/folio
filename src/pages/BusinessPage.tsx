@@ -26,7 +26,11 @@ export default function BusinessPage() {
   
   usePageTitle({
     title: 'Business Solutions | Folio Wallet',
-    description: 'Better tickets. No app to build. Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone.'
+    description: 'Better tickets. No app to build. Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone.',
+    ogTitle: 'Business Solutions | Folio Wallet',
+    ogDescription: 'Better tickets. No app to build. Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone.',
+    ogImage: 'https://folio.id/src/assets/images/business-hero.png',
+    ogUrl: 'https://folio.id/business'
   })
 
   const handleTryFolio = () => {
