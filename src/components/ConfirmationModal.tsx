@@ -18,6 +18,7 @@ export default function ConfirmationModal({ isOpen, onClose, onBack, documentTyp
       title={`Issue ${documentType}`}
       description="Scan the QR code below to add the document."
       size="small"
+      isNested={true}
       footer={{
         secondary: { label: 'Back', onClick: onBack, fullWidth: true },
         primary: { label: 'Done', onClick: onClose, fullWidth: true },

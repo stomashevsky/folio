@@ -2,7 +2,20 @@ import { useEffect, useRef } from 'react'
 
 /**
  * Hook to lock/unlock body scroll when modal is open
- * Preserves the original overflow value and restores it when unlocked
+ * 
+ * Prevents background scrolling when a modal is open by setting `overflow: hidden` on the body.
+ * Preserves the original overflow value and restores it when unlocked.
+ * Handles nested modals correctly by only saving/restoring when necessary.
+ * 
+ * @param isLocked - Whether to lock the body scroll (true) or unlock it (false)
+ * 
+ * @example
+ * ```tsx
+ * function Modal({ isOpen }: { isOpen: boolean }) {
+ *   useBodyScrollLock(isOpen)
+ *   return isOpen ? <div>Modal content</div> : null
+ * }
+ * ```
  */
 export function useBodyScrollLock(isLocked: boolean) {
   const originalOverflowRef = useRef<string | null>(null)

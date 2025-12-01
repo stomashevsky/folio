@@ -7,6 +7,8 @@ import { scrollToTop } from '../utils/scrollToTop'
 import governmentHeroImage from '../assets/images/government-hero.png'
 import governmentIdentityLabImage from '../assets/images/government-identity-lab.png'
 
+// Background style using inline styles for complex multi-layer gradient
+// This cannot be easily expressed in Tailwind CSS, so inline style is used
 const BACKGROUND_STYLE = {
   backgroundImage:
     'linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(90deg, rgba(229, 229, 229, 1) 0%, rgba(229, 229, 229, 1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%)',
@@ -27,8 +29,8 @@ export default function GovernmentPage() {
   return (
     <div className="flex flex-col items-start relative w-full">
       <Navbar />
-      
-      {/* Hero Section */}
+      <main className="w-full">
+        {/* Hero Section */}
       <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full">
         {/* Desktop Layout */}
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
@@ -259,7 +261,7 @@ export default function GovernmentPage() {
           </div>
         </div>
       </section>
-
+      </main>
       {/* Footer */}
       <FooterSection />
     </div>

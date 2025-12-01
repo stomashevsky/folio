@@ -23,21 +23,34 @@ export default function FormField({
   className = ''
 }: FormFieldProps) {
   const errorId = useId()
+  const labelId = useId()
   const hasError = error || !!errorMessage
 
-  // Clone children to add aria-describedby if errorMessage exists
-  const childrenWithProps = errorMessage && isValidElement(children)
+  // Clone children to add accessibility attributes
+  // Only clone if children is a valid React element
+  // Preserve existing props and merge with new accessibility attributes
+  const childrenWithProps = isValidElement(children)
     ? cloneElement(children, {
-        'aria-describedby': errorId,
-        'aria-invalid': hasError ? 'true' : 'false'
+        ...children.props, // Preserve existing props
+        'aria-labelledby': labelId,
+        'aria-required': required ? 'true' : undefined,
+        'aria-invalid': hasError ? 'true' : 'false',
+        ...(errorMessage && { 'aria-describedby': errorId }),
       } as React.HTMLAttributes<HTMLElement>)
     : children
 
   return (
     <div className={`flex flex-col gap-2 items-start w-full ${className}`}>
-      <label className={`font-medium leading-5 text-sm text-[#0a0a0a] ${hasError ? 'text-[#dc2626]' : ''}`}>
+      <label 
+        id={labelId}
+        className={`font-medium leading-5 text-sm text-[#0a0a0a] ${hasError ? 'text-[#dc2626]' : ''}`}
+      >
         {label}
-        {required && <span className="text-[#dc2626] ml-1" aria-label="required">*</span>}
+        {required && (
+          <span className="text-[#dc2626] ml-1" aria-hidden="true">
+            *
+          </span>
+        )}
       </label>
       <div className="w-full">
         {childrenWithProps}

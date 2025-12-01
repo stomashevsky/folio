@@ -33,6 +33,8 @@ export default function VerifyConfirmationModal({ isOpen, onClose, onAutoClose, 
       title={`Verify ${documentType}`}
       description="Scan the QR code below to verify this document."
       size="small"
+      isNested={true}
+      disableEscapeClose={false}
       footer={{
         secondary: { label: 'Cancel', onClick: onClose, fullWidth: true },
       }}

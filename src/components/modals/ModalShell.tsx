@@ -29,6 +29,7 @@ export interface ModalShellProps {
   footer?: ModalFooter
   disableFocusTrap?: boolean // For nested modals
   disableEscapeClose?: boolean // Disable ESC key close
+  isNested?: boolean // Indicates if this is a nested modal (second, third, etc.)
 }
 
 /**
@@ -47,6 +48,14 @@ export interface ModalShellProps {
  * @param disableFocusTrap - Disable focus trap (for nested modals)
  * @param disableEscapeClose - Disable ESC key closing
  */
+/**
+ * Check if user prefers reduced motion
+ */
+function prefersReducedMotion(): boolean {
+  if (typeof window === 'undefined') return false
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches
+}
+
 export default function ModalShell({
   isOpen,
   onClose,
@@ -57,11 +66,18 @@ export default function ModalShell({
   footer,
   disableFocusTrap = false,
   disableEscapeClose = false,
+  isNested = false,
 }: ModalShellProps) {
+  // All hooks must be called before any conditional returns
   const modalRef = useFocusTrap<HTMLDivElement>(isOpen && !disableFocusTrap)
   useBodyScrollLock(isOpen)
   const [isAnimating, setIsAnimating] = useState(false)
   const [shouldRender, setShouldRender] = useState(isOpen)
+  const shouldAnimate = !prefersReducedMotion()
+  const baseId = useId() // Must be called before conditional return
+  const maxWidthClass = MODAL_RESPONSIVE_CLASSES.modal.maxWidth[size]
+  const titleId = title ? `${baseId}-title` : undefined
+  const descriptionId = description ? `${baseId}-description` : undefined
 
   // Handle animation states
   useEffect(() => {
@@ -69,22 +85,32 @@ export default function ModalShell({
       setShouldRender(true)
       // Start with closed state, then animate to open
       setIsAnimating(false)
-      // Trigger enter animation on next frame
-      requestAnimationFrame(() => {
+      // Trigger enter animation on next frame (only if animations are enabled)
+      if (shouldAnimate) {
         requestAnimationFrame(() => {
-          setIsAnimating(true)
+          requestAnimationFrame(() => {
+            setIsAnimating(true)
+          })
         })
-      })
+      } else {
+        // If reduced motion, skip animation and show immediately
+        setIsAnimating(true)
+      }
     } else {
       // Trigger exit animation
       setIsAnimating(false)
-      // Remove from DOM after animation
-      const timer = setTimeout(() => {
+      // Remove from DOM after animation (only if animations are enabled)
+      if (shouldAnimate) {
+        const timer = setTimeout(() => {
+          setShouldRender(false)
+        }, 200) // Match modal-exit duration
+        return () => clearTimeout(timer)
+      } else {
+        // If reduced motion, remove immediately
         setShouldRender(false)
-      }, 200) // Match modal-exit duration
-      return () => clearTimeout(timer)
+      }
     }
-  }, [isOpen])
+  }, [isOpen, shouldAnimate])
 
   // Handle ESC key close
   useEffect(() => {
@@ -103,11 +129,6 @@ export default function ModalShell({
   }, [isOpen, onClose, disableEscapeClose])
 
   if (!shouldRender) return null
-
-  const maxWidthClass = MODAL_RESPONSIVE_CLASSES.modal.maxWidth[size]
-  const baseId = useId()
-  const titleId = title ? `${baseId}-title` : undefined
-  const descriptionId = description ? `${baseId}-description` : undefined
 
   /**
    * Responsive modal behavior:
@@ -129,15 +150,21 @@ export default function ModalShell({
    * - Divider hidden
    */
   
+  // Calculate z-index: base 100, add 10 for nested modals
+  const zIndexClass = isNested ? 'z-[110]' : 'z-[100]'
+  
   const modalContent = (
-    <div className={MODAL_RESPONSIVE_CLASSES.container.base}>
+    <div className={`fixed inset-0 ${zIndexClass} flex items-end md:items-center justify-center p-0 md:p-4 overflow-hidden`}>
       {/* Background overlay - covers entire viewport */}
+      {/* For nested modals, overlay should not close the parent modal */}
       <div
-        className={`fixed inset-0 bg-[#0a0a0a] transition-opacity duration-200 ${
+        className={`fixed inset-0 bg-[#0a0a0a] ${shouldAnimate ? 'transition-opacity duration-200' : ''} ${
           isAnimating ? 'opacity-30' : 'opacity-0'
         }`}
-        onClick={onClose}
+        onClick={isNested ? undefined : onClose}
+        role="presentation"
         aria-hidden="true"
+        style={{ pointerEvents: isNested ? 'none' : 'auto' }}
       />
 
       {/* Modal - centered in viewport */}
@@ -147,10 +174,10 @@ export default function ModalShell({
         aria-modal="true"
         aria-labelledby={titleId}
         aria-describedby={descriptionId}
-        className={`${MODAL_RESPONSIVE_CLASSES.modal.base} ${maxWidthClass} ${MODAL_RESPONSIVE_CLASSES.modal.maxHeight} transition-all duration-200 ease-spring-out relative ${
+        className={`${MODAL_RESPONSIVE_CLASSES.modal.base} ${maxWidthClass} ${MODAL_RESPONSIVE_CLASSES.modal.maxHeight} ${shouldAnimate ? 'transition-all duration-200 ease-spring-out' : ''} relative ${
           isAnimating
             ? 'opacity-100 scale-100'
-            : 'opacity-0 scale-[0.95]'
+            : shouldAnimate ? 'opacity-0 scale-[0.95]' : 'opacity-100 scale-100'
         }`}
       >
         {/* Scrollable content */}
@@ -175,7 +202,7 @@ export default function ModalShell({
           </div>
         </div>
 
-        {/* Divider - только на мобильных */}
+        {/* Divider - visible only on mobile */}
         {footer && <div className={MODAL_RESPONSIVE_CLASSES.divider.base}></div>}
 
         {/* Footer */}

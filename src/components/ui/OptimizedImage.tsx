@@ -12,7 +12,33 @@ interface OptimizedImageProps extends Omit<ImgHTMLAttributes<HTMLImageElement>, 
 
 /**
  * Optimized image component with WebP support and responsive images
- * Supports srcset for responsive images and WebP format with fallback
+ * 
+ * This component provides enhanced image optimization features:
+ * - WebP format support with automatic fallback
+ * - Responsive images via srcset and sizes attributes
+ * - Lazy loading by default (can be overridden)
+ * - Standard img attributes support
+ * 
+ * Usage example:
+ * ```tsx
+ * <OptimizedImage
+ *   src="/images/hero.jpg"
+ *   webpSrc="/images/hero.webp"
+ *   alt="Hero image"
+ *   loading="eager"
+ *   fetchPriority="high"
+ * />
+ * ```
+ * 
+ * For responsive images:
+ * ```tsx
+ * <OptimizedImage
+ *   src="/images/hero.jpg"
+ *   srcSet="/images/hero-400.jpg 400w, /images/hero-800.jpg 800w"
+ *   sizes="(max-width: 768px) 100vw, 50vw"
+ *   alt="Responsive hero"
+ * />
+ * ```
  * 
  * @param src - Primary image source (required)
  * @param alt - Alt text for accessibility (required)
@@ -21,6 +47,22 @@ interface OptimizedImageProps extends Omit<ImgHTMLAttributes<HTMLImageElement>, 
  * @param webpSrc - WebP version of the image (optional)
  * @param webpSrcSet - WebP srcset for responsive images (optional)
  * @param fallbackSrc - Fallback image if WebP is not supported (optional, defaults to src)
+ * @param loading - Loading strategy: 'lazy' (default) or 'eager'
+ * @param className - Additional CSS classes
+ * @param props - All other standard img attributes are supported
+ * 
+ * @example
+ * // Simple usage with WebP fallback
+ * <OptimizedImage src="/image.jpg" webpSrc="/image.webp" alt="Description" />
+ * 
+ * @example
+ * // Responsive images
+ * <OptimizedImage
+ *   src="/image.jpg"
+ *   srcSet="/image-400.jpg 400w, /image-800.jpg 800w"
+ *   sizes="(max-width: 768px) 100vw, 50vw"
+ *   alt="Description"
+ * />
  */
 export default function OptimizedImage({
   src,

@@ -66,6 +66,7 @@ export default function VerifiedModalBase<T extends Record<string, boolean | und
       isOpen={isOpen}
       onClose={onClose}
       size="large"
+      isNested={true}
       footer={{
         primary: { label: 'Done', onClick: onClose },
       }}

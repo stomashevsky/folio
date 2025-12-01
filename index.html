@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     
     <!-- Favicons -->
-    <link rel="icon" type="image/svg+xml" href="/folio/favicon.svg" />
-    <link rel="alternate icon" href="/folio/favicon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/folio/favicon.svg" />
-    <link rel="manifest" href="/folio/site.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="alternate icon" href="./favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon.svg" />
+    <link rel="manifest" href="./site.webmanifest" />
     <meta name="theme-color" content="#0A0A0A" />
     <meta name="msapplication-TileColor" content="#0A0A0A" />
     
@@ -25,14 +25,14 @@
     <meta property="og:url" content="https://folio.id/" />
     <meta property="og:title" content="Folio - All documents, beautifully arranged | Folio Wallet" />
     <meta property="og:description" content="Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find." />
-    <meta property="og:image" content="https://folio.id/src/assets/images/hero-phone.png" />
+    <meta property="og:image" content="https://folio.id/folio/assets/hero-phone.png" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://folio.id/" />
     <meta property="twitter:title" content="Folio - All documents, beautifully arranged | Folio Wallet" />
     <meta property="twitter:description" content="Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find." />
-    <meta property="twitter:image" content="https://folio.id/src/assets/images/hero-phone-desktop.png" />
+    <meta property="twitter:image" content="https://folio.id/folio/assets/hero-phone-desktop.png" />
     
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -59,8 +59,10 @@
     
     <!-- Content Security Policy -->
     <!-- Note: 'unsafe-inline' for style-src is required for Tailwind CSS and dynamic inline styles -->
+    <!-- In development, this CSP may need 'unsafe-eval' for Vite HMR - configure via server or Vite plugin -->
     <!-- Consider using nonce-based CSP in production with proper server configuration -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-XeNpbq034w0m3hU2IirnKxaUajbLaMP8wW80j2KdEoE=' 'sha256-CVwTVNhkb5sIYIpuGe3NZv4KPlAnMHencu06RxRIKOE='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;" />
+    <!-- For production, remove 'unsafe-eval' and add 'upgrade-insecure-requests' -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' 'sha256-XeNpbq034w0m3hU2IirnKxaUajbLaMP8wW80j2KdEoE=' 'sha256-CVwTVNhkb5sIYIpuGe3NZv4KPlAnMHencu06RxRIKOE='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' ws: wss:; base-uri 'self'; form-action 'self'; frame-ancestors 'none';" />
   </head>
   <body>
     <div id="root"></div>

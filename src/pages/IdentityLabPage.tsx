@@ -21,11 +21,13 @@ export default function IdentityLabPage() {
     <div className="flex flex-col items-start relative w-full">
       <SkipToContentLink />
       <Navbar />
-      <HeroSection />
+      <main className="w-full">
+        <HeroSection />
       <IssuanceTypesSection />
       <PlaygroundSection />
       <HowItWorksSection />
       <FAQSection />
+      </main>
       <FooterSection />
     </div>
   )
