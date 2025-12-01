@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 
 import { LogoButton, Button } from './ui'
 import menuIcon from '../assets/icons/menu.svg'
+import xIcon from '../assets/icons/x.svg'
 import { useBodyScrollLock } from './ui/useBodyScrollLock'
 import MobileMenu from './navbar/MobileMenu'
 import DesktopNav from './navbar/DesktopNav'
@@ -62,7 +63,7 @@ export default function Navbar() {
 
       <div 
         ref={navbarRef}
-        className="bg-white fixed top-0 left-0 right-0 shrink-0 w-full z-[50]"
+        className="bg-white fixed top-0 left-0 right-0 shrink-0 w-full z-[70]"
         style={{ 
           overscrollBehavior: 'none',
           touchAction: 'pan-y'
@@ -81,10 +82,10 @@ export default function Navbar() {
                 variant="ghost"
                 size="sm"
                 onClick={toggleMobileMenu}
-                aria-label="Toggle menu"
+                aria-label={isMobileMenuOpen ? "Close menu" : "Toggle menu"}
                 className="p-0"
               >
-                <img src={menuIcon} alt="Menu" aria-hidden="true" className="w-5 h-5" />
+                <img src={isMobileMenuOpen ? xIcon : menuIcon} alt={isMobileMenuOpen ? "Close" : "Menu"} aria-hidden="true" className="w-5 h-5" />
               </Button>
             </div>
           </div>
