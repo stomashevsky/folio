@@ -8,17 +8,13 @@ import calendarFoldIcon from '../assets/icons/calendar-fold.svg'
 import codeXmlIcon from '../assets/icons/code-xml.svg'
 import globeIcon from '../assets/icons/globe.svg'
 import sendIcon from '../assets/icons/send.svg'
+import ticketIcon from '../assets/icons/ticket.svg'
+import routeIcon from '../assets/icons/route.svg'
+import cameraIcon from '../assets/icons/camera.svg'
 
-// TODO: Replace placeholder image with actual Business page images from Figma
-// Required images:
-// - business-hero.png (Hero section image)
-// - business-features-tickets.png (Features section image showing tickets)
-// - business-events.png (Events and Entertainment section image)
-// - business-transport.png (Transport Companies section image)
-// - business-tours.png (Tours and Activities section image)
-// - business-zero-setup.png (Zero Setup section image)
-// Note: Temporarily using placeholder image for all sections until design assets are available
-import placeholderImage from '../assets/images/placeholder.png'
+import businessHeroImage from '../assets/images/business-hero.png'
+import businessFeaturesImage from '../assets/images/business-features-tickets.png'
+import businessOperatorsImage from '../assets/images/business-operators.png'
 
 const BACKGROUND_STYLE = {
   backgroundImage:
@@ -30,7 +26,7 @@ export default function BusinessPage() {
   
   usePageTitle({
     title: 'Business Solutions | Folio Wallet',
-    description: 'Better tickets. No app to build. Give your customers modern mobile tickets that are easy to save, easy to find and easy to scan.'
+    description: 'Better tickets. No app to build. Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone.'
   })
 
   const handleTryFolio = () => {
@@ -53,7 +49,7 @@ export default function BusinessPage() {
                 No app to build
               </h1>
               <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
-                Give your customers modern mobile tickets that are easy to save, easy to find and easy to scan.
+                Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone.
               </p>
             </div>
             <div className="flex flex-wrap gap-3 items-start relative">
@@ -72,7 +68,7 @@ export default function BusinessPage() {
           </div>
           <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
             <img 
-              src={placeholderImage} 
+              src={businessHeroImage} 
               alt="Business tickets preview" 
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               fetchPriority="high"
@@ -91,7 +87,7 @@ export default function BusinessPage() {
                 No app to build
               </h1>
               <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
-                Give your customers modern mobile tickets that are easy to save, easy to find and easy to scan.
+                Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone.
               </p>
             </div>
             <div className="flex flex-col gap-3 items-start relative shrink-0">
@@ -112,7 +108,7 @@ export default function BusinessPage() {
           </div>
           <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
             <img 
-              src={placeholderImage} 
+              src={businessHeroImage} 
               alt="Business tickets preview" 
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               fetchPriority="high"
@@ -128,7 +124,7 @@ export default function BusinessPage() {
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
             <img 
-              src={placeholderImage} 
+              src={businessFeaturesImage} 
               alt="Folio tickets format"
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               loading="lazy"
@@ -137,16 +133,14 @@ export default function BusinessPage() {
           <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
             <SectionHeader
               title="Issue tickets in a Folio ready format"
-              description="Instead of sending heavy PDFs that customers search for in their inbox, you attach a small text file that Folio reads instantly. The ticket appears in the app as a clean card with time, place, seat details and a scannable code. The format is a simple JSON snippet that your system can generate the same way as an email template."
+              description="Send us simple JSON or an email you already generate and Folio turns it into a clean digital ticket. No pkpass files, no wallet certificates, no SDKs to integrate."
               align="left"
               maxWidth="100%"
             />
             <div className="flex flex-col gap-3 items-start relative shrink-0 w-full">
-              <FeatureListItem text="No app to build or maintain" />
-              <FeatureListItem text="Customers see the ticket in seconds" />
-              <FeatureListItem text="No need to design mobile layouts" />
-              <FeatureListItem text="Works alongside your existing PDFs or emails" />
-              <FeatureListItem text="Tickets feel modern on any device" />
+              <FeatureListItem text="No special pass formats or certificates" />
+              <FeatureListItem text="Tickets arrive in seconds on the customer phone" />
+              <FeatureListItem text="Works with any existing booking or ticketing system" />
             </div>
           </div>
         </div>
@@ -156,20 +150,18 @@ export default function BusinessPage() {
           <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
             <SectionHeader
               title="Issue tickets in a Folio ready format"
-              description="Instead of sending heavy PDFs that customers search for in their inbox, you attach a small text file that Folio reads instantly. The ticket appears in the app as a clean card with time, place, seat details and a scannable code. The format is a simple JSON snippet that your system can generate the same way as an email template."
+              description="Send us simple JSON or an email you already generate and Folio turns it into a clean digital ticket. No pkpass files, no wallet certificates, no SDKs to integrate."
               align="left"
             />
             <div className="flex flex-col gap-3 items-start relative shrink-0 w-full">
-              <FeatureListItem text="No app to build or maintain" />
-              <FeatureListItem text="Customers see the ticket in seconds" />
-              <FeatureListItem text="No need to design mobile layouts" />
-              <FeatureListItem text="Works alongside your existing PDFs or emails" />
-              <FeatureListItem text="Tickets feel modern on any device" />
+              <FeatureListItem text="No special pass formats or certificates" />
+              <FeatureListItem text="Tickets arrive in seconds on the customer phone" />
+              <FeatureListItem text="Works with any existing booking or ticketing system" />
             </div>
           </div>
           <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
             <img 
-              src={placeholderImage} 
+              src={businessFeaturesImage} 
               alt="Folio tickets format"
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               loading="lazy"
@@ -213,21 +205,38 @@ export default function BusinessPage() {
         </div>
       </section>
 
-      {/* Events and Entertainment Section */}
+      {/* Who Folio is for Section */}
       <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
         {/* Desktop Layout */}
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
+          <div className="flex flex-1 flex-col gap-12 items-start relative min-w-0">
             <SectionHeader
-              title="Tickets that match your event"
-              description="Folio gives every guest a clean and modern ticket that feels made for concerts, festivals, theaters, clubs and local venues. Times, locations and entry details are presented clearly so guests know exactly where to go and staff can scan in one glance."
+              title="Made for real world operators"
+              description="Folio works for any service where customers receive tickets or confirmations by email."
               align="left"
             />
+            <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
+              <OperatorListItem
+                icon={ticketIcon}
+                title="Events and venues"
+                description="Concerts, festivals, theatres and local venues get modern event tickets that are easy to scan and easy to understand."
+              />
+              <OperatorListItem
+                icon={routeIcon}
+                title="Transport operators"
+                description="Regional airlines, buses and rail services send simple travel cards with clear times, stops and seat details in one place."
+              />
+              <OperatorListItem
+                icon={cameraIcon}
+                title="Tours and activities"
+                description="Tours, excursions and attractions keep every booking in one simple view so guests always know where to be and when."
+              />
+            </div>
           </div>
           <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
             <img
-              src={placeholderImage}
-              alt="Event tickets"
+              src={businessOperatorsImage}
+              alt="Business operators"
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               loading="lazy"
             />
@@ -235,141 +244,35 @@ export default function BusinessPage() {
         </div>
 
         {/* Mobile Layout */}
-        <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
+        <div className="flex md:hidden flex-col gap-10 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+          <div className="flex flex-col gap-10 items-start relative shrink-0 w-full">
             <SectionHeader
-              title="Tickets that match your event"
-              description="Folio gives every guest a clean and modern ticket that feels made for concerts, festivals, theaters, clubs and local venues. Times, locations and entry details are presented clearly so guests know exactly where to go and staff can scan in one glance."
+              title="Made for real world operators"
+              description="Folio works for any service where customers receive tickets or confirmations by email."
               align="left"
             />
+            <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
+              <OperatorListItem
+                icon={ticketIcon}
+                title="Events and venues"
+                description="Concerts, festivals, theatres and local venues get modern event tickets that are easy to scan and easy to understand."
+              />
+              <OperatorListItem
+                icon={routeIcon}
+                title="Transport operators"
+                description="Regional airlines, buses and rail services send simple travel cards with clear times, stops and seat details in one place."
+              />
+              <OperatorListItem
+                icon={cameraIcon}
+                title="Tours and activities"
+                description="Tours, excursions and attractions keep every booking in one simple view so guests always know where to be and when."
+              />
+            </div>
           </div>
           <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
             <img
-              src={placeholderImage}
-              alt="Event tickets"
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Transport Companies Section */}
-      <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
-        {/* Desktop Layout */}
-        <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-            <img
-              src={placeholderImage}
-              alt="Transport tickets"
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              loading="lazy"
-            />
-          </div>
-          <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
-            <SectionHeader
-              title="Travel cards your passengers understand"
-              description="Regional airlines, rail operators and bus companies can turn booking confirmations into simple travel cards. Departure times, platforms, stops and seat numbers are arranged in one clear view that is always ready at boarding or check in."
-              align="left"
-            />
-          </div>
-        </div>
-
-        {/* Mobile Layout */}
-        <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
-            <SectionHeader
-              title="Travel cards your passengers understand"
-              description="Regional airlines, rail operators and bus companies can turn booking confirmations into simple travel cards. Departure times, platforms, stops and seat numbers are arranged in one clear view that is always ready at boarding or check in."
-              align="left"
-            />
-          </div>
-          <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
-            <img
-              src={placeholderImage}
-              alt="Transport tickets"
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Tours and Activities Section */}
-      <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
-        {/* Desktop Layout */}
-        <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
-            <SectionHeader
-              title="Every booking in one simple view"
-              description="Tours, excursions, transfers, guides and local experiences are stored together so travelers always know what comes next. Folio combines meeting points, times and contact details into one easy to read pass for the entire trip."
-              align="left"
-            />
-          </div>
-          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-            <img
-              src={placeholderImage}
-              alt="Tours and activities"
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              loading="lazy"
-            />
-          </div>
-        </div>
-
-        {/* Mobile Layout */}
-        <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
-            <SectionHeader
-              title="Every booking in one simple view"
-              description="Tours, excursions, transfers, guides and local experiences are stored together so travelers always know what comes next. Folio combines meeting points, times and contact details into one easy to read pass for the entire trip."
-              align="left"
-            />
-          </div>
-          <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
-            <img
-              src={placeholderImage}
-              alt="Tours and activities"
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Zero Setup Section */}
-      <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
-        {/* Desktop Layout */}
-        <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-            <img
-              src={placeholderImage}
-              alt="Zero setup workflow"
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              loading="lazy"
-            />
-          </div>
-          <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
-            <SectionHeader
-              title="Use the workflow you already have"
-              description="Folio works with your current email process so you do not need new tools or integrations. Customers receive or forward a small Folio file with their confirmation and the ticket appears in the app as a ready to use digital pass."
-              align="left"
-            />
-          </div>
-        </div>
-
-        {/* Mobile Layout */}
-        <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
-            <SectionHeader
-              title="Use the workflow you already have"
-              description="Folio works with your current email process so you do not need new tools or integrations. Customers receive or forward a small Folio file with their confirmation and the ticket appears in the app as a ready to use digital pass."
-              align="left"
-            />
-          </div>
-          <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
-            <img
-              src={placeholderImage}
-              alt="Zero setup workflow"
+              src={businessOperatorsImage}
+              alt="Business operators"
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               loading="lazy"
             />
@@ -383,8 +286,8 @@ export default function BusinessPage() {
         <div className="hidden md:flex items-center max-w-[1280px] px-6 relative shrink-0 w-full">
           <div className="flex gap-16 items-center p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
             <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px] min-w-0">
-              <h2 className="font-bold leading-8 text-2xl text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
-                Make every ticket feel effortless
+              <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+                Turn every ticket into a great experience
               </h2>
               <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full whitespace-pre-wrap">
                 If you deliver tickets or bookings by email, Folio gives your customers a clearer and more reliable experience without changing how you work.
@@ -403,8 +306,8 @@ export default function BusinessPage() {
         {/* Mobile Layout */}
         <div className="flex md:hidden flex-col gap-8 items-center w-full px-6 py-16 relative shrink-0" style={BACKGROUND_STYLE}>
           <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full whitespace-pre-wrap">
-            <h2 className="font-bold leading-8 text-2xl text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
-              Make every ticket feel effortless
+            <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+              Turn every ticket into a great experience
             </h2>
             <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full whitespace-pre-wrap">
               If you deliver tickets or bookings by email, Folio gives your customers a clearer and more reliable experience without changing how you work.
@@ -443,6 +346,24 @@ function FeatureListItem({ text }: { text: string }) {
       <p className="flex-1 font-medium leading-6 min-h-0 min-w-0 relative shrink-0 text-[#0a0a0a] text-base whitespace-pre-wrap">
         {text}
       </p>
+    </div>
+  )
+}
+
+function OperatorListItem({ icon, title, description }: { icon: string; title: string; description: string }) {
+  return (
+    <div className="flex flex-col md:flex-row gap-4 md:gap-5 items-start relative shrink-0 w-full">
+      <div className="bg-white border border-[#e5e5e5] border-solid flex items-center justify-center relative rounded-md shrink-0 size-10">
+        <img src={icon} alt="" aria-hidden="true" className="w-5 h-5" />
+      </div>
+      <div className="flex flex-1 flex-col gap-1 items-start leading-6 relative shrink-0 text-base min-w-0 whitespace-pre-wrap">
+        <p className="font-semibold relative shrink-0 text-[#0a0a0a] w-full">
+          {title}
+        </p>
+        <p className="font-normal relative shrink-0 text-[#737373] w-full">
+          {description}
+        </p>
+      </div>
     </div>
   )
 }
