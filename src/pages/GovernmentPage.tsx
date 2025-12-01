@@ -1,11 +1,11 @@
 import { useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
-import { SectionHeader, Button } from '../components/ui'
+import { SectionHeader, Button, FeatureBlock } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { scrollToTop } from '../utils/scrollToTop'
-import checkIcon from '../assets/icons/check.svg'
-import placeholderImage from '../assets/images/placeholder.png'
+import governmentHeroImage from '../assets/images/government-hero.png'
+import governmentIdentityLabImage from '../assets/images/government-identity-lab.png'
 
 const BACKGROUND_STYLE = {
   backgroundImage:
@@ -17,7 +17,7 @@ export default function GovernmentPage() {
   
   usePageTitle({
     title: 'Government Solutions | Folio Wallet',
-    description: 'Tools for governments to design, test and deploy next-generation digital credentials. Digital identity aligned with global standards.'
+    description: 'Tools for governments to design, test and deploy modern digital credentials. Digital identity aligned with global standards.'
   })
 
   return (
@@ -34,7 +34,7 @@ export default function GovernmentPage() {
                 Digital identity aligned with global standards
               </h1>
               <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
-                Tools for governments to design, test and deploy next-generation digital credentials.
+                Tools for governments to design, test and deploy modern digital credentials.
               </p>
             </div>
             <div className="flex flex-wrap gap-3 items-start relative">
@@ -53,7 +53,7 @@ export default function GovernmentPage() {
           </div>
           <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
             <img 
-              src={placeholderImage} 
+              src={governmentHeroImage} 
               alt="Digital identity credentials preview" 
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               fetchPriority="high"
@@ -70,7 +70,7 @@ export default function GovernmentPage() {
                 Digital identity aligned with global standards
               </h1>
               <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
-                Tools for governments to design, test and deploy next-generation digital credentials.
+                Tools for governments to design, test and deploy modern digital credentials.
               </p>
             </div>
             <div className="flex flex-col gap-3 items-start relative shrink-0">
@@ -90,7 +90,7 @@ export default function GovernmentPage() {
           </div>
           <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
             <img 
-              src={placeholderImage} 
+              src={governmentHeroImage} 
               alt="Digital identity credentials preview" 
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               fetchPriority="high"
@@ -112,181 +112,36 @@ export default function GovernmentPage() {
         </div>
       </section>
 
-      {/* Standards & Compliance Section */}
+      {/* Gov Features Section */}
       <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
-        {/* Desktop Layout */}
-        <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-            <img 
-              src={placeholderImage} 
-              alt="Standards and compliance"
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              loading="lazy"
-            />
-          </div>
-          <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
+        <div className="flex flex-col gap-12 md:gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+          <div className="flex flex-col gap-10 md:gap-12 items-center relative shrink-0 w-full">
             <SectionHeader
-              title="Standards & compliance"
-              description="Aligned with trusted frameworks"
-              align="left"
-              maxWidth="100%"
+              title="Built on trusted digital identity foundations"
+              description="Provide citizens with secure, modern and interoperable digital credentials that follow global standards and work across identity systems. Designed for national-scale programs with a focus on security, privacy and real-world usability."
+              align="center"
+              maxWidth="576px"
             />
-            <div className="flex flex-col gap-3 items-start relative shrink-0 w-full">
-              <FeatureListItem text="EUDI Wallet" />
-              <FeatureListItem text="ISO 18013 mobile driving licence" />
-              <FeatureListItem text="Verifiable Credentials" />
-              <FeatureListItem text="Secure presentation flows" />
-              <FeatureListItem text="Cryptographic verification" />
+            <div className="flex flex-col md:flex-row gap-11 md:gap-6 items-start relative shrink-0 w-full">
+              <FeatureBlock
+                icon="shield-check"
+                title="Standards & compliance"
+                description="Aligned with EUDI Wallet, ISO mobile driving licence and Verifiable Credentials specifications to ensure compatibility, interoperability and long-term reliability across public services."
+                align="left"
+              />
+              <FeatureBlock
+                icon="qr-code"
+                title="Issuing & verification"
+                description="Support secure issuance of IDs, permits and certificates with cryptographic validation, QR and barcode scanning, and offline-ready verification for real-world environments."
+                align="left"
+              />
+              <FeatureBlock
+                icon="lock-keyhole"
+                title="Presentation"
+                description="Enable privacy-focused identity sharing with minimal disclosure, clear user consent and secure channels that ensure citizens control their data at every step."
+                align="left"
+              />
             </div>
-          </div>
-        </div>
-
-        {/* Mobile Layout */}
-        <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
-            <SectionHeader
-              title="Standards & compliance"
-              description="Aligned with trusted frameworks"
-              align="left"
-            />
-            <div className="flex flex-col gap-3 items-start relative shrink-0 w-full">
-              <FeatureListItem text="EUDI Wallet" />
-              <FeatureListItem text="ISO 18013 mobile driving licence" />
-              <FeatureListItem text="Verifiable Credentials" />
-              <FeatureListItem text="Secure presentation flows" />
-              <FeatureListItem text="Cryptographic verification" />
-            </div>
-          </div>
-          <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
-            <img 
-              src={placeholderImage} 
-              alt="Standards and compliance"
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Digital Issuing Section */}
-      <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
-        {/* Desktop Layout */}
-        <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
-            <SectionHeader
-              title="Digital issuing"
-              description="Issue secure mobile credentials for IDs, certificates, permits and driving licences with controlled and verifiable distribution across your identity ecosystem."
-              align="left"
-            />
-          </div>
-          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-            <img
-              src={placeholderImage}
-              alt="Digital issuing"
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              loading="lazy"
-            />
-          </div>
-        </div>
-
-        {/* Mobile Layout */}
-        <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
-            <SectionHeader
-              title="Digital issuing"
-              description="Issue secure mobile credentials for IDs, certificates, permits and driving licences with controlled and verifiable distribution across your identity ecosystem."
-              align="left"
-            />
-          </div>
-          <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
-            <img
-              src={placeholderImage}
-              alt="Digital issuing"
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Verification Section */}
-      <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
-        {/* Desktop Layout */}
-        <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-            <img
-              src={placeholderImage}
-              alt="Verification"
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              loading="lazy"
-            />
-          </div>
-          <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
-            <SectionHeader
-              title="Verification"
-              description="Perform trusted verification with cryptographic checks, scannable codes and offline-ready protection so credentials remain authentic and tamper resistant in any environment."
-              align="left"
-            />
-          </div>
-        </div>
-
-        {/* Mobile Layout */}
-        <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
-            <SectionHeader
-              title="Verification"
-              description="Perform trusted verification with cryptographic checks, scannable codes and offline-ready protection so credentials remain authentic and tamper resistant in any environment."
-              align="left"
-            />
-          </div>
-          <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
-            <img
-              src={placeholderImage}
-              alt="Verification"
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Presentation Section */}
-      <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
-        {/* Desktop Layout */}
-        <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
-            <SectionHeader
-              title="Presentation"
-              description="Enable privacy-first identity sharing with minimal disclosure, clear user consent and secure communication channels across public and private services."
-              align="left"
-            />
-          </div>
-          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-            <img
-              src={placeholderImage}
-              alt="Presentation"
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              loading="lazy"
-            />
-          </div>
-        </div>
-
-        {/* Mobile Layout */}
-        <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
-            <SectionHeader
-              title="Presentation"
-              description="Enable privacy-first identity sharing with minimal disclosure, clear user consent and secure communication channels across public and private services."
-              align="left"
-            />
-          </div>
-          <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
-            <img
-              src={placeholderImage}
-              alt="Presentation"
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              loading="lazy"
-            />
           </div>
         </div>
       </section>
@@ -297,7 +152,7 @@ export default function GovernmentPage() {
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
             <img
-              src={placeholderImage}
+              src={governmentIdentityLabImage}
               alt="Identity Lab"
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               loading="lazy"
@@ -305,8 +160,8 @@ export default function GovernmentPage() {
           </div>
           <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
             <SectionHeader
-              title="Identity Lab"
-              description="Test real digital identity flows in a safe sandbox where you can issue, verify and experiment with mobile credentials in a fully simulated environment."
+              title="Experiment with digital identity flows"
+              description="Issue, verify and test credentials in a safe sandbox environment."
               align="left"
             />
             <div className="flex gap-3 items-start relative shrink-0">
@@ -329,8 +184,8 @@ export default function GovernmentPage() {
         <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
             <SectionHeader
-              title="Identity Lab"
-              description="Test real digital identity flows in a safe sandbox where you can issue, verify and experiment with mobile credentials in a fully simulated environment."
+              title="Experiment with digital identity flows"
+              description="Issue, verify and test credentials in a safe sandbox environment."
               align="left"
             />
             <div className="flex gap-3 items-start relative shrink-0">
@@ -349,7 +204,7 @@ export default function GovernmentPage() {
           </div>
           <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
             <img
-              src={placeholderImage}
+              src={governmentIdentityLabImage}
               alt="Identity Lab"
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               loading="lazy"
@@ -403,26 +258,6 @@ export default function GovernmentPage() {
 
       {/* Footer */}
       <FooterSection />
-    </div>
-  )
-}
-
-function FeatureListItem({ text }: { text: string }) {
-  return (
-    <div className="flex gap-3 items-start relative shrink-0 w-full">
-      <div className="box-border flex gap-2 items-center pb-0 pt-0.5 px-0 relative shrink-0 w-5">
-        <div className="aspect-[24/24] flex-1 min-h-0 min-w-0 overflow-clip relative shrink-0">
-          <img 
-            src={checkIcon} 
-            alt="" 
-            aria-hidden="true"
-            className="block max-w-none w-full h-full"
-          />
-        </div>
-      </div>
-      <p className="flex-1 font-medium leading-6 min-h-0 min-w-0 relative shrink-0 text-[#0a0a0a] text-base whitespace-pre-wrap">
-        {text}
-      </p>
     </div>
   )
 }

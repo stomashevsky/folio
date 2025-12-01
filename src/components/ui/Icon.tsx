@@ -3,10 +3,12 @@ import bookOpenIcon from '../../assets/icons/book-open-01.svg'
 import carIcon from '../../assets/icons/car-01.svg'
 import calendarCheckIcon from '../../assets/icons/calendar-check-01.svg'
 import shieldPlusIcon from '../../assets/icons/shield-plus.svg'
+import shieldCheckIcon from '../../assets/icons/ShieldCheck.svg'
 import homeIcon from '../../assets/icons/home-02.svg'
 import starIcon from '../../assets/icons/star-01.svg'
 import bookMarkedIcon from '../../assets/icons/book-marked.svg'
 import keyRoundIcon from '../../assets/icons/key-round.svg'
+import lockKeyholeIcon from '../../assets/icons/LockKeyhole.svg'
 import checkIcon from '../../assets/icons/check.svg'
 import messageSquareMoreIcon from '../../assets/icons/message-square-more.svg'
 import fileQuestionIcon from '../../assets/icons/file-question.svg'
@@ -21,10 +23,12 @@ export type IconName =
   | 'car' 
   | 'calendar' 
   | 'shield' 
+  | 'shield-check'
   | 'home' 
   | 'star' 
   | 'library'
   | 'key-round'
+  | 'lock-keyhole'
   | 'check'
   | 'message-square-more'
   | 'file-question'
@@ -45,10 +49,12 @@ const iconMap: Record<IconName, string> = {
   'car': carIcon,
   'calendar': calendarCheckIcon,
   'shield': shieldPlusIcon,
+  'shield-check': shieldCheckIcon,
   'home': homeIcon,
   'star': starIcon,
   'library': bookMarkedIcon,
   'key-round': keyRoundIcon,
+  'lock-keyhole': lockKeyholeIcon,
   'check': checkIcon,
   'message-square-more': messageSquareMoreIcon,
   'file-question': fileQuestionIcon,
