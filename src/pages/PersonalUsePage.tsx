@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import FAQSection, { FAQItem } from '../components/sections/FAQSection'
 import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { scrollToSection } from '../utils/scrollToSection'
 import personalUseHero from '../assets/images/personal-use-hero.png'
 import featuresTickets from '../assets/images/features-tickets.png'
 import ticketsTrain from '../assets/images/tickets-train.png'
@@ -88,6 +90,8 @@ const featuresItems: AccordionItemData[] = [
 ]
 
 export default function PersonalUsePage() {
+  const location = useLocation()
+  
   usePageTitle({
     title: 'Folio - Your documents, always with you | Folio Wallet',
     description: 'Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find. Your essential information is always at hand when you need it.'
@@ -96,6 +100,21 @@ export default function PersonalUsePage() {
   const [activeFeatureId, setActiveFeatureId] = useState<string | null>('cards')
   
   const activeFeature = featuresItems.find(item => item.id === activeFeatureId) || featuresItems[0]
+
+  // Handle scroll to section when navigating from other pages
+  useEffect(() => {
+    // Check if we need to scroll to a specific section
+    if (location.hash) {
+      const sectionId = location.hash.slice(1) // Remove #
+      setTimeout(() => {
+        scrollToSection(sectionId)
+      }, 100)
+    } else if (location.state?.scrollTo === 'get-the-app') {
+      setTimeout(() => {
+        scrollToSection('get-the-app')
+      }, 100)
+    }
+  }, [location])
 
   return (
     <div className="flex flex-col items-start relative w-full">

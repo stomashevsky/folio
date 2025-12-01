@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
@@ -24,10 +25,16 @@ const BACKGROUND_STYLE = {
 }
 
 export default function BusinessPage() {
+  const navigate = useNavigate()
+  
   usePageTitle({
     title: 'Business Solutions | Folio Wallet',
     description: 'Better tickets. No app to build. Give your customers modern mobile tickets that are easy to save, easy to find and easy to scan.'
   })
+
+  const handleTryFolio = () => {
+    navigate('/', { state: { scrollTo: 'get-the-app' } })
+  }
 
   return (
     <div className="flex flex-col items-start relative w-full">
@@ -56,6 +63,7 @@ export default function BusinessPage() {
               </Button>
               <Button
                 variant="secondary"
+                onClick={handleTryFolio}
               >
                 Try Folio
               </Button>
@@ -95,6 +103,7 @@ export default function BusinessPage() {
               <Button
                 variant="secondary"
                 fullWidth
+                onClick={handleTryFolio}
               >
                 Try Folio
               </Button>
