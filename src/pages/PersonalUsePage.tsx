@@ -565,12 +565,11 @@ function GetTheAppSection() {
             Your documents stay organized, synced and instantly accessible on iOS and Android.
           </p>
         </div>
-        <div className="flex flex-col gap-3 items-center relative shrink-0 w-full">
+        <div className="flex flex-col gap-3 items-center relative shrink-0">
           <Button
             href="https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717"
             target="_blank"
             variant="primary"
-            fullWidth
             icon={<img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />}
           >
             Download for iOS
@@ -579,7 +578,6 @@ function GetTheAppSection() {
             href="https://play.google.com/store/apps/details?id=com.folioltd"
             target="_blank"
             variant="primary"
-            fullWidth
             icon={<img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />}
           >
             Download for Android

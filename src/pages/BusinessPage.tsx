@@ -96,16 +96,14 @@ export default function BusinessPage() {
                 Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone.
               </p>
             </div>
-            <div className="flex flex-col gap-3 items-start relative shrink-0">
+            <div className="flex flex-wrap gap-3 items-start relative shrink-0">
               <Button
                 variant="primary"
-                fullWidth
               >
                 Contact Folio Team
               </Button>
               <Button
                 variant="secondary"
-                fullWidth
                 onClick={handleTryFolio}
               >
                 Try Folio
@@ -319,10 +317,9 @@ export default function BusinessPage() {
               If you deliver tickets or bookings by email, Folio gives your customers a clearer and more reliable experience without changing how you work.
             </p>
           </div>
-          <div className="flex flex-col gap-3 items-center relative shrink-0 w-full">
+          <div className="flex flex-col gap-3 items-center relative shrink-0">
             <Button
               variant="primary"
-              fullWidth
             >
               Contact Folio Team
             </Button>
