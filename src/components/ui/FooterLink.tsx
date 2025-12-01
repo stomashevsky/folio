@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { FOCUS_STYLES } from './focusStyles'
+import { scrollToTop } from '../../utils/scrollToTop'
 
 interface FooterLinkProps {
   to?: string
@@ -45,11 +46,21 @@ export default function FooterLink({
 
   // Internal route
   if (to) {
+    const handleInternalClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+      // Call existing onClick handler if provided
+      onClick?.(e)
+      
+      // Scroll to top after navigation
+      setTimeout(() => {
+        scrollToTop()
+      }, 100)
+    }
+
     return (
       <Link
         to={to}
         className={combinedClasses}
-        onClick={onClick}
+        onClick={handleInternalClick}
       >
         {children}
       </Link>
