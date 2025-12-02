@@ -155,7 +155,7 @@ export default function GovernmentPage() {
       </section>
 
       {/* Case Study Section */}
-      <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
+      <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
         {/* Desktop Layout */}
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/426.67]">
@@ -217,7 +217,7 @@ export default function GovernmentPage() {
               </div>
             </div>
             {/* Testimonial */}
-            <div className="border-l border-[#e5e5e5] border-r-0 border-t-0 border-b-0 box-border flex flex-col gap-3 items-start px-6 py-4 relative shrink-0 w-full">
+            <div className="border-l border-[#737373] border-r-0 border-t-0 border-b-0 box-border flex flex-col gap-3 items-start px-6 py-4 relative shrink-0 w-full">
               <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full whitespace-pre-wrap">
                 "Working with Folio has been a transformative experience… they set a new standard of excellence for how digital identity solutions should be delivered."
               </p>
