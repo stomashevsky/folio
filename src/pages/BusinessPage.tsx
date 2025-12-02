@@ -13,7 +13,7 @@ import routeIcon from '../assets/icons/route.svg'
 import cameraIcon from '../assets/icons/camera.svg'
 
 import businessHeroImage from '../assets/images/business-hero.png'
-import businessFeaturesImage from '../assets/images/business-features-tickets.png'
+import businessFeaturesImage from '../assets/images/business-features.png'
 import businessOperatorsImage from '../assets/images/business-operators.png'
 
 // Background style using inline styles for complex multi-layer gradient
