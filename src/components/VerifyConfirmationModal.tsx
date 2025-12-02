@@ -36,7 +36,7 @@ export default function VerifyConfirmationModal({ isOpen, onClose, onAutoClose, 
       isNested={true}
       disableEscapeClose={false}
       footer={{
-        secondary: { label: 'Cancel', onClick: onClose, fullWidth: true },
+        secondary: { label: 'Cancel', onClick: onClose },
       }}
     >
       <QRCodeDisplay src={qrCodeImage} />

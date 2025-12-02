@@ -35,7 +35,7 @@ export default function QRCodeDisplay({ src, alt = 'QR Code', qrCodeUrl }: QRCod
 
   return (
     <div className="bg-white border border-[rgba(163,163,163,0.5)] border-solid box-border flex flex-col gap-4 items-center justify-center p-5 rounded-2xl w-fit self-center">
-      <div className="relative shrink-0 size-[240px]">
+      <div className="relative shrink-0 size-[240px] md:size-[312px]">
         {isImageLoading && (
           <div className="absolute inset-0 flex items-center justify-center bg-[#fafafa] rounded-lg">
             <div className="animate-spin rounded-full h-12 w-12 border-4 border-[#e5e5e5] border-t-[#171717]" aria-label="Loading QR code" role="status">

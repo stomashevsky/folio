@@ -20,8 +20,8 @@ export default function ConfirmationModal({ isOpen, onClose, onBack, documentTyp
       size="small"
       isNested={true}
       footer={{
-        secondary: { label: 'Back', onClick: onBack, fullWidth: true },
-        primary: { label: 'Done', onClick: onClose, fullWidth: true },
+        secondary: { label: 'Back', onClick: onBack },
+        primary: { label: 'Done', onClick: onClose },
       }}
     >
       <QRCodeDisplay src={qrCodeImage} />
