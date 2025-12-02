@@ -295,7 +295,7 @@ export default function GovernmentPage() {
               </div>
             </div>
             {/* Testimonial */}
-            <div className="flex flex-col gap-3 items-start relative shrink-0 w-full">
+            <div className="border-l border-[#737373] border-r-0 border-t-0 border-b-0 box-border flex flex-col gap-3 items-start px-6 py-4 relative shrink-0 w-full">
               <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full whitespace-pre-wrap">
                 "Working with Folio has been a transformative experience… they set a new standard of excellence for how digital identity solutions should be delivered."
               </p>
