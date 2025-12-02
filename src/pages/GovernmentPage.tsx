@@ -6,6 +6,8 @@ import { usePageTitle } from '../hooks/usePageTitle'
 import { scrollToTop } from '../utils/scrollToTop'
 import governmentHeroImage from '../assets/images/government-hero.png'
 import governmentIdentityLabImage from '../assets/images/government-identity-lab.png'
+import governmentCaseStudyImage from '../assets/images/government-case-study.png'
+import governmentAvatarImage from '../assets/images/government-avatar.png'
 
 // Background style using inline styles for complex multi-layer gradient
 // This cannot be easily expressed in Tailwind CSS, so inline style is used
@@ -152,18 +154,177 @@ export default function GovernmentPage() {
         </div>
       </section>
 
-      {/* Identity Lab Section */}
+      {/* Case Study Section */}
       <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
         {/* Desktop Layout */}
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
+          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/426.67]">
             <img
-              src={governmentIdentityLabImage}
-              alt="Identity Lab"
+              src={governmentCaseStudyImage}
+              alt="Albania case study map"
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               loading="lazy"
             />
           </div>
+          <div className="flex flex-1 flex-col gap-12 items-start relative min-w-0">
+            <SectionHeader
+              title="Real results at national scale"
+              description="How Albania enabled secure remote voter registration for its diaspora with Folio's digital identity wallet."
+              align="left"
+            />
+            <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
+              {/* Challenge */}
+              <div className="flex flex-col gap-1 items-start leading-6 relative shrink-0 text-base w-full whitespace-pre-wrap">
+                <p className="font-semibold relative shrink-0 text-[#0a0a0a] w-full">
+                  Challenge
+                </p>
+                <p className="font-normal relative shrink-0 text-[#737373] w-full">
+                  Albania needed a way for over 1.6M citizens living abroad to register to vote remotely while meeting strict security and transparency requirements.
+                </p>
+              </div>
+              {/* Solution */}
+              <div className="flex flex-col gap-1 items-start leading-6 relative shrink-0 text-base w-full whitespace-pre-wrap">
+                <p className="font-semibold relative shrink-0 text-[#0a0a0a] w-full">
+                  Solution
+                </p>
+                <p className="font-normal relative shrink-0 text-[#737373] w-full">
+                  The Central Election Commission launched a remote registration platform powered by Folio: mobile and web channels with secure identity verification and a digital voter card to track application status.
+                </p>
+              </div>
+              {/* Results */}
+              <div className="flex flex-col gap-2 items-start relative shrink-0 w-full">
+                <p className="font-semibold leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
+                  Results
+                </p>
+                <div className="flex gap-8 items-start relative shrink-0 w-full">
+                  <div className="flex flex-1 flex-col gap-2 items-start relative self-stretch shrink-0 whitespace-pre-wrap">
+                    <p className="font-bold leading-[36px] relative shrink-0 text-[#0a0a0a] text-[30px] w-full">
+                      525%
+                    </p>
+                    <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full">
+                      increase in estimated diaspora participation vs previous election
+                    </p>
+                  </div>
+                  <div className="flex flex-1 flex-col gap-2 items-start relative self-stretch shrink-0 whitespace-pre-wrap">
+                    <p className="font-bold leading-[36px] relative shrink-0 text-[#0a0a0a] text-[30px] w-full">
+                      365,000+
+                    </p>
+                    <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full">
+                      profiles created across mobile and web channels
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Testimonial */}
+            <div className="border-l border-[#e5e5e5] border-r-0 border-t-0 border-b-0 box-border flex flex-col gap-6 items-start px-6 py-4 relative shrink-0 w-full">
+              <p className="font-normal leading-6 min-w-full relative shrink-0 text-[#737373] text-base w-[min-content] whitespace-pre-wrap">
+                "Working with Folio has been a transformative experience… they set a new standard of excellence for how digital identity solutions should be delivered."
+              </p>
+              <div className="flex gap-4 items-center relative shrink-0">
+                <div className="relative rounded-full shrink-0 w-8 h-8">
+                  <img
+                    src={governmentAvatarImage}
+                    alt="Ilirjan Celibashi"
+                    className="absolute inset-0 max-w-none object-center object-cover rounded-full w-full h-full"
+                  />
+                </div>
+                <p className="font-medium leading-6 relative shrink-0 text-[#0a0a0a] text-base">
+                  <span className="leading-6">Ilirjan Celibashi</span>
+                  <span className="font-normal leading-6 text-[#737373]"> - State Election Commissioner, Albania</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Layout */}
+        <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[672px] px-6 py-0 relative shrink-0 w-full">
+          <div className="flex flex-col gap-10 items-start relative shrink-0 w-full">
+            <SectionHeader
+              title="Real results at national scale"
+              description="How Albania enabled secure remote voter registration for its diaspora with Folio's digital identity wallet."
+              align="left"
+            />
+            <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
+              {/* Challenge */}
+              <div className="flex flex-col gap-1 items-start leading-6 relative shrink-0 text-base w-full whitespace-pre-wrap">
+                <p className="font-semibold relative shrink-0 text-[#0a0a0a] w-full">
+                  Challenge
+                </p>
+                <p className="font-normal relative shrink-0 text-[#737373] w-full">
+                  Albania needed a way for over 1.6M citizens living abroad to register to vote remotely while meeting strict security and transparency requirements.
+                </p>
+              </div>
+              {/* Solution */}
+              <div className="flex flex-col gap-1 items-start leading-6 relative shrink-0 text-base w-full whitespace-pre-wrap">
+                <p className="font-semibold relative shrink-0 text-[#0a0a0a] w-full">
+                  Solution
+                </p>
+                <p className="font-normal relative shrink-0 text-[#737373] w-full">
+                  The Central Election Commission launched a remote registration platform powered by Folio: mobile and web channels with secure identity verification and a digital voter card to track application status.
+                </p>
+              </div>
+              {/* Results */}
+              <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
+                <p className="font-semibold leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
+                  Results
+                </p>
+                <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
+                  <div className="flex flex-col gap-1 items-start relative shrink-0 w-full whitespace-pre-wrap">
+                    <p className="font-bold leading-8 relative shrink-0 text-[#0a0a0a] text-2xl w-full">
+                      525%
+                    </p>
+                    <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full">
+                      increase in estimated diaspora participation vs previous election
+                    </p>
+                  </div>
+                  <div className="flex flex-col gap-1 items-start relative shrink-0 w-full whitespace-pre-wrap">
+                    <p className="font-bold leading-8 relative shrink-0 text-[#0a0a0a] text-2xl w-full">
+                      365,000+
+                    </p>
+                    <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full">
+                      profiles created across mobile and web channels
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Testimonial */}
+            <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
+              <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full whitespace-pre-wrap">
+                "Working with Folio has been a transformative experience… they set a new standard of excellence for how digital identity solutions should be delivered."
+              </p>
+              <div className="flex gap-4 items-center relative shrink-0 w-full">
+                <div className="relative rounded-full shrink-0 w-10 h-10">
+                  <img
+                    src={governmentAvatarImage}
+                    alt="Ilirjan Celibashi"
+                    className="absolute inset-0 max-w-none object-center object-cover rounded-full w-full h-full"
+                  />
+                </div>
+                <p className="flex-1 font-medium leading-6 min-h-0 min-w-0 relative shrink-0 text-[#0a0a0a] text-base whitespace-pre-wrap">
+                  <span className="leading-6">Ilirjan Celibashi</span>
+                  <span className="font-normal leading-6 text-[#737373]"> - State Election Commissioner, Albania</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="aspect-[240/426.67] relative rounded-2xl shrink-0 w-full">
+            <img
+              src={governmentCaseStudyImage}
+              alt="Albania case study map"
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Identity Lab Section */}
+      <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
+        {/* Desktop Layout */}
+        <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
             <SectionHeader
               title="Experiment with digital identity flows"
@@ -183,6 +344,14 @@ export default function GovernmentPage() {
                 Explore Identity Lab
               </Button>
             </div>
+          </div>
+          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
+            <img
+              src={governmentIdentityLabImage}
+              alt="Identity Lab"
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              loading="lazy"
+            />
           </div>
         </div>
 
