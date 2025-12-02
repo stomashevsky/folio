@@ -218,7 +218,6 @@ export default function ModalShell({
                 variant="secondary"
                 onClick={footer.secondary.onClick}
                 fullWidth={footer.secondary.fullWidth}
-                className={footer.primary && footer.secondary && !footer.secondary.fullWidth ? 'flex-[1_0_0]' : ''}
               >
                 {footer.secondary.label}
               </Button>
@@ -229,7 +228,6 @@ export default function ModalShell({
                 onClick={footer.primary.onClick}
                 disabled={footer.primary.disabled}
                 fullWidth={footer.primary.fullWidth}
-                className={footer.primary && footer.secondary && !footer.primary.fullWidth ? 'flex-[1_0_0]' : ''}
               >
                 {footer.primary.label}
               </Button>
