@@ -179,7 +179,7 @@ export default function GovernmentPage() {
                   Challenge
                 </p>
                 <p className="font-normal relative shrink-0 text-[#737373] w-full">
-                  Albania needed a way for over 1.6M citizens living abroad to register to vote remotely while meeting strict security and transparency requirements.
+                  Albania needed a secure way for more than 1.6M citizens living abroad to register to vote remotely, while meeting strict security and transparency requirements.
                 </p>
               </div>
               {/* Solution */}
@@ -188,7 +188,7 @@ export default function GovernmentPage() {
                   Solution
                 </p>
                 <p className="font-normal relative shrink-0 text-[#737373] w-full">
-                  The Central Election Commission launched a remote registration platform powered by Folio: mobile and web channels with secure identity verification and a digital voter card to track application status.
+                  The Central Election Commission launched a remote registration platform powered by Folio: mobile and web channels with secure identity verification and a digital voter card that shows application status.
                 </p>
               </div>
               {/* Results */}
@@ -202,7 +202,7 @@ export default function GovernmentPage() {
                       525%
                     </p>
                     <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full">
-                      increase in estimated diaspora participation vs previous election
+                      increase in diaspora participation vs previous election
                     </p>
                   </div>
                   <div className="flex flex-1 flex-col gap-2 items-start relative self-stretch shrink-0 whitespace-pre-wrap">
@@ -217,22 +217,26 @@ export default function GovernmentPage() {
               </div>
             </div>
             {/* Testimonial */}
-            <div className="border-l border-[#e5e5e5] border-r-0 border-t-0 border-b-0 box-border flex flex-col gap-6 items-start px-6 py-4 relative shrink-0 w-full">
-              <p className="font-normal leading-6 min-w-full relative shrink-0 text-[#737373] text-base w-[min-content] whitespace-pre-wrap">
+            <div className="border-l border-[#e5e5e5] border-r-0 border-t-0 border-b-0 box-border flex flex-col gap-3 items-start px-6 py-4 relative shrink-0 w-full">
+              <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full whitespace-pre-wrap">
                 "Working with Folio has been a transformative experience… they set a new standard of excellence for how digital identity solutions should be delivered."
               </p>
-              <div className="flex gap-4 items-center relative shrink-0">
-                <div className="relative rounded-full shrink-0 w-8 h-8">
-                  <img
-                    src={governmentAvatarImage}
-                    alt="Ilirjan Celibashi"
-                    className="absolute inset-0 max-w-none object-center object-cover rounded-full w-full h-full"
-                  />
+              <div className="flex gap-4 items-start relative shrink-0 w-full">
+                <div className="box-border flex gap-2 items-center px-0 py-3 relative shrink-0">
+                  <div className="relative rounded-full shrink-0 w-8 h-8">
+                    <img
+                      src={governmentAvatarImage}
+                      alt="Ilirjan Celibashi"
+                      className="absolute inset-0 max-w-none object-center object-cover rounded-full w-full h-full"
+                    />
+                  </div>
                 </div>
-                <p className="font-medium leading-6 relative shrink-0 text-[#0a0a0a] text-base">
-                  <span className="leading-6">Ilirjan Celibashi</span>
-                  <span className="font-normal leading-6 text-[#737373]"> - State Election Commissioner, Albania</span>
-                </p>
+                <div className="box-border flex flex-1 gap-2 items-center min-h-[56px] min-w-0 px-0 py-1 relative shrink-0">
+                  <p className="flex-1 font-medium leading-6 min-h-0 min-w-0 relative shrink-0 text-[#0a0a0a] text-base whitespace-pre-wrap">
+                    <span className="leading-6">Ilirjan Celibashi</span>
+                    <span className="font-normal leading-6 text-[#737373]"> - State Election Commissioner, Albania</span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -253,7 +257,7 @@ export default function GovernmentPage() {
                   Challenge
                 </p>
                 <p className="font-normal relative shrink-0 text-[#737373] w-full">
-                  Albania needed a way for over 1.6M citizens living abroad to register to vote remotely while meeting strict security and transparency requirements.
+                  Albania needed a secure way for more than 1.6M citizens living abroad to register to vote remotely, while meeting strict security and transparency requirements.
                 </p>
               </div>
               {/* Solution */}
@@ -262,7 +266,7 @@ export default function GovernmentPage() {
                   Solution
                 </p>
                 <p className="font-normal relative shrink-0 text-[#737373] w-full">
-                  The Central Election Commission launched a remote registration platform powered by Folio: mobile and web channels with secure identity verification and a digital voter card to track application status.
+                  The Central Election Commission launched a remote registration platform powered by Folio: mobile and web channels with secure identity verification and a digital voter card that shows application status.
                 </p>
               </div>
               {/* Results */}
@@ -276,7 +280,7 @@ export default function GovernmentPage() {
                       525%
                     </p>
                     <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full">
-                      increase in estimated diaspora participation vs previous election
+                      increase in diaspora participation vs previous election
                     </p>
                   </div>
                   <div className="flex flex-col gap-1 items-start relative shrink-0 w-full whitespace-pre-wrap">
@@ -291,22 +295,26 @@ export default function GovernmentPage() {
               </div>
             </div>
             {/* Testimonial */}
-            <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
+            <div className="flex flex-col gap-3 items-start relative shrink-0 w-full">
               <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full whitespace-pre-wrap">
                 "Working with Folio has been a transformative experience… they set a new standard of excellence for how digital identity solutions should be delivered."
               </p>
-              <div className="flex gap-4 items-center relative shrink-0 w-full">
-                <div className="relative rounded-full shrink-0 w-10 h-10">
-                  <img
-                    src={governmentAvatarImage}
-                    alt="Ilirjan Celibashi"
-                    className="absolute inset-0 max-w-none object-center object-cover rounded-full w-full h-full"
-                  />
+              <div className="flex gap-4 items-start relative shrink-0 w-full">
+                <div className="box-border flex gap-2 items-center px-0 py-3 relative shrink-0">
+                  <div className="relative rounded-full shrink-0 w-8 h-8">
+                    <img
+                      src={governmentAvatarImage}
+                      alt="Ilirjan Celibashi"
+                      className="absolute inset-0 max-w-none object-center object-cover rounded-full w-full h-full"
+                    />
+                  </div>
                 </div>
-                <p className="flex-1 font-medium leading-6 min-h-0 min-w-0 relative shrink-0 text-[#0a0a0a] text-base whitespace-pre-wrap">
-                  <span className="leading-6">Ilirjan Celibashi</span>
-                  <span className="font-normal leading-6 text-[#737373]"> - State Election Commissioner, Albania</span>
-                </p>
+                <div className="box-border flex flex-1 gap-2 items-center min-h-[56px] min-w-0 px-0 py-1 relative shrink-0">
+                  <p className="flex-1 font-medium leading-6 min-h-0 min-w-0 relative shrink-0 text-[#0a0a0a] text-base whitespace-pre-wrap">
+                    <span className="leading-6">Ilirjan Celibashi</span>
+                    <span className="font-normal leading-6 text-[#737373]"> - State Election Commissioner, Albania</span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>

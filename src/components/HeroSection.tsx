@@ -1,6 +1,6 @@
 import Button from './ui/Button'
 import { SectionHeader } from './ui'
-import heroPhone from '../assets/images/hero-phone.png'
+import heroPhone from '../assets/images/identity-lab-hero.png'
 import { scrollToSection } from '../utils/scrollToSection'
 
 export default function HeroSection() {
