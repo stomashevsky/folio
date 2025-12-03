@@ -49,12 +49,23 @@ export default function GlobalPartnersSection() {
           align="center"
           maxWidth="576px"
         />
+      </div>
+      <div 
+        className="relative w-full" 
+        style={{ 
+          width: '100%',
+          paddingLeft: '24px',
+          paddingRight: '24px',
+          position: 'relative',
+          overflow: 'hidden',
+        }}
+      >
         <div 
           className="relative w-full" 
           style={{ 
             width: '100%',
-            height: '627px',
-            minHeight: '627px',
+            height: '800px',
+            minHeight: '800px',
             position: 'relative',
             overflow: 'hidden',
           }}
