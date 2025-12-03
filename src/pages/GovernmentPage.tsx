@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, FeatureBlock } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
+import GlobalPartnersSection from '../components/sections/GlobalPartnersSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { scrollToTop } from '../utils/scrollToTop'
 import governmentHeroImage from '../assets/images/government-hero.png'
@@ -328,6 +329,9 @@ export default function GovernmentPage() {
           </div>
         </div>
       </section>
+
+      {/* Global Partners Section */}
+      <GlobalPartnersSection />
 
       {/* Identity Lab Section */}
       <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
