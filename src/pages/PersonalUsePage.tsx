@@ -18,6 +18,7 @@ import documentViewer from '../assets/images/document-viewer.png'
 import featuresIds from '../assets/images/features-ids.png'
 import featuresCards from '../assets/images/features-cards.png'
 import featuresFolders from '../assets/images/features-folders.png'
+import storageImage from '../assets/images/storage-organized.png'
 import scanTextIcon from '../assets/icons/scan-text.svg'
 import imagesIcon from '../assets/icons/images.svg'
 import fileSpreadsheetIcon from '../assets/icons/file-spreadsheet.svg'
@@ -409,6 +410,101 @@ function PersonalUsePage() {
         </div>
       </section>
 
+      {/* Keep your essential information organized Section */}
+      <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
+        {/* Desktop Layout */}
+        <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+          <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
+            <SectionHeader
+              title="Keep your essential information organized"
+              description="Folio helps you store and manage the most important information in your life. Documents, cards and personal records stay securely organized in one place, easy to access at any moment and always available on any device. This gives you clarity and confidence that everything you rely on is protected and ready when you need it."
+              align="left"
+            />
+          </div>
+          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
+            <img
+              src={storageImage}
+              alt="Organized documents and cards"
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full pointer-events-none"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        {/* Mobile Layout */}
+        <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+          <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
+            <SectionHeader
+              title="Keep your essential information organized"
+              description="Folio helps you store and manage the most important information in your life. Documents, cards and personal records stay securely organized in one place, easy to access at any moment and always available on any device. This gives you clarity and confidence that everything you rely on is protected and ready when you need it."
+              align="left"
+            />
+          </div>
+          <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
+            <img
+              src={storageImage}
+              alt="Organized documents and cards"
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full pointer-events-none"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Folio Wallet in numbers Section */}
+      <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
+        {/* Desktop Layout */}
+        <div className="hidden md:flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+          <div className="flex flex-col gap-12 items-start relative shrink-0 w-full">
+            <SectionHeader
+              title="Folio Wallet in numbers"
+              description="A simple app that already keeps important documents safe for people all over the world."
+              align="left"
+              maxWidth="576px"
+            />
+            <div className="flex gap-8 items-start relative shrink-0 w-full">
+              <StatItem
+                value="4.7★"
+                description="Users consistently rate Folio highly for its clarity, speed and reliability in daily use."
+              />
+              <StatItem
+                value="1M+"
+                description="Documents, cards and tickets already added by people who use Folio to stay organized."
+              />
+              <StatItem
+                value="120+"
+                description="Countries where Folio helps users keep their essential documents accessible anywhere."
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Layout */}
+        <div className="flex md:hidden flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+          <div className="flex flex-col gap-10 items-start relative shrink-0 w-full">
+            <SectionHeader
+              title="Folio Wallet in numbers"
+              description="A simple app that already keeps important documents safe for people all over the world."
+              align="left"
+            />
+            <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
+              <StatItem
+                value="4.7★"
+                description="Users consistently rate Folio highly for its clarity, speed and reliability in daily use."
+              />
+              <StatItem
+                value="1M+"
+                description="Documents, cards and tickets already added by people who use Folio to stay organized."
+              />
+              <StatItem
+                value="120+"
+                description="Countries where Folio helps users keep their essential documents accessible anywhere."
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <FAQSection 
         faqData={PERSONAL_USE_FAQ}
@@ -515,6 +611,19 @@ function ImportMethod({ icon, title, description }: { icon: string; title: strin
           {description}
         </p>
       </div>
+    </div>
+  )
+}
+
+function StatItem({ value, description }: { value: string; description: string }) {
+  return (
+    <div className="flex flex-1 flex-col gap-2 items-start relative shrink-0 whitespace-pre-wrap">
+      <p className="font-bold leading-8 md:leading-[36px] text-2xl md:text-[30px] relative shrink-0 text-[#0a0a0a] w-full">
+        {value}
+      </p>
+      <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full">
+        {description}
+      </p>
     </div>
   )
 }
