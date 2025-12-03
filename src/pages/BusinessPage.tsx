@@ -122,14 +122,14 @@ export default function BusinessPage() {
         </div>
       </section>
 
-      {/* Stats Section - Built on a platform people already trust */}
+      {/* Stats Section - Built on a platform people trust */}
       <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
         {/* Desktop Layout */}
         <div className="hidden md:flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-col gap-12 items-start relative shrink-0 w-full">
             <SectionHeader
-              title="Built on a platform people already trust"
-              description="Your tickets live inside an app that people already use to store IDs, cards and travel documents."
+              title="Built on a platform people trust"
+              description="Your tickets appear inside the same secure wallet people use daily for IDs, cards and travel documents. No extra apps, no onboarding friction."
               align="left"
               maxWidth="576px"
             />
@@ -154,8 +154,8 @@ export default function BusinessPage() {
         <div className="flex md:hidden flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-col gap-10 items-start relative shrink-0 w-full">
             <SectionHeader
-              title="Built on a platform people already trust"
-              description="Your tickets live inside an app that people already use to store IDs, cards and travel documents."
+              title="Built on a platform people trust"
+              description="Your tickets appear inside the same secure wallet people use daily for IDs, cards and travel documents. No extra apps, no onboarding friction."
               align="left"
             />
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
