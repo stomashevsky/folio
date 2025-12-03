@@ -229,7 +229,7 @@ export default function ModalShell({
       >
         {/* Scrollable content */}
         <div ref={scrollableContentRef} className="flex-1 overflow-y-auto">
-          <div className={MODAL_RESPONSIVE_CLASSES.content.wrapper}>
+          <div className={title ? MODAL_RESPONSIVE_CLASSES.content.wrapperWithoutIcon : MODAL_RESPONSIVE_CLASSES.content.wrapperWithIcon}>
             {/* Header */}
             {title && (
               <div className="flex flex-col gap-1.5 items-start w-full">

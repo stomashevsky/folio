@@ -86,6 +86,10 @@ export const MODAL_RESPONSIVE_CLASSES = {
   content: {
     // Padding: less on mobile, more on desktop
     wrapper: 'flex flex-col gap-10 p-4 md:p-6 w-full',
+    // Wrapper without icon (title prop used): 32px top padding
+    wrapperWithoutIcon: 'flex flex-col gap-10 pt-8 pb-4 px-4 md:pt-8 md:pb-6 md:px-6 w-full',
+    // Wrapper with icon (custom header in children): uniform padding
+    wrapperWithIcon: 'flex flex-col gap-10 p-4 md:p-6 w-full',
   },
   // Divider before footer
   divider: {
