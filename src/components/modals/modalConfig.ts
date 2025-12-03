@@ -89,7 +89,7 @@ export const MODAL_RESPONSIVE_CLASSES = {
   },
   // Divider before footer
   divider: {
-    // Visible only on mobile
+    // Visible only on mobile when content is scrollable
     base: 'border-t border-[#e5e5e5] md:hidden',
   },
   // Footer

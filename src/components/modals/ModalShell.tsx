@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState, useId } from 'react'
+import { ReactNode, useEffect, useState, useId, useRef } from 'react'
 import { createPortal } from 'react-dom'
 import { Button, useFocusTrap, useBodyScrollLock } from '../ui'
 import { type ModalSize, MODAL_RESPONSIVE_CLASSES } from './modalConfig'
@@ -73,6 +73,8 @@ export default function ModalShell({
   useBodyScrollLock(isOpen)
   const [isAnimating, setIsAnimating] = useState(false)
   const [shouldRender, setShouldRender] = useState(isOpen)
+  const [hasScroll, setHasScroll] = useState(false)
+  const scrollableContentRef = useRef<HTMLDivElement>(null)
   const shouldAnimate = !prefersReducedMotion()
   const baseId = useId() // Must be called before conditional return
   const maxWidthClass = MODAL_RESPONSIVE_CLASSES.modal.maxWidth[size]
@@ -128,6 +130,51 @@ export default function ModalShell({
     }
   }, [isOpen, onClose, disableEscapeClose])
 
+  // Check if content is scrollable (only on mobile)
+  useEffect(() => {
+    if (!isOpen || !shouldRender || !scrollableContentRef.current) {
+      setHasScroll(false)
+      return
+    }
+
+    const checkScroll = () => {
+      const element = scrollableContentRef.current
+      if (!element) return
+
+      // Only check on mobile (< 768px)
+      const isMobile = window.innerWidth < 768
+      if (!isMobile) {
+        setHasScroll(false)
+        return
+      }
+
+      // Check if content is scrollable
+      const hasScrollableContent = element.scrollHeight > element.clientHeight
+      setHasScroll(hasScrollableContent)
+    }
+
+    // Initial check after animation completes
+    const timeoutId = setTimeout(() => {
+      checkScroll()
+    }, 250) // Wait for animation to complete
+
+    // Use ResizeObserver to track content size changes
+    const resizeObserver = new ResizeObserver(() => {
+      checkScroll()
+    })
+
+    resizeObserver.observe(scrollableContentRef.current)
+
+    // Also check on window resize
+    window.addEventListener('resize', checkScroll)
+
+    return () => {
+      clearTimeout(timeoutId)
+      resizeObserver.disconnect()
+      window.removeEventListener('resize', checkScroll)
+    }
+  }, [isOpen, shouldRender, children])
+
   if (!shouldRender) return null
 
   /**
@@ -181,7 +228,7 @@ export default function ModalShell({
         }`}
       >
         {/* Scrollable content */}
-        <div className="flex-1 overflow-y-auto">
+        <div ref={scrollableContentRef} className="flex-1 overflow-y-auto">
           <div className={MODAL_RESPONSIVE_CLASSES.content.wrapper}>
             {/* Header */}
             {title && (
@@ -202,8 +249,8 @@ export default function ModalShell({
           </div>
         </div>
 
-        {/* Divider - visible only on mobile */}
-        {footer && <div className={MODAL_RESPONSIVE_CLASSES.divider.base}></div>}
+        {/* Divider - visible only on mobile when content is scrollable */}
+        {footer && hasScroll && <div className={MODAL_RESPONSIVE_CLASSES.divider.base}></div>}
 
         {/* Footer */}
         {footer && (
