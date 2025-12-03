@@ -79,17 +79,54 @@
       // the correct url will be waiting in the browser's history for
       // the single page app to route to.
       (function(l) {
-        if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) { 
-            return s.replace(/~and~/g, '&')
-          }).join('?');
+        // Check if URL has the format ?/path (from 404.html redirect)
+        if (l.search[1] === '/') {
+          // Extract the path from query string (e.g., '/government' from '?/government')
+          var pathWithParams = l.search.slice(1); // Removes '?' -> '/government'
+          
+          // Find where the actual path ends (before any additional query params)
+          // Additional params start with & (but not ~and~)
+          var pathEnd = pathWithParams.length;
+          for (var i = 0; i < pathWithParams.length - 1; i++) {
+            if (pathWithParams[i] === '&') {
+              // Check if this & is part of ~and~
+              var before = i >= 4 ? pathWithParams.substring(i - 4, i) : '';
+              if (before !== '~and') {
+                // This is a real query param separator
+                pathEnd = i;
+                break;
+              }
+            }
+          }
+          
+          // Extract just the path part
+          var route = pathWithParams.substring(0, pathEnd);
+          
+          // Decode ~and~ back to &
+          route = route.replace(/~and~/g, '&');
+          
+          // Ensure route starts with /
+          if (!route.startsWith('/')) {
+            route = '/' + route;
+          }
+          
+          // Extract additional query parameters if they exist
+          var additionalParams = pathWithParams.substring(pathEnd);
+          if (additionalParams) {
+            // Remove leading & and decode ~and~
+            var cleanParams = additionalParams.replace(/^&/, '').replace(/~and~/g, '&');
+            if (cleanParams) {
+              route = route + '?' + cleanParams;
+            }
+          }
+          
           // Use explicit base path '/folio' to match vite.config.ts base setting
-          // This ensures consistent routing regardless of pathname format
           var basePath = '/folio';
-          // Ensure decoded route starts with /
-          var route = decoded.startsWith('/') ? decoded : '/' + decoded;
-          // Build the final path with base path, route, and hash
+          
+          // Build the final path: /folio/government (or /folio/government?param=value)
           var finalPath = basePath + route + l.hash;
+          
+          // Replace the URL in browser history without reloading
           window.history.replaceState(null, null, finalPath);
         }
       }(window.location))
