@@ -122,6 +122,60 @@ export default function BusinessPage() {
         </div>
       </section>
 
+      {/* Stats Section - Built on a platform people already trust */}
+      <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
+        {/* Desktop Layout */}
+        <div className="hidden md:flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+          <div className="flex flex-col gap-12 items-start relative shrink-0 w-full">
+            <SectionHeader
+              title="Built on a platform people already trust"
+              description="Your tickets live inside an app that people already use to store IDs, cards and travel documents."
+              align="left"
+              maxWidth="576px"
+            />
+            <div className="flex gap-8 items-start relative shrink-0 w-full">
+              <StatItem
+                value="4.7★"
+                description="Users consistently rate Folio highly for its clarity, speed and reliability in daily use."
+              />
+              <StatItem
+                value="1M+"
+                description="Documents, cards and tickets already added by people who use Folio to stay organized."
+              />
+              <StatItem
+                value="120+"
+                description="Countries where Folio helps users keep their essential documents accessible anywhere."
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Layout */}
+        <div className="flex md:hidden flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+          <div className="flex flex-col gap-10 items-start relative shrink-0 w-full">
+            <SectionHeader
+              title="Built on a platform people already trust"
+              description="Your tickets live inside an app that people already use to store IDs, cards and travel documents."
+              align="left"
+            />
+            <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
+              <StatItem
+                value="4.7★"
+                description="Users consistently rate Folio highly for its clarity, speed and reliability in daily use."
+              />
+              <StatItem
+                value="1M+"
+                description="Documents, cards and tickets already added by people who use Folio to stay organized."
+              />
+              <StatItem
+                value="120+"
+                description="Countries where Folio helps users keep their essential documents accessible anywhere."
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section - Issue tickets in a Folio ready format */}
       <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
         {/* Desktop Layout */}
@@ -367,6 +421,19 @@ function OperatorListItem({ icon, title, description }: { icon: string; title: s
           {description}
         </p>
       </div>
+    </div>
+  )
+}
+
+function StatItem({ value, description }: { value: string; description: string }) {
+  return (
+    <div className="flex flex-1 flex-col gap-2 items-start relative shrink-0 whitespace-pre-wrap">
+      <p className="font-bold leading-8 md:leading-[36px] text-2xl md:text-[30px] relative shrink-0 text-[#0a0a0a] w-full">
+        {value}
+      </p>
+      <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full">
+        {description}
+      </p>
     </div>
   )
 }
