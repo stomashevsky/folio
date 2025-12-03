@@ -66,8 +66,8 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
     <!-- Redirect script for GitHub Pages SPA routing -->
+    <!-- This script MUST run before React Router initializes -->
     <script>
       // Single Page Apps for GitHub Pages
       // https://github.com/rafgraph/spa-github-pages
@@ -83,16 +83,18 @@
           var decoded = l.search.slice(1).split('&').map(function(s) { 
             return s.replace(/~and~/g, '&')
           }).join('?');
-          // Get the base path from pathname (e.g., '/folio' from '/folio/')
-          var basePath = l.pathname.split('/').slice(0, -1).join('/') || '/';
+          // Use explicit base path '/folio' to match vite.config.ts base setting
+          // This ensures consistent routing regardless of pathname format
+          var basePath = '/folio';
           // Ensure decoded route starts with /
           var route = decoded.startsWith('/') ? decoded : '/' + decoded;
-          window.history.replaceState(null, null,
-              basePath + route + l.hash
-          );
+          // Build the final path with base path, route, and hash
+          var finalPath = basePath + route + l.hash;
+          window.history.replaceState(null, null, finalPath);
         }
       }(window.location))
     </script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
 
