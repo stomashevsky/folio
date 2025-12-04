@@ -1,7 +1,7 @@
 import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react'
 import { FOCUS_RING_CLASSES } from './focusStyles'
 
-type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'subtle'
+type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'subtle'
 type ButtonSize = 'sm' | 'md' | 'lg'
 
 interface BaseButtonProps {
@@ -28,7 +28,7 @@ type ButtonProps = BaseButtonProps &
  * Button component that can render as either a button or anchor tag
  * Automatically adds security attributes (rel="noopener noreferrer") for external links
  * 
- * @param variant - Visual style variant: 'primary', 'secondary', 'ghost', or 'subtle'
+ * @param variant - Visual style variant: 'primary', 'secondary', 'outline', 'ghost', or 'subtle'
  * @param size - Size of the button: 'sm', 'md', or 'lg'
  * @param fullWidth - Whether the button should take full width of container
  * @param href - If provided, renders as anchor tag instead of button
@@ -66,7 +66,8 @@ export default function Button({
   // Variant classes with improved states
   const variantClasses: Record<ButtonVariant, string> = {
     primary: `bg-[#171717] text-[#fafafa] hover:bg-[linear-gradient(90deg,rgba(255,255,255,0.1)_0%,rgba(255,255,255,0.1)_100%),linear-gradient(90deg,#171717_0%,#171717_100%)] active:bg-[#171717]/75 ${FOCUS_RING_CLASSES} disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#171717] font-medium leading-5 transition-all duration-150`,
-    secondary: `bg-white border border-[#e5e5e5] border-solid text-[#0a0a0a] hover:bg-[#f5f5f5] hover:shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] active:bg-[#e5e5e5] active:shadow-none ${FOCUS_RING_CLASSES} focus-visible:border-[#a3a3a3] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:shadow-none font-medium leading-5 transition-all duration-150`,
+    secondary: `bg-[#f5f5f5] text-[#171717] hover:bg-[linear-gradient(90deg,rgba(10,10,10,0.1)_0%,rgba(10,10,10,0.1)_100%),linear-gradient(90deg,#f5f5f5_0%,#f5f5f5_100%)] active:bg-[#e5e5e5] ${FOCUS_RING_CLASSES} disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#f5f5f5] font-medium leading-5 transition-all duration-150`,
+    outline: `bg-white border border-[#e5e5e5] border-solid text-[#0a0a0a] hover:bg-[#f5f5f5] hover:shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] active:bg-[#e5e5e5] active:shadow-none ${FOCUS_RING_CLASSES} focus-visible:border-[#a3a3a3] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:shadow-none font-medium leading-5 transition-all duration-150`,
     ghost: `bg-transparent text-[#0a0a0a] hover:bg-[#f5f5f5] active:bg-[#e5e5e5] ${FOCUS_RING_CLASSES} disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent font-medium leading-5 transition-all duration-150`,
     subtle: `bg-transparent text-[#737373] hover:text-[#0a0a0a] hover:bg-[#fafafa] active:text-[#0a0a0a] active:bg-[#f5f5f5] ${FOCUS_RING_CLASSES} disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:text-[#737373] disabled:hover:bg-transparent font-normal leading-5 transition-all duration-150 cursor-pointer`
   }
