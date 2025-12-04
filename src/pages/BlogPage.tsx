@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 import FooterSection from '../components/sections/FooterSection'
 import { Button } from '../components/ui'
 import { usePageTitle } from '../hooks/usePageTitle'
-import { blogArticles, type BlogCategory, type BlogArticle } from '../data/blogArticles'
+import { blogArticles, type BlogCategory } from '../data/blogArticles'
 
 const categories: BlogCategory[] = ['All', 'Company', 'Research', 'Product', 'Safety']
 
