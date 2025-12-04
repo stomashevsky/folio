@@ -45,6 +45,15 @@ This file contains all rules and principles that must be followed for every chan
 - Components must be reusable and configurable through props
 - After creating a component, add its export to `src/components/ui/index.ts`
 
+### 5.1. Avoiding Code Duplication
+
+- **If the same UI pattern or component logic is used in multiple places, create a shared component**
+- **Before duplicating code, check if a similar component already exists** that can be reused or extended
+- **When you see identical or very similar code blocks in different files, extract them into a shared component**
+- Examples: If article cards are displayed the same way on BlogPage and KeepReadingSection, create a `BlogArticleCard` component
+- Shared components should support all use cases through props (variants, optional features, etc.)
+- After creating a shared component, **refactor all places** that use the duplicated code to use the new component
+
 ### 6. Styling
 
 - Use Tailwind CSS classes
@@ -68,6 +77,7 @@ This file contains all rules and principles that must be followed for every chan
    - Check for an existing suitable component in `src/components/ui/`
    - Check existing patterns in the project
    - If component doesn't exist - create it as a shared component
+   - **If you notice duplicated code across multiple files, extract it into a shared component first**
 
 2. **When working with sections:**
    - **Verify design in Figma** for spacing and layout
