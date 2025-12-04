@@ -1,29 +1,204 @@
+import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import FooterSection from '../components/sections/FooterSection'
-import { SectionHeader } from '../components/ui'
+import { SectionHeader, Button } from '../components/ui'
 import { usePageTitle } from '../hooks/usePageTitle'
 
+type BlogCategory = 'All' | 'Company' | 'Research' | 'Product' | 'Safety'
+
+interface BlogArticle {
+  category: Exclude<BlogCategory, 'All'>
+  date: string
+  title: string
+  description: string
+  slug?: string
+}
+
+const blogArticles: BlogArticle[] = [
+  {
+    category: 'Company',
+    date: 'Dec 3, 2025',
+    title: 'Short and clear engaging headline for an article',
+    description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
+  },
+  {
+    category: 'Research',
+    date: 'Dec 3, 2025',
+    title: 'Short and clear engaging headline for an article',
+    description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
+  },
+  {
+    category: 'Product',
+    date: 'Dec 3, 2025',
+    title: 'Short and clear engaging headline for an article',
+    description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
+  },
+  {
+    category: 'Safety',
+    date: 'Dec 3, 2025',
+    title: 'Short and clear engaging headline for an article',
+    description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
+  },
+  {
+    category: 'Company',
+    date: 'Dec 3, 2025',
+    title: 'Short and clear engaging headline for an article',
+    description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
+  },
+  {
+    category: 'Research',
+    date: 'Dec 3, 2025',
+    title: 'Short and clear engaging headline for an article',
+    description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
+  },
+  {
+    category: 'Product',
+    date: 'Dec 3, 2025',
+    title: 'Short and clear engaging headline for an article',
+    description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
+  },
+  {
+    category: 'Company',
+    date: 'Dec 3, 2025',
+    title: 'Short and clear engaging headline for an article',
+    description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
+  },
+  {
+    category: 'Safety',
+    date: 'Dec 3, 2025',
+    title: 'Short and clear engaging headline for an article',
+    description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
+  },
+  {
+    category: 'Research',
+    date: 'Dec 3, 2025',
+    title: 'Short and clear engaging headline for an article',
+    description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
+  },
+]
+
+const categories: BlogCategory[] = ['All', 'Company', 'Research', 'Product', 'Safety']
+
 export default function BlogPage() {
+  const [selectedCategory, setSelectedCategory] = useState<BlogCategory>('All')
+  const [displayedArticles, setDisplayedArticles] = useState(8)
+
   usePageTitle({
     title: 'Blog | Folio Wallet',
-    description: 'Blog coming soon.',
+    description: 'Case studies, product insights and practical guides on travel, documents and digital identity.',
     ogTitle: 'Blog | Folio Wallet',
-    ogDescription: 'Blog coming soon.',
+    ogDescription: 'Case studies, product insights and practical guides on travel, documents and digital identity.',
     ogUrl: 'https://folio.id/blog'
   })
+
+  const filteredArticles = selectedCategory === 'All'
+    ? blogArticles
+    : blogArticles.filter(article => article.category === selectedCategory)
+
+  const visibleArticles = filteredArticles.slice(0, displayedArticles)
+  const hasMore = displayedArticles < filteredArticles.length
+
+  const handleLoadMore = () => {
+    setDisplayedArticles(prev => Math.min(prev + 8, filteredArticles.length))
+  }
+
   return (
     <div className="flex flex-col items-start min-h-screen relative w-full">
       <Navbar />
       <main className="flex-1 w-full">
-        <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-24 relative shrink-0 w-full flex-1">
-        <div className="flex flex-col gap-8 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <SectionHeader
-            title="Blog"
-            description="Blog coming soon."
-            headingLevel="h1"
-          />
-        </div>
-      </section>
+        <section className="bg-white flex flex-col gap-6 md:gap-16 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full flex-1">
+          <div className="flex flex-col gap-10 md:gap-16 items-start max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+            {/* Header */}
+            <div className="flex flex-col gap-4 md:gap-5 items-start max-w-[576px] relative shrink-0 w-full">
+              <h1 className="font-bold leading-[36px] md:leading-[40px] text-[30px] md:text-[36px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+                Folio Blog
+              </h1>
+              <p className="font-normal leading-6 min-w-full relative shrink-0 text-[#737373] text-base text-left w-[min-content] whitespace-pre-wrap">
+                Case studies, product insights and practical guides on travel, documents and digital identity.
+              </p>
+            </div>
+
+            {/* Filters */}
+            <div className="flex gap-2 items-start relative shrink-0 w-full flex-wrap">
+              {categories.map((category) => (
+                <Button
+                  key={category}
+                  variant={selectedCategory === category ? 'secondary' : 'ghost'}
+                  onClick={() => {
+                    setSelectedCategory(category)
+                    setDisplayedArticles(8)
+                  }}
+                  className={selectedCategory === category 
+                    ? '!bg-[#f5f5f5] border-0 !text-[#171717] hover:!bg-[#f5f5f5] hover:shadow-none' 
+                    : ''
+                  }
+                >
+                  {category}
+                </Button>
+              ))}
+            </div>
+
+            {/* Articles List */}
+            <div className="flex flex-col items-start overflow-hidden relative shrink-0 w-full">
+              {/* Desktop Layout */}
+              <div className="hidden md:flex flex-col items-start relative shrink-0 w-full">
+                {visibleArticles.map((article, index) => (
+                  <div
+                    key={index}
+                    className="border-b border-[#e5e5e5] hover:border-[#0a0a0a] flex gap-7 items-start relative shrink-0 w-full transition-colors duration-200 cursor-pointer"
+                  >
+                    <div className="flex flex-col gap-[17px] items-start justify-center leading-5 px-0 py-[35px] relative shrink-0 text-sm w-[288px] whitespace-pre-wrap">
+                      <p className="relative shrink-0 text-[#0a0a0a] w-full">{article.category}</p>
+                      <p className="relative shrink-0 text-[#737373] w-full">{article.date}</p>
+                    </div>
+                    <div className="flex flex-[1_0_0] flex-col gap-5 items-start min-h-px min-w-px px-0 py-8 relative shrink-0 text-[#0a0a0a] whitespace-pre-wrap">
+                      <p className="font-semibold leading-6 relative shrink-0 text-base w-full">
+                        {article.title}
+                      </p>
+                      <p className="line-clamp-2 font-normal leading-5 relative shrink-0 text-sm w-full overflow-ellipsis overflow-hidden">
+                        {article.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Mobile Layout */}
+              <div className="flex md:hidden flex-col gap-6 items-start overflow-hidden relative shrink-0 w-full">
+                {visibleArticles.map((article, index) => (
+                  <div
+                    key={index}
+                    className="border-b border-[#e5e5e5] hover:border-[#0a0a0a] flex flex-col gap-5 items-start px-0 py-6 relative shrink-0 w-full transition-colors duration-200 cursor-pointer"
+                  >
+                    <div className="flex flex-wrap gap-4 items-center leading-5 relative shrink-0 text-sm w-full">
+                      <p className="relative shrink-0 text-[#0a0a0a]">{article.category}</p>
+                      <p className="relative shrink-0 text-[#737373]">{article.date}</p>
+                    </div>
+                    <p className="font-semibold leading-6 relative shrink-0 text-base w-full whitespace-pre-wrap">
+                      {article.title}
+                    </p>
+                    <p className="font-normal leading-5 relative shrink-0 text-sm text-[#0a0a0a] w-full whitespace-pre-wrap line-clamp-2 overflow-ellipsis overflow-hidden">
+                      {article.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Load More Button */}
+            {hasMore && (
+              <div className="flex gap-0 items-center justify-center relative shrink-0 w-full">
+                <Button
+                  variant="secondary"
+                  onClick={handleLoadMore}
+                  className="!bg-[#f5f5f5] border-0 !text-[#171717] hover:!bg-[#f5f5f5] hover:shadow-none"
+                >
+                  Load more
+                </Button>
+              </div>
+            )}
+          </div>
+        </section>
       </main>
       <FooterSection />
     </div>

@@ -98,6 +98,14 @@ export default function DesktopNav() {
           >
             Identity Lab
           </Button>
+          <Button
+            variant="ghost"
+            onClick={() => handleNavClick('/blog')}
+            className={isActive('/blog') ? 'bg-[#f5f5f5]' : ''}
+            aria-current={isActive('/blog') ? 'page' : undefined}
+          >
+            Blog
+          </Button>
         </div>
 
         <div className="flex-shrink-0 z-10">
