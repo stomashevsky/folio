@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import FAQSection, { FAQItem } from '../components/sections/FAQSection'
+import PasskeysSection from '../components/sections/PasskeysSection'
 import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { scrollToSection } from '../utils/scrollToSection'
@@ -219,6 +220,9 @@ function PersonalUsePage() {
           </div>
         </div>
       </section>
+
+      {/* Passkeys Section */}
+      <PasskeysSection />
 
       {/* Features Section */}
       <section id="everything-in-one-place" className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
