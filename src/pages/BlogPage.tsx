@@ -70,7 +70,7 @@ export default function BlogPage() {
     <div className="flex flex-col items-start min-h-screen relative w-full">
       <Navbar />
       <main className="flex-1 w-full">
-        <section className="bg-white flex flex-col gap-6 md:gap-16 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full flex-1">
+        <section className="bg-white flex flex-col gap-6 md:gap-16 items-center overflow-hidden px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full flex-1">
           <div className="flex flex-col gap-10 md:gap-16 items-start max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             {/* Header */}
             <div className="flex flex-col gap-4 md:gap-5 items-start max-w-[576px] relative shrink-0 w-full">
