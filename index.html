@@ -63,11 +63,10 @@
     <!-- Consider using nonce-based CSP in production with proper server configuration -->
     <!-- For production, remove 'unsafe-eval' and add 'upgrade-insecure-requests' -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' 'sha256-XeNpbq034w0m3hU2IirnKxaUajbLaMP8wW80j2KdEoE=' 'sha256-CVwTVNhkb5sIYIpuGe3NZv4KPlAnMHencu06RxRIKOE='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' ws: wss:; base-uri 'self'; form-action 'self'; frame-src https://datawrapper.dwcdn.net;" />
-  </head>
-  <body>
-    <div id="root"></div>
+    
     <!-- Redirect script for GitHub Pages SPA routing -->
     <!-- This script MUST run before React Router initializes -->
+    <!-- Placed in head to ensure it executes synchronously before any module scripts -->
     <script>
       // Single Page Apps for GitHub Pages
       // https://github.com/rafgraph/spa-github-pages
@@ -78,9 +77,11 @@
       // When the single page app is loaded further down in this file,
       // the correct url will be waiting in the browser's history for
       // the single page app to route to.
-      (function(l) {
+      (function() {
+        var l = window.location;
         // Check if URL has the format ?/path (from 404.html redirect)
-        if (l.search[1] === '/') {
+        // l.search will be like "?/government" when redirected from 404.html
+        if (l.search && l.search.length > 1 && l.search[1] === '/') {
           // Extract the path from query string (e.g., '/government' from '?/government')
           var pathWithParams = l.search.slice(1); // Removes '?' -> '/government'
           
@@ -124,13 +125,18 @@
           var basePath = '/folio';
           
           // Build the final path: /folio/government (or /folio/government?param=value)
-          var finalPath = basePath + route + l.hash;
+          var finalPath = basePath + route + (l.hash || '');
           
           // Replace the URL in browser history without reloading
-          window.history.replaceState(null, null, finalPath);
+          // This must happen BEFORE React Router initializes
+          // Using replaceState ensures the URL changes but doesn't trigger a page reload
+          window.history.replaceState(null, '', finalPath);
         }
-      }(window.location))
+      })();
     </script>
+  </head>
+  <body>
+    <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
