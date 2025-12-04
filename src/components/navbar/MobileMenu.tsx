@@ -95,19 +95,6 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   Government
                 </Button>
                 <Button
-                  variant={isActive('/identity-lab') ? 'secondary' : 'ghost'}
-                  fullWidth
-                  onClick={(e) => {
-                    e.preventDefault()
-                    e.stopPropagation()
-                    handleNavClick('/identity-lab')
-                  }}
-                  className="justify-start text-left"
-                  aria-current={isActive('/identity-lab') ? 'page' : undefined}
-                >
-                  Identity Lab
-                </Button>
-                <Button
                   variant={isActive('/blog') ? 'secondary' : 'ghost'}
                   fullWidth
                   onClick={(e) => {

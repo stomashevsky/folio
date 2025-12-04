@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import PersonalUsePage from './pages/PersonalUsePage'
-import IdentityLabPage from './pages/IdentityLabPage'
+import PlaygroundPage from './pages/PlaygroundPage'
 import BusinessPage from './pages/BusinessPage'
 import GovernmentPage from './pages/GovernmentPage'
 import BlogPage from './pages/BlogPage'
@@ -75,7 +75,7 @@ function App() {
       <RedirectHandler />
       <Routes>
         <Route path="/" element={<PersonalUsePage />} />
-        <Route path="/identity-lab" element={<IdentityLabPage />} />
+        <Route path="/government/playground" element={<PlaygroundPage />} />
         <Route path="/business" element={<BusinessPage />} />
         <Route path="/government" element={<GovernmentPage />} />
         <Route path="/blog" element={<BlogPage />} />

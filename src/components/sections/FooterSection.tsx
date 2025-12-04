@@ -43,7 +43,7 @@ export default function FooterSection() {
               <FooterLink to="/">Personal Use</FooterLink>
               <FooterLink to="/business">Business</FooterLink>
               <FooterLink to="/government">Government</FooterLink>
-              <FooterLink to="/identity-lab">Identity Lab</FooterLink>
+              <FooterLink to="/government/playground">Playground</FooterLink>
               <FooterLink to="/blog">Blog</FooterLink>
             </div>
           </div>

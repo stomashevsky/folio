@@ -89,13 +89,6 @@ export default function DesktopNav() {
             Government
           </Button>
           <Button
-            variant={isActive('/identity-lab') ? 'secondary' : 'ghost'}
-            onClick={() => handleNavClick('/identity-lab')}
-            aria-current={isActive('/identity-lab') ? 'page' : undefined}
-          >
-            Identity Lab
-          </Button>
-          <Button
             variant={isActive('/blog') ? 'secondary' : 'ghost'}
             onClick={(e) => {
               e.preventDefault()

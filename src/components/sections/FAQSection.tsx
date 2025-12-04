@@ -13,10 +13,10 @@ interface FAQSectionProps {
   defaultOpenIndex?: number | null
 }
 
-const DEFAULT_IDENTITY_LAB_FAQ: FAQItem[] = [
+const DEFAULT_PLAYGROUND_FAQ: FAQItem[] = [
   {
-    q: 'What is Identity Lab?',
-    a: 'Identity Lab is a sandbox that lets you try EUDI compatible issuance and verification flows without real user data.',
+    q: 'What is Playground?',
+    a: 'Playground is a sandbox that lets you try EUDI compatible issuance and verification flows without real user data.',
   },
   {
     q: 'Are these real documents?',
@@ -27,7 +27,7 @@ const DEFAULT_IDENTITY_LAB_FAQ: FAQItem[] = [
     a: 'You need Folio Wallet on your phone to scan QR codes and see the documents in action. You do not need an officially certified national wallet to use this sandbox.',
   },
   {
-    q: 'Which standards does Identity Lab follow?',
+    q: 'Which standards does Playground follow?',
     a: 'Flows are based on the European Digital Identity Wallet Architecture and Reference Framework and use OpenID for Verifiable Credential Issuance and Verifiable Presentations under the hood.',
   },
   {
@@ -36,12 +36,12 @@ const DEFAULT_IDENTITY_LAB_FAQ: FAQItem[] = [
   },
   {
     q: 'Can I test verification without another device?',
-    a: 'Yes. You can open Folio Wallet and Identity Lab on the same device or on two devices. QR codes work in both same device and cross device scenarios.',
+    a: 'Yes. You can open Folio Wallet and Playground on the same device or on two devices. QR codes work in both same device and cross device scenarios.',
   },
 ]
 
 export default function FAQSection({ 
-  faqData = DEFAULT_IDENTITY_LAB_FAQ,
+  faqData = DEFAULT_PLAYGROUND_FAQ,
   title = 'Frequently asked questions',
   description,
   defaultOpenIndex,

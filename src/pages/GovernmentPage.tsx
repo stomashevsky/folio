@@ -5,8 +5,8 @@ import FooterSection from '../components/sections/FooterSection'
 import GlobalPartnersSection from '../components/sections/GlobalPartnersSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { scrollToTop } from '../utils/scrollToTop'
+import { scrollToSection } from '../utils/scrollToSection'
 import governmentHeroImage from '../assets/images/government-hero.png'
-import governmentIdentityLabImage from '../assets/images/government-identity-lab.png'
 import governmentCaseStudyImage from '../assets/images/government-case-study.png'
 import governmentAvatarImage from '../assets/images/government-avatar.png'
 
@@ -43,20 +43,28 @@ export default function GovernmentPage() {
                 Digital identity aligned with global standards
               </h1>
               <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
-                Tools for governments to design, test and deploy modern digital credentials.
+                Tools for governments to design, test and deploy modern digital credentials, with a secure sandbox that mirrors real European digital ID flows and lets you explore demo documents, verify QR codes and see exactly what information is shared.
               </p>
             </div>
             <div className="flex flex-wrap gap-3 items-start relative">
               <Button
                 onClick={() => {
-                  navigate('/identity-lab')
+                  navigate('/government/playground')
                   setTimeout(() => {
                     scrollToTop()
                   }, 100)
                 }}
                 variant="primary"
               >
-                Explore Identity Lab
+                Explore Playground
+              </Button>
+              <Button
+                onClick={() => {
+                  window.location.href = 'mailto:contact@folio.id'
+                }}
+                variant="outline"
+              >
+                Get in touch
               </Button>
             </div>
           </div>
@@ -79,13 +87,13 @@ export default function GovernmentPage() {
                 Digital identity aligned with global standards
               </h1>
               <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
-                Tools for governments to design, test and deploy modern digital credentials.
+                Tools for governments to design, test and deploy modern digital credentials, with a secure sandbox that mirrors real European digital ID flows and lets you explore demo documents, verify QR codes and see exactly what information is shared.
               </p>
             </div>
             <div className="flex flex-col gap-3 items-start relative shrink-0">
               <Button
                 onClick={() => {
-                  navigate('/identity-lab')
+                  navigate('/government/playground')
                   setTimeout(() => {
                     scrollToTop()
                   }, 100)
@@ -93,7 +101,16 @@ export default function GovernmentPage() {
                 variant="primary"
                 fullWidth
               >
-                Explore Identity Lab
+                Explore Playground
+              </Button>
+              <Button
+                onClick={() => {
+                  window.location.href = 'mailto:contact@folio.id'
+                }}
+                variant="outline"
+                fullWidth
+              >
+                Get in touch
               </Button>
             </div>
           </div>
@@ -122,7 +139,7 @@ export default function GovernmentPage() {
       </section>
 
       {/* Gov Features Section */}
-      <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
+      <section id="gov-features" className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
         <div className="flex flex-col gap-12 md:gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-col gap-10 md:gap-12 items-center relative shrink-0 w-full">
             <SectionHeader
@@ -333,73 +350,6 @@ export default function GovernmentPage() {
       {/* Global Partners Section */}
       <GlobalPartnersSection />
 
-      {/* Identity Lab Section */}
-      <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
-        {/* Desktop Layout */}
-        <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
-            <SectionHeader
-              title="Experiment with digital identity flows"
-              description="Issue, verify and test credentials in a safe sandbox environment."
-              align="left"
-            />
-            <div className="flex gap-3 items-start relative shrink-0">
-              <Button
-                onClick={() => {
-                  navigate('/identity-lab')
-                  setTimeout(() => {
-                    scrollToTop()
-                  }, 100)
-                }}
-                variant="primary"
-              >
-                Explore Identity Lab
-              </Button>
-            </div>
-          </div>
-          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-            <img
-              src={governmentIdentityLabImage}
-              alt="Identity Lab"
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              loading="lazy"
-            />
-          </div>
-        </div>
-
-        {/* Mobile Layout */}
-        <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
-            <SectionHeader
-              title="Experiment with digital identity flows"
-              description="Issue, verify and test credentials in a safe sandbox environment."
-              align="left"
-            />
-            <div className="flex gap-3 items-start relative shrink-0">
-              <Button
-                onClick={() => {
-                  navigate('/identity-lab')
-                  setTimeout(() => {
-                    scrollToTop()
-                  }, 100)
-                }}
-                variant="primary"
-              >
-                Explore Identity Lab
-              </Button>
-            </div>
-          </div>
-          <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
-            <img
-              src={governmentIdentityLabImage}
-              alt="Identity Lab"
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-0 md:pb-24 relative shrink-0 w-full bg-white">
         {/* Desktop Layout */}
@@ -415,9 +365,23 @@ export default function GovernmentPage() {
             </div>
             <div className="flex flex-1 flex-wrap gap-3 items-start justify-end relative min-w-0">
               <Button
+                onClick={() => {
+                  window.location.href = 'mailto:contact@folio.id'
+                }}
+                variant="outline"
+              >
+                Get in touch
+              </Button>
+              <Button
+                onClick={() => {
+                  navigate('/government/playground')
+                  setTimeout(() => {
+                    scrollToTop()
+                  }, 100)
+                }}
                 variant="primary"
               >
-                Contact Government Team
+                Explore Playground
               </Button>
             </div>
           </div>
@@ -435,9 +399,25 @@ export default function GovernmentPage() {
           </div>
           <div className="flex flex-col gap-3 items-center relative shrink-0 w-full">
             <Button
-              variant="primary"
+              onClick={() => {
+                window.location.href = 'mailto:contact@folio.id'
+              }}
+              variant="outline"
+              fullWidth
             >
-              Contact Government Team
+              Get in touch
+            </Button>
+            <Button
+              onClick={() => {
+                navigate('/government/playground')
+                setTimeout(() => {
+                  scrollToTop()
+                }, 100)
+              }}
+              variant="primary"
+              fullWidth
+            >
+              Explore Playground
             </Button>
           </div>
         </div>

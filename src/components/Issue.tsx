@@ -44,7 +44,7 @@ export default function Issue() {
       <div className="flex flex-col gap-10 items-center w-full">
         <SectionHeader
           title="Playground"
-          description="Issue demo documents and test verification flows."
+          description="A safe sandbox for issuing demo documents and testing EUDI compatible verification flows. Try real issuance steps, scan QR codes, explore data sharing and see how digital identity behaves in practice."
         />
 
         <FlowTabs activeTab={activeTab} onTabChange={setActiveTab} />
