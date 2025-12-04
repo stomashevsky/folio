@@ -138,7 +138,7 @@ export default function BlogPage() {
                       <Link
                         key={index}
                         to={`/blog/${article.slug}`}
-                        className="border-b border-[#e5e5e5] hover:border-[#0a0a0a] flex gap-7 items-start relative shrink-0 w-full transition-colors duration-200 cursor-pointer"
+                        className="border-b border-[#e5e5e5] hover:border-neutral-400 flex gap-7 items-start relative shrink-0 w-full transition-colors duration-200 cursor-pointer"
                       >
                         {articleContent}
                       </Link>
@@ -148,7 +148,7 @@ export default function BlogPage() {
                   return (
                     <div
                       key={index}
-                      className="border-b border-[#e5e5e5] hover:border-[#0a0a0a] flex gap-7 items-start relative shrink-0 w-full transition-colors duration-200 cursor-pointer"
+                      className="border-b border-[#e5e5e5] hover:border-neutral-400 flex gap-7 items-start relative shrink-0 w-full transition-colors duration-200 cursor-pointer"
                     >
                       {articleContent}
                     </div>
@@ -179,7 +179,7 @@ export default function BlogPage() {
                       <Link
                         key={index}
                         to={`/blog/${article.slug}`}
-                        className="border-b border-[#e5e5e5] hover:border-[#0a0a0a] flex flex-col gap-5 items-start px-0 py-6 relative shrink-0 w-full transition-colors duration-200 cursor-pointer"
+                        className="border-b border-[#e5e5e5] hover:border-neutral-400 flex flex-col gap-5 items-start px-0 py-6 relative shrink-0 w-full transition-colors duration-200 cursor-pointer"
                       >
                         {articleContent}
                       </Link>
@@ -189,7 +189,7 @@ export default function BlogPage() {
                   return (
                     <div
                       key={index}
-                      className="border-b border-[#e5e5e5] hover:border-[#0a0a0a] flex flex-col gap-5 items-start px-0 py-6 relative shrink-0 w-full transition-colors duration-200 cursor-pointer"
+                      className="border-b border-[#e5e5e5] hover:border-neutral-400 flex flex-col gap-5 items-start px-0 py-6 relative shrink-0 w-full transition-colors duration-200 cursor-pointer"
                     >
                       {articleContent}
                     </div>
