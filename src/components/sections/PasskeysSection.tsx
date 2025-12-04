@@ -1,7 +1,7 @@
 import { SectionHeader, ToolCard } from '../ui'
 import shieldHalfIcon from '../../assets/icons/ShieldHalf.svg'
 import fingerprintIcon from '../../assets/icons/Fingerprint.svg'
-import globeIcon from '../../assets/icons/Globe.svg'
+import globeIcon from '../../assets/icons/globe.svg'
 
 const BACKGROUND_STYLE = {
   backgroundImage:
