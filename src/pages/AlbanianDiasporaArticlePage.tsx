@@ -20,7 +20,7 @@ export default function AlbanianDiasporaArticlePage() {
     <div className="flex flex-col items-start min-h-screen relative w-full">
       <Navbar />
       <main className="flex-1 w-full">
-        <section className="bg-white border-[#e5e5e5] border-b border-l-0 border-r-0 border-solid border-t-0 flex flex-col gap-6 items-center px-0 py-16 md:py-24 relative shrink-0 w-full">
+        <section className="bg-white border-[#e5e5e5] border-b border-l-0 border-r-0 border-solid border-t-0 flex flex-col gap-6 items-center px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full">
           <div className="flex flex-col gap-12 items-start justify-center px-6 md:px-6 py-0 relative shrink-0 w-full max-w-[768px]">
             {/* Meta information and Title */}
             <div className="flex flex-col gap-4 md:gap-5 items-start relative shrink-0 w-full">
@@ -51,7 +51,7 @@ export default function AlbanianDiasporaArticlePage() {
                 "This is a historic moment for elections in Albania, as for the first time, our fellow citizens residing outside the Republic of Albania will have the opportunity to vote from where they live," said <strong>Ilirjan Celibashi</strong>, State Election Commissioner. "Working with Folio has been a transformative experience. Their innovative approach and unwavering commitment didn't just help us exceed our goals for voter registration, they set a new standard of excellence for how digital identity solutions should be delivered in Albania and worldwide."
               </p>
 
-              <h2 className="pb-2 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
+              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
                 Enabling a borderless democracy
               </h2>
 
@@ -80,7 +80,7 @@ export default function AlbanianDiasporaArticlePage() {
                 </li>
               </ul>
 
-              <h2 className="pb-2 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
+              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
                 Key features and solutions
               </h2>
 
@@ -100,7 +100,7 @@ export default function AlbanianDiasporaArticlePage() {
                 <strong>Data Protection by Design:</strong> Using advanced edge-based encryption, all personal data remained within government-controlled infrastructure, safeguarding citizen privacy.
               </p>
 
-              <h2 className="pb-2 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
+              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
                 Voices from the diaspora
               </h2>
 
@@ -114,7 +114,7 @@ export default function AlbanianDiasporaArticlePage() {
                 <strong>Jona Josifi</strong>, CEC Project Lead, added: "Folio's expertise was critical in developing a secure and user-friendly platform that met our stringent requirements."
               </p>
 
-              <h2 className="pb-2 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
+              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
                 A model for global digital democracy
               </h2>
 
@@ -122,7 +122,7 @@ export default function AlbanianDiasporaArticlePage() {
                 With the success of Albania's diaspora registration, Folio has not only delivered a robust technical platform but also created a new benchmark for international digital enfranchisement. This initiative demonstrates how governments can effectively engage global citizens through secure, mobile-first technology.
               </p>
 
-              <h2 className="pb-2 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
+              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
                 About Folio Technologies
               </h2>
 
