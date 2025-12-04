@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import FooterSection from '../components/sections/FooterSection'
 import { Button } from '../components/ui'
@@ -14,68 +15,89 @@ interface BlogArticle {
   slug?: string
 }
 
-const blogArticles: BlogArticle[] = [
+// Helper function to parse date string "MMM DD, YYYY" to Date object
+const parseDate = (dateStr: string): Date => {
+  return new Date(dateStr)
+}
+
+// Helper function to sort articles by date (newest first)
+const sortArticlesByDate = (articles: BlogArticle[]): BlogArticle[] => {
+  return [...articles].sort((a, b) => {
+    const dateA = parseDate(a.date)
+    const dateB = parseDate(b.date)
+    return dateB.getTime() - dateA.getTime() // Descending order (newest first)
+  })
+}
+
+const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Company',
-    date: 'Dec 3, 2025',
+    date: 'Mar 28, 2025',
+    title: 'Albanian diaspora voter registration surges 525% with Folio Digital Wallet',
+    description: 'Albania successfully enfranchised its diaspora to register to vote using a secure digital wallet solution, with over 245,000 Albanians abroad approved to vote in the upcoming parliamentary elections.',
+    slug: 'albanian-diaspora-voter-registration',
+  },
+  {
+    category: 'Company',
+    date: 'Feb 15, 2025',
     title: 'Short and clear engaging headline for an article',
     description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
   },
   {
     category: 'Research',
-    date: 'Dec 3, 2025',
+    date: 'Jan 22, 2025',
     title: 'Short and clear engaging headline for an article',
     description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
   },
   {
     category: 'Product',
-    date: 'Dec 3, 2025',
+    date: 'Dec 10, 2024',
     title: 'Short and clear engaging headline for an article',
     description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
   },
   {
     category: 'Safety',
-    date: 'Dec 3, 2025',
+    date: 'Nov 5, 2024',
     title: 'Short and clear engaging headline for an article',
     description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
   },
   {
     category: 'Company',
-    date: 'Dec 3, 2025',
+    date: 'Oct 18, 2024',
     title: 'Short and clear engaging headline for an article',
     description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
   },
   {
     category: 'Research',
-    date: 'Dec 3, 2025',
+    date: 'Sep 3, 2024',
     title: 'Short and clear engaging headline for an article',
     description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
   },
   {
     category: 'Product',
-    date: 'Dec 3, 2025',
+    date: 'Aug 14, 2024',
     title: 'Short and clear engaging headline for an article',
     description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
   },
   {
     category: 'Company',
-    date: 'Dec 3, 2025',
+    date: 'Jul 7, 2024',
     title: 'Short and clear engaging headline for an article',
     description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
   },
   {
     category: 'Safety',
-    date: 'Dec 3, 2025',
+    date: 'Jun 20, 2024',
     title: 'Short and clear engaging headline for an article',
     description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
   },
   {
     category: 'Research',
-    date: 'Dec 3, 2025',
+    date: 'May 12, 2024',
     title: 'Short and clear engaging headline for an article',
     description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
   },
-]
+])
 
 const categories: BlogCategory[] = ['All', 'Company', 'Research', 'Product', 'Safety']
 
@@ -189,46 +211,54 @@ export default function BlogPage() {
             <div className="flex flex-col items-start overflow-hidden relative shrink-0 w-full">
               {/* Desktop Layout */}
               <div className="hidden md:flex flex-col items-start relative shrink-0 w-full">
-                {visibleArticles.map((article, index) => (
-                  <div
-                    key={index}
-                    className="border-b border-[#e5e5e5] hover:border-[#0a0a0a] flex gap-7 items-start relative shrink-0 w-full transition-colors duration-200 cursor-pointer"
-                  >
-                    <div className="flex flex-col gap-[17px] items-start justify-center leading-5 px-0 py-[35px] relative shrink-0 text-sm w-[288px] whitespace-pre-wrap">
-                      <p className="relative shrink-0 text-[#0a0a0a] w-full">{article.category}</p>
-                      <p className="relative shrink-0 text-[#737373] w-full">{article.date}</p>
-                    </div>
-                    <div className="flex flex-[1_0_0] flex-col gap-5 items-start min-h-px min-w-px px-0 py-8 relative shrink-0 text-[#0a0a0a] whitespace-pre-wrap">
-                      <p className="font-semibold leading-6 relative shrink-0 text-base w-full">
-                        {article.title}
-                      </p>
-                      <p className="line-clamp-2 font-normal leading-5 relative shrink-0 text-sm w-full overflow-ellipsis overflow-hidden">
-                        {article.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+                {visibleArticles.map((article, index) => {
+                  const ArticleWrapper = article.slug ? Link : 'div'
+                  const wrapperProps = article.slug 
+                    ? { to: `/blog/${article.slug}`, className: 'border-b border-[#e5e5e5] hover:border-[#0a0a0a] flex gap-7 items-start relative shrink-0 w-full transition-colors duration-200 cursor-pointer' }
+                    : { className: 'border-b border-[#e5e5e5] hover:border-[#0a0a0a] flex gap-7 items-start relative shrink-0 w-full transition-colors duration-200 cursor-pointer' }
+                  
+                  return (
+                    <ArticleWrapper key={index} {...wrapperProps}>
+                      <div className="flex flex-col gap-[17px] items-start justify-center leading-5 px-0 py-[35px] relative shrink-0 text-sm w-[288px] whitespace-pre-wrap">
+                        <p className="relative shrink-0 text-[#0a0a0a] w-full">{article.category}</p>
+                        <p className="relative shrink-0 text-[#737373] w-full">{article.date}</p>
+                      </div>
+                      <div className="flex flex-[1_0_0] flex-col gap-5 items-start min-h-px min-w-px px-0 py-8 relative shrink-0 text-[#0a0a0a] whitespace-pre-wrap">
+                        <p className="font-semibold leading-6 relative shrink-0 text-base w-full">
+                          {article.title}
+                        </p>
+                        <p className="line-clamp-2 font-normal leading-5 relative shrink-0 text-sm w-full overflow-ellipsis overflow-hidden">
+                          {article.description}
+                        </p>
+                      </div>
+                    </ArticleWrapper>
+                  )
+                })}
               </div>
 
               {/* Mobile Layout */}
               <div className="flex md:hidden flex-col gap-6 items-start overflow-hidden relative shrink-0 w-full">
-                {visibleArticles.map((article, index) => (
-                  <div
-                    key={index}
-                    className="border-b border-[#e5e5e5] hover:border-[#0a0a0a] flex flex-col gap-5 items-start px-0 py-6 relative shrink-0 w-full transition-colors duration-200 cursor-pointer"
-                  >
-                    <div className="flex flex-wrap gap-4 items-center leading-5 relative shrink-0 text-sm w-full">
-                      <p className="relative shrink-0 text-[#0a0a0a]">{article.category}</p>
-                      <p className="relative shrink-0 text-[#737373]">{article.date}</p>
-                    </div>
-                    <p className="font-semibold leading-6 relative shrink-0 text-base w-full whitespace-pre-wrap">
-                      {article.title}
-                    </p>
-                    <p className="font-normal leading-5 relative shrink-0 text-sm text-[#0a0a0a] w-full whitespace-pre-wrap line-clamp-2 overflow-ellipsis overflow-hidden">
-                      {article.description}
-                    </p>
-                  </div>
-                ))}
+                {visibleArticles.map((article, index) => {
+                  const ArticleWrapper = article.slug ? Link : 'div'
+                  const wrapperProps = article.slug 
+                    ? { to: `/blog/${article.slug}`, className: 'border-b border-[#e5e5e5] hover:border-[#0a0a0a] flex flex-col gap-5 items-start px-0 py-6 relative shrink-0 w-full transition-colors duration-200 cursor-pointer' }
+                    : { className: 'border-b border-[#e5e5e5] hover:border-[#0a0a0a] flex flex-col gap-5 items-start px-0 py-6 relative shrink-0 w-full transition-colors duration-200 cursor-pointer' }
+                  
+                  return (
+                    <ArticleWrapper key={index} {...wrapperProps}>
+                      <div className="flex flex-wrap gap-4 items-center leading-5 relative shrink-0 text-sm w-full">
+                        <p className="relative shrink-0 text-[#0a0a0a]">{article.category}</p>
+                        <p className="relative shrink-0 text-[#737373]">{article.date}</p>
+                      </div>
+                      <p className="font-semibold leading-6 relative shrink-0 text-base w-full whitespace-pre-wrap">
+                        {article.title}
+                      </p>
+                      <p className="font-normal leading-5 relative shrink-0 text-sm text-[#0a0a0a] w-full whitespace-pre-wrap line-clamp-2 overflow-ellipsis overflow-hidden">
+                        {article.description}
+                      </p>
+                    </ArticleWrapper>
+                  )
+                })}
               </div>
             </div>
 

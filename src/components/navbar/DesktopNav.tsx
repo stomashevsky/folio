@@ -100,7 +100,10 @@ export default function DesktopNav() {
           </Button>
           <Button
             variant="ghost"
-            onClick={() => handleNavClick('/blog')}
+            onClick={(e) => {
+              e.preventDefault()
+              handleNavClick('/blog')
+            }}
             className={isActive('/blog') ? 'bg-[#f5f5f5]' : ''}
             aria-current={isActive('/blog') ? 'page' : undefined}
           >

@@ -5,6 +5,7 @@ import IdentityLabPage from './pages/IdentityLabPage'
 import BusinessPage from './pages/BusinessPage'
 import GovernmentPage from './pages/GovernmentPage'
 import BlogPage from './pages/BlogPage'
+import AlbanianDiasporaArticlePage from './pages/AlbanianDiasporaArticlePage'
 
 // Fallback handler in case the script in index.html didn't run
 function RedirectHandler() {
@@ -78,6 +79,7 @@ function App() {
         <Route path="/business" element={<BusinessPage />} />
         <Route path="/government" element={<GovernmentPage />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/albanian-diaspora-voter-registration" element={<AlbanianDiasporaArticlePage />} />
       </Routes>
     </BrowserRouter>
   )
