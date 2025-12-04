@@ -12,10 +12,18 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const navigate = useNavigate()
   const location = useLocation()
 
+  const isActive = (path: string) => {
+    if (path === '/') {
+      return location.pathname === '/'
+    }
+    return location.pathname.startsWith(path)
+  }
+
   const handleNavClick = (path: string) => {
     onClose()
     const isCurrentPage = isActive(path)
-    if (isCurrentPage) {
+    if (isCurrentPage && location.pathname === path) {
+      // Only scroll if we're exactly on that page, not on a sub-page
       scrollToTop()
     } else {
       navigate(path)
@@ -24,13 +32,6 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         scrollToTop()
       }, 100)
     }
-  }
-
-  const isActive = (path: string) => {
-    if (path === '/') {
-      return location.pathname === '/'
-    }
-    return location.pathname.startsWith(path)
   }
 
   return (
