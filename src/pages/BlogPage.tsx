@@ -212,6 +212,7 @@ export default function BlogPage() {
               {/* Desktop Layout */}
               <div className="hidden md:flex flex-col items-start relative shrink-0 w-full">
                 {visibleArticles.map((article, index) => {
+                  const isLast = index === visibleArticles.length - 1
                   const articleContent = (
                     <>
                       <div className="flex flex-col gap-[17px] items-start justify-center leading-5 px-0 py-[35px] relative shrink-0 text-sm w-[288px] whitespace-pre-wrap">
@@ -234,7 +235,7 @@ export default function BlogPage() {
                       <Link
                         key={index}
                         to={`/blog/${article.slug}`}
-                        className="border-b border-[#e5e5e5] hover:border-[#0a0a0a] flex gap-7 items-start relative shrink-0 w-full transition-colors duration-200 cursor-pointer"
+                        className={`${isLast ? '' : 'border-b border-[#e5e5e5]'} hover:border-[#0a0a0a] flex gap-7 items-start relative shrink-0 w-full transition-colors duration-200 cursor-pointer`}
                       >
                         {articleContent}
                       </Link>
@@ -244,7 +245,7 @@ export default function BlogPage() {
                   return (
                     <div
                       key={index}
-                      className="border-b border-[#e5e5e5] hover:border-[#0a0a0a] flex gap-7 items-start relative shrink-0 w-full transition-colors duration-200 cursor-pointer"
+                      className={`${isLast ? '' : 'border-b border-[#e5e5e5]'} hover:border-[#0a0a0a] flex gap-7 items-start relative shrink-0 w-full transition-colors duration-200 cursor-pointer`}
                     >
                       {articleContent}
                     </div>
@@ -255,6 +256,7 @@ export default function BlogPage() {
               {/* Mobile Layout */}
               <div className="flex md:hidden flex-col gap-6 items-start overflow-hidden relative shrink-0 w-full">
                 {visibleArticles.map((article, index) => {
+                  const isLast = index === visibleArticles.length - 1
                   const articleContent = (
                     <>
                       <div className="flex flex-wrap gap-4 items-center leading-5 relative shrink-0 text-sm w-full">
@@ -275,7 +277,7 @@ export default function BlogPage() {
                       <Link
                         key={index}
                         to={`/blog/${article.slug}`}
-                        className="border-b border-[#e5e5e5] hover:border-[#0a0a0a] flex flex-col gap-5 items-start px-0 py-6 relative shrink-0 w-full transition-colors duration-200 cursor-pointer"
+                        className={`${isLast ? '' : 'border-b border-[#e5e5e5]'} hover:border-[#0a0a0a] flex flex-col gap-5 items-start px-0 py-6 relative shrink-0 w-full transition-colors duration-200 cursor-pointer`}
                       >
                         {articleContent}
                       </Link>
@@ -285,7 +287,7 @@ export default function BlogPage() {
                   return (
                     <div
                       key={index}
-                      className="border-b border-[#e5e5e5] hover:border-[#0a0a0a] flex flex-col gap-5 items-start px-0 py-6 relative shrink-0 w-full transition-colors duration-200 cursor-pointer"
+                      className={`${isLast ? '' : 'border-b border-[#e5e5e5]'} hover:border-[#0a0a0a] flex flex-col gap-5 items-start px-0 py-6 relative shrink-0 w-full transition-colors duration-200 cursor-pointer`}
                     >
                       {articleContent}
                     </div>

@@ -30,7 +30,8 @@ export default function DesktopNav() {
 
   const handleNavClick = (path: string) => {
     const isCurrentPage = isActive(path)
-    if (isCurrentPage) {
+    if (isCurrentPage && location.pathname === path) {
+      // Only scroll if we're exactly on that page, not on a sub-page
       scrollToTop()
     } else {
       navigate(path)

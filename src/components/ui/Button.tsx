@@ -11,6 +11,7 @@ interface BaseButtonProps {
   className?: string
   fullWidth?: boolean
   icon?: ReactNode
+  iconPosition?: 'left' | 'right'
   href?: string
   target?: string
   rel?: string
@@ -45,6 +46,7 @@ export default function Button({
   disabled = false,
   loading = false,
   icon,
+  iconPosition = 'right',
   href,
   target,
   rel,
@@ -129,18 +131,22 @@ export default function Button({
       ...(props as AnchorHTMLAttributes<HTMLAnchorElement>)
     }
     
+    const iconElement = icon ? <span className="shrink-0">{icon}</span> : null
+    
     return (
       <a {...anchorProps}>
         {loading && <LoadingSpinner />}
         {loading ? (
           <span className="opacity-0">
+            {iconPosition === 'left' && iconElement}
             {children}
-            {icon && <span className="shrink-0">{icon}</span>}
+            {iconPosition === 'right' && iconElement}
           </span>
         ) : (
           <>
+            {iconPosition === 'left' && iconElement}
             {children}
-            {icon && <span className="shrink-0">{icon}</span>}
+            {iconPosition === 'right' && iconElement}
           </>
         )}
       </a>
@@ -148,6 +154,8 @@ export default function Button({
   }
 
   // Otherwise render as button
+  const iconElement = icon ? <span className="shrink-0">{icon}</span> : null
+  
   return (
     <button
       type={type}
@@ -159,13 +167,15 @@ export default function Button({
       {loading && <LoadingSpinner />}
       {loading ? (
         <span className="opacity-0">
+          {iconPosition === 'left' && iconElement}
           {children}
-          {icon && <span className="shrink-0">{icon}</span>}
+          {iconPosition === 'right' && iconElement}
         </span>
       ) : (
         <>
+          {iconPosition === 'left' && iconElement}
           {children}
-          {icon && <span className="shrink-0">{icon}</span>}
+          {iconPosition === 'right' && iconElement}
         </>
       )}
     </button>

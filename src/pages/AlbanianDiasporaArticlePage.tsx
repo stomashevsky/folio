@@ -1,9 +1,12 @@
 import Navbar from '../components/Navbar'
 import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import { Button } from '../components/ui'
 
 export default function AlbanianDiasporaArticlePage() {
+  const navigate = useNavigate()
+  
   usePageTitle({
     title: 'Albanian Diaspora Voter Registration Surges 525% With Folio Digital Wallet | Folio Blog',
     description: 'Albania successfully enfranchised its diaspora to register to vote using a secure digital wallet solution, with over 245,000 Albanians abroad approved to vote.',
@@ -124,14 +127,21 @@ export default function AlbanianDiasporaArticlePage() {
               </p>
             </div>
 
-            {/* Back to blog link */}
+            {/* Back to blog button */}
             <div className="pt-8">
-              <Link 
-                to="/blog" 
-                className="font-normal leading-6 text-[#0a0a0a] text-base hover:text-[#737373] transition-colors"
+              <Button
+                variant="secondary"
+                onClick={() => navigate('/blog')}
+                className="!bg-[#f5f5f5] !border-0 hover:!bg-[#e5e5e5]"
+                iconPosition="left"
+                icon={
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
+                    <path d="M7.99967 12.6666L3.33301 7.99992M3.33301 7.99992L7.99967 3.33325M3.33301 7.99992H12.6663" stroke="#171717" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                }
               >
-                ← Back to Blog
-              </Link>
+                Back to Blog
+              </Button>
             </div>
           </div>
         </section>
