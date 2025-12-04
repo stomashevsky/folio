@@ -56,66 +56,66 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             <div className="flex flex-col gap-5 items-start justify-start pb-2.5 pt-0 px-0 relative shrink-0 w-full">
               <div className="flex flex-col gap-1 items-start justify-start relative shrink-0 w-full">
                 <Button
-                  variant="ghost"
+                  variant={isActive('/') && location.pathname === '/' ? 'secondary' : 'ghost'}
                   fullWidth
                   onClick={(e) => {
                     e.preventDefault()
                     e.stopPropagation()
                     handleNavClick('/')
                   }}
-                  className={`justify-start text-left ${isActive('/') && location.pathname === '/' ? 'bg-[#f5f5f5]' : ''}`}
+                  className="justify-start text-left"
                   aria-current={isActive('/') && location.pathname === '/' ? 'page' : undefined}
                 >
                   Personal Use
                 </Button>
                 <Button
-                  variant="ghost"
+                  variant={isActive('/business') ? 'secondary' : 'ghost'}
                   fullWidth
                   onClick={(e) => {
                     e.preventDefault()
                     e.stopPropagation()
                     handleNavClick('/business')
                   }}
-                  className={`justify-start text-left ${isActive('/business') ? 'bg-[#f5f5f5]' : ''}`}
+                  className="justify-start text-left"
                   aria-current={isActive('/business') ? 'page' : undefined}
                 >
                   Business
                 </Button>
                 <Button
-                  variant="ghost"
+                  variant={isActive('/government') ? 'secondary' : 'ghost'}
                   fullWidth
                   onClick={(e) => {
                     e.preventDefault()
                     e.stopPropagation()
                     handleNavClick('/government')
                   }}
-                  className={`justify-start text-left ${isActive('/government') ? 'bg-[#f5f5f5]' : ''}`}
+                  className="justify-start text-left"
                   aria-current={isActive('/government') ? 'page' : undefined}
                 >
                   Government
                 </Button>
                 <Button
-                  variant="ghost"
+                  variant={isActive('/identity-lab') ? 'secondary' : 'ghost'}
                   fullWidth
                   onClick={(e) => {
                     e.preventDefault()
                     e.stopPropagation()
                     handleNavClick('/identity-lab')
                   }}
-                  className={`justify-start text-left ${isActive('/identity-lab') ? 'bg-[#f5f5f5]' : ''}`}
+                  className="justify-start text-left"
                   aria-current={isActive('/identity-lab') ? 'page' : undefined}
                 >
                   Identity Lab
                 </Button>
                 <Button
-                  variant="ghost"
+                  variant={isActive('/blog') ? 'secondary' : 'ghost'}
                   fullWidth
                   onClick={(e) => {
                     e.preventDefault()
                     e.stopPropagation()
                     handleNavClick('/blog')
                   }}
-                  className={`justify-start text-left ${isActive('/blog') ? 'bg-[#f5f5f5]' : ''}`}
+                  className="justify-start text-left"
                   aria-current={isActive('/blog') ? 'page' : undefined}
                 >
                   Blog

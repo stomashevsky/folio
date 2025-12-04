@@ -68,44 +68,39 @@ export default function DesktopNav() {
 
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-1 items-center">
           <Button
-            variant="ghost"
+            variant={isActive('/') && location.pathname === '/' ? 'secondary' : 'ghost'}
             onClick={() => handleNavClick('/')}
-            className={isActive('/') && location.pathname === '/' ? 'bg-[#f5f5f5]' : ''}
             aria-current={isActive('/') && location.pathname === '/' ? 'page' : undefined}
           >
             Personal Use
           </Button>
           <Button
-            variant="ghost"
+            variant={isActive('/business') ? 'secondary' : 'ghost'}
             onClick={() => handleNavClick('/business')}
-            className={isActive('/business') ? 'bg-[#f5f5f5]' : ''}
             aria-current={isActive('/business') ? 'page' : undefined}
           >
             Business
           </Button>
           <Button
-            variant="ghost"
+            variant={isActive('/government') ? 'secondary' : 'ghost'}
             onClick={() => handleNavClick('/government')}
-            className={isActive('/government') ? 'bg-[#f5f5f5]' : ''}
             aria-current={isActive('/government') ? 'page' : undefined}
           >
             Government
           </Button>
           <Button
-            variant="ghost"
+            variant={isActive('/identity-lab') ? 'secondary' : 'ghost'}
             onClick={() => handleNavClick('/identity-lab')}
-            className={isActive('/identity-lab') ? 'bg-[#f5f5f5]' : ''}
             aria-current={isActive('/identity-lab') ? 'page' : undefined}
           >
             Identity Lab
           </Button>
           <Button
-            variant="ghost"
+            variant={isActive('/blog') ? 'secondary' : 'ghost'}
             onClick={(e) => {
               e.preventDefault()
               handleNavClick('/blog')
             }}
-            className={isActive('/blog') ? 'bg-[#f5f5f5]' : ''}
             aria-current={isActive('/blog') ? 'page' : undefined}
           >
             Blog
