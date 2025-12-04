@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import FooterSection from '../components/sections/FooterSection'
 import { Button } from '../components/ui'
@@ -82,6 +82,9 @@ const categories: BlogCategory[] = ['All', 'Company', 'Research', 'Product', 'Sa
 export default function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState<BlogCategory>('All')
   const [displayedArticles, setDisplayedArticles] = useState(8)
+  const [showLeftFade, setShowLeftFade] = useState(false)
+  const [showRightFade, setShowRightFade] = useState(false)
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
 
   usePageTitle({
     title: 'Blog | Folio Wallet',
@@ -102,6 +105,38 @@ export default function BlogPage() {
     setDisplayedArticles(prev => Math.min(prev + 8, filteredArticles.length))
   }
 
+  const updateScrollIndicators = () => {
+    const container = scrollContainerRef.current
+    if (!container) return
+
+    const { scrollLeft, scrollWidth, clientWidth } = container
+    const hasScroll = scrollWidth > clientWidth
+    const isAtStart = scrollLeft <= 0
+    const isAtEnd = scrollLeft >= scrollWidth - clientWidth - 1
+
+    setShowLeftFade(hasScroll && !isAtStart)
+    setShowRightFade(hasScroll && !isAtEnd)
+  }
+
+  useEffect(() => {
+    const container = scrollContainerRef.current
+    if (!container) return
+
+    // Initial check after render
+    const timeoutId = setTimeout(() => {
+      updateScrollIndicators()
+    }, 0)
+
+    container.addEventListener('scroll', updateScrollIndicators)
+    window.addEventListener('resize', updateScrollIndicators)
+
+    return () => {
+      clearTimeout(timeoutId)
+      container.removeEventListener('scroll', updateScrollIndicators)
+      window.removeEventListener('resize', updateScrollIndicators)
+    }
+  }, [])
+
   return (
     <div className="flex flex-col items-start min-h-screen relative w-full">
       <Navbar />
@@ -120,7 +155,10 @@ export default function BlogPage() {
 
             {/* Filters */}
             <div className="relative shrink-0 w-full">
-              <div className="flex gap-2 items-start overflow-x-auto overflow-y-hidden -webkit-overflow-scrolling-touch [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+              <div 
+                ref={scrollContainerRef}
+                className="flex gap-2 items-start overflow-x-auto overflow-y-hidden -webkit-overflow-scrolling-touch [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+              >
                 {categories.map((category) => (
                   <Button
                     key={category}
@@ -139,8 +177,12 @@ export default function BlogPage() {
                 ))}
               </div>
               {/* Gradient fade overlays */}
-              <div className="pointer-events-none absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-white to-transparent z-10" />
-              <div className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-white to-transparent z-10" />
+              {showLeftFade && (
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-white to-transparent z-10" />
+              )}
+              {showRightFade && (
+                <div className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-white to-transparent z-10" />
+              )}
             </div>
 
             {/* Articles List */}
