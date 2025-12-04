@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import FooterSection from '../components/sections/FooterSection'
-import { SectionHeader, Button } from '../components/ui'
+import { Button } from '../components/ui'
 import { usePageTitle } from '../hooks/usePageTitle'
 
 type BlogCategory = 'All' | 'Company' | 'Research' | 'Product' | 'Safety'
@@ -119,23 +119,28 @@ export default function BlogPage() {
             </div>
 
             {/* Filters */}
-            <div className="flex gap-2 items-start relative shrink-0 w-full flex-wrap">
-              {categories.map((category) => (
-                <Button
-                  key={category}
-                  variant={selectedCategory === category ? 'secondary' : 'ghost'}
-                  onClick={() => {
-                    setSelectedCategory(category)
-                    setDisplayedArticles(8)
-                  }}
-                  className={selectedCategory === category 
-                    ? '!bg-[#f5f5f5] border-0 !text-[#171717] hover:!bg-[#f5f5f5] hover:shadow-none' 
-                    : ''
-                  }
-                >
-                  {category}
-                </Button>
-              ))}
+            <div className="relative shrink-0 w-full">
+              <div className="flex gap-2 items-start overflow-x-auto overflow-y-hidden -webkit-overflow-scrolling-touch [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                {categories.map((category) => (
+                  <Button
+                    key={category}
+                    variant={selectedCategory === category ? 'secondary' : 'ghost'}
+                    onClick={() => {
+                      setSelectedCategory(category)
+                      setDisplayedArticles(8)
+                    }}
+                    className={`flex-shrink-0 ${selectedCategory === category 
+                      ? '!bg-[#f5f5f5] border-0 !text-[#171717] hover:!bg-[#f5f5f5] hover:shadow-none' 
+                      : ''
+                    }`}
+                  >
+                    {category}
+                  </Button>
+                ))}
+              </div>
+              {/* Gradient fade overlays */}
+              <div className="pointer-events-none absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-white to-transparent z-10" />
+              <div className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-white to-transparent z-10" />
             </div>
 
             {/* Articles List */}
