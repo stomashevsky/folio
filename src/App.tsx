@@ -1,8 +1,11 @@
-import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom'
 import { useEffect } from 'react'
 import PersonalUsePage from './pages/PersonalUsePage'
 import PlaygroundPage from './pages/PlaygroundPage'
-import BusinessPage from './pages/BusinessPage'
+import TicketIssuancePage from './pages/TicketIssuancePage'
+import IdentityVerificationPage from './pages/IdentityVerificationPage'
+import BusinessOnboardingPage from './pages/BusinessOnboardingPage'
+import AgeVerificationPage from './pages/AgeVerificationPage'
 import GovernmentPage from './pages/GovernmentPage'
 import BlogPage from './pages/BlogPage'
 import AlbanianDiasporaArticlePage from './pages/AlbanianDiasporaArticlePage'
@@ -76,7 +79,11 @@ function App() {
       <Routes>
         <Route path="/" element={<PersonalUsePage />} />
         <Route path="/government/playground" element={<PlaygroundPage />} />
-        <Route path="/business" element={<BusinessPage />} />
+        <Route path="/solutions/ticket-issuance" element={<TicketIssuancePage />} />
+        <Route path="/solutions/identity-verification" element={<IdentityVerificationPage />} />
+        <Route path="/solutions/business-onboarding" element={<BusinessOnboardingPage />} />
+        <Route path="/solutions/age-verification" element={<AgeVerificationPage />} />
+        <Route path="/business" element={<Navigate to="/solutions/ticket-issuance" replace />} />
         <Route path="/government" element={<GovernmentPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/albanian-diaspora-voter-registration" element={<AlbanianDiasporaArticlePage />} />

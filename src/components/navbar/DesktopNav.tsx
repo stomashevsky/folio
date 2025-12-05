@@ -2,17 +2,11 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { LogoButton, Button } from '../ui'
 import { scrollToTop } from '../../utils/scrollToTop'
 import { scrollToSection } from '../../utils/scrollToSection'
+import SolutionsDropdown from './SolutionsDropdown'
 
 export default function DesktopNav() {
   const location = useLocation()
   const navigate = useNavigate()
-
-  const isActive = (path: string) => {
-    if (path === '/') {
-      return location.pathname === '/'
-    }
-    return location.pathname.startsWith(path)
-  }
 
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault()
@@ -29,9 +23,8 @@ export default function DesktopNav() {
   }
 
   const handleNavClick = (path: string) => {
-    const isCurrentPage = isActive(path)
-    if (isCurrentPage && location.pathname === path) {
-      // Only scroll if we're exactly on that page, not on a sub-page
+    if (location.pathname === path) {
+      // Only scroll if we're exactly on that page
       scrollToTop()
     } else {
       navigate(path)
@@ -68,33 +61,24 @@ export default function DesktopNav() {
 
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-1 items-center">
           <Button
-            variant={isActive('/') && location.pathname === '/' ? 'secondary' : 'ghost'}
+            variant="ghost"
             onClick={() => handleNavClick('/')}
-            aria-current={isActive('/') && location.pathname === '/' ? 'page' : undefined}
           >
-            Personal Use
+            Folio app
           </Button>
+          <SolutionsDropdown />
           <Button
-            variant={isActive('/business') ? 'secondary' : 'ghost'}
-            onClick={() => handleNavClick('/business')}
-            aria-current={isActive('/business') ? 'page' : undefined}
-          >
-            Business
-          </Button>
-          <Button
-            variant={isActive('/government') ? 'secondary' : 'ghost'}
+            variant="ghost"
             onClick={() => handleNavClick('/government')}
-            aria-current={isActive('/government') ? 'page' : undefined}
           >
             Government
           </Button>
           <Button
-            variant={isActive('/blog') ? 'secondary' : 'ghost'}
+            variant="ghost"
             onClick={(e) => {
               e.preventDefault()
               handleNavClick('/blog')
             }}
-            aria-current={isActive('/blog') ? 'page' : undefined}
           >
             Blog
           </Button>

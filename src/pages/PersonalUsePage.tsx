@@ -133,9 +133,9 @@ function PersonalUsePage() {
   }, [location])
 
   return (
-    <div className="flex flex-col items-start relative w-full">
+    <div className="flex flex-col items-start min-h-screen relative w-full">
       <Navbar />
-      <main className="w-full">
+      <main className="flex-1 w-full">
         {/* Hero Section */}
       <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full">
         {/* Desktop Layout */}

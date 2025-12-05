@@ -40,8 +40,8 @@ export default function FooterSection() {
               Folio Wallet
             </p>
             <div className="flex flex-col gap-3 items-start relative shrink-0">
-              <FooterLink to="/">Personal Use</FooterLink>
-              <FooterLink to="/business">Business</FooterLink>
+              <FooterLink to="/">Folio app</FooterLink>
+              <FooterLink to="/solutions/ticket-issuance">Solutions</FooterLink>
               <FooterLink to="/government">Government</FooterLink>
               <FooterLink to="/government/playground">Playground</FooterLink>
               <FooterLink to="/blog">Blog</FooterLink>
