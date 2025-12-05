@@ -6,6 +6,7 @@ export interface BlogArticle {
   title: string
   description: string
   slug?: string
+  image?: string
 }
 
 // Helper function to parse date string "MMM DD, YYYY" to Date object

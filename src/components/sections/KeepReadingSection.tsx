@@ -19,43 +19,52 @@ export default function KeepReadingSection({ currentArticleSlug }: KeepReadingSe
     return null
   }
 
+  const handleViewAll = () => {
+    navigate('/blog')
+    setTimeout(() => {
+      scrollToTop()
+    }, 100)
+  }
+
   return (
-    <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
-      <div className="flex flex-col gap-10 md:gap-16 items-start max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-        {/* Header */}
-        <div className="flex flex-col gap-4 md:gap-5 items-start max-w-[576px] relative shrink-0 w-full">
-          <h2 className="font-bold leading-[36px] md:leading-[40px] text-[30px] md:text-[36px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+    <section className="bg-white flex flex-col items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
+      <div className="flex flex-col gap-10 md:gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+        
+        {/* Desktop Layout: Title -> Cards -> Button */}
+        <div className="hidden md:flex flex-col gap-12 items-start w-full">
+          {/* Title */}
+          <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
             Keep reading
           </h2>
-        </div>
-
-        {/* Articles List */}
-        <div className="flex flex-col items-start overflow-hidden relative shrink-0 w-full">
-          {/* Desktop Layout */}
-          <div className="hidden md:flex flex-col items-start relative shrink-0 w-full">
+          
+          {/* Cards Grid - 3 columns */}
+          <div className="grid grid-cols-3 gap-x-6 gap-y-20 w-full">
             {filteredArticles.map((article, index) => (
               <BlogArticleCard key={index} article={article} variant="desktop" />
             ))}
           </div>
-
-          {/* Mobile Layout */}
-          <div className="flex md:hidden flex-col gap-6 items-start overflow-hidden relative shrink-0 w-full">
-            {filteredArticles.map((article, index) => (
-              <BlogArticleCard key={index} article={article} variant="mobile" />
-            ))}
-          </div>
         </div>
 
-        {/* View all button */}
-        <div className="flex gap-0 items-center justify-center relative shrink-0 w-full">
+        {/* Mobile Layout: Cards -> Title -> Button */}
+        <div className="flex md:hidden flex-col gap-10 items-start w-full">
+          {/* Cards first - single column with images */}
+          <div className="flex flex-col gap-16 w-full">
+            {filteredArticles.map((article, index) => (
+              <BlogArticleCard key={index} article={article} variant="desktop" />
+            ))}
+          </div>
+          
+          {/* Title after cards */}
+          <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
+            Keep reading
+          </h2>
+        </div>
+
+        {/* View all button - centered, for both layouts */}
+        <div className="flex items-center justify-center w-full">
           <Button
             variant="secondary"
-            onClick={() => {
-              navigate('/blog')
-              setTimeout(() => {
-                scrollToTop()
-              }, 100)
-            }}
+            onClick={handleViewAll}
           >
             View all
           </Button>
@@ -64,4 +73,3 @@ export default function KeepReadingSection({ currentArticleSlug }: KeepReadingSe
     </section>
   )
 }
-

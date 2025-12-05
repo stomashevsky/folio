@@ -46,6 +46,13 @@ This file contains all rules and principles that must be followed for every chan
 - Common icons: `Scale.svg`, `Dices.svg`, `Bitcoin.svg`, `CreditCard.svg`, `ShieldPlus.svg`, `Users.svg`, `Link.svg`, `Puzzle.svg`, `Braces.svg`
 - Do not use generic placeholder icons - use icons that match the semantic meaning in Figma design
 
+### 3.3. Image Placeholders
+
+- **Use `image-placeholder.png`** from `src/assets/images/` as the universal placeholder for all pages/components that need an image but don't have one yet
+- **Do not create custom SVG placeholders** - always use `image-placeholder.png`
+- Import example: `import imagePlaceholder from '../assets/images/image-placeholder.png'`
+- This placeholder should be used for blog cards, feature images, and any other image slots without actual content
+
 ### 4. Sections and Padding
 
 - **All sections must have consistent padding**

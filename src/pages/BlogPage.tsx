@@ -9,7 +9,7 @@ const categories: BlogCategory[] = ['All', 'Company', 'Research', 'Product', 'Sa
 
 export default function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState<BlogCategory>('All')
-  const [displayedArticles, setDisplayedArticles] = useState(8)
+  const [displayedArticles, setDisplayedArticles] = useState(9)
   const [showLeftFade, setShowLeftFade] = useState(false)
   const [showRightFade, setShowRightFade] = useState(false)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
@@ -30,7 +30,7 @@ export default function BlogPage() {
   const hasMore = displayedArticles < filteredArticles.length
 
   const handleLoadMore = () => {
-    setDisplayedArticles(prev => Math.min(prev + 8, filteredArticles.length))
+    setDisplayedArticles(prev => Math.min(prev + 9, filteredArticles.length))
   }
 
   const updateScrollIndicators = () => {
@@ -69,14 +69,14 @@ export default function BlogPage() {
     <div className="flex flex-col items-start min-h-screen relative w-full">
       <Navbar />
       <main className="flex-1 w-full">
-        <section className="bg-white flex flex-col gap-6 md:gap-16 items-center overflow-hidden px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full flex-1">
-          <div className="flex flex-col gap-10 md:gap-16 items-start max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+        <section className="bg-white flex flex-col items-center overflow-hidden px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full flex-1">
+          <div className="flex flex-col gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             {/* Header */}
-            <div className="flex flex-col gap-4 md:gap-5 items-start max-w-[576px] relative shrink-0 w-full">
-              <h1 className="font-bold leading-[36px] md:leading-[40px] text-[30px] md:text-[36px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+            <div className="flex flex-col gap-4 md:gap-5 items-center text-center max-w-[576px] relative shrink-0 w-full">
+              <h1 className="font-bold leading-[36px] md:leading-[40px] text-[30px] md:text-[36px] text-[#0a0a0a] tracking-[0px]">
                 Folio Blog
               </h1>
-              <p className="font-normal leading-6 min-w-full relative shrink-0 text-[#737373] text-base text-left w-[min-content] whitespace-pre-wrap">
+              <p className="font-normal leading-6 text-[#737373] text-base">
                 Case studies, product insights and practical guides on travel, documents and digital identity.
               </p>
             </div>
@@ -85,7 +85,7 @@ export default function BlogPage() {
             <div className="relative shrink-0 w-full">
               <div 
                 ref={scrollContainerRef}
-                className="flex gap-2 items-start overflow-x-auto overflow-y-hidden -webkit-overflow-scrolling-touch [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+                className="flex gap-2 items-center justify-center overflow-x-auto overflow-y-hidden -webkit-overflow-scrolling-touch [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
               >
                 {categories.map((category) => (
                   <Button
@@ -93,7 +93,7 @@ export default function BlogPage() {
                     variant={selectedCategory === category ? 'secondary' : 'ghost'}
                     onClick={() => {
                       setSelectedCategory(category)
-                      setDisplayedArticles(8)
+                      setDisplayedArticles(9)
                     }}
                     className="flex-shrink-0"
                   >
@@ -110,17 +110,17 @@ export default function BlogPage() {
               )}
             </div>
 
-            {/* Articles List */}
-            <div className="flex flex-col items-start overflow-hidden relative shrink-0 w-full">
-              {/* Desktop Layout */}
-              <div className="hidden md:flex flex-col items-start relative shrink-0 w-full">
+            {/* Articles Grid */}
+            <div className="w-full">
+              {/* Desktop Layout - 3 column grid */}
+              <div className="hidden md:grid grid-cols-3 gap-x-6 gap-y-20 w-full">
                 {visibleArticles.map((article, index) => (
                   <BlogArticleCard key={index} article={article} variant="desktop" />
                 ))}
               </div>
 
-              {/* Mobile Layout */}
-              <div className="flex md:hidden flex-col gap-6 items-start overflow-hidden relative shrink-0 w-full">
+              {/* Mobile Layout - single column list */}
+              <div className="flex md:hidden flex-col items-start w-full">
                 {visibleArticles.map((article, index) => (
                   <BlogArticleCard key={index} article={article} variant="mobile" />
                 ))}

@@ -6,7 +6,7 @@ import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 
 // Images
-import placeholderImage from '../assets/images/identity-verification-placeholder.png'
+import placeholderImage from '../assets/images/image-placeholder.png'
 
 // Icons for ToolCard (industry cards)
 import scaleIcon from '../assets/icons/Scale.svg'
