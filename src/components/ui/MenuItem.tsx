@@ -1,4 +1,4 @@
-import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react'
+import { ButtonHTMLAttributes, ReactNode } from 'react'
 import { FOCUS_RING_CLASSES } from './focusStyles'
 
 export interface MenuItemProps {
