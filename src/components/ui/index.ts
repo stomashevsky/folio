@@ -28,4 +28,6 @@ export { default as SocialIcon } from './SocialIcon'
 export { default as ToolCard } from './ToolCard'
 export { default as OptimizedImage } from './OptimizedImage'
 export { default as BlogArticleCard } from './BlogArticleCard'
+export { default as MenuItem } from './MenuItem'
+export type { MenuItemProps } from './MenuItem'
 

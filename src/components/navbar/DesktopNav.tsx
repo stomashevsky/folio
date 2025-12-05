@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from 'react-router-dom'
-import { LogoButton, Button } from '../ui'
+import { LogoButton, Button, MenuItem } from '../ui'
 import { scrollToTop } from '../../utils/scrollToTop'
 import { scrollToSection } from '../../utils/scrollToSection'
 import SolutionsDropdown from './SolutionsDropdown'
@@ -60,28 +60,21 @@ export default function DesktopNav() {
         </div>
 
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-1 items-center">
-          <Button
-            variant="ghost"
-            onClick={() => handleNavClick('/')}
-          >
+          <MenuItem onClick={() => handleNavClick('/')}>
             Folio app
-          </Button>
+          </MenuItem>
           <SolutionsDropdown />
-          <Button
-            variant="ghost"
-            onClick={() => handleNavClick('/government')}
-          >
+          <MenuItem onClick={() => handleNavClick('/government')}>
             Government
-          </Button>
-          <Button
-            variant="ghost"
+          </MenuItem>
+          <MenuItem
             onClick={(e) => {
               e.preventDefault()
               handleNavClick('/blog')
             }}
           >
             Blog
-          </Button>
+          </MenuItem>
         </div>
 
         <div className="flex-shrink-0 z-10">

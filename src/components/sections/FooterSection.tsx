@@ -16,9 +16,9 @@ export default function FooterSection() {
         </div>
 
         {/* Main content grid */}
-        <div className="box-border flex flex-wrap gap-12 items-start px-6 py-10 relative shrink-0 w-full">
+        <div className="box-border grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-x-6 gap-y-10 items-start px-6 py-10 relative shrink-0 w-full">
           {/* Left column: Logo and contact info */}
-          <div className="box-border flex flex-col gap-6 items-start min-h-px min-w-[200px] pr-0 md:pr-12 py-0 relative shrink-0 w-full md:flex-[1_0_0] md:w-auto">
+          <div className="box-border flex flex-col gap-6 items-start relative shrink-0">
             <Logo size={28} />
             <div className="flex flex-col font-normal gap-1 items-start justify-center leading-5 relative shrink-0 text-sm w-full whitespace-pre-wrap text-left">
               <p className="font-normal relative shrink-0 text-[#737373] w-full">Address:</p>
@@ -35,25 +35,37 @@ export default function FooterSection() {
           </div>
 
           {/* Folio Wallet column */}
-          <div className="flex flex-col gap-4 items-start justify-center min-h-px min-w-[200px] relative shrink-0 w-full md:flex-[1_0_0] md:w-auto">
+          <div className="flex flex-col gap-4 items-start justify-center relative shrink-0">
             <p className="font-normal leading-5 relative shrink-0 text-[#737373] text-sm whitespace-pre-wrap text-left">
               Folio Wallet
             </p>
-            <div className="flex flex-col gap-3 items-start relative shrink-0">
+            <div className="flex flex-col gap-3 items-start relative shrink-0 w-full">
               <FooterLink to="/">Folio app</FooterLink>
-              <FooterLink to="/solutions/ticket-issuance">Solutions</FooterLink>
               <FooterLink to="/government">Government</FooterLink>
               <FooterLink to="/government/playground">Playground</FooterLink>
               <FooterLink to="/blog">Blog</FooterLink>
             </div>
           </div>
 
+          {/* Solutions column */}
+          <div className="flex flex-col gap-4 items-start justify-center relative shrink-0">
+            <p className="font-normal leading-5 relative shrink-0 text-[#737373] text-sm whitespace-pre-wrap text-left">
+              Solutions
+            </p>
+            <div className="flex flex-col gap-3 items-start relative shrink-0 w-full">
+              <FooterLink to="/solutions/identity-verification">Identity Verification (KYC)</FooterLink>
+              <FooterLink to="/solutions/business-onboarding">Business Onboarding (KYB)</FooterLink>
+              <FooterLink to="/solutions/age-verification">Age Verification</FooterLink>
+              <FooterLink to="/solutions/ticket-issuance">Ticket Issuance</FooterLink>
+            </div>
+          </div>
+
           {/* Get the app column */}
-          <div className="flex flex-col gap-4 items-start justify-center min-h-px min-w-[200px] relative shrink-0 w-full md:flex-[1_0_0] md:w-auto">
+          <div className="flex flex-col gap-4 items-start justify-center relative shrink-0">
             <p className="font-normal leading-5 relative shrink-0 text-[#737373] text-sm whitespace-pre-wrap text-left">
               Get the app
             </p>
-            <div className="flex flex-col gap-3 items-start relative shrink-0">
+            <div className="flex flex-col gap-3 items-start relative shrink-0 w-full">
               <FooterLink
                 href="https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717"
                 target="_blank"
@@ -72,11 +84,11 @@ export default function FooterSection() {
           </div>
 
           {/* Terms & Policies column */}
-          <div className="flex flex-col gap-4 items-start justify-center min-h-px min-w-[200px] relative shrink-0 w-full md:flex-[1_0_0] md:w-auto">
+          <div className="flex flex-col gap-4 items-start justify-center relative shrink-0">
             <p className="font-normal leading-5 relative shrink-0 text-[#737373] text-sm whitespace-pre-wrap text-left">
               Terms & Policies
             </p>
-            <div className="flex flex-col gap-3 items-start relative shrink-0">
+            <div className="flex flex-col gap-3 items-start relative shrink-0 w-full">
               <FooterLink
                 href="#"
                 onClick={(e) => {

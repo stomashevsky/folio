@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import { Button } from '../ui'
+import { MenuItem } from '../ui'
 import { scrollToTop } from '../../utils/scrollToTop'
 
 interface SolutionItem {
@@ -58,10 +58,10 @@ export default function SolutionsDropdown() {
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
-      <Button
-        variant={isOpen ? 'secondary' : 'ghost'}
+      <MenuItem
+        active={isOpen}
         className="cursor-default"
-        aria-haspopup="true"
+        aria-haspopup="menu"
         aria-expanded={isOpen}
         onClick={(e) => {
           e.preventDefault()
@@ -69,7 +69,7 @@ export default function SolutionsDropdown() {
         }}
       >
         Solutions
-      </Button>
+      </MenuItem>
       
       {isOpen && (
         <div 
@@ -78,23 +78,21 @@ export default function SolutionsDropdown() {
           aria-label="Solutions submenu"
         >
           <div 
-            className="bg-white rounded-3xl shadow-[0px_8px_25px_-5px_rgba(10,13,18,0.1),0px_4px_10px_-6px_rgba(10,13,18,0.1)] p-1.5"
+            className="bg-white rounded-3xl shadow-[0px_8px_25px_-3px_rgba(10,13,18,0.15),0px_4px_10px_-6px_rgba(10,13,18,0.15)] p-1.5"
             style={{ 
               width: 'max-content',
             }}
           >
             {SOLUTIONS_ITEMS.map((item) => (
-              <Button
+              <MenuItem
                 key={item.path}
-                variant="ghost"
-                size="md"
                 fullWidth
                 onClick={() => handleItemClick(item.path)}
                 className="justify-start text-left"
                 role="menuitem"
               >
                 {item.label}
-              </Button>
+              </MenuItem>
             ))}
           </div>
         </div>
