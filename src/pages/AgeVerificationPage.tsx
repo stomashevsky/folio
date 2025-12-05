@@ -1,12 +1,7 @@
 import Navbar from '../components/Navbar'
-import { SectionHeader, Button } from '../components/ui'
+import { Button } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
-
-const BACKGROUND_STYLE = {
-  backgroundImage:
-    'linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(90deg, rgba(229, 229, 229, 1) 0%, rgba(229, 229, 229, 1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%)',
-}
 
 export default function AgeVerificationPage() {
   usePageTitle({

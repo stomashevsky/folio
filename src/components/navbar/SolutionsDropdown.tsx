@@ -3,10 +3,6 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import { Button } from '../ui'
 import { scrollToTop } from '../../utils/scrollToTop'
 
-interface SolutionsDropdownProps {
-  // No props needed
-}
-
 interface SolutionItem {
   label: string
   path: string
