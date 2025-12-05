@@ -82,7 +82,7 @@ export default function SolutionsDropdown() {
           aria-label="Solutions submenu"
         >
           <div 
-            className="bg-white rounded-3xl shadow-[0px_10px_15px_-3px_rgba(10,13,18,0.08),0px_4px_6px_-4px_rgba(10,13,18,0.06)] p-1.5"
+            className="bg-white rounded-3xl shadow-[0px_8px_25px_-5px_rgba(10,13,18,0.1),0px_4px_10px_-6px_rgba(10,13,18,0.1)] p-1.5"
             style={{ 
               width: 'max-content',
             }}
