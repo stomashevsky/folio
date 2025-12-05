@@ -15,7 +15,6 @@ import bitcoinIcon from '../assets/icons/Bitcoin.svg'
 import creditCardIcon from '../assets/icons/CreditCard.svg'
 import shieldPlusIcon from '../assets/icons/ShieldPlus.svg'
 import usersIcon from '../assets/icons/Users.svg'
-import satelliteIcon from '../assets/icons/Satellite.svg'
 
 // Icons for integration section
 import linkIcon from '../assets/icons/Link.svg'
@@ -81,11 +80,6 @@ const industryCards = [
     icon: usersIcon,
     title: 'Sharing economy',
     description: 'Rental, ridesharing and freelance platforms verify both sides of the marketplace to prevent fake profiles and ensure safety.',
-  },
-  {
-    icon: satelliteIcon,
-    title: 'Telecommunications',
-    description: 'Operators verify IDs during activation to reduce SIM fraud and meet strict national ID requirements online or in store.',
   },
 ]
 
