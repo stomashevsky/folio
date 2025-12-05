@@ -62,7 +62,7 @@ export default function TicketIssuancePage() {
               <Button
                 variant="primary"
               >
-                Contact Folio Team
+                Get in touch
               </Button>
               <Button
                 variant="secondary"
@@ -100,7 +100,7 @@ export default function TicketIssuancePage() {
               <Button
                 variant="primary"
               >
-                Contact Folio Team
+                Get in touch
               </Button>
               <Button
                 variant="secondary"
@@ -355,7 +355,7 @@ export default function TicketIssuancePage() {
               <Button
                 variant="primary"
               >
-                Contact Folio Team
+                Get in touch
               </Button>
             </div>
           </div>
@@ -375,7 +375,7 @@ export default function TicketIssuancePage() {
             <Button
               variant="primary"
             >
-              Contact Folio Team
+              Get in touch
             </Button>
           </div>
         </div>

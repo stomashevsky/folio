@@ -53,9 +53,10 @@ export default function MenuItem({
   const textClasses = 'text-sm font-medium leading-5 whitespace-nowrap'
   
   // State classes
+  // Hover/Active background: #f5f5f5 with 10% black overlay = #dedede
   const stateClasses = active
-    ? 'bg-[#f5f5f5] text-[#171717]' // Active state (same as hover)
-    : 'bg-transparent text-[#0a0a0a] hover:bg-[#f5f5f5] hover:text-[#171717]'
+    ? 'bg-[#dedede] text-[#171717]' // Active state (same as hover)
+    : 'bg-transparent text-[#0a0a0a] hover:bg-[#dedede] hover:text-[#171717]'
   
   // Width classes
   const widthClasses = fullWidth ? 'w-full' : ''
