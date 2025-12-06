@@ -12,9 +12,9 @@ import ticketIcon from '../assets/icons/ticket.svg'
 import routeIcon from '../assets/icons/route.svg'
 import cameraIcon from '../assets/icons/camera.svg'
 
-import businessHeroImage from '../assets/images/business-hero.png'
-import businessFeaturesImage from '../assets/images/business-features.png'
-import businessOperatorsImage from '../assets/images/business-operators.png'
+import ticketIssuanceHero from '../assets/images/ticket-issuance-hero.png'
+import ticketIssuanceFeatures from '../assets/images/ticket-issuance-features.png'
+import ticketIssuanceOperators from '../assets/images/ticket-issuance-operators.png'
 
 // Background style using inline styles for complex multi-layer gradient
 // This cannot be easily expressed in Tailwind CSS, so inline style is used
@@ -31,7 +31,7 @@ export default function TicketIssuancePage() {
     description: 'Better tickets. No app to build. Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone.',
     ogTitle: 'Ticket Issuance | Folio Wallet',
     ogDescription: 'Better tickets. No app to build. Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone.',
-    ogImage: 'https://folio.id/src/assets/images/business-hero.png',
+    ogImage: 'https://folio.id/src/assets/images/ticket-issuance-hero.png',
     ogUrl: 'https://folio.id/solutions/ticket-issuance'
   })
 
@@ -74,8 +74,8 @@ export default function TicketIssuancePage() {
           </div>
           <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
             <img 
-              src={businessHeroImage} 
-              alt="Business tickets preview" 
+              src={ticketIssuanceHero} 
+              alt="Ticket issuance preview" 
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               fetchPriority="high"
               loading="eager"
@@ -112,8 +112,8 @@ export default function TicketIssuancePage() {
           </div>
           <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
             <img 
-              src={businessHeroImage} 
-              alt="Business tickets preview" 
+              src={ticketIssuanceHero} 
+              alt="Ticket issuance preview" 
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               fetchPriority="high"
               loading="eager"
@@ -182,8 +182,8 @@ export default function TicketIssuancePage() {
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
             <img 
-              src={businessFeaturesImage} 
-              alt="Folio tickets format"
+              src={ticketIssuanceFeatures} 
+              alt="Ticket issuance format"
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               loading="lazy"
             />
@@ -219,8 +219,8 @@ export default function TicketIssuancePage() {
           </div>
           <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
             <img 
-              src={businessFeaturesImage} 
-              alt="Folio tickets format"
+              src={ticketIssuanceFeatures} 
+              alt="Ticket issuance format"
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               loading="lazy"
             />
@@ -293,8 +293,8 @@ export default function TicketIssuancePage() {
           </div>
           <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
             <img
-              src={businessOperatorsImage}
-              alt="Business operators"
+              src={ticketIssuanceOperators}
+              alt="Ticket operators"
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               loading="lazy"
             />
@@ -329,8 +329,8 @@ export default function TicketIssuancePage() {
           </div>
           <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
             <img
-              src={businessOperatorsImage}
-              alt="Business operators"
+              src={ticketIssuanceOperators}
+              alt="Ticket operators"
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               loading="lazy"
             />

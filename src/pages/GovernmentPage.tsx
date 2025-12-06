@@ -5,9 +5,9 @@ import FooterSection from '../components/sections/FooterSection'
 import GlobalPartnersSection from '../components/sections/GlobalPartnersSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { scrollToTop } from '../utils/scrollToTop'
-import governmentHeroImage from '../assets/images/government-hero.png'
-import governmentCaseStudyImage from '../assets/images/government-case-study.png'
-import governmentAvatarImage from '../assets/images/government-avatar.png'
+import governmentSolutionsHero from '../assets/images/government-solutions-hero.png'
+import governmentAlbaniaCaseStudy from '../assets/images/government-albania-case-study.png'
+import governmentTestimonialAvatar from '../assets/images/government-testimonial-avatar.png'
 
 // Background style using inline styles for complex multi-layer gradient
 // This cannot be easily expressed in Tailwind CSS, so inline style is used
@@ -24,7 +24,7 @@ export default function GovernmentPage() {
     description: 'Tools for governments to design, test and deploy modern digital credentials. Digital identity aligned with global standards.',
     ogTitle: 'Government Solutions | Folio Wallet',
     ogDescription: 'Tools for governments to design, test and deploy modern digital credentials. Digital identity aligned with global standards.',
-    ogImage: 'https://folio.id/src/assets/images/government-hero.png',
+    ogImage: 'https://folio.id/src/assets/images/government-solutions-hero.png',
     ogUrl: 'https://folio.id/government'
   })
 
@@ -69,7 +69,7 @@ export default function GovernmentPage() {
           </div>
           <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
             <img 
-              src={governmentHeroImage} 
+              src={governmentSolutionsHero} 
               alt="Digital identity credentials preview" 
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               fetchPriority="high"
@@ -115,7 +115,7 @@ export default function GovernmentPage() {
           </div>
           <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
             <img 
-              src={governmentHeroImage} 
+              src={governmentSolutionsHero} 
               alt="Digital identity credentials preview" 
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               fetchPriority="high"
@@ -177,7 +177,7 @@ export default function GovernmentPage() {
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/426.67]">
             <img
-              src={governmentCaseStudyImage}
+              src={governmentAlbaniaCaseStudy}
               alt="Albania case study map"
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               loading="lazy"
@@ -242,7 +242,7 @@ export default function GovernmentPage() {
                 <div className="box-border flex gap-2 items-center px-0 py-3 relative shrink-0">
                   <div className="relative rounded-full shrink-0 w-8 h-8">
                     <img
-                      src={governmentAvatarImage}
+                      src={governmentTestimonialAvatar}
                       alt="Ilirjan Celibashi"
                       className="absolute inset-0 max-w-none object-center object-cover rounded-full w-full h-full"
                     />
@@ -320,7 +320,7 @@ export default function GovernmentPage() {
                 <div className="box-border flex gap-2 items-center px-0 py-3 relative shrink-0">
                   <div className="relative rounded-full shrink-0 w-8 h-8">
                     <img
-                      src={governmentAvatarImage}
+                      src={governmentTestimonialAvatar}
                       alt="Ilirjan Celibashi"
                       className="absolute inset-0 max-w-none object-center object-cover rounded-full w-full h-full"
                     />
@@ -337,7 +337,7 @@ export default function GovernmentPage() {
           </div>
           <div className="aspect-[240/426.67] relative rounded-2xl shrink-0 w-full">
             <img
-              src={governmentCaseStudyImage}
+              src={governmentAlbaniaCaseStudy}
               alt="Albania case study map"
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               loading="lazy"

@@ -8,18 +8,18 @@ import PasskeysSection from '../components/sections/PasskeysSection'
 import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { scrollToSection } from '../utils/scrollToSection'
-import personalUseHero from '../assets/images/personal-use-hero.png'
-import featuresTickets from '../assets/images/features-tickets.png'
-import ticketsTrain from '../assets/images/tickets-train.png'
-import ticketsBus from '../assets/images/tickets-bus.png'
-import ticketsHotel from '../assets/images/tickets-hotel.png'
-import ticketsEvent from '../assets/images/tickets-event.png'
-import featuresTimeline from '../assets/images/features-timeline.png'
-import documentViewer from '../assets/images/document-viewer.png'
-import featuresIds from '../assets/images/features-ids.png'
-import featuresCards from '../assets/images/features-cards.png'
-import featuresFolders from '../assets/images/features-folders.png'
-import storageImage from '../assets/images/storage-organized.png'
+import folioAppHero from '../assets/images/folio-app-hero.png'
+import folioFeaturesTickets from '../assets/images/folio-features-tickets.png'
+import folioTicketsTrain from '../assets/images/folio-tickets-train.png'
+import folioTicketsBus from '../assets/images/folio-tickets-bus.png'
+import folioTicketsHotel from '../assets/images/folio-tickets-hotel.png'
+import folioTicketsEvent from '../assets/images/folio-tickets-event.png'
+import folioFeaturesTimeline from '../assets/images/folio-features-timeline.png'
+import folioDocumentViewer from '../assets/images/folio-document-viewer.png'
+import folioFeaturesIds from '../assets/images/folio-features-ids.png'
+import folioFeaturesCards from '../assets/images/folio-features-cards.png'
+import folioFeaturesFolders from '../assets/images/folio-features-folders.png'
+import folioStorageOrganized from '../assets/images/folio-storage-organized.png'
 import scanTextIcon from '../assets/icons/scan-text.svg'
 import imagesIcon from '../assets/icons/images.svg'
 import fileSpreadsheetIcon from '../assets/icons/file-spreadsheet.svg'
@@ -65,31 +65,31 @@ const featuresItems: AccordionItemData[] = [
     id: 'cards',
     title: 'Payment & Gift Cards',
     description: 'Keep your debit, credit and gift cards with all essential details. Quickly access card numbers, expiry dates and other important information, fully synced and protected across your devices.',
-    desktopImage: featuresCards,
+    desktopImage: folioFeaturesCards,
   },
   {
     id: 'ids',
     title: 'Personal IDs',
     description: 'Store passports, ID cards and residence permits securely and in a clean, readable format. Folio extracts names, dates and numbers for quick access and reminds you before anything expires.',
-    desktopImage: featuresIds,
+    desktopImage: folioFeaturesIds,
   },
   {
     id: 'tickets',
     title: 'Tickets and Bookings',
     description: 'Import flights, trains, hotels and events from email, PDF or photo. Folio cleans each ticket, extracts times, locations and passenger information, and turns it into a clear and reliable card for your trips.',
-    desktopImage: featuresTickets,
+    desktopImage: folioFeaturesTickets,
   },
   {
     id: 'timeline',
     title: 'Travel Timeline',
     description: 'Your entire journey is organized automatically day by day. Tickets and bookings are sorted chronologically, grouped by date and displayed as a clean timeline so you always know what comes next.',
-    desktopImage: featuresTimeline,
+    desktopImage: folioFeaturesTimeline,
   },
   {
     id: 'folders',
     title: 'Shared Folders',
     description: 'Create shared document spaces for family and friends. Everyone sees the latest versions of tickets, IDs or travel plans and can add their own documents while original files stay safely with their owners.',
-    desktopImage: featuresFolders,
+    desktopImage: folioFeaturesFolders,
   },
 ]
 
@@ -101,7 +101,7 @@ function PersonalUsePage() {
     description: 'Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find. Your essential information is always at hand when you need it.',
     ogTitle: 'Folio - Your documents, always with you | Folio Wallet',
     ogDescription: 'Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible.',
-    ogImage: 'https://folio.id/src/assets/images/personal-use-hero.png',
+    ogImage: 'https://folio.id/src/assets/images/folio-app-hero.png',
     ogUrl: 'https://folio.id/'
   })
   
@@ -170,7 +170,7 @@ function PersonalUsePage() {
           </div>
           <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
             <img 
-              src={personalUseHero} 
+              src={folioAppHero} 
               alt="Folio documents preview" 
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               fetchPriority="high"
@@ -211,7 +211,7 @@ function PersonalUsePage() {
           </div>
           <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
             <img 
-              src={personalUseHero} 
+              src={folioAppHero} 
               alt="Folio documents preview" 
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               fetchPriority="high"
@@ -344,7 +344,7 @@ function PersonalUsePage() {
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
             <img
-              src={documentViewer}
+              src={folioDocumentViewer}
               alt="Document viewer interface"
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               loading="lazy"
@@ -370,7 +370,7 @@ function PersonalUsePage() {
           </div>
           <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
             <img
-              src={documentViewer}
+              src={folioDocumentViewer}
               alt="Document viewer interface"
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               loading="lazy"
@@ -427,7 +427,7 @@ function PersonalUsePage() {
           </div>
           <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
             <img
-              src={storageImage}
+              src={folioStorageOrganized}
               alt="Organized documents and cards"
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full pointer-events-none"
               loading="lazy"
@@ -446,7 +446,7 @@ function PersonalUsePage() {
           </div>
           <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
             <img
-              src={storageImage}
+              src={folioStorageOrganized}
               alt="Organized documents and cards"
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full pointer-events-none"
               loading="lazy"
@@ -532,25 +532,25 @@ function TicketsAndBookingsSection() {
       id: 'unified-format',
       title: 'Unified format',
       description: 'Flights, trains, hotels and events are transformed into one clean and readable format.',
-      image: ticketsTrain,
+      image: folioTicketsTrain,
     },
     {
       id: 'every-kind',
       title: 'Every kind of booking',
       description: 'Works with flights, trains, buses, ferries, hotels and events.',
-      image: ticketsBus,
+      image: folioTicketsBus,
     },
     {
       id: 'key-details',
       title: 'All key details extracted',
       description: 'Times, dates, locations, passenger names and booking info captured automatically.',
-      image: ticketsHotel,
+      image: folioTicketsHotel,
     },
     {
       id: 'original-files',
       title: 'Original files attached',
       description: 'Your PDF or email is saved with the document for quick reference.',
-      image: ticketsEvent,
+      image: folioTicketsEvent,
     },
   ]
 
