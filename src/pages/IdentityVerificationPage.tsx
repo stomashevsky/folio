@@ -256,7 +256,7 @@ export default function IdentityVerificationPage() {
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <SectionHeader
                 title="Compliance built in"
-                description="Folio aligns with global standards including AML, KYC, GDPR, FATF guidance, NIST, eIDAS and local regulatory frameworks. The system stays up to date with evolving laws so you can remain compliant without manual effort."
+                description="Folio aligns with global regulatory frameworks including AML directives, GDPR, FATF guidance, NIST standards, eIDAS and other regional requirements. The system stays current with evolving laws so you can remain compliant without manual oversight."
                 align="left"
                 maxWidth="672px"
               />
@@ -275,7 +275,7 @@ export default function IdentityVerificationPage() {
           <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[672px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
               title="Compliance built in"
-              description="Folio aligns with global standards including AML, KYC, GDPR, FATF guidance, NIST, eIDAS and local regulatory frameworks. The system stays up to date with evolving laws so you can remain compliant without manual effort."
+              description="Folio aligns with global regulatory frameworks including AML directives, GDPR, FATF guidance, NIST standards, eIDAS and other regional requirements. The system stays current with evolving laws so you can remain compliant without manual oversight."
               align="left"
               maxWidth="672px"
             />
