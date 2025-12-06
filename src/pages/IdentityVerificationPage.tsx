@@ -35,16 +35,16 @@ const BACKGROUND_STYLE = {
 // Verification methods data (using AccordionItemData format)
 const verificationMethods: AccordionItemData[] = [
   {
-    id: 'photo-based',
-    title: 'Photo-based ID verification',
-    description: 'Users capture a photo of their identity document. Folio extracts and validates the data instantly using OCR, document authenticity checks and biometric liveness detection for highly accurate and trusted results.',
-    desktopImage: identityVerificationPhotoBased,
-  },
-  {
     id: 'video-based',
     title: 'Video-based ID verification',
     description: 'For high assurance or regulated use cases, verification can run through a short recorded session or a guided video flow. Folio evaluates liveness, document presence and behavioral cues to verify users in real time.',
     desktopImage: identityVerificationVideoBased,
+  },
+  {
+    id: 'photo-based',
+    title: 'Photo-based ID verification',
+    description: 'Users capture a photo of their identity document. Folio extracts and validates the data instantly using OCR, document authenticity checks and biometric liveness detection for highly accurate and trusted results.',
+    desktopImage: identityVerificationPhotoBased,
   },
   {
     id: 'nfc-based',
@@ -116,7 +116,7 @@ export default function IdentityVerificationPage() {
     ogUrl: 'https://folio.id/solutions/identity-verification'
   })
 
-  const [activeMethodId, setActiveMethodId] = useState<string | null>('photo-based')
+  const [activeMethodId, setActiveMethodId] = useState<string | null>('video-based')
   
   const activeMethod = verificationMethods.find(item => item.id === activeMethodId) || verificationMethods[0]
 
@@ -227,7 +227,7 @@ export default function IdentityVerificationPage() {
               />
               <Accordion
                 items={verificationMethods}
-                defaultOpenId="photo-based"
+                defaultOpenId="video-based"
                 onItemChange={setActiveMethodId}
                 showMobileImages={false}
               />
@@ -243,7 +243,7 @@ export default function IdentityVerificationPage() {
             />
             <Accordion
               items={verificationMethods}
-              defaultOpenId="photo-based"
+              defaultOpenId="video-based"
               showMobileImages={true}
             />
           </div>
