@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 
 import { LogoButton, Button } from './ui'
@@ -11,7 +11,6 @@ import { scrollToTop } from '../utils/scrollToTop'
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const navbarRef = useRef<HTMLDivElement>(null)
   const location = useLocation()
   const navigate = useNavigate()
 
@@ -35,39 +34,12 @@ export default function Navbar() {
 
   useBodyScrollLock(isMobileMenuOpen)
 
-  useEffect(() => {
-    const navbarElement = navbarRef.current
-    if (!navbarElement) return
-
-    const handleWheel = (e: WheelEvent) => {
-      // Always scroll the page when wheel event occurs over navbar
-      // Buttons and links will still be clickable, but wheel will scroll the page
-      e.preventDefault()
-      e.stopPropagation()
-      // Direct scroll manipulation for better compatibility
-      document.documentElement.scrollTop += e.deltaY
-      document.body.scrollTop += e.deltaY
-    }
-
-    // Use capture phase to intercept before it reaches navbar
-    navbarElement.addEventListener('wheel', handleWheel, { passive: false, capture: true })
-
-    return () => {
-      navbarElement.removeEventListener('wheel', handleWheel, { capture: true } as EventListenerOptions)
-    }
-  }, [])
-
   return (
     <>
       <MobileMenu isOpen={isMobileMenuOpen} onClose={toggleMobileMenu} />
 
       <div 
-        ref={navbarRef}
         className="bg-white fixed top-0 left-0 right-0 shrink-0 w-full z-[70]"
-        style={{ 
-          overscrollBehavior: 'none',
-          touchAction: 'pan-y'
-        }}
       >
         <div className="flex flex-col gap-6 lg:gap-0 items-center px-0 py-4 w-full">
           <div className="lg:hidden flex flex-col gap-6 items-start justify-center w-full px-6 py-0 relative shrink-0">
