@@ -6,7 +6,12 @@ import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 
 // Images
-import placeholderImage from '../assets/images/image-placeholder.png'
+import ageVerificationHero from '../assets/images/age-verification-hero.png'
+import ageVerificationAnonymousCredential from '../assets/images/age-verification-anonymous-credential.png'
+import ageVerificationFaceEstimation from '../assets/images/age-verification-face-estimation.png'
+import ageVerificationDocumentVerification from '../assets/images/age-verification-document-verification.png'
+import ageVerificationPrivacy from '../assets/images/age-verification-privacy.png'
+import ageVerificationAgeAssurance from '../assets/images/age-verification-age-assurance.png'
 
 // Icons for ToolCard (industry cards)
 import messagesSquareIcon from '../assets/icons/MessagesSquare.svg'
@@ -33,19 +38,19 @@ const ageVerificationMethods: AccordionItemData[] = [
     id: 'anonymous-credential',
     title: 'Anonymous age credential',
     description: 'A one time verified age credential that can be reused without revealing identity. Users prove they are old enough with a privacy preserving token instead of personal data.',
-    desktopImage: placeholderImage,
+    desktopImage: ageVerificationAnonymousCredential,
   },
   {
     id: 'face-estimation',
     title: 'Face based age estimation',
     description: 'Users take a quick selfie and our AI estimates age in seconds. No documents are required. Built in liveness checks help prevent fraud while keeping the flow light and mobile friendly.',
-    desktopImage: placeholderImage,
+    desktopImage: ageVerificationFaceEstimation,
   },
   {
     id: 'document-verification',
     title: 'Document based verification',
     description: 'When you need maximum assurance, users upload an ID document for full age verification. Folio validates authenticity, runs liveness checks and confirms legal age so you can meet strict regulatory requirements.',
-    desktopImage: placeholderImage,
+    desktopImage: ageVerificationDocumentVerification,
   },
 ]
 
@@ -147,7 +152,7 @@ export default function AgeVerificationPage() {
             </div>
             <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
               <img 
-                src={placeholderImage} 
+                src={ageVerificationHero} 
                 alt="Age verification preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 fetchPriority="high"
@@ -178,7 +183,7 @@ export default function AgeVerificationPage() {
             </div>
             <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
               <img 
-                src={placeholderImage} 
+                src={ageVerificationHero} 
                 alt="Age verification preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 fetchPriority="high"
@@ -258,7 +263,7 @@ export default function AgeVerificationPage() {
             </div>
             <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
               <img 
-                src={placeholderImage} 
+                src={ageVerificationPrivacy} 
                 alt="Privacy features preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 loading="lazy"
@@ -276,7 +281,7 @@ export default function AgeVerificationPage() {
             />
             <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
               <img 
-                src={placeholderImage} 
+                src={ageVerificationPrivacy} 
                 alt="Privacy features preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 loading="lazy"
@@ -291,7 +296,7 @@ export default function AgeVerificationPage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
               <img 
-                src={placeholderImage} 
+                src={ageVerificationAgeAssurance} 
                 alt="Age assurance features preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 loading="lazy"
@@ -317,7 +322,7 @@ export default function AgeVerificationPage() {
             />
             <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
               <img 
-                src={placeholderImage} 
+                src={ageVerificationAgeAssurance} 
                 alt="Age assurance features preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 loading="lazy"

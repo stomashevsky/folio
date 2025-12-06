@@ -6,7 +6,12 @@ import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 
 // Images
-import placeholderImage from '../assets/images/image-placeholder.png'
+import identityVerificationHero from '../assets/images/identity-verification-hero.png'
+import identityVerificationPhotoBased from '../assets/images/identity-verification-photo-based.png'
+import identityVerificationVideoBased from '../assets/images/identity-verification-video-based.png'
+import identityVerificationNfcBased from '../assets/images/identity-verification-nfc-based.png'
+import identityVerificationCompliance from '../assets/images/identity-verification-compliance.png'
+import identityVerificationSecurity from '../assets/images/identity-verification-security.png'
 
 // Icons for ToolCard (industry cards)
 import scaleIcon from '../assets/icons/Scale.svg'
@@ -33,19 +38,19 @@ const verificationMethods: AccordionItemData[] = [
     id: 'photo-based',
     title: 'Photo-based ID verification',
     description: 'Users capture a photo of their identity document. Folio extracts and validates the data instantly using OCR, document authenticity checks and biometric liveness detection for highly accurate and trusted results.',
-    desktopImage: placeholderImage,
+    desktopImage: identityVerificationPhotoBased,
   },
   {
     id: 'video-based',
     title: 'Video-based ID verification',
     description: 'For high assurance or regulated use cases, verification can run through a short recorded session or a guided video flow. Folio evaluates liveness, document presence and behavioral cues to verify users in real time.',
-    desktopImage: placeholderImage,
+    desktopImage: identityVerificationVideoBased,
   },
   {
     id: 'nfc-based',
     title: 'NFC-based ID verification',
     description: 'Modern passports and ID cards contain secure NFC chips. Folio reads encrypted chip data including a high quality facial image and tamper proof identity details for the strongest document authentication available.',
-    desktopImage: placeholderImage,
+    desktopImage: identityVerificationNfcBased,
   },
 ]
 
@@ -147,7 +152,7 @@ export default function IdentityVerificationPage() {
             </div>
             <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
               <img 
-                src={placeholderImage} 
+                src={identityVerificationHero} 
                 alt="Identity verification preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 fetchPriority="high"
@@ -178,7 +183,7 @@ export default function IdentityVerificationPage() {
             </div>
             <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
               <img 
-                src={placeholderImage} 
+                src={identityVerificationHero} 
                 alt="Identity verification preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 fetchPriority="high"
@@ -258,7 +263,7 @@ export default function IdentityVerificationPage() {
             </div>
             <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
               <img 
-                src={placeholderImage} 
+                src={identityVerificationCompliance} 
                 alt="Compliance features preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 loading="lazy"
@@ -276,7 +281,7 @@ export default function IdentityVerificationPage() {
             />
             <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
               <img 
-                src={placeholderImage} 
+                src={identityVerificationCompliance} 
                 alt="Compliance features preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 loading="lazy"
@@ -291,7 +296,7 @@ export default function IdentityVerificationPage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
               <img 
-                src={placeholderImage} 
+                src={identityVerificationSecurity} 
                 alt="Security features preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 loading="lazy"
@@ -317,7 +322,7 @@ export default function IdentityVerificationPage() {
             />
             <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
               <img 
-                src={placeholderImage} 
+                src={identityVerificationSecurity} 
                 alt="Security features preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 loading="lazy"

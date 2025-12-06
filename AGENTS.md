@@ -99,7 +99,7 @@ This file contains all rules and principles that must be followed for every chan
   <img src={activeItem.desktopImage} />
   <Accordion items={items} onItemChange={setActiveId} />
   ```
-- This pattern is used in `PersonalUsePage` for features accordion and in `IdentityVerificationPage` for verification methods
+- This pattern is used in `FolioAppPage` for features accordion and in `IdentityVerificationPage` for verification methods
 
 ### 8. Project Structure
 
@@ -130,7 +130,7 @@ This file contains all rules and principles that must be followed for every chan
 3. **When implementing expandable lists or accordions:**
    - Use the `Accordion` component with `AccordionItemData` type
    - If selection should sync with other elements (like images), use `useState` + `onItemChange`
-   - Check `PersonalUsePage` or `IdentityVerificationPage` for reference patterns
+   - Check `FolioAppPage` or `IdentityVerificationPage` for reference patterns
 
 4. **When working with buttons:**
    - **Check Figma** for button states and variants

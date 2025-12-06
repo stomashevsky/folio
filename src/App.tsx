@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom'
 import { useEffect } from 'react'
-import PersonalUsePage from './pages/PersonalUsePage'
+import FolioAppPage from './pages/FolioAppPage'
 import PlaygroundPage from './pages/PlaygroundPage'
 import TicketIssuancePage from './pages/TicketIssuancePage'
 import IdentityVerificationPage from './pages/IdentityVerificationPage'
@@ -77,7 +77,7 @@ function App() {
     <BrowserRouter basename={basename}>
       <RedirectHandler />
       <Routes>
-        <Route path="/" element={<PersonalUsePage />} />
+        <Route path="/" element={<FolioAppPage />} />
         <Route path="/government/playground" element={<PlaygroundPage />} />
         <Route path="/solutions/ticket-issuance" element={<TicketIssuancePage />} />
         <Route path="/solutions/identity-verification" element={<IdentityVerificationPage />} />

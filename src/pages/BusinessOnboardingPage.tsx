@@ -6,7 +6,12 @@ import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 
 // Images
-import placeholderImage from '../assets/images/image-placeholder.png'
+import businessOnboardingHero from '../assets/images/business-onboarding-hero.png'
+import businessOnboardingOnboardingFlow from '../assets/images/business-onboarding-onboarding-flow.png'
+import businessOnboardingDataCollection from '../assets/images/business-onboarding-data-collection.png'
+import businessOnboardingStayCompliant from '../assets/images/business-onboarding-stay-compliant.png'
+import businessOnboardingRepresentatives from '../assets/images/business-onboarding-representatives.png'
+import businessOnboardingRegistryData from '../assets/images/business-onboarding-registry-data.png'
 
 // Icons for ToolCard (industry cards)
 import scaleIcon from '../assets/icons/Scale.svg'
@@ -33,19 +38,19 @@ const verificationSteps: AccordionItemData[] = [
     id: 'onboarding-flow',
     title: 'Create a smooth onboarding flow',
     description: 'Build a guided onboarding process tailored to your regulatory needs. Forms adapt dynamically with conditional questions, smart pre filled fields and your branding. Remote onboarding becomes simpler from the very first step.',
-    desktopImage: placeholderImage,
+    desktopImage: businessOnboardingOnboardingFlow,
   },
   {
     id: 'data-collection',
     title: 'Automate data collection and validation',
     description: 'Businesses can enter data manually or rely on automatic registry based pre filling. Representatives complete secure remote identity checks, while ownership structures and UBO information are discovered in real time. All verified data is presented clearly for your compliance review.',
-    desktopImage: placeholderImage,
+    desktopImage: businessOnboardingDataCollection,
   },
   {
     id: 'stay-compliant',
     title: 'Stay compliant with confidence',
     description: 'Your team retains full control over approval decisions. Data can be accessed through Folio\'s dashboard or delivered into your infrastructure via API. Optional ongoing monitoring keeps you informed about changes in company status, ownership or risk levels.',
-    desktopImage: placeholderImage,
+    desktopImage: businessOnboardingStayCompliant,
   },
 ]
 
@@ -147,7 +152,7 @@ export default function BusinessOnboardingPage() {
             </div>
             <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
               <img 
-                src={placeholderImage} 
+                src={businessOnboardingHero} 
                 alt="Business onboarding preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 fetchPriority="high"
@@ -178,7 +183,7 @@ export default function BusinessOnboardingPage() {
             </div>
             <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
               <img 
-                src={placeholderImage} 
+                src={businessOnboardingHero} 
                 alt="Business onboarding preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 fetchPriority="high"
@@ -258,7 +263,7 @@ export default function BusinessOnboardingPage() {
             </div>
             <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
               <img 
-                src={placeholderImage} 
+                src={businessOnboardingRepresentatives} 
                 alt="Verify representatives preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 loading="lazy"
@@ -276,7 +281,7 @@ export default function BusinessOnboardingPage() {
             />
             <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
               <img 
-                src={placeholderImage} 
+                src={businessOnboardingRepresentatives} 
                 alt="Verify representatives preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 loading="lazy"
@@ -291,7 +296,7 @@ export default function BusinessOnboardingPage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
               <img 
-                src={placeholderImage} 
+                src={businessOnboardingRegistryData} 
                 alt="Global registry data preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 loading="lazy"
@@ -317,7 +322,7 @@ export default function BusinessOnboardingPage() {
             />
             <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
               <img 
-                src={placeholderImage} 
+                src={businessOnboardingRegistryData} 
                 alt="Global registry data preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 loading="lazy"

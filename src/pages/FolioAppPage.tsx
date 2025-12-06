@@ -100,7 +100,7 @@ function FolioAppPage() {
     title: 'Folio Wallet | Digital identity and global verification solutions',
     description: 'Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find. Your essential information is always at hand when you need it.',
     ogTitle: 'Folio Wallet | Digital identity and global verification solutions',
-    ogDescription: 'Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible.',
+    ogDescription: 'Folio powers secure digital identity, seamless document storage and global verification solutions for individuals, businesses and governments.',
     ogImage: 'https://folio.id/src/assets/images/folio-app-hero.png',
     ogUrl: 'https://folio.id/'
   })
