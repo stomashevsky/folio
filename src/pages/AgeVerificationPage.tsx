@@ -35,10 +35,10 @@ const BACKGROUND_STYLE = {
 // Age verification methods data (using AccordionItemData format)
 const ageVerificationMethods: AccordionItemData[] = [
   {
-    id: 'anonymous-credential',
-    title: 'Anonymous age credential',
-    description: 'A one time verified age credential that can be reused without revealing identity. Users prove they are old enough with a privacy preserving token instead of personal data.',
-    desktopImage: ageVerificationAnonymousCredential,
+    id: 'document-verification',
+    title: 'Document based verification',
+    description: 'When you need maximum assurance, users upload an ID document for full age verification. Folio validates authenticity, runs liveness checks and confirms legal age so you can meet strict regulatory requirements.',
+    desktopImage: ageVerificationDocumentVerification,
   },
   {
     id: 'face-estimation',
@@ -47,10 +47,10 @@ const ageVerificationMethods: AccordionItemData[] = [
     desktopImage: ageVerificationFaceEstimation,
   },
   {
-    id: 'document-verification',
-    title: 'Document based verification',
-    description: 'When you need maximum assurance, users upload an ID document for full age verification. Folio validates authenticity, runs liveness checks and confirms legal age so you can meet strict regulatory requirements.',
-    desktopImage: ageVerificationDocumentVerification,
+    id: 'anonymous-credential',
+    title: 'Anonymous age credential',
+    description: 'A one time verified age credential that can be reused without revealing identity. Users prove they are old enough with a privacy preserving token instead of personal data.',
+    desktopImage: ageVerificationAnonymousCredential,
   },
 ]
 
@@ -116,7 +116,7 @@ export default function AgeVerificationPage() {
     ogUrl: 'https://folio.id/solutions/age-verification'
   })
 
-  const [activeMethodId, setActiveMethodId] = useState<string | null>('anonymous-credential')
+  const [activeMethodId, setActiveMethodId] = useState<string | null>('document-verification')
   
   const activeMethod = ageVerificationMethods.find(item => item.id === activeMethodId) || ageVerificationMethods[0]
 
@@ -227,7 +227,7 @@ export default function AgeVerificationPage() {
               />
               <Accordion
                 items={ageVerificationMethods}
-                defaultOpenId="anonymous-credential"
+                defaultOpenId="document-verification"
                 onItemChange={setActiveMethodId}
                 showMobileImages={false}
               />
@@ -243,7 +243,7 @@ export default function AgeVerificationPage() {
             />
             <Accordion
               items={ageVerificationMethods}
-              defaultOpenId="anonymous-credential"
+              defaultOpenId="document-verification"
               showMobileImages={true}
             />
           </div>
