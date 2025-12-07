@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useSearchParams } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import FooterSection from '../components/sections/FooterSection'
 import { Button, BlogArticleCard } from '../components/ui'
@@ -11,11 +11,32 @@ const categories: BlogCategory[] = ['All', 'Company', 'Research', 'Product', 'Sa
 
 export default function BlogPage() {
   const location = useLocation()
-  const [selectedCategory, setSelectedCategory] = useState<BlogCategory>('All')
+  const [searchParams, setSearchParams] = useSearchParams()
+  
+  // Read category from URL query parameter
+  const categoryParam = searchParams.get('category')
+  const isValidCategory = categoryParam && categories.includes(categoryParam as BlogCategory)
+  const initialCategory = isValidCategory ? (categoryParam as BlogCategory) : 'All'
+  
+  const [selectedCategory, setSelectedCategory] = useState<BlogCategory>(initialCategory)
   const [displayedArticles, setDisplayedArticles] = useState(9)
   const [showLeftFade, setShowLeftFade] = useState(false)
   const [showRightFade, setShowRightFade] = useState(false)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
+
+  // Update category from URL parameter when it changes
+  useEffect(() => {
+    const categoryParam = searchParams.get('category')
+    const isValidCategory = categoryParam && categories.includes(categoryParam as BlogCategory)
+    const newCategory = isValidCategory ? (categoryParam as BlogCategory) : 'All'
+    
+    setSelectedCategory(prev => {
+      if (prev !== newCategory) {
+        setDisplayedArticles(9)
+      }
+      return newCategory
+    })
+  }, [searchParams])
 
   // Restore scroll position when returning from article via "Back to blog"
   useEffect(() => {
@@ -107,6 +128,12 @@ export default function BlogPage() {
                     onClick={() => {
                       setSelectedCategory(category)
                       setDisplayedArticles(9)
+                      // Update URL query parameter
+                      if (category === 'All') {
+                        setSearchParams({})
+                      } else {
+                        setSearchParams({ category })
+                      }
                     }}
                     className="flex-shrink-0"
                   >

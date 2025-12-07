@@ -3,7 +3,7 @@ import FooterSection from '../components/sections/FooterSection'
 import KeepReadingSection from '../components/sections/KeepReadingSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { useScrollToTop } from '../hooks/useScrollToTop'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { Button } from '../components/ui'
 import blogTripsyAlternative from '../assets/images/blog-tripsy-alternative.png'
 
@@ -31,7 +31,12 @@ export default function TripsyAlternativeArticlePage() {
               {/* Meta information */}
               <div className="flex flex-wrap gap-4 items-start justify-center leading-5 relative shrink-0 text-sm w-full">
                 <p className="relative shrink-0 text-[#0a0a0a]">Sep 2, 2025</p>
-                <p className="relative shrink-0 text-[#737373]">Product</p>
+                <Link 
+                  to="/blog?category=Product" 
+                  className="relative shrink-0 text-[#737373] hover:text-[#0a0a0a] hover:underline transition-colors cursor-pointer"
+                >
+                  Product
+                </Link>
               </div>
 
               {/* Title and subtitle */}

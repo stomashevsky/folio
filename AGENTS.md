@@ -221,6 +221,34 @@ This file contains all rules and principles that must be followed for every chan
 - If you want to mention ratings, put them **outside the link**: `<a href="/#get-the-app">Available free on iOS and Android.</a> Rated 4.8 stars on the App Store.`
 - This encourages readers to download the app after reading the article
 
+#### 9.9. Article category links
+
+- **Category names in blog articles must be clickable** and navigate to the blog page with the category filter applied
+- **Use `Link` component** from `react-router-dom` for category links
+- **Link format**: `/blog?category={categoryName}` (e.g., `/blog?category=Product`, `/blog?category=Company`)
+- **Category values**: Must match valid `BlogCategory` types: `'Company'`, `'Research'`, `'Product'`, `'Safety'`
+- **Link styling**: 
+  - Base: `className="relative shrink-0 text-[#737373] hover:text-[#0a0a0a] hover:underline transition-colors cursor-pointer"`
+  - Maintains the same visual appearance as static text, but with hover effects
+- **Implementation pattern**:
+  ```tsx
+  import { Link } from 'react-router-dom'
+  
+  // In article meta section:
+  <div className="flex flex-wrap gap-4 items-start justify-center leading-5 relative shrink-0 text-sm w-full">
+    <p className="relative shrink-0 text-[#0a0a0a]">Sep 2, 2025</p>
+    <Link 
+      to="/blog?category=Product" 
+      className="relative shrink-0 text-[#737373] hover:text-[#0a0a0a] hover:underline transition-colors cursor-pointer"
+    >
+      Product
+    </Link>
+  </div>
+  ```
+- **BlogPage integration**: `BlogPage` must read the `category` query parameter from URL using `useSearchParams()` and automatically apply the filter when the page loads
+- **URL synchronization**: When users click category filter buttons on BlogPage, the URL must be updated with the `?category=` parameter
+- **Category validation**: BlogPage must validate category values against valid categories array before applying filter
+
 ## Workflow
 
 1. **Before creating a new element:**
