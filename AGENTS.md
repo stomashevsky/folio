@@ -188,6 +188,8 @@ This file contains all rules and principles that must be followed for every chan
   ```
 - **Do not use `image-placeholder.png` directly** in blog articles — always create a dedicated image file
 - This allows designers to easily replace placeholder images with actual artwork later
+- **Image aspect ratio**: Use `aspect-[3/2]` (3:2 ratio) for all blog article hero images, unless otherwise specified
+- Example: `className="w-full rounded-xl aspect-[3/2] object-cover"`
 
 #### 9.7. Avoid dashes in article text
 

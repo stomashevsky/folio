@@ -50,7 +50,7 @@ export default function SevenUsefulAppsForPlanningTripArticlePage() {
               <img 
                 src={blogSevenUsefulApps} 
                 alt="7 useful apps for planning your trip" 
-                className="w-full rounded-xl aspect-[240/150] object-cover"
+                className="w-full rounded-xl aspect-[3/2] object-cover"
               />
             </div>
 

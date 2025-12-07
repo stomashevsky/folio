@@ -50,7 +50,7 @@ export default function BestIdScannerAppArticlePage() {
               <img 
                 src={blogBestIdScannerApp} 
                 alt="Best ID scanner apps" 
-                className="w-full rounded-xl aspect-[240/150] object-cover"
+                className="w-full rounded-xl aspect-[3/2] object-cover"
               />
             </div>
 

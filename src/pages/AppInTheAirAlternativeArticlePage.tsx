@@ -50,7 +50,7 @@ export default function AppInTheAirAlternativeArticlePage() {
               <img 
                 src={blogAppInTheAirAlternative} 
                 alt="Folio Wallet - App in the Air alternative" 
-                className="w-full rounded-xl aspect-[240/150] object-cover"
+                className="w-full rounded-xl aspect-[3/2] object-cover"
               />
             </div>
 
