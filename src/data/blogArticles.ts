@@ -1,3 +1,5 @@
+import blogAlbanianDiasporaVoterRegistration from '../assets/images/blog-albanian-diaspora-voter-registration.png'
+
 export type BlogCategory = 'All' | 'Company' | 'Research' | 'Product' | 'Safety'
 
 export interface BlogArticle {
@@ -30,6 +32,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     title: 'Albanian diaspora voter registration surges 525% with Folio Digital Wallet',
     description: 'Albania successfully enfranchised its diaspora to register to vote using a secure digital wallet solution, with over 245,000 Albanians abroad approved to vote in the upcoming parliamentary elections.',
     slug: 'albanian-diaspora-voter-registration',
+    image: blogAlbanianDiasporaVoterRegistration,
   },
   {
     category: 'Company',
