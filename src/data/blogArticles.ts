@@ -1,4 +1,5 @@
 import blogAlbanianDiasporaVoterRegistration from '../assets/images/blog-albanian-diaspora-voter-registration.png'
+import blogTripCaseAlternative from '../assets/images/blog-tripcase-alternative.png'
 
 export type BlogCategory = 'All' | 'Company' | 'Research' | 'Product' | 'Safety'
 
@@ -27,9 +28,17 @@ export const sortArticlesByDate = (articles: BlogArticle[]): BlogArticle[] => {
 
 export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
+    category: 'Product',
+    date: 'Aug 31, 2025',
+    title: "TripCase Alternative: The travel organizer you'll love",
+    description: "TripCase is gone. Your next trip doesn't have to be chaos. Meet the app that keeps every flight, hotel, and document in one beautiful place.",
+    slug: 'tripcase-alternative',
+    image: blogTripCaseAlternative,
+  },
+  {
     category: 'Company',
     date: 'Mar 28, 2025',
-    title: 'Albanian diaspora voter registration surges 525% with Folio Digital Wallet',
+    title: 'Albanian diaspora voter registration surges 525% with Folio Wallet',
     description: 'Albania successfully enfranchised its diaspora to register to vote using a secure digital wallet solution, with over 245,000 Albanians abroad approved to vote in the upcoming parliamentary elections.',
     slug: 'albanian-diaspora-voter-registration',
     image: blogAlbanianDiasporaVoterRegistration,

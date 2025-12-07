@@ -112,6 +112,71 @@ This file contains all rules and principles that must be followed for every chan
 - Icons: `src/assets/icons/` (PascalCase naming)
 - Images: `src/assets/images/`
 
+### 9. Blog Articles
+
+#### 9.1. Design Reference
+
+- **All blog articles must follow the Figma design**: [Blog Article Page](https://www.figma.com/design/6jO5aXk21DqMTeNFCAh9rI/Folio-web?node-id=24536-108142&m=dev)
+- Before implementing any blog article, review the design for structure, typography, spacing, and responsive behavior
+
+#### 9.2. Shared Components and Styles
+
+- **Use shared typography components** for all blog content:
+  - `Typography / H2` - main section headings (30px, semibold, with border-bottom separator)
+  - `Typography / H3` - sub-headings (24px, semibold)
+  - `Typography / P` - paragraphs (16px, normal weight)
+  - `Typography / Blockquote` - quotes with left border (2px border-left, 24px padding-left)
+  - `Typography / List` - ordered and unordered lists
+  - `Typography / Rich Text` - container component for article content
+
+- **Use shared section components**:
+  - `SectionHeader` for article title and description
+  - `BlogCard` for related articles in "Keep Reading" section
+  - `KeepReading` section for related articles at the bottom
+
+- **All blog articles must use the same base layout**:
+  - Date and category at the top
+  - Title (heading-xl style)
+  - Description/subtitle (text-lg, muted-foreground color)
+  - Featured image (with aspect ratio 240/150, rounded-xl)
+  - Rich text content
+  - "Back to Blog" button (rounded, secondary style)
+  - "Keep Reading" section with related articles
+
+#### 9.3. Typography Styles
+
+- **Always use Sentence case for all headings** (H1, H2, H3) — only first word and proper nouns capitalized
+  - Correct: "What made TripCase special", "Everything in one place", "Ready for your next trip"
+  - Incorrect: "What Made TripCase Special", "Everything in One Place", "Ready for Your Next Trip"
+- **Article title**: `heading-xl` (48px desktop / 30px mobile, bold, centered)
+- **Article description**: 18px, normal weight, muted-foreground color (#737373)
+- **Section headings (H2)**: 30px, semibold, with border-bottom separator
+- **Sub-headings (H3)**: 24px, semibold, with top padding (32px)
+- **Paragraphs**: 16px, normal weight, 24px line-height
+- **Blockquotes**: italic style, 2px left border, 24px left padding
+- **Lists**: 16px text, 24px left margin, 8px spacing between items
+- **Links in text**: underline decoration
+
+#### 9.4. Missing Components
+
+- **If a component doesn't exist in `src/components/ui/`**:
+  1. First check if a similar component exists that can be extended
+  2. Ask whether to create a custom component or use a component from [shadcn/ui](https://ui.shadcn.com/docs/components)
+  3. For tables, use shadcn/ui Table component: [Table](https://ui.shadcn.com/docs/components/table)
+  4. When using shadcn components, adapt them to match project styling (Tailwind classes, design tokens)
+
+- **Common shadcn components for blog articles**:
+  - `Table` - for data tables in articles
+  - `Separator` - for horizontal dividers
+  - `Badge` - for article tags/categories
+
+#### 9.5. Spacing and Layout
+
+- **Article container**: max-width 768px (desktop), 672px (mobile), centered
+- **Content spacing**: 24px gap between typography elements
+- **Section spacing**: 48px gap between major sections
+- **Section padding**: 96px vertical padding (desktop), 64px (mobile)
+
 ## Workflow
 
 1. **Before creating a new element:**
@@ -151,6 +216,15 @@ This file contains all rules and principles that must be followed for every chan
    - Note spacing, typography, and color specifications
    - Ensure responsive behavior matches design
 
+7. **When working with blog articles:**
+   - **Always check the [Blog Article Figma design](https://www.figma.com/design/6jO5aXk21DqMTeNFCAh9rI/Folio-web?node-id=24536-108142&m=dev)** before implementation
+   - Use shared typography components (`Typography / H2`, `Typography / H3`, `Typography / P`, `Typography / Blockquote`, `Typography / List`)
+   - Use `Rich Text` container for article content
+   - Follow the standard article structure: date/category → title → description → image → content → back button → related articles
+   - For missing components (e.g., tables), ask whether to create custom or use shadcn/ui components
+   - When using shadcn components, reference [shadcn/ui documentation](https://ui.shadcn.com/docs/components) and adapt styling to match project design tokens
+   - Ensure responsive behavior for desktop (768px max-width) and mobile (672px max-width)
+
 ## Important Reminders
 
 - **Always check Figma** to understand component structure, states, and variants before implementation
@@ -159,4 +233,6 @@ This file contains all rules and principles that must be followed for every chan
 - **Create reusable components**, not one-off solutions
 - **Follow established project patterns**
 - **Match design specifications** from Figma exactly
+- **For blog articles**: use shared typography components and follow the [Blog Article design](https://www.figma.com/design/6jO5aXk21DqMTeNFCAh9rI/Folio-web?node-id=24536-108142&m=dev)
+- **For missing UI components**: ask first or use [shadcn/ui](https://ui.shadcn.com/docs/components) components adapted to project styling
 

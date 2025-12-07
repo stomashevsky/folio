@@ -9,6 +9,7 @@ import AgeVerificationPage from './pages/AgeVerificationPage'
 import GovernmentPage from './pages/GovernmentPage'
 import BlogPage from './pages/BlogPage'
 import AlbanianDiasporaArticlePage from './pages/AlbanianDiasporaArticlePage'
+import TripCaseAlternativeArticlePage from './pages/TripCaseAlternativeArticlePage'
 
 // Fallback handler in case the script in index.html didn't run
 function RedirectHandler() {
@@ -87,6 +88,7 @@ function App() {
         <Route path="/government" element={<GovernmentPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/albanian-diaspora-voter-registration" element={<AlbanianDiasporaArticlePage />} />
+        <Route path="/blog/tripcase-alternative" element={<TripCaseAlternativeArticlePage />} />
       </Routes>
     </BrowserRouter>
   )

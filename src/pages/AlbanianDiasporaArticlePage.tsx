@@ -9,9 +9,9 @@ export default function AlbanianDiasporaArticlePage() {
   const navigate = useNavigate()
   
   usePageTitle({
-    title: 'Albanian Diaspora Voter Registration Surges 525% With Folio Digital Wallet | Folio Blog',
+    title: 'Albanian Diaspora Voter Registration Surges 525% With Folio Wallet | Folio Blog',
     description: 'Albania successfully enfranchised its diaspora to register to vote using a secure digital wallet solution, with over 245,000 Albanians abroad approved to vote.',
-    ogTitle: 'Albanian Diaspora Voter Registration Surges 525% With Folio Digital Wallet',
+    ogTitle: 'Albanian Diaspora Voter Registration Surges 525% With Folio Wallet',
     ogDescription: 'Albania successfully enfranchised its diaspora to register to vote using a secure digital wallet solution, with over 245,000 Albanians abroad approved to vote.',
     ogUrl: 'https://folio.id/blog/albanian-diaspora-voter-registration'
   })
@@ -33,7 +33,7 @@ export default function AlbanianDiasporaArticlePage() {
               {/* Title and subtitle */}
               <div className="flex flex-col gap-4 md:gap-6 items-center relative shrink-0 text-center w-full whitespace-pre-wrap">
               <h1 className="font-bold leading-[36px] md:leading-[48px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px] min-w-full relative shrink-0 w-[min-content]">
-                Albanian diaspora voter registration surges 525% with Folio Digital Wallet
+                Albanian diaspora voter registration surges 525% with Folio Wallet
               </h1>
               <p className="font-normal leading-7 min-w-full relative shrink-0 text-[#737373] text-lg w-[min-content]">
                 In a historic milestone for digital democracy, Albania has successfully enfranchised its diaspora to register to vote using a secure digital wallet solution, with over 245,000 Albanians abroad approved to vote in the upcoming May 11 parliamentary elections.
