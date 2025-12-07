@@ -134,11 +134,11 @@ export default function TripCaseAlternativeArticlePage() {
               </p>
 
               <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-                <li><strong>Flight tickets</strong> — boarding passes, e-tickets, confirmations</li>
-                <li><strong>Hotels</strong> — reservations and booking details</li>
-                <li><strong>Transportation</strong> — trains, buses, rental cars</li>
-                <li><strong>Events</strong> — concert tickets, museum passes, experiences</li>
-                <li><strong>Documents</strong> — passport, ID, travel insurance</li>
+                <li><strong>Flight tickets:</strong> boarding passes, e-tickets, confirmations</li>
+                <li><strong>Hotels:</strong> reservations and booking details</li>
+                <li><strong>Transportation:</strong> trains, buses, rental cars</li>
+                <li><strong>Events:</strong> concert tickets, museum passes, experiences</li>
+                <li><strong>Documents:</strong> passport, ID, travel insurance</li>
               </ul>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
@@ -222,15 +222,7 @@ export default function TripCaseAlternativeArticlePage() {
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Folio Wallet is that place.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Download Folio Wallet. Add your first trip. See how it feels to be organized.</strong>
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full whitespace-pre-wrap">
-                <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</a> Rated 4.8 stars on the App Store and 4.6 stars on Google Play.
+                <strong>Download <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a>. Add your first trip. See how it feels to be organized.</strong>
               </p>
             </div>
 

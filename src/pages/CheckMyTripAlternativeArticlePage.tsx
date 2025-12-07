@@ -96,10 +96,10 @@ export default function CheckMyTripAlternativeArticlePage() {
               </p>
 
               <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-                <li>No document storage — you can't keep passports, IDs, or insurance</li>
-                <li>No event tickets — concerts, museums, conferences aren't supported</li>
-                <li>Limited organization — no folders, labels, or custom notes</li>
-                <li>Basic security — sensitive data deserves stronger protection</li>
+                <li>No document storage: you can't keep passports, IDs, or insurance</li>
+                <li>No event tickets: concerts, museums, conferences aren't supported</li>
+                <li>Limited organization: no folders, labels, or custom notes</li>
+                <li>Basic security: sensitive data deserves stronger protection</li>
               </ul>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
@@ -123,7 +123,7 @@ export default function CheckMyTripAlternativeArticlePage() {
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>All-in-one storage.</strong> Keep flight tickets, hotel bookings, train passes, event tickets, passports, IDs, and insurance — everything in one app.
+                <strong>All-in-one storage.</strong> Keep flight tickets, hotel bookings, train passes, event tickets, passports, IDs, and insurance. Everything in one app.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
@@ -208,11 +208,7 @@ export default function CheckMyTripAlternativeArticlePage() {
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Choose Folio Wallet</strong> if you want everything in one place — bookings, documents, tickets — all protected with real security.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                CheckMyTrip handles bookings. Folio handles your entire journey.
+                <strong>Choose <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a></strong> if you want everything in one place: bookings, documents, tickets. All protected with real security.
               </p>
 
               <div className="border-l-2 border-[#e5e5e5] pl-6 pr-0 py-0 relative shrink-0 w-full">
@@ -220,10 +216,6 @@ export default function CheckMyTripAlternativeArticlePage() {
                   Every booking. Every document. Every detail. One secure place.
                 </p>
               </div>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full whitespace-pre-wrap">
-                <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available free on iOS and Android.</a>
-              </p>
             </div>
 
             {/* Back to blog button */}

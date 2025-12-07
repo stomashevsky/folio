@@ -189,7 +189,20 @@ This file contains all rules and principles that must be followed for every chan
 - **Do not use `image-placeholder.png` directly** in blog articles — always create a dedicated image file
 - This allows designers to easily replace placeholder images with actual artwork later
 
-#### 9.7. CTA download links
+#### 9.7. Avoid dashes in article text
+
+- **Do not use dashes (—) in article text** (paragraphs and lists)
+- Use colons (:) for explanations and lists
+- Use commas for additional information
+- Restructure sentences to avoid dashes when possible
+- **Exception**: Dashes in tables are acceptable as structural elements (e.g., to indicate "not available")
+- Examples:
+  - Instead of: "everything in one place — bookings, documents, tickets"
+  - Use: "everything in one place: bookings, documents, tickets" or "everything in one place, including bookings, documents, and tickets"
+  - Instead of: "Limited document management — focused on itineraries"
+  - Use: "Limited document management: focused on itineraries"
+
+#### 9.8. CTA download links
 
 - **At the end of blog articles**, if there is a mention of Folio Wallet availability on iOS and Android (or App Store/Google Play ratings), **make this text a link to the download section** on the main page
 - Link target: `/#get-the-app` (main page with anchor to "Get The App" section)

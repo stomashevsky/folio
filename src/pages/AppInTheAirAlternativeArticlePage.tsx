@@ -109,7 +109,7 @@ export default function AppInTheAirAlternativeArticlePage() {
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Folio Wallet is a digital travel wallet. It stores all the documents you need for your journey — not just flights.
+                Folio Wallet is a digital travel wallet. It stores all the documents you need for your journey, not just flights.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
@@ -206,7 +206,7 @@ export default function AppInTheAirAlternativeArticlePage() {
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Choose Folio Wallet</strong> if you want more than flight tracking. If you want a home for every travel document — flights, hotels, tickets, passports, insurance — all protected with real security.
+                <strong>Choose <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a></strong> if you want more than flight tracking. If you want a home for every travel document: flights, hotels, tickets, passports, insurance. All protected with real security.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
@@ -218,10 +218,6 @@ export default function AppInTheAirAlternativeArticlePage() {
                   Every flight. Every booking. Every document. One secure place.
                 </p>
               </div>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full whitespace-pre-wrap">
-                <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available free on iOS and Android.</a>
-              </p>
             </div>
 
             {/* Back to blog button */}

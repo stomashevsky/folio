@@ -65,7 +65,7 @@ export default function TripItAlternativeArticlePage() {
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                You want more than just flight times and hotel addresses. You want your passport, your insurance, your event tickets — all in one place. Protected. Accessible. Ready when you are.
+                You want more than just flight times and hotel addresses. You want your passport, your insurance, your event tickets, all in one place. Protected. Accessible. Ready when you are.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
@@ -218,7 +218,7 @@ export default function TripItAlternativeArticlePage() {
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Choose Folio Wallet</strong> if you want everything in one place — bookings, documents, tickets — all protected with real security.
+                <strong>Choose <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a></strong> if you want everything in one place: bookings, documents, tickets. All protected with real security.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
@@ -230,10 +230,6 @@ export default function TripItAlternativeArticlePage() {
                   One app. Every document. Complete peace of mind.
                 </p>
               </div>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full whitespace-pre-wrap">
-                <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available free on iOS and Android.</a>
-              </p>
             </div>
 
             {/* Back to blog button */}

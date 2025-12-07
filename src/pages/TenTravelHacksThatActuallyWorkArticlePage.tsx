@@ -105,7 +105,7 @@ export default function TenTravelHacksThatActuallyWorkArticlePage() {
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                High season means crowds. Inflated prices. Worn-out staff. The shoulder season—just before or after peak—offers better weather, fewer tourists, and better service.
+                High season means crowds. Inflated prices. Worn-out staff. The shoulder season, just before or after peak, offers better weather, fewer tourists, and better service.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">

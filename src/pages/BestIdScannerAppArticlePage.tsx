@@ -57,11 +57,11 @@ export default function BestIdScannerAppArticlePage() {
             {/* Article content */}
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Your passport. Your driver's license. Your ID card. These documents prove who you are — but they're easy to lose, damage, or forget.
+                Your passport. Your driver's license. Your ID card. These documents prove who you are, but they're easy to lose, damage, or forget.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                A digital copy lives on your phone. Always accessible. Always secure. Modern ID scanner apps turn your smartphone into a professional scanner — no bulky equipment needed.
+                A digital copy lives on your phone. Always accessible. Always secure. Modern ID scanner apps turn your smartphone into a professional scanner, no bulky equipment needed.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
@@ -81,7 +81,7 @@ export default function BestIdScannerAppArticlePage() {
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Many apps also recognize text using OCR. That means you can copy details, search your files, and export data — not just store an image.
+                Many apps also recognize text using OCR. That means you can copy details, search your files, and export data, not just store an image.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
@@ -133,7 +133,7 @@ export default function BestIdScannerAppArticlePage() {
               </h3>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Folio Wallet is a secure ID scanner designed for people who want more than just a scan.
+                <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> is a secure ID scanner designed for people who want more than just a scan.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
@@ -141,20 +141,20 @@ export default function BestIdScannerAppArticlePage() {
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                For travelers, Folio builds a visual trip timeline from your scanned tickets and bookings. Everything in one place.
+                For travelers, <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio</a> builds a visual trip timeline from your scanned tickets and bookings. Everything in one place.
               </p>
 
               <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
                 <li>Scan both sides of an ID and merge into one PDF</li>
                 <li>Automatic OCR reads important information</li>
                 <li>AES-256 encryption and biometric login</li>
-                <li>Zero-knowledge architecture — even we can't access your files</li>
+                <li>Zero-knowledge architecture: even we can't access your files</li>
                 <li>Works offline</li>
                 <li>Syncs across devices when you choose</li>
               </ul>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Folio Wallet is ideal for anyone who wants secure, organized storage for identification documents.
+                <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> is ideal for anyone who wants secure, organized storage for identification documents.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full whitespace-pre-wrap">
@@ -230,7 +230,7 @@ export default function BestIdScannerAppArticlePage() {
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                When you scan a passport, driver's license, or ID card — you're trusting the app with sensitive information.
+                When you scan a passport, driver's license, or ID card, you're trusting the app with sensitive information.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
@@ -238,7 +238,7 @@ export default function BestIdScannerAppArticlePage() {
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Folio Wallet uses zero-knowledge encryption. Even we can't read your files. You control sharing with revocable links. For documents that matter, that's the level of protection you want.
+                <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> uses zero-knowledge encryption. Even we can't read your files. You control sharing with revocable links. For documents that matter, that's the level of protection you want.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
@@ -267,11 +267,11 @@ export default function BestIdScannerAppArticlePage() {
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Having a digital version of your ID or passport stored securely in an app like Folio Wallet ensures you can prove your identity even if the physical document is misplaced.
+                Having a digital version of your ID or passport stored securely in an app like <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> ensures you can prove your identity even if the physical document is misplaced.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Since Folio works offline, you can access your files in airplane mode or in areas without internet. For frequent travelers, it's one of the simplest ways to stay organized and reduce stress during trips.
+                Since <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio</a> works offline, you can access your files in airplane mode or in areas without internet. For frequent travelers, it's one of the simplest ways to stay organized and reduce stress during trips.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
@@ -279,7 +279,7 @@ export default function BestIdScannerAppArticlePage() {
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                For privacy and organization, Folio Wallet offers excellent scanning and storage features in one secure place.
+                For privacy and organization, <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> offers excellent scanning and storage features in one secure place.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
@@ -288,10 +288,6 @@ export default function BestIdScannerAppArticlePage() {
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
                 The best ID scanner app is the one you'll actually use. Download one. Scan your first ID. See how it feels to have everything organized and secure.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full whitespace-pre-wrap">
-                <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available free on iOS and Android.</a> Rated 4.8 stars on the App Store and 4.6 stars on Google Play.
               </p>
             </div>
 

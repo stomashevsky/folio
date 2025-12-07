@@ -162,7 +162,7 @@ export default function TripsyAlternativeArticlePage() {
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                It guarantees peace of mind. Every essential document — from boarding passes to travel insurance — lives in your pocket. Encrypted. Ready when you need it.
+                It guarantees peace of mind. Every essential document, from boarding passes to travel insurance, lives in your pocket. Encrypted. Ready when you need it.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
@@ -242,7 +242,7 @@ export default function TripsyAlternativeArticlePage() {
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Choose Folio Wallet</strong> if you want an app that focuses on security, privacy, and storing every important travel document in one place.
+                <strong>Choose <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a></strong> if you want an app that focuses on security, privacy, and storing every important travel document in one place.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
@@ -250,7 +250,7 @@ export default function TripsyAlternativeArticlePage() {
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Tripsy for planning. Folio Wallet for security. Together, they cover everything.
+                Tripsy for planning. <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> for security. Together, they cover everything.
               </p>
 
               <div className="border-l-2 border-[#e5e5e5] pl-6 pr-0 py-0 relative shrink-0 w-full">
@@ -258,10 +258,6 @@ export default function TripsyAlternativeArticlePage() {
                   Your documents. Your passport. Your tickets. All in one secure place. Ready when you are.
                 </p>
               </div>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full whitespace-pre-wrap">
-                <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available free on iOS and Android.</a>
-              </p>
             </div>
 
             {/* Back to blog button */}

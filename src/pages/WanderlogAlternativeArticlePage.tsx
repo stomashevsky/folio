@@ -95,10 +95,10 @@ export default function WanderlogAlternativeArticlePage() {
               </p>
 
               <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-                <li>Limited document management — focused on itineraries, not passports, IDs, or tickets</li>
-                <li>Basic ticket handling — you still need other apps to retrieve bookings</li>
-                <li>Security concerns — no emphasis on encryption or zero-knowledge storage</li>
-                <li>Complex trips — multiple bookings, flights, or IDs aren't well covered</li>
+                <li>Limited document management: focused on itineraries, not passports, IDs, or tickets</li>
+                <li>Basic ticket handling: you still need other apps to retrieve bookings</li>
+                <li>Security concerns: no emphasis on encryption or zero-knowledge storage</li>
+                <li>Complex trips: multiple bookings, flights, or IDs aren't well covered</li>
               </ul>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
@@ -198,11 +198,11 @@ export default function WanderlogAlternativeArticlePage() {
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Choose Folio Wallet</strong> if you want your tickets, bookings, and documents safe and accessible. All in one place. Protected with real security.
+                <strong>Choose <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a></strong> if you want your tickets, bookings, and documents safe and accessible. All in one place. Protected with real security.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Wanderlog helps you plan. Folio ensures you're ready.
+                Wanderlog helps you plan. <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio</a> ensures you're ready.
               </p>
 
               <div className="border-l-2 border-[#e5e5e5] pl-6 pr-0 py-0 relative shrink-0 w-full">
@@ -210,10 +210,6 @@ export default function WanderlogAlternativeArticlePage() {
                   Your entire trip. Stored in one place. Secure, organized, and easy to share.
                 </p>
               </div>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full whitespace-pre-wrap">
-                <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available free on iOS and Android.</a>
-              </p>
             </div>
 
             {/* Back to blog button */}
