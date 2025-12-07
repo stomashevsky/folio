@@ -9,6 +9,7 @@ import blogWanderlogAlternative from '../assets/images/blog-wanderlog-alternativ
 import blogBestDocumentScanningApps from '../assets/images/blog-best-document-scanning-apps.png'
 import blogBestIdScannerApp from '../assets/images/blog-best-id-scanner-app.png'
 import blogSevenUsefulApps from '../assets/images/blog-7-useful-apps-for-planning-your-trip.png'
+import blogTenTravelHacks from '../assets/images/blog-10-travel-hacks-that-actually-work.png'
 
 export type BlogCategory = 'All' | 'Company' | 'Research' | 'Product' | 'Safety'
 
@@ -135,6 +136,14 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     description: 'From itineraries to expenses: seven apps that make travel planning effortless and keep everything organized.',
     slug: '7-useful-apps-for-planning-your-trip',
     image: blogSevenUsefulApps,
+  },
+  {
+    category: 'Product',
+    date: 'Aug 18, 2025',
+    title: '10 travel hacks that actually work',
+    description: 'Simple, practical tips that make travel smoother. Tested by real travelers. No fluff. Just results.',
+    slug: '10-travel-hacks-that-actually-work',
+    image: blogTenTravelHacks,
   },
   {
     category: 'Product',

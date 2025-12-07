@@ -20,6 +20,7 @@ import WanderlogAlternativeArticlePage from './pages/WanderlogAlternativeArticle
 import BestDocumentScanningAppsArticlePage from './pages/BestDocumentScanningAppsArticlePage'
 import BestIdScannerAppArticlePage from './pages/BestIdScannerAppArticlePage'
 import SevenUsefulAppsForPlanningTripArticlePage from './pages/SevenUsefulAppsForPlanningTripArticlePage'
+import TenTravelHacksThatActuallyWorkArticlePage from './pages/TenTravelHacksThatActuallyWorkArticlePage'
 
 // Fallback handler in case the script in index.html didn't run
 function RedirectHandler() {
@@ -109,6 +110,7 @@ function App() {
         <Route path="/blog/best-document-scanning-apps" element={<BestDocumentScanningAppsArticlePage />} />
         <Route path="/blog/best-id-scanner-app" element={<BestIdScannerAppArticlePage />} />
         <Route path="/blog/7-useful-apps-for-planning-your-trip" element={<SevenUsefulAppsForPlanningTripArticlePage />} />
+        <Route path="/blog/10-travel-hacks-that-actually-work" element={<TenTravelHacksThatActuallyWorkArticlePage />} />
       </Routes>
     </BrowserRouter>
   )

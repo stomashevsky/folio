@@ -150,7 +150,7 @@ This file contains all rules and principles that must be followed for every chan
   - Incorrect: "What Made TripCase Special", "Everything in One Place", "Ready for Your Next Trip"
 - **Article title**: `heading-xl` (48px desktop / 30px mobile, bold, centered)
 - **Article description**: 18px, normal weight, muted-foreground color (#737373)
-- **Section headings (H2)**: 30px, semibold, with border-bottom separator
+- **Section headings (H2)**: 30px, semibold, **no border-bottom** — subheadings within article content should not have borders
 - **Sub-headings (H3)**: 24px, semibold, with top padding (32px)
 - **Paragraphs**: 16px, normal weight, 24px line-height
 - **Blockquotes**: italic style, 2px left border, 24px left padding
