@@ -10,6 +10,10 @@ import GovernmentPage from './pages/GovernmentPage'
 import BlogPage from './pages/BlogPage'
 import AlbanianDiasporaArticlePage from './pages/AlbanianDiasporaArticlePage'
 import TripCaseAlternativeArticlePage from './pages/TripCaseAlternativeArticlePage'
+import TripsyAlternativeArticlePage from './pages/TripsyAlternativeArticlePage'
+import TripItAlternativeArticlePage from './pages/TripItAlternativeArticlePage'
+import Pass2UAlternativeArticlePage from './pages/Pass2UAlternativeArticlePage'
+import AppInTheAirAlternativeArticlePage from './pages/AppInTheAirAlternativeArticlePage'
 
 // Fallback handler in case the script in index.html didn't run
 function RedirectHandler() {
@@ -89,6 +93,10 @@ function App() {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/albanian-diaspora-voter-registration" element={<AlbanianDiasporaArticlePage />} />
         <Route path="/blog/tripcase-alternative" element={<TripCaseAlternativeArticlePage />} />
+        <Route path="/blog/tripsy-alternative-travel-app" element={<TripsyAlternativeArticlePage />} />
+        <Route path="/blog/tripit-alternative" element={<TripItAlternativeArticlePage />} />
+        <Route path="/blog/pass2u-alternative" element={<Pass2UAlternativeArticlePage />} />
+        <Route path="/blog/app-in-the-air-alternative" element={<AppInTheAirAlternativeArticlePage />} />
       </Routes>
     </BrowserRouter>
   )

@@ -4,6 +4,7 @@ import KeepReadingSection from '../components/sections/KeepReadingSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { useNavigate } from 'react-router-dom'
 import { Button } from '../components/ui'
+import { scrollToTop } from '../utils/scrollToTop'
 import blogAlbanianDiaspora from '../assets/images/blog-albanian-diaspora-voter-registration.png'
 
 export default function AlbanianDiasporaArticlePage() {
@@ -137,7 +138,7 @@ export default function AlbanianDiasporaArticlePage() {
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Folio is a next-generation digital identity and credential platform enabling secure, user-controlled identity services across public and private sectors. Folio's digital wallet app is rated 4.6 stars on Google Play and 4.8 stars on the App Store and is used in over 120 countries worldwide.
+                Folio is a next-generation digital identity and credential platform enabling secure, user-controlled identity services across public and private sectors. <a href="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio's digital wallet app is rated 4.6 stars on Google Play and 4.8 stars on the App Store</a> and is used in over 120 countries worldwide.
               </p>
             </div>
 
@@ -145,7 +146,10 @@ export default function AlbanianDiasporaArticlePage() {
             <div className="pt-8">
               <Button
                 variant="secondary"
-                onClick={() => navigate('/blog')}
+                onClick={() => {
+                  navigate('/blog')
+                  setTimeout(() => scrollToTop(), 100)
+                }}
                 iconPosition="left"
                 icon={
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">

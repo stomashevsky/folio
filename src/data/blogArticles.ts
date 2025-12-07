@@ -1,5 +1,9 @@
 import blogAlbanianDiasporaVoterRegistration from '../assets/images/blog-albanian-diaspora-voter-registration.png'
 import blogTripCaseAlternative from '../assets/images/blog-tripcase-alternative.png'
+import blogTripsyAlternative from '../assets/images/blog-tripsy-alternative.png'
+import blogTripItAlternative from '../assets/images/blog-tripit-alternative.png'
+import blogPass2UAlternative from '../assets/images/blog-pass2u-alternative.png'
+import blogAppInTheAirAlternative from '../assets/images/blog-app-in-the-air-alternative.png'
 
 export type BlogCategory = 'All' | 'Company' | 'Research' | 'Product' | 'Safety'
 
@@ -29,7 +33,39 @@ export const sortArticlesByDate = (articles: BlogArticle[]): BlogArticle[] => {
 export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Product',
-    date: 'Aug 31, 2025',
+    date: 'Sep 16, 2025',
+    title: "App in the Air alternative: The best option after shutdown",
+    description: "App in the Air shut down in September 2024. If you relied on it for flight tracking, here's the modern alternative that organizes all your travel documents.",
+    slug: 'app-in-the-air-alternative',
+    image: blogAppInTheAirAlternative,
+  },
+  {
+    category: 'Product',
+    date: 'Sep 10, 2025',
+    title: "Pass2U alternative: A smarter way to organize your passes",
+    description: "Pass2U extends Apple Wallet with custom cards. But what if you need more? Discover an app that organizes all your documents with real security.",
+    slug: 'pass2u-alternative',
+    image: blogPass2UAlternative,
+  },
+  {
+    category: 'Product',
+    date: 'Sep 2, 2025',
+    title: "Tripsy alternative: A smarter way to organize your travels",
+    description: "Looking beyond Tripsy? Discover a travel app that keeps your documents secure, your itinerary clear, and your journey stress-free.",
+    slug: 'tripsy-alternative-travel-app',
+    image: blogTripsyAlternative,
+  },
+  {
+    category: 'Product',
+    date: 'Sep 8, 2025',
+    title: "TripIt alternative: A smarter way to organize your travels",
+    description: "TripIt keeps your itinerary in order. But what if you need more? Discover an app that stores your bookings, documents, and tickets in one secure place.",
+    slug: 'tripit-alternative',
+    image: blogTripItAlternative,
+  },
+  {
+    category: 'Product',
+    date: 'Apr 8, 2025',
     title: "TripCase alternative: The travel organizer you'll love",
     description: "TripCase is gone. Your next trip doesn't have to be chaos. Meet the app that keeps every flight, hotel, and document in one beautiful place.",
     slug: 'tripcase-alternative',

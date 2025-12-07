@@ -5,17 +5,17 @@ import { usePageTitle } from '../hooks/usePageTitle'
 import { useNavigate } from 'react-router-dom'
 import { Button } from '../components/ui'
 import { scrollToTop } from '../utils/scrollToTop'
-import blogTripCaseAlternative from '../assets/images/blog-tripcase-alternative.png'
+import blogPass2UAlternative from '../assets/images/blog-pass2u-alternative.png'
 
-export default function TripCaseAlternativeArticlePage() {
+export default function Pass2UAlternativeArticlePage() {
   const navigate = useNavigate()
   
   usePageTitle({
-    title: "TripCase alternative: The travel organizer you'll love | Folio Blog",
-    description: "TripCase is gone. Your next trip doesn't have to be chaos. Meet the app that keeps every flight, hotel, and document in one beautiful place.",
-    ogTitle: "TripCase alternative: The travel organizer you'll love",
-    ogDescription: "TripCase is gone. Your next trip doesn't have to be chaos. Meet the app that keeps every flight, hotel, and document in one beautiful place.",
-    ogUrl: 'https://folio.id/blog/tripcase-alternative'
+    title: "Pass2U alternative: A smarter way to organize your passes | Folio Blog",
+    description: "Pass2U extends Apple Wallet with custom cards. But what if you need more? Discover an app that organizes all your documents with real security.",
+    ogTitle: "Pass2U alternative: A smarter way to organize your passes",
+    ogDescription: "Pass2U extends Apple Wallet with custom cards. But what if you need more? Discover an app that organizes all your documents with real security.",
+    ogUrl: 'https://folio.id/blog/pass2u-alternative'
   })
 
   return (
@@ -28,17 +28,17 @@ export default function TripCaseAlternativeArticlePage() {
             <div className="flex flex-col gap-4 md:gap-5 items-start relative shrink-0 w-full">
               {/* Meta information */}
               <div className="flex flex-wrap gap-4 items-start justify-center leading-5 relative shrink-0 text-sm w-full">
-                <p className="relative shrink-0 text-[#0a0a0a]">Apr 8, 2025</p>
+                <p className="relative shrink-0 text-[#0a0a0a]">Sep 10, 2025</p>
                 <p className="relative shrink-0 text-[#737373]">Product</p>
               </div>
 
               {/* Title and subtitle */}
               <div className="flex flex-col gap-4 md:gap-6 items-center relative shrink-0 text-center w-full whitespace-pre-wrap">
                 <h1 className="font-bold leading-[36px] md:leading-[48px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px] min-w-full relative shrink-0 w-[min-content]">
-                  TripCase alternative: The travel organizer you'll love
+                  Pass2U alternative: A smarter way to organize your passes
                 </h1>
                 <p className="font-normal leading-7 min-w-full relative shrink-0 text-[#737373] text-lg w-[min-content]">
-                  TripCase is gone. Your next trip doesn't have to be chaos. Meet the app that keeps every flight, hotel, and document in one beautiful place.
+                  Pass2U extends Apple Wallet with custom cards. But what if you need more? Discover an app that organizes all your documents with real security.
                 </p>
               </div>
             </div>
@@ -46,8 +46,8 @@ export default function TripCaseAlternativeArticlePage() {
             {/* Hero image */}
             <div className="w-full">
               <img 
-                src={blogTripCaseAlternative} 
-                alt="Folio Wallet - TripCase alternative" 
+                src={blogPass2UAlternative} 
+                alt="Folio Wallet - Pass2U alternative" 
                 className="w-full rounded-xl aspect-[240/150] object-cover"
               />
             </div>
@@ -55,116 +55,97 @@ export default function TripCaseAlternativeArticlePage() {
             {/* Article content */}
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                For years, TripCase was the go-to app for travelers who wanted to keep their trips organized. It pulled together your flights, hotels, and car rentals into one clean itinerary. Simple. Reliable. Loved by millions.
+                Digital wallets have become essential. Boarding passes. Event tickets. Loyalty cards. Everything fits in your phone.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                On April 1, 2025, TripCase shut down. And if you're reading this, you're probably looking for what comes next.
+                But Apple Wallet has limits. It only supports certain types of passes. That's why many turn to Pass2U — an app that lets you create custom cards.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                We have an answer.
+                What if you want more than custom cards? What if you need real organization, automatic itineraries, and security for all your documents?
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                What made TripCase special
+                What is Pass2U Wallet
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                TripCase understood something important: travel is complicated. But checking your itinerary shouldn't be.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Forward a confirmation email. Get an organized trip. That was the magic.
+                Pass2U Wallet lets iPhone users create and import custom cards into Apple Wallet. Loyalty programs. Coupons. Gift cards. Membership cards. Things Apple Wallet doesn't support by default.
               </p>
 
               <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-                <li>Automatic itinerary building from emails</li>
-                <li>Real-time flight alerts</li>
-                <li>Gate and terminal updates</li>
-                <li>Works on any device</li>
+                <li><strong>Works with Apple Wallet.</strong> Cards appear alongside your other passes.</li>
+                <li><strong>Custom design.</strong> Create passes in your own format.</li>
+                <li><strong>Free to use.</strong> Basic features available at no cost.</li>
               </ul>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Millions of travelers relied on it. Then it was gone.
+                Pass2U extends what Apple Wallet can do. But it still lives within Apple's framework.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                What travelers actually want
+                Why people look for alternatives
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                We listened to thousands of travelers searching for a TripCase alternative. The message was clear.
-              </p>
-
-              <div className="border-l-2 border-[#e5e5e5] pl-6 pr-0 py-0 relative shrink-0 w-full">
-                <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap italic">
-                  "I just want one place for everything. My flights. My hotels. My passport. My tickets. All of it."
-                </p>
-              </div>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Not five apps. One.
-              </p>
-
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Introducing Folio Wallet
-              </h2>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Folio Wallet doesn't just replace TripCase. It reimagines what a travel app can be.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Think of it as a digital wallet for your entire journey. Boarding passes. Hotel confirmations. Event tickets. Even your passport and ID. Everything lives in one beautiful, organized space.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>You add your documents. We do the rest.</strong>
-              </p>
-
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Everything in one place
-              </h2>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Add a PDF. Snap a photo. Forward an email. However you want to add it, Folio handles it.
+                Pass2U solves one problem. But modern life demands more.
               </p>
 
               <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-                <li><strong>Flight tickets</strong> — boarding passes, e-tickets, confirmations</li>
-                <li><strong>Hotels</strong> — reservations and booking details</li>
-                <li><strong>Transportation</strong> — trains, buses, rental cars</li>
-                <li><strong>Events</strong> — concert tickets, museum passes, experiences</li>
-                <li><strong>Documents</strong> — passport, ID, travel insurance</li>
+                <li>No document support — you can't store passports, IDs, or insurance</li>
+                <li>No organization — cards appear in a flat list with no folders or labels</li>
+                <li>No travel features — no automatic itineraries or trip timelines</li>
+                <li>Limited security — Pass2U itself doesn't encrypt your data</li>
+                <li>Manual work — you design each card yourself, one by one</li>
               </ul>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Every document is instantly recognized. Key details are extracted. Your trip timeline builds itself.
+                You need something that goes beyond Apple's ecosystem. Smarter organization. Real security. Everything in one place.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Share with anyone
+                Folio Wallet: A modern Pass2U alternative
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Traveling with family? Planning a group trip? Share a folder with your travel companions. They see the same organized itinerary on their phone. Real-time. Always in sync.
+                Folio Wallet isn't tied to Apple Wallet. It's an independent app that organizes all your documents directly. Passes. Tickets. IDs. Insurance. Travel bookings. Everything.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                No more forwarding emails. No more "Did you get the hotel confirmation?" texts.
+                No manual card creation. No limitations. Just add your documents and Folio handles the rest.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Works offline
+                What makes Folio different
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                No Wi-Fi at the airport? Roaming turned off? Doesn't matter. Your documents are always there when you need them.
+                <strong>Automatic recognition.</strong> Upload a ticket, booking, or ID. Folio extracts the details and creates a clean, organized card. No design work needed.
+              </p>
+
+              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
+                <strong>Travel itineraries.</strong> Forward emails or upload screenshots. Folio builds a structured trip timeline with all your bookings in chronological order.
+              </p>
+
+              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
+                <strong>Labels and folders.</strong> Sort documents into trips, categories, or personal collections. Find anything instantly.
+              </p>
+
+              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
+                <strong>Real security.</strong> End-to-end encryption. Zero-knowledge architecture. Biometric login. SOC 2 and GDPR compliant. Your data stays yours.
+              </p>
+
+              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
+                <strong>Cross-platform.</strong> Works on iOS and Android. Syncs across all your devices.
+              </p>
+
+              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
+                <strong>Secure sharing.</strong> Share folders with family, friends, or colleagues. Control who sees what. Revoke access anytime.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                TripCase vs. Folio Wallet
+                Pass2U vs Folio Wallet
               </h2>
 
               <div className="w-full overflow-x-auto">
@@ -172,63 +153,74 @@ export default function TripCaseAlternativeArticlePage() {
                   <thead>
                     <tr className="border-b border-[#e5e5e5]">
                       <th className="text-left py-4 pr-4 font-semibold text-[#0a0a0a]">Feature</th>
-                      <th className="text-left py-4 pr-4 font-semibold text-[#0a0a0a]">TripCase</th>
+                      <th className="text-left py-4 pr-4 font-semibold text-[#0a0a0a]">Pass2U</th>
                       <th className="text-left py-4 font-semibold text-[#0a0a0a]">Folio Wallet</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="border-b border-[#e5e5e5]">
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Itinerary from emails</td>
-                      <td className="py-4 pr-4 text-[#0a0a0a]">✓</td>
-                      <td className="py-4 text-[#0a0a0a]">✓</td>
+                      <td className="py-4 pr-4 text-[#0a0a0a]">Custom pass creation</td>
+                      <td className="py-4 pr-4 text-[#0a0a0a]">Manual design</td>
+                      <td className="py-4 text-[#0a0a0a]">Automatic recognition</td>
                     </tr>
                     <tr className="border-b border-[#e5e5e5]">
-                      <td className="py-4 pr-4 text-[#0a0a0a]">PDF & photo uploads</td>
-                      <td className="py-4 pr-4 text-[#737373]">Limited</td>
-                      <td className="py-4 text-[#0a0a0a]">✓</td>
+                      <td className="py-4 pr-4 text-[#0a0a0a]">Document types</td>
+                      <td className="py-4 pr-4 text-[#737373]">Passes only</td>
+                      <td className="py-4 text-[#0a0a0a]">All documents</td>
                     </tr>
                     <tr className="border-b border-[#e5e5e5]">
-                      <td className="py-4 pr-4 text-[#0a0a0a]">ID & passport storage</td>
+                      <td className="py-4 pr-4 text-[#0a0a0a]">Travel itineraries</td>
                       <td className="py-4 pr-4 text-[#737373]">—</td>
                       <td className="py-4 text-[#0a0a0a]">✓</td>
                     </tr>
                     <tr className="border-b border-[#e5e5e5]">
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Folder sharing</td>
-                      <td className="py-4 pr-4 text-[#737373]">Followers only</td>
-                      <td className="py-4 text-[#0a0a0a]">Full collaboration</td>
+                      <td className="py-4 pr-4 text-[#0a0a0a]">Labels and folders</td>
+                      <td className="py-4 pr-4 text-[#737373]">—</td>
+                      <td className="py-4 text-[#0a0a0a]">✓</td>
                     </tr>
                     <tr className="border-b border-[#e5e5e5]">
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Offline access</td>
-                      <td className="py-4 pr-4 text-[#0a0a0a]">✓</td>
-                      <td className="py-4 text-[#0a0a0a]">✓</td>
+                      <td className="py-4 pr-4 text-[#0a0a0a]">Security</td>
+                      <td className="py-4 pr-4 text-[#737373]">Basic</td>
+                      <td className="py-4 text-[#0a0a0a]">E2E encryption, SOC 2, GDPR</td>
+                    </tr>
+                    <tr className="border-b border-[#e5e5e5]">
+                      <td className="py-4 pr-4 text-[#0a0a0a]">Cross-platform</td>
+                      <td className="py-4 pr-4 text-[#737373]">iOS only</td>
+                      <td className="py-4 text-[#0a0a0a]">iOS and Android</td>
                     </tr>
                     <tr>
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Auto-organized timeline</td>
-                      <td className="py-4 pr-4 text-[#0a0a0a]">✓</td>
-                      <td className="py-4 text-[#0a0a0a]">✓</td>
+                      <td className="py-4 pr-4 text-[#0a0a0a]">Sharing</td>
+                      <td className="py-4 pr-4 text-[#737373]">—</td>
+                      <td className="py-4 text-[#0a0a0a]">Secure shared folders</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Ready for your next trip
+                Which app should you choose
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                TripCase was great. But the way we travel has changed. We need more than an itinerary. We need a single place for everything.
+                <strong>Choose Pass2U</strong> if you only need to add a few custom cards to Apple Wallet and don't mind the manual work.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Folio Wallet is that place.
+                <strong>Choose Folio Wallet</strong> if you want automatic organization, real security, and a home for all your documents — not just passes.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Download Folio Wallet. Add your first trip. See how it feels to be organized.</strong>
+                Pass2U extends Apple Wallet. Folio replaces the need for it entirely.
               </p>
+
+              <div className="border-l-2 border-[#e5e5e5] pl-6 pr-0 py-0 relative shrink-0 w-full">
+                <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap italic">
+                  Your passes. Your documents. Your life. All in one secure place.
+                </p>
+              </div>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full whitespace-pre-wrap">
-                <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</a> Rated 4.8 stars on the App Store and 4.6 stars on Google Play.
+                <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available free on iOS and Android.</a>
               </p>
             </div>
 
@@ -253,7 +245,7 @@ export default function TripCaseAlternativeArticlePage() {
           </div>
 
         </section>
-        <KeepReadingSection currentArticleSlug="tripcase-alternative" />
+        <KeepReadingSection currentArticleSlug="pass2u-alternative" />
       </main>
       <FooterSection />
     </div>

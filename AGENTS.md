@@ -177,6 +177,28 @@ This file contains all rules and principles that must be followed for every chan
 - **Section spacing**: 48px gap between major sections
 - **Section padding**: 96px vertical padding (desktop), 64px (mobile)
 
+#### 9.6. Blog article images
+
+- **For each new blog article, create a dedicated image file** based on `image-placeholder.png`
+- Image naming convention: `blog-{article-slug}.png` (e.g., `blog-tripsy-alternative.png` for slug `tripsy-alternative-travel-app`)
+- Create the image by copying the placeholder: `cp src/assets/images/image-placeholder.png src/assets/images/blog-{slug}.png`
+- Import the image in both the article page and `blogArticles.ts`:
+  ```typescript
+  import blogTripsyAlternative from '../assets/images/blog-tripsy-alternative.png'
+  ```
+- **Do not use `image-placeholder.png` directly** in blog articles — always create a dedicated image file
+- This allows designers to easily replace placeholder images with actual artwork later
+
+#### 9.7. CTA download links
+
+- **At the end of blog articles**, if there is a mention of Folio Wallet availability on iOS and Android (or App Store/Google Play ratings), **make this text a link to the download section** on the main page
+- Link target: `/#get-the-app` (main page with anchor to "Get The App" section)
+- Link styling: `className="underline hover:text-[#0a0a0a] transition-colors"` for muted text or `className="underline hover:text-[#737373] transition-colors"` for dark text
+- Examples:
+  - `<a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available free on iOS and Android.</a>`
+  - `<a href="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio's digital wallet app is rated 4.6 stars on Google Play and 4.8 stars on the App Store</a>`
+- This encourages readers to download the app after reading the article
+
 ## Workflow
 
 1. **Before creating a new element:**
