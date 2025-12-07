@@ -6,6 +6,7 @@ import blogPass2UAlternative from '../assets/images/blog-pass2u-alternative.png'
 import blogAppInTheAirAlternative from '../assets/images/blog-app-in-the-air-alternative.png'
 import blogCheckMyTripAlternative from '../assets/images/blog-checkmytrip-alternative.png'
 import blogWanderlogAlternative from '../assets/images/blog-wanderlog-alternative.png'
+import blogBestDocumentScanningApps from '../assets/images/blog-best-document-scanning-apps.png'
 
 export type BlogCategory = 'All' | 'Company' | 'Research' | 'Product' | 'Safety'
 
@@ -33,6 +34,14 @@ export const sortArticlesByDate = (articles: BlogArticle[]): BlogArticle[] => {
 }
 
 export const blogArticles: BlogArticle[] = sortArticlesByDate([
+  {
+    category: 'Product',
+    date: 'Nov 12, 2025',
+    title: 'Best document scanning apps for iPhone and Android',
+    description: 'Turn your phone into a powerful scanner. Discover the best apps to scan, store, and organize your documents securely.',
+    slug: 'best-document-scanning-apps',
+    image: blogBestDocumentScanningApps,
+  },
   {
     category: 'Product',
     date: 'Sep 23, 2025',

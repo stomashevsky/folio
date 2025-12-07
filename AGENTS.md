@@ -194,9 +194,11 @@ This file contains all rules and principles that must be followed for every chan
 - **At the end of blog articles**, if there is a mention of Folio Wallet availability on iOS and Android (or App Store/Google Play ratings), **make this text a link to the download section** on the main page
 - Link target: `/#get-the-app` (main page with anchor to "Get The App" section)
 - Link styling: `className="underline hover:text-[#0a0a0a] transition-colors"` for muted text or `className="underline hover:text-[#737373] transition-colors"` for dark text
+- **Keep link text short** — do not include long sentences with ratings inside the link
 - Examples:
-  - `<a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available free on iOS and Android.</a>`
-  - `<a href="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio's digital wallet app is rated 4.6 stars on Google Play and 4.8 stars on the App Store</a>`
+  - Correct: `<a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available free on iOS and Android.</a>`
+  - Incorrect: `<a href="/#get-the-app">Folio Wallet is rated 4.8 stars on the App Store and 4.6 stars on Google Play.</a>` (too long)
+- If you want to mention ratings, put them **outside the link**: `<a href="/#get-the-app">Available free on iOS and Android.</a> Rated 4.8 stars on the App Store.`
 - This encourages readers to download the app after reading the article
 
 ## Workflow
@@ -247,6 +249,21 @@ This file contains all rules and principles that must be followed for every chan
    - When using shadcn components, reference [shadcn/ui documentation](https://ui.shadcn.com/docs/components) and adapt styling to match project design tokens
    - Ensure responsive behavior for desktop (768px max-width) and mobile (672px max-width)
 
+### 10. Navigation and Scroll Behavior
+
+- **All navigation must be instant** — no visible scroll animation when opening pages or navigating to sections
+- When user clicks a link, the target page/section must appear immediately in the correct position
+- This applies to:
+  - Page-to-page navigation (e.g., Blog → Article)
+  - Anchor links (e.g., `/#get-the-app`)
+  - "Back to Blog" buttons
+  - All internal links
+- **Use utilities from `src/utils/`**:
+  - `scrollToTop()` — instant scroll to top of the page
+  - `scrollToSection(id)` — instant scroll to a section by ID
+- **Global scroll handling** is done by `ScrollToTop` component in `src/components/ScrollToTop.tsx`
+- **CSS `scroll-behavior: smooth`** in `index.css` is for user-initiated scrolling only; programmatic navigation must override it with `behavior: 'auto'`
+
 ## Important Reminders
 
 - **Always check Figma** to understand component structure, states, and variants before implementation
@@ -257,4 +274,5 @@ This file contains all rules and principles that must be followed for every chan
 - **Match design specifications** from Figma exactly
 - **For blog articles**: use shared typography components and follow the [Blog Article design](https://www.figma.com/design/6jO5aXk21DqMTeNFCAh9rI/Folio-web?node-id=24536-108142&m=dev)
 - **For missing UI components**: ask first or use [shadcn/ui](https://ui.shadcn.com/docs/components) components adapted to project styling
+- **All navigation must be instant** — no smooth scroll animation when opening pages or sections
 

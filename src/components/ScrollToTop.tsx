@@ -2,11 +2,13 @@ import { useLayoutEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
 /**
- * Component that scrolls to top on every route change
+ * Component that handles scroll on every route change
  * Must be placed inside BrowserRouter
  * 
- * This disables browser's automatic scroll restoration and
- * ensures every page starts at the top (unless restoreScroll is set in location state)
+ * - Disables browser's automatic scroll restoration
+ * - Scrolls to top instantly on route change (no smooth animation)
+ * - If URL has a hash (#section-id), scrolls to that element instantly
+ * - Respects restoreScroll state (e.g., returning to blog page via "Back to Blog")
  */
 export default function ScrollToTop() {
   const location = useLocation()
@@ -29,14 +31,33 @@ export default function ScrollToTop() {
     const originalScrollBehavior = html.style.scrollBehavior
     html.style.scrollBehavior = 'auto'
     
-    // Scroll to top instantly
-    window.scrollTo(0, 0)
+    // If URL has a hash, scroll to that element
+    if (location.hash) {
+      const id = location.hash.slice(1) // Remove the # prefix
+      const element = document.getElementById(id)
+      if (element) {
+        element.scrollIntoView()
+      } else {
+        // Element not found yet, try after DOM is ready
+        requestAnimationFrame(() => {
+          const el = document.getElementById(id)
+          if (el) {
+            el.scrollIntoView()
+          } else {
+            window.scrollTo(0, 0)
+          }
+        })
+      }
+    } else {
+      // No hash, scroll to top
+      window.scrollTo(0, 0)
+    }
     
     // Restore smooth scrolling after a frame
     requestAnimationFrame(() => {
       html.style.scrollBehavior = originalScrollBehavior
     })
-  }, [location.pathname, location.state])
+  }, [location.pathname, location.hash, location.state])
 
   return null
 }

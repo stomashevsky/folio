@@ -17,6 +17,7 @@ import Pass2UAlternativeArticlePage from './pages/Pass2UAlternativeArticlePage'
 import AppInTheAirAlternativeArticlePage from './pages/AppInTheAirAlternativeArticlePage'
 import CheckMyTripAlternativeArticlePage from './pages/CheckMyTripAlternativeArticlePage'
 import WanderlogAlternativeArticlePage from './pages/WanderlogAlternativeArticlePage'
+import BestDocumentScanningAppsArticlePage from './pages/BestDocumentScanningAppsArticlePage'
 
 // Fallback handler in case the script in index.html didn't run
 function RedirectHandler() {
@@ -103,6 +104,7 @@ function App() {
         <Route path="/blog/app-in-the-air-alternative" element={<AppInTheAirAlternativeArticlePage />} />
         <Route path="/blog/checkmytrip-alternative" element={<CheckMyTripAlternativeArticlePage />} />
         <Route path="/blog/wanderlog-alternative" element={<WanderlogAlternativeArticlePage />} />
+        <Route path="/blog/best-document-scanning-apps" element={<BestDocumentScanningAppsArticlePage />} />
       </Routes>
     </BrowserRouter>
   )

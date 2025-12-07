@@ -1,6 +1,6 @@
 /**
- * Utility for scrolling to the top of the page
- * Guarantees scroll unlock and smoothly scrolls to top
+ * Utility for scrolling to the top of the page instantly
+ * Guarantees scroll unlock and scrolls to top without animation
  */
 export function scrollToTop() {
   // Fully unlock scroll on all levels
@@ -15,50 +15,19 @@ export function scrollToTop() {
     root.style.overflow = ''
   }
   
-  // Try multiple scroll methods for maximum compatibility
-  try {
-    // Method 1: window.scrollTo (most standard)
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
-  } catch (error) {
-    // Silently handle scroll errors in production
-    if (import.meta.env.DEV) {
-      // eslint-disable-next-line no-console
-      console.warn('Error with window.scrollTo:', error)
-    }
-  }
+  // Temporarily disable smooth scrolling from CSS
+  const html = document.documentElement
+  const originalScrollBehavior = html.style.scrollBehavior
+  html.style.scrollBehavior = 'auto'
   
-  // Method 2: Direct assignment (fallback for older browsers)
-  try {
-    document.documentElement.scrollTop = 0
-    document.body.scrollTop = 0
-  } catch (error) {
-    // Silently handle scroll errors in production
-    if (import.meta.env.DEV) {
-      // eslint-disable-next-line no-console
-      console.warn('Error with direct scroll assignment:', error)
-    }
-  }
+  // Instant scroll to top
+  window.scrollTo(0, 0)
+  document.documentElement.scrollTop = 0
+  document.body.scrollTop = 0
   
-  // Method 3: Using requestAnimationFrame for smooth animation
+  // Restore original scroll behavior
   requestAnimationFrame(() => {
-    try {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      })
-      // Also set directly as fallback
-      document.documentElement.scrollTop = 0
-      document.body.scrollTop = 0
-    } catch (error) {
-      // Silently handle scroll errors in production
-      if (import.meta.env.DEV) {
-        // eslint-disable-next-line no-console
-        console.warn('Error with requestAnimationFrame scroll:', error)
-      }
-    }
+    html.style.scrollBehavior = originalScrollBehavior
   })
 }
 
