@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import type { BlogArticle } from '../../data/blogArticles'
 import imagePlaceholder from '../../assets/images/image-placeholder.png'
+import { scrollToTop } from '../../utils/scrollToTop'
 
 interface BlogArticleCardProps {
   article: BlogArticle
@@ -8,6 +9,13 @@ interface BlogArticleCardProps {
 }
 
 export default function BlogArticleCard({ article, variant = 'desktop' }: BlogArticleCardProps) {
+  const handleClick = () => {
+    // Scroll to top after navigation
+    setTimeout(() => {
+      scrollToTop()
+    }, 100)
+  }
+
   if (variant === 'mobile') {
     const articleContent = (
       <>
@@ -29,6 +37,7 @@ export default function BlogArticleCard({ article, variant = 'desktop' }: BlogAr
         <Link
           to={`/blog/${article.slug}`}
           className="border-b border-[#e5e5e5] hover:border-neutral-400 flex flex-col gap-5 items-start px-0 py-6 relative shrink-0 w-full transition-colors duration-200 cursor-pointer"
+          onClick={handleClick}
         >
           {articleContent}
         </Link>
@@ -75,6 +84,7 @@ export default function BlogArticleCard({ article, variant = 'desktop' }: BlogAr
       <Link
         to={`/blog/${article.slug}`}
         className="group flex flex-col w-full cursor-pointer"
+        onClick={handleClick}
       >
         {articleContent}
       </Link>
