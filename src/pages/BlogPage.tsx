@@ -138,7 +138,7 @@ export default function BlogPage() {
             <div className="relative shrink-0 w-full">
               <div 
                 ref={scrollContainerRef}
-                className="flex gap-2 items-center justify-start md:justify-center overflow-x-auto overflow-y-hidden -webkit-overflow-scrolling-touch [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+                className="flex gap-[8px] items-center justify-start md:justify-center overflow-x-auto overflow-y-hidden -webkit-overflow-scrolling-touch [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
               >
                 {categories.map((category) => (
                   <Button
@@ -173,7 +173,7 @@ export default function BlogPage() {
               </div>
 
               {/* Mobile Layout - single column list */}
-              <div className="flex md:hidden flex-col gap-6 items-start w-full">
+              <div className="flex md:hidden flex-col gap-[64px] items-start w-full">
                 {visibleArticles.map((article, index) => (
                   <BlogArticleCard key={index} article={article} variant="mobile" />
                 ))}
