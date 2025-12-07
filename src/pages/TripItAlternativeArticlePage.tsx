@@ -5,7 +5,6 @@ import { usePageTitle } from '../hooks/usePageTitle'
 import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useNavigate, Link } from 'react-router-dom'
 import { Button } from '../components/ui'
-import blogTripItAlternative from '../assets/images/blog-tripit-alternative.png'
 
 export default function TripItAlternativeArticlePage() {
   const navigate = useNavigate()
@@ -48,15 +47,6 @@ export default function TripItAlternativeArticlePage() {
                   TripIt keeps your itinerary in order. But what if you need more? Discover an app that stores your bookings, documents, and tickets in one secure place.
                 </p>
               </div>
-            </div>
-
-            {/* Hero image */}
-            <div className="w-full">
-              <img 
-                src={blogTripItAlternative} 
-                alt="Folio Wallet - TripIt alternative" 
-                className="w-full rounded-xl aspect-[3/2] object-cover"
-              />
             </div>
 
             {/* Article content */}

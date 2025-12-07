@@ -5,7 +5,6 @@ import { usePageTitle } from '../hooks/usePageTitle'
 import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useNavigate, Link } from 'react-router-dom'
 import { Button } from '../components/ui'
-import blogTripCaseAlternative from '../assets/images/blog-tripcase-alternative.png'
 
 export default function TripCaseAlternativeArticlePage() {
   const navigate = useNavigate()
@@ -48,15 +47,6 @@ export default function TripCaseAlternativeArticlePage() {
                   TripCase is gone. Your next trip doesn't have to be chaos. Meet the app that keeps every flight, hotel, and document in one beautiful place.
                 </p>
               </div>
-            </div>
-
-            {/* Hero image */}
-            <div className="w-full">
-              <img 
-                src={blogTripCaseAlternative} 
-                alt="Folio Wallet - TripCase alternative" 
-                className="w-full rounded-xl aspect-[3/2] object-cover"
-              />
             </div>
 
             {/* Article content */}

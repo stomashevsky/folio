@@ -5,7 +5,6 @@ import { usePageTitle } from '../hooks/usePageTitle'
 import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useNavigate, Link } from 'react-router-dom'
 import { Button } from '../components/ui'
-import blogPass2UAlternative from '../assets/images/blog-pass2u-alternative.png'
 
 export default function Pass2UAlternativeArticlePage() {
   const navigate = useNavigate()
@@ -48,15 +47,6 @@ export default function Pass2UAlternativeArticlePage() {
                   Pass2U extends Apple Wallet with custom cards. But what if you need more? Discover an app that organizes all your documents with real security.
                 </p>
               </div>
-            </div>
-
-            {/* Hero image */}
-            <div className="w-full">
-              <img 
-                src={blogPass2UAlternative} 
-                alt="Folio Wallet - Pass2U alternative" 
-                className="w-full rounded-xl aspect-[3/2] object-cover"
-              />
             </div>
 
             {/* Article content */}

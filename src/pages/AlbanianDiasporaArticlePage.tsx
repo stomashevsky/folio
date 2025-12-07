@@ -5,7 +5,6 @@ import { usePageTitle } from '../hooks/usePageTitle'
 import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useNavigate, Link } from 'react-router-dom'
 import { Button } from '../components/ui'
-import blogAlbanianDiaspora from '../assets/images/blog-albanian-diaspora-voter-registration.png'
 
 export default function AlbanianDiasporaArticlePage() {
   const navigate = useNavigate()
@@ -48,15 +47,6 @@ export default function AlbanianDiasporaArticlePage() {
                 In a historic milestone for digital democracy, Albania has successfully enfranchised its diaspora to register to vote using a secure digital wallet solution, with over 245,000 Albanians abroad approved to vote in the upcoming May 11 parliamentary elections.
               </p>
             </div>
-            </div>
-
-            {/* Hero image */}
-            <div className="w-full">
-              <img 
-                src={blogAlbanianDiaspora} 
-                alt="Albanian diaspora voter registration with Folio Wallet" 
-                className="w-full rounded-xl aspect-[3/2] object-cover"
-              />
             </div>
 
             {/* Article content */}

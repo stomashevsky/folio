@@ -5,7 +5,6 @@ import { usePageTitle } from '../hooks/usePageTitle'
 import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useNavigate, Link } from 'react-router-dom'
 import { Button } from '../components/ui'
-import blogSevenUsefulApps from '../assets/images/blog-7-useful-apps-for-planning-your-trip.png'
 
 export default function SevenUsefulAppsForPlanningTripArticlePage() {
   const navigate = useNavigate()
@@ -48,15 +47,6 @@ export default function SevenUsefulAppsForPlanningTripArticlePage() {
                   From itineraries to expenses: seven apps that make travel planning effortless and keep everything organized.
                 </p>
               </div>
-            </div>
-
-            {/* Hero image */}
-            <div className="w-full">
-              <img 
-                src={blogSevenUsefulApps} 
-                alt="7 useful apps for planning your trip" 
-                className="w-full rounded-xl aspect-[3/2] object-cover"
-              />
             </div>
 
             {/* Article content */}

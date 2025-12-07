@@ -5,7 +5,6 @@ import { usePageTitle } from '../hooks/usePageTitle'
 import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useNavigate, Link } from 'react-router-dom'
 import { Button } from '../components/ui'
-import blogTripsyAlternative from '../assets/images/blog-tripsy-alternative.png'
 
 export default function TripsyAlternativeArticlePage() {
   const navigate = useNavigate()
@@ -48,15 +47,6 @@ export default function TripsyAlternativeArticlePage() {
                   Looking beyond Tripsy? Discover a travel app that keeps your documents secure, your itinerary clear, and your journey stress-free.
                 </p>
               </div>
-            </div>
-
-            {/* Hero image */}
-            <div className="w-full">
-              <img 
-                src={blogTripsyAlternative} 
-                alt="Folio Wallet - Tripsy alternative" 
-                className="w-full rounded-xl aspect-[3/2] object-cover"
-              />
             </div>
 
             {/* Article content */}

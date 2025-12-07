@@ -5,7 +5,6 @@ import { usePageTitle } from '../hooks/usePageTitle'
 import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useNavigate, Link } from 'react-router-dom'
 import { Button } from '../components/ui'
-import blogTenTravelHacks from '../assets/images/blog-10-travel-hacks-that-actually-work.png'
 
 export default function TenTravelHacksThatActuallyWorkArticlePage() {
   const navigate = useNavigate()
@@ -48,15 +47,6 @@ export default function TenTravelHacksThatActuallyWorkArticlePage() {
                   Simple, practical tips that make travel smoother. Tested by real travelers. No fluff. Just results.
                 </p>
               </div>
-            </div>
-
-            {/* Hero image */}
-            <div className="w-full">
-              <img 
-                src={blogTenTravelHacks} 
-                alt="10 travel hacks that actually work" 
-                className="w-full rounded-xl aspect-[3/2] object-cover"
-              />
             </div>
 
             {/* Article content */}

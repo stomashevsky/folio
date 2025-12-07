@@ -5,7 +5,6 @@ import { usePageTitle } from '../hooks/usePageTitle'
 import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useNavigate, Link } from 'react-router-dom'
 import { Button } from '../components/ui'
-import blogBestIdScannerApp from '../assets/images/blog-best-id-scanner-app.png'
 
 export default function BestIdScannerAppArticlePage() {
   const navigate = useNavigate()
@@ -48,15 +47,6 @@ export default function BestIdScannerAppArticlePage() {
                   Turn your phone into a secure ID scanner. Discover the best apps to digitize, store, and protect your identification documents.
                 </p>
               </div>
-            </div>
-
-            {/* Hero image */}
-            <div className="w-full">
-              <img 
-                src={blogBestIdScannerApp} 
-                alt="Best ID scanner apps" 
-                className="w-full rounded-xl aspect-[3/2] object-cover"
-              />
             </div>
 
             {/* Article content */}

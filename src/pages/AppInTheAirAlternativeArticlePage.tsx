@@ -5,7 +5,6 @@ import { usePageTitle } from '../hooks/usePageTitle'
 import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useNavigate, Link } from 'react-router-dom'
 import { Button } from '../components/ui'
-import blogAppInTheAirAlternative from '../assets/images/blog-app-in-the-air-alternative.png'
 
 export default function AppInTheAirAlternativeArticlePage() {
   const navigate = useNavigate()
@@ -48,15 +47,6 @@ export default function AppInTheAirAlternativeArticlePage() {
                   App in the Air shut down in September 2024. If you relied on it for flight tracking, here's the modern alternative that organizes all your travel documents.
                 </p>
               </div>
-            </div>
-
-            {/* Hero image */}
-            <div className="w-full">
-              <img 
-                src={blogAppInTheAirAlternative} 
-                alt="Folio Wallet - App in the Air alternative" 
-                className="w-full rounded-xl aspect-[3/2] object-cover"
-              />
             </div>
 
             {/* Article content */}

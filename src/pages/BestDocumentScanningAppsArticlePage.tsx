@@ -5,7 +5,6 @@ import { usePageTitle } from '../hooks/usePageTitle'
 import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useNavigate, Link } from 'react-router-dom'
 import { Button } from '../components/ui'
-import blogBestDocumentScanningApps from '../assets/images/blog-best-document-scanning-apps.png'
 
 export default function BestDocumentScanningAppsArticlePage() {
   const navigate = useNavigate()
@@ -48,15 +47,6 @@ export default function BestDocumentScanningAppsArticlePage() {
                   Turn your phone into a powerful scanner. Discover the best apps to scan, store, and organize your documents securely.
                 </p>
               </div>
-            </div>
-
-            {/* Hero image */}
-            <div className="w-full">
-              <img 
-                src={blogBestDocumentScanningApps} 
-                alt="Best document scanning apps" 
-                className="w-full rounded-xl aspect-[3/2] object-cover"
-              />
             </div>
 
             {/* Article content */}

@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { Button, MenuItem } from '../ui'
-import { Logo } from '../ui'
 import { scrollToTop } from '../../utils/scrollToTop'
 import { scrollToSection } from '../../utils/scrollToSection'
-import xIcon from '../../assets/icons/x.svg'
 
 interface MobileMenuProps {
   isOpen: boolean
@@ -84,20 +82,6 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         aria-label="Navigation menu"
       >
         <div className="flex flex-col gap-8 items-start overflow-hidden px-0 py-4 w-full">
-          {/* Header */}
-          <div className="flex items-center justify-between w-full px-6 py-0 relative shrink-0">
-            <Logo size={28} name="Folio Wallet" />
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={handleClose}
-              aria-label="Close menu"
-              className="p-0"
-            >
-              <img src={xIcon} alt="Close" aria-hidden="true" className="w-5 h-5" />
-            </Button>
-          </div>
-
           <div className="flex flex-col gap-8 items-start justify-start w-full px-6 py-0 relative shrink-0">
             {!showSolutionsSubmenu ? (
               /* Main Menu */
