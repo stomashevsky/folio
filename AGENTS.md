@@ -206,7 +206,8 @@ This file contains all rules and principles that must be followed for every chan
 
 #### 9.8. CTA download links
 
-- **Each blog article must have maximum one link** to the app download section (/#get-the-app)
+- **Each blog article must have maximum one link** to the app download section (/#get-the-app) **in the article content text**
+- **This restriction applies only to download links in the article body text**, not to category links in the article meta section (header)
 - If Folio Wallet is mentioned multiple times in an article, only the first or most prominent mention should have a link
 - Remove links from subsequent mentions while keeping the text
 - Link target: `/#get-the-app` (main page with anchor to "Get The App" section)

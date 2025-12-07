@@ -43,19 +43,19 @@ export default function KeepReadingSection({ currentArticleSlug }: KeepReadingSe
           </div>
         </div>
 
-        {/* Mobile Layout: Cards -> Title -> Button */}
-        <div className="flex md:hidden flex-col gap-10 items-start w-full">
-          {/* Cards first - single column with images */}
-          <div className="flex flex-col gap-16 w-full">
-            {filteredArticles.map((article, index) => (
-              <BlogArticleCard key={index} article={article} variant="desktop" />
-            ))}
-          </div>
-          
-          {/* Title after cards */}
-          <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
+        {/* Mobile Layout: Title -> Cards -> Button */}
+        <div className="flex md:hidden flex-col items-start w-full">
+          {/* Title first */}
+          <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px] mb-12">
             Keep reading
           </h2>
+          
+          {/* Cards - single column with mobile variant */}
+          <div className="flex flex-col gap-16 w-full mb-16">
+            {filteredArticles.map((article, index) => (
+              <BlogArticleCard key={index} article={article} variant="mobile" />
+            ))}
+          </div>
         </div>
 
         {/* View all button - centered, for both layouts */}

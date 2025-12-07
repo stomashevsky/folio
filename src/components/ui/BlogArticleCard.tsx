@@ -22,36 +22,50 @@ export default function BlogArticleCard({ article, variant = 'desktop' }: BlogAr
   }
 
   if (variant === 'mobile') {
-    const articleContent = (
+    const coreContent = (
       <>
-        <div className="flex flex-wrap gap-4 items-center leading-5 relative shrink-0 text-sm w-full">
-          <p className="relative shrink-0 text-[#0a0a0a]">{article.category}</p>
-          <p className="relative shrink-0 text-[#737373]">{article.date}</p>
+        {/* Image - with zoom on hover */}
+        <div className="relative rounded-lg w-full aspect-square overflow-hidden">
+          <img 
+            src={article.image || imagePlaceholder} 
+            alt={article.title}
+            className="absolute inset-0 w-full h-full object-cover object-center rounded-lg transition-transform duration-300 ease-out group-hover:scale-105"
+          />
         </div>
+        
+        {/* Title */}
         <p className="font-semibold leading-6 relative shrink-0 text-base w-full whitespace-pre-wrap">
           {article.title}
-        </p>
-        <p className="font-normal leading-5 relative shrink-0 text-sm text-[#0a0a0a] w-full whitespace-pre-wrap line-clamp-2 overflow-ellipsis overflow-hidden">
-          {article.description}
         </p>
       </>
     )
 
-    if (article.slug) {
-      return (
-        <Link
-          to={`/blog/${article.slug}`}
-          className="border-b border-[#e5e5e5] hover:border-neutral-400 flex flex-col gap-5 items-start px-0 py-6 relative shrink-0 w-full transition-colors duration-200 cursor-pointer"
-          onClick={handleClick}
-        >
-          {articleContent}
-        </Link>
-      )
-    }
-
     return (
-      <div className="border-b border-[#e5e5e5] flex flex-col gap-5 items-start px-0 py-6 relative shrink-0 w-full">
-        {articleContent}
+      <div className="group flex flex-col gap-5 items-start px-0 relative shrink-0 w-full">
+        {article.slug ? (
+          <Link
+            to={`/blog/${article.slug}`}
+            className="flex flex-col gap-5 w-full"
+            onClick={handleClick}
+          >
+            {coreContent}
+          </Link>
+        ) : (
+          <div className="flex flex-col gap-5 w-full">
+            {coreContent}
+          </div>
+        )}
+
+        {/* Metadata */}
+        <div className="flex flex-wrap gap-4 items-center leading-5 relative shrink-0 text-sm w-full">
+          <Link 
+            to={`/blog?category=${article.category}`}
+            className="relative shrink-0 text-[#0a0a0a] hover:text-[#737373] hover:underline transition-colors cursor-pointer"
+          >
+            {article.category}
+          </Link>
+          <p className="relative shrink-0 text-[#737373]">{article.date}</p>
+        </div>
       </div>
     )
   }
@@ -74,31 +88,36 @@ export default function BlogArticleCard({ article, variant = 'desktop' }: BlogAr
         <p className="font-semibold leading-6 text-base text-[#0a0a0a] w-full">
           {article.title}
         </p>
-        
-        {/* Metadata */}
-        <div className="flex flex-wrap gap-4 items-center text-sm">
-          <p className="text-[#0a0a0a]">{article.category}</p>
-          <p className="text-[#737373]">{article.date}</p>
-        </div>
       </div>
     </div>
   )
 
-  if (article.slug) {
-    return (
-      <Link
-        to={`/blog/${article.slug}`}
-        className="group flex flex-col w-full cursor-pointer"
-        onClick={handleClick}
-      >
-        {articleContent}
-      </Link>
-    )
-  }
-
   return (
-    <div className="flex flex-col w-full">
-      {articleContent}
+    <div className="group flex flex-col gap-3 w-full">
+      {article.slug ? (
+        <Link
+          to={`/blog/${article.slug}`}
+          className="flex flex-col w-full"
+          onClick={handleClick}
+        >
+          {articleContent}
+        </Link>
+      ) : (
+        <div className="flex flex-col w-full">
+          {articleContent}
+        </div>
+      )}
+
+      {/* Metadata */}
+      <div className="flex flex-wrap gap-4 items-center text-sm">
+        <Link 
+          to={`/blog?category=${article.category}`}
+          className="text-[#0a0a0a] hover:text-[#737373] hover:underline transition-colors cursor-pointer"
+        >
+          {article.category}
+        </Link>
+        <p className="text-[#737373]">{article.date}</p>
+      </div>
     </div>
   )
 }
