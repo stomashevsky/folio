@@ -250,7 +250,7 @@ export default function TripsyAlternativeArticlePage() {
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Tripsy for planning. <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> for security. Together, they cover everything.
+                Tripsy for planning. Folio Wallet for security. Together, they cover everything.
               </p>
 
               <div className="border-l-2 border-[#e5e5e5] pl-6 pr-0 py-0 relative shrink-0 w-full">

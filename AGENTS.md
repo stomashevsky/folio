@@ -206,7 +206,9 @@ This file contains all rules and principles that must be followed for every chan
 
 #### 9.8. CTA download links
 
-- **At the end of blog articles**, if there is a mention of Folio Wallet availability on iOS and Android (or App Store/Google Play ratings), **make this text a link to the download section** on the main page
+- **Each blog article must have maximum one link** to the app download section (/#get-the-app)
+- If Folio Wallet is mentioned multiple times in an article, only the first or most prominent mention should have a link
+- Remove links from subsequent mentions while keeping the text
 - Link target: `/#get-the-app` (main page with anchor to "Get The App" section)
 - Link styling: `className="underline hover:text-[#0a0a0a] transition-colors"` for muted text or `className="underline hover:text-[#737373] transition-colors"` for dark text
 - **Keep link text short** — do not include long sentences with ratings inside the link

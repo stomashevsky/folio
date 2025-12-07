@@ -141,7 +141,7 @@ export default function BestIdScannerAppArticlePage() {
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                For travelers, <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio</a> builds a visual trip timeline from your scanned tickets and bookings. Everything in one place.
+                For travelers, Folio builds a visual trip timeline from your scanned tickets and bookings. Everything in one place.
               </p>
 
               <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
@@ -154,11 +154,7 @@ export default function BestIdScannerAppArticlePage() {
               </ul>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> is ideal for anyone who wants secure, organized storage for identification documents.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full whitespace-pre-wrap">
-                <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Free on iOS and Android.</a>
+                Folio Wallet is ideal for anyone who wants secure, organized storage for identification documents.
               </p>
 
               <h3 className="pt-4 pb-0 px-0 font-semibold leading-7 text-[24px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
@@ -238,7 +234,7 @@ export default function BestIdScannerAppArticlePage() {
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> uses zero-knowledge encryption. Even we can't read your files. You control sharing with revocable links. For documents that matter, that's the level of protection you want.
+                Folio Wallet uses zero-knowledge encryption. Even we can't read your files. You control sharing with revocable links. For documents that matter, that's the level of protection you want.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
@@ -267,11 +263,11 @@ export default function BestIdScannerAppArticlePage() {
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Having a digital version of your ID or passport stored securely in an app like <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> ensures you can prove your identity even if the physical document is misplaced.
+                Having a digital version of your ID or passport stored securely in an app like Folio Wallet ensures you can prove your identity even if the physical document is misplaced.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Since <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio</a> works offline, you can access your files in airplane mode or in areas without internet. For frequent travelers, it's one of the simplest ways to stay organized and reduce stress during trips.
+                Since Folio works offline, you can access your files in airplane mode or in areas without internet. For frequent travelers, it's one of the simplest ways to stay organized and reduce stress during trips.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
@@ -279,7 +275,7 @@ export default function BestIdScannerAppArticlePage() {
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                For privacy and organization, <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> offers excellent scanning and storage features in one secure place.
+                For privacy and organization, Folio Wallet offers excellent scanning and storage features in one secure place.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">

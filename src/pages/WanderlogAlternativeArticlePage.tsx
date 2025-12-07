@@ -202,7 +202,7 @@ export default function WanderlogAlternativeArticlePage() {
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Wanderlog helps you plan. <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio</a> ensures you're ready.
+                Wanderlog helps you plan. Folio ensures you're ready.
               </p>
 
               <div className="border-l-2 border-[#e5e5e5] pl-6 pr-0 py-0 relative shrink-0 w-full">

@@ -129,9 +129,6 @@ export default function BestDocumentScanningAppsArticlePage() {
                 For travelers who want their passports, boarding passes, and hotel bookings in one secure place, Folio is the clear choice.
               </p>
 
-              <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full whitespace-pre-wrap">
-                <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Free on iOS and Android.</a>
-              </p>
 
               <h3 className="pt-4 pb-0 px-0 font-semibold leading-7 text-[24px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
                 Adobe Scan
@@ -210,7 +207,7 @@ export default function BestDocumentScanningAppsArticlePage() {
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> uses zero-knowledge encryption. Even we can't read your files. For documents that matter, that's the level of protection you want.
+                Folio Wallet uses zero-knowledge encryption. Even we can't read your files. For documents that matter, that's the level of protection you want.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
@@ -238,7 +235,7 @@ export default function BestDocumentScanningAppsArticlePage() {
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Apps like <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> are already moving in this direction: turning scanned documents into actionable, organized information.
+                Apps like Folio Wallet are already moving in this direction: turning scanned documents into actionable, organized information.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
@@ -246,7 +243,7 @@ export default function BestDocumentScanningAppsArticlePage() {
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                For secure document storage and travel organization, <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> offers the complete package.
+                For secure document storage and travel organization, Folio Wallet offers the complete package.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">

@@ -169,7 +169,7 @@ export default function TenTravelHacksThatActuallyWorkArticlePage() {
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Store copies of your passports and tickets securely in <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a>. Use Google Maps Offline to download maps before you go. Snap a picture of your luggage for easier claims.
+                Store copies of your passports and tickets securely in Folio Wallet. Use Google Maps Offline to download maps before you go. Snap a picture of your luggage for easier claims.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
