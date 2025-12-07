@@ -212,9 +212,12 @@ This file contains all rules and principles that must be followed for every chan
 - Link target: `/#get-the-app` (main page with anchor to "Get The App" section)
 - Link styling: `className="underline hover:text-[#0a0a0a] transition-colors"` for muted text or `className="underline hover:text-[#737373] transition-colors"` for dark text
 - **Keep link text short** — do not include long sentences with ratings inside the link
+- **Never make large text blocks into links** — only short phrases like "Folio's digital wallet app" or "Available free on iOS and Android" should be linked
 - Examples:
   - Correct: `<a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available free on iOS and Android.</a>`
-  - Incorrect: `<a href="/#get-the-app">Folio Wallet is rated 4.8 stars on the App Store and 4.6 stars on Google Play.</a>` (too long)
+  - Correct: `<a href="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio's digital wallet app</a> is rated 4.6 stars on Google Play and 4.8 stars on the App Store.`
+  - Incorrect: `<a href="/#get-the-app">Folio Wallet is rated 4.8 stars on the App Store and 4.6 stars on Google Play.</a>` (too long, includes ratings)
+  - Incorrect: `<a href="/#get-the-app">Folio's digital wallet app is rated 4.6 stars on Google Play and 4.8 stars on the App Store</a>` (too long, includes ratings)
 - If you want to mention ratings, put them **outside the link**: `<a href="/#get-the-app">Available free on iOS and Android.</a> Rated 4.8 stars on the App Store.`
 - This encourages readers to download the app after reading the article
 

@@ -140,7 +140,7 @@ export default function AlbanianDiasporaArticlePage() {
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Folio is a next-generation digital identity and credential platform enabling secure, user-controlled identity services across public and private sectors. <a href="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio's digital wallet app is rated 4.6 stars on Google Play and 4.8 stars on the App Store</a> and is used in over 120 countries worldwide.
+                Folio is a next-generation digital identity and credential platform enabling secure, user-controlled identity services across public and private sectors. <a href="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio's digital wallet app</a> is rated 4.6 stars on Google Play and 4.8 stars on the App Store and is used in over 120 countries worldwide.
               </p>
             </div>
 
