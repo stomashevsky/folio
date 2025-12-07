@@ -7,6 +7,8 @@ import blogAppInTheAirAlternative from '../assets/images/blog-app-in-the-air-alt
 import blogCheckMyTripAlternative from '../assets/images/blog-checkmytrip-alternative.png'
 import blogWanderlogAlternative from '../assets/images/blog-wanderlog-alternative.png'
 import blogBestDocumentScanningApps from '../assets/images/blog-best-document-scanning-apps.png'
+import blogBestIdScannerApp from '../assets/images/blog-best-id-scanner-app.png'
+import blogSevenUsefulApps from '../assets/images/blog-7-useful-apps-for-planning-your-trip.png'
 
 export type BlogCategory = 'All' | 'Company' | 'Research' | 'Product' | 'Safety'
 
@@ -34,6 +36,14 @@ export const sortArticlesByDate = (articles: BlogArticle[]): BlogArticle[] => {
 }
 
 export const blogArticles: BlogArticle[] = sortArticlesByDate([
+  {
+    category: 'Product',
+    date: 'Nov 21, 2025',
+    title: 'Best ID scanner apps for Android and iPhone',
+    description: 'Turn your phone into a secure ID scanner. Discover the best apps to digitize, store, and protect your identification documents.',
+    slug: 'best-id-scanner-app',
+    image: blogBestIdScannerApp,
+  },
   {
     category: 'Product',
     date: 'Nov 12, 2025',
@@ -117,6 +127,14 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     date: 'Jan 22, 2025',
     title: 'Short and clear engaging headline for an article',
     description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
+  },
+  {
+    category: 'Product',
+    date: 'Aug 20, 2025',
+    title: '7 useful apps for planning your trip',
+    description: 'From itineraries to expenses: seven apps that make travel planning effortless and keep everything organized.',
+    slug: '7-useful-apps-for-planning-your-trip',
+    image: blogSevenUsefulApps,
   },
   {
     category: 'Product',
