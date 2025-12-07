@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom'
 import { useEffect } from 'react'
+import ScrollToTop from './components/ScrollToTop'
 import FolioAppPage from './pages/FolioAppPage'
 import PlaygroundPage from './pages/PlaygroundPage'
 import TicketIssuancePage from './pages/TicketIssuancePage'
@@ -82,6 +83,7 @@ function App() {
   
   return (
     <BrowserRouter basename={basename}>
+      <ScrollToTop />
       <RedirectHandler />
       <Routes>
         <Route path="/" element={<FolioAppPage />} />
