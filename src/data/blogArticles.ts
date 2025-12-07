@@ -30,7 +30,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Product',
     date: 'Aug 31, 2025',
-    title: "TripCase Alternative: The travel organizer you'll love",
+    title: "TripCase alternative: The travel organizer you'll love",
     description: "TripCase is gone. Your next trip doesn't have to be chaos. Meet the app that keeps every flight, hotel, and document in one beautiful place.",
     slug: 'tripcase-alternative',
     image: blogTripCaseAlternative,

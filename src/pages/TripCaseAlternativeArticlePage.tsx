@@ -10,9 +10,9 @@ export default function TripCaseAlternativeArticlePage() {
   const navigate = useNavigate()
   
   usePageTitle({
-    title: "TripCase Alternative: The travel organizer you'll love | Folio Blog",
+    title: "TripCase alternative: The travel organizer you'll love | Folio Blog",
     description: "TripCase is gone. Your next trip doesn't have to be chaos. Meet the app that keeps every flight, hotel, and document in one beautiful place.",
-    ogTitle: "TripCase Alternative: The travel organizer you'll love",
+    ogTitle: "TripCase alternative: The travel organizer you'll love",
     ogDescription: "TripCase is gone. Your next trip doesn't have to be chaos. Meet the app that keeps every flight, hotel, and document in one beautiful place.",
     ogUrl: 'https://folio.id/blog/tripcase-alternative'
   })
@@ -34,7 +34,7 @@ export default function TripCaseAlternativeArticlePage() {
               {/* Title and subtitle */}
               <div className="flex flex-col gap-4 md:gap-6 items-center relative shrink-0 text-center w-full whitespace-pre-wrap">
                 <h1 className="font-bold leading-[36px] md:leading-[48px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px] min-w-full relative shrink-0 w-[min-content]">
-                  TripCase Alternative: The travel organizer you'll love
+                  TripCase alternative: The travel organizer you'll love
                 </h1>
                 <p className="font-normal leading-7 min-w-full relative shrink-0 text-[#737373] text-lg w-[min-content]">
                   TripCase is gone. Your next trip doesn't have to be chaos. Meet the app that keeps every flight, hotel, and document in one beautiful place.
@@ -46,7 +46,7 @@ export default function TripCaseAlternativeArticlePage() {
             <div className="w-full">
               <img 
                 src={blogTripCaseAlternative} 
-                alt="Folio Wallet - TripCase Alternative" 
+                alt="Folio Wallet - TripCase alternative" 
                 className="w-full rounded-xl aspect-[240/150] object-cover"
               />
             </div>
