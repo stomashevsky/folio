@@ -1,18 +1,31 @@
 import { useState, useRef, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import FooterSection from '../components/sections/FooterSection'
 import { Button, BlogArticleCard } from '../components/ui'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { blogArticles, type BlogCategory } from '../data/blogArticles'
+import { restoreBlogScrollPosition } from '../utils/blogScrollPosition'
 
 const categories: BlogCategory[] = ['All', 'Company', 'Research', 'Product', 'Safety']
 
 export default function BlogPage() {
+  const location = useLocation()
   const [selectedCategory, setSelectedCategory] = useState<BlogCategory>('All')
   const [displayedArticles, setDisplayedArticles] = useState(9)
   const [showLeftFade, setShowLeftFade] = useState(false)
   const [showRightFade, setShowRightFade] = useState(false)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
+
+  // Restore scroll position when returning from article via "Back to blog"
+  useEffect(() => {
+    if (location.state?.restoreScroll) {
+      // Small delay to ensure DOM is ready
+      requestAnimationFrame(() => {
+        restoreBlogScrollPosition()
+      })
+    }
+  }, [location.state])
 
   usePageTitle({
     title: 'Blog | Folio Wallet',

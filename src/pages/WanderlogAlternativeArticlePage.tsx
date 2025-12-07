@@ -5,19 +5,19 @@ import { usePageTitle } from '../hooks/usePageTitle'
 import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useNavigate } from 'react-router-dom'
 import { Button } from '../components/ui'
-import blogTripItAlternative from '../assets/images/blog-tripit-alternative.png'
+import blogWanderlogAlternative from '../assets/images/blog-wanderlog-alternative.png'
 
-export default function TripItAlternativeArticlePage() {
+export default function WanderlogAlternativeArticlePage() {
   const navigate = useNavigate()
 
   useScrollToTop()
   
   usePageTitle({
-    title: "TripIt alternative: A smarter way to organize your travels | Folio Blog",
-    description: "TripIt keeps your itinerary in order. But what if you need more? Discover an app that stores your bookings, documents, and tickets in one secure place.",
-    ogTitle: "TripIt alternative: A smarter way to organize your travels",
-    ogDescription: "TripIt keeps your itinerary in order. But what if you need more? Discover an app that stores your bookings, documents, and tickets in one secure place.",
-    ogUrl: 'https://folio.id/blog/tripit-alternative'
+    title: "Wanderlog alternative: The best app for organizing trips and documents | Folio Blog",
+    description: "Wanderlog helps plan activities. But what about your tickets, passports, and bookings? Discover an app that keeps everything secure and organized.",
+    ogTitle: "Wanderlog alternative: The best app for organizing trips and documents",
+    ogDescription: "Wanderlog helps plan activities. But what about your tickets, passports, and bookings? Discover an app that keeps everything secure and organized.",
+    ogUrl: 'https://folio.id/blog/wanderlog-alternative'
   })
 
   return (
@@ -30,17 +30,17 @@ export default function TripItAlternativeArticlePage() {
             <div className="flex flex-col gap-4 md:gap-5 items-start relative shrink-0 w-full">
               {/* Meta information */}
               <div className="flex flex-wrap gap-4 items-start justify-center leading-5 relative shrink-0 text-sm w-full">
-                <p className="relative shrink-0 text-[#0a0a0a]">Sep 8, 2025</p>
+                <p className="relative shrink-0 text-[#0a0a0a]">Sep 23, 2025</p>
                 <p className="relative shrink-0 text-[#737373]">Product</p>
               </div>
 
               {/* Title and subtitle */}
               <div className="flex flex-col gap-4 md:gap-6 items-center relative shrink-0 text-center w-full whitespace-pre-wrap">
                 <h1 className="font-bold leading-[36px] md:leading-[48px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px] min-w-full relative shrink-0 w-[min-content]">
-                  TripIt alternative: A smarter way to organize your travels
+                  Wanderlog alternative: The best app for organizing trips and documents
                 </h1>
                 <p className="font-normal leading-7 min-w-full relative shrink-0 text-[#737373] text-lg w-[min-content]">
-                  TripIt keeps your itinerary in order. But what if you need more? Discover an app that stores your bookings, documents, and tickets in one secure place.
+                  Wanderlog helps plan activities. But what about your tickets, passports, and bookings? Discover an app that keeps everything secure and organized.
                 </p>
               </div>
             </div>
@@ -48,8 +48,8 @@ export default function TripItAlternativeArticlePage() {
             {/* Hero image */}
             <div className="w-full">
               <img 
-                src={blogTripItAlternative} 
-                alt="Folio Wallet - TripIt alternative" 
+                src={blogWanderlogAlternative} 
+                alt="Folio Wallet - Wanderlog alternative" 
                 className="w-full rounded-xl aspect-[240/150] object-cover"
               />
             </div>
@@ -57,97 +57,92 @@ export default function TripItAlternativeArticlePage() {
             {/* Article content */}
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                TripIt has been a trusted name in travel planning for years. Forward your booking emails, get an organized itinerary. Simple.
+                Planning a trip can be exciting. It can also be chaos. Scattered tickets. Endless screenshots. Too many apps.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                But travel has evolved. And so have your needs.
+                That's why many travelers use Wanderlog. It helps create itineraries and keep trips organized.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                You want more than just flight times and hotel addresses. You want your passport, your insurance, your event tickets — all in one place. Protected. Accessible. Ready when you are.
+                But what if you need more than itineraries? What if you need your documents secure and accessible too?
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                What is TripIt
+                What is Wanderlog
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                TripIt is a travel organizer that creates itineraries from your booking confirmations. Forward an email. Get a trip timeline. It's been doing this well for years.
+                Wanderlog is a travel planning app. It simplifies building itineraries by putting everything in one place instead of juggling spreadsheets, maps, and notes.
               </p>
 
               <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-                <li><strong>Automatic itineraries.</strong> Forward booking emails and TripIt organizes them.</li>
-                <li><strong>Calendar sync.</strong> Add trips to your personal calendar.</li>
-                <li><strong>Flight alerts.</strong> Get updates on delays and gate changes (Pro version).</li>
-                <li><strong>Easy sharing.</strong> Send itineraries to travel companions.</li>
+                <li><strong>Collaborative planning.</strong> Friends and family can join to edit and share itineraries.</li>
+                <li><strong>Expense tracking.</strong> Keep tabs on your budget and split costs between group members.</li>
+                <li><strong>Trip inspiration.</strong> Browse guides and ideas shared by other travelers.</li>
               </ul>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                TripIt works. But it was built for a different era of travel.
+                Wanderlog is great for brainstorming activities. It works especially well for group travel where communication and cost sharing matter.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Why people look for alternatives
+                Where Wanderlog falls short
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Modern travelers need more than itinerary management.
+                Wanderlog is popular. But it's not perfect for every traveler.
               </p>
 
               <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-                <li>TripIt doesn't store passports, IDs, or insurance documents</li>
-                <li>Real-time alerts require a paid subscription</li>
-                <li>The interface feels dated compared to newer apps</li>
-                <li>Security and encryption aren't the primary focus</li>
+                <li>Limited document management — focused on itineraries, not passports, IDs, or tickets</li>
+                <li>Basic ticket handling — you still need other apps to retrieve bookings</li>
+                <li>Security concerns — no emphasis on encryption or zero-knowledge storage</li>
+                <li>Complex trips — multiple bookings, flights, or IDs aren't well covered</li>
               </ul>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                You want an app that keeps everything together. Bookings and documents. Itinerary and identity. All protected with modern security.
+                If you need both travel organization and document security, you need something more.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Folio Wallet: A modern TripIt alternative
+                Folio Wallet: A secure alternative
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Folio Wallet is a digital travel wallet. Not just an itinerary manager. A secure home for everything you need when you travel.
+                Folio Wallet is more than a travel planner. It's a digital travel wallet that securely stores your tickets, bookings, and documents alongside everyday essentials like payment cards, loyalty cards, and IDs.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Your flights and hotels. Your train tickets and event passes. Your passport and insurance. All in one beautiful, organized app.
+                Unlike Wanderlog, Folio doesn't just tell you what to do on your trip. It ensures you always have the right document ready at the right moment.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Core features of Folio Wallet
+                Key features of Folio Wallet
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Comprehensive storage.</strong> Keep flights, trains, hotels, event tickets, IDs, passports, and insurance in one app. Not scattered across emails and folders.
+                <strong>All-in-one travel organization.</strong> Store flight tickets, hotel bookings, train passes, event tickets, and more. Everything in one app.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Timeline organization.</strong> Trips are automatically arranged into an easy-to-follow timeline. You always know what comes next.
+                <strong>Timeline view.</strong> Your documents automatically organize into a clear trip timeline. You always know what's next.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Multiple upload options.</strong> Forward emails. Upload PDFs. Snap photos. However you want to add documents, Folio handles it.
+                <strong>Secure document storage.</strong> Save digital copies of passports, visas, insurance papers, and IDs. Protected with AES-256 encryption and zero-knowledge architecture.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Secure sharing.</strong> Create shared folders for family or group trips. Manage who sees what. Revoke access anytime.
+                <strong>Shared travel folders.</strong> Create folders for trips and share them securely with family, friends, or colleagues.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Offline access.</strong> Open all your travel documents without internet. In the air. Underground. Anywhere.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Real security.</strong> AES-256 encryption. Biometric authentication. Zero-knowledge architecture. Your data stays yours.
+                <strong>Offline access.</strong> Open your tickets and bookings without internet. In the air. Underground. Anywhere.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                TripIt vs Folio Wallet
+                Wanderlog vs Folio Wallet
               </h2>
 
               <div className="w-full overflow-x-auto">
@@ -155,50 +150,35 @@ export default function TripItAlternativeArticlePage() {
                   <thead>
                     <tr className="border-b border-[#e5e5e5]">
                       <th className="text-left py-4 pr-4 font-semibold text-[#0a0a0a]">Feature</th>
-                      <th className="text-left py-4 pr-4 font-semibold text-[#0a0a0a]">TripIt</th>
+                      <th className="text-left py-4 pr-4 font-semibold text-[#0a0a0a]">Wanderlog</th>
                       <th className="text-left py-4 font-semibold text-[#0a0a0a]">Folio Wallet</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="border-b border-[#e5e5e5]">
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Itinerary creation</td>
-                      <td className="py-4 pr-4 text-[#0a0a0a]">From forwarded emails</td>
-                      <td className="py-4 text-[#0a0a0a]">Emails, PDFs, or photos</td>
+                      <td className="py-4 pr-4 text-[#0a0a0a]">Trip planning</td>
+                      <td className="py-4 pr-4 text-[#0a0a0a]">Itinerary builder, guides</td>
+                      <td className="py-4 text-[#0a0a0a]">Timeline view, document-based</td>
                     </tr>
                     <tr className="border-b border-[#e5e5e5]">
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Flights and hotels</td>
+                      <td className="py-4 pr-4 text-[#0a0a0a]">Document storage</td>
+                      <td className="py-4 pr-4 text-[#737373]">Notes and PDFs only</td>
+                      <td className="py-4 text-[#0a0a0a]">Passports, IDs, tickets, insurance</td>
+                    </tr>
+                    <tr className="border-b border-[#e5e5e5]">
+                      <td className="py-4 pr-4 text-[#0a0a0a]">Collaboration</td>
+                      <td className="py-4 pr-4 text-[#0a0a0a]">Group planning, budgeting</td>
+                      <td className="py-4 text-[#0a0a0a]">Shared folders with secure access</td>
+                    </tr>
+                    <tr className="border-b border-[#e5e5e5]">
+                      <td className="py-4 pr-4 text-[#0a0a0a]">Expense tracking</td>
                       <td className="py-4 pr-4 text-[#0a0a0a]">✓</td>
-                      <td className="py-4 text-[#0a0a0a]">✓</td>
-                    </tr>
-                    <tr className="border-b border-[#e5e5e5]">
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Trains and buses</td>
-                      <td className="py-4 pr-4 text-[#737373]">Limited</td>
-                      <td className="py-4 text-[#0a0a0a]">✓</td>
-                    </tr>
-                    <tr className="border-b border-[#e5e5e5]">
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Event tickets</td>
-                      <td className="py-4 pr-4 text-[#737373]">Limited</td>
-                      <td className="py-4 text-[#0a0a0a]">✓</td>
-                    </tr>
-                    <tr className="border-b border-[#e5e5e5]">
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Passport and ID storage</td>
-                      <td className="py-4 pr-4 text-[#737373]">—</td>
-                      <td className="py-4 text-[#0a0a0a]">✓</td>
-                    </tr>
-                    <tr className="border-b border-[#e5e5e5]">
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Insurance documents</td>
-                      <td className="py-4 pr-4 text-[#737373]">—</td>
-                      <td className="py-4 text-[#0a0a0a]">✓</td>
+                      <td className="py-4 text-[#737373]">—</td>
                     </tr>
                     <tr className="border-b border-[#e5e5e5]">
                       <td className="py-4 pr-4 text-[#0a0a0a]">Security</td>
                       <td className="py-4 pr-4 text-[#737373]">Basic</td>
-                      <td className="py-4 text-[#0a0a0a]">AES-256, biometric, zero-knowledge</td>
-                    </tr>
-                    <tr className="border-b border-[#e5e5e5]">
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Sharing</td>
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Pro plan</td>
-                      <td className="py-4 text-[#0a0a0a]">Free with access control</td>
+                      <td className="py-4 text-[#0a0a0a]">AES-256, zero-knowledge, SOC 2</td>
                     </tr>
                     <tr>
                       <td className="py-4 pr-4 text-[#0a0a0a]">Offline access</td>
@@ -214,20 +194,20 @@ export default function TripItAlternativeArticlePage() {
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Choose TripIt</strong> if you only need basic itinerary management and don't mind keeping documents elsewhere.
+                <strong>Choose Wanderlog</strong> if your main goal is to plan activities, find inspiration, and split costs with friends.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Choose Folio Wallet</strong> if you want everything in one place — bookings, documents, tickets — all protected with real security.
+                <strong>Choose Folio Wallet</strong> if you want your tickets, bookings, and documents safe and accessible. All in one place. Protected with real security.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Travel is complicated enough. Your travel app shouldn't be.
+                Wanderlog helps you plan. Folio ensures you're ready.
               </p>
 
               <div className="border-l-2 border-[#e5e5e5] pl-6 pr-0 py-0 relative shrink-0 w-full">
                 <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap italic">
-                  One app. Every document. Complete peace of mind.
+                  Your entire trip. Stored in one place. Secure, organized, and easy to share.
                 </p>
               </div>
 
@@ -254,7 +234,7 @@ export default function TripItAlternativeArticlePage() {
           </div>
 
         </section>
-        <KeepReadingSection currentArticleSlug="tripit-alternative" />
+        <KeepReadingSection currentArticleSlug="wanderlog-alternative" />
       </main>
       <FooterSection />
     </div>

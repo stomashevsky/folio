@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import type { BlogArticle } from '../../data/blogArticles'
 import imagePlaceholder from '../../assets/images/image-placeholder.png'
-import { scrollToTop } from '../../utils/scrollToTop'
+import { saveBlogScrollPosition, clearBlogScrollPosition } from '../../utils/blogScrollPosition'
 
 interface BlogArticleCardProps {
   article: BlogArticle
@@ -9,11 +9,16 @@ interface BlogArticleCardProps {
 }
 
 export default function BlogArticleCard({ article, variant = 'desktop' }: BlogArticleCardProps) {
+  const location = useLocation()
+  
   const handleClick = () => {
-    // Scroll to top after navigation
-    setTimeout(() => {
-      scrollToTop()
-    }, 100)
+    // Only save scroll position if navigating from Blog page
+    // If navigating from article page (KeepReadingSection), clear saved position
+    if (location.pathname === '/blog') {
+      saveBlogScrollPosition()
+    } else {
+      clearBlogScrollPosition()
+    }
   }
 
   if (variant === 'mobile') {

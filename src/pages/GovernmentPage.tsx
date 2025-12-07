@@ -256,6 +256,13 @@ export default function GovernmentPage() {
                 </div>
               </div>
             </div>
+            {/* Case Study Button */}
+            <Button
+              variant="outline"
+              onClick={() => navigate('/blog/albanian-diaspora-voter-registration')}
+            >
+              Read case study
+            </Button>
           </div>
         </div>
 
@@ -334,6 +341,13 @@ export default function GovernmentPage() {
                 </div>
               </div>
             </div>
+            {/* Case Study Button */}
+            <Button
+              variant="outline"
+              onClick={() => navigate('/blog/albanian-diaspora-voter-registration')}
+            >
+              Read case study
+            </Button>
           </div>
           <div className="aspect-[240/426.67] relative rounded-2xl shrink-0 w-full">
             <img

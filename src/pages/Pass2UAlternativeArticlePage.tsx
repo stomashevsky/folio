@@ -2,13 +2,15 @@ import Navbar from '../components/Navbar'
 import FooterSection from '../components/sections/FooterSection'
 import KeepReadingSection from '../components/sections/KeepReadingSection'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useNavigate } from 'react-router-dom'
 import { Button } from '../components/ui'
-import { scrollToTop } from '../utils/scrollToTop'
 import blogPass2UAlternative from '../assets/images/blog-pass2u-alternative.png'
 
 export default function Pass2UAlternativeArticlePage() {
   const navigate = useNavigate()
+
+  useScrollToTop()
   
   usePageTitle({
     title: "Pass2U alternative: A smarter way to organize your passes | Folio Blog",
@@ -228,10 +230,7 @@ export default function Pass2UAlternativeArticlePage() {
             <div className="pt-8">
               <Button
                 variant="secondary"
-                onClick={() => {
-                  navigate('/blog')
-                  setTimeout(() => scrollToTop(), 100)
-                }}
+                onClick={() => navigate('/blog', { state: { restoreScroll: true } })}
                 iconPosition="left"
                 icon={
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">

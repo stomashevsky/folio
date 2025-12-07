@@ -2,13 +2,15 @@ import Navbar from '../components/Navbar'
 import FooterSection from '../components/sections/FooterSection'
 import KeepReadingSection from '../components/sections/KeepReadingSection'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useNavigate } from 'react-router-dom'
 import { Button } from '../components/ui'
-import { scrollToTop } from '../utils/scrollToTop'
 import blogAppInTheAirAlternative from '../assets/images/blog-app-in-the-air-alternative.png'
 
 export default function AppInTheAirAlternativeArticlePage() {
   const navigate = useNavigate()
+
+  useScrollToTop()
   
   usePageTitle({
     title: "App in the Air alternative: The best option after shutdown | Folio Blog",
@@ -226,10 +228,7 @@ export default function AppInTheAirAlternativeArticlePage() {
             <div className="pt-8">
               <Button
                 variant="secondary"
-                onClick={() => {
-                  navigate('/blog')
-                  setTimeout(() => scrollToTop(), 100)
-                }}
+                onClick={() => navigate('/blog', { state: { restoreScroll: true } })}
                 iconPosition="left"
                 icon={
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">

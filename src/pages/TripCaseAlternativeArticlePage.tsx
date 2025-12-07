@@ -2,13 +2,15 @@ import Navbar from '../components/Navbar'
 import FooterSection from '../components/sections/FooterSection'
 import KeepReadingSection from '../components/sections/KeepReadingSection'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useNavigate } from 'react-router-dom'
 import { Button } from '../components/ui'
-import { scrollToTop } from '../utils/scrollToTop'
 import blogTripCaseAlternative from '../assets/images/blog-tripcase-alternative.png'
 
 export default function TripCaseAlternativeArticlePage() {
   const navigate = useNavigate()
+
+  useScrollToTop()
   
   usePageTitle({
     title: "TripCase alternative: The travel organizer you'll love | Folio Blog",
@@ -28,7 +30,7 @@ export default function TripCaseAlternativeArticlePage() {
             <div className="flex flex-col gap-4 md:gap-5 items-start relative shrink-0 w-full">
               {/* Meta information */}
               <div className="flex flex-wrap gap-4 items-start justify-center leading-5 relative shrink-0 text-sm w-full">
-                <p className="relative shrink-0 text-[#0a0a0a]">Apr 8, 2025</p>
+                <p className="relative shrink-0 text-[#0a0a0a]">Sep 4, 2025</p>
                 <p className="relative shrink-0 text-[#737373]">Product</p>
               </div>
 
@@ -236,10 +238,7 @@ export default function TripCaseAlternativeArticlePage() {
             <div className="pt-8">
               <Button
                 variant="secondary"
-                onClick={() => {
-                  navigate('/blog')
-                  setTimeout(() => scrollToTop(), 100)
-                }}
+                onClick={() => navigate('/blog', { state: { restoreScroll: true } })}
                 iconPosition="left"
                 icon={
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">

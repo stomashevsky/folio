@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { Button, BlogArticleCard } from '../ui'
 import { blogArticles } from '../../data/blogArticles'
-import { scrollToTop } from '../../utils/scrollToTop'
 
 interface KeepReadingSectionProps {
   currentArticleSlug?: string
@@ -21,9 +20,8 @@ export default function KeepReadingSection({ currentArticleSlug }: KeepReadingSe
 
   const handleViewAll = () => {
     navigate('/blog')
-    setTimeout(() => {
-      scrollToTop()
-    }, 100)
+    // Instant scroll to top
+    window.scrollTo(0, 0)
   }
 
   return (

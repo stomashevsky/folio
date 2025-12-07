@@ -4,6 +4,8 @@ import blogTripsyAlternative from '../assets/images/blog-tripsy-alternative.png'
 import blogTripItAlternative from '../assets/images/blog-tripit-alternative.png'
 import blogPass2UAlternative from '../assets/images/blog-pass2u-alternative.png'
 import blogAppInTheAirAlternative from '../assets/images/blog-app-in-the-air-alternative.png'
+import blogCheckMyTripAlternative from '../assets/images/blog-checkmytrip-alternative.png'
+import blogWanderlogAlternative from '../assets/images/blog-wanderlog-alternative.png'
 
 export type BlogCategory = 'All' | 'Company' | 'Research' | 'Product' | 'Safety'
 
@@ -31,6 +33,22 @@ export const sortArticlesByDate = (articles: BlogArticle[]): BlogArticle[] => {
 }
 
 export const blogArticles: BlogArticle[] = sortArticlesByDate([
+  {
+    category: 'Product',
+    date: 'Sep 23, 2025',
+    title: "Wanderlog alternative: The best app for organizing trips and documents",
+    description: "Wanderlog helps plan activities. But what about your tickets, passports, and bookings? Discover an app that keeps everything secure and organized.",
+    slug: 'wanderlog-alternative',
+    image: blogWanderlogAlternative,
+  },
+  {
+    category: 'Product',
+    date: 'Sep 18, 2025',
+    title: "CheckMyTrip alternative: A smarter way to manage your travel",
+    description: "CheckMyTrip organizes your bookings. But what about your passport, insurance, and event tickets? Discover an app that stores everything in one secure place.",
+    slug: 'checkmytrip-alternative',
+    image: blogCheckMyTripAlternative,
+  },
   {
     category: 'Product',
     date: 'Sep 16, 2025',
@@ -65,7 +83,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   },
   {
     category: 'Product',
-    date: 'Apr 8, 2025',
+    date: 'Sep 4, 2025',
     title: "TripCase alternative: The travel organizer you'll love",
     description: "TripCase is gone. Your next trip doesn't have to be chaos. Meet the app that keeps every flight, hotel, and document in one beautiful place.",
     slug: 'tripcase-alternative',

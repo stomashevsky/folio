@@ -14,6 +14,8 @@ import TripsyAlternativeArticlePage from './pages/TripsyAlternativeArticlePage'
 import TripItAlternativeArticlePage from './pages/TripItAlternativeArticlePage'
 import Pass2UAlternativeArticlePage from './pages/Pass2UAlternativeArticlePage'
 import AppInTheAirAlternativeArticlePage from './pages/AppInTheAirAlternativeArticlePage'
+import CheckMyTripAlternativeArticlePage from './pages/CheckMyTripAlternativeArticlePage'
+import WanderlogAlternativeArticlePage from './pages/WanderlogAlternativeArticlePage'
 
 // Fallback handler in case the script in index.html didn't run
 function RedirectHandler() {
@@ -97,6 +99,8 @@ function App() {
         <Route path="/blog/tripit-alternative" element={<TripItAlternativeArticlePage />} />
         <Route path="/blog/pass2u-alternative" element={<Pass2UAlternativeArticlePage />} />
         <Route path="/blog/app-in-the-air-alternative" element={<AppInTheAirAlternativeArticlePage />} />
+        <Route path="/blog/checkmytrip-alternative" element={<CheckMyTripAlternativeArticlePage />} />
+        <Route path="/blog/wanderlog-alternative" element={<WanderlogAlternativeArticlePage />} />
       </Routes>
     </BrowserRouter>
   )
