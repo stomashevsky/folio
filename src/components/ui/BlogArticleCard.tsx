@@ -58,12 +58,7 @@ export default function BlogArticleCard({ article, variant = 'desktop' }: BlogAr
 
         {/* Metadata */}
         <div className="flex flex-wrap gap-4 items-center leading-5 relative shrink-0 text-sm w-full">
-          <Link 
-            to={`/blog?category=${article.category}`}
-            className="relative shrink-0 text-[#0a0a0a] hover:text-[#737373] hover:underline transition-colors cursor-pointer"
-          >
-            {article.category}
-          </Link>
+          <p className="relative shrink-0 text-[#0a0a0a]">{article.category}</p>
           <p className="relative shrink-0 text-[#737373]">{article.date}</p>
         </div>
       </div>
@@ -110,12 +105,7 @@ export default function BlogArticleCard({ article, variant = 'desktop' }: BlogAr
 
       {/* Metadata */}
       <div className="flex flex-wrap gap-4 items-center text-sm">
-        <Link 
-          to={`/blog?category=${article.category}`}
-          className="text-[#0a0a0a] hover:text-[#737373] hover:underline transition-colors cursor-pointer"
-        >
-          {article.category}
-        </Link>
+        <p className="text-[#0a0a0a]">{article.category}</p>
         <p className="text-[#737373]">{article.date}</p>
       </div>
     </div>
