@@ -21,6 +21,10 @@ import BestDocumentScanningAppsArticlePage from './pages/BestDocumentScanningApp
 import BestIdScannerAppArticlePage from './pages/BestIdScannerAppArticlePage'
 import SevenUsefulAppsForPlanningTripArticlePage from './pages/SevenUsefulAppsForPlanningTripArticlePage'
 import TenTravelHacksThatActuallyWorkArticlePage from './pages/TenTravelHacksThatActuallyWorkArticlePage'
+import BestAppsToPlanTravelArticlePage from './pages/BestAppsToPlanTravelArticlePage'
+import BestEventTicketAppsArticlePage from './pages/BestEventTicketAppsArticlePage'
+import FlightTicketsOnIphoneArticlePage from './pages/FlightTicketsOnIphoneArticlePage'
+import HowToShareTravelPlansArticlePage from './pages/HowToShareTravelPlansArticlePage'
 
 // Fallback handler in case the script in index.html didn't run
 function RedirectHandler() {
@@ -111,6 +115,10 @@ function App() {
         <Route path="/blog/best-id-scanner-app" element={<BestIdScannerAppArticlePage />} />
         <Route path="/blog/7-useful-apps-for-planning-your-trip" element={<SevenUsefulAppsForPlanningTripArticlePage />} />
         <Route path="/blog/10-travel-hacks-that-actually-work" element={<TenTravelHacksThatActuallyWorkArticlePage />} />
+        <Route path="/blog/best-apps-to-plan-travel" element={<BestAppsToPlanTravelArticlePage />} />
+        <Route path="/blog/the-best-event-ticket-apps" element={<BestEventTicketAppsArticlePage />} />
+        <Route path="/blog/flight-tickets-on-iphone" element={<FlightTicketsOnIphoneArticlePage />} />
+        <Route path="/blog/how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app" element={<HowToShareTravelPlansArticlePage />} />
       </Routes>
     </BrowserRouter>
   )

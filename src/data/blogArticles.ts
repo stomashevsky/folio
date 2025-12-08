@@ -10,6 +10,10 @@ import blogBestDocumentScanningApps from '../assets/images/blog-best-document-sc
 import blogBestIdScannerApp from '../assets/images/blog-best-id-scanner-app.png'
 import blogSevenUsefulApps from '../assets/images/blog-7-useful-apps-for-planning-your-trip.png'
 import blogTenTravelHacks from '../assets/images/blog-10-travel-hacks-that-actually-work.png'
+import blogBestAppsToPlanTravel from '../assets/images/blog-best-apps-to-plan-travel.png'
+import blogBestEventTicketApps from '../assets/images/blog-best-event-ticket-apps.png'
+import blogFlightTicketsOnIphone from '../assets/images/blog-flight-tickets-on-iphone.png'
+import blogHowToShareTravelPlans from '../assets/images/blog-how-to-share-travel-plans.png'
 
 export type BlogCategory = 'All' | 'Company' | 'Research' | 'Product' | 'Safety'
 
@@ -136,6 +140,38 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     description: 'From itineraries to expenses: seven apps that make travel planning effortless and keep everything organized.',
     slug: '7-useful-apps-for-planning-your-trip',
     image: blogSevenUsefulApps,
+  },
+  {
+    category: 'Product',
+    date: 'Jul 29, 2025',
+    title: 'Best apps to plan travel: 2025 guide',
+    description: 'Planning a trip can be both exciting and stressful. These apps will save you time, money, and a lot of headaches.',
+    slug: 'best-apps-to-plan-travel',
+    image: blogBestAppsToPlanTravel,
+  },
+  {
+    category: 'Product',
+    date: 'Jul 24, 2025',
+    title: 'The best event ticket apps',
+    description: 'From concerts to conferences: discover apps that keep your tickets organized, accessible, and secure.',
+    slug: 'the-best-event-ticket-apps',
+    image: blogBestEventTicketApps,
+  },
+  {
+    category: 'Product',
+    date: 'Jul 22, 2025',
+    title: 'Flight tickets on iPhone',
+    description: 'Keep your boarding passes organized and accessible. Discover the best ways to manage flight tickets on your iPhone.',
+    slug: 'flight-tickets-on-iphone',
+    image: blogFlightTicketsOnIphone,
+  },
+  {
+    category: 'Product',
+    date: 'Jul 18, 2025',
+    title: 'How to share your travel plans with friends using a trip planner app',
+    description: 'Planning a trip with others? Discover how trip planner apps make it easy to share itineraries, collaborate, and keep everyone in sync.',
+    slug: 'how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app',
+    image: blogHowToShareTravelPlans,
   },
   {
     category: 'Product',
