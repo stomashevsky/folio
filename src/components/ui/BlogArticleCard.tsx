@@ -25,7 +25,7 @@ export default function BlogArticleCard({ article, variant = 'desktop' }: BlogAr
     const coreContent = (
       <>
         {/* Image - with zoom on hover */}
-        <div className="relative rounded-lg w-full aspect-square overflow-hidden">
+        <div className="relative rounded-lg w-full aspect-[3/2] overflow-hidden">
           <img 
             src={article.image || imagePlaceholder} 
             alt={article.title}
@@ -73,8 +73,8 @@ export default function BlogArticleCard({ article, variant = 'desktop' }: BlogAr
   // Desktop variant - vertical card with image
   const articleContent = (
     <div className="flex flex-col gap-4 w-full">
-      {/* Image - aspect ratio 1:1 with zoom on hover */}
-      <div className="relative rounded-lg w-full aspect-square overflow-hidden">
+      {/* Image - aspect ratio 3:2 with zoom on hover */}
+      <div className="relative rounded-lg w-full aspect-[3/2] overflow-hidden">
         <img 
           src={article.image || imagePlaceholder} 
           alt={article.title}
