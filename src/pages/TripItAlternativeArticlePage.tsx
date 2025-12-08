@@ -29,7 +29,7 @@ export default function TripItAlternativeArticlePage() {
             <div className="flex flex-col gap-4 md:gap-5 items-start relative shrink-0 w-full">
               {/* Meta information */}
               <div className="flex flex-wrap gap-4 items-start justify-center leading-5 relative shrink-0 text-sm w-full">
-                <p className="relative shrink-0 text-[#0a0a0a]">Sep 8, 2025</p>
+                <p className="relative shrink-0 text-[#0a0a0a]">Sep 12, 2025</p>
                 <Link 
                   to="/blog?category=Product" 
                   className="relative shrink-0 text-[#737373] hover:text-[#0a0a0a] hover:underline transition-colors cursor-pointer"

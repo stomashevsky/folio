@@ -91,7 +91,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   },
   {
     category: 'Product',
-    date: 'Sep 2, 2025',
+    date: 'Sep 20, 2025',
     title: "Tripsy alternative: A smarter way to organize your travels",
     description: "Looking beyond Tripsy? Discover a travel app that keeps your documents secure, your itinerary clear, and your journey stress-free.",
     slug: 'tripsy-alternative-travel-app',
@@ -99,7 +99,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   },
   {
     category: 'Product',
-    date: 'Sep 8, 2025',
+    date: 'Sep 12, 2025',
     title: "TripIt alternative: A smarter way to organize your travels",
     description: "TripIt keeps your itinerary in order. But what if you need more? Discover an app that stores your bookings, documents, and tickets in one secure place.",
     slug: 'tripit-alternative',
