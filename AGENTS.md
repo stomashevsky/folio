@@ -270,6 +270,8 @@ This file contains all rules and principles that must be followed for every chan
   - H3 for every minor point
   - Headings that could be replaced with bold text or list items
 - **Lists instead of headings**: For feature lists or itemized content, use bullet lists with bold text rather than creating H3 headings for each item
+- **App and product names**: When listing multiple apps, products, or services in an article, use **bold text** at the beginning of paragraphs instead of creating H3 headings for each item. This keeps the article structure clean while still making names easily scannable
+  - Example: `<p><strong>Folio</strong> is a digital wallet app...</p>` instead of `<h3>Folio</h3><p>is a digital wallet app...</p>`
 - **Reference**: Follow the structure style of OpenAI blog articles (e.g., https://openai.com/index/group-chats-in-chatgpt/) which use minimal headings and longer flowing paragraphs
 
 ## Workflow

@@ -30,6 +30,7 @@ import BestGoogleWalletAlternativesArticlePage from './pages/BestGoogleWalletAlt
 import BestAppleWalletAlternativesArticlePage from './pages/BestAppleWalletAlternativesArticlePage'
 import AccessYourDigitalWalletAnywhereArticlePage from './pages/AccessYourDigitalWalletAnywhereArticlePage'
 import HowToAddGiftCardsToYourWalletAppArticlePage from './pages/HowToAddGiftCardsToYourWalletAppArticlePage'
+import BestDigitalWalletAppsInCanadaArticlePage from './pages/BestDigitalWalletAppsInCanadaArticlePage'
 
 // Fallback handler in case the script in index.html didn't run
 function RedirectHandler() {
@@ -129,6 +130,7 @@ function App() {
         <Route path="/blog/how-to-add-gift-cards-to-your-wallet-app" element={<HowToAddGiftCardsToYourWalletAppArticlePage />} />
         <Route path="/blog/best-google-wallet-alternatives" element={<BestGoogleWalletAlternativesArticlePage />} />
         <Route path="/blog/best-apple-wallet-alternatives" element={<BestAppleWalletAlternativesArticlePage />} />
+        <Route path="/blog/best-digital-wallet-apps-in-canada" element={<BestDigitalWalletAppsInCanadaArticlePage />} />
       </Routes>
     </BrowserRouter>
   )

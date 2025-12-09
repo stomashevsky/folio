@@ -19,6 +19,7 @@ import blogBestGoogleWalletAlternatives from '../assets/images/blog-best-google-
 import blogBestAppleWalletAlternatives from '../assets/images/blog-best-apple-wallet-alternatives.png'
 import blogAccessYourDigitalWalletAnywhere from '../assets/images/blog-access-your-digital-wallet-anywhere.png'
 import blogHowToAddGiftCardsToYourWalletApp from '../assets/images/blog-how-to-add-gift-cards-to-your-wallet-app.png'
+import blogBestDigitalWalletAppsInCanada from '../assets/images/blog-best-digital-wallet-apps-in-canada.png'
 
 export type BlogCategory = 'All' | 'Company' | 'Research' | 'Product' | 'Safety'
 
@@ -125,6 +126,14 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     description: 'Albania successfully enfranchised its diaspora to register to vote using a secure digital wallet solution, with over 245,000 Albanians abroad approved to vote in the upcoming parliamentary elections.',
     slug: 'albanian-diaspora-voter-registration',
     image: blogAlbanianDiasporaVoterRegistration,
+  },
+  {
+    category: 'Product',
+    date: 'Nov 27, 2024',
+    title: 'Best digital wallet apps in Canada',
+    description: 'Discover the best digital wallet apps available in Canada. Compare features, security, and use cases to find the perfect wallet for your needs.',
+    slug: 'best-digital-wallet-apps-in-canada',
+    image: blogBestDigitalWalletAppsInCanada,
   },
   {
     category: 'Product',
