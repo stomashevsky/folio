@@ -22,6 +22,9 @@ import blogHowToAddGiftCardsToYourWalletApp from '../assets/images/blog-how-to-a
 import blogBestDigitalWalletAppsInCanada from '../assets/images/blog-best-digital-wallet-apps-in-canada.png'
 import blogDigitalWalletAppsForEveryNeed from '../assets/images/blog-digital-wallet-apps-for-every-need.png'
 import blogHowToSecureYourWalletOnIphone from '../assets/images/blog-how-to-secure-your-wallet-on-iphone.png'
+import blogBestGiftCardWalletApps from '../assets/images/blog-best-gift-card-wallet-apps.png'
+import blogRegularVsDigitalWallets from '../assets/images/blog-regular-vs-digital-wallets.png'
+import blogAreDigitalWalletsSafe from '../assets/images/blog-are-digital-wallets-safe.png'
 
 export type BlogCategory = 'All' | 'Company' | 'Research' | 'Product' | 'Safety'
 
@@ -152,6 +155,30 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     description: 'Learn how to secure your digital wallet on iPhone with built-in features and best practices. Protect your cards, IDs, and documents.',
     slug: 'how-to-secure-your-wallet-on-iphone',
     image: blogHowToSecureYourWalletOnIphone,
+  },
+  {
+    category: 'Product',
+    date: 'Nov 14, 2024',
+    title: 'Best gift card wallet apps for hassle-free digital organization',
+    description: 'Discover the best gift card wallet apps for organizing and securing your cards digitally. Compare features and find the perfect solution for managing gift cards.',
+    slug: 'best-gift-card-wallet-apps',
+    image: blogBestGiftCardWalletApps,
+  },
+  {
+    category: 'Product',
+    date: 'Nov 3, 2024',
+    title: 'Regular vs digital wallets: which is right for you?',
+    description: 'Explore the differences between regular and digital wallets. Compare pros, cons, and features to choose the right wallet solution for your lifestyle.',
+    slug: 'regular-vs-digital-wallets',
+    image: blogRegularVsDigitalWallets,
+  },
+  {
+    category: 'Safety',
+    date: 'Oct 29, 2024',
+    title: 'Are digital wallets safe to use?',
+    description: 'Explore the security features, risks, and best practices of digital wallets. Learn how to protect your digital wallet and recognize secure wallet apps.',
+    slug: 'are-digital-wallets-safe',
+    image: blogAreDigitalWalletsSafe,
   },
   {
     category: 'Product',

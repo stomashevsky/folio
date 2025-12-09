@@ -33,6 +33,9 @@ import HowToAddGiftCardsToYourWalletAppArticlePage from './pages/HowToAddGiftCar
 import BestDigitalWalletAppsInCanadaArticlePage from './pages/BestDigitalWalletAppsInCanadaArticlePage'
 import DigitalWalletAppsForEveryNeedArticlePage from './pages/DigitalWalletAppsForEveryNeedArticlePage'
 import HowToSecureYourWalletOnIphoneArticlePage from './pages/HowToSecureYourWalletOnIphoneArticlePage'
+import BestGiftCardWalletAppsArticlePage from './pages/BestGiftCardWalletAppsArticlePage'
+import RegularVsDigitalWalletsArticlePage from './pages/RegularVsDigitalWalletsArticlePage'
+import AreDigitalWalletsSafeArticlePage from './pages/AreDigitalWalletsSafeArticlePage'
 
 // Fallback handler in case the script in index.html didn't run
 function RedirectHandler() {
@@ -135,6 +138,9 @@ function App() {
         <Route path="/blog/best-digital-wallet-apps-in-canada" element={<BestDigitalWalletAppsInCanadaArticlePage />} />
         <Route path="/blog/digital-wallet-apps-for-every-need" element={<DigitalWalletAppsForEveryNeedArticlePage />} />
         <Route path="/blog/how-to-secure-your-wallet-on-iphone" element={<HowToSecureYourWalletOnIphoneArticlePage />} />
+        <Route path="/blog/best-gift-card-wallet-apps" element={<BestGiftCardWalletAppsArticlePage />} />
+        <Route path="/blog/regular-vs-digital-wallets" element={<RegularVsDigitalWalletsArticlePage />} />
+        <Route path="/blog/are-digital-wallets-safe" element={<AreDigitalWalletsSafeArticlePage />} />
       </Routes>
     </BrowserRouter>
   )
