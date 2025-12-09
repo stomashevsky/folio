@@ -18,6 +18,7 @@ import blogYouCanNowStoreTickets from '../assets/images/blog-you-can-now-store-t
 import blogBestGoogleWalletAlternatives from '../assets/images/blog-best-google-wallet-alternatives.png'
 import blogBestAppleWalletAlternatives from '../assets/images/blog-best-apple-wallet-alternatives.png'
 import blogAccessYourDigitalWalletAnywhere from '../assets/images/blog-access-your-digital-wallet-anywhere.png'
+import blogHowToAddGiftCardsToYourWalletApp from '../assets/images/blog-how-to-add-gift-cards-to-your-wallet-app.png'
 
 export type BlogCategory = 'All' | 'Company' | 'Research' | 'Product' | 'Safety'
 
@@ -126,14 +127,22 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogAlbanianDiasporaVoterRegistration,
   },
   {
+    category: 'Product',
+    date: 'Jan 6, 2025',
+    title: 'How to add gift cards to your wallet app',
+    description: 'Managing physical gift cards can be a hassle. Learn how to store and organize your gift cards digitally in Folio Wallet with simple steps.',
+    slug: 'how-to-add-gift-cards-to-your-wallet-app',
+    image: blogHowToAddGiftCardsToYourWalletApp,
+  },
+  {
     category: 'Company',
-    date: 'Feb 15, 2025',
+    date: 'Feb 15, 2000',
     title: 'Short and clear engaging headline for an article',
     description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
   },
   {
     category: 'Research',
-    date: 'Jan 22, 2025',
+    date: 'Jan 22, 2000',
     title: 'Short and clear engaging headline for an article',
     description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
   },
@@ -219,49 +228,49 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   },
   {
     category: 'Product',
-    date: 'Dec 10, 2024',
+    date: 'Dec 10, 2000',
     title: 'Short and clear engaging headline for an article',
     description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
   },
   {
     category: 'Safety',
-    date: 'Nov 5, 2024',
+    date: 'Nov 5, 2000',
     title: 'Short and clear engaging headline for an article',
     description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
   },
   {
     category: 'Company',
-    date: 'Oct 18, 2024',
+    date: 'Oct 18, 2000',
     title: 'Short and clear engaging headline for an article',
     description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
   },
   {
     category: 'Research',
-    date: 'Sep 3, 2024',
+    date: 'Sep 3, 2000',
     title: 'Short and clear engaging headline for an article',
     description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
   },
   {
     category: 'Product',
-    date: 'Aug 14, 2024',
+    date: 'Aug 14, 2000',
     title: 'Short and clear engaging headline for an article',
     description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
   },
   {
     category: 'Company',
-    date: 'Jul 7, 2024',
+    date: 'Jul 7, 2000',
     title: 'Short and clear engaging headline for an article',
     description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
   },
   {
     category: 'Safety',
-    date: 'Jun 20, 2024',
+    date: 'Jun 20, 2000',
     title: 'Short and clear engaging headline for an article',
     description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
   },
   {
     category: 'Research',
-    date: 'May 12, 2024',
+    date: 'May 12, 2000',
     title: 'Short and clear engaging headline for an article',
     description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
   },
