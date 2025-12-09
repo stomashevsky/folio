@@ -6,17 +6,17 @@ import { useScrollToTop } from '../hooks/useScrollToTop'
 import { useNavigate, Link } from 'react-router-dom'
 import { Button } from '../components/ui'
 
-export default function SevenUsefulAppsForPlanningTripArticlePage() {
+export default function YouCanNowStoreTicketsInFolioWalletArticlePage() {
   const navigate = useNavigate()
 
   useScrollToTop()
   
   usePageTitle({
-    title: '7 useful apps for planning your trip | Folio Blog',
-    description: 'From itineraries to expenses: seven apps that make travel planning effortless and keep everything organized.',
-    ogTitle: '7 useful apps for planning your trip',
-    ogDescription: 'From itineraries to expenses: seven apps that make travel planning effortless and keep everything organized.',
-    ogUrl: 'https://folio.id/blog/7-useful-apps-for-planning-your-trip'
+    title: 'You can now store tickets in Folio Wallet | Folio Blog',
+    description: 'Many of you already use Folio Wallet as a convenient place to keep your cards and personal documents. Now you can also store all of your travel-related paperwork in the same space.',
+    ogTitle: 'You can now store tickets in Folio Wallet',
+    ogDescription: 'Many of you already use Folio Wallet as a convenient place to keep your cards and personal documents. Now you can also store all of your travel-related paperwork in the same space.',
+    ogUrl: 'https://folio.id/blog/you-can-now-store-tickets-in-folio-wallet'
   })
 
   return (
@@ -29,7 +29,7 @@ export default function SevenUsefulAppsForPlanningTripArticlePage() {
             <div className="flex flex-col gap-4 md:gap-5 items-start relative shrink-0 w-full">
               {/* Meta information */}
               <div className="flex flex-wrap gap-4 items-start justify-center leading-5 relative shrink-0 text-sm w-full">
-                <p className="relative shrink-0 text-[#0a0a0a]">Aug 20, 2025</p>
+                <p className="relative shrink-0 text-[#0a0a0a]">Jun 18, 2025</p>
                 <Link 
                   to="/blog?category=Product" 
                   className="relative shrink-0 text-[#737373] hover:text-[#0a0a0a] hover:underline transition-colors cursor-pointer"
@@ -41,10 +41,10 @@ export default function SevenUsefulAppsForPlanningTripArticlePage() {
               {/* Title and subtitle */}
               <div className="flex flex-col gap-4 md:gap-6 items-center relative shrink-0 text-center w-full whitespace-pre-wrap">
                 <h1 className="font-bold leading-[36px] md:leading-[48px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px] min-w-full relative shrink-0 w-[min-content]">
-                  7 useful apps for planning your trip
+                  You can now store tickets in Folio Wallet
                 </h1>
                 <p className="font-normal leading-7 min-w-full relative shrink-0 text-[#737373] text-lg w-[min-content]">
-                  From itineraries to expenses: seven apps that make travel planning effortless and keep everything organized.
+                  Many of you already use Folio Wallet as a convenient place to keep your cards and personal documents. Now you can also store all of your travel-related paperwork in the same space.
                 </p>
               </div>
             </div>
@@ -52,43 +52,35 @@ export default function SevenUsefulAppsForPlanningTripArticlePage() {
             {/* Article content */}
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Planning a trip can feel overwhelming. Tickets to manage. Bookings to track. Routes to optimize. Hidden gems you don't want to miss. The right apps can take the stress out of the process. They help you focus on what matters: enjoying the journey.
+                Folio Wallet has always been about keeping your essential documents organized. Your cards. Your IDs. Your passports. Everything in one secure place. Now it does something new. It organizes your entire trip.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Seven apps that make travel planning simple
+                How it works
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Wanderlog</strong> lets you build your itinerary day by day. Add flights, hotels, restaurants, and attractions. See everything on a map. Wanderlog shows you what's nearby. It helps you optimize your route. Perfect for road trips and city breaks.
+                Add any travel document. Folio Wallet recognizes it and organizes it automatically. Flight tickets. Train tickets. Hotel bookings. Event tickets. Upload a PDF or photo. Forward a confirmation email. Folio Wallet recognizes key details, places each document in the correct order and presents the whole trip at a glance. You can then open any item instantly when you need it.
+              </p>
+
+              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
+                Features to test
+              </h2>
+
+              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
+                <strong>Smart recognition</strong> lets you upload several documents from the same trip. Folio Wallet uses AI to capture key information and build a single timeline. It works even for multi-leg trips or if you've booked tickets for several people. <strong>Timeline view</strong> shows your entire journey on one screen, in chronological order. Key details are visible at a glance. QR codes and barcodes are ready for boarding, event entry, and more. Tap a card to view the original ticket or additional details.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                More than a place to store boarding passes, <strong><a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a></strong> creates a timeline from your tickets, bookings, and events. You always know what's next. It also keeps your passport, ID, and insurance documents safe. Everything you need for travel. In one secure place.
+                <strong>In any language</strong> means you can try uploading tickets issued in a language you don't understand. Folio Wallet extracts the essentials, so nothing gets lost in translation. <strong>Offline access</strong> works even if you've just landed and don't have an internet connection yet. <strong>Shared folders</strong> let you create a folder and share it with friends or family. Everyone sees the same trip information without needing to send endless screenshots.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>TripIt</strong> builds your itinerary automatically when you forward your confirmation emails. Flights, hotels, car rentals. All organized in one master schedule. View it on your phone. Even offline. The premium version adds real-time flight alerts and seat tracking. Perfect for frequent travelers.
+                Coming next: automatic email synchronisation will make each new trip appear by itself as soon as the confirmation email arrives. You can already forward tickets manually. More formats are on the way. At present the app supports images and PDFs. Support for PKPass files is coming soon.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                For travelers who like to customize, <strong>Notion</strong> is a flexible workspace. Turn it into a powerful travel planner. Create databases with calendar and timeline views. Add notes. Embed maps. Share plans with travel companions. Make it work the way you want.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Maps.me</strong> offers excellent offline maps. Walking trails. Detailed city layouts. Maps.me works entirely without mobile data. Perfect for remote areas. Or destinations where roaming is expensive. Your maps are always available.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Google Maps (Offline Mode)</strong> is essential for any traveler. Before your trip, download maps of your destination. Access navigation offline. Your saved pins and directions are always ready. Especially useful for public transport info. Find nearby restaurants on the go. Works when you need it most.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Traveling with friends or family? <strong>Splitwise</strong> keeps track of shared expenses. No messy calculations. Just log expenses. The app calculates who owes what. Simple. Fair. Transparent.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Whether you're a meticulous planner or prefer to go with the flow, these apps cover everything. Building itineraries. Navigating offline. Keeping documents safe. Splitting expenses. Pick a few that fit your style. Combine them. You'll have a smoother, more organized travel experience. More time to enjoy the adventure itself.
+                While developing and testing this feature, several team members used it during their real trips: flights from Genoa to London with passes for London Tech Week, a business trip from Copenhagen to Istanbul and back, and a multi-leg train trip in Europe including Hungary, Austria and Italy. Travel storage is a new area for Folio Wallet, and we hope you find it useful. Send us your feedback, feature requests, or simply successfully created timelines at support@folio.id. We'd love to hear from you. <strong>Download <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a>. Add your first trip. See how it feels to be organized.</strong>
               </p>
             </div>
 
@@ -110,7 +102,7 @@ export default function SevenUsefulAppsForPlanningTripArticlePage() {
           </div>
 
         </section>
-        <KeepReadingSection currentArticleSlug="7-useful-apps-for-planning-your-trip" />
+        <KeepReadingSection currentArticleSlug="you-can-now-store-tickets-in-folio-wallet" />
       </main>
       <FooterSection />
     </div>

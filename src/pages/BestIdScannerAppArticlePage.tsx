@@ -52,31 +52,19 @@ export default function BestIdScannerAppArticlePage() {
             {/* Article content */}
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Your passport. Your driver's license. Your ID card. These documents prove who you are, but they're easy to lose, damage, or forget.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                A digital copy lives on your phone. Always accessible. Always secure. Modern ID scanner apps turn your smartphone into a professional scanner, no bulky equipment needed.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Here are the best ID scanner apps for Android and iPhone.
+                Your passport. Your driver's license. Your ID card. These documents prove who you are, but they're easy to lose, damage, or forget. A digital copy lives on your phone. Always accessible. Always secure. Modern ID scanner apps turn your smartphone into a professional scanner, no bulky equipment needed.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Why you need an ID scanner app
+                Why you need an ID scanner app and what to look for
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                A regular photo of your ID isn't enough. It's blurry. It has glare. It's hard to read.
+                A regular photo of your ID isn't enough. It's blurry. It has glare. It's hard to read. A dedicated scanner app fixes that. It detects edges automatically. Removes shadows. Adjusts lighting. The result looks like it came from a professional scanner. Many apps also recognize text using OCR. That means you can copy details, search your files, and export data, not just store an image.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                A dedicated scanner app fixes that. It detects edges automatically. Removes shadows. Adjusts lighting. The result looks like it came from a professional scanner.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Many apps also recognize text using OCR. That means you can copy details, search your files, and export data, not just store an image.
+                Not all scanner apps are equal. Here's what matters: scan quality with clear, sharp images and accurate edge detection, OCR recognition that converts printed text into editable digital text, security with encryption and biometric access to protect your data, offline mode to scan IDs without internet connection, cross-platform support that works smoothly on both Android and iPhone, organization with labels, folders, and categories for easy management, and file formats that save scans as PDFs or images.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
@@ -84,201 +72,55 @@ export default function BestIdScannerAppArticlePage() {
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                It takes less than a minute. No special equipment needed.
+                It takes less than a minute. No special equipment needed. Install a scanner app like Folio Wallet, Adobe Scan, or Microsoft Lens. Open the app and select "Scan ID" or "Document" mode. Place your ID on a flat surface with good lighting. Avoid reflections. Align the ID within the guide frame. Most apps detect edges automatically. Hold steady and let the app capture the image. Review, crop if needed, then save as PDF or image. Store in an encrypted wallet app like Folio for extra security.
               </p>
-
-              <ol className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-decimal">
-                <li>Install a scanner app like Folio Wallet, Adobe Scan, or Microsoft Lens.</li>
-                <li>Open the app and select "Scan ID" or "Document" mode.</li>
-                <li>Place your ID on a flat surface with good lighting. Avoid reflections.</li>
-                <li>Align the ID within the guide frame. Most apps detect edges automatically.</li>
-                <li>Hold steady and let the app capture the image.</li>
-                <li>Review, crop if needed, then save as PDF or image.</li>
-                <li>Store in an encrypted wallet app like Folio for extra security.</li>
-              </ol>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
                 On iPhone, Notes has basic scanning. On Android, Google Drive offers similar features. But dedicated ID scanner apps deliver better accuracy and organization.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                What to look for
-              </h2>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Not all scanner apps are equal. Here's what matters.
-              </p>
-
-              <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-                <li><strong>Scan quality.</strong> Clear, sharp images with accurate edge detection.</li>
-                <li><strong>OCR recognition.</strong> Converts printed text into editable digital text.</li>
-                <li><strong>Security.</strong> Encryption and biometric access to protect your data.</li>
-                <li><strong>Offline mode.</strong> Scan IDs without internet connection.</li>
-                <li><strong>Cross-platform.</strong> Works smoothly on both Android and iPhone.</li>
-                <li><strong>Organization.</strong> Labels, folders, and categories for easy management.</li>
-                <li><strong>File formats.</strong> Save scans as PDFs or images.</li>
-              </ul>
-
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
                 The best ID scanner apps
               </h2>
 
-              <h3 className="pt-4 pb-0 px-0 font-semibold leading-7 text-[24px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Folio Wallet
-              </h3>
-
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> is a secure ID scanner designed for people who want more than just a scan.
+                <strong><a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a></strong> is a secure ID scanner designed for people who want more than just a scan. Scan any physical ID or upload an existing PDF. The app automatically detects text, dates, and key details. It organizes everything into categories like Identity, Travel, and Health. For travelers, Folio builds a visual trip timeline from your scanned tickets and bookings. Everything in one place. Scan both sides of an ID and merge into one PDF. Automatic OCR reads important information. AES-256 encryption and biometric login. Zero-knowledge architecture means even we can't access your files. Works offline. Syncs across devices when you choose. Folio Wallet is ideal for anyone who wants secure, organized storage for identification documents.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Scan any physical ID or upload an existing PDF. The app automatically detects text, dates, and key details. It organizes everything into categories like Identity, Travel, and Health.
+                <strong>IDScan.net</strong> is professional-grade. It scans and authenticates driver's licenses, passports, and national IDs from more than 200 countries. It reads MRZ codes, barcodes, and embedded chips. Then checks them against databases to confirm validity. Hotels, banks, and event organizers use it for verification. Available for Android and iPhone. Free trial for personal use. Designed for business environments but useful for anyone who wants the highest accuracy.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                For travelers, Folio builds a visual trip timeline from your scanned tickets and bookings. Everything in one place.
-              </p>
-
-              <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-                <li>Scan both sides of an ID and merge into one PDF</li>
-                <li>Automatic OCR reads important information</li>
-                <li>AES-256 encryption and biometric login</li>
-                <li>Zero-knowledge architecture: even we can't access your files</li>
-                <li>Works offline</li>
-                <li>Syncs across devices when you choose</li>
-              </ul>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Folio Wallet is ideal for anyone who wants secure, organized storage for identification documents.
-              </p>
-
-              <h3 className="pt-4 pb-0 px-0 font-semibold leading-7 text-[24px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                IDScan.net
-              </h3>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                IDScan.net is professional-grade. It scans and authenticates driver's licenses, passports, and national IDs from more than 200 countries.
+                <strong>Adobe Scan</strong> transforms paper documents into digital PDFs. It automatically enhances image quality, removes shadows, and supports OCR for accurate text capture. Scan IDs, receipts, and contracts. Organize everything within Adobe Cloud. Clean interface. Files can be renamed, sorted, and shared instantly. Free to download with optional upgrades. Available on Android and iPhone.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                It reads MRZ codes, barcodes, and embedded chips. Then checks them against databases to confirm validity. Hotels, banks, and event organizers use it for verification.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full whitespace-pre-wrap">
-                Available for Android and iPhone. Free trial for personal use. Designed for business environments but useful for anyone who wants the highest accuracy.
-              </p>
-
-              <h3 className="pt-4 pb-0 px-0 font-semibold leading-7 text-[24px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Adobe Scan
-              </h3>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Adobe Scan transforms paper documents into digital PDFs. It automatically enhances image quality, removes shadows, and supports OCR for accurate text capture.
+                <strong>Microsoft Lens</strong> is clean, fast, and deeply integrated with Office. Scan ID cards, passports, or business cards. Convert them into PDFs or editable Word files. Perfect for professionals who already use Microsoft products. Integrates directly with OneDrive. Everything syncs automatically. Completely free. Works offline. Available on Android and iPhone.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Scan IDs, receipts, and contracts. Organize everything within Adobe Cloud. Clean interface. Files can be renamed, sorted, and shared instantly.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full whitespace-pre-wrap">
-                Free to download with optional upgrades. Available on Android and iPhone.
-              </p>
-
-              <h3 className="pt-4 pb-0 px-0 font-semibold leading-7 text-[24px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Microsoft Lens
-              </h3>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Microsoft Lens is clean, fast, and deeply integrated with Office. Scan ID cards, passports, or business cards. Convert them into PDFs or editable Word files.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Perfect for professionals who already use Microsoft products. Integrates directly with OneDrive. Everything syncs automatically.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full whitespace-pre-wrap">
-                Completely free. Works offline. Available on Android and iPhone.
-              </p>
-
-              <h3 className="pt-4 pb-0 px-0 font-semibold leading-7 text-[24px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                CamScanner
-              </h3>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                One of the original scanning apps, CamScanner has refined its craft over years. Fast scanning, smart cropping, and sharp results.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Scan IDs, invoices, and official forms. Automatically detects document edges. Enhances contrast. Saves in PDF format. You can annotate, add watermarks, and organize scans into folders.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full whitespace-pre-wrap">
-                Free tier available. Paid upgrades for cloud storage and multi-user access. Available on Android and iPhone.
+                <strong>CamScanner</strong> is one of the original scanning apps, refined over years. Fast scanning, smart cropping, and sharp results. Scan IDs, invoices, and official forms. Automatically detects document edges. Enhances contrast. Saves in PDF format. You can annotate, add watermarks, and organize scans into folders. Free tier available. Paid upgrades for cloud storage and multi-user access. Available on Android and iPhone.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Security matters
+                Security, tips, and why it matters for travelers
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                When you scan a passport, driver's license, or ID card, you're trusting the app with sensitive information.
+                When you scan a passport, driver's license, or ID card, you're trusting the app with sensitive information. Look for encryption. Check if data stays on your device or uploads to servers. Review the privacy policy before scanning anything confidential. Folio Wallet uses zero-knowledge encryption. Even we can't read your files. You control sharing with revocable links. For documents that matter, that's the level of protection you want. Avoid free apps that display ads or require unnecessary permissions. Choose trusted options with transparent policies and verified security standards.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Look for encryption. Check if data stays on your device or uploads to servers. Review the privacy policy before scanning anything confidential.
+                For better scans, use good lighting with natural light or a bright lamp and avoid shadows and glare. Place your ID on a flat surface with a contrasting background. Keep it flat and centered. Hold your phone steady for sharper results. Use a scanner app instead of just taking a photo. A dedicated app enhances clarity and readability. Always store IDs in an encrypted app or folder. Back up regularly by saving important PDFs to a secure cloud service.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Folio Wallet uses zero-knowledge encryption. Even we can't read your files. You control sharing with revocable links. For documents that matter, that's the level of protection you want.
+                Travelers face situations where ID verification is required. Hotel check-ins. Airport security. Car rentals. Medical emergencies abroad. Having a digital version of your ID or passport stored securely in an app like Folio Wallet ensures you can prove your identity even if the physical document is misplaced. Since Folio works offline, you can access your files in airplane mode or in areas without internet. For frequent travelers, it's one of the simplest ways to stay organized and reduce stress during trips.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Avoid free apps that display ads or require unnecessary permissions. Choose trusted options with transparent policies and verified security standards.
-              </p>
-
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Tips for better scans
-              </h2>
-
-              <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-                <li><strong>Good lighting.</strong> Use natural light or a bright lamp. Avoid shadows and glare.</li>
-                <li><strong>Flat surface.</strong> Place your ID on a contrasting background. Keep it flat and centered.</li>
-                <li><strong>Steady hands.</strong> Hold your phone still for sharper results.</li>
-                <li><strong>Use a scanner app.</strong> Don't just take a photo. A dedicated app enhances clarity and readability.</li>
-                <li><strong>Secure your files.</strong> Always store IDs in an encrypted app or folder.</li>
-                <li><strong>Back up regularly.</strong> Save important PDFs to a secure cloud service.</li>
-              </ul>
-
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Why ID scanners help travelers
-              </h2>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Travelers face situations where ID verification is required. Hotel check-ins. Airport security. Car rentals. Medical emergencies abroad.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Having a digital version of your ID or passport stored securely in an app like Folio Wallet ensures you can prove your identity even if the physical document is misplaced.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Since Folio works offline, you can access your files in airplane mode or in areas without internet. For frequent travelers, it's one of the simplest ways to stay organized and reduce stress during trips.
-              </p>
-
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Choose the right app for you
-              </h2>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                For privacy and organization, Folio Wallet offers excellent scanning and storage features in one secure place.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                For professional or business-level verification, IDScan.net is a powerful choice. For quick everyday use, Adobe Scan, Microsoft Lens, and CamScanner are great options.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                The best ID scanner app is the one you'll actually use. Download one. Scan your first ID. See how it feels to have everything organized and secure.
+                For privacy and organization, Folio Wallet offers excellent scanning and storage features in one secure place. For professional or business-level verification, IDScan.net is a powerful choice. For quick everyday use, Adobe Scan, Microsoft Lens, and CamScanner are great options. The best ID scanner app is the one you'll actually use. Download one. Scan your first ID. See how it feels to have everything organized and secure.
               </p>
             </div>
 

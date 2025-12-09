@@ -52,53 +52,19 @@ export default function CheckMyTripAlternativeArticlePage() {
             {/* Article content */}
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Keeping all your travel details in one place can feel like a challenge. Flights. Hotels. Car rentals. Confirmation emails scattered across your inbox.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                That's why many travelers use CheckMyTrip. It pulls your bookings into a single itinerary view.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                But what if you need more than bookings?
+                Keeping all your travel details in one place can feel like a challenge. Flights. Hotels. Car rentals. Confirmation emails scattered across your inbox. That's why many travelers use CheckMyTrip. It pulls your bookings into a single itinerary view. But what if you need more than bookings?
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                What is CheckMyTrip
+                What is CheckMyTrip and why look for alternatives
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                CheckMyTrip is an itinerary management app. It imports your booking confirmations from airlines, hotels, and car rentals, creating a single view of your journey.
+                CheckMyTrip is an itinerary management app. It imports your booking confirmations from airlines, hotels, and car rentals, creating a single view of your journey. Centralized itinerary shows flights, hotels, and car rentals in one timeline. Multiple import options let you forward emails, enter booking numbers, or add details manually. Notifications send reminders for flights, check-ins, and schedule changes. Cross-platform support is available on iOS and Android. CheckMyTrip is simple and free. But that's also where it ends.
               </p>
 
-              <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-                <li><strong>Centralized itinerary.</strong> Flights, hotels, and car rentals in one timeline.</li>
-                <li><strong>Multiple import options.</strong> Forward emails, enter booking numbers, or add details manually.</li>
-                <li><strong>Notifications.</strong> Reminders for flights, check-ins, and schedule changes.</li>
-                <li><strong>Cross-platform.</strong> Available on iOS and Android.</li>
-              </ul>
-
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                CheckMyTrip is simple and free. But that's also where it ends.
-              </p>
-
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Why people look for alternatives
-              </h2>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                CheckMyTrip handles bookings. But modern travel involves so much more.
-              </p>
-
-              <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-                <li>No document storage: you can't keep passports, IDs, or insurance</li>
-                <li>No event tickets: concerts, museums, conferences aren't supported</li>
-                <li>Limited organization: no folders, labels, or custom notes</li>
-                <li>Basic security: sensitive data deserves stronger protection</li>
-              </ul>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                If you want a single app for everything travel-related, you need something more capable.
+                CheckMyTrip handles bookings. But modern travel involves so much more. No document storage means you can't keep passports, IDs, or insurance. No event tickets means concerts, museums, conferences aren't supported. Limited organization means no folders, labels, or custom notes. Basic security means sensitive data deserves stronger protection. If you want a single app for everything travel-related, you need something more capable.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
@@ -106,39 +72,15 @@ export default function CheckMyTripAlternativeArticlePage() {
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Folio Wallet isn't just an itinerary app. It's a digital travel wallet designed to store everything you need for your journey.
+                Folio Wallet isn't just an itinerary app. It's a digital travel wallet designed to store everything you need for your journey. Flights and hotels. Train tickets and event passes. Passports and insurance. All in one secure place.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Flights and hotels. Train tickets and event passes. Passports and insurance. All in one secure place.
-              </p>
-
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Key features of Folio Wallet
-              </h2>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>All-in-one storage.</strong> Keep flight tickets, hotel bookings, train passes, event tickets, passports, IDs, and insurance. Everything in one app.
+                All-in-one storage keeps flight tickets, hotel bookings, train passes, event tickets, passports, IDs, and insurance. Everything in one app. Automatic recognition extracts key details from uploaded PDFs, photos, or forwarded confirmation emails. Clear travel timeline turns your bookings into a structured trip view. Flights, hotels, and events in chronological order.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Automatic recognition.</strong> Upload PDFs, photos, or forward confirmation emails. Folio extracts the key details automatically.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Clear travel timeline.</strong> Your bookings become a structured trip view. Flights, hotels, and events in chronological order.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Shared folders.</strong> Collaborate with friends, family, or colleagues. Share a trip folder with controlled access.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Offline access.</strong> View your documents without internet. In the air. Underground. Anywhere.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Real security.</strong> AES-256 encryption. Zero-knowledge architecture. GDPR and SOC 2 compliant. Your data stays yours.
+                Shared folders let you collaborate with friends, family, or colleagues. Share a trip folder with controlled access. Offline access means you can view your documents without internet. In the air. Underground. Anywhere. Real security includes AES-256 encryption, zero-knowledge architecture, and GDPR and SOC 2 compliance. Your data stays yours.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
@@ -194,16 +136,8 @@ export default function CheckMyTripAlternativeArticlePage() {
                 </table>
               </div>
 
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Which app should you choose
-              </h2>
-
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Choose CheckMyTrip</strong> if you only need basic itinerary management for flights and hotels.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Choose <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a></strong> if you want everything in one place: bookings, documents, tickets. All protected with real security.
+                Choose CheckMyTrip if you only need basic itinerary management for flights and hotels. Choose <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> if you want everything in one place: bookings, documents, tickets. All protected with real security.
               </p>
 
               <div className="border-l-2 border-[#e5e5e5] pl-6 pr-0 py-0 relative shrink-0 w-full">

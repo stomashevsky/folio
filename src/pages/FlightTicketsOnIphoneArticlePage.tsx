@@ -52,123 +52,31 @@ export default function FlightTicketsOnIphoneArticlePage() {
             {/* Article content */}
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Your flight ticket arrives in an email. You download the PDF. Take a screenshot. Forward it to yourself. By the time you reach the airport, it's buried somewhere on your iPhone.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Your boarding pass should be easy to find. Ready when you need it. Accessible even when you're rushing through security.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Here are the best ways to manage flight tickets on your iPhone.
+                Your flight ticket arrives in an email. You download the PDF. Take a screenshot. Forward it to yourself. By the time you reach the airport, it's buried somewhere on your iPhone. Your boarding pass should be easy to find. Ready when you need it. Accessible even when you're rushing through security.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Apple Wallet: quick access from lock screen
+                The best ways to manage flight tickets on your iPhone
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Apple Wallet is built into your iPhone. Double-tap the side button or power button to access your boarding pass instantly. Even when your phone is locked.
+                <strong>Apple Wallet</strong> is built into your iPhone. Double-tap the side button or power button to access your boarding pass instantly. Even when your phone is locked. Many airlines automatically add boarding passes to Wallet when you check in. It updates automatically with gate changes and flight status. The limitation: not all airlines support Wallet. And if you have tickets from multiple airlines, they're scattered across different apps. There's no search or organization. Best for quick access to compatible airline tickets. Works great if you mostly fly with Wallet-supported airlines.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Many airlines automatically add boarding passes to Wallet when you check in. It updates automatically with gate changes and flight status.
+                Most major airlines have their own apps. United. Delta. American. British Airways. Each stores your tickets for flights booked directly with them. These apps show your upcoming flights, check-in reminders, and gate information. Some even send push notifications for delays and gate changes. The problem: you end up with multiple apps. One for each airline you fly. There's no single place to see all your trips. Searching across apps is tedious. Best if you only fly with one or two airlines and don't mind switching between apps.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                The limitation: not all airlines support Wallet. And if you have tickets from multiple airlines, they're scattered across different apps. There's no search or organization.
+                Your tickets arrive as PDF attachments in email. You can keep them there. Search your inbox when you need one. It works, but it's messy. Tickets mix with other emails. Finding the right one takes time. Opening PDFs isn't fast. And if you're offline, attachments might not load. Best only if you have very few flights and don't mind digging through email.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Best for quick access to compatible airline tickets. Works great if you mostly fly with Wallet-supported airlines.
-              </p>
-
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Airline apps: one app per airline
-              </h2>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Most major airlines have their own apps. United. Delta. American. British Airways. Each stores your tickets for flights booked directly with them.
+                <strong><a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a></strong> accepts flight tickets from anywhere. Forward an email. Upload a PDF. Take a photo. It extracts the details and creates a clean, searchable ticket. All your flights live in one timeline. Past trips. Upcoming journeys. Multiple airlines. You can search by date, airline, or destination. Everything works offline. It also stores your travel documents. Passports. IDs. Hotel bookings. Travel insurance. All in one secure, encrypted place. Best for anyone who wants all flights organized in one place, regardless of which airline or booking site you used.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                These apps show your upcoming flights, check-in reminders, and gate information. Some even send push notifications for delays and gate changes.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                The problem: you end up with multiple apps. One for each airline you fly. There's no single place to see all your trips. Searching across apps is tedious.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Best if you only fly with one or two airlines and don't mind switching between apps.
-              </p>
-
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Email attachments: the scattered approach
-              </h2>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Your tickets arrive as PDF attachments in email. You can keep them there. Search your inbox when you need one.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                It works, but it's messy. Tickets mix with other emails. Finding the right one takes time. Opening PDFs isn't fast. And if you're offline, attachments might not load.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Best only if you have very few flights and don't mind digging through email.
-              </p>
-
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Folio Wallet: organize everything in one place
-              </h2>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> accepts flight tickets from anywhere. Forward an email. Upload a PDF. Take a photo. It extracts the details and creates a clean, searchable ticket.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                All your flights live in one timeline. Past trips. Upcoming journeys. Multiple airlines. You can search by date, airline, or destination. Everything works offline.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                It also stores your travel documents. Passports. IDs. Hotel bookings. Travel insurance. All in one secure, encrypted place.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Best for anyone who wants all flights organized in one place, regardless of which airline or booking site you used.
-              </p>
-
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Why organization matters
-              </h2>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                At the airport, every second counts. You don't want to search through emails or switch between apps. You want your boarding pass ready.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                The right app keeps everything organized. You can see your upcoming flights at a glance. Access past tickets for expense reports. Find any trip quickly.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                It's not just about convenience. It's about peace of mind. Knowing your ticket is there when you need it.
-              </p>
-
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Choose what works for you
-              </h2>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                If you only fly occasionally and always with the same airline, their app might be enough. If you want quick access from your lock screen, use Apple Wallet.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                But if you fly with multiple airlines, need to organize past and future trips, or want everything in one searchable place, <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> gives you that flexibility.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Your iPhone is powerful. Your flight tickets should be just as powerful. Organized. Accessible. Ready when you are.
+                At the airport, every second counts. You don't want to search through emails or switch between apps. You want your boarding pass ready. The right app keeps everything organized. You can see your upcoming flights at a glance. Access past tickets for expense reports. Find any trip quickly. It's not just about convenience. It's about peace of mind. Knowing your ticket is there when you need it. If you only fly occasionally and always with the same airline, their app might be enough. If you want quick access from your lock screen, use Apple Wallet. But if you fly with multiple airlines, need to organize past and future trips, or want everything in one searchable place, <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> gives you that flexibility. Your iPhone is powerful. Your flight tickets should be just as powerful. Organized. Accessible. Ready when you are.
               </p>
             </div>
 

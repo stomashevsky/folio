@@ -14,6 +14,8 @@ import blogBestAppsToPlanTravel from '../assets/images/blog-best-apps-to-plan-tr
 import blogBestEventTicketApps from '../assets/images/blog-best-event-ticket-apps.png'
 import blogFlightTicketsOnIphone from '../assets/images/blog-flight-tickets-on-iphone.png'
 import blogHowToShareTravelPlans from '../assets/images/blog-how-to-share-travel-plans.png'
+import blogYouCanNowStoreTickets from '../assets/images/blog-you-can-now-store-tickets-in-folio-wallet.png'
+import blogBestGoogleWalletAlternatives from '../assets/images/blog-best-google-wallet-alternatives.png'
 
 export type BlogCategory = 'All' | 'Company' | 'Research' | 'Product' | 'Safety'
 
@@ -172,6 +174,22 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     description: 'Planning a trip with others? Discover how trip planner apps make it easy to share itineraries, collaborate, and keep everyone in sync.',
     slug: 'how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app',
     image: blogHowToShareTravelPlans,
+  },
+  {
+    category: 'Product',
+    date: 'Jun 18, 2025',
+    title: 'You can now store tickets in Folio Wallet',
+    description: 'Many of you already use Folio Wallet as a convenient place to keep your cards and personal documents. Now you can also store all of your travel-related paperwork in the same space.',
+    slug: 'you-can-now-store-tickets-in-folio-wallet',
+    image: blogYouCanNowStoreTickets,
+  },
+  {
+    category: 'Product',
+    date: 'May 26, 2025',
+    title: 'The best Google Wallet alternatives you can install in 2025',
+    description: 'Google Wallet is great, but it\'s not enough. Discover seven powerful alternatives that fill Wallet\'s gaps: secure document storage, multi-currency payments, and automated trip planning.',
+    slug: 'best-google-wallet-alternatives',
+    image: blogBestGoogleWalletAlternatives,
   },
   {
     category: 'Product',

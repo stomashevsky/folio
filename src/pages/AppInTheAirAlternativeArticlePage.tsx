@@ -52,51 +52,19 @@ export default function AppInTheAirAlternativeArticlePage() {
             {/* Article content */}
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                For years, App in the Air was the go-to app for frequent flyers. Flight tracking. Real-time notifications. Airport guides. Loyalty program stats.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Then, on September 19, 2024, it shut down.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                If you relied on it to stay organized, you're probably wondering: what now?
+                For years, App in the Air was the go-to app for frequent flyers. Flight tracking. Real-time notifications. Airport guides. Loyalty program stats. Then, on September 19, 2024, it shut down. If you relied on it to stay organized, you're probably wondering: what now?
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                What was App in the Air
+                What was App in the Air and why you need an alternative
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                App in the Air was built for aviation enthusiasts and business travelers. It did a few things really well.
-              </p>
-
-              <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-                <li><strong>Flight tracking.</strong> Real-time updates on delays, boarding times, and gate changes.</li>
-                <li><strong>Push notifications.</strong> Alerts for check-in and boarding.</li>
-                <li><strong>Airport tips.</strong> Information about lounges, restaurants, and Wi-Fi.</li>
-                <li><strong>Flying stats.</strong> Your miles and yearly travel history.</li>
-                <li><strong>Loyalty programs.</strong> Track points across multiple airlines.</li>
-              </ul>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                It was focused on aviation. And for that, it was excellent. But when it shut down, travelers lost access to everything.
-              </p>
-
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Why you need an alternative
-              </h2>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Modern travel is more than flying.
+                App in the Air was built for aviation enthusiasts and business travelers. It did a few things really well. Flight tracking provided real-time updates on delays, boarding times, and gate changes. Push notifications sent alerts for check-in and boarding. Airport tips offered information about lounges, restaurants, and Wi-Fi. Flying stats tracked your miles and yearly travel history. Loyalty programs let you track points across multiple airlines. It was focused on aviation. And for that, it was excellent. But when it shut down, travelers lost access to everything.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                A single trip might include trains, hotels, conference tickets, concert passes, and museum reservations. You need your passport, your insurance, your IDs.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                You don't just need a flight tracker. You need a place for everything.
+                Modern travel is more than flying. A single trip might include trains, hotels, conference tickets, concert passes, and museum reservations. You need your passport, your insurance, your IDs. You don't just need a flight tracker. You need a place for everything.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
@@ -104,39 +72,15 @@ export default function AppInTheAirAlternativeArticlePage() {
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Folio Wallet is a digital travel wallet. It stores all the documents you need for your journey, not just flights.
+                Folio Wallet is a digital travel wallet. It stores all the documents you need for your journey, not just flights. Flights. Trains. Hotels. Event tickets. Passports. Insurance. Everything in one secure app.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Flights. Trains. Hotels. Event tickets. Passports. Insurance. Everything in one secure app.
-              </p>
-
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Key features of Folio Wallet
-              </h2>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Upload any document.</strong> PDFs, photos, or forwarded emails. Folio recognizes dates and details automatically.
+                Upload any document as PDFs, photos, or forwarded emails. Folio recognizes dates and details automatically. Your documents become a clear overview of your journey with an automatic trip timeline. Chronological. Organized. Ready when you need it. Secure ID storage keeps passports, visas, driver's licenses, and insurance cards all in one protected wallet.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Automatic trip timeline.</strong> Your documents become a clear overview of your journey. Chronological. Organized. Ready when you need it.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Secure ID storage.</strong> Passports, visas, driver's licenses, insurance cards. All in one protected wallet.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Enterprise-level security.</strong> AES-256 encryption. Biometric authentication. Zero-knowledge architecture. GDPR and SOC 2 compliant.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Shared folders.</strong> Share trip documents with friends, family, or colleagues. Control access. Revoke anytime.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Offline access.</strong> Your documents stay available even without internet. In the air. Underground. Anywhere.
+                Enterprise-level security includes AES-256 encryption, biometric authentication, zero-knowledge architecture, and GDPR and SOC 2 compliance. Shared folders let you share trip documents with friends, family, or colleagues. Control access. Revoke anytime. Offline access means your documents stay available even without internet. In the air. Underground. Anywhere.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
@@ -192,20 +136,8 @@ export default function AppInTheAirAlternativeArticlePage() {
                 </table>
               </div>
 
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Which app should you choose
-              </h2>
-
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                App in the Air was great for what it did. But it's gone.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Choose <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a></strong> if you want more than flight tracking. If you want a home for every travel document: flights, hotels, tickets, passports, insurance. All protected with real security.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Travel has evolved. Your travel app should too.
+                App in the Air was great for what it did. But it's gone. Choose <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> if you want more than flight tracking. If you want a home for every travel document: flights, hotels, tickets, passports, insurance. All protected with real security. Travel has evolved. Your travel app should too.
               </p>
 
               <div className="border-l-2 border-[#e5e5e5] pl-6 pr-0 py-0 relative shrink-0 w-full">

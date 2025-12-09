@@ -25,6 +25,8 @@ import BestAppsToPlanTravelArticlePage from './pages/BestAppsToPlanTravelArticle
 import BestEventTicketAppsArticlePage from './pages/BestEventTicketAppsArticlePage'
 import FlightTicketsOnIphoneArticlePage from './pages/FlightTicketsOnIphoneArticlePage'
 import HowToShareTravelPlansArticlePage from './pages/HowToShareTravelPlansArticlePage'
+import YouCanNowStoreTicketsInFolioWalletArticlePage from './pages/YouCanNowStoreTicketsInFolioWalletArticlePage'
+import BestGoogleWalletAlternativesArticlePage from './pages/BestGoogleWalletAlternativesArticlePage'
 
 // Fallback handler in case the script in index.html didn't run
 function RedirectHandler() {
@@ -119,6 +121,8 @@ function App() {
         <Route path="/blog/the-best-event-ticket-apps" element={<BestEventTicketAppsArticlePage />} />
         <Route path="/blog/flight-tickets-on-iphone" element={<FlightTicketsOnIphoneArticlePage />} />
         <Route path="/blog/how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app" element={<HowToShareTravelPlansArticlePage />} />
+        <Route path="/blog/you-can-now-store-tickets-in-folio-wallet" element={<YouCanNowStoreTicketsInFolioWalletArticlePage />} />
+        <Route path="/blog/best-google-wallet-alternatives" element={<BestGoogleWalletAlternativesArticlePage />} />
       </Routes>
     </BrowserRouter>
   )

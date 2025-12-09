@@ -52,19 +52,11 @@ export default function TripsyAlternativeArticlePage() {
             {/* Article content */}
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Planning a trip involves a lot of moving parts. Flights. Hotels. Activities. Transfers. Documents. And somehow, you need to keep track of it all.
+                Planning a trip involves a lot of moving parts. Flights. Hotels. Activities. Transfers. Documents. And somehow, you need to keep track of it all. That's where travel apps come in. And Tripsy has been one of the most popular choices for years.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                That's where travel apps come in. And Tripsy has been one of the most popular choices for years.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                But what if you want something different? Something that focuses on security, privacy, and keeping every important document in one place?
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Let's explore.
+                But what if you want something different? Something that focuses on security, privacy, and keeping every important document in one place? Let's explore.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
@@ -72,32 +64,11 @@ export default function TripsyAlternativeArticlePage() {
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Tripsy is a beautifully designed travel app. It helps you organize every detail of your journey in one place.
+                Tripsy is a beautifully designed travel app. It helps you organize every detail of your journey in one place. Instead of scattered emails and random notes, Tripsy brings everything together into a clear itinerary. Flights. Hotels. Sightseeing. All arranged in chronological order.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Instead of scattered emails and random notes, Tripsy brings everything together into a clear itinerary. Flights. Hotels. Sightseeing. All arranged in chronological order.
-              </p>
-
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                What makes Tripsy popular
-              </h2>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Tripsy has earned its reputation for good reasons.
-              </p>
-
-              <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-                <li><strong>Day-by-day planning.</strong> Build detailed schedules with everything synced to your calendar.</li>
-                <li><strong>Real-time flight updates.</strong> Get notifications about delays, gate changes, and cancellations.</li>
-                <li><strong>Weather forecasts.</strong> See what to pack with a 10-day forecast built into your itinerary.</li>
-                <li><strong>Collaboration.</strong> Share trips with friends and family. Assign roles. Plan together.</li>
-                <li><strong>Offline access.</strong> Your entire trip stays accessible without an internet connection.</li>
-                <li><strong>Travel stats.</strong> Track how many countries you've visited and days you've spent traveling.</li>
-              </ul>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                It's intuitive. It's visually appealing. And it makes planning feel enjoyable.
+                Tripsy has earned its reputation for good reasons. Day-by-day planning lets you build detailed schedules with everything synced to your calendar. Real-time flight updates notify you about delays, gate changes, and cancellations. Weather forecasts show what to pack with a 10-day forecast built into your itinerary. Collaboration features let you share trips with friends and family, assign roles, and plan together. Your entire trip stays accessible offline without an internet connection. And travel stats track how many countries you've visited and days you've spent traveling. It's intuitive. It's visually appealing. And it makes planning feel enjoyable.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
@@ -105,70 +76,20 @@ export default function TripsyAlternativeArticlePage() {
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                While Tripsy excels at trip planning, some travelers need something more. An alternative that focuses on document security. Safe storage. And absolute clarity.
+                While Tripsy excels at trip planning, some travelers need something more. An alternative that focuses on document security. Safe storage. And absolute clarity. That's Folio Wallet. Think of it as a digital vault for your entire journey. Not just an itinerary planner. A secure home for everything you need when you travel.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                That's Folio Wallet.
+                Folio Wallet offers document and card storage for passports, ID cards, driver's licenses, travel insurance, boarding passes, hotel confirmations, and bank cards. All in one secure place. Smart travel timeline automatically extracts details from PDFs, photos, or forwarded confirmation emails and builds a clear timeline. No manual entry needed. Everything is accessible offline, whether you're in the air, on a mountain, or in a foreign country with no signal.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Think of it as a digital vault for your entire journey. Not just an itinerary planner. A secure home for everything you need when you travel.
-              </p>
-
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Core features of Folio Wallet
-              </h2>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Document and card storage.</strong> Store passports, ID cards, driver's licenses, travel insurance, boarding passes, hotel confirmations, and bank cards. All in one secure place.
+                Expiration reminders alert you before your passport or travel insurance expires, so you never get caught off guard. Top-notch security includes AES-256 encryption, zero-knowledge architecture, Face ID and Touch ID, GDPR compliance, and SOC 2 certification. Your data stays yours. Cloud backup and sync let you access your wallet across all your devices, with everything staying encrypted. Secure sharing lets you create shared folders for group trips, share with a link, and manage or revoke access anytime.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Smart travel timeline.</strong> Upload a PDF, snap a photo, or forward a confirmation email. Folio automatically extracts the details and builds a clear timeline. No manual entry needed.
+                If Tripsy is the creative planner, Folio Wallet is the secure vault. It guarantees peace of mind. Every essential document, from boarding passes to travel insurance, lives in your pocket. Encrypted. Ready when you need it. Folio is especially valuable if you worry about losing printed tickets or IDs during a trip, want one app for both travel and personal documents, or need strong privacy protection while traveling abroad.
               </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Offline access.</strong> Access everything without internet. In the air. On a mountain. In a foreign country with no signal.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Expiration reminders.</strong> Get alerts before your passport or travel insurance expires. Never get caught off guard.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Top-notch security.</strong> AES-256 encryption. Zero-knowledge architecture. Face ID and Touch ID. GDPR compliant. SOC 2 certified. Your data stays yours.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Cloud backup and sync.</strong> Access your wallet across all your devices. Everything stays encrypted.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Secure sharing.</strong> Create shared folders for group trips. Share with a link. Manage or revoke access anytime.
-              </p>
-
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Why Folio Wallet works as a travel app
-              </h2>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                If Tripsy is the creative planner, Folio Wallet is the secure vault.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                It guarantees peace of mind. Every essential document, from boarding passes to travel insurance, lives in your pocket. Encrypted. Ready when you need it.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Folio is especially valuable if you:
-              </p>
-
-              <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-                <li>Worry about losing printed tickets or IDs during a trip</li>
-                <li>Want one app for both travel and personal documents</li>
-                <li>Need strong privacy protection while traveling abroad</li>
-              </ul>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
                 Tripsy vs Folio Wallet
@@ -228,24 +149,8 @@ export default function TripsyAlternativeArticlePage() {
                 </table>
               </div>
 
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Which app should you choose
-              </h2>
-
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Choose Tripsy</strong> if you want a trip planning app that creates beautiful itineraries, syncs with your calendar, and lets you collaborate with friends.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Choose <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a></strong> if you want an app that focuses on security, privacy, and storing every important travel document in one place.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Or use both.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Tripsy for planning. Folio Wallet for security. Together, they cover everything.
+                Choose Tripsy if you want a trip planning app that creates beautiful itineraries, syncs with your calendar, and lets you collaborate with friends. Choose <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> if you want an app that focuses on security, privacy, and storing every important travel document in one place. Or use both. Tripsy for planning. Folio Wallet for security. Together, they cover everything.
               </p>
 
               <div className="border-l-2 border-[#e5e5e5] pl-6 pr-0 py-0 relative shrink-0 w-full">

@@ -52,53 +52,19 @@ export default function Pass2UAlternativeArticlePage() {
             {/* Article content */}
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Digital wallets have become essential. Boarding passes. Event tickets. Loyalty cards. Everything fits in your phone.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                But Apple Wallet has limits. It only supports certain types of passes. That's why many turn to Pass2U, an app that lets you create custom cards.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                What if you want more than custom cards? What if you need real organization, automatic itineraries, and security for all your documents?
+                Digital wallets have become essential. Boarding passes. Event tickets. Loyalty cards. Everything fits in your phone. But Apple Wallet has limits. It only supports certain types of passes. That's why many turn to Pass2U, an app that lets you create custom cards. What if you want more than custom cards? What if you need real organization, automatic itineraries, and security for all your documents?
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                What is Pass2U Wallet
+                What is Pass2U and why look for alternatives
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Pass2U Wallet lets iPhone users create and import custom cards into Apple Wallet. Loyalty programs. Coupons. Gift cards. Membership cards. Things Apple Wallet doesn't support by default.
+                Pass2U Wallet lets iPhone users create and import custom cards into Apple Wallet. Loyalty programs. Coupons. Gift cards. Membership cards. Things Apple Wallet doesn't support by default. Cards work with Apple Wallet and appear alongside your other passes. You can create passes in your own format with custom design. Basic features are available at no cost. Pass2U extends what Apple Wallet can do. But it still lives within Apple's framework.
               </p>
 
-              <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-                <li><strong>Works with Apple Wallet.</strong> Cards appear alongside your other passes.</li>
-                <li><strong>Custom design.</strong> Create passes in your own format.</li>
-                <li><strong>Free to use.</strong> Basic features available at no cost.</li>
-              </ul>
-
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Pass2U extends what Apple Wallet can do. But it still lives within Apple's framework.
-              </p>
-
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Why people look for alternatives
-              </h2>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Pass2U solves one problem. But modern life demands more.
-              </p>
-
-              <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-                <li>No document support: you can't store passports, IDs, or insurance</li>
-                <li>No organization: cards appear in a flat list with no folders or labels</li>
-                <li>No travel features: no automatic itineraries or trip timelines</li>
-                <li>Limited security: Pass2U itself doesn't encrypt your data</li>
-                <li>Manual work: you design each card yourself, one by one</li>
-              </ul>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                You need something that goes beyond Apple's ecosystem. Smarter organization. Real security. Everything in one place.
+                Pass2U solves one problem. But modern life demands more. No document support means you can't store passports, IDs, or insurance. No organization means cards appear in a flat list with no folders or labels. No travel features means no automatic itineraries or trip timelines. Limited security means Pass2U itself doesn't encrypt your data. Manual work means you design each card yourself, one by one. You need something that goes beyond Apple's ecosystem. Smarter organization. Real security. Everything in one place.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
@@ -106,39 +72,15 @@ export default function Pass2UAlternativeArticlePage() {
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Folio Wallet isn't tied to Apple Wallet. It's an independent app that organizes all your documents directly. Passes. Tickets. IDs. Insurance. Travel bookings. Everything.
+                Folio Wallet isn't tied to Apple Wallet. It's an independent app that organizes all your documents directly. Passes. Tickets. IDs. Insurance. Travel bookings. Everything. No manual card creation. No limitations. Just add your documents and Folio handles the rest.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                No manual card creation. No limitations. Just add your documents and Folio handles the rest.
-              </p>
-
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                What makes Folio different
-              </h2>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Automatic recognition.</strong> Upload a ticket, booking, or ID. Folio extracts the details and creates a clean, organized card. No design work needed.
+                Automatic recognition extracts details from uploaded tickets, bookings, or IDs and creates clean, organized cards. No design work needed. Travel itineraries build structured trip timelines from forwarded emails or uploaded screenshots, with all your bookings in chronological order. Labels and folders let you sort documents into trips, categories, or personal collections. Find anything instantly.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Travel itineraries.</strong> Forward emails or upload screenshots. Folio builds a structured trip timeline with all your bookings in chronological order.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Labels and folders.</strong> Sort documents into trips, categories, or personal collections. Find anything instantly.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Real security.</strong> End-to-end encryption. Zero-knowledge architecture. Biometric login. SOC 2 and GDPR compliant. Your data stays yours.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Cross-platform.</strong> Works on iOS and Android. Syncs across all your devices.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Secure sharing.</strong> Share folders with family, friends, or colleagues. Control who sees what. Revoke access anytime.
+                Real security includes end-to-end encryption, zero-knowledge architecture, biometric login, and SOC 2 and GDPR compliance. Your data stays yours. Cross-platform support works on iOS and Android and syncs across all your devices. Secure sharing lets you share folders with family, friends, or colleagues. Control who sees what. Revoke access anytime.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
@@ -194,20 +136,8 @@ export default function Pass2UAlternativeArticlePage() {
                 </table>
               </div>
 
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Which app should you choose
-              </h2>
-
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Choose Pass2U</strong> if you only need to add a few custom cards to Apple Wallet and don't mind the manual work.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Choose <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a></strong> if you want automatic organization, real security, and a home for all your documents, not just passes.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Pass2U extends Apple Wallet. Folio replaces the need for it entirely.
+                Choose Pass2U if you only need to add a few custom cards to Apple Wallet and don't mind the manual work. Choose <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> if you want automatic organization, real security, and a home for all your documents, not just passes. Pass2U extends Apple Wallet. Folio replaces the need for it entirely.
               </p>
 
               <div className="border-l-2 border-[#e5e5e5] pl-6 pr-0 py-0 relative shrink-0 w-full">

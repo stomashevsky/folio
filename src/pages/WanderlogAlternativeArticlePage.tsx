@@ -52,52 +52,19 @@ export default function WanderlogAlternativeArticlePage() {
             {/* Article content */}
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Planning a trip can be exciting. It can also be chaos. Scattered tickets. Endless screenshots. Too many apps.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                That's why many travelers use Wanderlog. It helps create itineraries and keep trips organized.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                But what if you need more than itineraries? What if you need your documents secure and accessible too?
+                Planning a trip can be exciting. It can also be chaos. Scattered tickets. Endless screenshots. Too many apps. That's why many travelers use Wanderlog. It helps create itineraries and keep trips organized. But what if you need more than itineraries? What if you need your documents secure and accessible too?
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                What is Wanderlog
+                What is Wanderlog and where it falls short
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Wanderlog is a travel planning app. It simplifies building itineraries by putting everything in one place instead of juggling spreadsheets, maps, and notes.
+                Wanderlog is a travel planning app. It simplifies building itineraries by putting everything in one place instead of juggling spreadsheets, maps, and notes. Collaborative planning lets friends and family join to edit and share itineraries. Expense tracking keeps tabs on your budget and splits costs between group members. Trip inspiration lets you browse guides and ideas shared by other travelers. Wanderlog is great for brainstorming activities. It works especially well for group travel where communication and cost sharing matter.
               </p>
 
-              <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-                <li><strong>Collaborative planning.</strong> Friends and family can join to edit and share itineraries.</li>
-                <li><strong>Expense tracking.</strong> Keep tabs on your budget and split costs between group members.</li>
-                <li><strong>Trip inspiration.</strong> Browse guides and ideas shared by other travelers.</li>
-              </ul>
-
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Wanderlog is great for brainstorming activities. It works especially well for group travel where communication and cost sharing matter.
-              </p>
-
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Where Wanderlog falls short
-              </h2>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Wanderlog is popular. But it's not perfect for every traveler.
-              </p>
-
-              <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-                <li>Limited document management: focused on itineraries, not passports, IDs, or tickets</li>
-                <li>Basic ticket handling: you still need other apps to retrieve bookings</li>
-                <li>Security concerns: no emphasis on encryption or zero-knowledge storage</li>
-                <li>Complex trips: multiple bookings, flights, or IDs aren't well covered</li>
-              </ul>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                If you need both travel organization and document security, you need something more.
+                Wanderlog is popular. But it's not perfect for every traveler. Limited document management means it's focused on itineraries, not passports, IDs, or tickets. Basic ticket handling means you still need other apps to retrieve bookings. Security concerns mean no emphasis on encryption or zero-knowledge storage. Complex trips with multiple bookings, flights, or IDs aren't well covered. If you need both travel organization and document security, you need something more.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
@@ -105,35 +72,15 @@ export default function WanderlogAlternativeArticlePage() {
               </h2>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Folio Wallet is more than a travel planner. It's a digital travel wallet that securely stores your tickets, bookings, and documents alongside everyday essentials like payment cards, loyalty cards, and IDs.
+                Folio Wallet is more than a travel planner. It's a digital travel wallet that securely stores your tickets, bookings, and documents alongside everyday essentials like payment cards, loyalty cards, and IDs. Unlike Wanderlog, Folio doesn't just tell you what to do on your trip. It ensures you always have the right document ready at the right moment.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Unlike Wanderlog, Folio doesn't just tell you what to do on your trip. It ensures you always have the right document ready at the right moment.
-              </p>
-
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Key features of Folio Wallet
-              </h2>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>All-in-one travel organization.</strong> Store flight tickets, hotel bookings, train passes, event tickets, and more. Everything in one app.
+                All-in-one travel organization stores flight tickets, hotel bookings, train passes, event tickets, and more. Everything in one app. Timeline view automatically organizes your documents into a clear trip timeline. You always know what's next. Secure document storage saves digital copies of passports, visas, insurance papers, and IDs. Protected with AES-256 encryption and zero-knowledge architecture.
               </p>
 
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Timeline view.</strong> Your documents automatically organize into a clear trip timeline. You always know what's next.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Secure document storage.</strong> Save digital copies of passports, visas, insurance papers, and IDs. Protected with AES-256 encryption and zero-knowledge architecture.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Shared travel folders.</strong> Create folders for trips and share them securely with family, friends, or colleagues.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Offline access.</strong> Open your tickets and bookings without internet. In the air. Underground. Anywhere.
+                Shared travel folders let you create folders for trips and share them securely with family, friends, or colleagues. Offline access means you can open your tickets and bookings without internet. In the air. Underground. Anywhere.
               </p>
 
               <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
@@ -184,20 +131,8 @@ export default function WanderlogAlternativeArticlePage() {
                 </table>
               </div>
 
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Which app should you choose
-              </h2>
-
               <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Choose Wanderlog</strong> if your main goal is to plan activities, find inspiration, and split costs with friends.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                <strong>Choose <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a></strong> if you want your tickets, bookings, and documents safe and accessible. All in one place. Protected with real security.
-              </p>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Wanderlog helps you plan. Folio ensures you're ready.
+                Choose Wanderlog if your main goal is to plan activities, find inspiration, and split costs with friends. Choose <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> if you want your tickets, bookings, and documents safe and accessible. All in one place. Protected with real security. Wanderlog helps you plan. Folio ensures you're ready.
               </p>
 
               <div className="border-l-2 border-[#e5e5e5] pl-6 pr-0 py-0 relative shrink-0 w-full">

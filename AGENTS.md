@@ -250,6 +250,28 @@ This file contains all rules and principles that must be followed for every chan
 - **URL synchronization**: When users click category filter buttons on BlogPage, the URL must be updated with the `?category=` parameter
 - **Category validation**: BlogPage must validate category values against valid categories array before applying filter
 
+#### 9.10. Article structure and headings
+
+- **Minimize headings**: Use headings sparingly to break up long sections, not after every few paragraphs
+- **H2 headings (30px)**: Use only for major topic changes or distinct sections (typically 3-5 per article)
+- **H3 headings (24px)**: Use only when absolutely necessary for subsections within a major H2 section
+- **Avoid heading overuse**: If you find yourself adding a heading after every 2-3 paragraphs, combine those paragraphs into longer flowing sections instead
+- **Paragraph flow**: Articles should read like a narrative with longer paragraphs (3-5 sentences) that flow naturally
+- **Heading spacing**: Headings should separate distinct ideas or topics, not minor points
+- **Examples of good structure**:
+  - Introduction (no heading, just paragraphs)
+  - One H2 for main topic (e.g., "How it works")
+  - Several paragraphs explaining the topic
+  - Another H2 for next major topic (e.g., "Key features")
+  - Several paragraphs explaining features
+  - Conclusion (no heading or optional H2)
+- **Examples of bad structure**:
+  - H2 after every 2 paragraphs
+  - H3 for every minor point
+  - Headings that could be replaced with bold text or list items
+- **Lists instead of headings**: For feature lists or itemized content, use bullet lists with bold text rather than creating H3 headings for each item
+- **Reference**: Follow the structure style of OpenAI blog articles (e.g., https://openai.com/index/group-chats-in-chatgpt/) which use minimal headings and longer flowing paragraphs
+
 ## Workflow
 
 1. **Before creating a new element:**
