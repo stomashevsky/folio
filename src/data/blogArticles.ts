@@ -16,6 +16,7 @@ import blogFlightTicketsOnIphone from '../assets/images/blog-flight-tickets-on-i
 import blogHowToShareTravelPlans from '../assets/images/blog-how-to-share-travel-plans.png'
 import blogYouCanNowStoreTickets from '../assets/images/blog-you-can-now-store-tickets-in-folio-wallet.png'
 import blogBestGoogleWalletAlternatives from '../assets/images/blog-best-google-wallet-alternatives.png'
+import blogBestAppleWalletAlternatives from '../assets/images/blog-best-apple-wallet-alternatives.png'
 
 export type BlogCategory = 'All' | 'Company' | 'Research' | 'Product' | 'Safety'
 
@@ -190,6 +191,14 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     description: 'Google Wallet is great, but it\'s not enough. Discover seven powerful alternatives that fill Wallet\'s gaps: secure document storage, multi-currency payments, and automated trip planning.',
     slug: 'best-google-wallet-alternatives',
     image: blogBestGoogleWalletAlternatives,
+  },
+  {
+    category: 'Product',
+    date: 'May 14, 2025',
+    title: 'Best Apple Wallet Alternatives',
+    description: 'Apple Wallet is great for tap-to-pay and boarding passes, but it has limitations. Discover five powerful iOS apps that fill Wallet\'s gaps: secure document storage, multi-card management, and automated trip planning.',
+    slug: 'best-apple-wallet-alternatives',
+    image: blogBestAppleWalletAlternatives,
   },
   {
     category: 'Product',
