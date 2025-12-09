@@ -20,6 +20,8 @@ import blogBestAppleWalletAlternatives from '../assets/images/blog-best-apple-wa
 import blogAccessYourDigitalWalletAnywhere from '../assets/images/blog-access-your-digital-wallet-anywhere.png'
 import blogHowToAddGiftCardsToYourWalletApp from '../assets/images/blog-how-to-add-gift-cards-to-your-wallet-app.png'
 import blogBestDigitalWalletAppsInCanada from '../assets/images/blog-best-digital-wallet-apps-in-canada.png'
+import blogDigitalWalletAppsForEveryNeed from '../assets/images/blog-digital-wallet-apps-for-every-need.png'
+import blogHowToSecureYourWalletOnIphone from '../assets/images/blog-how-to-secure-your-wallet-on-iphone.png'
 
 export type BlogCategory = 'All' | 'Company' | 'Research' | 'Product' | 'Safety'
 
@@ -134,6 +136,22 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     description: 'Discover the best digital wallet apps available in Canada. Compare features, security, and use cases to find the perfect wallet for your needs.',
     slug: 'best-digital-wallet-apps-in-canada',
     image: blogBestDigitalWalletAppsInCanada,
+  },
+  {
+    category: 'Product',
+    date: 'Nov 25, 2024',
+    title: 'Digital wallet apps for every need',
+    description: 'Discover the best digital wallet apps for payments, document storage, and travel. Find the perfect app for your specific needs.',
+    slug: 'digital-wallet-apps-for-every-need',
+    image: blogDigitalWalletAppsForEveryNeed,
+  },
+  {
+    category: 'Safety',
+    date: 'Nov 19, 2024',
+    title: 'How to secure your wallet on iPhone',
+    description: 'Learn how to secure your digital wallet on iPhone with built-in features and best practices. Protect your cards, IDs, and documents.',
+    slug: 'how-to-secure-your-wallet-on-iphone',
+    image: blogHowToSecureYourWalletOnIphone,
   },
   {
     category: 'Product',

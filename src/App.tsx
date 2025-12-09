@@ -31,6 +31,8 @@ import BestAppleWalletAlternativesArticlePage from './pages/BestAppleWalletAlter
 import AccessYourDigitalWalletAnywhereArticlePage from './pages/AccessYourDigitalWalletAnywhereArticlePage'
 import HowToAddGiftCardsToYourWalletAppArticlePage from './pages/HowToAddGiftCardsToYourWalletAppArticlePage'
 import BestDigitalWalletAppsInCanadaArticlePage from './pages/BestDigitalWalletAppsInCanadaArticlePage'
+import DigitalWalletAppsForEveryNeedArticlePage from './pages/DigitalWalletAppsForEveryNeedArticlePage'
+import HowToSecureYourWalletOnIphoneArticlePage from './pages/HowToSecureYourWalletOnIphoneArticlePage'
 
 // Fallback handler in case the script in index.html didn't run
 function RedirectHandler() {
@@ -131,6 +133,8 @@ function App() {
         <Route path="/blog/best-google-wallet-alternatives" element={<BestGoogleWalletAlternativesArticlePage />} />
         <Route path="/blog/best-apple-wallet-alternatives" element={<BestAppleWalletAlternativesArticlePage />} />
         <Route path="/blog/best-digital-wallet-apps-in-canada" element={<BestDigitalWalletAppsInCanadaArticlePage />} />
+        <Route path="/blog/digital-wallet-apps-for-every-need" element={<DigitalWalletAppsForEveryNeedArticlePage />} />
+        <Route path="/blog/how-to-secure-your-wallet-on-iphone" element={<HowToSecureYourWalletOnIphoneArticlePage />} />
       </Routes>
     </BrowserRouter>
   )
