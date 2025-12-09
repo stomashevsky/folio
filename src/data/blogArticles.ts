@@ -17,6 +17,7 @@ import blogHowToShareTravelPlans from '../assets/images/blog-how-to-share-travel
 import blogYouCanNowStoreTickets from '../assets/images/blog-you-can-now-store-tickets-in-folio-wallet.png'
 import blogBestGoogleWalletAlternatives from '../assets/images/blog-best-google-wallet-alternatives.png'
 import blogBestAppleWalletAlternatives from '../assets/images/blog-best-apple-wallet-alternatives.png'
+import blogAccessYourDigitalWalletAnywhere from '../assets/images/blog-access-your-digital-wallet-anywhere.png'
 
 export type BlogCategory = 'All' | 'Company' | 'Research' | 'Product' | 'Safety'
 
@@ -175,6 +176,14 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     description: 'Planning a trip with others? Discover how trip planner apps make it easy to share itineraries, collaborate, and keep everyone in sync.',
     slug: 'how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app',
     image: blogHowToShareTravelPlans,
+  },
+  {
+    category: 'Product',
+    date: 'Jul 1, 2025',
+    title: 'Access your digital wallet anywhere',
+    description: 'A simpler way to keep every document with you on iOS and Android',
+    slug: 'access-your-digital-wallet-anywhere',
+    image: blogAccessYourDigitalWalletAnywhere,
   },
   {
     category: 'Product',
