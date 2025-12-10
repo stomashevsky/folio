@@ -31,10 +31,10 @@ export default function BestGiftCardWalletAppsArticlePage() {
               <div className="flex flex-wrap gap-4 items-start justify-center leading-5 relative shrink-0 text-sm w-full">
                 <p className="relative shrink-0 text-[#0a0a0a]">Nov 14, 2024</p>
                 <Link 
-                  to="/blog?category=Product" 
+                  to="/blog?category=Research" 
                   className="relative shrink-0 text-[#737373] hover:text-[#0a0a0a] hover:underline transition-colors cursor-pointer"
                 >
-                  Product
+                  Research
                 </Link>
               </div>
 

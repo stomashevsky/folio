@@ -7,7 +7,7 @@ import { usePageTitle } from '../hooks/usePageTitle'
 import { blogArticles, type BlogCategory } from '../data/blogArticles'
 import { restoreBlogScrollPosition } from '../utils/blogScrollPosition'
 
-const categories: BlogCategory[] = ['All', 'Company', 'Research', 'Product', 'Safety']
+const categories: BlogCategory[] = ['All', 'Company', 'Product', 'Guides', 'Research', 'Safety']
 
 export default function BlogPage() {
   const location = useLocation()

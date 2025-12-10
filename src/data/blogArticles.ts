@@ -25,8 +25,17 @@ import blogHowToSecureYourWalletOnIphone from '../assets/images/blog-how-to-secu
 import blogBestGiftCardWalletApps from '../assets/images/blog-best-gift-card-wallet-apps.png'
 import blogRegularVsDigitalWallets from '../assets/images/blog-regular-vs-digital-wallets.png'
 import blogAreDigitalWalletsSafe from '../assets/images/blog-are-digital-wallets-safe.png'
+import blogAppleGiftCardAddToWallet from '../assets/images/blog-apple-gift-card-add-to-wallet.png'
+import blogCanADigitalWalletBeHacked from '../assets/images/blog-can-a-digital-wallet-be-hacked.png'
+import blogTheUltimateGuideToTheSafestDigitalWalletApp from '../assets/images/blog-the-ultimate-guide-to-the-safest-digital-wallet-app.png'
+import blogWhatIsADigitalDriversLicense from '../assets/images/blog-what-is-a-digital-drivers-license.png'
+import blogHowToAddAndStoreYourMedicalCard from '../assets/images/blog-how-to-add-and-store-your-medical-card.png'
+import blogTheBestDigitalWalletsForAndroid from '../assets/images/blog-the-best-digital-wallets-for-android.png'
+import blogHowToStoreAndUseLoyaltyCardsOnYourIphone from '../assets/images/blog-how-to-store-and-use-loyalty-cards-on-your-iphone.png'
+import blogTheBestDigitalWalletsForIphone from '../assets/images/blog-the-best-digital-wallets-for-iphone.png'
+import blogWhatIsADigitalWallet from '../assets/images/blog-what-is-a-digital-wallet.png'
 
-export type BlogCategory = 'All' | 'Company' | 'Research' | 'Product' | 'Safety'
+export type BlogCategory = 'All' | 'Company' | 'Product' | 'Guides' | 'Research' | 'Safety'
 
 export interface BlogArticle {
   category: Exclude<BlogCategory, 'All'>
@@ -53,7 +62,7 @@ export const sortArticlesByDate = (articles: BlogArticle[]): BlogArticle[] => {
 
 export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
-    category: 'Product',
+    category: 'Research',
     date: 'Nov 21, 2025',
     title: 'Best ID scanner apps for Android and iPhone',
     description: 'Turn your phone into a secure ID scanner. Discover the best apps to digitize, store, and protect your identification documents.',
@@ -61,7 +70,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogBestIdScannerApp,
   },
   {
-    category: 'Product',
+    category: 'Research',
     date: 'Nov 12, 2025',
     title: 'Best document scanning apps for iPhone and Android',
     description: 'Turn your phone into a powerful scanner. Discover the best apps to scan, store, and organize your documents securely.',
@@ -69,7 +78,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogBestDocumentScanningApps,
   },
   {
-    category: 'Product',
+    category: 'Research',
     date: 'Sep 23, 2025',
     title: "Wanderlog alternative: The best app for organizing trips and documents",
     description: "Wanderlog helps plan activities. But what about your tickets, passports, and bookings? Discover an app that keeps everything secure and organized.",
@@ -77,7 +86,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogWanderlogAlternative,
   },
   {
-    category: 'Product',
+    category: 'Research',
     date: 'Sep 18, 2025',
     title: "CheckMyTrip alternative: A smarter way to manage your travel",
     description: "CheckMyTrip organizes your bookings. But what about your passport, insurance, and event tickets? Discover an app that stores everything in one secure place.",
@@ -85,7 +94,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogCheckMyTripAlternative,
   },
   {
-    category: 'Product',
+    category: 'Research',
     date: 'Sep 16, 2025',
     title: "App in the Air alternative: The best option after shutdown",
     description: "App in the Air shut down in September 2024. If you relied on it for flight tracking, here's the modern alternative that organizes all your travel documents.",
@@ -93,7 +102,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogAppInTheAirAlternative,
   },
   {
-    category: 'Product',
+    category: 'Research',
     date: 'Sep 10, 2025',
     title: "Pass2U alternative: A smarter way to organize your passes",
     description: "Pass2U extends Apple Wallet with custom cards. But what if you need more? Discover an app that organizes all your documents with real security.",
@@ -101,7 +110,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogPass2UAlternative,
   },
   {
-    category: 'Product',
+    category: 'Research',
     date: 'Sep 20, 2025',
     title: "Tripsy alternative: A smarter way to organize your travels",
     description: "Looking beyond Tripsy? Discover a travel app that keeps your documents secure, your itinerary clear, and your journey stress-free.",
@@ -109,7 +118,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogTripsyAlternative,
   },
   {
-    category: 'Product',
+    category: 'Research',
     date: 'Sep 12, 2025',
     title: "TripIt alternative: A smarter way to organize your travels",
     description: "TripIt keeps your itinerary in order. But what if you need more? Discover an app that stores your bookings, documents, and tickets in one secure place.",
@@ -117,7 +126,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogTripItAlternative,
   },
   {
-    category: 'Product',
+    category: 'Research',
     date: 'Sep 4, 2025',
     title: "TripCase alternative: The travel organizer you'll love",
     description: "TripCase is gone. Your next trip doesn't have to be chaos. Meet the app that keeps every flight, hotel, and document in one beautiful place.",
@@ -133,7 +142,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogAlbanianDiasporaVoterRegistration,
   },
   {
-    category: 'Product',
+    category: 'Research',
     date: 'Nov 27, 2024',
     title: 'Best digital wallet apps in Canada',
     description: 'Discover the best digital wallet apps available in Canada. Compare features, security, and use cases to find the perfect wallet for your needs.',
@@ -141,7 +150,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogBestDigitalWalletAppsInCanada,
   },
   {
-    category: 'Product',
+    category: 'Research',
     date: 'Nov 25, 2024',
     title: 'Digital wallet apps for every need',
     description: 'Discover the best digital wallet apps for payments, document storage, and travel. Find the perfect app for your specific needs.',
@@ -149,7 +158,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogDigitalWalletAppsForEveryNeed,
   },
   {
-    category: 'Safety',
+    category: 'Guides',
     date: 'Nov 19, 2024',
     title: 'How to secure your wallet on iPhone',
     description: 'Learn how to secure your digital wallet on iPhone with built-in features and best practices. Protect your cards, IDs, and documents.',
@@ -157,7 +166,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogHowToSecureYourWalletOnIphone,
   },
   {
-    category: 'Product',
+    category: 'Research',
     date: 'Nov 14, 2024',
     title: 'Best gift card wallet apps for hassle-free digital organization',
     description: 'Discover the best gift card wallet apps for organizing and securing your cards digitally. Compare features and find the perfect solution for managing gift cards.',
@@ -165,7 +174,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogBestGiftCardWalletApps,
   },
   {
-    category: 'Product',
+    category: 'Research',
     date: 'Nov 3, 2024',
     title: 'Regular vs digital wallets: which is right for you?',
     description: 'Explore the differences between regular and digital wallets. Compare pros, cons, and features to choose the right wallet solution for your lifestyle.',
@@ -181,6 +190,78 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogAreDigitalWalletsSafe,
   },
   {
+    category: 'Safety',
+    date: 'Oct 20, 2024',
+    title: 'Can a digital wallet be hacked?',
+    description: 'Learn about digital wallet security risks and how to protect yourself. Discover what makes a wallet legit and secure, and what to do if your wallet is compromised.',
+    slug: 'can-a-digital-wallet-be-hacked',
+    image: blogCanADigitalWalletBeHacked,
+  },
+  {
+    category: 'Safety',
+    date: 'Oct 9, 2024',
+    title: 'The ultimate guide to the safest digital wallet app',
+    description: 'Discover the safest digital wallet apps and learn how to choose the most secure wallet for your needs. Explore security features, best practices, and why digital wallet security matters.',
+    slug: 'the-ultimate-guide-to-the-safest-digital-wallet-app',
+    image: blogTheUltimateGuideToTheSafestDigitalWalletApp,
+  },
+  {
+    category: 'Product',
+    date: 'Sep 27, 2024',
+    title: "What is a digital driver's license?",
+    description: "Learn about digital driver's licenses and how to get one. Discover the benefits, security features, and where you can use a DDL in 2024.",
+    slug: 'what-is-a-digital-drivers-license',
+    image: blogWhatIsADigitalDriversLicense,
+  },
+  {
+    category: 'Product',
+    date: 'Sep 9, 2024',
+    title: 'How to add and store your medical card and health insurance in digital wallet',
+    description: "Learn how to store your medical card and health insurance in a digital wallet. Discover the benefits, security features, and how to manage family members' health documents.",
+    slug: 'how-to-add-and-store-your-medical-card',
+    image: blogHowToAddAndStoreYourMedicalCard,
+  },
+  {
+    category: 'Research',
+    date: 'Sep 5, 2024',
+    title: 'The best digital wallets for Android in 2024',
+    description: 'Discover the best digital wallet apps for Android. Compare Google Wallet, Folio Wallet, Stocard, Curve, and Venmo to find the perfect wallet for your needs.',
+    slug: 'the-best-digital-wallets-for-android',
+    image: blogTheBestDigitalWalletsForAndroid,
+  },
+  {
+    category: 'Research',
+    date: 'Sep 4, 2024',
+    title: 'How to store and use loyalty cards on an iPhone',
+    description: 'Learn how to store and use loyalty cards on your iPhone with digital wallets. Compare Apple Wallet, Stocard, and Folio Wallet to find the best solution for managing your loyalty cards.',
+    slug: 'how-to-store-and-use-loyalty-cards-on-your-iphone',
+    image: blogHowToStoreAndUseLoyaltyCardsOnYourIphone,
+  },
+  {
+    category: 'Research',
+    date: 'Sep 1, 2024',
+    title: 'The best digital wallets for iPhone in 2024',
+    description: 'Discover the best digital wallet apps for iPhone. Compare Apple Wallet, Folio Wallet, Stocard, Curve, and Venmo to find the perfect wallet for your needs.',
+    slug: 'the-best-digital-wallets-for-iphone',
+    image: blogTheBestDigitalWalletsForIphone,
+  },
+  {
+    category: 'Guides',
+    date: 'Aug 27, 2024',
+    title: 'What is a digital wallet?',
+    description: 'Learn what a digital wallet is, how it works, and how to use one. Discover the benefits, security features, and types of digital wallets available for Android and iPhone.',
+    slug: 'what-is-a-digital-wallet',
+    image: blogWhatIsADigitalWallet,
+  },
+  {
+    category: 'Product',
+    date: 'Oct 21, 2024',
+    title: 'Apple gift card add to wallet: a step-by-step guide',
+    description: 'Learn how to add your Apple gift card to the Wallet app. Follow simple steps to streamline payments and track balances on your iPhone.',
+    slug: 'apple-gift-card-add-to-wallet',
+    image: blogAppleGiftCardAddToWallet,
+  },
+  {
     category: 'Product',
     date: 'Jan 6, 2025',
     title: 'How to add gift cards to your wallet app',
@@ -189,19 +270,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogHowToAddGiftCardsToYourWalletApp,
   },
   {
-    category: 'Company',
-    date: 'Feb 15, 2000',
-    title: 'Short and clear engaging headline for an article',
-    description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
-  },
-  {
     category: 'Research',
-    date: 'Jan 22, 2000',
-    title: 'Short and clear engaging headline for an article',
-    description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
-  },
-  {
-    category: 'Product',
     date: 'Aug 20, 2025',
     title: '7 useful apps for planning your trip',
     description: 'From itineraries to expenses: seven apps that make travel planning effortless and keep everything organized.',
@@ -209,7 +278,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogSevenUsefulApps,
   },
   {
-    category: 'Product',
+    category: 'Research',
     date: 'Jul 29, 2025',
     title: 'Best apps to plan travel: 2025 guide',
     description: 'Planning a trip can be both exciting and stressful. These apps will save you time, money, and a lot of headaches.',
@@ -217,7 +286,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogBestAppsToPlanTravel,
   },
   {
-    category: 'Product',
+    category: 'Research',
     date: 'Jul 24, 2025',
     title: 'The best event ticket apps',
     description: 'From concerts to conferences: discover apps that keep your tickets organized, accessible, and secure.',
@@ -257,7 +326,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogYouCanNowStoreTickets,
   },
   {
-    category: 'Product',
+    category: 'Research',
     date: 'May 26, 2025',
     title: 'The best Google Wallet alternatives you can install in 2025',
     description: 'Google Wallet is great, but it\'s not enough. Discover seven powerful alternatives that fill Wallet\'s gaps: secure document storage, multi-currency payments, and automated trip planning.',
@@ -265,7 +334,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogBestGoogleWalletAlternatives,
   },
   {
-    category: 'Product',
+    category: 'Research',
     date: 'May 14, 2025',
     title: 'Best Apple Wallet Alternatives',
     description: 'Apple Wallet is great for tap-to-pay and boarding passes, but it has limitations. Discover five powerful iOS apps that fill Wallet\'s gaps: secure document storage, multi-card management, and automated trip planning.',
@@ -273,60 +342,12 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogBestAppleWalletAlternatives,
   },
   {
-    category: 'Product',
+    category: 'Research',
     date: 'Aug 18, 2025',
     title: '10 travel hacks that actually work',
     description: 'Simple, practical tips that make travel smoother. Tested by real travelers. No fluff. Just results.',
     slug: '10-travel-hacks-that-actually-work',
     image: blogTenTravelHacks,
-  },
-  {
-    category: 'Product',
-    date: 'Dec 10, 2000',
-    title: 'Short and clear engaging headline for an article',
-    description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
-  },
-  {
-    category: 'Safety',
-    date: 'Nov 5, 2000',
-    title: 'Short and clear engaging headline for an article',
-    description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
-  },
-  {
-    category: 'Company',
-    date: 'Oct 18, 2000',
-    title: 'Short and clear engaging headline for an article',
-    description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
-  },
-  {
-    category: 'Research',
-    date: 'Sep 3, 2000',
-    title: 'Short and clear engaging headline for an article',
-    description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
-  },
-  {
-    category: 'Product',
-    date: 'Aug 14, 2000',
-    title: 'Short and clear engaging headline for an article',
-    description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
-  },
-  {
-    category: 'Company',
-    date: 'Jul 7, 2000',
-    title: 'Short and clear engaging headline for an article',
-    description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
-  },
-  {
-    category: 'Safety',
-    date: 'Jun 20, 2000',
-    title: 'Short and clear engaging headline for an article',
-    description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
-  },
-  {
-    category: 'Research',
-    date: 'May 12, 2000',
-    title: 'Short and clear engaging headline for an article',
-    description: 'Add a concise value statement that captures reader interest and previews content value. Focus on benefits while keeping it under two lines. Align with your blog categories.',
   },
 ])
 
