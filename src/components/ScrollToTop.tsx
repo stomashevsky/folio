@@ -1,5 +1,6 @@
-import { useLayoutEffect } from 'react'
+import { useLayoutEffect, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import { isBlogScrollRestoring, restoreBlogPageState, clearBlogPageState } from '../utils/blogScrollPosition'
 
 /**
  * Component that handles scroll on every route change
@@ -21,8 +22,14 @@ export default function ScrollToTop() {
   }, [])
 
   useLayoutEffect(() => {
+    // Clear blog state if navigating away from any blog-related route
+    if (!location.pathname.startsWith('/blog') && isBlogScrollRestoring()) {
+      clearBlogPageState()
+    }
+
     // Skip if restoreScroll is set (e.g., returning to blog page via "Back to Blog" button)
-    if (location.state?.restoreScroll) {
+    // Also skip if blog scroll restoration is in progress (checked via sessionStorage)
+    if (location.state?.restoreScroll || (location.pathname === '/blog' && isBlogScrollRestoring())) {
       return
     }
     
@@ -58,6 +65,61 @@ export default function ScrollToTop() {
       html.style.scrollBehavior = originalScrollBehavior
     })
   }, [location.pathname, location.hash, location.state])
+
+  // Handle blog scroll restoration separately
+  useEffect(() => {
+    // Restore scroll if: 1) via "Back to blog" button, or 2) via browser back button (if state exists)
+    const shouldRestore = location.pathname === '/blog' && 
+      isBlogScrollRestoring() && 
+      (location.state?.restoreScroll || sessionStorage.getItem('blogPageState') !== null)
+    
+    if (shouldRestore) {
+      let attempts = 0
+      const maxAttempts = 20 // 1 second total
+      
+      // Wait for articles to render, then restore scroll
+      const checkAndRestore = () => {
+        const savedStateRaw = sessionStorage.getItem('blogPageState')
+        if (!savedStateRaw) return
+        
+        try {
+          const savedState = JSON.parse(savedStateRaw) as { scrollY?: number; displayedArticles?: number }
+          if (typeof savedState.scrollY !== 'number' || typeof savedState.displayedArticles !== 'number') {
+            clearBlogPageState()
+            return
+          }
+          
+          // Check if enough articles are rendered by checking DOM
+          const articleElements = document.querySelectorAll('[data-blog-article]')
+          if (articleElements.length >= savedState.displayedArticles) {
+            // Additional small delay to ensure layout is stable
+            requestAnimationFrame(() => {
+              window.scrollTo({ top: savedState.scrollY, behavior: 'auto' })
+              clearBlogPageState()
+            })
+          } else {
+            // Retry after a short delay
+            attempts++
+            if (attempts < maxAttempts) {
+              setTimeout(checkAndRestore, 50)
+            } else {
+              // Give up and clear state
+              clearBlogPageState()
+            }
+          }
+        } catch {
+          clearBlogPageState()
+        }
+      }
+      
+      // Start checking after initial render
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          checkAndRestore()
+        })
+      })
+    }
+  }, [location.pathname, location.state])
 
   return null
 }

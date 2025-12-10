@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import type { BlogArticle } from '../../data/blogArticles'
 import imagePlaceholder from '../../assets/images/image-placeholder.png'
-import { saveBlogScrollPosition, clearBlogScrollPosition } from '../../utils/blogScrollPosition'
+import { saveBlogPageState, clearBlogPageState } from '../../utils/blogScrollPosition'
 
 interface BlogArticleCardProps {
   article: BlogArticle
@@ -15,9 +15,28 @@ export default function BlogArticleCard({ article, variant = 'desktop' }: BlogAr
     // Only save scroll position if navigating from Blog page
     // If navigating from article page (KeepReadingSection), clear saved position
     if (location.pathname === '/blog') {
-      saveBlogScrollPosition()
+      const scrollY = window.scrollY || document.documentElement.scrollTop
+      const savedRaw = sessionStorage.getItem('blogPageState')
+      let displayedArticles = 15
+      let selectedCategory = 'All'
+
+      if (savedRaw) {
+        try {
+          const parsed = JSON.parse(savedRaw) as { displayedArticles?: unknown; selectedCategory?: unknown }
+          if (typeof parsed.displayedArticles === 'number') {
+            displayedArticles = parsed.displayedArticles
+          }
+          if (typeof parsed.selectedCategory === 'string') {
+            selectedCategory = parsed.selectedCategory
+          }
+        } catch {
+          // fallback to defaults
+        }
+      }
+
+      saveBlogPageState(scrollY, displayedArticles, selectedCategory)
     } else {
-      clearBlogScrollPosition()
+      clearBlogPageState()
     }
   }
 

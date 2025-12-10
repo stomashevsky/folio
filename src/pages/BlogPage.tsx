@@ -1,11 +1,11 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useLocation, useSearchParams } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import FooterSection from '../components/sections/FooterSection'
 import { Button, BlogArticleCard } from '../components/ui'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { blogArticles, type BlogCategory } from '../data/blogArticles'
-import { restoreBlogScrollPosition } from '../utils/blogScrollPosition'
+import { restoreBlogPageState, saveBlogPageState, clearBlogPageState, isBlogScrollRestoring } from '../utils/blogScrollPosition'
 
 const categories: BlogCategory[] = ['All', 'Company', 'Product', 'Guides', 'Research', 'Safety']
 
@@ -19,10 +19,18 @@ export default function BlogPage() {
   const initialCategory = isValidCategory ? (categoryParam as BlogCategory) : 'All'
   
   const [selectedCategory, setSelectedCategory] = useState<BlogCategory>(initialCategory)
-  const [displayedArticles, setDisplayedArticles] = useState(9)
+  const [displayedArticles, setDisplayedArticles] = useState(15)
   const [showLeftFade, setShowLeftFade] = useState(false)
   const [showRightFade, setShowRightFade] = useState(false)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
+  const prevPathnameRef = useRef<string | null>(location.pathname)
+
+  const filteredArticles = selectedCategory === 'All'
+    ? blogArticles
+    : blogArticles.filter(article => article.category === selectedCategory)
+
+  const visibleArticles = filteredArticles.slice(0, displayedArticles)
+  const hasMore = displayedArticles < filteredArticles.length
 
   // Update category from URL parameter when it changes
   useEffect(() => {
@@ -32,21 +40,54 @@ export default function BlogPage() {
     
     setSelectedCategory(prev => {
       if (prev !== newCategory) {
-        setDisplayedArticles(9)
+        setDisplayedArticles(15)
       }
       return newCategory
     })
   }, [searchParams])
 
-  // Restore scroll position when returning from article via "Back to blog"
+  // Restore scroll position when returning from article via "Back to blog" or browser back button
   useEffect(() => {
-    if (location.state?.restoreScroll) {
-      // Small delay to ensure DOM is ready
-      requestAnimationFrame(() => {
-        restoreBlogScrollPosition()
-      })
+    // Check if we're actually returning from an article (not just changing category)
+    const isReturningFromArticle = 
+      location.state?.restoreScroll || // "Back to blog" button
+      (prevPathnameRef.current?.startsWith('/blog/') && location.pathname === '/blog') // Browser back from article
+    
+    // Only restore if we're actually returning from an article AND have saved state
+    const shouldRestore = isReturningFromArticle && 
+      sessionStorage.getItem('blogPageState') !== null
+    
+    if (shouldRestore) {
+      const savedState = restoreBlogPageState()
+      if (savedState) {
+        if (savedState.selectedCategory && categories.includes(savedState.selectedCategory as BlogCategory)) {
+          setSelectedCategory(savedState.selectedCategory as BlogCategory)
+          if (savedState.selectedCategory === 'All') {
+            setSearchParams({})
+          } else {
+            setSearchParams({ category: savedState.selectedCategory })
+          }
+        }
+
+        if (savedState.displayedArticles) {
+          setDisplayedArticles(savedState.displayedArticles)
+        }
+      }
     }
-  }, [location.state])
+    
+    // Update previous pathname for next render
+    prevPathnameRef.current = location.pathname
+  }, [location.state, location.pathname, setSearchParams])
+
+  // Note: Scroll restoration is now handled in ScrollToTop component
+
+  // Persist page state (scroll + UI state) when user interacts
+  useEffect(() => {
+    if (isBlogScrollRestoring()) return
+
+    const scrollY = window.scrollY || document.documentElement.scrollTop
+    saveBlogPageState(scrollY, displayedArticles, selectedCategory)
+  }, [displayedArticles, selectedCategory])
 
   usePageTitle({
     title: 'Blog | Folio Wallet',
@@ -56,20 +97,13 @@ export default function BlogPage() {
     ogUrl: 'https://folio.id/blog'
   })
 
-  const filteredArticles = selectedCategory === 'All'
-    ? blogArticles
-    : blogArticles.filter(article => article.category === selectedCategory)
-
-  const visibleArticles = filteredArticles.slice(0, displayedArticles)
-  const hasMore = displayedArticles < filteredArticles.length
-
   const handleLoadMore = () => {
-    setDisplayedArticles(prev => Math.min(prev + 9, filteredArticles.length))
+    setDisplayedArticles(prev => Math.min(prev + 15, filteredArticles.length))
   }
 
   const handleCategoryClick = (category: BlogCategory, buttonElement: HTMLButtonElement) => {
     setSelectedCategory(category)
-    setDisplayedArticles(9)
+    setDisplayedArticles(15)
     
     // Scroll to active tab (center it in the container)
     buttonElement.scrollIntoView({
@@ -168,14 +202,18 @@ export default function BlogPage() {
               {/* Desktop Layout - 3 column grid */}
               <div className="hidden md:grid grid-cols-3 gap-x-6 gap-y-20 w-full">
                 {visibleArticles.map((article, index) => (
-                  <BlogArticleCard key={index} article={article} variant="desktop" />
+                  <div key={index} data-blog-article>
+                    <BlogArticleCard article={article} variant="desktop" />
+                  </div>
                 ))}
               </div>
 
               {/* Mobile Layout - single column list */}
               <div className="flex md:hidden flex-col gap-[64px] items-start w-full">
                 {visibleArticles.map((article, index) => (
-                  <BlogArticleCard key={index} article={article} variant="mobile" />
+                  <div key={index} data-blog-article>
+                    <BlogArticleCard article={article} variant="mobile" />
+                  </div>
                 ))}
               </div>
             </div>
