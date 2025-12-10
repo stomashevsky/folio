@@ -27,9 +27,9 @@ export default function ScrollToTop() {
       clearBlogPageState()
     }
 
-    // Skip if restoreScroll is set (e.g., returning to blog page via "Back to Blog" button)
-    // Also skip if blog scroll restoration is in progress (checked via sessionStorage)
-    if (location.state?.restoreScroll || (location.pathname === '/blog' && isBlogScrollRestoring())) {
+    // Skip scroll-to-top if on /blog and have saved state (returning via "Back to Blog" button or browser back)
+    const hasBlogSavedState = location.pathname === '/blog' && sessionStorage.getItem('blogPageState') !== null
+    if (location.state?.restoreScroll || hasBlogSavedState) {
       return
     }
     
@@ -68,10 +68,11 @@ export default function ScrollToTop() {
 
   // Handle blog scroll restoration separately
   useEffect(() => {
-    // Restore scroll if: 1) via "Back to blog" button, or 2) via browser back button (if state exists)
-    const shouldRestore = location.pathname === '/blog' && 
-      isBlogScrollRestoring() && 
-      (location.state?.restoreScroll || sessionStorage.getItem('blogPageState') !== null)
+    // Check if we have saved state
+    const hasSavedState = sessionStorage.getItem('blogPageState') !== null
+    
+    // Restore scroll if on /blog and have saved state (works for both "Back to blog" button and browser back button)
+    const shouldRestore = location.pathname === '/blog' && hasSavedState
     
     if (shouldRestore) {
       let attempts = 0
@@ -79,36 +80,33 @@ export default function ScrollToTop() {
       
       // Wait for articles to render, then restore scroll
       const checkAndRestore = () => {
-        const savedStateRaw = sessionStorage.getItem('blogPageState')
-        if (!savedStateRaw) return
+        const savedState = restoreBlogPageState()
+        if (!savedState) {
+          return
+        }
         
-        try {
-          const savedState = JSON.parse(savedStateRaw) as { scrollY?: number; displayedArticles?: number }
-          if (typeof savedState.scrollY !== 'number' || typeof savedState.displayedArticles !== 'number') {
-            clearBlogPageState()
-            return
-          }
-          
-          // Check if enough articles are rendered by checking DOM
-          const articleElements = document.querySelectorAll('[data-blog-article]')
-          if (articleElements.length >= savedState.displayedArticles) {
-            // Additional small delay to ensure layout is stable
-            requestAnimationFrame(() => {
-              window.scrollTo({ top: savedState.scrollY, behavior: 'auto' })
-              clearBlogPageState()
-            })
-          } else {
-            // Retry after a short delay
-            attempts++
-            if (attempts < maxAttempts) {
-              setTimeout(checkAndRestore, 50)
-            } else {
-              // Give up and clear state
-              clearBlogPageState()
-            }
-          }
-        } catch {
+        if (typeof savedState.scrollY !== 'number' || typeof savedState.displayedArticles !== 'number') {
           clearBlogPageState()
+          return
+        }
+        
+        // Check if enough articles are rendered by checking DOM
+        const articleElements = document.querySelectorAll('[data-blog-article]')
+        if (articleElements.length >= savedState.displayedArticles) {
+          // Additional small delay to ensure layout is stable
+          requestAnimationFrame(() => {
+            window.scrollTo({ top: savedState.scrollY, behavior: 'auto' })
+            clearBlogPageState()
+          })
+        } else {
+          // Retry after a short delay
+          attempts++
+          if (attempts < maxAttempts) {
+            setTimeout(checkAndRestore, 50)
+          } else {
+            // Give up and clear state
+            clearBlogPageState()
+          }
         }
       }
       
