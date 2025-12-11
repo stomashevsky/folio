@@ -340,7 +340,7 @@ export default function DataSourceChecksPage() {
         </section>
 
         {/* Where database checks make the biggest impact Section */}
-        <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
+        <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-10 items-center relative shrink-0 w-full">
               <SectionHeader
