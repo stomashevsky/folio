@@ -32,4 +32,6 @@ export { default as MenuItem } from './MenuItem'
 export type { MenuItemProps } from './MenuItem'
 export { default as DropdownMenuItem } from './DropdownMenuItem'
 export type { DropdownMenuItemProps } from './DropdownMenuItem'
+export { default as MenuLink } from './MenuLink'
+export type { MenuLinkProps } from './MenuLink'
 

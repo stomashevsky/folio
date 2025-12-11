@@ -7,7 +7,7 @@ import { scrollToSection } from '../../utils/scrollToSection'
 // Icons
 import idCardIcon from '../../assets/icons/id-card.svg'
 import sparklesIcon from '../../assets/icons/Sparkles.svg'
-import circleUserIcon from '../../assets/icons/CircleUser.svg'
+import cameraIcon from '../../assets/icons/camera.svg'
 import scanFaceIcon from '../../assets/icons/ScanFace.svg'
 import databaseIcon from '../../assets/icons/Database.svg'
 import messageSquareMoreIcon from '../../assets/icons/MessageSquareMore.svg'
@@ -22,14 +22,14 @@ interface MobileMenuProps {
 }
 
 const SOLUTIONS_ITEMS = [
-  { 
-    label: 'Age compliance', 
+  {
+    label: 'Age compliance',
     path: '/solutions/age-compliance',
     icon: ageIcon,
     description: 'Ensure users meet age requirements for restricted products or services.'
   },
-  { 
-    label: 'Digital ticketing', 
+  {
+    label: 'Digital ticketing',
     path: '/solutions/digital-ticketing',
     icon: ticketIcon,
     description: 'Create, manage, and validate digital tickets with built-in fraud controls.'
@@ -37,50 +37,50 @@ const SOLUTIONS_ITEMS = [
 ]
 
 const PLATFORM_ITEMS = [
-  { 
-    label: 'ID verification', 
+  {
+    label: 'ID verification',
     path: '/platform/id-verification',
     icon: idCardIcon,
     description: 'Verify passports, ID cards, and other official documents.'
   },
-  { 
-    label: 'Document intelligence', 
+  {
+    label: 'Document intelligence',
     path: '/platform/document-intelligence',
     icon: sparklesIcon,
     description: 'Extract and analyze data from submitted documents.'
   },
-  { 
-    label: 'Liveness check', 
+  {
+    label: 'Liveness check',
     path: '/platform/liveness-check',
-    icon: circleUserIcon,
+    icon: cameraIcon,
     description: 'Confirm that the user is physically present.'
   },
-  { 
-    label: 'Face match', 
+  {
+    label: 'Face match',
     path: '/platform/face-match',
     icon: scanFaceIcon,
     description: 'Compare a selfie to an official photo to confirm identity.'
   },
-  { 
-    label: 'Data source checks', 
+  {
+    label: 'Data source checks',
     path: '/platform/data-source-checks',
     icon: databaseIcon,
     description: 'Validate user information against trusted databases.'
   },
-  { 
-    label: 'Phone and email validation', 
+  {
+    label: 'Phone and email validation',
     path: '/platform/phone-and-email-validation',
     icon: messageSquareMoreIcon,
     description: 'Confirm ownership and detect risky contact details.'
   },
-  { 
-    label: 'NFC identity scan', 
+  {
+    label: 'NFC identity scan',
     path: '/platform/nfc-identity-scan',
     icon: nfcIcon,
     description: 'Read secure chip data from compatible IDs and passports.'
   },
-  { 
-    label: 'Dynamic Flow', 
+  {
+    label: 'Dynamic Flow',
     path: '/platform/dynamic-flow',
     icon: gitForkIcon,
     description: 'Coordinate identity checks with flexible logic.'
@@ -149,16 +149,14 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   return (
     <>
       <div
-        className={`lg:hidden fixed inset-0 bg-[rgba(10,10,10,0.3)] z-[50] transition-opacity duration-200 ${
-          isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        }`}
+        className={`lg:hidden fixed inset-0 bg-[rgba(10,10,10,0.3)] z-[50] transition-opacity duration-200 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          }`}
         onClick={handleClose}
         aria-hidden="true"
       />
-      <div 
-        className={`lg:hidden fixed bg-white left-0 right-0 top-[64px] z-[60] w-full transition-transform duration-200 ease-spring-out ${
-          isOpen ? 'translate-y-0' : '-translate-y-full'
-        }`}
+      <div
+        className={`lg:hidden fixed bg-white left-0 right-0 top-[64px] z-[60] w-full transition-transform duration-200 ease-spring-out ${isOpen ? 'translate-y-0' : '-translate-y-full'
+          }`}
         role="dialog"
         aria-modal="true"
         aria-label="Navigation menu"
@@ -169,7 +167,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               /* Main Menu */
               <>
                 <div className="flex flex-col gap-5 items-start justify-start pb-2.5 pt-0 px-0 relative shrink-0 w-full">
-                  <div className="flex flex-col gap-1 items-start justify-start relative shrink-0 w-full">
+                  <div className="flex flex-col gap-0 items-start justify-start relative shrink-0 w-full">
                     <MenuItem
                       active={isActive('/') && location.pathname === '/'}
                       fullWidth
@@ -260,8 +258,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   >
                     ← Back
                   </MenuItem>
-                  
-                  <div className="flex flex-col gap-1 items-start justify-start relative shrink-0 w-full">
+
+                  <div className="flex flex-col gap-0 items-start justify-start relative shrink-0 w-full">
                     <h2 className="font-bold text-lg text-[#0a0a0a] px-0 py-2">Solutions</h2>
                     {SOLUTIONS_ITEMS.map((item) => {
                       const active = location.pathname.startsWith(item.path)
@@ -297,8 +295,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   >
                     ← Back
                   </MenuItem>
-                  
-                  <div className="flex flex-col gap-1 items-start justify-start relative shrink-0 w-full">
+
+                  <div className="flex flex-col gap-0 items-start justify-start relative shrink-0 w-full">
                     <h2 className="font-bold text-lg text-[#0a0a0a] px-0 py-2">Platform</h2>
                     {PLATFORM_ITEMS.map((item) => {
                       const active = location.pathname.startsWith(item.path)

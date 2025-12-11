@@ -2,12 +2,13 @@ import { useState, useRef, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { MenuItem, DropdownMenuItem } from '../ui'
 import { scrollToTop } from '../../utils/scrollToTop'
+import chevronDownIcon from '../../assets/icons/chevron-down.svg'
 
 // Icons
 import idCardIcon from '../../assets/icons/id-card.svg'
 import sparklesIcon from '../../assets/icons/Sparkles.svg'
-import circleUserIcon from '../../assets/icons/CircleUser.svg'
 import scanFaceIcon from '../../assets/icons/ScanFace.svg'
+import circleUserIcon from '../../assets/icons/CircleUser.svg'
 import databaseIcon from '../../assets/icons/Database.svg'
 import messageSquareMoreIcon from '../../assets/icons/MessageSquareMore.svg'
 import nfcIcon from '../../assets/icons/Nfc.svg'
@@ -20,51 +21,54 @@ interface PlatformItem {
   description: string
 }
 
+// Order matches Figma design: Left column (top to bottom), then Right column (top to bottom)
 const PLATFORM_ITEMS: PlatformItem[] = [
-  { 
-    label: 'ID verification', 
+  // Left Column
+  {
+    label: 'ID verification',
     path: '/platform/id-verification',
     icon: idCardIcon,
     description: 'Verify passports, ID cards, and other official documents.'
   },
-  { 
-    label: 'Document intelligence', 
+  {
+    label: 'Document intelligence',
     path: '/platform/document-intelligence',
     icon: sparklesIcon,
     description: 'Extract and analyze data from submitted documents.'
   },
-  { 
-    label: 'Liveness check', 
+  {
+    label: 'Liveness check',
     path: '/platform/liveness-check',
-    icon: circleUserIcon,
+    icon: scanFaceIcon,
     description: 'Confirm that the user is physically present.'
   },
-  { 
-    label: 'Face match', 
+  {
+    label: 'Face match',
     path: '/platform/face-match',
-    icon: scanFaceIcon,
+    icon: circleUserIcon,
     description: 'Compare a selfie to an official photo to confirm identity.'
   },
-  { 
-    label: 'Data source checks', 
+  // Right Column
+  {
+    label: 'Data source checks',
     path: '/platform/data-source-checks',
     icon: databaseIcon,
     description: 'Validate user information against trusted databases.'
   },
-  { 
-    label: 'Phone and email validation', 
+  {
+    label: 'Phone and email validation',
     path: '/platform/phone-and-email-validation',
     icon: messageSquareMoreIcon,
     description: 'Confirm ownership and detect risky contact details.'
   },
-  { 
-    label: 'NFC identity scan', 
+  {
+    label: 'NFC identity scan',
     path: '/platform/nfc-identity-scan',
     icon: nfcIcon,
     description: 'Read secure chip data from compatible IDs and passports.'
   },
-  { 
-    label: 'Dynamic Flow', 
+  {
+    label: 'Dynamic Flow',
     path: '/platform/dynamic-flow',
     icon: gitForkIcon,
     description: 'Coordinate identity checks with flexible logic.'
@@ -108,7 +112,7 @@ export default function PlatformDropdown() {
   }
 
   return (
-    <div 
+    <div
       ref={containerRef}
       className="relative flex flex-col items-center"
       onMouseEnter={() => setIsOpen(true)}
@@ -116,7 +120,7 @@ export default function PlatformDropdown() {
     >
       <MenuItem
         active={isOpen}
-        className="cursor-default"
+        className={`cursor-default ${isOpen ? '!bg-[#E5E5E5]' : ''}`}
         aria-haspopup="menu"
         aria-expanded={isOpen}
         onClick={(e) => {
@@ -124,23 +128,36 @@ export default function PlatformDropdown() {
           // Platform button is not clickable, only dropdown items are
         }}
       >
-        Platform
+        <span className="flex items-center gap-1.5">
+          Platform
+          <img
+            src={chevronDownIcon}
+            alt=""
+            aria-hidden="true"
+            className="w-4 h-4"
+          />
+        </span>
       </MenuItem>
-      
+
       {isOpen && (
-        <div 
+        <div
           className="absolute top-full left-1/2 -translate-x-1/2 pt-1.5 z-50"
           role="menu"
           aria-label="Platform submenu"
+          style={{
+            // Prevent overflow on narrow screens
+            maxWidth: 'calc(100vw - 48px)',
+            left: 'clamp(24px, 50%, calc(100vw - 24px))',
+          }}
         >
-          <div 
+          <div
             className="bg-white rounded-3xl shadow-[0px_8px_25px_-3px_rgba(10,13,18,0.15),0px_4px_10px_-6px_rgba(10,13,18,0.15)] p-1.5"
-            style={{ 
+            style={{
               width: 'max-content',
             }}
           >
-            {/* Two column grid layout for Platform items */}
-            <div className="grid grid-cols-2 gap-1.5">
+            {/* Two column grid layout for Platform items - gaps are 0 */}
+            <div className="grid grid-cols-2 gap-0">
               {PLATFORM_ITEMS.map((item) => (
                 <DropdownMenuItem
                   key={item.path}
@@ -148,7 +165,7 @@ export default function PlatformDropdown() {
                   title={item.label}
                   description={item.description}
                   onClick={() => handleItemClick(item.path)}
-                  className="min-w-[280px]"
+                  className="w-[300px]"
                   role="menuitem"
                 />
               ))}
