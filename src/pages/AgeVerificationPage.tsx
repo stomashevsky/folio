@@ -107,13 +107,13 @@ const integrationMethods = [
   },
 ]
 
-export default function AgeVerificationPage() {
+export default function AgeCompliancePage() {
   usePageTitle({
-    title: 'Age Verification | Folio Wallet',
+    title: 'Age Compliance | Folio Wallet',
     description: 'Age verification service for global compliance. Confirm user age quickly and securely with verification methods that match your risk level.',
-    ogTitle: 'Age Verification | Folio Wallet',
+    ogTitle: 'Age Compliance | Folio Wallet',
     ogDescription: 'Age verification service for global compliance. Confirm user age quickly and securely with verification methods that match your risk level.',
-    ogUrl: 'https://folio.id/solutions/age-verification'
+    ogUrl: 'https://folio.id/solutions/age-compliance'
   })
 
   const [activeMethodId, setActiveMethodId] = useState<string | null>('document-verification')

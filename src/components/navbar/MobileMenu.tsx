@@ -1,8 +1,20 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import { Button, MenuItem } from '../ui'
+import { Button, MenuItem, DropdownMenuItem } from '../ui'
 import { scrollToTop } from '../../utils/scrollToTop'
 import { scrollToSection } from '../../utils/scrollToSection'
+
+// Icons
+import idCardIcon from '../../assets/icons/id-card.svg'
+import sparklesIcon from '../../assets/icons/Sparkles.svg'
+import circleUserIcon from '../../assets/icons/CircleUser.svg'
+import scanFaceIcon from '../../assets/icons/ScanFace.svg'
+import databaseIcon from '../../assets/icons/Database.svg'
+import messageSquareMoreIcon from '../../assets/icons/MessageSquareMore.svg'
+import nfcIcon from '../../assets/icons/Nfc.svg'
+import gitForkIcon from '../../assets/icons/GitFork.svg'
+import ageIcon from '../../assets/icons/Age.svg'
+import ticketIcon from '../../assets/icons/ticket.svg'
 
 interface MobileMenuProps {
   isOpen: boolean
@@ -10,21 +22,82 @@ interface MobileMenuProps {
 }
 
 const SOLUTIONS_ITEMS = [
-  { label: 'Identity Verification (KYC)', path: '/solutions/identity-verification' },
-  { label: 'Business Onboarding (KYB)', path: '/solutions/business-onboarding' },
-  { label: 'Age Verification', path: '/solutions/age-verification' },
-  { label: 'Ticket Issuance', path: '/solutions/ticket-issuance' },
+  { 
+    label: 'Age compliance', 
+    path: '/solutions/age-compliance',
+    icon: ageIcon,
+    description: 'Ensure users meet age requirements for restricted products or services.'
+  },
+  { 
+    label: 'Digital ticketing', 
+    path: '/solutions/digital-ticketing',
+    icon: ticketIcon,
+    description: 'Create, manage, and validate digital tickets with built-in fraud controls.'
+  },
+]
+
+const PLATFORM_ITEMS = [
+  { 
+    label: 'ID verification', 
+    path: '/platform/id-verification',
+    icon: idCardIcon,
+    description: 'Verify passports, ID cards, and other official documents.'
+  },
+  { 
+    label: 'Document intelligence', 
+    path: '/platform/document-intelligence',
+    icon: sparklesIcon,
+    description: 'Extract and analyze data from submitted documents.'
+  },
+  { 
+    label: 'Liveness check', 
+    path: '/platform/liveness-check',
+    icon: circleUserIcon,
+    description: 'Confirm that the user is physically present.'
+  },
+  { 
+    label: 'Face match', 
+    path: '/platform/face-match',
+    icon: scanFaceIcon,
+    description: 'Compare a selfie to an official photo to confirm identity.'
+  },
+  { 
+    label: 'Data source checks', 
+    path: '/platform/data-source-checks',
+    icon: databaseIcon,
+    description: 'Validate user information against trusted databases.'
+  },
+  { 
+    label: 'Phone and email validation', 
+    path: '/platform/phone-and-email-validation',
+    icon: messageSquareMoreIcon,
+    description: 'Confirm ownership and detect risky contact details.'
+  },
+  { 
+    label: 'NFC identity scan', 
+    path: '/platform/nfc-identity-scan',
+    icon: nfcIcon,
+    description: 'Read secure chip data from compatible IDs and passports.'
+  },
+  { 
+    label: 'Dynamic Flow', 
+    path: '/platform/dynamic-flow',
+    icon: gitForkIcon,
+    description: 'Coordinate identity checks with flexible logic.'
+  },
 ]
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const navigate = useNavigate()
   const location = useLocation()
   const [showSolutionsSubmenu, setShowSolutionsSubmenu] = useState(false)
+  const [showPlatformSubmenu, setShowPlatformSubmenu] = useState(false)
 
   // Reset submenu state when menu closes
   useEffect(() => {
     if (!isOpen) {
       setShowSolutionsSubmenu(false)
+      setShowPlatformSubmenu(false)
     }
   }, [isOpen])
 
@@ -38,6 +111,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const handleNavClick = (path: string) => {
     onClose()
     setShowSolutionsSubmenu(false)
+    setShowPlatformSubmenu(false)
     const isCurrentPage = isActive(path)
     if (isCurrentPage && location.pathname === path) {
       scrollToTop()
@@ -55,12 +129,20 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     setShowSolutionsSubmenu(true)
   }
 
+  const handlePlatformClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setShowPlatformSubmenu(true)
+  }
+
   const handleBackClick = () => {
     setShowSolutionsSubmenu(false)
+    setShowPlatformSubmenu(false)
   }
 
   const handleClose = () => {
     setShowSolutionsSubmenu(false)
+    setShowPlatformSubmenu(false)
     onClose()
   }
 
@@ -83,7 +165,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       >
         <div className="flex flex-col gap-8 items-start overflow-hidden px-0 py-4 w-full">
           <div className="flex flex-col gap-8 items-start justify-start w-full px-6 py-0 relative shrink-0">
-            {!showSolutionsSubmenu ? (
+            {!showSolutionsSubmenu && !showPlatformSubmenu ? (
               /* Main Menu */
               <>
                 <div className="flex flex-col gap-5 items-start justify-start pb-2.5 pt-0 px-0 relative shrink-0 w-full">
@@ -100,6 +182,15 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                       aria-current={isActive('/') && location.pathname === '/' ? 'page' : undefined}
                     >
                       Folio app
+                    </MenuItem>
+                    <MenuItem
+                      active={isActive('/platform')}
+                      fullWidth
+                      onClick={handlePlatformClick}
+                      className="justify-start text-left"
+                      aria-current={isActive('/platform') ? 'page' : undefined}
+                    >
+                      Platform
                     </MenuItem>
                     <MenuItem
                       active={isActive('/solutions')}
@@ -158,7 +249,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   </Button>
                 </div>
               </>
-            ) : (
+            ) : showSolutionsSubmenu ? (
               /* Solutions Submenu */
               <>
                 <div className="flex flex-col gap-5 items-start justify-start pb-2.5 pt-0 px-0 relative shrink-0 w-full">
@@ -175,20 +266,58 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     {SOLUTIONS_ITEMS.map((item) => {
                       const active = location.pathname.startsWith(item.path)
                       return (
-                        <MenuItem
+                        <DropdownMenuItem
                           key={item.path}
+                          icon={item.icon}
+                          title={item.label}
+                          description={item.description}
                           active={active}
-                          fullWidth
                           onClick={(e) => {
                             e.preventDefault()
                             e.stopPropagation()
                             handleNavClick(item.path)
                           }}
-                          className="justify-start text-left"
+                          className="w-full"
+                          role="menuitem"
                           aria-current={active ? 'page' : undefined}
-                        >
-                          {item.label}
-                        </MenuItem>
+                        />
+                      )
+                    })}
+                  </div>
+                </div>
+              </>
+            ) : (
+              /* Platform Submenu */
+              <>
+                <div className="flex flex-col gap-5 items-start justify-start pb-2.5 pt-0 px-0 relative shrink-0 w-full">
+                  <MenuItem
+                    fullWidth
+                    onClick={handleBackClick}
+                    className="justify-start text-left"
+                  >
+                    ← Back
+                  </MenuItem>
+                  
+                  <div className="flex flex-col gap-1 items-start justify-start relative shrink-0 w-full">
+                    <h2 className="font-bold text-lg text-[#0a0a0a] px-0 py-2">Platform</h2>
+                    {PLATFORM_ITEMS.map((item) => {
+                      const active = location.pathname.startsWith(item.path)
+                      return (
+                        <DropdownMenuItem
+                          key={item.path}
+                          icon={item.icon}
+                          title={item.label}
+                          description={item.description}
+                          active={active}
+                          onClick={(e) => {
+                            e.preventDefault()
+                            e.stopPropagation()
+                            handleNavClick(item.path)
+                          }}
+                          className="w-full"
+                          role="menuitem"
+                          aria-current={active ? 'page' : undefined}
+                        />
                       )
                     })}
                   </div>

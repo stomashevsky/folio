@@ -3,6 +3,7 @@ import { LogoButton, Button, MenuItem } from '../ui'
 import { scrollToTop } from '../../utils/scrollToTop'
 import { scrollToSection } from '../../utils/scrollToSection'
 import SolutionsDropdown from './SolutionsDropdown'
+import PlatformDropdown from './PlatformDropdown'
 
 export default function DesktopNav() {
   const location = useLocation()
@@ -63,6 +64,7 @@ export default function DesktopNav() {
           <MenuItem onClick={() => handleNavClick('/')}>
             Folio app
           </MenuItem>
+          <PlatformDropdown />
           <SolutionsDropdown />
           <MenuItem onClick={() => handleNavClick('/government')}>
             Government

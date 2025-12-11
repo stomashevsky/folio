@@ -3,11 +3,17 @@ import { useEffect } from 'react'
 import ScrollToTop from './components/ScrollToTop'
 import FolioAppPage from './pages/FolioAppPage'
 import PlaygroundPage from './pages/PlaygroundPage'
-import TicketIssuancePage from './pages/TicketIssuancePage'
-import IdentityVerificationPage from './pages/IdentityVerificationPage'
-import BusinessOnboardingPage from './pages/BusinessOnboardingPage'
-import AgeVerificationPage from './pages/AgeVerificationPage'
+import DigitalTicketingPage from './pages/DigitalTicketingPage'
+import AgeCompliancePage from './pages/AgeCompliancePage'
 import GovernmentPage from './pages/GovernmentPage'
+import IdVerificationPage from './pages/IdVerificationPage'
+import DocumentIntelligencePage from './pages/DocumentIntelligencePage'
+import LivenessCheckPage from './pages/LivenessCheckPage'
+import FaceMatchPage from './pages/FaceMatchPage'
+import DataSourceChecksPage from './pages/DataSourceChecksPage'
+import PhoneAndEmailValidationPage from './pages/PhoneAndEmailValidationPage'
+import NfcIdentityScanPage from './pages/NfcIdentityScanPage'
+import DynamicFlowPage from './pages/DynamicFlowPage'
 import BlogPage from './pages/BlogPage'
 import AlbanianDiasporaArticlePage from './pages/AlbanianDiasporaArticlePage'
 import TripCaseAlternativeArticlePage from './pages/TripCaseAlternativeArticlePage'
@@ -116,12 +122,18 @@ function App() {
       <Routes>
         <Route path="/" element={<FolioAppPage />} />
         <Route path="/government/playground" element={<PlaygroundPage />} />
-        <Route path="/solutions/ticket-issuance" element={<TicketIssuancePage />} />
-        <Route path="/solutions/identity-verification" element={<IdentityVerificationPage />} />
-        <Route path="/solutions/business-onboarding" element={<BusinessOnboardingPage />} />
-        <Route path="/solutions/age-verification" element={<AgeVerificationPage />} />
-        <Route path="/business" element={<Navigate to="/solutions/ticket-issuance" replace />} />
+        <Route path="/solutions/digital-ticketing" element={<DigitalTicketingPage />} />
+        <Route path="/solutions/age-compliance" element={<AgeCompliancePage />} />
+        <Route path="/business" element={<Navigate to="/solutions/digital-ticketing" replace />} />
         <Route path="/government" element={<GovernmentPage />} />
+        <Route path="/platform/id-verification" element={<IdVerificationPage />} />
+        <Route path="/platform/document-intelligence" element={<DocumentIntelligencePage />} />
+        <Route path="/platform/liveness-check" element={<LivenessCheckPage />} />
+        <Route path="/platform/face-match" element={<FaceMatchPage />} />
+        <Route path="/platform/data-source-checks" element={<DataSourceChecksPage />} />
+        <Route path="/platform/phone-and-email-validation" element={<PhoneAndEmailValidationPage />} />
+        <Route path="/platform/nfc-identity-scan" element={<NfcIdentityScanPage />} />
+        <Route path="/platform/dynamic-flow" element={<DynamicFlowPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/albanian-diaspora-voter-registration" element={<AlbanianDiasporaArticlePage />} />
         <Route path="/blog/tripcase-alternative" element={<TripCaseAlternativeArticlePage />} />

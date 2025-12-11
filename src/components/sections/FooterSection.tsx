@@ -16,7 +16,7 @@ export default function FooterSection() {
         </div>
 
         {/* Main content grid */}
-        <div className="box-border grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-x-6 gap-y-10 items-start px-6 py-10 relative shrink-0 w-full">
+        <div className="box-border grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-x-6 gap-y-10 items-start px-6 py-10 relative shrink-0 w-full">
           {/* Left column: Logo and contact info */}
           <div className="box-border flex flex-col gap-6 items-start relative shrink-0">
             <Logo size={28} />
@@ -47,16 +47,31 @@ export default function FooterSection() {
             </div>
           </div>
 
+          {/* Platform column */}
+          <div className="flex flex-col gap-4 items-start justify-center relative shrink-0">
+            <p className="font-normal leading-5 relative shrink-0 text-[#737373] text-sm whitespace-pre-wrap text-left">
+              Platform
+            </p>
+            <div className="flex flex-col gap-3 items-start relative shrink-0 w-full">
+              <FooterLink to="/platform/id-verification">ID Verification</FooterLink>
+              <FooterLink to="/platform/document-intelligence">Document Intelligence</FooterLink>
+              <FooterLink to="/platform/liveness-check">Liveness Check</FooterLink>
+              <FooterLink to="/platform/face-match">Face Match</FooterLink>
+              <FooterLink to="/platform/data-source-checks">Data Source Checks</FooterLink>
+              <FooterLink to="/platform/phone-and-email-validation">Phone and Email Validation</FooterLink>
+              <FooterLink to="/platform/nfc-identity-scan">NFC Identity Scan</FooterLink>
+              <FooterLink to="/platform/dynamic-flow">Dynamic Flow</FooterLink>
+            </div>
+          </div>
+
           {/* Solutions column */}
           <div className="flex flex-col gap-4 items-start justify-center relative shrink-0">
             <p className="font-normal leading-5 relative shrink-0 text-[#737373] text-sm whitespace-pre-wrap text-left">
               Solutions
             </p>
             <div className="flex flex-col gap-3 items-start relative shrink-0 w-full">
-              <FooterLink to="/solutions/identity-verification">Identity Verification (KYC)</FooterLink>
-              <FooterLink to="/solutions/business-onboarding">Business Onboarding (KYB)</FooterLink>
-              <FooterLink to="/solutions/age-verification">Age Verification</FooterLink>
-              <FooterLink to="/solutions/ticket-issuance">Ticket Issuance</FooterLink>
+              <FooterLink to="/solutions/age-compliance">Age Compliance</FooterLink>
+              <FooterLink to="/solutions/digital-ticketing">Digital Ticketing</FooterLink>
             </div>
           </div>
 

@@ -1,18 +1,32 @@
 import { useState, useRef, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import { MenuItem } from '../ui'
+import { MenuItem, DropdownMenuItem } from '../ui'
 import { scrollToTop } from '../../utils/scrollToTop'
+
+// Icons
+import ageIcon from '../../assets/icons/Age.svg'
+import ticketIcon from '../../assets/icons/ticket.svg'
 
 interface SolutionItem {
   label: string
   path: string
+  icon: string
+  description: string
 }
 
 const SOLUTIONS_ITEMS: SolutionItem[] = [
-  { label: 'Identity Verification (KYC)', path: '/solutions/identity-verification' },
-  { label: 'Business Onboarding (KYB)', path: '/solutions/business-onboarding' },
-  { label: 'Age Verification', path: '/solutions/age-verification' },
-  { label: 'Ticket Issuance', path: '/solutions/ticket-issuance' },
+  { 
+    label: 'Age compliance', 
+    path: '/solutions/age-compliance',
+    icon: ageIcon,
+    description: 'Ensure users meet age requirements for restricted products or services.'
+  },
+  { 
+    label: 'Digital ticketing', 
+    path: '/solutions/digital-ticketing',
+    icon: ticketIcon,
+    description: 'Create, manage, and validate digital tickets with built-in fraud controls.'
+  },
 ]
 
 export default function SolutionsDropdown() {
@@ -84,15 +98,15 @@ export default function SolutionsDropdown() {
             }}
           >
             {SOLUTIONS_ITEMS.map((item) => (
-              <MenuItem
+              <DropdownMenuItem
                 key={item.path}
-                fullWidth
+                icon={item.icon}
+                title={item.label}
+                description={item.description}
                 onClick={() => handleItemClick(item.path)}
-                className="justify-start text-left"
+                className="min-w-[280px]"
                 role="menuitem"
-              >
-                {item.label}
-              </MenuItem>
+              />
             ))}
           </div>
         </div>

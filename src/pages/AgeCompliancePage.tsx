@@ -6,25 +6,25 @@ import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 
 // Images
-import businessOnboardingHero from '../assets/images/business-onboarding-hero.png'
-import businessOnboardingOnboardingFlow from '../assets/images/business-onboarding-onboarding-flow.png'
-import businessOnboardingDataCollection from '../assets/images/business-onboarding-data-collection.png'
-import businessOnboardingStayCompliant from '../assets/images/business-onboarding-stay-compliant.png'
-import businessOnboardingRepresentatives from '../assets/images/business-onboarding-representatives.png'
-import businessOnboardingRegistryData from '../assets/images/business-onboarding-registry-data.png'
+import ageVerificationHero from '../assets/images/age-verification-hero.png'
+import ageVerificationAnonymousCredential from '../assets/images/age-verification-anonymous-credential.png'
+import ageVerificationFaceEstimation from '../assets/images/age-verification-face-estimation.png'
+import ageVerificationDocumentVerification from '../assets/images/age-verification-document-verification.png'
+import ageVerificationPrivacy from '../assets/images/age-verification-privacy.png'
+import ageVerificationAgeAssurance from '../assets/images/age-verification-age-assurance.png'
 
 // Icons for ToolCard (industry cards)
-import scaleIcon from '../assets/icons/Scale.svg'
-import diceIcon from '../assets/icons/Dices.svg'
-import bitcoinIcon from '../assets/icons/Bitcoin.svg'
+import messagesSquareIcon from '../assets/icons/MessagesSquare.svg'
+import dicesIcon from '../assets/icons/Dices.svg'
+import shoppingCartIcon from '../assets/icons/ShoppingCart.svg'
 import creditCardIcon from '../assets/icons/CreditCard.svg'
-import shieldPlusIcon from '../assets/icons/ShieldPlus.svg'
-import usersIcon from '../assets/icons/Users.svg'
+import clapperboardIcon from '../assets/icons/Clapperboard.svg'
+import signalIcon from '../assets/icons/Signal.svg'
 
 // Icons for integration section
-import linkIcon from '../assets/icons/Link.svg'
 import puzzleIcon from '../assets/icons/Puzzle.svg'
 import bracesIcon from '../assets/icons/Braces.svg'
+import linkIcon from '../assets/icons/Link.svg'
 
 // Background style using inline styles for complex multi-layer gradient
 const BACKGROUND_STYLE = {
@@ -32,59 +32,59 @@ const BACKGROUND_STYLE = {
     'linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(90deg, rgba(229, 229, 229, 1) 0%, rgba(229, 229, 229, 1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%)',
 }
 
-// Verification steps data (using AccordionItemData format)
-const verificationSteps: AccordionItemData[] = [
+// Age verification methods data (using AccordionItemData format)
+const ageVerificationMethods: AccordionItemData[] = [
   {
-    id: 'onboarding-flow',
-    title: 'Create a smooth onboarding flow',
-    description: 'Build a guided onboarding process tailored to your regulatory needs. Forms adapt dynamically with conditional questions, smart pre filled fields and your branding. Remote onboarding becomes simpler from the very first step.',
-    desktopImage: businessOnboardingOnboardingFlow,
+    id: 'document-verification',
+    title: 'Document based verification',
+    description: 'When you need maximum assurance, users upload an ID document for full age verification. Folio validates authenticity, runs liveness checks and confirms legal age so you can meet strict regulatory requirements.',
+    desktopImage: ageVerificationDocumentVerification,
   },
   {
-    id: 'data-collection',
-    title: 'Automate data collection and validation',
-    description: 'Businesses can enter data manually or rely on automatic registry based pre filling. Representatives complete secure remote identity checks, while ownership structures and UBO information are discovered in real time. All verified data is presented clearly for your compliance review.',
-    desktopImage: businessOnboardingDataCollection,
+    id: 'face-estimation',
+    title: 'Face based age estimation',
+    description: 'Users take a quick selfie and our AI estimates age in seconds. No documents are required. Built in liveness checks help prevent fraud while keeping the flow light and mobile friendly.',
+    desktopImage: ageVerificationFaceEstimation,
   },
   {
-    id: 'stay-compliant',
-    title: 'Stay compliant with confidence',
-    description: 'Your team retains full control over approval decisions. Data can be accessed through Folio\'s dashboard or delivered into your infrastructure via API. Optional ongoing monitoring keeps you informed about changes in company status, ownership or risk levels.',
-    desktopImage: businessOnboardingStayCompliant,
+    id: 'anonymous-credential',
+    title: 'Anonymous age credential',
+    description: 'A one time verified age credential that can be reused without revealing identity. Users prove they are old enough with a privacy preserving token instead of personal data.',
+    desktopImage: ageVerificationAnonymousCredential,
   },
 ]
 
 // Industry cards data
 const industryCards = [
   {
-    icon: scaleIcon,
-    title: 'Legal',
-    description: 'Law firms and legal platforms verify corporate clients for onboarding and authorization. Remote checks cut paperwork and support efficient digital workflows.',
+    icon: messagesSquareIcon,
+    title: 'Social platforms and messaging',
+    description: 'Protect younger users and support child safety rules by confirming appropriate age before access, with the option to add parental consent where needed.',
   },
   {
-    icon: diceIcon,
-    title: 'Adult content and gambling',
-    description: 'High risk platforms validate partner companies, payout recipients and operators with reliable KYB and continuous checks. Remote onboarding stays fast and compliant.',
+    icon: dicesIcon,
+    title: 'Online gaming and gambling',
+    description: 'Confirm players meet legal age limits before they play. Strong age checks help prevent misuse, support licensing requirements and reduce fraud.',
   },
   {
-    icon: bitcoinIcon,
-    title: 'Cryptocurrency',
-    description: 'Crypto platforms verify merchants and institutional clients with accurate registry data, automated UBO discovery and AML tools. Compliance becomes easier while scaling globally.',
+    icon: shoppingCartIcon,
+    title: 'E-commerce and delivery',
+    description: 'Verify age at checkout for alcohol, tobacco and other restricted products. Folio fits into your existing purchase or delivery flow without slowing it down.',
   },
   {
     icon: creditCardIcon,
-    title: 'Financial institutions',
-    description: 'Banks and fintechs onboard business clients quickly with automated checks, UBO discovery and AML screening. Remote onboarding becomes faster and fully compliant.',
+    title: 'Fintech and financial services',
+    description: 'Ensure that customers meet minimum age requirements for accounts, wallets and financial products while keeping digital onboarding straightforward.',
   },
   {
-    icon: shieldPlusIcon,
-    title: 'Insurance',
-    description: 'Insurers verify the legitimacy of policyholder companies and intermediaries with registry data, UBO insights and AML checks. This reduces fraud and speeds up operations.',
+    icon: clapperboardIcon,
+    title: 'Streaming and adult content',
+    description: 'Make sure age restricted content is shown only to eligible audiences with verification methods that match your viewing experience.',
   },
   {
-    icon: usersIcon,
-    title: 'Sharing economy',
-    description: 'Platforms that work with fleet operators, property managers or service providers confirm business identity at scale. Folio helps assess ownership and risk in one simple flow.',
+    icon: signalIcon,
+    title: 'Telecommunications',
+    description: 'Check customer age for plans, contracts and services that require legal age confirmation while keeping sign up quick and simple.',
   },
 ]
 
@@ -93,32 +93,32 @@ const integrationMethods = [
   {
     icon: puzzleIcon,
     title: 'Web and mobile SDK',
-    description: 'Embed KYB flows directly inside your product. Collect company data, verify representatives and fetch registry information in a seamless branded experience.',
+    description: 'Embed age checks directly into your product. Users complete verification in a native, branded flow that feels like part of your app.',
   },
   {
     icon: bracesIcon,
     title: 'API',
-    description: 'Control every step of the business verification journey. Customize data collection, automate UBO discovery and integrate KYB deeply into your backend.',
+    description: 'Control every detail of the age verification journey with our API. Orchestrate methods, rules and outcomes from your own backend systems.',
   },
   {
     icon: linkIcon,
     title: 'Static URL',
-    description: 'Start remote onboarding instantly with a secure link. Share it with business clients to collect data, verify representatives and run registry checks without any development work.',
+    description: 'Launch age verification instantly with a secure hosted link. Share it by email, SMS or chat to start checks without any development work.',
   },
 ]
 
-export default function BusinessOnboardingPage() {
+export default function AgeCompliancePage() {
   usePageTitle({
-    title: 'Business Onboarding (KYB) | Folio Wallet',
-    description: 'Remote business onboarding with automated verification, ownership insights and AML checks. Verify business clients quickly, securely and without friction.',
-    ogTitle: 'Business Onboarding (KYB) | Folio Wallet',
-    ogDescription: 'Remote business onboarding with automated verification, ownership insights and AML checks. Verify business clients quickly, securely and without friction.',
-    ogUrl: 'https://folio.id/solutions/business-onboarding'
+    title: 'Age Compliance | Folio Wallet',
+    description: 'Age verification service for global compliance. Confirm user age quickly and securely with verification methods that match your risk level.',
+    ogTitle: 'Age Compliance | Folio Wallet',
+    ogDescription: 'Age verification service for global compliance. Confirm user age quickly and securely with verification methods that match your risk level.',
+    ogUrl: 'https://folio.id/solutions/age-compliance'
   })
 
-  const [activeStepId, setActiveStepId] = useState<string | null>('onboarding-flow')
+  const [activeMethodId, setActiveMethodId] = useState<string | null>('document-verification')
   
-  const activeStep = verificationSteps.find(item => item.id === activeStepId) || verificationSteps[0]
+  const activeMethod = ageVerificationMethods.find(item => item.id === activeMethodId) || ageVerificationMethods[0]
 
   const handleGetInTouch = () => {
     window.location.href = 'mailto:contact@folio.id'
@@ -135,10 +135,10 @@ export default function BusinessOnboardingPage() {
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
                 <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
-                  Remote business onboarding
+                  Age verification service for global compliance
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
-                  Folio enables fast and secure remote onboarding for business clients. Collect verified company data, confirm representatives, uncover ownership structures and run AML checks in one streamlined flow.
+                  Folio helps you confirm user age quickly and securely anywhere in the world. You choose verification methods that match your risk level, from private anonymous checks to full identity verification, while staying aligned with global standards including GDPR, COPPA, DSA and others.
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative">
@@ -152,8 +152,8 @@ export default function BusinessOnboardingPage() {
             </div>
             <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
               <img 
-                src={businessOnboardingHero} 
-                alt="Business onboarding preview" 
+                src={ageVerificationHero} 
+                alt="Age verification preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 fetchPriority="high"
                 loading="eager"
@@ -166,10 +166,10 @@ export default function BusinessOnboardingPage() {
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
                 <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
-                  Remote business onboarding
+                  Age verification service for global compliance
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
-                  Folio enables fast and secure remote onboarding for business clients. Collect verified company data, confirm representatives, uncover ownership structures and run AML checks in one streamlined flow.
+                  Folio helps you confirm user age quickly and securely anywhere in the world. You choose verification methods that match your risk level, from private anonymous checks to full identity verification, while staying aligned with global standards including GDPR, COPPA, DSA and others.
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative shrink-0">
@@ -183,8 +183,8 @@ export default function BusinessOnboardingPage() {
             </div>
             <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
               <img 
-                src={businessOnboardingHero} 
-                alt="Business onboarding preview" 
+                src={ageVerificationHero} 
+                alt="Age verification preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 fetchPriority="high"
                 loading="eager"
@@ -193,42 +193,42 @@ export default function BusinessOnboardingPage() {
           </div>
         </section>
 
-        {/* AML screening built in Section */}
+        {/* Age checks without friction Section */}
         <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
           <div className="flex flex-col gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-4 md:gap-6 items-center text-center max-w-[576px] relative shrink-0 w-full">
               <h2 className="font-bold leading-[36px] md:leading-[48px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
-                AML screening built in
+                Age checks without friction
               </h2>
               <p className="font-normal leading-6 md:leading-7 text-[#737373] text-base md:text-lg w-full whitespace-pre-wrap">
-                Screen companies and associated individuals against sanctions lists, PEP profiles and media risk sources. Real time checks, configurable risk rules and continuous monitoring make it simple to stay compliant. Detailed logs and clear reports support your audit and review processes.
+                Age verification with Folio is fast, intuitive and smooth. Users complete a selfie, age credential or a document scan in a few seconds, keeping onboarding simple and minimising drop offs.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Effortless verification for every business Section */}
+        {/* Three ways to verify age Section */}
         <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           {/* Desktop Layout */}
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
               <img 
-                src={activeStep.desktopImage} 
-                alt={activeStep.title}
+                src={activeMethod.desktopImage} 
+                alt={activeMethod.title}
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 loading="lazy"
               />
             </div>
             <div className="flex flex-1 flex-col gap-6 items-start relative min-w-0">
               <SectionHeader
-                title="Effortless verification for every business"
+                title="Three ways to verify age"
                 align="left"
                 maxWidth="100%"
               />
               <Accordion
-                items={verificationSteps}
-                defaultOpenId="onboarding-flow"
-                onItemChange={setActiveStepId}
+                items={ageVerificationMethods}
+                defaultOpenId="document-verification"
+                onItemChange={setActiveMethodId}
                 showMobileImages={false}
               />
             </div>
@@ -237,34 +237,34 @@ export default function BusinessOnboardingPage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-6 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="Effortless verification for every business"
+              title="Three ways to verify age"
               align="left"
               maxWidth="100%"
             />
             <Accordion
-              items={verificationSteps}
-              defaultOpenId="onboarding-flow"
+              items={ageVerificationMethods}
+              defaultOpenId="document-verification"
               showMobileImages={true}
             />
           </div>
         </section>
 
-        {/* Verify representatives and understand ownership Section */}
+        {/* Privacy that stays with the user Section */}
         <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
           {/* Desktop Layout */}
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <SectionHeader
-                title="Verify representatives and understand ownership"
-                description="Folio confirms who represents the business and who ultimately controls it. Representatives complete remote document capture with biometric checks and liveness confirmation. UBO discovery maps complex ownership chains across jurisdictions and highlights individuals linked to higher risk. Everything is automated and presented in a clean, structured format."
+                title="Privacy that stays with the user"
+                description="Folio is designed around privacy from the first step. Anonymous and minimal data flows reduce what you need to store and process. Where biometrics are used, they stay protected and handled securely so you stay aligned with global privacy laws."
                 align="left"
                 maxWidth="672px"
               />
             </div>
             <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
               <img 
-                src={businessOnboardingRepresentatives} 
-                alt="Verify representatives preview" 
+                src={ageVerificationPrivacy} 
+                alt="Privacy features preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 loading="lazy"
               />
@@ -274,15 +274,15 @@ export default function BusinessOnboardingPage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[672px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="Verify representatives and understand ownership"
-              description="Folio confirms who represents the business and who ultimately controls it. Representatives complete remote document capture with biometric checks and liveness confirmation. UBO discovery maps complex ownership chains across jurisdictions and highlights individuals linked to higher risk. Everything is automated and presented in a clean, structured format."
+              title="Privacy that stays with the user"
+              description="Folio is designed around privacy from the first step. Anonymous and minimal data flows reduce what you need to store and process. Where biometrics are used, they stay protected and handled securely so you stay aligned with global privacy laws."
               align="left"
               maxWidth="672px"
             />
             <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
               <img 
-                src={businessOnboardingRepresentatives} 
-                alt="Verify representatives preview" 
+                src={ageVerificationPrivacy} 
+                alt="Privacy features preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 loading="lazy"
               />
@@ -290,22 +290,22 @@ export default function BusinessOnboardingPage() {
           </div>
         </section>
 
-        {/* Global registry data you can trust Section */}
+        {/* All essential age assurance features Section */}
         <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           {/* Desktop Layout */}
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
               <img 
-                src={businessOnboardingRegistryData} 
-                alt="Global registry data preview" 
+                src={ageVerificationAgeAssurance} 
+                alt="Age assurance features preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 loading="lazy"
               />
             </div>
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <SectionHeader
-                title="Global registry data you can trust"
-                description="Access official business information from registries in 195 countries. Retrieve verified company records, director data and shareholder information wherever it is available. Whether used through the platform or API, registry backed insights improve accuracy and accelerate cross border onboarding."
+                title="All essential age assurance features"
+                description="Folio brings liveness checks, biometric precision, real time estimation and document backed verification into one platform. You can choose the right level of assurance for your users and your product without adding unnecessary friction."
                 align="left"
                 maxWidth="672px"
               />
@@ -315,15 +315,15 @@ export default function BusinessOnboardingPage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[672px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="Global registry data you can trust"
-              description="Access official business information from registries in 195 countries. Retrieve verified company records, director data and shareholder information wherever it is available. Whether used through the platform or API, registry backed insights improve accuracy and accelerate cross border onboarding."
+              title="All essential age assurance features"
+              description="Folio brings liveness checks, biometric precision, real time estimation and document backed verification into one platform. You can choose the right level of assurance for your users and your product without adding unnecessary friction."
               align="left"
               maxWidth="672px"
             />
             <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
               <img 
-                src={businessOnboardingRegistryData} 
-                alt="Global registry data preview" 
+                src={ageVerificationAgeAssurance} 
+                alt="Age assurance features preview" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 loading="lazy"
               />
@@ -387,10 +387,10 @@ export default function BusinessOnboardingPage() {
             <div className="flex gap-16 items-center p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
               <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px] min-w-0">
                 <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
-                  Implement secure business onboarding today
+                  Bring accurate age verification to your product
                 </h2>
                 <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full whitespace-pre-wrap">
-                  Improve your KYB process with automated verification, clear ownership insights and real time AML checks inside one reliable remote onboarding flow.
+                  Folio helps you protect users, satisfy regulators and maintain a smooth experience. Talk to our team to design an age assurance flow that fits your product.
                 </p>
               </div>
               <div className="flex flex-1 flex-wrap gap-3 items-start justify-end relative min-w-0">
@@ -408,10 +408,10 @@ export default function BusinessOnboardingPage() {
           <div className="flex md:hidden flex-col gap-8 items-center w-full px-6 py-16 relative shrink-0" style={BACKGROUND_STYLE}>
             <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full whitespace-pre-wrap">
               <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
-                Implement secure business onboarding today
+                Bring accurate age verification to your product
               </h2>
               <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full whitespace-pre-wrap">
-                Improve your KYB process with automated verification, clear ownership insights and real time AML checks inside one reliable remote onboarding flow.
+                Folio helps you protect users, satisfy regulators and maintain a smooth experience. Talk to our team to design an age assurance flow that fits your product.
               </p>
             </div>
             <div className="flex flex-col gap-3 items-center relative shrink-0 w-full">
