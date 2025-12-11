@@ -180,6 +180,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   </MobileMenuItem>
                   <MobileMenuItem
                     active={isActive('/platform')}
+                    hasSubmenu={true}
                     onClick={handlePlatformClick}
                     aria-current={isActive('/platform') ? 'page' : undefined}
                   >
@@ -187,6 +188,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   </MobileMenuItem>
                   <MobileMenuItem
                     active={isActive('/solutions')}
+                    hasSubmenu={true}
                     onClick={handleSolutionsClick}
                     aria-current={isActive('/solutions') ? 'page' : undefined}
                   >

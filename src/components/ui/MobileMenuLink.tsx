@@ -16,15 +16,15 @@ export interface MobileMenuLinkProps {
  * MobileMenuLink component for mobile navigation dropdowns
  * Full-width item with icon, title, and optional description
  * 
- * Figma specs (node-id: 24626-76643):
+ * Figma specs (node-id: 24626-76638):
  * - Width: full
- * - Padding: px-4 py-3 (16px horizontal, 12px vertical)
+ * - Padding: px-6 py-3 (24px horizontal, 12px vertical) for mobile
  * - Gap: gap-2 (8px between icon and text)
- * - Border radius: rounded-[18px]
+ * - NO border radius for mobile (only desktop has rounded-[18px])
  * - Icon size: 20x20px
  * - Title: 14px, medium weight (500), #0a0a0a
  * - Description: 14px, normal weight (400), #737373
- * - Hover: gradient overlay (#f5f5f5 with 10% black)
+ * - Hover: gradient overlay (#f5f5f5)
  */
 export default function MobileMenuLink({
     icon,
@@ -37,13 +37,13 @@ export default function MobileMenuLink({
     role,
     ...props
 }: MobileMenuLinkProps & Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'className'>) {
-    // Base classes matching Figma design
-    const baseClasses = 'box-border flex gap-2 items-start w-full px-4 py-3 rounded-[18px] outline-none focus-visible:outline-none transition-all text-left'
+    // Base classes matching Figma mobile design - NO rounded corners for mobile
+    const baseClasses = 'box-border flex gap-2 items-start w-full px-6 py-3 outline-none focus-visible:outline-none transition-all text-left'
 
     // State classes - hover/active background with gradient
     const stateClasses = active
-        ? 'bg-[#ebebeb]'
-        : 'bg-transparent hover:bg-[#ebebeb]'
+        ? 'bg-[#f5f5f5]'
+        : 'bg-transparent hover:bg-[#f5f5f5]'
 
     const allClasses = `${baseClasses} ${stateClasses} ${FOCUS_RING_CLASSES} ${className}`
 
