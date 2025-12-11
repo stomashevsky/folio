@@ -45,44 +45,54 @@ const howItWorksItems: AccordionItemData[] = [
   },
 ]
 
-const keyFeatures = [
+const keyFeatures: { id: string; title: string; description: string }[] = [
   {
+    id: 'eu-aligned',
     title: 'EU aligned injection detection',
     description: 'Folio follows the CEN TS 18099 2024 guidance for detecting and preventing injection based attacks.',
   },
   {
+    id: 'signal-library',
     title: 'Extensive signal library',
     description: 'Gather a broad set of proprietary signals to understand the context behind each document and selfie submission.',
   },
   {
+    id: 'updated-models',
     title: 'Continuously updated models',
     description: 'Benefit from models that improve over time and stay aligned with the latest fraud research.',
   },
   {
+    id: 'multi-frame',
     title: 'Multi frame analysis',
     description: 'Review several frames instead of a single capture to improve accuracy and reduce false positives.',
   },
   {
+    id: 'hardware-detection',
     title: 'Compromised hardware detection',
     description: 'Identify emulators, rooted devices and other unsafe environments that attackers rely on for injection attempts.',
   },
   {
+    id: 'scaled-attack',
     title: 'Scaled attack protection',
     description: 'Detect repeating patterns and link related attempts to block coordinated or scaled fraud activity.',
   },
   {
+    id: 'flexible-controls',
     title: 'Flexible controls and checks',
     description: 'Fine tune quality thresholds, obstruction detection and retry rules to match your compliance and business needs.',
   },
   {
+    id: 'fair-consistent',
     title: 'Fair and consistent across devices',
     description: 'Designed to work uniformly across different skin tones, lighting, operating systems and hardware.',
   },
   {
+    id: 'auto-capture',
     title: 'Auto capture',
     description: 'Photos are taken automatically at the right moment to reduce user mistakes.',
   },
   {
+    id: 'user-guidance',
     title: 'User guidance',
     description: 'Clear gestures and instructions help users capture accurate selfies and generate stronger fraud signals.',
   },
@@ -90,7 +100,8 @@ const keyFeatures = [
 
 export default function LivenessCheckPage() {
   const [activeHowItWorksId, setActiveHowItWorksId] = useState<string | null>('collect-signals')
-  
+  const [activeKeyFeatureId, setActiveKeyFeatureId] = useState<string | null>('eu-aligned')
+
   const activeHowItWorksItem = howItWorksItems.find(item => item.id === activeHowItWorksId) || howItWorksItems[0]
 
   usePageTitle({
@@ -273,11 +284,13 @@ export default function LivenessCheckPage() {
               </p>
             </div>
             <div className="flex flex-col gap-0 items-start relative shrink-0 w-full md:flex-1">
-              {keyFeatures.map((feature, index) => (
+              {keyFeatures.map((feature) => (
                 <KeyFeatureItem
-                  key={index}
+                  key={feature.id}
                   title={feature.title}
                   description={feature.description}
+                  isOpen={activeKeyFeatureId === feature.id}
+                  onClick={() => setActiveKeyFeatureId(activeKeyFeatureId === feature.id ? null : feature.id)}
                 />
               ))}
             </div>
@@ -390,25 +403,30 @@ function FeatureHighlight({ icon, title, description }: { icon: string; title: s
   )
 }
 
-function KeyFeatureItem({ title, description }: { title: string; description: string }) {
+function KeyFeatureItem({ title, description, isOpen, onClick }: { title: string; description: string; isOpen: boolean; onClick: () => void }) {
   return (
-    <div className="flex flex-col items-start border-b border-[#e5e5e5] py-4 w-full">
+    <button
+      className="flex flex-col items-start border-b border-[#e5e5e5] py-4 w-full text-left cursor-pointer"
+      onClick={onClick}
+    >
       <div className="flex items-center justify-between w-full">
         <p className="font-normal leading-7 text-lg text-[#0a0a0a] text-left flex-1">
           {title}
         </p>
-        <svg 
-          className="w-4 h-4 text-[#737373] shrink-0 rotate-180" 
-          fill="none" 
-          stroke="currentColor" 
+        <svg
+          className={`w-4 h-4 text-[#737373] shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+          fill="none"
+          stroke="currentColor"
           viewBox="0 0 24 24"
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </div>
-      <p className="font-normal leading-5 text-sm text-[#737373] text-left w-full pt-2 pb-2">
-        {description}
-      </p>
-    </div>
+      {isOpen && (
+        <p className="font-normal leading-5 text-sm text-[#737373] text-left w-full pt-2 pb-2">
+          {description}
+        </p>
+      )}
+    </button>
   )
 }
