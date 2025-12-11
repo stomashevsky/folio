@@ -12,11 +12,13 @@ export default {
         'spring-in-out': 'cubic-bezier(0.65, 0, 0.35, 1)',
         'spring-smooth': 'cubic-bezier(0.16, 1, 0.3, 1)',
       },
-      // Animation durations (150-250ms range)
+      // Animation durations
       transitionDuration: {
         '150': '150ms',
         '200': '200ms',
         '250': '250ms',
+        '300': '300ms',
+        '400': '400ms',
       },
       // Custom animation keyframes
       keyframes: {

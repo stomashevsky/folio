@@ -105,10 +105,6 @@ function FolioAppPage() {
     ogUrl: 'https://folio.id/'
   })
   
-  const [activeFeatureId, setActiveFeatureId] = useState<string | null>('cards')
-  
-  const activeFeature = featuresItems.find(item => item.id === activeFeatureId) || featuresItems[0]
-
   // Handle scroll to section when navigating from other pages
   useEffect(() => {
     // Check if we need to scroll to a specific section
@@ -231,47 +227,7 @@ function FolioAppPage() {
       <PasskeysSection />
 
       {/* Features Section */}
-      <section id="everything-in-one-place" className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
-        {/* Desktop Layout */}
-        <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-            <img 
-              src={activeFeature.desktopImage} 
-              alt={activeFeature.title}
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              loading="lazy"
-            />
-          </div>
-          <div className="flex flex-1 flex-col gap-6 items-start relative min-w-0">
-            <SectionHeader
-              title="Everything in one secure place"
-              align="left"
-              maxWidth="100%"
-            />
-            <Accordion
-              items={featuresItems}
-              defaultOpenId="cards"
-              onItemChange={setActiveFeatureId}
-              showMobileImages={false}
-            />
-          </div>
-        </div>
-
-        {/* Mobile Layout */}
-        <div className="flex md:hidden flex-col gap-6 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <SectionHeader
-            title="Everything in one place"
-            align="left"
-            maxWidth="100%"
-          />
-          <Accordion
-            items={featuresItems}
-            defaultOpenId="cards"
-            onItemChange={setActiveFeatureId}
-            showMobileImages={true}
-          />
-        </div>
-      </section>
+      <EverythingInOnePlaceSection />
 
       {/* Quick Import Section */}
       <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
@@ -527,6 +483,54 @@ function FolioAppPage() {
       {/* Footer */}
       <FooterSection />
     </div>
+  )
+}
+
+function EverythingInOnePlaceSection() {
+  const [openAccordionId, setOpenAccordionId] = useState<string | null>('cards')
+
+  const activeItem = featuresItems.find(item => item.id === openAccordionId) || featuresItems[0]
+
+  return (
+    <section id="everything-in-one-place" className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
+      {/* Desktop Layout */}
+      <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+        <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
+          <img 
+            src={activeItem.desktopImage} 
+            alt={activeItem.title}
+            className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+            loading="lazy"
+          />
+        </div>
+        <div className="flex flex-1 flex-col gap-6 items-start relative min-w-0">
+          <SectionHeader
+            title="Everything in one secure place"
+            align="left"
+          />
+          <Accordion
+            items={featuresItems}
+            defaultOpenId="cards"
+            onItemChange={setOpenAccordionId}
+            showMobileImages={false}
+          />
+        </div>
+      </div>
+
+      {/* Mobile Layout */}
+      <div className="flex md:hidden flex-col gap-6 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+        <SectionHeader
+          title="Everything in one secure place"
+          align="left"
+        />
+        <Accordion
+          items={featuresItems}
+          defaultOpenId="cards"
+          onItemChange={setOpenAccordionId}
+          showMobileImages={true}
+        />
+      </div>
+    </section>
   )
 }
 
