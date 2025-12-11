@@ -246,8 +246,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   Back to main menu
                 </MobileMenuBackButton>
 
-                <div className="flex flex-col gap-0 items-start justify-start w-full px-6 pt-4">
-                  <h2 className="font-bold text-lg text-[#0a0a0a] py-2">Solutions</h2>
+                <div className="flex flex-col gap-0 items-start justify-start w-full pt-4">
+                  <h2 className="font-bold text-lg text-[#0a0a0a] py-2 px-6">Solutions</h2>
                   {SOLUTIONS_ITEMS.map((item) => {
                     const active = location.pathname.startsWith(item.path)
                     return (
@@ -276,8 +276,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   Back to main menu
                 </MobileMenuBackButton>
 
-                <div className="flex flex-col gap-0 items-start justify-start w-full px-6 pt-4">
-                  <h2 className="font-bold text-lg text-[#0a0a0a] py-2">Platform</h2>
+                <div className="flex flex-col gap-0 items-start justify-start w-full pt-4">
+                  <h2 className="font-bold text-lg text-[#0a0a0a] py-2 px-6">Platform</h2>
                   {PLATFORM_ITEMS.map((item) => {
                     const active = location.pathname.startsWith(item.path)
                     return (

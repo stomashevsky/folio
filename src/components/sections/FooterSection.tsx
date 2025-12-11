@@ -15,7 +15,7 @@ export default function FooterSection() {
           </div>
         </div>
 
-        {/* Main content grid - gap-x-6 gap-y-12 (24px horizontal, 48px vertical) */}
+        {/* Main content grid - responsive flex-wrap, columns adjust based on screen width */}
         <div className="box-border flex flex-wrap gap-x-6 gap-y-12 items-start px-6 py-10 relative shrink-0 w-full">
           {/* Folio Wallet column */}
           <div className="flex flex-col gap-4 items-start justify-center min-w-[200px] flex-1 relative shrink-0">

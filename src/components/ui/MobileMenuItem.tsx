@@ -38,10 +38,8 @@ export default function MobileMenuItem({
     // Text classes
     const textClasses = 'text-sm font-medium leading-5'
 
-    // State classes - hover/active background
-    const stateClasses = active
-        ? 'bg-[#f5f5f5] text-[#171717]'
-        : 'bg-transparent text-[#0a0a0a] hover:bg-[#f5f5f5] hover:text-[#171717]'
+    // State classes - hover only, NO active state highlighting per user request
+    const stateClasses = 'bg-transparent text-[#0a0a0a] hover:bg-[#f5f5f5] hover:text-[#171717]'
 
     const allClasses = `${baseClasses} ${textClasses} ${stateClasses} ${FOCUS_RING_CLASSES} ${className}`
 

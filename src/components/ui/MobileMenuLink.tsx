@@ -18,13 +18,13 @@ export interface MobileMenuLinkProps {
  * 
  * Figma specs (node-id: 24626-76638):
  * - Width: full
- * - Padding: px-6 py-3 (24px horizontal, 12px vertical) for mobile
+ * - Padding: px-6 py-3 (24px horizontal, 12px vertical) for content
  * - Gap: gap-2 (8px between icon and text)
- * - NO border radius for mobile (only desktop has rounded-[18px])
+ * - NO border radius for mobile
  * - Icon size: 20x20px
  * - Title: 14px, medium weight (500), #0a0a0a
  * - Description: 14px, normal weight (400), #737373
- * - Hover: gradient overlay (#f5f5f5)
+ * - Hover: background extends edge-to-edge (#f5f5f5)
  */
 export default function MobileMenuLink({
     icon,
@@ -37,7 +37,7 @@ export default function MobileMenuLink({
     role,
     ...props
 }: MobileMenuLinkProps & Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'className'>) {
-    // Base classes matching Figma mobile design - NO rounded corners for mobile
+    // Base classes - highlight extends edge-to-edge with px-6 for content padding
     const baseClasses = 'box-border flex gap-2 items-start w-full px-6 py-3 outline-none focus-visible:outline-none transition-all text-left'
 
     // State classes - hover/active background with gradient
