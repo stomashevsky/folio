@@ -7,12 +7,14 @@ import { scrollToSection } from '../../utils/scrollToSection'
 // Icons
 import idCardIcon from '../../assets/icons/id-card.svg'
 import sparklesIcon from '../../assets/icons/Sparkles.svg'
-import cameraIcon from '../../assets/icons/camera.svg'
 import scanFaceIcon from '../../assets/icons/ScanFace.svg'
+import circleUserIcon from '../../assets/icons/CircleUser.svg'
 import databaseIcon from '../../assets/icons/Database.svg'
 import messageSquareMoreIcon from '../../assets/icons/MessageSquareMore.svg'
 import nfcIcon from '../../assets/icons/Nfc.svg'
 import gitForkIcon from '../../assets/icons/GitFork.svg'
+import waypointsIcon from '../../assets/icons/Waypoints.svg'
+import searchCheckIcon from '../../assets/icons/SearchCheck.svg'
 import ageIcon from '../../assets/icons/Age.svg'
 import ticketIcon from '../../assets/icons/ticket.svg'
 
@@ -36,6 +38,7 @@ const SOLUTIONS_ITEMS = [
   },
 ]
 
+// Order matches Figma design for mobile (single column, top to bottom)
 const PLATFORM_ITEMS = [
   {
     label: 'ID verification',
@@ -52,13 +55,13 @@ const PLATFORM_ITEMS = [
   {
     label: 'Liveness check',
     path: '/platform/liveness-check',
-    icon: cameraIcon,
+    icon: scanFaceIcon,
     description: 'Confirm that the user is physically present.'
   },
   {
     label: 'Face match',
     path: '/platform/face-match',
-    icon: scanFaceIcon,
+    icon: circleUserIcon,
     description: 'Compare a selfie to an official photo to confirm identity.'
   },
   {
@@ -84,6 +87,18 @@ const PLATFORM_ITEMS = [
     path: '/platform/dynamic-flow',
     icon: gitForkIcon,
     description: 'Coordinate identity checks with flexible logic.'
+  },
+  {
+    label: 'Behavior insights',
+    path: '/platform/behavior-insights',
+    icon: waypointsIcon,
+    description: 'Device and usage patterns for added context.'
+  },
+  {
+    label: 'Review workspace',
+    path: '/platform/review-workspace',
+    icon: searchCheckIcon,
+    description: 'Organize and resolve verification cases.'
   },
 ]
 

@@ -13,6 +13,8 @@ import databaseIcon from '../../assets/icons/Database.svg'
 import messageSquareMoreIcon from '../../assets/icons/MessageSquareMore.svg'
 import nfcIcon from '../../assets/icons/Nfc.svg'
 import gitForkIcon from '../../assets/icons/GitFork.svg'
+import waypointsIcon from '../../assets/icons/Waypoints.svg'
+import searchCheckIcon from '../../assets/icons/SearchCheck.svg'
 
 interface PlatformItem {
   label: string
@@ -21,9 +23,10 @@ interface PlatformItem {
   description: string
 }
 
-// Order matches Figma design: Left column (top to bottom), then Right column (top to bottom)
+// Order matches Figma design: alternating Left/Right columns
+// Left column items at even indices (0,2,4,6,8), Right column at odd indices (1,3,5,7,9)
 const PLATFORM_ITEMS: PlatformItem[] = [
-  // Left Column
+  // Row 1
   {
     label: 'ID verification',
     path: '/platform/id-verification',
@@ -31,35 +34,17 @@ const PLATFORM_ITEMS: PlatformItem[] = [
     description: 'Verify passports, ID cards, and other official documents.'
   },
   {
-    label: 'Document intelligence',
-    path: '/platform/document-intelligence',
-    icon: sparklesIcon,
-    description: 'Extract and analyze data from submitted documents.'
-  },
-  {
-    label: 'Liveness check',
-    path: '/platform/liveness-check',
-    icon: scanFaceIcon,
-    description: 'Confirm that the user is physically present.'
-  },
-  {
-    label: 'Face match',
-    path: '/platform/face-match',
-    icon: circleUserIcon,
-    description: 'Compare a selfie to an official photo to confirm identity.'
-  },
-  // Right Column
-  {
-    label: 'Data source checks',
-    path: '/platform/data-source-checks',
-    icon: databaseIcon,
-    description: 'Validate user information against trusted databases.'
-  },
-  {
     label: 'Phone and email validation',
     path: '/platform/phone-and-email-validation',
     icon: messageSquareMoreIcon,
     description: 'Confirm ownership and detect risky contact details.'
+  },
+  // Row 2
+  {
+    label: 'Document intelligence',
+    path: '/platform/document-intelligence',
+    icon: sparklesIcon,
+    description: 'Extract and analyze data from submitted documents.'
   },
   {
     label: 'NFC identity scan',
@@ -67,11 +52,44 @@ const PLATFORM_ITEMS: PlatformItem[] = [
     icon: nfcIcon,
     description: 'Read secure chip data from compatible IDs and passports.'
   },
+  // Row 3
+  {
+    label: 'Liveness check',
+    path: '/platform/liveness-check',
+    icon: scanFaceIcon,
+    description: 'Confirm that the user is physically present.'
+  },
   {
     label: 'Dynamic Flow',
     path: '/platform/dynamic-flow',
     icon: gitForkIcon,
     description: 'Coordinate identity checks with flexible logic.'
+  },
+  // Row 4
+  {
+    label: 'Face match',
+    path: '/platform/face-match',
+    icon: circleUserIcon,
+    description: 'Compare a selfie to an official photo to confirm identity.'
+  },
+  {
+    label: 'Behavior insights',
+    path: '/platform/behavior-insights',
+    icon: waypointsIcon,
+    description: 'Device and usage patterns for added context.'
+  },
+  // Row 5
+  {
+    label: 'Data source checks',
+    path: '/platform/data-source-checks',
+    icon: databaseIcon,
+    description: 'Validate user information against trusted databases.'
+  },
+  {
+    label: 'Review workspace',
+    path: '/platform/review-workspace',
+    icon: searchCheckIcon,
+    description: 'Organize and resolve verification cases.'
   },
 ]
 

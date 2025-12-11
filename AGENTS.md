@@ -37,6 +37,23 @@ This file contains all rules and principles that must be followed for every chan
 - Use `onItemChange` callback to sync accordion state with other components (e.g., changing an image based on selected item)
 - Use `showMobileImages` prop to control image display on mobile
 
+#### Accordion behavior rules
+
+- **Only the first item should be expanded by default** — never show all items expanded at once
+- **Clicking on an item toggles it** — if it's closed, it opens; if it's open, it closes
+- **Chevron icon must rotate** based on open/closed state (rotated 180° when open)
+- **Use smooth transition** for chevron rotation: `transition-transform duration-200`
+- For custom accordion lists (like Key features), use local state:
+  ```tsx
+  const [activeId, setActiveId] = useState<string | null>('first-item-id')
+  
+  // Toggle on click
+  onClick={() => setActiveId(activeId === item.id ? null : item.id)}
+  
+  // Show content only when open
+  {isOpen && <p>{description}</p>}
+  ```
+
 ### 3.2. Icons and IconContainer
 
 - **Use `IconContainer` component** for icon wrappers instead of inline div styling

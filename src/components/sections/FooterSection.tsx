@@ -45,6 +45,8 @@ export default function FooterSection() {
               <FooterLink to="/platform/phone-and-email-validation">Phone and Email Validation</FooterLink>
               <FooterLink to="/platform/nfc-identity-scan">NFC Identity Scan</FooterLink>
               <FooterLink to="/platform/dynamic-flow">Dynamic Flow</FooterLink>
+              <FooterLink to="/platform/behavior-insights">Behavior Insights</FooterLink>
+              <FooterLink to="/platform/review-workspace">Review Workspace</FooterLink>
             </div>
           </div>
 
