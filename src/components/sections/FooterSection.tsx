@@ -15,10 +15,11 @@ export default function FooterSection() {
           </div>
         </div>
 
-        {/* Main content grid - responsive flex-wrap, columns adjust based on screen width */}
-        <div className="box-border flex flex-wrap gap-x-6 gap-y-12 items-start px-6 py-10 relative shrink-0 w-full">
+        {/* Main content - CSS Grid with auto-fill for consistent column widths across rows */}
+        <div className="box-border grid gap-x-6 gap-y-12 items-start px-6 py-10 relative shrink-0 w-full" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))' }}>
+
           {/* Folio Wallet column */}
-          <div className="flex flex-col gap-4 items-start justify-center min-w-[200px] flex-1 relative shrink-0">
+          <div className="flex flex-col gap-4 items-start relative shrink-0">
             <p className="font-normal leading-5 relative shrink-0 text-[#737373] text-sm w-full">
               Folio Wallet
             </p>
@@ -31,7 +32,7 @@ export default function FooterSection() {
           </div>
 
           {/* Platform column */}
-          <div className="flex flex-col gap-4 items-start justify-center min-w-[200px] flex-1 relative shrink-0">
+          <div className="flex flex-col gap-4 items-start relative shrink-0">
             <p className="font-normal leading-5 relative shrink-0 text-[#737373] text-sm w-full">
               Platform
             </p>
@@ -48,7 +49,7 @@ export default function FooterSection() {
           </div>
 
           {/* Solutions column */}
-          <div className="flex flex-col gap-4 items-start justify-center min-w-[200px] flex-1 relative shrink-0">
+          <div className="flex flex-col gap-4 items-start relative shrink-0">
             <p className="font-normal leading-5 relative shrink-0 text-[#737373] text-sm w-full">
               Solutions
             </p>
@@ -59,7 +60,7 @@ export default function FooterSection() {
           </div>
 
           {/* Get the app column */}
-          <div className="flex flex-col gap-4 items-start justify-center min-w-[200px] flex-1 relative shrink-0">
+          <div className="flex flex-col gap-4 items-start relative shrink-0">
             <p className="font-normal leading-5 relative shrink-0 text-[#737373] text-sm w-full">
               Get the app
             </p>
@@ -82,7 +83,7 @@ export default function FooterSection() {
           </div>
 
           {/* Terms & Policies column */}
-          <div className="flex flex-col gap-4 items-start justify-center min-w-[200px] flex-1 relative shrink-0">
+          <div className="flex flex-col gap-4 items-start relative shrink-0">
             <p className="font-normal leading-5 relative shrink-0 text-[#737373] text-sm w-full">
               Terms & Policies
             </p>
@@ -98,41 +99,49 @@ export default function FooterSection() {
           <div className="absolute bottom-0 left-0 right-0 top-[-1px] border-t border-[#e5e5e5]"></div>
         </div>
 
-        {/* Bottom section: Logo, Address, Contact, Social icons, Copyright */}
-        <div className="box-border flex flex-wrap gap-6 items-center justify-between p-6 relative shrink-0 w-full">
-          {/* Left side: Logo, Address, Contact */}
-          <div className="flex flex-wrap gap-6 items-start min-w-[240px] flex-1">
+        {/* Bottom section - Responsive layout */}
+        {/* Mobile: flex-col gap-11 (44px), p-6 */}
+        {/* Desktop: flex-row, justify-between */}
+        <div className="box-border flex flex-col md:flex-row md:flex-wrap md:items-center md:justify-between gap-11 md:gap-6 p-6 relative shrink-0 w-full">
+
+          {/* Left column: Logo, Address, Contact - Mobile: column, Desktop: row */}
+          <div className="flex flex-col md:flex-row gap-6 items-start md:flex-1 md:min-w-[240px] md:flex-wrap">
             {/* Logo */}
             <Logo size={28} />
 
             {/* Address */}
-            <div className="flex flex-col gap-1 items-start justify-center leading-5 text-sm flex-1 min-w-[200px]">
-              <p className="font-normal text-[#737373] w-full">Address:</p>
-              <p className="font-normal text-[#0a0a0a] w-full">
+            <div className="flex flex-col gap-1 items-start leading-5 text-sm md:flex-1 md:min-w-[200px]">
+              <p className="font-normal text-[#737373]">Address:</p>
+              <p className="font-normal text-[#0a0a0a]">
                 88 Baker St, London W1U 6TQ, United Kingdom
               </p>
             </div>
 
             {/* Contact */}
-            <div className="flex flex-col gap-1 items-start justify-center leading-5 text-sm flex-1 min-w-[150px]">
-              <p className="font-normal text-[#737373] w-full">Contact:</p>
+            <div className="flex flex-col gap-1 items-start leading-5 text-sm md:flex-1 md:min-w-[150px]">
+              <p className="font-normal text-[#737373]">Contact:</p>
               <FooterLink href="mailto:contact@folio.id">contact@folio.id</FooterLink>
             </div>
           </div>
 
-          {/* Right side: Social icons and Copyright - column layout */}
-          <div className="flex flex-col gap-4 items-end">
+          {/* Right side: Social icons + Copyright */}
+          <div className="flex flex-col gap-4 items-start md:items-end">
             {/* Social icons */}
             <div className="flex gap-4 items-center">
               <SocialIcon name="instagram" href="https://www.instagram.com/foliowalletapp" />
               <SocialIcon name="facebook" href="https://www.facebook.com/foliowalletapp" />
               <SocialIcon name="linkedin" href="https://www.linkedin.com/company/folioltd/" />
             </div>
-            {/* Copyright */}
-            <p className="font-normal leading-5 text-[#0a0a0a] text-sm text-nowrap">
+            {/* Copyright - shown on desktop only */}
+            <p className="hidden md:block font-normal leading-5 text-[#0a0a0a] text-sm text-nowrap">
               Folio Wallet © 2025
             </p>
           </div>
+
+          {/* Copyright - Mobile only, full width */}
+          <p className="md:hidden font-normal leading-5 text-[#0a0a0a] text-sm w-full">
+            Folio Wallet © 2025
+          </p>
         </div>
       </div>
     </div>
