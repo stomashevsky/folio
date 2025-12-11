@@ -5,7 +5,7 @@ import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 
 // Icons
-import globeIcon from '../assets/icons/Globe.svg'
+import globeIcon from '../assets/icons/globe.svg'
 import userSearchIcon from '../assets/icons/UserSearch.svg'
 import gitMergeIcon from '../assets/icons/GitMerge.svg'
 import circleCheckBigIcon from '../assets/icons/CircleCheckBig.svg'

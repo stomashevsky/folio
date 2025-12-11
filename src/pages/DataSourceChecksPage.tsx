@@ -8,7 +8,7 @@ import { usePageTitle } from '../hooks/usePageTitle'
 // Icons
 import databaseIcon from '../assets/icons/Database.svg'
 import slidersHorizontalIcon from '../assets/icons/SlidersHorizontal.svg'
-import globeIcon from '../assets/icons/Globe.svg'
+import globeIcon from '../assets/icons/globe.svg'
 import building2Icon from '../assets/icons/Building2.svg'
 import idCardIcon from '../assets/icons/id-card.svg'
 import carFrontIcon from '../assets/icons/CarFront.svg'
