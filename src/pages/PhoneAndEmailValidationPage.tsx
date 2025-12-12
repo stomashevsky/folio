@@ -6,6 +6,7 @@ import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 
 // Icons
+import shieldHalfIcon from '../assets/icons/ShieldHalf.svg'
 import circleCheckBigIcon from '../assets/icons/CircleCheckBig.svg'
 import circleArrowUpIcon from '../assets/icons/CircleArrowUp.svg'
 import globeIcon from '../assets/icons/globe.svg'
@@ -181,37 +182,37 @@ export default function PhoneAndEmailValidationPage() {
               {/* Desktop Layout */}
               <div className="hidden md:flex gap-6 items-start relative shrink-0 w-full">
                 <FeatureHighlight
-                  icon={circleCheckBigIcon}
+                  icon={shieldHalfIcon}
                   title="Secure accounts"
                   description="Prevent unauthorized access by confirming that phone numbers and emails truly belong to each user."
                 />
                 <FeatureHighlight
-                  icon={circleArrowUpIcon}
+                  icon={circleCheckBigIcon}
                   title="Easy for users"
                   description="Reduce drop-offs with simple, low-friction flows that let users verify their details in seconds."
                 />
                 <FeatureHighlight
-                  icon={globeIcon}
+                  icon={circleArrowUpIcon}
                   title="Higher completion rates"
-                  description="Help applicants pass initial checks by offering multiple methods when the first attempt fails."
+                  description="Help legitimate users pass verification by offering fallback methods when the first attempt fails."
                 />
               </div>
               {/* Mobile Layout */}
               <div className="flex md:hidden flex-col gap-10 items-start relative shrink-0 w-full">
                 <FeatureHighlight
-                  icon={circleCheckBigIcon}
+                  icon={shieldHalfIcon}
                   title="Secure accounts"
                   description="Prevent unauthorized access by confirming that phone numbers and emails truly belong to each user."
                 />
                 <FeatureHighlight
-                  icon={circleArrowUpIcon}
+                  icon={circleCheckBigIcon}
                   title="Easy for users"
                   description="Reduce drop-offs with simple, low-friction flows that let users verify their details in seconds."
                 />
                 <FeatureHighlight
-                  icon={globeIcon}
+                  icon={circleArrowUpIcon}
                   title="Higher completion rates"
-                  description="Help applicants pass initial checks by offering multiple methods when the first attempt fails."
+                  description="Help legitimate users pass verification by offering fallback methods when the first attempt fails."
                 />
               </div>
             </div>
