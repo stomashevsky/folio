@@ -137,9 +137,12 @@ export default function BehaviorInsightsPage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
-                <span className="font-medium leading-5 text-sm text-[#737373]">
-                  Behavior insights
-                </span>
+                <div className="flex items-center gap-2">
+                  <img src={waypointsIcon} alt="" aria-hidden="true" className="w-5 h-5" />
+                  <span className="font-medium leading-5 text-sm text-[#737373]">
+                    Behavior insights
+                  </span>
+                </div>
                 <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
                   Uncover fraud with passive signals
                 </h1>
@@ -168,9 +171,12 @@ export default function BehaviorInsightsPage() {
           <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[672px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-                <span className="font-medium leading-5 text-sm text-[#737373]">
-                  Behavior insights
-                </span>
+                <div className="flex items-center gap-2">
+                  <img src={waypointsIcon} alt="" aria-hidden="true" className="w-5 h-5" />
+                  <span className="font-medium leading-5 text-sm text-[#737373]">
+                    Behavior insights
+                  </span>
+                </div>
                 <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
                   Uncover fraud with passive signals
                 </h1>

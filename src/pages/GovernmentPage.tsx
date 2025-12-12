@@ -8,6 +8,7 @@ import { scrollToTop } from '../utils/scrollToTop'
 import governmentSolutionsHero from '../assets/images/government-solutions-hero.png'
 import governmentAlbaniaCaseStudy from '../assets/images/government-albania-case-study.png'
 import governmentTestimonialAvatar from '../assets/images/government-testimonial-avatar.png'
+import landmarkIcon from '../assets/icons/Landmark.svg'
 
 // Background style using inline styles for complex multi-layer gradient
 // This cannot be easily expressed in Tailwind CSS, so inline style is used
@@ -38,9 +39,12 @@ export default function GovernmentPage() {
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
-              <p className="font-medium leading-5 text-sm text-[#737373]">
-                Government
-              </p>
+              <div className="flex items-center gap-2">
+                <img src={landmarkIcon} alt="" aria-hidden="true" className="w-5 h-5" />
+                <p className="font-medium leading-5 text-sm text-[#737373]">
+                  Government
+                </p>
+              </div>
               <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
                 Digital identity aligned with global standards
               </h1>
@@ -85,9 +89,12 @@ export default function GovernmentPage() {
         <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
             <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-              <p className="font-medium leading-5 text-sm text-[#737373]">
-                Government
-              </p>
+              <div className="flex items-center gap-2">
+                <img src={landmarkIcon} alt="" aria-hidden="true" className="w-5 h-5" />
+                <p className="font-medium leading-5 text-sm text-[#737373]">
+                  Government
+                </p>
+              </div>
               <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
                 Digital identity aligned with global standards
               </h1>

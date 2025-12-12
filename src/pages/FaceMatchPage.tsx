@@ -18,6 +18,7 @@ import zapIcon from '../assets/icons/Zap.svg'
 import squareUserIcon from '../assets/icons/SquareUser.svg'
 import refreshCcwIcon from '../assets/icons/RefreshCcw.svg'
 import userCheckIcon from '../assets/icons/UserCheck.svg'
+import circleUserIcon from '../assets/icons/CircleUser.svg'
 
 // Images
 import faceMatchHero from '../assets/images/face-match-hero.png'
@@ -112,9 +113,12 @@ export default function FaceMatchPage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
-                <p className="font-medium leading-5 text-sm text-[#737373]">
-                  Face match
-                </p>
+                <div className="flex items-center gap-2">
+                  <img src={circleUserIcon} alt="" aria-hidden="true" className="w-5 h-5" />
+                  <p className="font-medium leading-5 text-sm text-[#737373]">
+                    Face match
+                  </p>
+                </div>
                 <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
                   Powerful face recognition
                 </h1>
@@ -143,9 +147,12 @@ export default function FaceMatchPage() {
           <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-                <p className="font-medium leading-5 text-sm text-[#737373]">
-                  Face match
-                </p>
+                <div className="flex items-center gap-2">
+                  <img src={circleUserIcon} alt="" aria-hidden="true" className="w-5 h-5" />
+                  <p className="font-medium leading-5 text-sm text-[#737373]">
+                    Face match
+                  </p>
+                </div>
                 <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
                   Powerful face recognition
                 </h1>
