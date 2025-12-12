@@ -214,17 +214,17 @@ export default function DataSourceChecksPage() {
                 <FeatureHighlight
                   icon={globeIcon}
                   title="Global coverage"
-                  description="Match user data with authoritative and issuing sources across 40 plus countries to ensure accuracy without creating a patchwork of vendors."
+                  description="Match user data with authoritative and issuing sources across more than forty countries to ensure reliable and consistent results."
                 />
                 <FeatureHighlight
-                  icon={slidersHorizontalIcon}
-                  title="Adjustable matching logic"
-                  description="Fine tune criteria for what counts as a full match, a partial match, or no match based on your risk tolerance and compliance requirements."
+                  icon={settings2Icon}
+                  title="Adaptive matching logic"
+                  description="Adjust matching rules to reach the right balance between fraud prevention and smooth user experience."
                 />
                 <FeatureHighlight
                   icon={databaseIcon}
-                  title="Unified data sources"
-                  description="Combine multiple databases into a single verification process through a single interface to confirm identity and detect risk signals consistently."
+                  title="Unified data access"
+                  description="Connect to databases and issuing sources through a single platform so your team avoids stitching together scattered data."
                 />
               </div>
               {/* Mobile Layout */}
@@ -232,17 +232,17 @@ export default function DataSourceChecksPage() {
                 <FeatureHighlight
                   icon={globeIcon}
                   title="Global coverage"
-                  description="Match user data with authoritative and issuing sources across 40 plus countries to ensure accuracy without creating a patchwork of vendors."
+                  description="Match user data with authoritative and issuing sources across more than forty countries to ensure reliable and consistent results."
                 />
                 <FeatureHighlight
-                  icon={slidersHorizontalIcon}
-                  title="Adjustable matching logic"
-                  description="Fine tune criteria for what counts as a full match, a partial match, or no match based on your risk tolerance and compliance requirements."
+                  icon={settings2Icon}
+                  title="Adaptive matching logic"
+                  description="Adjust matching rules to reach the right balance between fraud prevention and smooth user experience."
                 />
                 <FeatureHighlight
                   icon={databaseIcon}
-                  title="Unified data sources"
-                  description="Combine multiple databases into a single verification process through a single interface to confirm identity and detect risk signals consistently."
+                  title="Unified data access"
+                  description="Connect to databases and issuing sources through a single platform so your team avoids stitching together scattered data."
                 />
               </div>
             </div>
