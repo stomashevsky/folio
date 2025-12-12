@@ -2,7 +2,8 @@ import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { SectionHeader } from '../ui'
 import { PLATFORM_ITEMS, PlatformItem } from '../../constants/platformItems'
-import arrowRightIcon from '../../assets/icons/arrow-right.svg'
+import { scrollToTop } from '../../utils/scrollToTop'
+import arrowRight16Icon from '../../assets/icons/ArrowRight16.svg'
 
 interface ExploreMoreSectionProps {
   currentPath: string
@@ -33,11 +34,15 @@ function shuffleArray<T>(array: T[], seed: string): T[] {
 }
 
 function ExploreMoreCard({ item }: { item: PlatformItem }) {
+  const handleClick = () => {
+    // Instant scroll to top after navigation
+    setTimeout(() => {
+      scrollToTop()
+    }, 0)
+  }
+
   return (
-    <Link
-      to={item.path}
-      className="bg-white border border-[#e5e5e5] border-solid w-full min-w-0 relative rounded-2xl shrink-0 flex flex-col hover:border-[#d4d4d4] transition-colors shadow-[0px_4px_6px_-1px_rgba(10,13,18,0.06),0px_2px_4px_-2px_rgba(10,13,18,0.06)]"
-    >
+    <div className="bg-white border border-[#e5e5e5] border-solid w-full min-w-0 relative rounded-2xl shrink-0 flex flex-col shadow-[0px_4px_6px_-1px_rgba(10,13,18,0.06),0px_2px_4px_-2px_rgba(10,13,18,0.06)]">
       <div className="flex flex-col gap-6 items-start p-6 w-full flex-1 min-w-0">
         {/* Icon */}
         <div className="bg-white border border-[#e5e5e5] border-solid flex items-center justify-center relative rounded-lg shrink-0 size-10 shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)]">
@@ -55,12 +60,16 @@ function ExploreMoreCard({ item }: { item: PlatformItem }) {
         </div>
         
         {/* Learn more link */}
-        <div className="flex items-center gap-1.5 text-sm font-normal text-[#0a0a0a]">
+        <Link
+          to={item.path}
+          onClick={handleClick}
+          className="flex items-center gap-1.5 text-sm font-normal text-[#0a0a0a] hover:underline transition-all"
+        >
           <span>Learn more</span>
-          <img src={arrowRightIcon} alt="" aria-hidden="true" className="w-4 h-4" />
-        </div>
+          <img src={arrowRight16Icon} alt="" aria-hidden="true" className="w-4 h-4" />
+        </Link>
       </div>
-    </Link>
+    </div>
   )
 }
 
@@ -106,4 +115,3 @@ export default function ExploreMoreSection({ currentPath }: ExploreMoreSectionPr
     </>
   )
 }
-
