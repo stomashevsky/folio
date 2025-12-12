@@ -22,7 +22,9 @@ import circleUserIcon from '../assets/icons/CircleUser.svg'
 
 // Images
 import faceMatchHero from '../assets/images/face-match-hero.png'
-import faceMatchHowItWorks from '../assets/images/face-match-how-it-works.png'
+import faceMatchHowItWorks1 from '../assets/images/face-match-how-it-works-1.png'
+import faceMatchHowItWorks2 from '../assets/images/face-match-how-it-works-2.png'
+import faceMatchHowItWorks3 from '../assets/images/face-match-how-it-works-3.png'
 
 // Background style using inline styles for complex multi-layer gradient
 const BACKGROUND_STYLE = {
@@ -35,19 +37,19 @@ const howItWorksItems: AccordionItemData[] = [
     id: 'compliance-rules',
     title: 'Set your compliance rules',
     description: 'Define what you collect, how you verify it and how you handle sensitive scenarios. Save your settings as templates for consistent use.',
-    desktopImage: faceMatchHowItWorks,
+    desktopImage: faceMatchHowItWorks1,
   },
   {
     id: 'user-experience',
     title: 'Shape a better user experience',
     description: 'Improve capture quality with real time guidance and auto-captured selfies. Refine your flow with A/B testing and easy adjustments.',
-    desktopImage: faceMatchHowItWorks,
+    desktopImage: faceMatchHowItWorks2,
   },
   {
     id: 'manage-data',
     title: 'Manage selfie data on your terms',
     description: 'Update workflows based on your analysis, automate key actions and apply redaction or step up checks where needed.',
-    desktopImage: faceMatchHowItWorks,
+    desktopImage: faceMatchHowItWorks3,
   },
 ]
 

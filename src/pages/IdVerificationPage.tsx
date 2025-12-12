@@ -16,6 +16,9 @@ import idCardIcon from '../assets/icons/id-card.svg'
 
 // Images
 import idVerificationHero from '../assets/images/id-verification-hero.png'
+import idVerificationHowItWorks1 from '../assets/images/id-verification-how-it-works-1.png'
+import idVerificationHowItWorks2 from '../assets/images/id-verification-how-it-works-2.png'
+import idVerificationHowItWorks3 from '../assets/images/id-verification-how-it-works-3.png'
 
 // Background style using inline styles for complex multi-layer gradient
 const BACKGROUND_STYLE = {
@@ -29,16 +32,19 @@ const howItWorksItems: AccordionItemData[] = [
     id: 'setup',
     title: 'Set up',
     description: 'Choose the document types, capture steps and devices your flow will use.',
+    desktopImage: idVerificationHowItWorks1,
   },
   {
     id: 'capture',
     title: 'Capture',
     description: 'Users scan their government ID. Folio reads the data and checks if the document is genuine.',
+    desktopImage: idVerificationHowItWorks2,
   },
   {
     id: 'verify',
     title: 'Verify',
     description: 'Approve, decline or send the case for review based on your rules.',
+    desktopImage: idVerificationHowItWorks3,
   },
 ]
 

@@ -16,7 +16,9 @@ import checkCheckIcon from '../assets/icons/CheckCheck.svg'
 
 // Images
 import nfcHero from '../assets/images/nfc-identity-scan-hero.png'
-import nfcHowItWorks from '../assets/images/nfc-identity-scan-how-it-works.png'
+import nfcHowItWorks1 from '../assets/images/nfc-identity-scan-how-it-works-1.png'
+import nfcHowItWorks2 from '../assets/images/nfc-identity-scan-how-it-works-2.png'
+import nfcHowItWorks3 from '../assets/images/nfc-identity-scan-how-it-works-3.png'
 
 // Background style using inline styles for complex multi-layer gradient
 const BACKGROUND_STYLE = {
@@ -29,19 +31,19 @@ const howItWorksItems: AccordionItemData[] = [
     id: 'add-nfc',
     title: 'Add NFC to your KYC flow',
     description: 'Offer NFC scanning as an additional verification step for supported devices and documents, enhancing accuracy without adding friction.',
-    desktopImage: nfcHowItWorks,
+    desktopImage: nfcHowItWorks1,
   },
   {
     id: 'extract-data',
     title: 'Extract data automatically',
     description: 'Users photograph their passport or ID and tap their phone to read the NFC chip. The system pulls structured data instantly for quick review.',
-    desktopImage: nfcHowItWorks,
+    desktopImage: nfcHowItWorks2,
   },
   {
     id: 'confirm-identities',
     title: 'Confirm identities seamlessly',
     description: 'After a successful NFC scan, users continue through your verification flow. If issues arise, you can request more details, escalate, or route to manual review.',
-    desktopImage: nfcHowItWorks,
+    desktopImage: nfcHowItWorks3,
   },
 ]
 

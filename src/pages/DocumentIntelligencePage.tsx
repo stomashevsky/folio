@@ -18,6 +18,9 @@ import handCoinsIcon from '../assets/icons/HandCoins.svg'
 
 // Images
 import documentIntelligenceHero from '../assets/images/document-intelligence-hero.png'
+import documentIntelligenceHowItWorks1 from '../assets/images/document-intelligence-how-it-works-1.png'
+import documentIntelligenceHowItWorks2 from '../assets/images/document-intelligence-how-it-works-2.png'
+import documentIntelligenceHowItWorks3 from '../assets/images/document-intelligence-how-it-works-3.png'
 
 // Background style using inline styles for complex multi-layer gradient
 const BACKGROUND_STYLE = {
@@ -31,16 +34,19 @@ const howItWorksItems: AccordionItemData[] = [
     id: 'submit',
     title: 'Users submit documents securely',
     description: 'Users upload documents through a secure interface with guidance for best capture quality.',
+    desktopImage: documentIntelligenceHowItWorks1,
   },
   {
     id: 'extract',
     title: 'Automatically extract information',
     description: 'AI reads and extracts key data from documents, identifying document type and relevant fields.',
+    desktopImage: documentIntelligenceHowItWorks2,
   },
   {
     id: 'review',
     title: 'Review information efficiently',
     description: 'Review extracted data with confidence scores and highlighted areas that need attention.',
+    desktopImage: documentIntelligenceHowItWorks3,
   },
 ]
 

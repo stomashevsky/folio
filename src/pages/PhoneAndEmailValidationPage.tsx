@@ -21,7 +21,9 @@ import messageSquareMoreIcon from '../assets/icons/MessageSquareMore.svg'
 
 // Images
 import phoneEmailHero from '../assets/images/phone-email-validation-hero.png'
-import phoneEmailHowItWorks from '../assets/images/phone-email-validation-how-it-works.png'
+import phoneEmailHowItWorks1 from '../assets/images/phone-email-validation-how-it-works-1.png'
+import phoneEmailHowItWorks2 from '../assets/images/phone-email-validation-how-it-works-2.png'
+import phoneEmailHowItWorks3 from '../assets/images/phone-email-validation-how-it-works-3.png'
 
 // Background style using inline styles for complex multi-layer gradient
 const BACKGROUND_STYLE = {
@@ -34,19 +36,19 @@ const howItWorksItems: AccordionItemData[] = [
     id: 'collect-details',
     title: 'Collect contact details',
     description: 'Users enter their phone number or email address.',
-    desktopImage: phoneEmailHowItWorks,
+    desktopImage: phoneEmailHowItWorks1,
   },
   {
     id: 'send-code',
     title: 'Send a verification code',
     description: 'A code is automatically delivered via text or email.',
-    desktopImage: phoneEmailHowItWorks,
+    desktopImage: phoneEmailHowItWorks2,
   },
   {
     id: 'confirm-ownership',
     title: 'Confirm ownership',
     description: 'Users enter the code to verify that the phone or email belongs to them.',
-    desktopImage: phoneEmailHowItWorks,
+    desktopImage: phoneEmailHowItWorks3,
   },
 ]
 

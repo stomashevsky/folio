@@ -20,7 +20,9 @@ import settings2Icon from '../assets/icons/Settings2.svg'
 
 // Images
 import dataSourceChecksHero from '../assets/images/data-source-checks-hero.png'
-import dataSourceChecksHowItWorks from '../assets/images/data-source-checks-how-it-works.png'
+import dataSourceChecksHowItWorks1 from '../assets/images/data-source-checks-how-it-works-1.png'
+import dataSourceChecksHowItWorks2 from '../assets/images/data-source-checks-how-it-works-2.png'
+import dataSourceChecksHowItWorks3 from '../assets/images/data-source-checks-how-it-works-3.png'
 
 // Background style using inline styles for complex multi-layer gradient
 const BACKGROUND_STYLE = {
@@ -33,19 +35,19 @@ const howItWorksItems: AccordionItemData[] = [
     id: 'gather-details',
     title: 'Gather user details',
     description: 'Extract data from ID documents or prompt users to provide it directly.',
-    desktopImage: dataSourceChecksHowItWorks,
+    desktopImage: dataSourceChecksHowItWorks1,
   },
   {
     id: 'apply-rules',
     title: 'Apply your matching rules',
     description: 'Verify collected data against issuing sources and authoritative databases based on your matching rules.',
-    desktopImage: dataSourceChecksHowItWorks,
+    desktopImage: dataSourceChecksHowItWorks2,
   },
   {
     id: 'deliver-decision',
     title: 'Deliver a clear decision',
     description: 'Users are accepted, declined, or routed to manual review according to your decision logic.',
-    desktopImage: dataSourceChecksHowItWorks,
+    desktopImage: dataSourceChecksHowItWorks3,
   },
 ]
 

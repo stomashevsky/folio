@@ -19,6 +19,9 @@ import searchCheckIcon from '../assets/icons/SearchCheck.svg'
 
 // Images
 import reviewWorkspaceHero from '../assets/images/review-workspace-hero.png'
+import reviewWorkspaceHowItWorks1 from '../assets/images/review-workspace-how-it-works-1.png'
+import reviewWorkspaceHowItWorks2 from '../assets/images/review-workspace-how-it-works-2.png'
+import reviewWorkspaceHowItWorks3 from '../assets/images/review-workspace-how-it-works-3.png'
 
 // Background style using inline styles for complex multi-layer gradient
 const BACKGROUND_STYLE = {
@@ -51,16 +54,19 @@ const howItWorksItems: AccordionItemData[] = [
     id: 'setup',
     title: 'Set up review workflows',
     description: 'Create case templates for different scenarios and define assignment rules, statuses, and ownership to match your internal processes.',
+    desktopImage: reviewWorkspaceHowItWorks1,
   },
   {
     id: 'review',
     title: 'Review complex cases',
     description: 'Examine high-risk or failed checks by reviewing user or business data, verification results, and supporting evidence in one place.',
+    desktopImage: reviewWorkspaceHowItWorks2,
   },
   {
     id: 'action',
     title: 'Take action with confidence',
     description: 'Approve, reject, or escalate cases and manage follow-ups directly from the workspace, without switching tools.',
+    desktopImage: reviewWorkspaceHowItWorks3,
   },
 ]
 

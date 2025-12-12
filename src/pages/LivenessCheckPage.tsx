@@ -18,7 +18,9 @@ import scanFaceIcon from '../assets/icons/ScanFace.svg'
 
 // Images
 import livenessCheckHero from '../assets/images/liveness-check-hero.png'
-import livenessCheckHowItWorks from '../assets/images/liveness-check-how-it-works.png'
+import livenessCheckHowItWorks1 from '../assets/images/liveness-check-how-it-works-1.png'
+import livenessCheckHowItWorks2 from '../assets/images/liveness-check-how-it-works-2.png'
+import livenessCheckHowItWorks3 from '../assets/images/liveness-check-how-it-works-3.png'
 
 // Background style using inline styles for complex multi-layer gradient
 const BACKGROUND_STYLE = {
@@ -31,19 +33,19 @@ const howItWorksItems: AccordionItemData[] = [
     id: 'collect-signals',
     title: 'Collect signals',
     description: 'Folio gathers signals from the document, the selfie and the device to build a clear picture of the user.',
-    desktopImage: livenessCheckHowItWorks,
+    desktopImage: livenessCheckHowItWorks1,
   },
   {
     id: 'analyze-assess',
     title: 'Analyze and assess',
     description: 'Advanced models review visual and non visual cues to spot inconsistencies and signs of fraud.',
-    desktopImage: livenessCheckHowItWorks,
+    desktopImage: livenessCheckHowItWorks2,
   },
   {
     id: 'make-decisions',
     title: 'Make decisions',
     description: 'Folio guides the next steps automatically, from extra checks to final approvals.',
-    desktopImage: livenessCheckHowItWorks,
+    desktopImage: livenessCheckHowItWorks3,
   },
 ]
 

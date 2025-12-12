@@ -15,6 +15,10 @@ import gitForkIcon from '../assets/icons/GitFork.svg'
 
 // Images
 import dynamicFlowHero from '../assets/images/dynamic-flow-hero.png'
+import dynamicFlowHowItWorks1 from '../assets/images/dynamic-flow-how-it-works-1.png'
+import dynamicFlowHowItWorks2 from '../assets/images/dynamic-flow-how-it-works-2.png'
+import dynamicFlowHowItWorks3 from '../assets/images/dynamic-flow-how-it-works-3.png'
+import dynamicFlowHowItWorks4 from '../assets/images/dynamic-flow-how-it-works-4.png'
 
 // Background style using inline styles for complex multi-layer gradient
 const BACKGROUND_STYLE = {
@@ -28,25 +32,25 @@ const howItWorksItems: AccordionItemData[] = [
     id: 'branded',
     title: 'Build branded experiences',
     description: 'Create seamless identity flows that feel native to your product.',
-    desktopImage: dynamicFlowHero,
+    desktopImage: dynamicFlowHowItWorks1,
   },
   {
     id: 'risk',
     title: 'Adapt to risk instantly',
     description: 'Increase or reduce verification steps based on real time signals.',
-    desktopImage: dynamicFlowHero,
+    desktopImage: dynamicFlowHowItWorks2,
   },
   {
     id: 'decide',
     title: 'Decide with confidence',
     description: 'Combine risk signals and trusted data to power better decisions.',
-    desktopImage: dynamicFlowHero,
+    desktopImage: dynamicFlowHowItWorks3,
   },
   {
     id: 'optimize',
     title: 'Optimize over time',
     description: 'Fine tune flows using real world performance insights.',
-    desktopImage: dynamicFlowHero,
+    desktopImage: dynamicFlowHowItWorks4,
   },
 ]
 

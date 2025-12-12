@@ -16,6 +16,9 @@ import folderSearchIcon from '../assets/icons/FolderSearch.svg'
 
 // Images
 import behaviorInsightsHero from '../assets/images/behavior-insights-hero.png'
+import behaviorInsightsHowItWorks1 from '../assets/images/behavior-insights-how-it-works-1.png'
+import behaviorInsightsHowItWorks2 from '../assets/images/behavior-insights-how-it-works-2.png'
+import behaviorInsightsHowItWorks3 from '../assets/images/behavior-insights-how-it-works-3.png'
 
 // Background style using inline styles for complex multi-layer gradient
 const BACKGROUND_STYLE = {
@@ -48,16 +51,19 @@ const howItWorksItems: AccordionItemData[] = [
     id: 'collect',
     title: 'Collect signals automatically',
     description: 'Passive signals are captured as users move through the flow. Add third party data to enrich context without extra steps.',
+    desktopImage: behaviorInsightsHowItWorks1,
   },
   {
     id: 'adapt',
     title: 'Adapt flows in real time',
     description: 'Adjust verification steps dynamically based on live risk signals and user behavior.',
+    desktopImage: behaviorInsightsHowItWorks2,
   },
   {
     id: 'decide',
     title: 'Decide with confidence',
     description: 'Use combined signals to approve, decline, or route users to review with greater accuracy.',
+    desktopImage: behaviorInsightsHowItWorks3,
   },
 ]
 
