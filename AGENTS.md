@@ -63,6 +63,14 @@ This file contains all rules and principles that must be followed for every chan
 - Common icons: `Scale.svg`, `Dices.svg`, `Bitcoin.svg`, `CreditCard.svg`, `ShieldPlus.svg`, `Users.svg`, `Link.svg`, `Puzzle.svg`, `Braces.svg`
 - Do not use generic placeholder icons - use icons that match the semantic meaning in Figma design
 
+#### Icon naming rules
+
+- **All icon files must use PascalCase** (e.g., `ShieldCheck.svg`, not `shield-check.svg`)
+- **No prefixes or suffixes** like numbers or sizes (e.g., use `Users.svg`, not `24_Users.svg`)
+- **No version numbers** in names (e.g., use `Fingerprint.svg`, not `fingerprint-02.svg`)
+- Names should be semantic and match the icon content
+- When adding new icons, check existing icons to avoid duplicates
+
 ### 3.3. Image Placeholders
 
 - **Use `image-placeholder.png`** from `src/assets/images/` as the universal placeholder for all pages/components that need an image but don't have one yet

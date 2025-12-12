@@ -41,3 +41,9 @@ export type { MobileMenuLinkProps } from './MobileMenuLink'
 export { default as MobileMenuBackButton } from './MobileMenuBackButton'
 export type { MobileMenuBackButtonProps } from './MobileMenuBackButton'
 export { default as HeroTagline } from './HeroTagline'
+export { default as BlogArticleLayout } from './BlogArticleLayout'
+export type { BlogArticleLayoutProps } from './BlogArticleLayout'
+
+// Article typography components
+export { ArticleH2, ArticleParagraph, ArticleBlockquote, ArticleList, ArticleTable } from './article'
+export type { ArticleTableColumn, ArticleTableRow, ArticleTableProps } from './article'

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { SectionHeader } from '../ui'
 import { PLATFORM_ITEMS, PlatformItem } from '../../constants/platformItems'
 import { scrollToTop } from '../../utils/scrollToTop'
-import arrowRight16Icon from '../../assets/icons/ArrowRight16.svg'
+import arrowRightIcon from '../../assets/icons/ArrowRight.svg'
 
 interface ExploreMoreSectionProps {
   currentPath: string
@@ -66,7 +66,7 @@ function ExploreMoreCard({ item }: { item: PlatformItem }) {
           className="bg-[#f5f5f5] flex items-center gap-2 h-8 px-3 py-2 rounded-full text-xs font-medium text-[#171717] hover:bg-[#e5e5e5] transition-colors"
         >
           <span>Learn more</span>
-          <img src={arrowRight16Icon} alt="" aria-hidden="true" className="w-4 h-4" />
+          <img src={arrowRightIcon} alt="" aria-hidden="true" className="w-4 h-4" />
         </Link>
       </div>
     </div>

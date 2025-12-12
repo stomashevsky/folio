@@ -6,13 +6,13 @@ import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 
 // Icons
-import globeIcon from '../assets/icons/globe.svg'
+import globeIcon from '../assets/icons/Globe.svg'
 import userSearchIcon from '../assets/icons/UserSearch.svg'
 import gitMergeIcon from '../assets/icons/GitMerge.svg'
 import circleCheckBigIcon from '../assets/icons/CircleCheckBig.svg'
 import scanFaceIcon from '../assets/icons/ScanFace.svg'
 import arrowUpDownIcon from '../assets/icons/ArrowUpDown.svg'
-import idCardIcon from '../assets/icons/id-card.svg'
+import idCardIcon from '../assets/icons/IdCard.svg'
 
 // Images
 import idVerificationHero from '../assets/images/id-verification-hero.png'

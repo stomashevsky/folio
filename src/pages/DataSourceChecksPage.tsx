@@ -8,10 +8,10 @@ import { usePageTitle } from '../hooks/usePageTitle'
 
 // Icons
 import databaseIcon from '../assets/icons/Database.svg'
-import globeIcon from '../assets/icons/globe.svg'
+import globeIcon from '../assets/icons/Globe.svg'
 import building2Icon from '../assets/icons/Building2.svg'
-import idCardIcon from '../assets/icons/id-card.svg'
-import carFrontIcon from '../assets/icons/CarFront.svg'
+import idCardIcon from '../assets/icons/IdCard.svg'
+import carFrontIcon from '../assets/icons/Car.svg'
 import shieldCheckIcon from '../assets/icons/ShieldCheck.svg'
 import circlePlusIcon from '../assets/icons/CirclePlus.svg'
 import fileSearchIcon from '../assets/icons/FileSearch.svg'

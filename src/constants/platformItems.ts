@@ -1,5 +1,5 @@
 // Icons
-import idCardIcon from '../assets/icons/id-card.svg'
+import idCardIcon from '../assets/icons/IdCard.svg'
 import sparklesIcon from '../assets/icons/Sparkles.svg'
 import scanFaceIcon from '../assets/icons/ScanFace.svg'
 import circleUserIcon from '../assets/icons/CircleUser.svg'

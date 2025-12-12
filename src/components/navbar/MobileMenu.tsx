@@ -5,7 +5,7 @@ import { scrollToTop } from '../../utils/scrollToTop'
 import { scrollToSection } from '../../utils/scrollToSection'
 
 // Icons
-import idCardIcon from '../../assets/icons/id-card.svg'
+import idCardIcon from '../../assets/icons/IdCard.svg'
 import sparklesIcon from '../../assets/icons/Sparkles.svg'
 import scanFaceIcon from '../../assets/icons/ScanFace.svg'
 import circleUserIcon from '../../assets/icons/CircleUser.svg'
@@ -16,7 +16,7 @@ import gitForkIcon from '../../assets/icons/GitFork.svg'
 import waypointsIcon from '../../assets/icons/Waypoints.svg'
 import searchCheckIcon from '../../assets/icons/SearchCheck.svg'
 import ageIcon from '../../assets/icons/Age.svg'
-import ticketIcon from '../../assets/icons/ticket.svg'
+import ticketIcon from '../../assets/icons/Ticket.svg'
 
 interface MobileMenuProps {
   isOpen: boolean

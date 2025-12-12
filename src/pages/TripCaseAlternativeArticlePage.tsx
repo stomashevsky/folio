@@ -1,172 +1,71 @@
-import Navbar from '../components/Navbar'
-import FooterSection from '../components/sections/FooterSection'
-import KeepReadingSection from '../components/sections/KeepReadingSection'
-import { usePageTitle } from '../hooks/usePageTitle'
-import { useScrollToTop } from '../hooks/useScrollToTop'
-import { useNavigate, Link } from 'react-router-dom'
-import { Button } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleBlockquote, ArticleTable } from '../components/ui'
 
 export default function TripCaseAlternativeArticlePage() {
-  const navigate = useNavigate()
-
-  useScrollToTop()
-  
-  usePageTitle({
-    title: "TripCase alternative: The travel organizer you'll love | Folio Blog",
-    description: "TripCase is gone. Your next trip doesn't have to be chaos. Meet the app that keeps every flight, hotel, and document in one beautiful place.",
-    ogTitle: "TripCase alternative: The travel organizer you'll love",
-    ogDescription: "TripCase is gone. Your next trip doesn't have to be chaos. Meet the app that keeps every flight, hotel, and document in one beautiful place.",
-    ogUrl: 'https://folio.id/blog/tripcase-alternative'
-  })
-
   return (
-    <div className="flex flex-col items-start min-h-screen relative w-full">
-      <Navbar />
-      <main className="flex-1 w-full">
-        <section className="bg-white border-[#e5e5e5] border-b border-l-0 border-r-0 border-solid border-t-0 flex flex-col gap-6 items-center px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full">
-          <div className="flex flex-col gap-12 items-start justify-center px-6 md:px-6 py-0 relative shrink-0 w-full max-w-[768px]">
-            {/* Meta information and Title */}
-            <div className="flex flex-col gap-4 md:gap-5 items-start relative shrink-0 w-full">
-              {/* Meta information */}
-              <div className="flex flex-wrap gap-4 items-start justify-center leading-5 relative shrink-0 text-sm w-full">
-                <p className="relative shrink-0 text-[#0a0a0a]">Sep 4, 2025</p>
-                <Link 
-                  to="/blog?category=Research" 
-                  className="relative shrink-0 text-[#737373] hover:text-[#0a0a0a] hover:underline transition-colors cursor-pointer"
-                >
-                  Research
-                </Link>
-              </div>
+    <BlogArticleLayout
+      title="TripCase alternative: The travel organizer you'll love"
+      description="TripCase is gone. Your next trip doesn't have to be chaos. Meet the app that keeps every flight, hotel, and document in one beautiful place."
+      date="Sep 4, 2025"
+      category="Research"
+      slug="tripcase-alternative"
+    >
+      <ArticleParagraph>
+        For years, TripCase was the go-to app for travelers who wanted to keep their trips organized. It pulled together your flights, hotels, and car rentals into one clean itinerary. Simple. Reliable. Loved by millions. TripCase understood something important: travel is complicated. But checking your itinerary shouldn't be. Forward a confirmation email. Get an organized trip. That was the magic. Automatic itinerary building from emails. Real-time flight alerts. Gate and terminal updates. Works on any device. Millions of travelers relied on it.
+      </ArticleParagraph>
 
-              {/* Title and subtitle */}
-              <div className="flex flex-col gap-4 md:gap-6 items-center relative shrink-0 text-center w-full whitespace-pre-wrap">
-                <h1 className="font-bold leading-[36px] md:leading-[48px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px] min-w-full relative shrink-0 w-[min-content]">
-                  TripCase alternative: The travel organizer you'll love
-                </h1>
-                <p className="font-normal leading-7 min-w-full relative shrink-0 text-[#737373] text-lg w-[min-content]">
-                  TripCase is gone. Your next trip doesn't have to be chaos. Meet the app that keeps every flight, hotel, and document in one beautiful place.
-                </p>
-              </div>
-            </div>
+      <ArticleParagraph>
+        On April 1, 2025, TripCase shut down. And if you're reading this, you're probably looking for what comes next. We listened to thousands of travelers searching for a TripCase alternative. The message was clear.
+      </ArticleParagraph>
 
-            {/* Article content */}
-            <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                For years, TripCase was the go-to app for travelers who wanted to keep their trips organized. It pulled together your flights, hotels, and car rentals into one clean itinerary. Simple. Reliable. Loved by millions. TripCase understood something important: travel is complicated. But checking your itinerary shouldn't be. Forward a confirmation email. Get an organized trip. That was the magic. Automatic itinerary building from emails. Real-time flight alerts. Gate and terminal updates. Works on any device. Millions of travelers relied on it.
-              </p>
+      <ArticleBlockquote>
+        "I just want one place for everything. My flights. My hotels. My passport. My tickets. All of it."
+      </ArticleBlockquote>
 
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                On April 1, 2025, TripCase shut down. And if you're reading this, you're probably looking for what comes next. We listened to thousands of travelers searching for a TripCase alternative. The message was clear.
-              </p>
+      <ArticleParagraph>
+        Not five apps. One. We have an answer.
+      </ArticleParagraph>
 
-              <div className="border-l-2 border-[#e5e5e5] pl-6 pr-0 py-0 relative shrink-0 w-full">
-                <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap italic">
-                  "I just want one place for everything. My flights. My hotels. My passport. My tickets. All of it."
-                </p>
-              </div>
+      <ArticleH2>Introducing Folio Wallet</ArticleH2>
 
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Not five apps. One. We have an answer.
-              </p>
+      <ArticleParagraph>
+        Folio Wallet doesn't just replace TripCase. It reimagines what a travel app can be. Think of it as a digital wallet for your entire journey. Boarding passes. Hotel confirmations. Event tickets. Even your passport and ID. Everything lives in one beautiful, organized space. You add your documents. We do the rest.
+      </ArticleParagraph>
 
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Introducing Folio Wallet
-              </h2>
+      <ArticleH2>Key features</ArticleH2>
 
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Folio Wallet doesn't just replace TripCase. It reimagines what a travel app can be. Think of it as a digital wallet for your entire journey. Boarding passes. Hotel confirmations. Event tickets. Even your passport and ID. Everything lives in one beautiful, organized space. You add your documents. We do the rest.
-              </p>
+      <ArticleParagraph>
+        Add a PDF. Snap a photo. Forward an email. However you want to add it, Folio handles it. Every document is instantly recognized. Key details are extracted. Your trip timeline builds itself. You can store flight tickets (boarding passes, e-tickets, confirmations), hotels (reservations and booking details), transportation (trains, buses, rental cars), events (concert tickets, museum passes, experiences), and documents (passport, ID, travel insurance).
+      </ArticleParagraph>
 
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Key features
-              </h2>
+      <ArticleParagraph>
+        Traveling with family? Planning a group trip? Share a folder with your travel companions. They see the same organized itinerary on their phone. Real-time. Always in sync. No more forwarding emails. No more "Did you get the hotel confirmation?" texts.
+      </ArticleParagraph>
 
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Add a PDF. Snap a photo. Forward an email. However you want to add it, Folio handles it. Every document is instantly recognized. Key details are extracted. Your trip timeline builds itself. You can store flight tickets (boarding passes, e-tickets, confirmations), hotels (reservations and booking details), transportation (trains, buses, rental cars), events (concert tickets, museum passes, experiences), and documents (passport, ID, travel insurance).
-              </p>
+      <ArticleParagraph>
+        No Wi-Fi at the airport? Roaming turned off? Doesn't matter. Your documents are always there when you need them. Folio works fully offline, so you can access everything even when you've just landed and don't have an internet connection yet.
+      </ArticleParagraph>
 
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Traveling with family? Planning a group trip? Share a folder with your travel companions. They see the same organized itinerary on their phone. Real-time. Always in sync. No more forwarding emails. No more "Did you get the hotel confirmation?" texts.
-              </p>
+      <ArticleH2>TripCase vs. Folio Wallet</ArticleH2>
 
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                No Wi-Fi at the airport? Roaming turned off? Doesn't matter. Your documents are always there when you need them. Folio works fully offline, so you can access everything even when you've just landed and don't have an internet connection yet.
-              </p>
+      <ArticleTable
+        columns={[
+          { header: 'Feature', key: 'feature' },
+          { header: 'TripCase', key: 'tripcase' },
+          { header: 'Folio Wallet', key: 'folio' },
+        ]}
+        rows={[
+          { feature: 'Itinerary from emails', tripcase: '✓', folio: '✓' },
+          { feature: 'PDF & photo uploads', tripcase: '~Limited', folio: '✓' },
+          { feature: 'ID & passport storage', tripcase: '—', folio: '✓' },
+          { feature: 'Folder sharing', tripcase: '~Followers only', folio: 'Full collaboration' },
+          { feature: 'Offline access', tripcase: '✓', folio: '✓' },
+          { feature: 'Auto-organized timeline', tripcase: '✓', folio: '✓' },
+        ]}
+      />
 
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                TripCase vs. Folio Wallet
-              </h2>
-
-              <div className="w-full overflow-x-auto">
-                <table className="w-full border-collapse text-base">
-                  <thead>
-                    <tr className="border-b border-[#e5e5e5]">
-                      <th className="text-left py-4 pr-4 font-semibold text-[#0a0a0a]">Feature</th>
-                      <th className="text-left py-4 pr-4 font-semibold text-[#0a0a0a]">TripCase</th>
-                      <th className="text-left py-4 font-semibold text-[#0a0a0a]">Folio Wallet</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="border-b border-[#e5e5e5]">
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Itinerary from emails</td>
-                      <td className="py-4 pr-4 text-[#0a0a0a]">✓</td>
-                      <td className="py-4 text-[#0a0a0a]">✓</td>
-                    </tr>
-                    <tr className="border-b border-[#e5e5e5]">
-                      <td className="py-4 pr-4 text-[#0a0a0a]">PDF & photo uploads</td>
-                      <td className="py-4 pr-4 text-[#737373]">Limited</td>
-                      <td className="py-4 text-[#0a0a0a]">✓</td>
-                    </tr>
-                    <tr className="border-b border-[#e5e5e5]">
-                      <td className="py-4 pr-4 text-[#0a0a0a]">ID & passport storage</td>
-                      <td className="py-4 pr-4 text-[#737373]">—</td>
-                      <td className="py-4 text-[#0a0a0a]">✓</td>
-                    </tr>
-                    <tr className="border-b border-[#e5e5e5]">
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Folder sharing</td>
-                      <td className="py-4 pr-4 text-[#737373]">Followers only</td>
-                      <td className="py-4 text-[#0a0a0a]">Full collaboration</td>
-                    </tr>
-                    <tr className="border-b border-[#e5e5e5]">
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Offline access</td>
-                      <td className="py-4 pr-4 text-[#0a0a0a]">✓</td>
-                      <td className="py-4 text-[#0a0a0a]">✓</td>
-                    </tr>
-                    <tr>
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Auto-organized timeline</td>
-                      <td className="py-4 pr-4 text-[#0a0a0a]">✓</td>
-                      <td className="py-4 text-[#0a0a0a]">✓</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                TripCase was great. But the way we travel has changed. We need more than an itinerary. We need a single place for everything. <strong>Download <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a>. Add your first trip. See how it feels to be organized.</strong>
-              </p>
-            </div>
-
-            {/* Back to blog button */}
-            <div className="pt-8">
-              <Button
-                variant="secondary"
-                onClick={() => navigate('/blog', { state: { restoreScroll: true } })}
-                iconPosition="left"
-                icon={
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
-                    <path d="M7.99967 12.6666L3.33301 7.99992M3.33301 7.99992L7.99967 3.33325M3.33301 7.99992H12.6663" stroke="#171717" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                }
-              >
-                Back to Blog
-              </Button>
-            </div>
-          </div>
-
-        </section>
-        <KeepReadingSection currentArticleSlug="tripcase-alternative" />
-      </main>
-      <FooterSection />
-    </div>
+      <ArticleParagraph>
+        TripCase was great. But the way we travel has changed. We need more than an itinerary. We need a single place for everything. <strong>Download <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a>. Add your first trip. See how it feels to be organized.</strong>
+      </ArticleParagraph>
+    </BlogArticleLayout>
   )
 }

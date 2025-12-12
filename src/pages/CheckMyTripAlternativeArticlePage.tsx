@@ -1,173 +1,70 @@
-import Navbar from '../components/Navbar'
-import FooterSection from '../components/sections/FooterSection'
-import KeepReadingSection from '../components/sections/KeepReadingSection'
-import { usePageTitle } from '../hooks/usePageTitle'
-import { useScrollToTop } from '../hooks/useScrollToTop'
-import { useNavigate, Link } from 'react-router-dom'
-import { Button } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleBlockquote, ArticleTable } from '../components/ui'
 
 export default function CheckMyTripAlternativeArticlePage() {
-  const navigate = useNavigate()
-
-  useScrollToTop()
-  
-  usePageTitle({
-    title: "CheckMyTrip alternative: A smarter way to manage your travel | Folio Blog",
-    description: "CheckMyTrip organizes your bookings. But what about your passport, insurance, and event tickets? Discover an app that stores everything in one secure place.",
-    ogTitle: "CheckMyTrip alternative: A smarter way to manage your travel",
-    ogDescription: "CheckMyTrip organizes your bookings. But what about your passport, insurance, and event tickets? Discover an app that stores everything in one secure place.",
-    ogUrl: 'https://folio.id/blog/checkmytrip-alternative'
-  })
-
   return (
-    <div className="flex flex-col items-start min-h-screen relative w-full">
-      <Navbar />
-      <main className="flex-1 w-full">
-        <section className="bg-white border-[#e5e5e5] border-b border-l-0 border-r-0 border-solid border-t-0 flex flex-col gap-6 items-center px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full">
-          <div className="flex flex-col gap-12 items-start justify-center px-6 md:px-6 py-0 relative shrink-0 w-full max-w-[768px]">
-            {/* Meta information and Title */}
-            <div className="flex flex-col gap-4 md:gap-5 items-start relative shrink-0 w-full">
-              {/* Meta information */}
-              <div className="flex flex-wrap gap-4 items-start justify-center leading-5 relative shrink-0 text-sm w-full">
-                <p className="relative shrink-0 text-[#0a0a0a]">Sep 18, 2025</p>
-                <Link 
-                  to="/blog?category=Research" 
-                  className="relative shrink-0 text-[#737373] hover:text-[#0a0a0a] hover:underline transition-colors cursor-pointer"
-                >
-                  Research
-                </Link>
-              </div>
+    <BlogArticleLayout
+      title="CheckMyTrip alternative: A smarter way to manage your travel"
+      description="CheckMyTrip organizes your bookings. But what about your passport, insurance, and event tickets? Discover an app that stores everything in one secure place."
+      date="Sep 18, 2025"
+      category="Research"
+      slug="checkmytrip-alternative"
+    >
+      <ArticleParagraph>
+        CheckMyTrip has been a reliable tool for travelers who want their itinerary in one place. You forward your booking confirmations, and it creates an organized trip timeline. But CheckMyTrip focuses mainly on bookings. What if you also need your passport, insurance documents, or event tickets organized? You need something more complete.
+      </ArticleParagraph>
 
-              {/* Title and subtitle */}
-              <div className="flex flex-col gap-4 md:gap-6 items-center relative shrink-0 text-center w-full whitespace-pre-wrap">
-                <h1 className="font-bold leading-[36px] md:leading-[48px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px] min-w-full relative shrink-0 w-[min-content]">
-                  CheckMyTrip alternative: A smarter way to manage your travel
-                </h1>
-                <p className="font-normal leading-7 min-w-full relative shrink-0 text-[#737373] text-lg w-[min-content]">
-                  CheckMyTrip organizes your bookings. But what about your passport, insurance, and event tickets? Discover an app that stores everything in one secure place.
-                </p>
-              </div>
-            </div>
+      <ArticleH2>What CheckMyTrip offers</ArticleH2>
 
-            {/* Article content */}
-            <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Keeping all your travel details in one place can feel like a challenge. Flights. Hotels. Car rentals. Confirmation emails scattered across your inbox. That's why many travelers use CheckMyTrip. It pulls your bookings into a single itinerary view. But what if you need more than bookings?
-              </p>
+      <ArticleParagraph>
+        CheckMyTrip is an itinerary management app powered by Amadeus, a major travel technology company. It pulls together flight, hotel, and car rental bookings into a single view. You get real-time flight updates, terminal and gate information, and weather forecasts. It syncs with your calendar and works offline. For simple trip organization, it works well.
+      </ArticleParagraph>
 
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                What is CheckMyTrip and why look for alternatives
-              </h2>
+      <ArticleH2>Where CheckMyTrip falls short</ArticleH2>
 
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                CheckMyTrip is an itinerary management app. It imports your booking confirmations from airlines, hotels, and car rentals, creating a single view of your journey. Centralized itinerary shows flights, hotels, and car rentals in one timeline. Multiple import options let you forward emails, enter booking numbers, or add details manually. Notifications send reminders for flights, check-ins, and schedule changes. Cross-platform support is available on iOS and Android. CheckMyTrip is simple and free. But that's also where it ends.
-              </p>
+      <ArticleParagraph>
+        CheckMyTrip is built around bookings from travel providers. It doesn't support general document storage. You can't store your passport, visa, or travel insurance. You can't add tickets from sources that aren't in its system. Security is standard, not exceptional. And sharing is limited. If you travel with complex itineraries or need secure document storage, CheckMyTrip leaves gaps.
+      </ArticleParagraph>
 
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                CheckMyTrip handles bookings. But modern travel involves so much more. No document storage means you can't keep passports, IDs, or insurance. No event tickets means concerts, museums, conferences aren't supported. Limited organization means no folders, labels, or custom notes. Basic security means sensitive data deserves stronger protection. If you want a single app for everything travel-related, you need something more capable.
-              </p>
+      <ArticleH2>Folio Wallet: A complete CheckMyTrip alternative</ArticleH2>
 
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                Folio Wallet: A powerful alternative
-              </h2>
+      <ArticleParagraph>
+        Folio Wallet combines itinerary organization with secure document storage. Your trips are organized automatically. And every document you need for travel lives in one encrypted vault.
+      </ArticleParagraph>
 
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Folio Wallet isn't just an itinerary app. It's a digital travel wallet designed to store everything you need for your journey. Flights and hotels. Train tickets and event passes. Passports and insurance. All in one secure place.
-              </p>
+      <ArticleParagraph>
+        Travel timeline is built from your tickets and bookings. Flights. Hotels. Trains. Events. All organized chronologically. Document vault stores passports, IDs, driver's licenses, visas, insurance papers, and more. Protected with AES-256 encryption and zero-knowledge architecture.
+      </ArticleParagraph>
 
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                All-in-one storage keeps flight tickets, hotel bookings, train passes, event tickets, passports, IDs, and insurance. Everything in one app. Automatic recognition extracts key details from uploaded PDFs, photos, or forwarded confirmation emails. Clear travel timeline turns your bookings into a structured trip view. Flights, hotels, and events in chronological order.
-              </p>
+      <ArticleParagraph>
+        Flexible import lets you add documents from email, PDF, or photo. Folio extracts the details automatically. Shared folders let you share trip documents securely with travel companions. Everyone stays in sync.
+      </ArticleParagraph>
 
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Shared folders let you collaborate with friends, family, or colleagues. Share a trip folder with controlled access. Offline access means you can view your documents without internet. In the air. Underground. Anywhere. Real security includes AES-256 encryption, zero-knowledge architecture, and GDPR and SOC 2 compliance. Your data stays yours.
-              </p>
+      <ArticleH2>CheckMyTrip vs Folio Wallet</ArticleH2>
 
-              <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
-                CheckMyTrip vs Folio Wallet
-              </h2>
+      <ArticleTable
+        columns={[
+          { header: 'Feature', key: 'feature' },
+          { header: 'CheckMyTrip', key: 'checkmytrip' },
+          { header: 'Folio Wallet', key: 'folio' },
+        ]}
+        rows={[
+          { feature: 'Trip itinerary', checkmytrip: 'From booking confirmations', folio: 'From any ticket or document' },
+          { feature: 'Flight updates', checkmytrip: '✓', folio: '~Coming soon' },
+          { feature: 'Document storage', checkmytrip: '—', folio: 'IDs, passports, insurance, tickets' },
+          { feature: 'PDF & photo import', checkmytrip: '~Limited', folio: '✓' },
+          { feature: 'Offline access', checkmytrip: '✓', folio: '✓' },
+          { feature: 'Security', checkmytrip: 'Standard', folio: 'AES-256, zero-knowledge, SOC 2' },
+          { feature: 'Shared folders', checkmytrip: '~Limited', folio: '✓' },
+        ]}
+      />
 
-              <div className="w-full overflow-x-auto">
-                <table className="w-full border-collapse text-base">
-                  <thead>
-                    <tr className="border-b border-[#e5e5e5]">
-                      <th className="text-left py-4 pr-4 font-semibold text-[#0a0a0a]">Feature</th>
-                      <th className="text-left py-4 pr-4 font-semibold text-[#0a0a0a]">CheckMyTrip</th>
-                      <th className="text-left py-4 font-semibold text-[#0a0a0a]">Folio Wallet</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="border-b border-[#e5e5e5]">
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Flight and hotel bookings</td>
-                      <td className="py-4 pr-4 text-[#0a0a0a]">✓</td>
-                      <td className="py-4 text-[#0a0a0a]">✓</td>
-                    </tr>
-                    <tr className="border-b border-[#e5e5e5]">
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Document storage</td>
-                      <td className="py-4 pr-4 text-[#737373]">—</td>
-                      <td className="py-4 text-[#0a0a0a]">IDs, passports, insurance</td>
-                    </tr>
-                    <tr className="border-b border-[#e5e5e5]">
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Event tickets</td>
-                      <td className="py-4 pr-4 text-[#737373]">—</td>
-                      <td className="py-4 text-[#0a0a0a]">✓</td>
-                    </tr>
-                    <tr className="border-b border-[#e5e5e5]">
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Automatic recognition</td>
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Basic</td>
-                      <td className="py-4 text-[#0a0a0a]">Advanced</td>
-                    </tr>
-                    <tr className="border-b border-[#e5e5e5]">
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Shared folders</td>
-                      <td className="py-4 pr-4 text-[#737373]">—</td>
-                      <td className="py-4 text-[#0a0a0a]">✓</td>
-                    </tr>
-                    <tr className="border-b border-[#e5e5e5]">
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Security</td>
-                      <td className="py-4 pr-4 text-[#737373]">Basic</td>
-                      <td className="py-4 text-[#0a0a0a]">AES-256, zero-knowledge</td>
-                    </tr>
-                    <tr>
-                      <td className="py-4 pr-4 text-[#0a0a0a]">Offline access</td>
-                      <td className="py-4 pr-4 text-[#0a0a0a]">✓</td>
-                      <td className="py-4 text-[#0a0a0a]">✓</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+      <ArticleParagraph>
+        Choose CheckMyTrip if you only need basic itinerary management from booking confirmations. Choose <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> if you want your entire travel life organized and protected. Bookings, documents, tickets, and IDs. All in one secure place.
+      </ArticleParagraph>
 
-              <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
-                Choose CheckMyTrip if you only need basic itinerary management for flights and hotels. Choose <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> if you want everything in one place: bookings, documents, tickets. All protected with real security.
-              </p>
-
-              <div className="border-l-2 border-[#e5e5e5] pl-6 pr-0 py-0 relative shrink-0 w-full">
-                <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap italic">
-                  Every booking. Every document. Every detail. One secure place.
-                </p>
-              </div>
-            </div>
-
-            {/* Back to blog button */}
-            <div className="pt-8">
-              <Button
-                variant="secondary"
-                onClick={() => navigate('/blog', { state: { restoreScroll: true } })}
-                iconPosition="left"
-                icon={
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
-                    <path d="M7.99967 12.6666L3.33301 7.99992M3.33301 7.99992L7.99967 3.33325M3.33301 7.99992H12.6663" stroke="#171717" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                }
-              >
-                Back to Blog
-              </Button>
-            </div>
-          </div>
-
-        </section>
-        <KeepReadingSection currentArticleSlug="checkmytrip-alternative" />
-      </main>
-      <FooterSection />
-    </div>
+      <ArticleBlockquote>
+        Your bookings. Your documents. Your entire trip. Organized and secure. In one app.
+      </ArticleBlockquote>
+    </BlogArticleLayout>
   )
 }

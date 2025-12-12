@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react'
 import { FOCUS_RING_CLASSES } from './focusStyles'
-import chevronRightIcon from '../../assets/icons/chevron-right.svg'
+import chevronRightIcon from '../../assets/icons/ChevronRight.svg'
 
 export interface MobileMenuItemProps {
     children: ReactNode

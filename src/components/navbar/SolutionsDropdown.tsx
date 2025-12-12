@@ -2,11 +2,11 @@ import { useState, useRef, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { MenuItem, DropdownMenuItem } from '../ui'
 import { scrollToTop } from '../../utils/scrollToTop'
-import chevronDownIcon from '../../assets/icons/chevron-down.svg'
+import chevronDownIcon from '../../assets/icons/ChevronDown.svg'
 
 // Icons
 import ageIcon from '../../assets/icons/Age.svg'
-import ticketIcon from '../../assets/icons/ticket.svg'
+import ticketIcon from '../../assets/icons/Ticket.svg'
 
 interface SolutionItem {
   label: string

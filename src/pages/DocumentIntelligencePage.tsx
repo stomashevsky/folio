@@ -9,11 +9,11 @@ import { usePageTitle } from '../hooks/usePageTitle'
 import checkCheckIcon from '../assets/icons/CheckCheck.svg'
 import sparklesIcon from '../assets/icons/Sparkles.svg'
 import fileStackIcon from '../assets/icons/FileStack.svg'
-import idCardIcon from '../assets/icons/id-card.svg'
+import idCardIcon from '../assets/icons/IdCard.svg'
 import briefcaseIcon from '../assets/icons/Briefcase.svg'
 import mapPinnedIcon from '../assets/icons/MapPinned.svg'
 import heartHandshakeIcon from '../assets/icons/HeartHandshake.svg'
-import carFrontIcon from '../assets/icons/CarFront.svg'
+import carFrontIcon from '../assets/icons/Car.svg'
 import handCoinsIcon from '../assets/icons/HandCoins.svg'
 
 // Images
@@ -286,7 +286,7 @@ export default function DocumentIntelligencePage() {
             <div className="flex flex-1 flex-col items-start relative min-w-0">
               <Accordion
                 items={keyFeaturesItems}
-                defaultOpenId="broad-coverage"
+                defaultOpenId="supported-types"
                 showMobileImages={false}
               />
             </div>
@@ -304,7 +304,7 @@ export default function DocumentIntelligencePage() {
             </div>
             <Accordion
               items={keyFeaturesItems}
-              defaultOpenId="broad-coverage"
+              defaultOpenId="supported-types"
               showMobileImages={false}
             />
           </div>

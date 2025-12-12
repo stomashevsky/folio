@@ -1,6 +1,6 @@
 import ModalShell from './ModalShell'
 import VerificationTable from './VerificationTable'
-import checkmarkIcon from '../../assets/icons/circle-check.svg'
+import checkmarkIcon from '../../assets/icons/CircleCheck.svg'
 import { VerificationData } from '../../types/verification'
 
 interface VerifiedModalBaseProps<T extends Record<string, boolean | undefined>> {

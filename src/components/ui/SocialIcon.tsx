@@ -1,7 +1,7 @@
-import facebookIcon from '../../assets/icons/facebook.svg'
-import instagramIcon from '../../assets/icons/instagram.svg'
-import linkedinIcon from '../../assets/icons/linkedin.svg'
-import xTwitterIcon from '../../assets/icons/x-twitter.svg'
+import facebookIcon from '../../assets/icons/Facebook.svg'
+import instagramIcon from '../../assets/icons/Instagram.svg'
+import linkedinIcon from '../../assets/icons/LinkedIn.svg'
+import xTwitterIcon from '../../assets/icons/XTwitter.svg'
 import { FOCUS_STYLES } from './focusStyles'
 
 interface SocialIconProps {

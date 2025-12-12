@@ -1,21 +1,21 @@
-import fingerprintIcon from '../../assets/icons/fingerprint-02.svg'
-import bookOpenIcon from '../../assets/icons/book-open-01.svg'
-import carIcon from '../../assets/icons/car-01.svg'
-import calendarCheckIcon from '../../assets/icons/calendar-check-01.svg'
-import shieldPlusIcon from '../../assets/icons/shield-plus.svg'
+import fingerprintIcon from '../../assets/icons/Fingerprint.svg'
+import bookOpenIcon from '../../assets/icons/BookOpen.svg'
+import carIcon from '../../assets/icons/Car.svg'
+import calendarCheckIcon from '../../assets/icons/CalendarCheck.svg'
+import shieldPlusIcon from '../../assets/icons/ShieldPlus.svg'
 import shieldCheckIcon from '../../assets/icons/ShieldCheck.svg'
-import homeIcon from '../../assets/icons/home-02.svg'
-import starIcon from '../../assets/icons/star-01.svg'
-import bookMarkedIcon from '../../assets/icons/book-marked.svg'
-import keyRoundIcon from '../../assets/icons/key-round.svg'
+import homeIcon from '../../assets/icons/Home.svg'
+import starIcon from '../../assets/icons/Star.svg'
+import bookMarkedIcon from '../../assets/icons/BookMarked.svg'
+import keyRoundIcon from '../../assets/icons/KeyRound.svg'
 import lockKeyholeIcon from '../../assets/icons/LockKeyhole.svg'
-import checkIcon from '../../assets/icons/check.svg'
-import messageSquareMoreIcon from '../../assets/icons/message-square-more.svg'
-import fileQuestionIcon from '../../assets/icons/file-question.svg'
-import copyPlusIcon from '../../assets/icons/copy-plus.svg'
-import qrCodeIcon from '../../assets/icons/qr-code.svg'
-import refreshCwIcon from '../../assets/icons/refresh-cw.svg'
-import arrowRightIcon from '../../assets/icons/arrow-right.svg'
+import checkIcon from '../../assets/icons/Check.svg'
+import messageSquareMoreIcon from '../../assets/icons/MessageSquareMore.svg'
+import fileQuestionIcon from '../../assets/icons/FileQuestion.svg'
+import copyPlusIcon from '../../assets/icons/CopyPlus.svg'
+import qrCodeIcon from '../../assets/icons/QrCode.svg'
+import refreshCwIcon from '../../assets/icons/RefreshCw.svg'
+import arrowRightIcon from '../../assets/icons/ArrowRight.svg'
 
 export type IconName = 
   | 'fingerprint' 
@@ -82,4 +82,3 @@ export default function Icon({ name, className = '', size = 20 }: IconProps) {
     </div>
   )
 }
-
