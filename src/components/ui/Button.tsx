@@ -122,6 +122,9 @@ export default function Button({
     </span>
   )
 
+  // Icon wrapper with color inversion for primary variant (dark background needs white icons)
+  const iconClasses = variant === 'primary' ? 'shrink-0 brightness-0 invert' : 'shrink-0'
+
   // If href is provided, render as anchor tag
   if (href) {
     const anchorProps = {
@@ -132,7 +135,7 @@ export default function Button({
       ...(props as AnchorHTMLAttributes<HTMLAnchorElement>)
     }
     
-    const iconElement = icon ? <span className="shrink-0">{icon}</span> : null
+    const iconElement = icon ? <span className={iconClasses}>{icon}</span> : null
     
     return (
       <a {...anchorProps}>
@@ -155,7 +158,7 @@ export default function Button({
   }
 
   // Otherwise render as button
-  const iconElement = icon ? <span className="shrink-0">{icon}</span> : null
+  const iconElement = icon ? <span className={iconClasses}>{icon}</span> : null
   
   return (
     <button
