@@ -7,7 +7,9 @@ import { usePageTitle } from '../hooks/usePageTitle'
 
 // Images
 import clientOnboardingHero from '../assets/images/client-onboarding-hero.png'
-import imagePlaceholder from '../assets/images/image-placeholder.png'
+import clientOnboardingHowItWorks1 from '../assets/images/client-onboarding-how-it-works-1.png'
+import clientOnboardingHowItWorks2 from '../assets/images/client-onboarding-how-it-works-2.png'
+import clientOnboardingHowItWorks3 from '../assets/images/client-onboarding-how-it-works-3.png'
 
 // Icons for hero and features
 import briefcaseIcon from '../assets/icons/Briefcase.svg'
@@ -36,19 +38,19 @@ const howItWorksItems: AccordionItemData[] = [
     id: 'send',
     title: 'Send',
     description: 'Share a secure verification link with your client via email, SMS, or any messaging platform. No app download required.',
-    desktopImage: imagePlaceholder,
+    desktopImage: clientOnboardingHowItWorks1,
   },
   {
     id: 'verify',
     title: 'Verify',
     description: 'Your client completes ID verification and address confirmation in minutes using their smartphone or computer.',
-    desktopImage: imagePlaceholder,
+    desktopImage: clientOnboardingHowItWorks2,
   },
   {
     id: 'review',
     title: 'Review',
     description: 'Receive a timestamped compliance report instantly with ID match confirmation, address verification, and risk scoring.',
-    desktopImage: imagePlaceholder,
+    desktopImage: clientOnboardingHowItWorks3,
   },
 ]
 

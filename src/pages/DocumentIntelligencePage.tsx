@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
 import Accordion, { AccordionItemData } from '../components/ui/Accordion'
@@ -128,6 +129,9 @@ export default function DocumentIntelligencePage() {
     ogUrl: 'https://folio.id/platform/document-intelligence'
   })
 
+  const [activeHowItWorksId, setActiveHowItWorksId] = useState<string | null>('submit')
+  const activeHowItWorksItem = howItWorksItems.find(item => item.id === activeHowItWorksId) || howItWorksItems[0]
+
   return (
     <div className="flex flex-col items-start min-h-screen relative w-full">
       <Navbar />
@@ -228,8 +232,8 @@ export default function DocumentIntelligencePage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-square">
               <img
-                src={documentIntelligenceHero}
-                alt="How document intelligence works"
+                src={activeHowItWorksItem.desktopImage}
+                alt={activeHowItWorksItem.title}
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 loading="lazy"
               />
@@ -243,6 +247,7 @@ export default function DocumentIntelligencePage() {
               <Accordion
                 items={howItWorksItems}
                 defaultOpenId="submit"
+                onItemChange={setActiveHowItWorksId}
                 showMobileImages={false}
               />
             </div>
@@ -258,16 +263,9 @@ export default function DocumentIntelligencePage() {
             <Accordion
               items={howItWorksItems}
               defaultOpenId="submit"
-              showMobileImages={false}
+              onItemChange={setActiveHowItWorksId}
+              showMobileImages={true}
             />
-            <div className="aspect-square relative rounded-2xl shrink-0 w-full">
-              <img
-                src={documentIntelligenceHero}
-                alt="How document intelligence works"
-                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-                loading="lazy"
-              />
-            </div>
           </div>
         </section>
 
