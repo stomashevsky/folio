@@ -374,6 +374,7 @@ This file contains all rules and principles that must be followed for every chan
 - **Remove unused imports** — if you replace an icon or component, delete the old import
 - **Verify the build passes** — unused variables and imports will cause build failures in CI/CD
 - **Check all modified files** for potential issues before committing
+- **Verify import paths case sensitivity** — search for imports with `grep -i` to find case mismatches (e.g., `globe.svg` vs `Globe.svg`)
 - This prevents broken builds and failed deployments
 
 ### 12. Build Verification and Git Operations
@@ -400,6 +401,15 @@ This file contains all rules and principles that must be followed for every chan
   - `chore:` for maintenance tasks
 - **Do not wait for user to commit** — complete the full workflow yourself
 - Workflow: `git add .` → `git commit -m "message"` → `git push`
+
+#### After pushing, verify CI/CD
+
+- **Check GitHub Actions** after pushing to ensure build passes on Linux CI
+- **If CI fails**, fix the issue immediately and push again
+- Common CI failures that pass locally:
+  - **Case sensitivity**: `Globe.svg` works on macOS but `globe.svg` fails on Linux
+  - **Missing files**: Files not tracked by git
+- **Use `grep -i` to find case mismatches** in imports before pushing
 
 #### Handling case sensitivity
 
