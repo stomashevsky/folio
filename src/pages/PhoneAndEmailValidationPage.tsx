@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Navbar from '../components/Navbar'
-import { SectionHeader, Button, ToolCard } from '../components/ui'
+import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
 import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
@@ -114,12 +114,7 @@ export default function PhoneAndEmailValidationPage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
-                <div className="flex items-center gap-2">
-                  <img src={messageSquareMoreIcon} alt="" aria-hidden="true" className="w-5 h-5" />
-                  <p className="font-medium leading-5 text-sm text-[#737373]">
-                    Phone and email validation
-                  </p>
-                </div>
+                <HeroTagline icon={messageSquareMoreIcon}>Phone and email validation</HeroTagline>
                 <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
                   Fast phone and email validation
                 </h1>
@@ -148,12 +143,7 @@ export default function PhoneAndEmailValidationPage() {
           <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-                <div className="flex items-center gap-2">
-                  <img src={messageSquareMoreIcon} alt="" aria-hidden="true" className="w-5 h-5" />
-                  <p className="font-medium leading-5 text-sm text-[#737373]">
-                    Phone and email validation
-                  </p>
-                </div>
+                <HeroTagline icon={messageSquareMoreIcon}>Phone and email validation</HeroTagline>
                 <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
                   Fast phone and email validation
                 </h1>

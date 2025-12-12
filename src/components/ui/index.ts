@@ -40,4 +40,4 @@ export { default as MobileMenuLink } from './MobileMenuLink'
 export type { MobileMenuLinkProps } from './MobileMenuLink'
 export { default as MobileMenuBackButton } from './MobileMenuBackButton'
 export type { MobileMenuBackButtonProps } from './MobileMenuBackButton'
-
+export { default as HeroTagline } from './HeroTagline'
