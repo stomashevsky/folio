@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Navbar from '../components/Navbar'
-import { SectionHeader, Button, ToolCard, Accordion, IconContainer, HeroTagline } from '../components/ui'
+import { SectionHeader, Button, ToolCard, Accordion, HeroTagline } from '../components/ui'
 import type { AccordionItemData } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
@@ -23,10 +23,6 @@ import landmarkIcon from '../assets/icons/Landmark.svg'
 import heartHandshakeIcon from '../assets/icons/HeartHandshake.svg'
 import userCheckIcon from '../assets/icons/UserCheck.svg'
 
-// Icons for integration section
-import puzzleIcon from '../assets/icons/Puzzle.svg'
-import bracesIcon from '../assets/icons/Braces.svg'
-import linkIcon from '../assets/icons/Link.svg'
 
 // Background style using inline styles for complex multi-layer gradient
 const BACKGROUND_STYLE = {
@@ -131,25 +127,6 @@ const industryCards = [
     icon: userCheckIcon,
     title: 'Professional services',
     description: 'Any regulated business that needs to verify client identity can benefit from streamlined digital onboarding.',
-  },
-]
-
-// Integration methods data
-const integrationMethods = [
-  {
-    icon: puzzleIcon,
-    title: 'Web and mobile SDK',
-    description: 'Embed client verification directly into your product. Users complete verification in a native, branded flow.',
-  },
-  {
-    icon: bracesIcon,
-    title: 'API',
-    description: 'Control every detail of the verification journey with our API. Orchestrate methods, rules, and outcomes from your own systems.',
-  },
-  {
-    icon: linkIcon,
-    title: 'Static URL',
-    description: 'Launch verification instantly with a secure hosted link. Share it by email, SMS, or chat without any development work.',
   },
 ]
 
@@ -367,34 +344,6 @@ export default function ClientOnboardingPage() {
                   title={card.title}
                   description={card.description}
                 />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Easy to integrate Section */}
-        <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
-          <div className="flex flex-col gap-10 md:gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-            <SectionHeader
-              title="Easy to integrate"
-              align="center"
-              maxWidth="576px"
-            />
-            <div className="flex flex-col md:flex-row gap-11 md:gap-6 items-start relative shrink-0 w-full">
-              {integrationMethods.map((method, index) => (
-                <div key={index} className="flex flex-1 flex-col gap-5 items-start relative shrink-0">
-                  <IconContainer size={40}>
-                    <img src={method.icon} alt="" aria-hidden="true" className="w-5 h-5" />
-                  </IconContainer>
-                  <div className="flex flex-col gap-2 items-start leading-6 relative shrink-0 text-base w-full whitespace-pre-wrap">
-                    <p className="font-semibold relative shrink-0 text-[#0a0a0a] w-full">
-                      {method.title}
-                    </p>
-                    <p className="font-normal relative shrink-0 text-[#737373] w-full">
-                      {method.description}
-                    </p>
-                  </div>
-                </div>
               ))}
             </div>
           </div>
