@@ -339,6 +339,12 @@ This file contains all rules and principles that must be followed for every chan
    - When using shadcn components, reference [shadcn/ui documentation](https://ui.shadcn.com/docs/components) and adapt styling to match project design tokens
    - Ensure responsive behavior for desktop (768px max-width) and mobile (672px max-width)
 
+8. **Before committing changes:**
+   - **Run lint checks** on all modified files using `read_lints` tool
+   - **Remove unused imports** — when replacing icons/components, delete old imports
+   - **Verify no TypeScript errors** — unused variables cause CI/CD failures
+   - **Commit and push** changes to the remote repository
+
 ### 10. Navigation and Scroll Behavior
 
 - **All navigation must be instant** — no visible scroll animation when opening pages or navigating to sections
@@ -354,6 +360,14 @@ This file contains all rules and principles that must be followed for every chan
 - **Global scroll handling** is done by `ScrollToTop` component in `src/components/ScrollToTop.tsx`
 - **CSS `scroll-behavior: smooth`** in `index.css` is for user-initiated scrolling only; programmatic navigation must override it with `behavior: 'auto'`
 
+### 11. Pre-commit Checks
+
+- **Always check for lint errors** before committing changes using `read_lints` tool
+- **Remove unused imports** — if you replace an icon or component, delete the old import
+- **Verify the build passes** — unused variables and imports will cause build failures in CI/CD
+- **Check all modified files** for potential issues before committing
+- This prevents broken builds and failed deployments
+
 ## Important Reminders
 
 - **Always check Figma** to understand component structure, states, and variants before implementation
@@ -365,4 +379,5 @@ This file contains all rules and principles that must be followed for every chan
 - **For blog articles**: use shared typography components and follow the [Blog Article design](https://www.figma.com/design/6jO5aXk21DqMTeNFCAh9rI/Folio-web?node-id=24536-108142&m=dev)
 - **For missing UI components**: ask first or use [shadcn/ui](https://ui.shadcn.com/docs/components) components adapted to project styling
 - **All navigation must be instant** — no smooth scroll animation when opening pages or sections
+- **Always run lint checks** before committing to avoid build failures
 
