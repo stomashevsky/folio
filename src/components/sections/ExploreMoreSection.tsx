@@ -59,11 +59,11 @@ function ExploreMoreCard({ item }: { item: PlatformItem }) {
           </p>
         </div>
         
-        {/* Learn more link */}
+        {/* Learn more button */}
         <Link
           to={item.path}
           onClick={handleClick}
-          className="flex items-center gap-1.5 text-sm font-normal text-[#0a0a0a] hover:underline transition-all"
+          className="bg-[#f5f5f5] flex items-center gap-2 h-8 px-3 py-2 rounded-full text-xs font-medium text-[#171717] hover:bg-[#e5e5e5] transition-colors"
         >
           <span>Learn more</span>
           <img src={arrowRight16Icon} alt="" aria-hidden="true" className="w-4 h-4" />
