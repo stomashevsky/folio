@@ -53,34 +53,34 @@ const howItWorksItems: AccordionItemData[] = [
 // Key features accordion items
 const keyFeaturesItems: AccordionItemData[] = [
   {
-    id: 'broad-coverage',
-    title: 'Broad document coverage',
-    description: 'Support for a wide range of document types including IDs, bank statements, utility bills, and more.',
+    id: 'supported-types',
+    title: 'Supported document types',
+    description: 'Collect and auto classify corporate records, tax forms, bank statements, utility bills, vehicle registrations, and more.',
   },
   {
-    id: 'global-coverage',
-    title: 'Global coverage',
-    description: 'Process documents from countries around the world with localized extraction capabilities.',
+    id: 'country-coverage',
+    title: 'Country coverage',
+    description: 'Accept documents from more than 90 supported countries.',
   },
   {
     id: 'customizable-flow',
     title: 'Customizable collection flow',
-    description: 'Configure which documents to collect and in what order based on your verification needs.',
+    description: 'Choose which document types to accept, how many submission attempts to allow, and which verification checks to apply.',
   },
   {
     id: 'tamper-checks',
     title: 'Configurable tamper checks',
-    description: 'Set up authenticity checks to detect altered or fraudulent documents.',
+    description: 'Automatically detect signs of image or PDF tampering and inconsistencies that may signal fraud.',
   },
   {
     id: 'user-guidance',
     title: 'User guidance',
-    description: 'On-screen instructions help users capture documents correctly the first time.',
+    description: 'Reduce errors with in app tips that help users avoid glare, blur, and other issues when uploading documents.',
   },
   {
     id: 'ai-insights',
     title: 'AI insights',
-    description: 'Get intelligent analysis and confidence scores for extracted data.',
+    description: 'Save time with AI powered classification, data extraction, and review ready insights.',
   },
 ]
 
