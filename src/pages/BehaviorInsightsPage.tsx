@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard } from '../components/ui'
 import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import FooterSection from '../components/sections/FooterSection'
+import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 
 // Icons
@@ -409,7 +410,7 @@ export default function BehaviorInsightsPage() {
           </div>
         </section>
       </main>
-      {/* Footer */}
+      <ExploreMoreSection currentPath="/platform/behavior-insights" />
       <FooterSection />
     </div>
   )

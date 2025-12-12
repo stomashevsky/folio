@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard } from '../components/ui'
 import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import FooterSection from '../components/sections/FooterSection'
+import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 
 // Icons
@@ -345,6 +346,7 @@ export default function NfcIdentityScanPage() {
           </div>
         </section>
       </main>
+      <ExploreMoreSection currentPath="/platform/nfc-identity-scan" />
       <FooterSection />
     </div>
   )

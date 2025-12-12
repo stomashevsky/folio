@@ -5,9 +5,10 @@ import { Logo } from '../ui'
 export default function FooterSection() {
   return (
     <footer className="bg-white flex flex-col items-center relative shrink-0 w-full">
+      {/* Top separator - edge to edge */}
+      <div className="w-full h-px bg-[#e5e5e5]" />
+      
       <div className="flex flex-col items-center max-w-[1280px] relative shrink-0 w-full">
-        {/* Top separator */}
-        <div className="w-full h-px bg-[#e5e5e5]" />
 
         {/* Main content grid */}
         <div className="flex flex-wrap gap-x-6 gap-y-12 items-start px-6 py-10 w-full">
