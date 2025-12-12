@@ -31,19 +31,19 @@ const BACKGROUND_STYLE = {
 const howItWorksItems: AccordionItemData[] = [
   {
     id: 'setup',
-    title: 'Set up',
+    title: 'Configure your verification flow',
     description: 'Choose the document types, capture steps and devices your flow will use.',
     desktopImage: idVerificationHowItWorks1,
   },
   {
     id: 'capture',
-    title: 'Capture',
+    title: 'Capture identity documents',
     description: 'Users scan their government ID. Folio reads the data and checks if the document is genuine.',
     desktopImage: idVerificationHowItWorks2,
   },
   {
     id: 'verify',
-    title: 'Verify',
+    title: 'Verify and make a decision',
     description: 'Approve, decline or send the case for review based on your rules.',
     desktopImage: idVerificationHowItWorks3,
   },
