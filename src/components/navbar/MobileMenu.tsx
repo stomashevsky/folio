@@ -83,7 +83,7 @@ const PLATFORM_ITEMS = [
     description: 'Read secure chip data from compatible IDs and passports.'
   },
   {
-    label: 'Dynamic Flow',
+    label: 'Dynamic flow',
     path: '/platform/dynamic-flow',
     icon: gitForkIcon,
     description: 'Coordinate identity checks with flexible logic.'

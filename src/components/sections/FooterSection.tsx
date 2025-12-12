@@ -79,7 +79,7 @@ export default function FooterSection() {
               <FooterLink to="/platform/data-source-checks">Data source checks</FooterLink>
               <FooterLink to="/platform/phone-and-email-validation">Phone and email validation</FooterLink>
               <FooterLink to="/platform/nfc-identity-scan">NFC identity scan</FooterLink>
-              <FooterLink to="/platform/dynamic-flow">Dynamic Flow</FooterLink>
+              <FooterLink to="/platform/dynamic-flow">Dynamic flow</FooterLink>
               <FooterLink to="/platform/behavior-insights">Behavior insights</FooterLink>
               <FooterLink to="/platform/review-workspace">Review workspace</FooterLink>
             </div>

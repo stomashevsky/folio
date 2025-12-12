@@ -60,7 +60,7 @@ const PLATFORM_ITEMS: PlatformItem[] = [
     description: 'Confirm that the user is physically present.'
   },
   {
-    label: 'Dynamic Flow',
+    label: 'Dynamic flow',
     path: '/platform/dynamic-flow',
     icon: gitForkIcon,
     description: 'Coordinate identity checks with flexible logic.'
