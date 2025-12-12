@@ -7,6 +7,7 @@ import chevronDownIcon from '../../assets/icons/ChevronDown.svg'
 // Icons
 import ageIcon from '../../assets/icons/Age.svg'
 import ticketIcon from '../../assets/icons/Ticket.svg'
+import briefcaseIcon from '../../assets/icons/Briefcase.svg'
 
 interface SolutionItem {
   label: string
@@ -21,6 +22,12 @@ const SOLUTIONS_ITEMS: SolutionItem[] = [
     path: '/solutions/age-compliance',
     icon: ageIcon,
     description: 'Ensure users meet age requirements for restricted products or services.'
+  },
+  {
+    label: 'Client onboarding',
+    path: '/solutions/client-onboarding',
+    icon: briefcaseIcon,
+    description: 'Streamlined KYC verification for regulated businesses.'
   },
   {
     label: 'Digital ticketing',

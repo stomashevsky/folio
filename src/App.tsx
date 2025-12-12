@@ -5,6 +5,7 @@ import FolioAppPage from './pages/FolioAppPage'
 import PlaygroundPage from './pages/PlaygroundPage'
 import DigitalTicketingPage from './pages/DigitalTicketingPage'
 import AgeCompliancePage from './pages/AgeCompliancePage'
+import ClientOnboardingPage from './pages/ClientOnboardingPage'
 import GovernmentPage from './pages/GovernmentPage'
 import IdVerificationPage from './pages/IdVerificationPage'
 import DocumentIntelligencePage from './pages/DocumentIntelligencePage'
@@ -126,6 +127,7 @@ function App() {
         <Route path="/government/playground" element={<PlaygroundPage />} />
         <Route path="/solutions/digital-ticketing" element={<DigitalTicketingPage />} />
         <Route path="/solutions/age-compliance" element={<AgeCompliancePage />} />
+        <Route path="/solutions/client-onboarding" element={<ClientOnboardingPage />} />
         <Route path="/business" element={<Navigate to="/solutions/digital-ticketing" replace />} />
         <Route path="/government" element={<GovernmentPage />} />
         <Route path="/platform/id-verification" element={<IdVerificationPage />} />

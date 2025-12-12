@@ -17,6 +17,7 @@ import waypointsIcon from '../../assets/icons/Waypoints.svg'
 import searchCheckIcon from '../../assets/icons/SearchCheck.svg'
 import ageIcon from '../../assets/icons/Age.svg'
 import ticketIcon from '../../assets/icons/Ticket.svg'
+import briefcaseIcon from '../../assets/icons/Briefcase.svg'
 
 interface MobileMenuProps {
   isOpen: boolean
@@ -29,6 +30,12 @@ const SOLUTIONS_ITEMS = [
     path: '/solutions/age-compliance',
     icon: ageIcon,
     description: 'Ensure users meet age requirements for restricted products or services.'
+  },
+  {
+    label: 'Client onboarding',
+    path: '/solutions/client-onboarding',
+    icon: briefcaseIcon,
+    description: 'Streamlined KYC verification for regulated businesses.'
   },
   {
     label: 'Digital ticketing',
