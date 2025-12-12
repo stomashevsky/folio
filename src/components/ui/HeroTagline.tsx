@@ -5,7 +5,7 @@ interface HeroTaglineProps {
 
 export default function HeroTagline({ icon, children }: HeroTaglineProps) {
   return (
-    <div className="flex items-center gap-1">
+    <div className="flex items-center gap-1.5">
       <img 
         src={icon} 
         alt="" 
