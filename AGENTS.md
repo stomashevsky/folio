@@ -376,6 +376,42 @@ This file contains all rules and principles that must be followed for every chan
 - **Check all modified files** for potential issues before committing
 - This prevents broken builds and failed deployments
 
+### 12. Build Verification and Git Operations
+
+#### Always verify the build
+
+- **Run `npm run build` before committing** to catch any errors that would fail CI/CD
+- **Fix all build errors yourself** — do not leave broken builds for the user to fix
+- Common build errors to watch for:
+  - **Case sensitivity issues**: Linux CI is case-sensitive, macOS is not (e.g., `Globe.svg` vs `globe.svg`)
+  - **Missing imports**: Files that exist locally but weren't added to git
+  - **Unused imports/variables**: TypeScript strict mode will fail on these
+  - **Missing dependencies**: Packages used but not in package.json
+
+#### Always commit and push
+
+- **After completing any change, always commit and push to remote repository**
+- Use descriptive commit messages following conventional commits:
+  - `feat:` for new features
+  - `fix:` for bug fixes
+  - `refactor:` for code refactoring
+  - `docs:` for documentation changes
+  - `style:` for formatting changes
+  - `chore:` for maintenance tasks
+- **Do not wait for user to commit** — complete the full workflow yourself
+- Workflow: `git add .` → `git commit -m "message"` → `git push`
+
+#### Handling case sensitivity
+
+- **macOS filesystem is case-insensitive** — `Globe.svg` and `globe.svg` are the same file
+- **Linux filesystem (CI/CD) is case-sensitive** — they are different files
+- When renaming files for case changes, use two-step git mv:
+  ```bash
+  git mv file.svg file_temp.svg
+  git mv file_temp.svg File.svg
+  ```
+- **Always verify git tracks the correct case** using `git ls-files`
+
 ## Important Reminders
 
 - **Always check Figma** to understand component structure, states, and variants before implementation
@@ -388,4 +424,7 @@ This file contains all rules and principles that must be followed for every chan
 - **For missing UI components**: ask first or use [shadcn/ui](https://ui.shadcn.com/docs/components) components adapted to project styling
 - **All navigation must be instant** — no smooth scroll animation when opening pages or sections
 - **Always run lint checks** before committing to avoid build failures
+- **Always verify the build passes** (`npm run build`) before committing
+- **Always fix build errors yourself** — do not leave broken builds for the user
+- **Always commit and push** changes to the remote repository after completing work
 
