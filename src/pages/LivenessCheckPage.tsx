@@ -91,11 +91,6 @@ const keyFeatures: { id: string; title: string; description: string }[] = [
     description: 'Designed to work uniformly across different skin tones, lighting, operating systems and hardware.',
   },
   {
-    id: 'auto-capture',
-    title: 'Auto capture',
-    description: 'Photos are taken automatically at the right moment to reduce user mistakes.',
-  },
-  {
     id: 'user-guidance',
     title: 'User guidance',
     description: 'Clear gestures and instructions help users capture accurate selfies and generate stronger fraud signals.',
