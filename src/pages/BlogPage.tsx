@@ -234,7 +234,7 @@ export default function BlogPage() {
               {/* Mobile Layout - single column list */}
               <div className="flex md:hidden flex-col gap-[64px] items-start w-full">
                 {visibleArticles.map((article, index) => (
-                  <div key={index} data-blog-article>
+                  <div key={index} data-blog-article className="w-full">
                     <BlogArticleCard article={article} variant="mobile" />
                   </div>
                 ))}
