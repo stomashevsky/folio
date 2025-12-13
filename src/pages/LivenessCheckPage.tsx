@@ -17,7 +17,7 @@ import settings2Icon from '../assets/icons/Settings2.svg'
 import scanFaceIcon from '../assets/icons/ScanFace.svg'
 
 // Images
-import livenessCheckHero from '../assets/images/liveness-check-hero.png'
+import livenessCheckHero from '../assets/images/liveness-check-hero.mp4'
 import livenessCheckHowItWorks1 from '../assets/images/liveness-check-how-it-works-1.png'
 import livenessCheckHowItWorks2 from '../assets/images/liveness-check-how-it-works-2.png'
 import livenessCheckHowItWorks3 from '../assets/images/liveness-check-how-it-works-3.png'
@@ -141,12 +141,13 @@ export default function LivenessCheckPage() {
               </div>
             </div>
             <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-              <img 
+              <video 
                 src={livenessCheckHero} 
-                alt="Liveness check preview" 
+                autoPlay
+                muted
+                loop
+                playsInline
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-                fetchPriority="high"
-                loading="eager"
               />
             </div>
           </div>
@@ -170,12 +171,13 @@ export default function LivenessCheckPage() {
               </div>
             </div>
             <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
-              <img 
+              <video 
                 src={livenessCheckHero} 
-                alt="Liveness check preview" 
+                autoPlay
+                muted
+                loop
+                playsInline
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-                fetchPriority="high"
-                loading="eager"
               />
             </div>
           </div>
