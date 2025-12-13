@@ -32,7 +32,7 @@ const howItWorksItems: AccordionItemData[] = [
   {
     id: 'collect-signals',
     title: 'Collect signals',
-    description: 'Folio gathers signals from the document, the selfie and the device to build a clear picture of the user.',
+    description: 'Folio gathers signals from the selfie and the device to assess liveness and confirm a real human presence.',
     desktopImage: livenessCheckHowItWorks1,
   },
   {
