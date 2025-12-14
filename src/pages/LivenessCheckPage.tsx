@@ -38,13 +38,13 @@ const howItWorksItems: AccordionItemData[] = [
   {
     id: 'analyze-assess',
     title: 'Analyze and assess',
-    description: 'Advanced models review visual and non visual cues to spot inconsistencies and signs of fraud.',
+    description: 'Visual and device signals are analyzed to detect inconsistencies and prevent spoofing attempts.',
     desktopImage: livenessCheckHowItWorks2,
   },
   {
     id: 'make-decisions',
     title: 'Make decisions',
-    description: 'Folio guides the next steps automatically, from extra checks to final approvals.',
+    description: 'Based on the results, Folio determines the next step, from additional checks to approval.',
     desktopImage: livenessCheckHowItWorks3,
   },
 ]
