@@ -31,8 +31,8 @@ const BACKGROUND_STYLE = {
 const howItWorksItems: AccordionItemData[] = [
   {
     id: 'setup',
-    title: 'Configure your verification flow',
-    description: 'Choose the document types, capture steps and devices your flow will use.',
+    title: 'Customize the verification experience',
+    description: 'Define which documents users can submit and how verification is performed.',
     desktopImage: idVerificationHowItWorks1,
   },
   {
