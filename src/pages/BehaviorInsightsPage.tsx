@@ -20,6 +20,7 @@ import behaviorInsightsHero from '../assets/images/behavior-insights-hero.png'
 import behaviorInsightsHowItWorks1 from '../assets/images/behavior-insights-how-it-works-1.png'
 import behaviorInsightsHowItWorks2 from '../assets/images/behavior-insights-how-it-works-2.png'
 import behaviorInsightsHowItWorks3 from '../assets/images/behavior-insights-how-it-works-3.png'
+import behaviorInsightsRiskIntelligence from '../assets/images/behavior-insights-risk-intelligence.png'
 
 // Background style using inline styles for complex multi-layer gradient
 const BACKGROUND_STYLE = {
@@ -281,7 +282,7 @@ export default function BehaviorInsightsPage() {
             </div>
             <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-square">
               <img
-                src={behaviorInsightsHero}
+                src={behaviorInsightsRiskIntelligence}
                 alt="Built in risk intelligence"
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 loading="lazy"
@@ -301,7 +302,7 @@ export default function BehaviorInsightsPage() {
             </div>
             <div className="aspect-square relative rounded-2xl shrink-0 w-full">
               <img
-                src={behaviorInsightsHero}
+                src={behaviorInsightsRiskIntelligence}
                 alt="Built in risk intelligence"
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 loading="lazy"
