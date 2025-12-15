@@ -5,7 +5,7 @@ import FooterSection from '../components/sections/FooterSection'
 import { Button, BlogArticleCard } from '../components/ui'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { blogArticles, type BlogCategory } from '../data/blogArticles'
-import { restoreBlogPageState, saveBlogPageState, isBlogScrollRestoring } from '../utils/blogScrollPosition'
+import { restoreBlogPageState, saveBlogPageState, isBlogScrollRestoring, clearBlogPageState } from '../utils/blogScrollPosition'
 
 const categories: BlogCategory[] = ['All', 'Company', 'Product', 'Guides', 'Research', 'Safety']
 
@@ -47,7 +47,19 @@ export default function BlogPage() {
     })
   }, [searchParams])
 
-  // Restore scroll position when returning from article via "Back to blog" or browser back button
+  // Clear saved state when navigating directly with category URL parameter
+  // This prevents sessionStorage from interfering with direct URL navigation
+  useEffect(() => {
+    const urlHasCategory = searchParams.get('category') !== null
+    const isNotFromRestoreScroll = location.state?.restoreScroll !== true
+    
+    // If URL has category and we're not coming from "Back to blog" button, clear saved state
+    if (urlHasCategory && isNotFromRestoreScroll) {
+      clearBlogPageState()
+    }
+  }, []) // Run once on mount
+
+  // Restore scroll position when returning from article via "Back to blog" button
   useEffect(() => {
     // Only restore once per navigation
     if (hasRestoredStateRef.current) {
@@ -57,16 +69,18 @@ export default function BlogPage() {
     // Check if we have saved state in sessionStorage
     const hasSavedState = sessionStorage.getItem('blogPageState') !== null
     
-    // Determine if we're returning from an article:
-    // 1. "Back to blog" button sets location.state?.restoreScroll
-    // 2. Browser back button: we're on /blog, have saved state, but no restoreScroll flag in location.state
-    const isReturningFromArticle = 
-      location.state?.restoreScroll || // "Back to blog" button
-      (location.pathname === '/blog' && hasSavedState && !location.state?.restoreScroll) // Browser back from article
+    // Check if URL has an explicit category parameter
+    const urlHasCategory = searchParams.get('category') !== null
     
-    // Only restore UI state if we're actually returning from an article AND have saved state
-    // Note: We don't clear the state here - ScrollToTop will handle scroll restoration and cleanup
-    if (isReturningFromArticle && hasSavedState) {
+    // Only restore from sessionStorage if:
+    // 1. We're returning via "Back to blog" button (explicit restoreScroll flag)
+    // 2. AND there's no explicit category in URL (URL takes priority)
+    const shouldRestoreFromStorage = 
+      location.state?.restoreScroll === true && 
+      hasSavedState && 
+      !urlHasCategory
+    
+    if (shouldRestoreFromStorage) {
       const savedState = restoreBlogPageState()
       if (savedState) {
         if (savedState.selectedCategory && categories.includes(savedState.selectedCategory as BlogCategory)) {
@@ -100,7 +114,7 @@ export default function BlogPage() {
       prevPathnameRef.current = null
       hasRestoredStateRef.current = false
     }
-  }, [location.state, location.pathname, setSearchParams])
+  }, [location.state, location.pathname, setSearchParams, searchParams])
 
   // Note: Scroll restoration is now handled in ScrollToTop component
 
