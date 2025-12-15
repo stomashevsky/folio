@@ -238,8 +238,8 @@ export default function BlogPage() {
             <div className="w-full">
               {/* Desktop Layout - 3 column grid */}
               <div className="hidden md:grid grid-cols-3 gap-x-6 gap-y-20 w-full">
-                {visibleArticles.map((article, index) => (
-                  <div key={index} data-blog-article>
+                {visibleArticles.map((article) => (
+                  <div key={article.slug || article.title} data-blog-article>
                     <BlogArticleCard article={article} variant="desktop" />
                   </div>
                 ))}
@@ -247,8 +247,8 @@ export default function BlogPage() {
 
               {/* Mobile Layout - single column list */}
               <div className="flex md:hidden flex-col gap-[64px] items-start w-full">
-                {visibleArticles.map((article, index) => (
-                  <div key={index} data-blog-article className="w-full">
+                {visibleArticles.map((article) => (
+                  <div key={article.slug || article.title} data-blog-article className="w-full">
                     <BlogArticleCard article={article} variant="mobile" />
                   </div>
                 ))}
