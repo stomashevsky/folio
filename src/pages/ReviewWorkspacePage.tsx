@@ -66,7 +66,7 @@ const howItWorksItems: AccordionItemData[] = [
   {
     id: 'action',
     title: 'Take action with confidence',
-    description: 'Approve, reject, or escalate cases and manage follow-ups directly from the workspace, without switching tools.',
+    description: 'Approve, deny, or mark for review cases and manage follow-ups directly from the workspace, without switching tools.',
     desktopImage: reviewWorkspaceHowItWorks3,
   },
 ]
