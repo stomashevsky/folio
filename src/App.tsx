@@ -54,6 +54,21 @@ import TheBestDigitalWalletsForIphoneArticlePage from './pages/TheBestDigitalWal
 import WhatIsADigitalWalletArticlePage from './pages/WhatIsADigitalWalletArticlePage'
 import HowToStoreAndUseLoyaltyCardsOnYourIphoneArticlePage from './pages/HowToStoreAndUseLoyaltyCardsOnYourIphoneArticlePage'
 import AppleGiftCardAddToWalletArticlePage from './pages/AppleGiftCardAddToWalletArticlePage'
+import WhatIsLivenessDetectionArticlePage from './pages/WhatIsLivenessDetectionArticlePage'
+import FaceMatchingTechnologyArticlePage from './pages/FaceMatchingTechnologyArticlePage'
+import NfcIdentityVerificationArticlePage from './pages/NfcIdentityVerificationArticlePage'
+import DocumentIntelligenceArticlePage from './pages/DocumentIntelligenceArticlePage'
+import KycAmlComplianceArticlePage from './pages/KycAmlComplianceArticlePage'
+import AgeVerificationRequirementsArticlePage from './pages/AgeVerificationRequirementsArticlePage'
+import ClientOnboardingBestPracticesArticlePage from './pages/ClientOnboardingBestPracticesArticlePage'
+import DigitalTicketingEventsArticlePage from './pages/DigitalTicketingEventsArticlePage'
+import EudiWalletArticlePage from './pages/EudiWalletArticlePage'
+import MobileDriversLicenseArticlePage from './pages/MobileDriversLicenseArticlePage'
+import DigitalCredentialsGovernmentArticlePage from './pages/DigitalCredentialsGovernmentArticlePage'
+import EndToEndEncryptionArticlePage from './pages/EndToEndEncryptionArticlePage'
+import BiometricDataPrivacyArticlePage from './pages/BiometricDataPrivacyArticlePage'
+import DigitalPassportCopiesArticlePage from './pages/DigitalPassportCopiesArticlePage'
+import ManagingFamilyTravelDocumentsArticlePage from './pages/ManagingFamilyTravelDocumentsArticlePage'
 
 // Fallback handler in case the script in index.html didn't run
 function RedirectHandler() {
@@ -177,6 +192,21 @@ function App() {
         <Route path="/blog/what-is-a-digital-wallet" element={<WhatIsADigitalWalletArticlePage />} />
         <Route path="/blog/how-to-store-and-use-loyalty-cards-on-your-iphone" element={<HowToStoreAndUseLoyaltyCardsOnYourIphoneArticlePage />} />
         <Route path="/blog/apple-gift-card-add-to-wallet" element={<AppleGiftCardAddToWalletArticlePage />} />
+        <Route path="/blog/what-is-liveness-detection" element={<WhatIsLivenessDetectionArticlePage />} />
+        <Route path="/blog/face-matching-technology" element={<FaceMatchingTechnologyArticlePage />} />
+        <Route path="/blog/nfc-identity-verification" element={<NfcIdentityVerificationArticlePage />} />
+        <Route path="/blog/document-intelligence" element={<DocumentIntelligenceArticlePage />} />
+        <Route path="/blog/kyc-aml-compliance" element={<KycAmlComplianceArticlePage />} />
+        <Route path="/blog/age-verification-requirements" element={<AgeVerificationRequirementsArticlePage />} />
+        <Route path="/blog/client-onboarding-best-practices" element={<ClientOnboardingBestPracticesArticlePage />} />
+        <Route path="/blog/digital-ticketing-events" element={<DigitalTicketingEventsArticlePage />} />
+        <Route path="/blog/eudi-wallet" element={<EudiWalletArticlePage />} />
+        <Route path="/blog/mobile-drivers-license" element={<MobileDriversLicenseArticlePage />} />
+        <Route path="/blog/digital-credentials-government" element={<DigitalCredentialsGovernmentArticlePage />} />
+        <Route path="/blog/end-to-end-encryption" element={<EndToEndEncryptionArticlePage />} />
+        <Route path="/blog/biometric-data-privacy" element={<BiometricDataPrivacyArticlePage />} />
+        <Route path="/blog/digital-passport-copies" element={<DigitalPassportCopiesArticlePage />} />
+        <Route path="/blog/managing-family-travel-documents" element={<ManagingFamilyTravelDocumentsArticlePage />} />
       </Routes>
     </BrowserRouter>
   )
