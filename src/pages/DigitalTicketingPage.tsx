@@ -31,7 +31,7 @@ export default function DigitalTicketingPage() {
     description: 'Better tickets. No app to build. Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone.',
     ogTitle: 'Digital Ticketing | Folio Wallet',
     ogDescription: 'Better tickets. No app to build. Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone.',
-    ogImage: 'https://folio.id/src/assets/images/ticket-issuance-hero.png',
+    ogImage: 'https://folio.id/og-images/ticket-issuance-hero.png',
     ogUrl: 'https://folio.id/solutions/digital-ticketing'
   })
 

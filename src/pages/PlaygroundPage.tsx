@@ -12,7 +12,7 @@ export default function PlaygroundPage() {
     description: 'A safe sandbox for issuing demo documents and testing EUDI compatible verification flows. Try real issuance steps, scan QR codes, explore data sharing and see how digital identity behaves in practice.',
     ogTitle: 'Playground - Issue and Verify Digital IDs | Folio Wallet',
     ogDescription: 'A safe sandbox for issuing demo documents and testing EUDI compatible verification flows.',
-    ogImage: 'https://folio.id/src/assets/images/identity-lab-hero.png',
+    ogImage: 'https://folio.id/og-images/identity-lab-hero.png',
     ogUrl: 'https://folio.id/government/playground'
   })
   return (

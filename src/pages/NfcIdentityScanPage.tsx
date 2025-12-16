@@ -99,6 +99,7 @@ export default function NfcIdentityScanPage() {
     description: 'Spot passport and ID fraud instantly. Use NFC to read embedded passport and ID chip data, adding an extra security layer without adding user friction.',
     ogTitle: 'NFC Identity Scan | Folio Wallet',
     ogDescription: 'Spot passport and ID fraud instantly. Use NFC to read embedded passport and ID chip data, adding an extra security layer without adding user friction.',
+    ogImage: 'https://folio.id/og-images/nfc-identity-scan-hero.png',
     ogUrl: 'https://folio.id/platform/nfc-identity-scan'
   })
 
@@ -184,13 +185,13 @@ export default function NfcIdentityScanPage() {
                 />
                 <FeatureHighlight
                   icon={nfcIcon}
-                  title="Automatic passport Ll checks"
-                  description="Use NFC to determine the passport verification, reduce manual review time and automate fraud detection, spotting compare and high risk fraud cases."
+                  title="Automate passport checks"
+                  description="Use NFC to streamline passport verification, reduce manual review time, and focus human effort on spotting complex and high-risk fraud cases."
                 />
                 <FeatureHighlight
                   icon={circleArrowUpIcon}
                   title="Boost user completion"
-                  description="Guide users through a simple, seamless NFC flow that streamlines identity validation and leads to higher overall verification completion rates."
+                  description="Guide users through a simple, seamless NFC flow that increases successful scans and drives higher overall verification completion rates."
                 />
               </div>
               {/* Mobile Layout */}
@@ -202,13 +203,13 @@ export default function NfcIdentityScanPage() {
                 />
                 <FeatureHighlight
                   icon={nfcIcon}
-                  title="Automatic passport Ll checks"
-                  description="Use NFC to determine the passport verification, reduce manual review time and automate fraud detection, spotting compare and high risk fraud cases."
+                  title="Automate passport checks"
+                  description="Use NFC to streamline passport verification, reduce manual review time, and focus human effort on spotting complex and high-risk fraud cases."
                 />
                 <FeatureHighlight
                   icon={circleArrowUpIcon}
                   title="Boost user completion"
-                  description="Guide users through a simple, seamless NFC flow that streamlines identity validation and leads to higher overall verification completion rates."
+                  description="Guide users through a simple, seamless NFC flow that increases successful scans and drives higher overall verification completion rates."
                 />
               </div>
             </div>

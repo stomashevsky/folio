@@ -103,6 +103,7 @@ export default function PhoneAndEmailValidationPage() {
     description: 'Fast phone and email validation. Check whether phone numbers and email addresses are real and truly belong to your users.',
     ogTitle: 'Phone and Email Validation | Folio Wallet',
     ogDescription: 'Fast phone and email validation. Check whether phone numbers and email addresses are real and truly belong to your users.',
+    ogImage: 'https://folio.id/og-images/phone-email-validation-hero.png',
     ogUrl: 'https://folio.id/platform/phone-and-email-validation'
   })
 

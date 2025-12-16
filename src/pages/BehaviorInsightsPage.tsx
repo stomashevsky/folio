@@ -131,7 +131,7 @@ export default function BehaviorInsightsPage() {
     description: 'Analyze behavioral, device, and network signals to identify risk without interrupting the user experience.',
     ogTitle: 'Behavior Insights | Folio Wallet',
     ogDescription: 'Analyze behavioral, device, and network signals to identify risk without interrupting the user experience.',
-    ogImage: 'https://folio.id/src/assets/images/behavior-insights-hero.png',
+    ogImage: 'https://folio.id/og-images/behavior-insights-hero.png',
     ogUrl: 'https://folio.id/platform/behavior-insights'
   })
 

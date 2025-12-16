@@ -129,7 +129,7 @@ export default function DynamicFlowPage() {
     description: 'Adapt verification in real time using risk signals to reduce fraud while keeping the experience smooth.',
     ogTitle: 'Dynamic Flow | Folio Wallet',
     ogDescription: 'Adapt verification in real time using risk signals to reduce fraud while keeping the experience smooth.',
-    ogImage: 'https://folio.id/src/assets/images/dynamic-flow-hero.png',
+    ogImage: 'https://folio.id/og-images/dynamic-flow-hero.png',
     ogUrl: 'https://folio.id/platform/dynamic-flow'
   })
 

@@ -108,6 +108,7 @@ export default function LivenessCheckPage() {
     description: 'Guard against the broadest range of face spoofs through a multi-layered solution.',
     ogTitle: 'Liveness Check | Folio Wallet',
     ogDescription: 'Guard against the broadest range of face spoofs through a multi-layered solution.',
+    ogImage: 'https://folio.id/og-images/liveness-check-hero.png',
     ogUrl: 'https://folio.id/platform/liveness-check'
   })
 

@@ -102,6 +102,7 @@ export default function FaceMatchPage() {
     description: 'Exceptional accuracy delivered with privacy, transparency and a seamless user experience.',
     ogTitle: 'Face Match | Folio Wallet',
     ogDescription: 'Exceptional accuracy delivered with privacy, transparency and a seamless user experience.',
+    ogImage: 'https://folio.id/og-images/face-match-hero.png',
     ogUrl: 'https://folio.id/platform/face-match'
   })
 
