@@ -49,6 +49,7 @@ export default function BlogArticleCard({ article, variant = 'desktop' }: BlogAr
             src={article.image || imagePlaceholder} 
             alt={article.title}
             className="absolute inset-0 w-full h-full object-cover object-center rounded-lg transition-transform duration-300 ease-out group-hover:scale-105"
+            loading="lazy"
           />
         </div>
         
@@ -93,6 +94,7 @@ export default function BlogArticleCard({ article, variant = 'desktop' }: BlogAr
           src={article.image || imagePlaceholder} 
           alt={article.title}
           className="absolute inset-0 w-full h-full object-cover object-center rounded-lg transition-transform duration-300 ease-out group-hover:scale-105"
+          loading="lazy"
         />
       </div>
       
