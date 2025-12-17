@@ -61,7 +61,7 @@ import DocumentIntelligenceArticlePage from './pages/DocumentIntelligenceArticle
 import KycAmlComplianceArticlePage from './pages/KycAmlComplianceArticlePage'
 import AgeVerificationRequirementsArticlePage from './pages/AgeVerificationRequirementsArticlePage'
 import ClientOnboardingBestPracticesArticlePage from './pages/ClientOnboardingBestPracticesArticlePage'
-import OrganizeEventTicketsArticlePage from './pages/OrganizeEventTicketsArticlePage'
+import OrganizeTicketsBookingsArticlePage from './pages/OrganizeTicketsBookingsArticlePage'
 import EudiWalletArticlePage from './pages/EudiWalletArticlePage'
 import MobileDriversLicenseArticlePage from './pages/MobileDriversLicenseArticlePage'
 import DigitalCredentialsGovernmentArticlePage from './pages/DigitalCredentialsGovernmentArticlePage'
@@ -220,7 +220,7 @@ function App() {
         <Route path="/blog/kyc-aml-compliance" element={<KycAmlComplianceArticlePage />} />
         <Route path="/blog/age-verification-requirements" element={<AgeVerificationRequirementsArticlePage />} />
         <Route path="/blog/client-onboarding-best-practices" element={<ClientOnboardingBestPracticesArticlePage />} />
-        <Route path="/blog/organize-event-tickets" element={<OrganizeEventTicketsArticlePage />} />
+        <Route path="/blog/organize-tickets-bookings" element={<OrganizeTicketsBookingsArticlePage />} />
         <Route path="/blog/eudi-wallet" element={<EudiWalletArticlePage />} />
         <Route path="/blog/mobile-drivers-license" element={<MobileDriversLicenseArticlePage />} />
         <Route path="/blog/digital-credentials-government" element={<DigitalCredentialsGovernmentArticlePage />} />

@@ -7,7 +7,7 @@ import blogDocumentIntelligence from '../assets/images/blog-document-intelligenc
 import blogKycAmlCompliance from '../assets/images/blog-kyc-aml-compliance.png'
 import blogAgeVerificationRequirements from '../assets/images/blog-age-verification-requirements.png'
 import blogClientOnboardingBestPractices from '../assets/images/blog-client-onboarding-best-practices.png'
-import blogOrganizeEventTickets from '../assets/images/blog-organize-event-tickets.png'
+import blogOrganizeTicketsBookings from '../assets/images/blog-organize-tickets-bookings.png'
 import blogEudiWallet from '../assets/images/blog-eudi-wallet.png'
 import blogMobileDriversLicense from '../assets/images/blog-mobile-drivers-license.png'
 import blogDigitalCredentialsGovernment from '../assets/images/blog-digital-credentials-government.png'
@@ -98,7 +98,7 @@ const BLOG_OG_IMAGE_BY_SLUG: Record<string, string> = {
   'client-onboarding-best-practices': 'blog-client-onboarding-best-practices.png',
   'digital-credentials-government': 'blog-digital-credentials-government.png',
   'digital-passport-copies': 'blog-digital-passport-copies.png',
-  'organize-event-tickets': 'blog-organize-event-tickets.png',
+  'organize-tickets-bookings': 'blog-organize-tickets-bookings.png',
   'digital-wallet-apps-for-every-need': 'blog-digital-wallet-apps-for-every-need.png',
   'document-intelligence': 'blog-document-intelligence.png',
   'end-to-end-encryption': 'blog-end-to-end-encryption.png',
@@ -460,10 +460,10 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Research',
     date: 'Sep 2, 2025',
-    title: 'How to organize all your event tickets in one app',
-    description: 'Stop searching through emails for tickets. Learn how to keep concert, sports, and event tickets organized in one secure app with offline access.',
-    slug: 'organize-event-tickets',
-    image: blogOrganizeEventTickets,
+    title: 'How to keep all your tickets and bookings in one app',
+    description: 'Flights, trains, hotels, concerts: stop searching through emails. Keep all your travel tickets and bookings organized in one secure app.',
+    slug: 'organize-tickets-bookings',
+    image: blogOrganizeTicketsBookings,
   },
   {
     category: 'Research',
