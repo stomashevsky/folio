@@ -1,15 +1,15 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import { Link } from 'react-router-dom'
-import blogDigitalTicketingEventsHero from '../assets/images/blog-digital-ticketing-events-hero.png'
+import blogOrganizeEventTicketsHero from '../assets/images/blog-organize-event-tickets-hero.png'
 
-export default function DigitalTicketingEventsArticlePage() {
+export default function OrganizeEventTicketsArticlePage() {
   return (
     <BlogArticleLayout
       title="How to organize all your event tickets in one app"
       description="Stop searching through emails for tickets. Learn how to keep concert, sports, and event tickets organized in one secure app with offline access."
       date="Sep 2, 2025"
       category="Research"
-      slug="digital-ticketing-events"
+      slug="organize-event-tickets"
     >
       <ArticleParagraph>
         You're standing at the venue entrance, people pushing past you, and you can't find your ticket. It's somewhere in your email, or maybe you screenshotted it, or was it in that event app you downloaded? The line is moving, your phone battery is at 12%, and you're scrolling frantically through hundreds of messages.
@@ -20,7 +20,7 @@ export default function DigitalTicketingEventsArticlePage() {
       </ArticleParagraph>
 
       <ArticleImage 
-        src={blogDigitalTicketingEventsHero} 
+        src={blogOrganizeEventTicketsHero} 
         alt="Digital tickets in Folio Wallet: train ticket, bus ticket, and event ticket with QR codes"
       />
 
