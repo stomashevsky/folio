@@ -484,8 +484,8 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Product',
     date: 'Sep 30, 2025',
-    title: 'What is liveness detection and how does it prevent fraud?',
-    description: "Liveness detection ensures the person verifying their identity is physically present and real. Learn how this technology works, what attacks it prevents, and why it's essential for secure identity verification.",
+    title: 'How liveness detection stops fraudsters from using your photo',
+    description: "Someone has your photo. Can they use it to pass identity verification? With liveness detection, the answer is no. Learn how this technology tells the difference between you and a picture of you.",
     slug: 'what-is-liveness-detection',
     image: blogWhatIsLivenessDetection,
   },

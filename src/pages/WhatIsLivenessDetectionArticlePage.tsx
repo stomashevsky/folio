@@ -1,27 +1,22 @@
+import { Link } from 'react-router-dom'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import livenessDetectionFace from '../assets/images/blog-liveness-detection-face.png'
 
 export default function WhatIsLivenessDetectionArticlePage() {
   return (
     <BlogArticleLayout
-      title="What is liveness detection and how does it prevent fraud?"
-      description="Liveness detection ensures the person verifying their identity is physically present and real. Learn how this technology works, what attacks it prevents, and why it's essential for secure identity verification."
+      title="How liveness detection stops fraudsters from using your photo"
+      description="Someone has your photo. Can they use it to pass identity verification? With liveness detection, the answer is no. Learn how this technology tells the difference between you and a picture of you."
       date="Sep 30, 2025"
       category="Product"
       slug="what-is-liveness-detection"
     >
       <ArticleParagraph>
-        Identity fraud has evolved far beyond stolen passwords and forged documents. Today, fraudsters use high-resolution photos, pre-recorded videos, and even sophisticated deepfakes to impersonate real people during identity verification. <strong>Liveness detection</strong> is the technology designed to stop these attacks by confirming that the person in front of the camera is physically present, alive, and not a spoofed representation.
+        Imagine someone has your photo. Maybe they found it on social media, maybe they stole your ID. Now they're trying to open a bank account in your name. They hold your picture up to their phone camera during the selfie verification step. Will it work?
       </ArticleParagraph>
 
       <ArticleParagraph>
-        For businesses running digital onboarding, remote account opening, or any identity verification process, liveness detection has become a critical layer of defense. Without it, even the most accurate face matching system can be fooled by a printed photo or a video played on a screen.
-      </ArticleParagraph>
-
-      <ArticleH2>How liveness detection works</ArticleH2>
-
-      <ArticleParagraph>
-        At its core, liveness detection analyzes visual and behavioral signals to distinguish a real, live person from a fake representation. Modern systems combine multiple approaches to achieve this.
+        With liveness detection, it won't. This technology can tell the difference between a real person sitting in front of a camera and a photo, video, mask, or even a deepfake of that person. It's the reason identity verification actually works in a world where anyone's photo is just a few clicks away.
       </ArticleParagraph>
 
       <ArticleImage 
@@ -29,94 +24,114 @@ export default function WhatIsLivenessDetectionArticlePage() {
         alt="Face verification screen in Folio app with checklist: good lighting, remove glasses/mask/hat, hold camera at eye level"
       />
 
+      <ArticleH2>What fraudsters actually try</ArticleH2>
+
       <ArticleParagraph>
-        <strong>Passive liveness detection</strong> works silently in the background. As a user takes a selfie, the system analyzes subtle cues like skin texture, light reflection patterns, depth information, and micro-movements that are nearly impossible to replicate with a static image or video. The user doesn't need to perform any special actions, making the experience fast and frictionless.
+        Before understanding how liveness detection works, it helps to know what it's defending against. Fraudsters have gotten creative:
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Active liveness detection</strong> asks users to perform specific actions: blink, turn their head, smile, or follow a moving object on the screen. By verifying that the person responds correctly to random prompts, the system can confirm they're not presenting a pre-recorded video or a static image.
+        <strong>Printed photos</strong> are the simplest attack. Someone prints a high-resolution photo of your face and holds it up to the camera. It sounds obvious, but without liveness checks, many systems will accept it. The camera just sees a face.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        The most secure implementations combine both approaches, using passive analysis as the primary check and active challenges when additional assurance is needed. This layered approach balances security with user experience.
-      </ArticleParagraph>
-
-      <ArticleH2>Types of attacks liveness detection prevents</ArticleH2>
-
-      <ArticleParagraph>
-        Understanding what liveness detection protects against helps explain why it's so important:
-      </ArticleParagraph>
-
-      <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-        <li><strong>Print attacks</strong>: Fraudsters hold up a printed photo of the victim in front of the camera. Basic but surprisingly effective against systems without liveness checks.</li>
-        <li><strong>Screen replay attacks</strong>: A video or photo displayed on a phone, tablet, or monitor. More sophisticated than print attacks because the image quality is often better.</li>
-        <li><strong>3D mask attacks</strong>: Custom-made masks designed to mimic facial features. These can fool basic systems that only check for face presence.</li>
-        <li><strong>Deepfake attacks</strong>: AI-generated videos that animate a victim's face in real time. These represent the cutting edge of fraud techniques and require advanced detection methods.</li>
-        <li><strong>Injection attacks</strong>: Fraudsters bypass the camera entirely by injecting fake video feeds directly into the verification stream. This requires detecting compromised devices and manipulated data streams.</li>
-      </ul>
-
-      <ArticleH2>Why liveness detection matters for businesses</ArticleH2>
-
-      <ArticleParagraph>
-        The business case for liveness detection is straightforward: without it, facial verification becomes a liability rather than a security measure. A fraudster who obtains someone's ID document and photo can potentially open accounts, apply for credit, or access services in that person's name.
+        <strong>Screen attacks</strong> are more sophisticated. Instead of printing, fraudsters display your photo or a video of you on another phone or tablet. The quality is better, and if the video shows you blinking or moving, it might fool systems that only look for basic signs of life.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Regulatory requirements increasingly mandate liveness checks. Financial institutions, cryptocurrency exchanges, and online gambling platforms face strict KYC (Know Your Customer) requirements that effectively require proving the person submitting identity documents is the actual document holder. Liveness detection provides this proof.
+        <strong>Masks and dolls</strong> take physical spoofing to another level. A 3D-printed mask of your face, or even a realistic silicone mask, can potentially fool systems that only check if something face-shaped is present.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Beyond compliance, liveness detection protects brand reputation. A single high-profile fraud case can damage customer trust and invite regulatory scrutiny. Prevention is far less costly than remediation.
-      </ArticleParagraph>
-
-      <ArticleH2>Key features to look for</ArticleH2>
-
-      <ArticleParagraph>
-        Not all liveness detection solutions are created equal. When evaluating options, consider these factors:
+        <strong>Deepfakes</strong> are the newest threat. AI can now animate a still photo of your face in real time, making it blink, smile, and turn. These synthetic videos are getting harder to distinguish from reality.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Certification and standards compliance</strong>: Look for solutions that meet ISO 30107-3 standards for presentation attack detection. In Europe, compliance with the CEN TS 18099-2024 guidance for injection attack detection provides additional assurance.
+        <strong>Video injection</strong> bypasses the camera entirely. Instead of showing something to the camera, attackers feed a fake video stream directly into the app. The app thinks it's receiving camera input, but it's actually receiving a pre-recorded or generated video.
+      </ArticleParagraph>
+
+      <ArticleH2>How liveness detection catches fakes</ArticleH2>
+
+      <ArticleParagraph>
+        Modern liveness detection uses multiple techniques simultaneously. No single check is perfect, but together they create a barrier that's extremely difficult to bypass.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Multi-frame analysis</strong>: Systems that analyze multiple frames rather than a single snapshot can detect more subtle spoofing attempts and reduce false positives.
+        <strong>Texture analysis</strong> examines your skin at a detailed level. Real skin has subtle variations in texture, pores, and the way it reflects light. A photo printed on paper or displayed on a screen has a different texture entirely, even if you can't see it with the naked eye. The system can.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Device integrity checks</strong>: The best solutions detect compromised devices, emulators, and rooted phones that attackers use for injection attacks.
+        <strong>Depth detection</strong> looks for three-dimensionality. A real face has depth: your nose sticks out, your eyes are set back. A photo is flat. Some systems use the phone's sensors to measure this depth; others analyze how shadows and light change as you move slightly.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Fairness across demographics</strong>: Liveness detection must work consistently across different skin tones, lighting conditions, and device types. Solutions trained on diverse datasets perform more equitably.
+        <strong>Motion analysis</strong> watches for natural movement. Even when you try to hold still, you sway slightly, your eyes make micro-movements, your skin shifts as you breathe. These subtle, involuntary movements are hard to fake and easy to detect.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>User experience</strong>: The fastest and most accurate liveness check is worthless if users abandon the process. Look for solutions with clear guidance, fast processing, and minimal friction.
-      </ArticleParagraph>
-
-      <ArticleH2>How Folio approaches liveness detection</ArticleH2>
-
-      <ArticleParagraph>
-        Folio's liveness check combines passive and active signals to verify that users are physically present during identity verification. The system gathers signals from both the selfie capture and the device itself, analyzing them together to detect inconsistencies that indicate spoofing attempts.
+        <strong>Challenge-response</strong> asks you to do something specific: turn your head left, blink twice, smile. A pre-recorded video can't respond to random prompts. This active approach catches sophisticated attacks but adds friction to the user experience.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        The platform follows EU-aligned guidance for injection attack detection, uses continuously updated models that improve over time, and provides clear user guidance to help people capture accurate selfies. Flexible controls let businesses adjust quality thresholds and retry rules based on their specific compliance and risk requirements.
+        <strong>Device integrity checks</strong> detect when something's wrong with the phone itself. Is the camera feed being intercepted? Is the app running on an emulator instead of a real device? Is the phone rooted or jailbroken in ways that enable tampering? These signals reveal injection attacks.
+      </ArticleParagraph>
+
+      <ArticleH2>Passive vs active liveness</ArticleH2>
+
+      <ArticleParagraph>
+        There are two main approaches to liveness detection, and the best systems use both.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        For businesses building identity verification workflows, liveness detection integrates seamlessly with document verification and face matching to create a complete verification chain. The result is high assurance that the person completing verification is who they claim to be.
-      </ArticleParagraph>
-
-      <ArticleH2>The future of liveness detection</ArticleH2>
-
-      <ArticleParagraph>
-        As deepfake technology advances, liveness detection must evolve in response. The industry is moving toward continuous improvement models where detection systems learn from new attack patterns in real time. Hardware-based signals from device sensors add additional layers of verification that are difficult for attackers to spoof.
+        <strong>Passive liveness</strong> works invisibly. You just take a selfie normally, and the system analyzes it for signs of spoofing. You don't have to do anything special, so verification is fast and easy. This catches most common attacks without any user friction.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        For now, liveness detection represents one of the most effective defenses against identity fraud in digital verification. Combined with document authentication and face matching, it creates a robust verification process that balances security with user experience. As remote identity verification becomes more prevalent across industries, liveness detection will remain an essential component of trustworthy digital identity systems.
+        <strong>Active liveness</strong> asks you to perform actions. "Turn your head to the left." "Blink." "Smile." By verifying that you respond correctly to random prompts, the system confirms you're not presenting a video or static image. This adds a few seconds but catches more sophisticated attacks.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        The combination is powerful. Passive analysis runs on every verification, catching obvious fakes instantly. When the system needs more confidence, or when the risk is higher, active challenges provide additional assurance. Most legitimate users sail through passive checks and never see an active prompt.
+      </ArticleParagraph>
+
+      <ArticleH2>What makes detection reliable</ArticleH2>
+
+      <ArticleParagraph>
+        Good liveness detection needs to work for everyone, in any conditions. That's harder than it sounds.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        <strong>Lighting conditions vary wildly.</strong> Someone might verify in bright sunlight, dim room lighting, or harsh fluorescent office lights. The system needs to distinguish real faces from fakes regardless of how well-lit the scene is.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        <strong>People look different.</strong> Skin tones, facial structures, and features vary enormously across populations. Detection that works great for some demographics but poorly for others creates both security gaps and unfair user experiences. Training on diverse data is essential.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        <strong>Accessories complicate things.</strong> Glasses, sunglasses, masks, hats, headscarves, headphones, beards. The system needs to handle these gracefully, asking users to remove items that interfere while accepting those that don't.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        <strong>Devices vary widely.</strong> From the latest iPhones to budget Android phones, camera quality and capabilities differ dramatically. Detection needs to work reliably across all of them.
+      </ArticleParagraph>
+
+      <ArticleH2>How Folio handles liveness</ArticleH2>
+
+      <ArticleParagraph>
+        Folio's liveness detection combines passive and active methods, analyzing multiple frames rather than a single snapshot. The system checks texture, depth, motion, and device integrity simultaneously, achieving over 99% accuracy in detecting spoofing attempts.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        The detection works across iOS, Android, and web browsers, adapting to different device capabilities automatically. Clear on-screen guidance helps users position themselves correctly and achieve good lighting. When the system detects glasses, masks, or other potential obstructions, it provides specific instructions.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        For businesses, liveness detection integrates with document verification and face matching to create a complete identity verification flow. The document proves who you claim to be. The face match proves you're the person on that document. Liveness proves you're actually there, not a photo. Together, they provide strong assurance against fraud.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        As deepfake technology improves, liveness detection evolves in response. The models update continuously, learning from new attack patterns. What worked for fraudsters last month gets detected this month. It's an ongoing arms race, but one where defense consistently stays ahead. Learn more about <Link to="/platform/liveness-check" className="underline hover:text-[#737373] transition-colors">Folio's liveness check</Link>.
       </ArticleParagraph>
     </BlogArticleLayout>
   )
