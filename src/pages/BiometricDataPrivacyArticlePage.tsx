@@ -5,7 +5,7 @@ export default function BiometricDataPrivacyArticlePage() {
     <BlogArticleLayout
       title="Biometric data privacy and GDPR compliance"
       description="Biometric data like facial scans and fingerprints receive special protection under privacy laws. Learn what GDPR requires for biometric data and how businesses can handle it responsibly."
-      date="Oct 14, 2025"
+      date="Sep 20, 2025"
       category="Safety"
       slug="biometric-data-privacy"
     >

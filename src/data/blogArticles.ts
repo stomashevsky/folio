@@ -500,7 +500,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   },
   {
     category: 'Safety',
-    date: 'Oct 14, 2025',
+    date: 'Sep 20, 2025',
     title: 'Biometric data privacy and GDPR compliance',
     description: 'Biometric data like facial scans and fingerprints receive special protection under privacy laws. Learn what GDPR requires for biometric data and how businesses can handle it responsibly.',
     slug: 'biometric-data-privacy',
