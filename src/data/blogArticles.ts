@@ -468,8 +468,8 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Research',
     date: 'Sep 16, 2025',
-    title: "App in the Air alternative: The best option after shutdown",
-    description: "App in the Air shut down in September 2024. If you relied on it for flight tracking, here's the modern alternative that organizes all your travel documents.",
+    title: "App in the Air shut down. Here's where frequent flyers are going instead.",
+    description: "After years of tracking flights for millions of travelers, App in the Air is gone. If you're looking for a replacement that does even more, Folio Wallet is the answer.",
     slug: 'app-in-the-air-alternative',
     image: blogAppInTheAirAlternative,
   },
