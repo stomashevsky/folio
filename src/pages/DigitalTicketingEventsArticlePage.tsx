@@ -1,5 +1,6 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import { Link } from 'react-router-dom'
+import blogDigitalTicketingEventsHero from '../assets/images/blog-digital-ticketing-events-hero.png'
 
 export default function DigitalTicketingEventsArticlePage() {
   return (
@@ -17,6 +18,11 @@ export default function DigitalTicketingEventsArticlePage() {
       <ArticleParagraph>
         This shift benefits everyone involved. Attendees get instant delivery and can't lose their tickets. Venues reduce fraud and gain real-time attendance data. Organizers cut printing and distribution costs while improving the customer experience. Understanding how to implement digital ticketing effectively is now essential for any event operation.
       </ArticleParagraph>
+
+      <ArticleImage 
+        src={blogDigitalTicketingEventsHero} 
+        alt="Digital tickets in Folio Wallet: train ticket, bus ticket, and event ticket with QR codes"
+      />
 
       <ArticleH2>How digital tickets work</ArticleH2>
 
