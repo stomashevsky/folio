@@ -1,4 +1,5 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import livenessDetectionFace from '../assets/images/blog-liveness-detection-face.png'
 
 export default function WhatIsLivenessDetectionArticlePage() {
   return (
@@ -22,6 +23,11 @@ export default function WhatIsLivenessDetectionArticlePage() {
       <ArticleParagraph>
         At its core, liveness detection analyzes visual and behavioral signals to distinguish a real, live person from a fake representation. Modern systems combine multiple approaches to achieve this.
       </ArticleParagraph>
+
+      <ArticleImage 
+        src={livenessDetectionFace} 
+        alt="Face verification screen in Folio app with checklist: good lighting, remove glasses/mask/hat, hold camera at eye level"
+      />
 
       <ArticleParagraph>
         <strong>Passive liveness detection</strong> works silently in the background. As a user takes a selfie, the system analyzes subtle cues like skin texture, light reflection patterns, depth information, and micro-movements that are nearly impossible to replicate with a static image or video. The user doesn't need to perform any special actions, making the experience fast and frictionless.
