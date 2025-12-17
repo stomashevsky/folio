@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import faceScanImage from '../assets/images/blog-biometric-face-scan.png'
 
 export default function BiometricDataPrivacyArticlePage() {
   return (
@@ -13,6 +14,11 @@ export default function BiometricDataPrivacyArticlePage() {
       <ArticleParagraph>
         You're signing up for a new service, and they ask for a selfie. You hold up your phone, snap the photo, and wait for verification. But here's a question worth asking: what happens to that image of your face? Where does it go? Who can see it? And how long will it exist on someone else's servers?
       </ArticleParagraph>
+
+      <ArticleImage 
+        src={faceScanImage} 
+        alt="Identity verification selfie screen: Position your face within the frame"
+      />
 
       <ArticleParagraph>
         We're writing about this because Folio uses face matching for identity verification. When you verify your identity with us, we process your selfie to confirm you're the person on your ID document. That's biometric data, and it deserves special care. We think you should understand what happens to it, not just with us, but with any service that asks for your face.
