@@ -41,8 +41,9 @@ export default function MobileMenuLink({
     // Base classes - highlight extends edge-to-edge with px-6 for content padding
     const baseClasses = 'box-border flex gap-2 items-start w-full px-6 py-3 outline-none focus-visible:outline-none transition-all text-left'
 
-    // State classes - hover only, NO active state highlighting per user request
-    const stateClasses = 'bg-transparent hover:bg-[#f5f5f5]'
+    // State classes - hover only on devices that support hover (not touch devices)
+    // Using @media(hover:hover) to prevent sticky hover on mobile after tap
+    const stateClasses = 'bg-transparent [@media(hover:hover)]:hover:bg-[#f5f5f5]'
 
     const allClasses = `${baseClasses} ${stateClasses} ${FOCUS_RING_CLASSES} ${className}`
 
