@@ -6,9 +6,10 @@ import { saveBlogPageState, clearBlogPageState } from '../../utils/blogScrollPos
 interface BlogArticleCardProps {
   article: BlogArticle
   variant?: 'desktop' | 'mobile'
+  priority?: boolean
 }
 
-export default function BlogArticleCard({ article, variant = 'desktop' }: BlogArticleCardProps) {
+export default function BlogArticleCard({ article, variant = 'desktop', priority = false }: BlogArticleCardProps) {
   const location = useLocation()
   
   const handleClick = () => {
@@ -49,7 +50,7 @@ export default function BlogArticleCard({ article, variant = 'desktop' }: BlogAr
             src={article.image || imagePlaceholder} 
             alt={article.title}
             className="absolute inset-0 w-full h-full object-cover object-center rounded-lg transition-transform duration-300 ease-out group-hover:scale-105"
-            loading="lazy"
+            loading={priority ? 'eager' : 'lazy'}
           />
         </div>
         
@@ -94,7 +95,7 @@ export default function BlogArticleCard({ article, variant = 'desktop' }: BlogAr
           src={article.image || imagePlaceholder} 
           alt={article.title}
           className="absolute inset-0 w-full h-full object-cover object-center rounded-lg transition-transform duration-300 ease-out group-hover:scale-105"
-          loading="lazy"
+          loading={priority ? 'eager' : 'lazy'}
         />
       </div>
       
