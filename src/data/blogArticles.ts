@@ -509,8 +509,8 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Company',
     date: 'Sep 10, 2025',
-    title: 'Digital credentials for government services: use cases and benefits',
-    description: 'Governments worldwide are adopting digital credentials to improve citizen services and reduce fraud. Explore real-world use cases, implementation benefits, and lessons from successful deployments.',
+    title: 'How governments are replacing paper documents with digital credentials',
+    description: "What if you could vote from abroad, prove your age without showing your ID, or access government services without waiting in line? Digital credentials are making this happen.",
     slug: 'digital-credentials-government',
     image: blogDigitalCredentialsGovernment,
   },
