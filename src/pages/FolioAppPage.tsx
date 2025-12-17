@@ -1,7 +1,7 @@
 import { useState, useEffect, memo } from 'react'
 import { useLocation } from 'react-router-dom'
 import Navbar from '../components/Navbar'
-import { SectionHeader, ToolCard, HeroTagline, StoreBadge, StoreQrBadge } from '../components/ui'
+import { SectionHeader, ToolCard, HeroTagline, StoreBadge, StoreQrBadge, Button } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import FAQSection, { FAQItem } from '../components/sections/FAQSection'
 import PasskeysSection from '../components/sections/PasskeysSection'
@@ -146,9 +146,10 @@ function FolioAppPage() {
                 Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find. Your essential information is always at hand when you need it.
               </p>
             </div>
-            <div className="flex flex-wrap gap-3 items-start relative">
-              <StoreBadge store="ios" />
-              <StoreBadge store="android" />
+            <div className="flex flex-wrap gap-3 items-start relative shrink-0 w-full">
+              <Button variant="primary" size="md" href="/#get-the-app">
+                Get the app
+              </Button>
             </div>
           </div>
           <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
@@ -174,9 +175,10 @@ function FolioAppPage() {
                 Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find. Your essential information is always at hand when you need it.
               </p>
             </div>
-            <div className="flex flex-wrap gap-3 items-start relative shrink-0">
-              <StoreBadge store="ios" />
-              <StoreBadge store="android" />
+            <div className="flex flex-wrap gap-3 items-start relative shrink-0 w-full">
+              <Button variant="primary" size="md" href="/#get-the-app">
+                Get the app
+              </Button>
             </div>
           </div>
           <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
