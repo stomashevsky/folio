@@ -44,9 +44,11 @@ export { default as HeroTagline } from './HeroTagline'
 export { StoreBadge, StoreQrBadge } from './StoreBadges'
 export { default as BlogArticleLayout } from './BlogArticleLayout'
 export type { BlogArticleLayoutProps } from './BlogArticleLayout'
+export { default as LegalPageLayout } from './LegalPageLayout'
+export type { LegalPageLayoutProps } from './LegalPageLayout'
 
 // Article typography components
-export { ArticleH2, ArticleParagraph, ArticleBlockquote, ArticleList, ArticleTable } from './article'
+export { ArticleH2, ArticleH3, ArticleParagraph, ArticleBlockquote, ArticleList, ArticleTable } from './article'
 export type { ArticleTableColumn, ArticleTableRow, ArticleTableProps } from './article'
 
 // Article media components

@@ -118,6 +118,19 @@ const STATIC_PAGES = [
     description: 'Review and manage verification cases with a streamlined interface for your team.',
     ogImage: 'review-workspace-hero.png',
   },
+  // Legal pages
+  {
+    path: '/terms',
+    title: 'Terms of Use | Folio',
+    description: 'Terms and conditions for using Folio Wallet app and services.',
+    ogImage: 'folio-app-hero.png',
+  },
+  {
+    path: '/privacy',
+    title: 'Privacy Policy | Folio',
+    description: 'How Folio collects, uses, and protects your personal data.',
+    ogImage: 'folio-app-hero.png',
+  },
 ]
 
 // Blog OG image mapping (same as BLOG_OG_IMAGE_BY_SLUG in blogArticles.ts)

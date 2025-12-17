@@ -1,4 +1,5 @@
 export { default as ArticleH2 } from './ArticleH2'
+export { default as ArticleH3 } from './ArticleH3'
 export { default as ArticleParagraph } from './ArticleParagraph'
 export { default as ArticleBlockquote } from './ArticleBlockquote'
 export { default as ArticleList } from './ArticleList'

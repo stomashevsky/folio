@@ -69,6 +69,8 @@ import EndToEndEncryptionArticlePage from './pages/EndToEndEncryptionArticlePage
 import BiometricDataPrivacyArticlePage from './pages/BiometricDataPrivacyArticlePage'
 import DigitalPassportCopiesArticlePage from './pages/DigitalPassportCopiesArticlePage'
 import ManagingFamilyTravelDocumentsArticlePage from './pages/ManagingFamilyTravelDocumentsArticlePage'
+import TermsPage from './pages/TermsPage'
+import PrivacyPage from './pages/PrivacyPage'
 
 // Fallback handler in case the script in index.html didn't run
 function RedirectHandler() {
@@ -228,6 +230,8 @@ function App() {
         <Route path="/blog/biometric-data-privacy" element={<BiometricDataPrivacyArticlePage />} />
         <Route path="/blog/digital-passport-copies" element={<DigitalPassportCopiesArticlePage />} />
         <Route path="/blog/managing-family-travel-documents" element={<ManagingFamilyTravelDocumentsArticlePage />} />
+        <Route path="/terms" element={<TermsPage />} />
+        <Route path="/privacy" element={<PrivacyPage />} />
       </Routes>
     </BrowserRouter>
   )
