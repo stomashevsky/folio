@@ -428,8 +428,8 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Product',
     date: 'Aug 12, 2025',
-    title: "Mobile driver's license (mDL): standards, adoption, and security",
-    description: "Mobile driver's licenses are becoming reality across the US and internationally. Learn what mDL is, how it works, which states have adopted it, and why it's more secure than physical licenses.",
+    title: "Your driver's license is going digital. Here's what that actually means.",
+    description: "Mobile driver's licenses are rolling out across the US. But this isn't just a photo on your phone. It's actually more private and secure than the plastic card in your wallet.",
     slug: 'mobile-drivers-license',
     image: blogMobileDriversLicense,
   },
