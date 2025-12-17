@@ -444,8 +444,8 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Research',
     date: 'Aug 20, 2025',
-    title: '7 useful apps for planning your trip',
-    description: 'From itineraries to expenses: seven apps that make travel planning effortless and keep everything organized.',
+    title: "7 apps that actually help when you're traveling (and what each one does best)",
+    description: "Every travel app claims to be essential. Here's an honest look at seven that solve real problems, what they're good at, and where they fall short.",
     slug: '7-useful-apps-for-planning-your-trip',
     image: blogSevenUsefulApps,
   },
