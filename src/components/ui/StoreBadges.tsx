@@ -1,9 +1,7 @@
 import { AnchorHTMLAttributes } from 'react'
 import { FOCUS_RING_CLASSES } from './focusStyles'
 
-import appStoreBadgeOutline from '../../assets/images/app-store-badge.svg'
-import appStoreBadgeOverlayVector from '../../assets/images/app-store-badge-overlay-vector.svg'
-import appStoreBadgeOverlayGroup from '../../assets/images/app-store-badge-overlay-group.svg'
+import appStoreBadge from '../../assets/images/app-store-badge.svg'
 import googlePlayBadge from '../../assets/images/google-play-badge.svg'
 
 import qrCodeAppStore from '../../assets/images/qr-code-app-store.png'
@@ -40,25 +38,6 @@ function Anchor({
   )
 }
 
-function AppStoreBadgeArtwork() {
-  // The App Store badge in Figma is built from layered assets.
-  return (
-    <div className="relative h-[40px] w-[120px]">
-      <img alt="" className="block h-full w-full" src={appStoreBadgeOutline} />
-      <img
-        alt=""
-        className="absolute inset-[2.19%_0.73%_2.18%_0.73%] block h-auto w-auto"
-        src={appStoreBadgeOverlayVector}
-      />
-      <img
-        alt=""
-        className="absolute inset-[21.09%_8.5%_16.27%_8.33%] block h-auto w-auto"
-        src={appStoreBadgeOverlayGroup}
-      />
-    </div>
-  )
-}
-
 export function StoreBadge({
   store,
   className = '',
@@ -74,17 +53,13 @@ export function StoreBadge({
 
   return (
     <Anchor href={url} aria-label={label} className={className}>
-      {store === 'ios' ? (
-        <AppStoreBadgeArtwork />
-      ) : (
-        <img
-          alt=""
-          className="block h-[40px] w-[135px]"
-          src={googlePlayBadge}
-          width={size.width}
-          height={size.height}
-        />
-      )}
+      <img
+        alt=""
+        className="block"
+        src={store === 'ios' ? appStoreBadge : googlePlayBadge}
+        width={size.width}
+        height={size.height}
+      />
     </Anchor>
   )
 }
