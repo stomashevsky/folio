@@ -378,7 +378,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   },
   {
     category: 'Product',
-    date: 'Sep 7, 2025',
+    date: 'Oct 25, 2025',
     title: 'What is EUDI Wallet and why it matters for Europe',
     description: 'The European Digital Identity Wallet will transform how EU citizens interact with government and business services. Learn what EUDI Wallet is, how it works, and when it\'s coming.',
     slug: 'eudi-wallet',
