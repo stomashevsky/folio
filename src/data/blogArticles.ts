@@ -464,7 +464,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   },
   {
     category: 'Safety',
-    date: 'Nov 4, 2025',
+    date: 'Sep 9, 2025',
     title: 'Digital passport copies: legality and best practices',
     description: 'Is it safe and legal to store a digital copy of your passport? Learn when you need passport copies, how to store them securely, and what mistakes to avoid.',
     slug: 'digital-passport-copies',
@@ -472,7 +472,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   },
   {
     category: 'Research',
-    date: 'Nov 12, 2025',
+    date: 'Apr 29, 2025',
     title: 'Best document scanning apps for iPhone and Android',
     description: 'Turn your phone into a powerful scanner. Discover the best apps to scan, store, and organize your documents securely.',
     slug: 'best-document-scanning-apps',
@@ -480,7 +480,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   },
   {
     category: 'Guides',
-    date: 'Nov 18, 2025',
+    date: 'Aug 7, 2025',
     title: 'Managing family travel documents securely',
     description: 'Traveling with family means managing multiple passports, tickets, and reservations. Learn how to organize family travel documents in one secure place for stress-free trips.',
     slug: 'managing-family-travel-documents',
@@ -488,7 +488,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   },
   {
     category: 'Research',
-    date: 'Nov 21, 2025',
+    date: 'Jun 25, 2025',
     title: 'Best ID scanner apps for Android and iPhone',
     description: 'Turn your phone into a secure ID scanner. Discover the best apps to digitize, store, and protect your identification documents.',
     slug: 'best-id-scanner-app',

@@ -5,7 +5,7 @@ export default function DigitalPassportCopiesArticlePage() {
     <BlogArticleLayout
       title="Digital passport copies: legality and best practices"
       description="Is it safe and legal to store a digital copy of your passport? Learn when you need passport copies, how to store them securely, and what mistakes to avoid."
-      date="Nov 4, 2025"
+      date="Sep 9, 2025"
       category="Safety"
       slug="digital-passport-copies"
     >

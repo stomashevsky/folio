@@ -5,7 +5,7 @@ export default function ManagingFamilyTravelDocumentsArticlePage() {
     <BlogArticleLayout
       title="Managing family travel documents securely"
       description="Traveling with family means managing multiple passports, tickets, and reservations. Learn how to organize family travel documents in one secure place for stress-free trips."
-      date="Nov 18, 2025"
+      date="Aug 7, 2025"
       category="Guides"
       slug="managing-family-travel-documents"
     >

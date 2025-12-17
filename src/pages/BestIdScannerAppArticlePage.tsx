@@ -6,7 +6,7 @@ export default function BestIdScannerAppArticlePage() {
     <BlogArticleLayout
       title="Best ID scanner apps for Android and iPhone"
       description="Turn your phone into a secure ID scanner. Discover the best apps to digitize, store, and protect your identification documents."
-      date="Nov 21, 2025"
+      date="Jun 25, 2025"
       category="Research"
       slug="best-id-scanner-app"
     >

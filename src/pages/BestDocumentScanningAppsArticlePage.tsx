@@ -6,7 +6,7 @@ export default function BestDocumentScanningAppsArticlePage() {
     <BlogArticleLayout
       title="Best document scanning apps for iPhone and Android"
       description="Turn your phone into a powerful scanner. Discover the best apps to scan, store, and organize your documents securely."
-      date="Nov 12, 2025"
+      date="Apr 29, 2025"
       category="Research"
       slug="best-document-scanning-apps"
     >
