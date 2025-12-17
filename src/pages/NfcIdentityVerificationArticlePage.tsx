@@ -130,14 +130,14 @@ export default function NfcIdentityVerificationArticlePage() {
 
       <ArticleH2>NFC identity scanning with Folio</ArticleH2>
 
-      <ArticleImage 
-        src={nfcScanningFlow} 
-        alt="NFC identity scanning process showing three mobile screens: checking for NFC chip symbol, document scanning instructions, and ready to scan prompt"
-      />
-
       <ArticleParagraph>
         Folio's NFC identity scan extracts and verifies data from chip-enabled passports and ID cards. The system guides users through the scanning process, validates cryptographic signatures against issuing authority certificates, and compares chip data with visually extracted information to detect discrepancies.
       </ArticleParagraph>
+
+      <ArticleImage
+        src={nfcScanningFlow}
+        alt="NFC identity scanning process showing three mobile screens: checking for NFC chip symbol, document scanning instructions, and ready to scan prompt"
+      />
 
       <ArticleParagraph>
         The chip photo can be used for face matching, providing a higher-quality reference image than the printed document photo. Combined with document authentication and liveness detection, NFC scanning creates the most comprehensive identity verification available.
