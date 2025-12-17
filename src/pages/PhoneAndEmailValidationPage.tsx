@@ -99,6 +99,10 @@ export default function PhoneAndEmailValidationPage() {
   
   const activeHowItWorksItem = howItWorksItems.find(item => item.id === activeHowItWorksId) || howItWorksItems[0]
 
+  const handleGetInTouch = () => {
+    window.location.href = 'mailto:contact@folio.id'
+  }
+
   usePageTitle({
     title: 'Phone and Email Validation | Folio Wallet',
     description: 'Fast phone and email validation. Check whether phone numbers and email addresses are real and truly belong to your users.',
@@ -127,7 +131,7 @@ export default function PhoneAndEmailValidationPage() {
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative">
-                <Button variant="primary">
+                <Button onClick={handleGetInTouch} variant="primary">
                   Get in touch
                 </Button>
               </div>
@@ -156,7 +160,7 @@ export default function PhoneAndEmailValidationPage() {
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative shrink-0">
-                <Button variant="primary">
+                <Button onClick={handleGetInTouch} variant="primary">
                   Get in touch
                 </Button>
               </div>
@@ -322,7 +326,7 @@ export default function PhoneAndEmailValidationPage() {
                 </p>
               </div>
               <div className="flex flex-1 flex-wrap gap-3 items-start justify-end relative min-w-0">
-                <Button variant="primary">
+                <Button onClick={handleGetInTouch} variant="primary">
                   Get in touch
                 </Button>
               </div>
@@ -340,7 +344,7 @@ export default function PhoneAndEmailValidationPage() {
               </p>
             </div>
             <div className="flex flex-col gap-3 items-center relative shrink-0">
-              <Button variant="primary">
+              <Button onClick={handleGetInTouch} variant="primary">
                 Get in touch
               </Button>
             </div>

@@ -127,6 +127,10 @@ export default function DataSourceChecksPage() {
   
   const activeHowItWorksItem = howItWorksItems.find(item => item.id === activeHowItWorksId) || howItWorksItems[0]
 
+  const handleGetInTouch = () => {
+    window.location.href = 'mailto:contact@folio.id'
+  }
+
   usePageTitle({
     title: 'Data Source Checks | Folio Wallet',
     description: 'Verify users worldwide with trusted data sources. Instantly confirm the identity of users and meet regulatory requirements using Master Data matching.',
@@ -155,7 +159,7 @@ export default function DataSourceChecksPage() {
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative">
-                <Button variant="primary">
+                <Button onClick={handleGetInTouch} variant="primary">
                   Get in touch
                 </Button>
               </div>
@@ -184,7 +188,7 @@ export default function DataSourceChecksPage() {
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative shrink-0">
-                <Button variant="primary">
+                <Button onClick={handleGetInTouch} variant="primary">
                   Get in touch
                 </Button>
               </div>
@@ -375,7 +379,7 @@ export default function DataSourceChecksPage() {
                 </p>
               </div>
               <div className="flex flex-1 flex-wrap gap-3 items-start justify-end relative min-w-0">
-                <Button variant="primary">
+                <Button onClick={handleGetInTouch} variant="primary">
                   Get in touch
                 </Button>
               </div>
@@ -393,7 +397,7 @@ export default function DataSourceChecksPage() {
               </p>
             </div>
             <div className="flex flex-col gap-3 items-center relative shrink-0">
-              <Button variant="primary">
+              <Button onClick={handleGetInTouch} variant="primary">
                 Get in touch
               </Button>
             </div>

@@ -40,6 +40,10 @@ export default function DigitalTicketingPage() {
     navigate('/', { state: { scrollTo: 'get-the-app' } })
   }
 
+  const handleGetInTouch = () => {
+    window.location.href = 'mailto:contact@folio.id'
+  }
+
   return (
     <div className="flex flex-col items-start min-h-screen relative w-full">
       <Navbar />
@@ -62,6 +66,7 @@ export default function DigitalTicketingPage() {
             </div>
             <div className="flex flex-wrap gap-3 items-start relative">
               <Button
+                onClick={handleGetInTouch}
                 variant="primary"
               >
                 Get in touch
@@ -101,6 +106,7 @@ export default function DigitalTicketingPage() {
             </div>
             <div className="flex flex-wrap gap-3 items-start relative shrink-0">
               <Button
+                onClick={handleGetInTouch}
                 variant="primary"
               >
                 Get in touch
@@ -356,6 +362,7 @@ export default function DigitalTicketingPage() {
             </div>
             <div className="flex flex-1 flex-wrap gap-3 items-start justify-end relative min-w-0">
               <Button
+                onClick={handleGetInTouch}
                 variant="primary"
               >
                 Get in touch
@@ -376,6 +383,7 @@ export default function DigitalTicketingPage() {
           </div>
           <div className="flex flex-col gap-3 items-center relative shrink-0">
             <Button
+              onClick={handleGetInTouch}
               variant="primary"
             >
               Get in touch

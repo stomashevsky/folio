@@ -98,6 +98,10 @@ export default function FaceMatchPage() {
   
   const activeHowItWorksItem = howItWorksItems.find(item => item.id === activeHowItWorksId) || howItWorksItems[0]
 
+  const handleGetInTouch = () => {
+    window.location.href = 'mailto:contact@folio.id'
+  }
+
   usePageTitle({
     title: 'Face Match | Folio Wallet',
     description: 'Exceptional accuracy delivered with privacy, transparency and a seamless user experience.',
@@ -126,7 +130,7 @@ export default function FaceMatchPage() {
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative">
-                <Button variant="primary">
+                <Button onClick={handleGetInTouch} variant="primary">
                   Get in touch
                 </Button>
               </div>
@@ -155,7 +159,7 @@ export default function FaceMatchPage() {
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative shrink-0">
-                <Button variant="primary">
+                <Button onClick={handleGetInTouch} variant="primary">
                   Get in touch
                 </Button>
               </div>
@@ -375,7 +379,7 @@ export default function FaceMatchPage() {
                 </p>
               </div>
               <div className="flex flex-1 flex-wrap gap-3 items-start justify-end relative min-w-0">
-                <Button variant="primary">
+                <Button onClick={handleGetInTouch} variant="primary">
                   Get in touch
                 </Button>
               </div>
@@ -393,7 +397,7 @@ export default function FaceMatchPage() {
               </p>
             </div>
             <div className="flex flex-col gap-3 items-center relative shrink-0">
-              <Button variant="primary">
+              <Button onClick={handleGetInTouch} variant="primary">
                 Get in touch
               </Button>
             </div>
