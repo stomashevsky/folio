@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import eudiWalletHowItWorks from '../assets/images/blog-eudi-wallet-how-it-works.png'
 
@@ -159,7 +160,7 @@ export default function EudiWalletArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Folio's identity platform is designed to work with emerging digital identity standards, including the credential formats and verification protocols that EUDI Wallet will use. As the ecosystem develops, businesses using Folio will be positioned to accept EUDI Wallet credentials alongside existing verification methods.
+        Folio's identity platform is designed to work with emerging digital identity standards, including the credential formats and verification protocols that EUDI Wallet will use. As the ecosystem develops, businesses using Folio will be positioned to accept EUDI Wallet credentials alongside existing verification methods. You can explore how verifiable credentials work in practice with our <Link to="/government/playground" className="underline hover:text-[#737373] transition-colors">interactive playground</Link>, which demonstrates credential issuance and verification flows.
       </ArticleParagraph>
 
       <ArticleParagraph>
