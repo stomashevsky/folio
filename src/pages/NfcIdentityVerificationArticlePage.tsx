@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import nfcScanningFlow from '../assets/images/blog-nfc-scanning-flow.png'
 
@@ -104,7 +105,7 @@ export default function NfcIdentityVerificationArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        The combination of NFC chip verification with face matching and liveness detection creates the most secure identity verification available today. Your passport chip proves your document is real. Your face proves you're the person on that document.
+        The combination of NFC chip verification with face matching and liveness detection creates the most secure identity verification available today. Your passport chip proves your document is real. Your face proves you're the person on that document. Learn more about <Link to="/platform/nfc-identity-scan" className="underline hover:text-[#737373] transition-colors">Folio's NFC identity scan</Link>.
       </ArticleParagraph>
     </BlogArticleLayout>
   )
