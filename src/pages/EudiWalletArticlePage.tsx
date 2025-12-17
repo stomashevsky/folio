@@ -1,4 +1,5 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import eudiWalletHowItWorks from '../assets/images/blog-eudi-wallet-how-it-works.png'
 
 export default function EudiWalletArticlePage() {
   return (
@@ -39,6 +40,11 @@ export default function EudiWalletArticlePage() {
       <ArticleParagraph>
         At its core, EUDI Wallet is a smartphone application that stores and presents verifiable digital credentials. These credentials are cryptographically signed by authoritative issuers, making them trustworthy and tamper-proof.
       </ArticleParagraph>
+
+      <ArticleImage 
+        src={eudiWalletHowItWorks} 
+        alt="How EUDI Wallet works: Digital Identity credential, university requesting information for Student ID issuance, and issued Student ID credential"
+      />
 
       <ArticleParagraph>
         <strong>Credential issuance</strong>: Government agencies, educational institutions, and other trusted entities issue credentials directly to a citizen's wallet. This might include national ID data, driving licenses, educational qualifications, or professional certifications.
