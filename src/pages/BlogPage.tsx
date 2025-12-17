@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import FooterSection from '../components/sections/FooterSection'
 import { Button, BlogArticleCard } from '../components/ui'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { getOgImageUrl } from '../configs/ogImages'
 import { blogArticles, type BlogCategory } from '../data/blogArticles'
 import { restoreBlogPageState, saveBlogPageState, isBlogScrollRestoring, clearBlogPageState } from '../utils/blogScrollPosition'
 
@@ -131,7 +132,7 @@ export default function BlogPage() {
     description: 'Case studies, product insights and practical guides on travel, documents and digital identity.',
     ogTitle: 'Blog | Folio Wallet',
     ogDescription: 'Case studies, product insights and practical guides on travel, documents and digital identity.',
-    ogImage: 'https://folio.id/og-images/folio-app-hero.png',
+    ogImage: getOgImageUrl('folio-app-hero.png'),
     ogUrl: 'https://folio.id/blog',
     canonicalUrl: 'https://folio.id/blog',
     // Prevent filter variants from being indexed as separate pages.

@@ -5,6 +5,7 @@ import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { getOgImageUrl } from '../configs/ogImages'
 
 // Icons
 import shieldHalfIcon from '../assets/icons/ShieldHalf.svg'
@@ -103,7 +104,7 @@ export default function PhoneAndEmailValidationPage() {
     description: 'Fast phone and email validation. Check whether phone numbers and email addresses are real and truly belong to your users.',
     ogTitle: 'Phone and Email Validation | Folio Wallet',
     ogDescription: 'Fast phone and email validation. Check whether phone numbers and email addresses are real and truly belong to your users.',
-    ogImage: 'https://folio.id/og-images/phone-email-validation-hero.png',
+    ogImage: getOgImageUrl('phone-email-validation-hero.png'),
     ogUrl: 'https://folio.id/platform/phone-and-email-validation'
   })
 

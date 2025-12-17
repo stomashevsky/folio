@@ -53,8 +53,22 @@ function collectRoutes() {
 
     const blogRoutes = [...slugs].sort().map((s) => `/blog/${s}`)
 
-    // Always prerender homepage + blog list + all blog articles.
-    const routes = ['/', '/blog', ...blogRoutes]
+    // Platform routes that need prerendering for OG tags
+    const platformRoutes = [
+      '/platform/id-verification',
+      '/platform/document-intelligence',
+      '/platform/liveness-check',
+      '/platform/face-match',
+      '/platform/data-source-checks',
+      '/platform/phone-and-email-validation',
+      '/platform/nfc-identity-scan',
+      '/platform/dynamic-flow',
+      '/platform/behavior-insights',
+      '/platform/review-workspace',
+    ]
+
+    // Always prerender homepage + blog list + all blog articles + platform pages.
+    const routes = ['/', '/blog', ...blogRoutes, ...platformRoutes]
 
     // Keep output deterministic.
     return [...new Set(routes)].sort((a, b) => a.localeCompare(b))

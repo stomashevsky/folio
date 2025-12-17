@@ -5,6 +5,7 @@ import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { getOgImageUrl } from '../configs/ogImages'
 
 // Icons
 import zapIcon from '../assets/icons/Zap.svg'
@@ -155,7 +156,7 @@ export default function ReviewWorkspacePage() {
     description: 'Investigate users and businesses faster with flexible tools that adapt to your review process and reduce operational effort.',
     ogTitle: 'Review Workspace | Folio Wallet',
     ogDescription: 'Investigate users and businesses faster with flexible tools that adapt to your review process and reduce operational effort.',
-    ogImage: 'https://folio.id/og-images/review-workspace-hero.png',
+    ogImage: getOgImageUrl('review-workspace-hero.png'),
     ogUrl: 'https://folio.id/platform/review-workspace'
   })
 

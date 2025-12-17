@@ -5,6 +5,7 @@ import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { getOgImageUrl } from '../configs/ogImages'
 
 // Icons
 import scanFaceIcon from '../assets/icons/ScanFace.svg'
@@ -102,7 +103,7 @@ export default function FaceMatchPage() {
     description: 'Exceptional accuracy delivered with privacy, transparency and a seamless user experience.',
     ogTitle: 'Face Match | Folio Wallet',
     ogDescription: 'Exceptional accuracy delivered with privacy, transparency and a seamless user experience.',
-    ogImage: 'https://folio.id/og-images/face-match-hero.png',
+    ogImage: getOgImageUrl('face-match-hero.png'),
     ogUrl: 'https://folio.id/platform/face-match'
   })
 

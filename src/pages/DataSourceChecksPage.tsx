@@ -5,6 +5,7 @@ import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { getOgImageUrl } from '../configs/ogImages'
 
 // Icons
 import databaseIcon from '../assets/icons/Database.svg'
@@ -131,7 +132,7 @@ export default function DataSourceChecksPage() {
     description: 'Verify users worldwide with trusted data sources. Instantly confirm the identity of users and meet regulatory requirements using Master Data matching.',
     ogTitle: 'Data Source Checks | Folio Wallet',
     ogDescription: 'Verify users worldwide with trusted data sources. Instantly confirm the identity of users and meet regulatory requirements using Master Data matching.',
-    ogImage: 'https://folio.id/og-images/data-source-checks-hero.png',
+    ogImage: getOgImageUrl('data-source-checks-hero.png'),
     ogUrl: 'https://folio.id/platform/data-source-checks'
   })
 

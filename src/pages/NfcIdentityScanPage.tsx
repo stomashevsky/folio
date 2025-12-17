@@ -5,6 +5,7 @@ import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { getOgImageUrl } from '../configs/ogImages'
 
 // Icons
 import triangleAlertIcon from '../assets/icons/TriangleAlert.svg'
@@ -99,7 +100,7 @@ export default function NfcIdentityScanPage() {
     description: 'Spot passport and ID fraud instantly. Use NFC to read embedded passport and ID chip data, adding an extra security layer without adding user friction.',
     ogTitle: 'NFC Identity Scan | Folio Wallet',
     ogDescription: 'Spot passport and ID fraud instantly. Use NFC to read embedded passport and ID chip data, adding an extra security layer without adding user friction.',
-    ogImage: 'https://folio.id/og-images/nfc-identity-scan-hero.png',
+    ogImage: getOgImageUrl('nfc-identity-scan-hero.png'),
     ogUrl: 'https://folio.id/platform/nfc-identity-scan'
   })
 

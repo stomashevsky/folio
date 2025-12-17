@@ -5,6 +5,7 @@ import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { getOgImageUrl } from '../configs/ogImages'
 
 // Icons
 import audioWaveformIcon from '../assets/icons/AudioWaveform.svg'
@@ -131,7 +132,7 @@ export default function BehaviorInsightsPage() {
     description: 'Analyze behavioral, device, and network signals to identify risk without interrupting the user experience.',
     ogTitle: 'Behavior Insights | Folio Wallet',
     ogDescription: 'Analyze behavioral, device, and network signals to identify risk without interrupting the user experience.',
-    ogImage: 'https://folio.id/og-images/behavior-insights-hero.png',
+    ogImage: getOgImageUrl('behavior-insights-hero.png'),
     ogUrl: 'https://folio.id/platform/behavior-insights'
   })
 

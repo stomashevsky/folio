@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { getOgImageUrl } from '../configs/ogImages'
 import checkIcon from '../assets/icons/Check.svg'
 import calendarFoldIcon from '../assets/icons/CalendarFold.svg'
 import codeXmlIcon from '../assets/icons/CodeXml.svg'
@@ -31,7 +32,7 @@ export default function DigitalTicketingPage() {
     description: 'Better tickets. No app to build. Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone.',
     ogTitle: 'Digital Ticketing | Folio Wallet',
     ogDescription: 'Better tickets. No app to build. Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone.',
-    ogImage: 'https://folio.id/og-images/ticket-issuance-hero.png',
+    ogImage: getOgImageUrl('ticket-issuance-hero.png'),
     ogUrl: 'https://folio.id/solutions/digital-ticketing'
   })
 

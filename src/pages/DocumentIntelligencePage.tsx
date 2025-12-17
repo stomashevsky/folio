@@ -5,6 +5,7 @@ import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { getOgImageUrl } from '../configs/ogImages'
 
 // Icons
 import checkCheckIcon from '../assets/icons/CheckCheck.svg'
@@ -125,7 +126,7 @@ export default function DocumentIntelligencePage() {
     description: 'Automatically review submitted documents to confirm identity or validate proof of address, income, or health with minimal effort.',
     ogTitle: 'Document Intelligence | Folio Wallet',
     ogDescription: 'Automatically review submitted documents to confirm identity or validate proof of address, income, or health with minimal effort.',
-    ogImage: 'https://folio.id/og-images/document-intelligence-hero.png',
+    ogImage: getOgImageUrl('document-intelligence-hero.png'),
     ogUrl: 'https://folio.id/platform/document-intelligence'
   })
 

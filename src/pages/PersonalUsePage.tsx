@@ -7,6 +7,7 @@ import FAQSection, { FAQItem } from '../components/sections/FAQSection'
 import PasskeysSection from '../components/sections/PasskeysSection'
 import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { getOgImageUrl } from '../configs/ogImages'
 import { scrollToSection } from '../utils/scrollToSection'
 import folioAppHero from '../assets/images/folio-app-hero.png'
 import folioFeaturesTickets from '../assets/images/folio-features-tickets.png'
@@ -101,7 +102,7 @@ function FolioAppPage() {
     description: 'Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find. Your essential information is always at hand when you need it.',
     ogTitle: 'Folio Wallet | Digital identity and global verification solutions',
     ogDescription: 'Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible.',
-    ogImage: 'https://folio.id/og-images/folio-app-hero.png',
+    ogImage: getOgImageUrl('folio-app-hero.png'),
     ogUrl: 'https://folio.id/'
   })
   

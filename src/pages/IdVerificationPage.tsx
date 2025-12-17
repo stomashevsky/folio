@@ -5,6 +5,7 @@ import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { getOgImageUrl } from '../configs/ogImages'
 
 // Icons
 import globeIcon from '../assets/icons/Globe.svg'
@@ -123,7 +124,7 @@ export default function IdVerificationPage() {
     description: 'Check official documents and confirm identity in more than 200 places around the world.',
     ogTitle: 'ID Verification | Folio Wallet',
     ogDescription: 'Check official documents and confirm identity in more than 200 places around the world.',
-    ogImage: 'https://folio.id/og-images/id-verification-hero.png',
+    ogImage: getOgImageUrl('id-verification-hero.png'),
     ogUrl: 'https://folio.id/platform/id-verification'
   })
 

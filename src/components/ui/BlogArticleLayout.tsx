@@ -8,6 +8,7 @@ import { useScrollToTop } from '../../hooks/useScrollToTop'
 import { Button } from './index'
 import arrowLeftIcon from '../../assets/icons/ArrowLeft.svg'
 import { getBlogOgImageUrl } from '../../data/blogArticles'
+import { getOgImageUrl } from '../../configs/ogImages'
 import type { BlogCategory } from '../../data/blogArticles'
 
 interface BlogArticleLayoutProps {
@@ -64,7 +65,7 @@ export default function BlogArticleLayout({
   useScrollToTop()
 
   // Use the article cover image for sharing (no in-article hero rendering).
-  const ogImage = getBlogOgImageUrl(slug) || 'https://folio.id/og-images/folio-app-hero.png'
+  const ogImage = getBlogOgImageUrl(slug) || getOgImageUrl('folio-app-hero.png')
 
   usePageTitle({
     title: `${title} | Folio Blog`,

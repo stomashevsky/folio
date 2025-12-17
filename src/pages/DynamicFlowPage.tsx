@@ -5,6 +5,7 @@ import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { getOgImageUrl } from '../configs/ogImages'
 
 // Icons
 import playIcon from '../assets/icons/Play.svg'
@@ -129,7 +130,7 @@ export default function DynamicFlowPage() {
     description: 'Adapt verification in real time using risk signals to reduce fraud while keeping the experience smooth.',
     ogTitle: 'Dynamic Flow | Folio Wallet',
     ogDescription: 'Adapt verification in real time using risk signals to reduce fraud while keeping the experience smooth.',
-    ogImage: 'https://folio.id/og-images/dynamic-flow-hero.png',
+    ogImage: getOgImageUrl('dynamic-flow-hero.png'),
     ogUrl: 'https://folio.id/platform/dynamic-flow'
   })
 

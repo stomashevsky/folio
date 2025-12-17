@@ -1,3 +1,4 @@
+import { getOgImageUrl } from '../configs/ogImages'
 import blogAlbanianDiasporaVoterRegistration from '../assets/images/blog-albanian-diaspora-voter-registration.png'
 import blogWhatIsLivenessDetection from '../assets/images/blog-what-is-liveness-detection.png'
 import blogFaceMatchingTechnology from '../assets/images/blog-face-matching-technology.png'
@@ -131,7 +132,7 @@ const BLOG_OG_IMAGE_BY_SLUG: Record<string, string> = {
 
 export function getBlogOgImageUrl(slug: string): string | undefined {
   const filename = BLOG_OG_IMAGE_BY_SLUG[slug]
-  return filename ? `https://folio.id/og-images/${filename}` : undefined
+  return filename ? getOgImageUrl(filename) : undefined
 }
 
 export const blogArticles: BlogArticle[] = sortArticlesByDate([

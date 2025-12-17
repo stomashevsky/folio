@@ -5,6 +5,7 @@ import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { getOgImageUrl } from '../configs/ogImages'
 
 // Icons
 import shieldHalfIcon from '../assets/icons/ShieldHalf.svg'
@@ -108,7 +109,7 @@ export default function LivenessCheckPage() {
     description: 'Guard against the broadest range of face spoofs through a multi-layered solution.',
     ogTitle: 'Liveness Check | Folio Wallet',
     ogDescription: 'Guard against the broadest range of face spoofs through a multi-layered solution.',
-    ogImage: 'https://folio.id/og-images/liveness-check-hero.png',
+    ogImage: getOgImageUrl('liveness-check-hero.png'),
     ogUrl: 'https://folio.id/platform/liveness-check'
   })
 

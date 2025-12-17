@@ -4,6 +4,7 @@ import { SectionHeader, Button, FeatureBlock, HeroTagline } from '../components/
 import FooterSection from '../components/sections/FooterSection'
 import GlobalPartnersSection from '../components/sections/GlobalPartnersSection'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { getOgImageUrl } from '../configs/ogImages'
 import { scrollToTop } from '../utils/scrollToTop'
 import governmentSolutionsHero from '../assets/images/government-solutions-hero.png'
 import governmentAlbaniaCaseStudy from '../assets/images/government-albania-case-study.png'
@@ -25,7 +26,7 @@ export default function GovernmentPage() {
     description: 'Tools for governments to design, test and deploy modern digital credentials. Digital identity aligned with global standards.',
     ogTitle: 'Government Solutions | Folio Wallet',
     ogDescription: 'Tools for governments to design, test and deploy modern digital credentials. Digital identity aligned with global standards.',
-    ogImage: 'https://folio.id/og-images/government-solutions-hero.png',
+    ogImage: getOgImageUrl('government-solutions-hero.png'),
     ogUrl: 'https://folio.id/government'
   })
 

@@ -4,6 +4,7 @@ import IssuanceTypesSection from '../components/sections/IssuanceTypesSection'
 import FAQSection from '../components/sections/FAQSection'
 import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { getOgImageUrl } from '../configs/ogImages'
 import { SkipToContentLink } from '../components/ui'
 
 export default function PlaygroundPage() {
@@ -12,7 +13,7 @@ export default function PlaygroundPage() {
     description: 'A safe sandbox for issuing demo documents and testing EUDI compatible verification flows. Try real issuance steps, scan QR codes, explore data sharing and see how digital identity behaves in practice.',
     ogTitle: 'Playground - Issue and Verify Digital IDs | Folio Wallet',
     ogDescription: 'A safe sandbox for issuing demo documents and testing EUDI compatible verification flows.',
-    ogImage: 'https://folio.id/og-images/identity-lab-hero.png',
+    ogImage: getOgImageUrl('identity-lab-hero.png'),
     ogUrl: 'https://folio.id/government/playground'
   })
   return (
