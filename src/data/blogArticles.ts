@@ -452,8 +452,8 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Research',
     date: 'Sep 27, 2025',
-    title: 'Age verification requirements by industry: gaming, fintech, social media',
-    description: 'Different industries face different age verification requirements. Learn what regulations apply to online gaming, financial services, social media, and e-commerce, and how to implement compliant verification.',
+    title: 'How age verification actually works online',
+    description: "From buying wine online to signing up for apps, age checks are everywhere. Learn how different verification methods work, why some are more private than others, and what happens to your data.",
     slug: 'age-verification-requirements',
     image: blogAgeVerificationRequirements,
   },
