@@ -640,10 +640,10 @@ function GetTheAppSection() {
       <div className="hidden md:flex items-center max-w-[1280px] px-6 relative shrink-0 w-full">
         <div className="flex gap-16 items-center p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
           <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px] min-w-0">
-            <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+            <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
               Take Folio with you, wherever you go
             </h2>
-            <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full whitespace-pre-wrap">
+            <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
               Your documents stay organized, synced and instantly accessible on iOS and Android.
             </p>
           </div>
@@ -670,11 +670,11 @@ function GetTheAppSection() {
 
       {/* Mobile Layout */}
       <div className="flex md:hidden flex-col gap-8 items-center w-full px-6 py-16 relative shrink-0" style={BACKGROUND_STYLE}>
-        <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full whitespace-pre-wrap">
-          <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+        <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full">
+          <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
             Take Folio with you, wherever you go
           </h2>
-          <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full whitespace-pre-wrap">
+          <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
             Your documents stay organized, synced and instantly accessible on iOS and Android.
           </p>
         </div>
