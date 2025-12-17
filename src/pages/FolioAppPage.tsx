@@ -1,7 +1,7 @@
 import { useState, useEffect, memo } from 'react'
 import { useLocation } from 'react-router-dom'
 import Navbar from '../components/Navbar'
-import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
+import { SectionHeader, ToolCard, HeroTagline, StoreBadge, StoreQrBadge } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import FAQSection, { FAQItem } from '../components/sections/FAQSection'
 import PasskeysSection from '../components/sections/PasskeysSection'
@@ -28,7 +28,6 @@ import calendarRangeIcon from '../assets/icons/CalendarRange.svg'
 import tagIcon from '../assets/icons/Tag.svg'
 import triangleAlertIcon from '../assets/icons/TriangleAlert.svg'
 import shieldCheckIcon from '../assets/icons/ShieldCheck.svg'
-import arrowUpRightIcon from '../assets/icons/ArrowUpRight.svg'
 import smartphoneIcon from '../assets/icons/Smartphone.svg'
 
 // Background style using inline styles for complex multi-layer gradient
@@ -148,22 +147,8 @@ function FolioAppPage() {
               </p>
             </div>
             <div className="flex flex-wrap gap-3 items-start relative">
-              <Button
-                href="https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717"
-                target="_blank"
-                variant="primary"
-                icon={<img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />}
-              >
-                Download for iOS
-              </Button>
-              <Button
-                href="https://play.google.com/store/apps/details?id=com.folioltd"
-                target="_blank"
-                variant="primary"
-                icon={<img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />}
-              >
-                Download for Android
-              </Button>
+              <StoreBadge store="ios" />
+              <StoreBadge store="android" />
             </div>
           </div>
           <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
@@ -189,23 +174,9 @@ function FolioAppPage() {
                 Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find. Your essential information is always at hand when you need it.
               </p>
             </div>
-            <div className="flex flex-col gap-3 items-start relative shrink-0">
-              <Button
-                href="https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717"
-                target="_blank"
-                variant="primary"
-                icon={<img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />}
-              >
-                Download for iOS
-              </Button>
-              <Button
-                href="https://play.google.com/store/apps/details?id=com.folioltd"
-                target="_blank"
-                variant="primary"
-                icon={<img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />}
-              >
-                Download for Android
-              </Button>
+            <div className="flex flex-wrap gap-3 items-start relative shrink-0">
+              <StoreBadge store="ios" />
+              <StoreBadge store="android" />
             </div>
           </div>
           <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
@@ -654,23 +625,9 @@ function GetTheAppSection() {
               Your documents stay organized, synced and instantly accessible on iOS and Android.
             </p>
           </div>
-          <div className="flex flex-1 flex-wrap gap-3 items-start justify-end relative min-w-0">
-            <Button
-              href="https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717"
-              target="_blank"
-              variant="primary"
-              icon={<img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />}
-            >
-              Download for iOS
-            </Button>
-            <Button
-              href="https://play.google.com/store/apps/details?id=com.folioltd"
-              target="_blank"
-              variant="primary"
-              icon={<img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />}
-            >
-              Download for Android
-            </Button>
+          <div className="flex flex-1 flex-wrap gap-12 items-start justify-end relative min-w-0">
+            <StoreQrBadge store="ios" />
+            <StoreQrBadge store="android" />
           </div>
         </div>
       </div>
@@ -685,23 +642,9 @@ function GetTheAppSection() {
             Your documents stay organized, synced and instantly accessible on iOS and Android.
           </p>
         </div>
-        <div className="flex flex-col gap-3 items-center relative shrink-0">
-          <Button
-            href="https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717"
-            target="_blank"
-            variant="primary"
-            icon={<img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />}
-          >
-            Download for iOS
-          </Button>
-          <Button
-            href="https://play.google.com/store/apps/details?id=com.folioltd"
-            target="_blank"
-            variant="primary"
-            icon={<img src={arrowUpRightIcon} alt="" aria-hidden="true" className="w-4 h-4 shrink-0" width="16" height="16" />}
-          >
-            Download for Android
-          </Button>
+        <div className="flex flex-wrap gap-3 items-start justify-center relative shrink-0 w-full">
+          <StoreBadge store="ios" />
+          <StoreBadge store="android" />
         </div>
       </div>
     </section>

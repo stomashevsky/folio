@@ -41,6 +41,7 @@ export type { MobileMenuLinkProps } from './MobileMenuLink'
 export { default as MobileMenuBackButton } from './MobileMenuBackButton'
 export type { MobileMenuBackButtonProps } from './MobileMenuBackButton'
 export { default as HeroTagline } from './HeroTagline'
+export { StoreBadge, StoreQrBadge } from './StoreBadges'
 export { default as BlogArticleLayout } from './BlogArticleLayout'
 export type { BlogArticleLayoutProps } from './BlogArticleLayout'
 
