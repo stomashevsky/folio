@@ -541,8 +541,8 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Guides',
     date: 'Aug 7, 2025',
-    title: 'Managing family travel documents securely',
-    description: 'Traveling with family means managing multiple passports, tickets, and reservations. Learn how to organize family travel documents in one secure place for stress-free trips.',
+    title: 'The airport nightmare every parent knows (and how to avoid it)',
+    description: "You're at security with two kids, a stroller, and four passports somewhere in your bag. There's a better way to travel with family.",
     slug: 'managing-family-travel-documents',
     image: blogManagingFamilyTravelDocuments,
   },
