@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import nfcScanningFlow from '../assets/images/blog-nfc-scanning-flow.png'
 
 export default function NfcIdentityVerificationArticlePage() {
   return (
@@ -60,6 +61,12 @@ export default function NfcIdentityVerificationArticlePage() {
       <ArticleParagraph>
         <strong>Active Authentication</strong>: Some documents support an additional check where the chip proves it possesses a private key that matches a public key stored in the signed data. This confirms the chip itself is genuine and not a clone.
       </ArticleParagraph>
+
+      <img 
+        src={nfcScanningFlow} 
+        alt="NFC identity scanning process showing three mobile screens: checking for NFC chip symbol, document scanning instructions, and ready to scan prompt" 
+        className="w-full rounded-xl my-8"
+      />
 
       <ArticleH2>Advantages over visual document inspection</ArticleH2>
 
