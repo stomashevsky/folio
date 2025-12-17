@@ -103,7 +103,7 @@ export default function MobileDriversLicenseArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        That world is arriving faster than most people realize. Whether you get your mDL through your state, Apple Wallet, or another app, the shift toward digital identity is underway. <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link> supports mobile driver's licenses with QR code presentation for verification, keeping your license alongside passports, travel documents, and other credentials in one secure place.
+        That world is arriving faster than most people realize. Whether you get your mDL through your state, Apple Wallet, or another app, the shift toward digital identity is underway. Folio supports mobile driver's licenses and other verifiable credentials. Try issuing and verifying credentials yourself in our <Link to="/government/playground" className="underline hover:text-[#737373] transition-colors">interactive playground</Link>.
       </ArticleParagraph>
     </BlogArticleLayout>
   )
