@@ -627,7 +627,7 @@ function GetTheAppSection() {
               Your documents stay organized, synced and instantly accessible on iOS and Android.
             </p>
           </div>
-          <div className="flex flex-1 flex-wrap gap-12 items-start justify-end relative min-w-0">
+          <div className="flex shrink-0 gap-12 items-start justify-end relative">
             <StoreQrBadge store="ios" />
             <StoreQrBadge store="android" />
           </div>
@@ -637,7 +637,7 @@ function GetTheAppSection() {
       {/* Tablet Layout */}
       <div className="hidden md:flex lg:hidden items-center max-w-[1280px] px-6 relative shrink-0 w-full">
         <div className="flex flex-col gap-8 items-center p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
-          <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full max-w-[576px] min-w-0">
+          <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full min-w-0">
             <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
               Take Folio with you, wherever you go
             </h2>
