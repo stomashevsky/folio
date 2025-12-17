@@ -246,7 +246,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     onClick={(e) => {
                       e.preventDefault()
                       handleClose()
-                      const isHomePage = location.pathname === '/' || location.pathname === '/folio' || location.pathname === '/folio/'
+                      const isHomePage = location.pathname === '/'
                       if (isHomePage) {
                         scrollToSection('get-the-app')
                       } else {

@@ -69,16 +69,16 @@ export default function FooterLink({
 
   // Fallback to anchor if neither to nor href provided
   return (
-    <a
-      href="#"
+    <button
+      type="button"
       className={combinedClasses}
       onClick={(e) => {
-        e.preventDefault()
-        onClick?.(e)
+        // Match the public onClick signature as closely as possible.
+        onClick?.(e as unknown as React.MouseEvent<HTMLAnchorElement>)
       }}
     >
       {children}
-    </a>
+    </button>
   )
 }
 

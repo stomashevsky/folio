@@ -20,7 +20,7 @@ export default function Navbar() {
 
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault()
-    const isHomePage = location.pathname === '/' || location.pathname === '/folio' || location.pathname === '/folio/'
+    const isHomePage = location.pathname === '/'
     if (isHomePage) {
       scrollToTop()
     } else {

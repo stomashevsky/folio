@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function BestAppsToPlanTravelArticlePage() {
   return (
@@ -20,7 +21,7 @@ export default function BestAppsToPlanTravelArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong><a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a></strong> is a free travel planner that builds your trip timeline in seconds. Upload images, PDFs, or simply forward a confirmation email. Your itinerary appears at a glance. You can also store documents like passports, IDs, and medical cards. All encrypted for your safety. Imagine arriving at the airport with all your trip details in one place. No app switching. No digging through emails. Best for travelers who like everything neatly organized.
+        <strong><Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link></strong> is a free travel planner that builds your trip timeline in seconds. Upload images, PDFs, or simply forward a confirmation email. Your itinerary appears at a glance. You can also store documents like passports, IDs, and medical cards. All encrypted for your safety. Imagine arriving at the airport with all your trip details in one place. No app switching. No digging through emails. Best for travelers who like everything neatly organized.
       </ArticleParagraph>
 
       <ArticleParagraph>

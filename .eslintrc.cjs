@@ -23,6 +23,15 @@ module.exports = {
     },
   },
   plugins: ['react-refresh', '@typescript-eslint', 'react', 'jsx-a11y'],
+  overrides: [
+    // Pages contain lots of editorial/marketing copy; enforcing HTML entities makes iteration painful.
+    {
+      files: ['src/pages/**/*.tsx'],
+      rules: {
+        'react/no-unescaped-entities': 'off',
+      },
+    },
+  ],
   rules: {
     'react-refresh/only-export-components': [
       'warn',

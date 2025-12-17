@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function HowToSecureYourWalletOnIphoneArticlePage() {
   return (
@@ -10,7 +11,7 @@ export default function HowToSecureYourWalletOnIphoneArticlePage() {
       slug="how-to-secure-your-wallet-on-iphone"
     >
       <ArticleParagraph>
-        As digital wallets like <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> gain popularity, securing sensitive information on your iPhone is essential. This guide provides straightforward steps to keep your wallet secure, focusing on Folio Wallet's built-in features and additional precautions you can take to protect your cards, IDs, and other documents.
+        As digital wallets like <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link> gain popularity, securing sensitive information on your iPhone is essential. This guide provides straightforward steps to keep your wallet secure, focusing on Folio Wallet's built-in features and additional precautions you can take to protect your cards, IDs, and other documents.
       </ArticleParagraph>
 
       <ArticleParagraph>

@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function TenTravelHacksThatActuallyWorkArticlePage() {
   return (
@@ -40,7 +41,7 @@ export default function TenTravelHacksThatActuallyWorkArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Use the right apps.</strong> The right apps transform how you travel. Set them up before you leave. You'll be covered the moment you land. TripIt builds your itinerary from email confirmations. <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> organizes tickets, bookings, and documents into a secure trip timeline. E-SIM apps like Airalo let you buy local data plans digitally. Skip SIM card hassles.
+        <strong>Use the right apps.</strong> The right apps transform how you travel. Set them up before you leave. You'll be covered the moment you land. TripIt builds your itinerary from email confirmations. <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link> organizes tickets, bookings, and documents into a secure trip timeline. E-SIM apps like Airalo let you buy local data plans digitally. Skip SIM card hassles.
       </ArticleParagraph>
 
       <ArticleParagraph>

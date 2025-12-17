@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleBlockquote, ArticleTable } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function Pass2UAlternativeArticlePage() {
   return (
@@ -60,7 +61,7 @@ export default function Pass2UAlternativeArticlePage() {
       />
 
       <ArticleParagraph>
-        Choose Pass2U if you only need to store barcodes and QR codes for Apple Wallet. Choose <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> if you want a complete document wallet that stores everything securely, works on any device, and protects your data with real encryption.
+        Choose Pass2U if you only need to store barcodes and QR codes for Apple Wallet. Choose <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link> if you want a complete document wallet that stores everything securely, works on any device, and protects your data with real encryption.
       </ArticleParagraph>
 
       <ArticleBlockquote>

@@ -1,5 +1,6 @@
 import BlogArticleLayout from '../components/ui/BlogArticleLayout'
 import { ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function YouCanNowStoreTicketsInFolioWalletArticlePage() {
   return (
@@ -39,7 +40,7 @@ export default function YouCanNowStoreTicketsInFolioWalletArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        While developing and testing this feature, several team members used it during their real trips: flights from Genoa to London with passes for London Tech Week, a business trip from Copenhagen to Istanbul and back, and a multi-leg train trip in Europe including Hungary, Austria and Italy. Travel storage is a new area for Folio Wallet, and we hope you find it useful. Send us your feedback, feature requests, or simply successfully created timelines at support@folio.id. We'd love to hear from you. <strong>Download <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a>. Add your first trip. See how it feels to be organized.</strong>
+        While developing and testing this feature, several team members used it during their real trips: flights from Genoa to London with passes for London Tech Week, a business trip from Copenhagen to Istanbul and back, and a multi-leg train trip in Europe including Hungary, Austria and Italy. Travel storage is a new area for Folio Wallet, and we hope you find it useful. Send us your feedback, feature requests, or simply successfully created timelines at support@folio.id. We'd love to hear from you. <strong>Download <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link>. Add your first trip. See how it feels to be organized.</strong>
       </ArticleParagraph>
     </BlogArticleLayout>
   )

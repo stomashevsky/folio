@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleBlockquote, ArticleTable } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function TripsyAlternativeArticlePage() {
   return (
@@ -66,7 +67,7 @@ export default function TripsyAlternativeArticlePage() {
       />
 
       <ArticleParagraph>
-        Choose Tripsy if you want a trip planning app that creates beautiful itineraries, syncs with your calendar, and lets you collaborate with friends. Choose <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> if you want an app that focuses on security, privacy, and storing every important travel document in one place. Or use both. Tripsy for planning. Folio Wallet for security. Together, they cover everything.
+        Choose Tripsy if you want a trip planning app that creates beautiful itineraries, syncs with your calendar, and lets you collaborate with friends. Choose <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link> if you want an app that focuses on security, privacy, and storing every important travel document in one place. Or use both. Tripsy for planning. Folio Wallet for security. Together, they cover everything.
       </ArticleParagraph>
 
       <ArticleBlockquote>

@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function MobileDriversLicenseArticlePage() {
   return (
@@ -179,7 +180,7 @@ export default function MobileDriversLicenseArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        For those who want to keep their driving license alongside other important documents, <a href="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio's digital wallet app</a> stores ID cards, licenses, and other credentials in one secure, organized place.
+        For those who want to keep their driving license alongside other important documents, <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio's digital wallet app</Link> stores ID cards, licenses, and other credentials in one secure, organized place.
       </ArticleParagraph>
     </BlogArticleLayout>
   )

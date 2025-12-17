@@ -1,5 +1,6 @@
 import BlogArticleLayout from '../components/ui/BlogArticleLayout'
 import { ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function HowToAddAndStoreYourMedicalCardArticlePage() {
   return (
@@ -51,7 +52,7 @@ export default function HowToAddAndStoreYourMedicalCardArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Folio provides a secure, convenient, and organized way to store your medical card, health insurance, and other essential documents. By using Folio, you not only add your medical card to a wallet but also gain peace of mind knowing that your information is protected and accessible whenever you need it. Whether for everyday use or during travel, Folio makes managing your health and insurance information easier than ever. <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Start using Folio today</a> to digitize and secure your health documents, ensuring they are always within reach.
+        Folio provides a secure, convenient, and organized way to store your medical card, health insurance, and other essential documents. By using Folio, you not only add your medical card to a wallet but also gain peace of mind knowing that your information is protected and accessible whenever you need it. Whether for everyday use or during travel, Folio makes managing your health and insurance information easier than ever. <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Start using Folio today</Link> to digitize and secure your health documents, ensuring they are always within reach.
       </ArticleParagraph>
     </BlogArticleLayout>
   )

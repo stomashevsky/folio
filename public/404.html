@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     
     <!-- Favicons -->
-    <link rel="icon" type="image/svg+xml" href="/folio/favicon.svg" />
-    <link rel="alternate icon" href="/folio/favicon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/folio/favicon.svg" />
-    <link rel="manifest" href="/folio/site.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="alternate icon" href="./favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon.svg" />
+    <link rel="manifest" href="./site.webmanifest" />
     <meta name="theme-color" content="#0A0A0A" />
     <meta name="msapplication-TileColor" content="#0A0A0A" />
     
@@ -25,14 +25,14 @@
     <meta property="og:url" content="https://folio.id/Identity-Lab/" />
     <meta property="og:title" content="Identity Lab - Issue and Verify Digital IDs | Folio Wallet" />
     <meta property="og:description" content="Issue and verify digital IDs in a safe sandbox that mirrors real European digital ID flows. Explore demo documents, test QR based verification and see exactly which data is shared." />
-    <meta property="og:image" content="https://folio.id/Identity-Lab/src/assets/images/identity-lab-hero.png" />
+    <meta property="og:image" content="https://folio.id/og-images/identity-lab-hero.png" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://folio.id/Identity-Lab/" />
     <meta property="twitter:title" content="Identity Lab - Issue and Verify Digital IDs | Folio Wallet" />
     <meta property="twitter:description" content="Issue and verify digital IDs in a safe sandbox that mirrors real European digital ID flows. Explore demo documents, test QR based verification and see exactly which data is shared." />
-    <meta property="twitter:image" content="https://folio.id/Identity-Lab/src/assets/images/identity-lab-hero.png" />
+    <meta property="twitter:image" content="https://folio.id/og-images/identity-lab-hero.png" />
     
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -72,27 +72,22 @@
       // Note: this 404.html file must be at least 512 bytes for it to work
       // with Internet Explorer (it is currently > 512 bytes)
 
-      // For Project Pages sites, set segmentCount to 1 to keep the repo name (/folio/)
-      // This way the code will transform:
-      // https://username.github.io/folio/government
-      // into
-      // https://username.github.io/folio/?/government
-      var segmentCount = 1;
-
       var l = window.location;
       var pathSegments = l.pathname.split('/').filter(function(segment) {
         return segment !== '';
       });
       
-      // Build the base path (e.g., '/folio')
-      var basePath = '/' + pathSegments.slice(0, segmentCount).join('/');
+      // Support both:
+      // - https://stomashevsky.github.io/folio/... (project base = /folio)
+      // - https://folio.id/... (project base = /)
+      var basePath = pathSegments[0] === 'folio' ? '/folio' : '';
       
       // Get the remaining path segments after the base (e.g., ['government'])
-      var remainingPath = pathSegments.slice(segmentCount).join('/');
+      var remainingPath = pathSegments.slice(basePath ? 1 : 0).join('/');
       
       // Build the redirect URL
       // Ensure basePath ends with / for proper URL construction
-      var basePathWithSlash = basePath.endsWith('/') ? basePath : basePath + '/';
+      var basePathWithSlash = basePath ? (basePath.endsWith('/') ? basePath : basePath + '/') : '/';
       var redirectUrl = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
         basePathWithSlash + '?/' + remainingPath.replace(/&/g, '~and~') +
         (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +

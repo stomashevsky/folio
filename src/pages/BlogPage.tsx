@@ -50,14 +50,14 @@ export default function BlogPage() {
   // Clear saved state when navigating directly with category URL parameter
   // This prevents sessionStorage from interfering with direct URL navigation
   useEffect(() => {
-    const urlHasCategory = searchParams.get('category') !== null
+    const urlHasCategory = categoryParam !== null
     const isNotFromRestoreScroll = location.state?.restoreScroll !== true
     
     // If URL has category and we're not coming from "Back to blog" button, clear saved state
     if (urlHasCategory && isNotFromRestoreScroll) {
       clearBlogPageState()
     }
-  }, []) // Run once on mount
+  }, [categoryParam, location.state?.restoreScroll])
 
   // Restore scroll position when returning from article via "Back to blog" button
   useEffect(() => {
@@ -131,7 +131,11 @@ export default function BlogPage() {
     description: 'Case studies, product insights and practical guides on travel, documents and digital identity.',
     ogTitle: 'Blog | Folio Wallet',
     ogDescription: 'Case studies, product insights and practical guides on travel, documents and digital identity.',
-    ogUrl: 'https://folio.id/blog'
+    ogImage: 'https://folio.id/og-images/folio-app-hero.png',
+    ogUrl: 'https://folio.id/blog',
+    canonicalUrl: 'https://folio.id/blog',
+    // Prevent filter variants from being indexed as separate pages.
+    robots: categoryParam ? 'noindex,follow' : undefined,
   })
 
   const handleLoadMore = () => {
@@ -193,6 +197,18 @@ export default function BlogPage() {
     <div className="flex flex-col items-start min-h-screen relative w-full">
       <Navbar />
       <main className="flex-1 w-full">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Blog',
+              name: 'Folio Blog',
+              url: 'https://folio.id/blog',
+              description: 'Case studies, product insights and practical guides on travel, documents and digital identity.',
+            }),
+          }}
+        />
         <section className="bg-white flex flex-col items-center overflow-hidden px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full flex-1">
           <div className="flex flex-col gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             {/* Header */}

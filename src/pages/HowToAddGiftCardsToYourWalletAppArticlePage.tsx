@@ -1,5 +1,6 @@
 import BlogArticleLayout from '../components/ui/BlogArticleLayout'
 import { ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function HowToAddGiftCardsToYourWalletAppArticlePage() {
   return (
@@ -11,7 +12,7 @@ export default function HowToAddGiftCardsToYourWalletAppArticlePage() {
       slug="how-to-add-gift-cards-to-your-wallet-app"
     >
       <ArticleParagraph>
-        Managing physical gift cards can sometimes be a hassle. They get lost in your wallet, forgotten at home, or damaged over time. <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a>, a secure and easy-to-use app, simplifies this process by allowing you to store and organize your gift cards digitally. With just a few simple steps, your cards will be safely stored and ready whenever you need them.
+        Managing physical gift cards can sometimes be a hassle. They get lost in your wallet, forgotten at home, or damaged over time. <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link>, a secure and easy-to-use app, simplifies this process by allowing you to store and organize your gift cards digitally. With just a few simple steps, your cards will be safely stored and ready whenever you need them.
       </ArticleParagraph>
 
       <ArticleParagraph>

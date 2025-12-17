@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function DigitalPassportCopiesArticlePage() {
   return (
@@ -167,7 +168,7 @@ export default function DigitalPassportCopiesArticlePage() {
       <ArticleH2>Storing passport data in Folio</ArticleH2>
 
       <ArticleParagraph>
-        <a href="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio's digital wallet app</a> is designed for exactly this use case. When you add your passport, Folio extracts key information (name, number, expiry date) and stores everything with end-to-end encryption that prevents anyone except you from accessing your data.
+        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio's digital wallet app</Link> is designed for exactly this use case. When you add your passport, Folio extracts key information (name, number, expiry date) and stores everything with end-to-end encryption that prevents anyone except you from accessing your data.
       </ArticleParagraph>
 
       <ArticleParagraph>

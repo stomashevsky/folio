@@ -1,5 +1,6 @@
 import BlogArticleLayout from '../components/ui/BlogArticleLayout'
 import { ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function AppleGiftCardAddToWalletArticlePage() {
   return (
@@ -27,7 +28,7 @@ export default function AppleGiftCardAddToWalletArticlePage() {
       </ArticleH2>
 
       <ArticleParagraph>
-        While Apple Wallet works great for iPhone users, <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> offers additional benefits for managing your gift cards. Unlike Apple Wallet, Folio lets you store gift cards from any brand, not just Apple, and works seamlessly across both iOS and Android devices. This means you can access all your gift cards in one place, regardless of which phone you use.
+        While Apple Wallet works great for iPhone users, <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link> offers additional benefits for managing your gift cards. Unlike Apple Wallet, Folio lets you store gift cards from any brand, not just Apple, and works seamlessly across both iOS and Android devices. This means you can access all your gift cards in one place, regardless of which phone you use.
       </ArticleParagraph>
 
       <ArticleParagraph>

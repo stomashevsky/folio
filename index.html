@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     
     <!-- Favicons -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="alternate icon" href="/favicon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
-    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="alternate icon" href="favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.svg" />
+    <link rel="manifest" href="site.webmanifest" />
     <meta name="theme-color" content="#0A0A0A" />
     <meta name="msapplication-TileColor" content="#0A0A0A" />
     
@@ -25,14 +25,14 @@
     <meta property="og:url" content="https://folio.id/" />
     <meta property="og:title" content="Folio app | Folio Wallet" />
     <meta property="og:description" content="Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find." />
-    <meta property="og:image" content="https://folio.id/src/assets/images/folio-app-hero.png" />
+    <meta property="og:image" content="https://folio.id/og-images/folio-app-hero.png" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://folio.id/" />
     <meta property="twitter:title" content="Folio app | Folio Wallet" />
     <meta property="twitter:description" content="Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find." />
-    <meta property="twitter:image" content="https://folio.id/src/assets/images/folio-app-hero.png" />
+    <meta property="twitter:image" content="https://folio.id/og-images/folio-app-hero.png" />
     
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -63,77 +63,7 @@
     <!-- Consider using nonce-based CSP in production with proper server configuration -->
     <!-- For production, remove 'unsafe-eval' and add 'upgrade-insecure-requests' -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' 'sha256-XeNpbq034w0m3hU2IirnKxaUajbLaMP8wW80j2KdEoE=' 'sha256-CVwTVNhkb5sIYIpuGe3NZv4KPlAnMHencu06RxRIKOE='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' ws: wss:; base-uri 'self'; form-action 'self'; frame-src https://datawrapper.dwcdn.net;" />
-    
-    <!-- Redirect script for GitHub Pages SPA routing -->
-    <!-- This script MUST run before React Router initializes -->
-    <!-- Placed in head to ensure it executes synchronously before any module scripts -->
-    <script>
-      // Single Page Apps for GitHub Pages
-      // https://github.com/rafgraph/spa-github-pages
-      // This script checks to see if a redirect is present in the query string,
-      // converts it back into the correct url and adds it to the
-      // browser's history using window.history.replaceState(...),
-      // which won't cause the browser to attempt to load the new url.
-      // When the single page app is loaded further down in this file,
-      // the correct url will be waiting in the browser's history for
-      // the single page app to route to.
-      (function() {
-        var l = window.location;
-        // Check if URL has the format ?/path (from 404.html redirect)
-        // l.search will be like "?/government" when redirected from 404.html
-        if (l.search && l.search.length > 1 && l.search[1] === '/') {
-          // Extract the path from query string (e.g., '/government' from '?/government')
-          var pathWithParams = l.search.slice(1); // Removes '?' -> '/government'
-          
-          // Find where the actual path ends (before any additional query params)
-          // Additional params start with & (but not ~and~)
-          var pathEnd = pathWithParams.length;
-          for (var i = 0; i < pathWithParams.length - 1; i++) {
-            if (pathWithParams[i] === '&') {
-              // Check if this & is part of ~and~
-              var before = i >= 4 ? pathWithParams.substring(i - 4, i) : '';
-              if (before !== '~and') {
-                // This is a real query param separator
-                pathEnd = i;
-                break;
-              }
-            }
-          }
-          
-          // Extract just the path part
-          var route = pathWithParams.substring(0, pathEnd);
-          
-          // Decode ~and~ back to &
-          route = route.replace(/~and~/g, '&');
-          
-          // Ensure route starts with /
-          if (!route.startsWith('/')) {
-            route = '/' + route;
-          }
-          
-          // Extract additional query parameters if they exist
-          var additionalParams = pathWithParams.substring(pathEnd);
-          if (additionalParams) {
-            // Remove leading & and decode ~and~
-            var cleanParams = additionalParams.replace(/^&/, '').replace(/~and~/g, '&');
-            if (cleanParams) {
-              route = route + '?' + cleanParams;
-            }
-          }
-          
-          // Use explicit base path '/folio' to match vite.config.ts base setting
-          var basePath = '/folio';
-          
-          // Build the final path: /folio/government (or /folio/government?param=value)
-          var finalPath = basePath + route + (l.hash || '');
-          
-          // Replace the URL in browser history without reloading
-          // This must happen BEFORE React Router initializes
-          // Using replaceState ensures the URL changes but doesn't trigger a page reload
-          window.history.replaceState(null, '', finalPath);
-        }
-      })();
-    </script>
+
   </head>
   <body>
     <div id="root"></div>

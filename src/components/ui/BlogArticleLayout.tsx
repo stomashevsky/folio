@@ -7,6 +7,7 @@ import { usePageTitle } from '../../hooks/usePageTitle'
 import { useScrollToTop } from '../../hooks/useScrollToTop'
 import { Button } from './index'
 import arrowLeftIcon from '../../assets/icons/ArrowLeft.svg'
+import { getBlogOgImageUrl } from '../../data/blogArticles'
 import type { BlogCategory } from '../../data/blogArticles'
 
 interface BlogArticleLayoutProps {
@@ -54,7 +55,6 @@ export default function BlogArticleLayout({
   date,
   category,
   slug,
-  image,
   ogTitle,
   ogDescription,
   children,
@@ -63,18 +63,51 @@ export default function BlogArticleLayout({
 
   useScrollToTop()
 
+  // Use the article cover image for sharing (no in-article hero rendering).
+  const ogImage = getBlogOgImageUrl(slug) || 'https://folio.id/og-images/folio-app-hero.png'
+
   usePageTitle({
     title: `${title} | Folio Blog`,
     description: description,
+    ogType: 'article',
     ogTitle: ogTitle || title,
     ogDescription: ogDescription || description,
+    ogImage,
     ogUrl: `https://folio.id/blog/${slug}`,
+    canonicalUrl: `https://folio.id/blog/${slug}`,
   })
 
   return (
     <div className="flex flex-col items-start min-h-screen relative w-full">
       <Navbar />
       <main className="flex-1 w-full">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'BlogPosting',
+              headline: title,
+              description,
+              datePublished: date,
+              image: ogImage,
+              mainEntityOfPage: {
+                '@type': 'WebPage',
+                '@id': `https://folio.id/blog/${slug}`,
+              },
+              author: {
+                '@type': 'Organization',
+                name: 'Folio',
+                url: 'https://folio.id',
+              },
+              publisher: {
+                '@type': 'Organization',
+                name: 'Folio',
+                url: 'https://folio.id',
+              },
+            }),
+          }}
+        />
         <section className="bg-white border-[#e5e5e5] border-b border-l-0 border-r-0 border-solid border-t-0 flex flex-col gap-6 items-center px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full">
           <div className="flex flex-col gap-12 items-start justify-center px-6 md:px-6 py-0 relative shrink-0 w-full max-w-[768px]">
             {/* Meta information and Title */}
@@ -100,19 +133,6 @@ export default function BlogArticleLayout({
                 </p>
               </div>
             </div>
-
-            {/* Hero image (optional) */}
-            {image && (
-              <div className="w-full aspect-[3/2] relative rounded-xl overflow-hidden">
-                <img
-                  src={image}
-                  alt={title}
-                  className="absolute inset-0 w-full h-full object-cover"
-                  loading="eager"
-                  fetchPriority="high"
-                />
-              </div>
-            )}
 
             {/* Article content */}
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">

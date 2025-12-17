@@ -37,6 +37,7 @@ export default function MobileMenuLink({
     role,
     ...props
 }: MobileMenuLinkProps & Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'className'>) {
+    void active
     // Base classes - highlight extends edge-to-edge with px-6 for content padding
     const baseClasses = 'box-border flex gap-2 items-start w-full px-6 py-3 outline-none focus-visible:outline-none transition-all text-left'
 

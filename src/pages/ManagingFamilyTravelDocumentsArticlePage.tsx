@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function ManagingFamilyTravelDocumentsArticlePage() {
   return (
@@ -191,7 +192,7 @@ export default function ManagingFamilyTravelDocumentsArticlePage() {
       <ArticleH2>Managing documents with Folio</ArticleH2>
 
       <ArticleParagraph>
-        <a href="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio's digital wallet app</a> is built for exactly this scenario. Each family member can store their personal documents (passports, IDs, medical cards), then create shared folders where trip documents live together.
+        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio's digital wallet app</Link> is built for exactly this scenario. Each family member can store their personal documents (passports, IDs, medical cards), then create shared folders where trip documents live together.
       </ArticleParagraph>
 
       <ArticleParagraph>

@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleBlockquote, ArticleTable } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function TripItAlternativeArticlePage() {
   return (
@@ -59,7 +60,7 @@ export default function TripItAlternativeArticlePage() {
       />
 
       <ArticleParagraph>
-        Choose TripIt if you only need an itinerary builder and value real-time flight alerts. Choose <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> if you want both travel organization and secure document storage in one place. TripIt keeps your trips tidy. Folio keeps your entire travel life secure.
+        Choose TripIt if you only need an itinerary builder and value real-time flight alerts. Choose <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link> if you want both travel organization and secure document storage in one place. TripIt keeps your trips tidy. Folio keeps your entire travel life secure.
       </ArticleParagraph>
 
       <ArticleBlockquote>

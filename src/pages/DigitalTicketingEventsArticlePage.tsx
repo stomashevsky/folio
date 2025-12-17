@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function DigitalTicketingEventsArticlePage() {
   return (
@@ -178,7 +179,7 @@ export default function DigitalTicketingEventsArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        For attendees who want to keep all their tickets organized in one secure place, <a href="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio's digital wallet app</a> stores event tickets alongside travel documents and boarding passes, ensuring everything is accessible when needed.
+        For attendees who want to keep all their tickets organized in one secure place, <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio's digital wallet app</Link> stores event tickets alongside travel documents and boarding passes, ensuring everything is accessible when needed.
       </ArticleParagraph>
     </BlogArticleLayout>
   )

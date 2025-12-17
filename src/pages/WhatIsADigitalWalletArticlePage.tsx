@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function WhatIsADigitalWalletArticlePage() {
   return (
@@ -44,7 +45,7 @@ export default function WhatIsADigitalWalletArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        There are some potential drawbacks to consider. Limited acceptance means not all merchants accept digital wallet payments yet. Device dependency is another consideration: if your device is lost or runs out of battery, you lose access to your digital wallet. Many wallet apps are available for free. For instance, several popular wallet apps can be downloaded and used without any charge. However, while the app itself may be free, using certain features or making specific types of transactions might incur fees, like it's in PayPal, depending on the app's policies or the associated financial institutions. Always check the terms of service and fee structure for your chosen wallet payment method to avoid any unexpected costs. In general, the basic functionality of storing and using payment cards is free, making it an accessible option for most users. As we go back to <strong>Folio Wallet</strong>, it is totally free to download. It means that you do not need to pay for getting the app. All you have to do is to find it in the App Store or Google Play, tap the download button and enjoy. <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</a>
+        There are some potential drawbacks to consider. Limited acceptance means not all merchants accept digital wallet payments yet. Device dependency is another consideration: if your device is lost or runs out of battery, you lose access to your digital wallet. Many wallet apps are available for free. For instance, several popular wallet apps can be downloaded and used without any charge. However, while the app itself may be free, using certain features or making specific types of transactions might incur fees, like it's in PayPal, depending on the app's policies or the associated financial institutions. Always check the terms of service and fee structure for your chosen wallet payment method to avoid any unexpected costs. In general, the basic functionality of storing and using payment cards is free, making it an accessible option for most users. As we go back to <strong>Folio Wallet</strong>, it is totally free to download. It means that you do not need to pay for getting the app. All you have to do is to find it in the App Store or Google Play, tap the download button and enjoy. <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</Link>
       </ArticleParagraph>
 
       <ArticleParagraph>

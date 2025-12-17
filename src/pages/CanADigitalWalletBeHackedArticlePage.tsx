@@ -1,5 +1,6 @@
 import BlogArticleLayout from '../components/ui/BlogArticleLayout'
 import { ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function CanADigitalWalletBeHackedArticlePage() {
   return (
@@ -51,7 +52,7 @@ export default function CanADigitalWalletBeHackedArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Security measures differ depending on the type of cards and documents wallets hold, as well as the processes they handle. The more sensitive the data, the more security measures are required. Wallets for loyalty cards require minimal security, while wallets that store your documents and cards but don't process payments require more security measures. Wallets that process payments demand the strictest measures. <strong>Stocard</strong> stores loyalty cards and offers PIN and biometric authentication along with GDPR compliance. <strong>Folio Wallet</strong> stores cards and documents but doesn't process payments. It provides tokenization, replacing sensitive information with a secure token during transactions, PIN and biometric authentication, end-to-end encryption and zero-knowledge architecture ensuring only the user can access the information, alerts and notifications via email and push alerts for suspicious activity, and compliance with GDPR and SOC 2. <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</a>
+        Security measures differ depending on the type of cards and documents wallets hold, as well as the processes they handle. The more sensitive the data, the more security measures are required. Wallets for loyalty cards require minimal security, while wallets that store your documents and cards but don't process payments require more security measures. Wallets that process payments demand the strictest measures. <strong>Stocard</strong> stores loyalty cards and offers PIN and biometric authentication along with GDPR compliance. <strong>Folio Wallet</strong> stores cards and documents but doesn't process payments. It provides tokenization, replacing sensitive information with a secure token during transactions, PIN and biometric authentication, end-to-end encryption and zero-knowledge architecture ensuring only the user can access the information, alerts and notifications via email and push alerts for suspicious activity, and compliance with GDPR and SOC 2. <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</Link>
       </ArticleParagraph>
 
       <ArticleParagraph>

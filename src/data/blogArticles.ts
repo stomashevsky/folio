@@ -75,6 +75,65 @@ export const sortArticlesByDate = (articles: BlogArticle[]): BlogArticle[] => {
   })
 }
 
+const BLOG_OG_IMAGE_BY_SLUG: Record<string, string> = {
+  '10-travel-hacks-that-actually-work': 'blog-10-travel-hacks-that-actually-work.png',
+  '7-useful-apps-for-planning-your-trip': 'blog-7-useful-apps-for-planning-your-trip.png',
+  'access-your-digital-wallet-anywhere': 'blog-access-your-digital-wallet-anywhere.png',
+  'age-verification-requirements': 'blog-age-verification-requirements.png',
+  'albanian-diaspora-voter-registration': 'blog-albanian-diaspora-voter-registration.png',
+  'app-in-the-air-alternative': 'blog-app-in-the-air-alternative.png',
+  'apple-gift-card-add-to-wallet': 'blog-apple-gift-card-add-to-wallet.png',
+  'are-digital-wallets-safe': 'blog-are-digital-wallets-safe.png',
+  'best-apple-wallet-alternatives': 'blog-best-apple-wallet-alternatives.png',
+  'best-apps-to-plan-travel': 'blog-best-apps-to-plan-travel.png',
+  'best-digital-wallet-apps-in-canada': 'blog-best-digital-wallet-apps-in-canada.png',
+  'best-document-scanning-apps': 'blog-best-document-scanning-apps.png',
+  'best-gift-card-wallet-apps': 'blog-best-gift-card-wallet-apps.png',
+  'best-google-wallet-alternatives': 'blog-best-google-wallet-alternatives.png',
+  'best-id-scanner-app': 'blog-best-id-scanner-app.png',
+  'biometric-data-privacy': 'blog-biometric-data-privacy.png',
+  'can-a-digital-wallet-be-hacked': 'blog-can-a-digital-wallet-be-hacked.png',
+  'checkmytrip-alternative': 'blog-checkmytrip-alternative.png',
+  'client-onboarding-best-practices': 'blog-client-onboarding-best-practices.png',
+  'digital-credentials-government': 'blog-digital-credentials-government.png',
+  'digital-passport-copies': 'blog-digital-passport-copies.png',
+  'digital-ticketing-events': 'blog-digital-ticketing-events.png',
+  'digital-wallet-apps-for-every-need': 'blog-digital-wallet-apps-for-every-need.png',
+  'document-intelligence': 'blog-document-intelligence.png',
+  'end-to-end-encryption': 'blog-end-to-end-encryption.png',
+  'eudi-wallet': 'blog-eudi-wallet.png',
+  'face-matching-technology': 'blog-face-matching-technology.png',
+  'flight-tickets-on-iphone': 'blog-flight-tickets-on-iphone.png',
+  'how-to-add-and-store-your-medical-card': 'blog-how-to-add-and-store-your-medical-card.png',
+  'how-to-add-gift-cards-to-your-wallet-app': 'blog-how-to-add-gift-cards-to-your-wallet-app.png',
+  'how-to-secure-your-wallet-on-iphone': 'blog-how-to-secure-your-wallet-on-iphone.png',
+  'how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app': 'blog-how-to-share-travel-plans.png',
+  'how-to-store-and-use-loyalty-cards-on-your-iphone': 'blog-how-to-store-and-use-loyalty-cards-on-your-iphone.png',
+  'kyc-aml-compliance': 'blog-kyc-aml-compliance.png',
+  'managing-family-travel-documents': 'blog-managing-family-travel-documents.png',
+  'mobile-drivers-license': 'blog-mobile-drivers-license.png',
+  'nfc-identity-verification': 'blog-nfc-identity-verification.png',
+  'pass2u-alternative': 'blog-pass2u-alternative.png',
+  'regular-vs-digital-wallets': 'blog-regular-vs-digital-wallets.png',
+  'the-best-digital-wallets-for-android': 'blog-the-best-digital-wallets-for-android.png',
+  'the-best-digital-wallets-for-iphone': 'blog-the-best-digital-wallets-for-iphone.png',
+  'the-best-event-ticket-apps': 'blog-best-event-ticket-apps.png',
+  'the-ultimate-guide-to-the-safest-digital-wallet-app': 'blog-the-ultimate-guide-to-the-safest-digital-wallet-app.png',
+  'tripcase-alternative': 'blog-tripcase-alternative.png',
+  'tripit-alternative': 'blog-tripit-alternative.png',
+  'tripsy-alternative-travel-app': 'blog-tripsy-alternative.png',
+  'wanderlog-alternative': 'blog-wanderlog-alternative.png',
+  'what-is-a-digital-drivers-license': 'blog-what-is-a-digital-drivers-license.png',
+  'what-is-a-digital-wallet': 'blog-what-is-a-digital-wallet.png',
+  'what-is-liveness-detection': 'blog-what-is-liveness-detection.png',
+  'you-can-now-store-tickets-in-folio-wallet': 'blog-you-can-now-store-tickets-in-folio-wallet.png',
+}
+
+export function getBlogOgImageUrl(slug: string): string | undefined {
+  const filename = BLOG_OG_IMAGE_BY_SLUG[slug]
+  return filename ? `https://folio.id/og-images/${filename}` : undefined
+}
+
 export const blogArticles: BlogArticle[] = sortArticlesByDate([
   // ===== 2024 ARTICLES =====
   // Q1 2024

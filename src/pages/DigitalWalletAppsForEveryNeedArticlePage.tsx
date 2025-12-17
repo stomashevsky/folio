@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function DigitalWalletAppsForEveryNeedArticlePage() {
   return (
@@ -30,7 +31,7 @@ export default function DigitalWalletAppsForEveryNeedArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        If you're looking for a digital wallet to back up your important documents, <strong>Folio Wallet</strong> is ideal. This app stores everything from passports and driver's licenses to health insurance cards. It's a secure way to organize essential documents digitally. Folio allows you to organize documents into different categories, making it easy to quickly find what you need. Once signed up, you can access your documents from multiple devices. The app is compatible with both iOS and Android. <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</a> The main limitation is that it doesn't support payments, focusing instead on secure document storage and organization.
+        If you're looking for a digital wallet to back up your important documents, <strong>Folio Wallet</strong> is ideal. This app stores everything from passports and driver's licenses to health insurance cards. It's a secure way to organize essential documents digitally. Folio allows you to organize documents into different categories, making it easy to quickly find what you need. Once signed up, you can access your documents from multiple devices. The app is compatible with both iOS and Android. <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</Link> The main limitation is that it doesn't support payments, focusing instead on secure document storage and organization.
       </ArticleParagraph>
 
       <ArticleParagraph>

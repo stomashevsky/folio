@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleTable } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function BestAppleWalletAlternativesArticlePage() {
   return (
@@ -22,7 +23,7 @@ export default function BestAppleWalletAlternativesArticlePage() {
       <ArticleH2>The best Apple Wallet alternatives</ArticleH2>
 
       <ArticleParagraph>
-        <strong>Folio Wallet: the document vault Apple forgot.</strong> Rating: 4.7 stars (1.3K reviews). Folio Wallet turns your phone into a secure locker for everything that never fits inside Apple Wallet. Scan passports, IDs, health insurance, gift cards and medical cards. Each item is AES-256 encrypted and can sit in shared folders with family. Expiry-date alerts make sure that the driving licence doesn't lapse quietly. Travellers love dropping boarding passes into Apple Wallet but storing their visa and travel insurance beside them in Folio. The result is a calmer approach and a lighter paper wallet. Launch Folio and the app opens straight into a card-style grid. Tap +, point the camera: the auto-crop grabs your document edges, OCR lifts key data, and the document is added to your wallet. Finding things later is instant: go through categories or color code documents with labels. It's the calm, organised feeling you hoped Apple Wallet would give your paperwork. <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</a>
+        <strong>Folio Wallet: the document vault Apple forgot.</strong> Rating: 4.7 stars (1.3K reviews). Folio Wallet turns your phone into a secure locker for everything that never fits inside Apple Wallet. Scan passports, IDs, health insurance, gift cards and medical cards. Each item is AES-256 encrypted and can sit in shared folders with family. Expiry-date alerts make sure that the driving licence doesn't lapse quietly. Travellers love dropping boarding passes into Apple Wallet but storing their visa and travel insurance beside them in Folio. The result is a calmer approach and a lighter paper wallet. Launch Folio and the app opens straight into a card-style grid. Tap +, point the camera: the auto-crop grabs your document edges, OCR lifts key data, and the document is added to your wallet. Finding things later is instant: go through categories or color code documents with labels. It's the calm, organised feeling you hoped Apple Wallet would give your paperwork. <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</Link>
       </ArticleParagraph>
 
       <ArticleParagraph>

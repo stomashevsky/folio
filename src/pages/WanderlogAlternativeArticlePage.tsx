@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleBlockquote, ArticleTable } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function WanderlogAlternativeArticlePage() {
   return (
@@ -56,7 +57,7 @@ export default function WanderlogAlternativeArticlePage() {
       />
 
       <ArticleParagraph>
-        Choose Wanderlog if your main goal is to plan activities, find inspiration, and split costs with friends. Choose <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> if you want your tickets, bookings, and documents safe and accessible. All in one place. Protected with real security. Wanderlog helps you plan. Folio ensures you're ready.
+        Choose Wanderlog if your main goal is to plan activities, find inspiration, and split costs with friends. Choose <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link> if you want your tickets, bookings, and documents safe and accessible. All in one place. Protected with real security. Wanderlog helps you plan. Folio ensures you're ready.
       </ArticleParagraph>
 
       <ArticleBlockquote>

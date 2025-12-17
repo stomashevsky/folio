@@ -164,7 +164,7 @@ export function useFocusTrap<T extends HTMLElement>(isActive: boolean): RefObjec
           previousActiveElement.current.focus()
         } catch (error) {
           // Element might not be focusable, ignore error
-          console.warn('Failed to restore focus:', error)
+          // Intentionally swallow: focus restore is best-effort.
         }
       }
     }

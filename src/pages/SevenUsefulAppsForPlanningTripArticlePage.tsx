@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function SevenUsefulAppsForPlanningTripArticlePage() {
   return (
@@ -20,7 +21,7 @@ export default function SevenUsefulAppsForPlanningTripArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        More than a place to store boarding passes, <strong><a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a></strong> creates a timeline from your tickets, bookings, and events. You always know what's next. It also keeps your passport, ID, and insurance documents safe. Everything you need for travel. In one secure place.
+        More than a place to store boarding passes, <strong><Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link></strong> creates a timeline from your tickets, bookings, and events. You always know what's next. It also keeps your passport, ID, and insurance documents safe. Everything you need for travel. In one secure place.
       </ArticleParagraph>
 
       <ArticleParagraph>

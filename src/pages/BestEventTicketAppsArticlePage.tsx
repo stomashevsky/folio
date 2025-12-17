@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function BestEventTicketAppsArticlePage() {
   return (
@@ -32,7 +33,7 @@ export default function BestEventTicketAppsArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong><a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a></strong> accepts tickets from anywhere. Forward an email. Upload a PDF. Take a photo. It extracts the details and creates a clean, searchable ticket. All your tickets live in one timeline. Concerts. Sports. Conferences. Theater. You can search by date, venue, or event name. Everything works offline. It also stores your other important documents. Passports. IDs. Travel bookings. All encrypted and protected. Best for anyone who wants all tickets organized in one place, regardless of where you bought them.
+        <strong><Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link></strong> accepts tickets from anywhere. Forward an email. Upload a PDF. Take a photo. It extracts the details and creates a clean, searchable ticket. All your tickets live in one timeline. Concerts. Sports. Conferences. Theater. You can search by date, venue, or event name. Everything works offline. It also stores your other important documents. Passports. IDs. Travel bookings. All encrypted and protected. Best for anyone who wants all tickets organized in one place, regardless of where you bought them.
       </ArticleParagraph>
 
       <ArticleParagraph>

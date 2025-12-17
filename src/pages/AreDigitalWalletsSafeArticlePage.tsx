@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function AreDigitalWalletsSafeArticlePage() {
   return (
@@ -62,7 +63,7 @@ export default function AreDigitalWalletsSafeArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        For wallets that hold multiple types of cards and documents, such as identity documents, payment methods, and loyalty cards, more robust security features become necessary. This includes tokenization, encryption, and biometric authentication. <strong>Folio Wallet</strong> stores a variety of data but doesn't process payments directly. Folio Wallet offers tokenization, replacing sensitive information with a secure token during transactions. It provides PIN and biometric authentication, end-to-end encryption and zero-knowledge architecture ensuring only the user can access the information, alerts and notifications via email and push alerts for suspicious activity, and compliance with GDPR and SOC 2. <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</a>
+        For wallets that hold multiple types of cards and documents, such as identity documents, payment methods, and loyalty cards, more robust security features become necessary. This includes tokenization, encryption, and biometric authentication. <strong>Folio Wallet</strong> stores a variety of data but doesn't process payments directly. Folio Wallet offers tokenization, replacing sensitive information with a secure token during transactions. It provides PIN and biometric authentication, end-to-end encryption and zero-knowledge architecture ensuring only the user can access the information, alerts and notifications via email and push alerts for suspicious activity, and compliance with GDPR and SOC 2. <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</Link>
       </ArticleParagraph>
 
       <ArticleParagraph>

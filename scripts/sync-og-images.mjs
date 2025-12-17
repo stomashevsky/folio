@@ -11,6 +11,7 @@ const sourceImagesDir = path.join(repoRoot, 'src', 'assets', 'images')
 const ogImagesDir = path.join(repoRoot, 'public', 'og-images')
 
 const OG_IMAGE_RE = /ogImage:\s*['"]https:\/\/folio\.id\/og-images\/([^'"]+)['"]/g
+const BLOG_COVER_RE = /^blog-.*\.(png|jpg|jpeg|webp)$/i
 
 async function* walkFiles(dir) {
   const entries = await fs.readdir(dir, { withFileTypes: true })
@@ -37,6 +38,16 @@ async function collectOgImageFilenames() {
     while (match) {
       filenames.add(match[1])
       match = OG_IMAGE_RE.exec(content)
+    }
+  }
+
+  // Always include blog cover images so article sharing can use stable URLs:
+  // https://folio.id/og-images/blog-*.png
+  const imageEntries = await fs.readdir(sourceImagesDir, { withFileTypes: true })
+  for (const entry of imageEntries) {
+    if (!entry.isFile()) continue
+    if (BLOG_COVER_RE.test(entry.name)) {
+      filenames.add(entry.name)
     }
   }
 

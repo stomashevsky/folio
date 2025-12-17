@@ -1,5 +1,6 @@
 import BlogArticleLayout from '../components/ui/BlogArticleLayout'
 import { ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function BestIdScannerAppArticlePage() {
   return (
@@ -43,7 +44,7 @@ export default function BestIdScannerAppArticlePage() {
       </ArticleH2>
 
       <ArticleParagraph>
-        <strong><a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a></strong> is a secure ID scanner designed for people who want more than just a scan. Scan any physical ID or upload an existing PDF. The app automatically detects text, dates, and key details. It organizes everything into categories like Identity, Travel, and Health. For travelers, Folio builds a visual trip timeline from your scanned tickets and bookings. Everything in one place. Scan both sides of an ID and merge into one PDF. Automatic OCR reads important information. AES-256 encryption and biometric login. Zero-knowledge architecture means even we can't access your files. Works offline. Syncs across devices when you choose. Folio Wallet is ideal for anyone who wants secure, organized storage for identification documents.
+        <strong><Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link></strong> is a secure ID scanner designed for people who want more than just a scan. Scan any physical ID or upload an existing PDF. The app automatically detects text, dates, and key details. It organizes everything into categories like Identity, Travel, and Health. For travelers, Folio builds a visual trip timeline from your scanned tickets and bookings. Everything in one place. Scan both sides of an ID and merge into one PDF. Automatic OCR reads important information. AES-256 encryption and biometric login. Zero-knowledge architecture means even we can't access your files. Works offline. Syncs across devices when you choose. Folio Wallet is ideal for anyone who wants secure, organized storage for identification documents.
       </ArticleParagraph>
 
       <ArticleParagraph>

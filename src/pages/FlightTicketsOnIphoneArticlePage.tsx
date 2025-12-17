@@ -1,5 +1,6 @@
 import BlogArticleLayout from '../components/ui/BlogArticleLayout'
 import { ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function FlightTicketsOnIphoneArticlePage() {
   return (
@@ -31,7 +32,7 @@ export default function FlightTicketsOnIphoneArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong><a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a></strong> accepts flight tickets from anywhere. Forward an email. Upload a PDF. Take a photo. It extracts the details and creates a clean, searchable ticket. All your flights live in one timeline. Past trips. Upcoming journeys. Multiple airlines. You can search by date, airline, or destination. Everything works offline. It also stores your travel documents. Passports. IDs. Hotel bookings. Travel insurance. All in one secure, encrypted place. Best for anyone who wants all flights organized in one place, regardless of which airline or booking site you used.
+        <strong><Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link></strong> accepts flight tickets from anywhere. Forward an email. Upload a PDF. Take a photo. It extracts the details and creates a clean, searchable ticket. All your flights live in one timeline. Past trips. Upcoming journeys. Multiple airlines. You can search by date, airline, or destination. Everything works offline. It also stores your travel documents. Passports. IDs. Hotel bookings. Travel insurance. All in one secure, encrypted place. Best for anyone who wants all flights organized in one place, regardless of which airline or booking site you used.
       </ArticleParagraph>
 
       <ArticleParagraph>

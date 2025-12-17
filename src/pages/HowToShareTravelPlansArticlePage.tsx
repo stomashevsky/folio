@@ -1,5 +1,6 @@
 import BlogArticleLayout from '../components/ui/BlogArticleLayout'
 import { ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function HowToShareTravelPlansArticlePage() {
   return (
@@ -31,7 +32,7 @@ export default function HowToShareTravelPlansArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong><a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a></strong> creates a complete trip timeline from your tickets, bookings, and documents. Forward confirmation emails. Upload PDFs. Take photos. Everything organizes into one clear timeline. Share your trip with a single link. Friends can view the full itinerary on their phone or computer. They see flights, hotels, restaurants, activities. All in chronological order. With dates, times, and addresses. When you update your trip, everyone sees the changes. Add a restaurant reservation. Update a flight time. Change a hotel. The shared link stays current. No one needs to download an app. No one needs an account. Just click the link and see your shared trip.
+        <strong><Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link></strong> creates a complete trip timeline from your tickets, bookings, and documents. Forward confirmation emails. Upload PDFs. Take photos. Everything organizes into one clear timeline. Share your trip with a single link. Friends can view the full itinerary on their phone or computer. They see flights, hotels, restaurants, activities. All in chronological order. With dates, times, and addresses. When you update your trip, everyone sees the changes. Add a restaurant reservation. Update a flight time. Change a hotel. The shared link stays current. No one needs to download an app. No one needs an account. Just click the link and see your shared trip.
       </ArticleParagraph>
 
       <ArticleParagraph>

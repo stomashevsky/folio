@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleTable } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function BestGoogleWalletAlternativesArticlePage() {
   return (
@@ -35,7 +36,7 @@ export default function BestGoogleWalletAlternativesArticlePage() {
       <ArticleH2>The best Google Wallet alternatives</ArticleH2>
 
       <ArticleParagraph>
-        <strong>1. Folio Wallet, the document fortress.</strong> Rating: 4.5 on Google Play. Price: Free. Folio is a zero-knowledge vault for storing passports, visas, medical certificates, insurance documents, and even both sides of your driver's license. All files are encrypted with AES-256, which means only you can access your documents. If you prefer to create an account instead of storing everything on your device, your data is uploaded to our servers in an encrypted format. This level of security comes with a recovery code, something you should never forget in case you lose access and don't remember your password. For organization, you can tag documents, set renewal reminders, and generate secure links to share them with friends and family. Your wallet still can't handle multi-page PDFs or remind you six months before your passport expires. Folio does both in seconds, works fully offline when needed, and displays everything in a neatly organized way. Pro tip: turn on notifications. Folio tracks the expiry dates of all your documents and automatically sets alerts, so you never have to enter a date manually. <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</a>
+        <strong>1. Folio Wallet, the document fortress.</strong> Rating: 4.5 on Google Play. Price: Free. Folio is a zero-knowledge vault for storing passports, visas, medical certificates, insurance documents, and even both sides of your driver's license. All files are encrypted with AES-256, which means only you can access your documents. If you prefer to create an account instead of storing everything on your device, your data is uploaded to our servers in an encrypted format. This level of security comes with a recovery code, something you should never forget in case you lose access and don't remember your password. For organization, you can tag documents, set renewal reminders, and generate secure links to share them with friends and family. Your wallet still can't handle multi-page PDFs or remind you six months before your passport expires. Folio does both in seconds, works fully offline when needed, and displays everything in a neatly organized way. Pro tip: turn on notifications. Folio tracks the expiry dates of all your documents and automatically sets alerts, so you never have to enter a date manually. <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</Link>
       </ArticleParagraph>
 
       <ArticleParagraph>

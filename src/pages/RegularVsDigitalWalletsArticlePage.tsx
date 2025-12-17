@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function RegularVsDigitalWalletsArticlePage() {
   return (
@@ -16,7 +17,7 @@ export default function RegularVsDigitalWalletsArticlePage() {
       <ArticleH2>What are regular and digital wallets?</ArticleH2>
 
       <ArticleParagraph>
-        A regular wallet is a physical accessory designed to store cash, cards, identification, and other small personal items. It's a familiar, reliable tool that has been around for centuries. Regular wallets require no technology and are instantly accessible anywhere. A phone wallet, also known as a digital wallet, is a mobile app or software that stores payment information, identification, loyalty cards, and other essentials digitally. Accessible through smartphones and computers, phone wallets offer more than payment functionality: they also support travel tickets, membership cards, and document management. Popular examples include Apple Wallet, Google Wallet, and <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a>, each with specific features and integrations that make everyday transactions easier.
+        A regular wallet is a physical accessory designed to store cash, cards, identification, and other small personal items. It's a familiar, reliable tool that has been around for centuries. Regular wallets require no technology and are instantly accessible anywhere. A phone wallet, also known as a digital wallet, is a mobile app or software that stores payment information, identification, loyalty cards, and other essentials digitally. Accessible through smartphones and computers, phone wallets offer more than payment functionality: they also support travel tickets, membership cards, and document management. Popular examples include Apple Wallet, Google Wallet, and <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link>, each with specific features and integrations that make everyday transactions easier.
       </ArticleParagraph>
 
       <ArticleParagraph>

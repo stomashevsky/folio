@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleBlockquote, ArticleTable } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function AppInTheAirAlternativeArticlePage() {
   return (
@@ -57,7 +58,7 @@ export default function AppInTheAirAlternativeArticlePage() {
       />
 
       <ArticleParagraph>
-        If you miss App in the Air's flight tracking, real-time alerts are coming to Folio. But right now, <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> already offers everything else you need: secure document storage, automatic timelines, shared folders, and offline access. It's the natural next step for travelers who want to stay organized.
+        If you miss App in the Air's flight tracking, real-time alerts are coming to Folio. But right now, <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link> already offers everything else you need: secure document storage, automatic timelines, shared folders, and offline access. It's the natural next step for travelers who want to stay organized.
       </ArticleParagraph>
 
       <ArticleBlockquote>

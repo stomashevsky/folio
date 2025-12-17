@@ -1,5 +1,6 @@
 import BlogArticleLayout from '../components/ui/BlogArticleLayout'
 import { ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function AccessYourDigitalWalletAnywhereArticlePage() {
   return (
@@ -43,7 +44,7 @@ export default function AccessYourDigitalWalletAnywhereArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Folio is built to make document management feel effortless. No clutter, no searching, no zooming through PDF pages. Just a digital wallet that quietly organizes the most important parts of your life so you can focus on the experience, not the paperwork. <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available free on iOS and Android.</a>
+        Folio is built to make document management feel effortless. No clutter, no searching, no zooming through PDF pages. Just a digital wallet that quietly organizes the most important parts of your life so you can focus on the experience, not the paperwork. <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available free on iOS and Android.</Link>
       </ArticleParagraph>
     </BlogArticleLayout>
   )

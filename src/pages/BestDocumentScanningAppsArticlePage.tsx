@@ -1,5 +1,6 @@
 import BlogArticleLayout from '../components/ui/BlogArticleLayout'
 import { ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function BestDocumentScanningAppsArticlePage() {
   return (
@@ -27,7 +28,7 @@ export default function BestDocumentScanningAppsArticlePage() {
       </ArticleH2>
 
       <ArticleParagraph>
-        <strong><a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a></strong> is more than a scanner. It's a secure digital wallet for everything important. Scan a document, and Folio automatically recognizes what it is. Passport? ID? Travel ticket? The app categorizes it, extracts the key details, and organizes it for you. No manual sorting. Fast, precise scanning with automatic cropping. Multi-page PDF support. Categories for identity, travel, health, and more. Automatic trip timeline from your tickets. AES-256 encryption and biometric authentication. Works offline. For travelers who want their passports, boarding passes, and hotel bookings in one secure place, Folio is the clear choice.
+        <strong><Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link></strong> is more than a scanner. It's a secure digital wallet for everything important. Scan a document, and Folio automatically recognizes what it is. Passport? ID? Travel ticket? The app categorizes it, extracts the key details, and organizes it for you. No manual sorting. Fast, precise scanning with automatic cropping. Multi-page PDF support. Categories for identity, travel, health, and more. Automatic trip timeline from your tickets. AES-256 encryption and biometric authentication. Works offline. For travelers who want their passports, boarding passes, and hotel bookings in one secure place, Folio is the clear choice.
       </ArticleParagraph>
 
       <ArticleParagraph>

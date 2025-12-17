@@ -11,7 +11,7 @@ export default function DesktopNav() {
 
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault()
-    const isHomePage = location.pathname === '/' || location.pathname === '/folio' || location.pathname === '/folio/'
+    const isHomePage = location.pathname === '/'
     if (isHomePage) {
       scrollToTop()
     } else {
@@ -38,7 +38,7 @@ export default function DesktopNav() {
 
   const handleGetAppClick = (e: React.MouseEvent) => {
     e.preventDefault()
-    const isHomePage = location.pathname === '/' || location.pathname === '/folio' || location.pathname === '/folio/'
+    const isHomePage = location.pathname === '/'
     if (isHomePage) {
       scrollToSection('get-the-app')
     } else {

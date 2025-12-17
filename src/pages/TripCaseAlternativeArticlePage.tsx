@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleBlockquote, ArticleTable } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function TripCaseAlternativeArticlePage() {
   return (
@@ -64,7 +65,7 @@ export default function TripCaseAlternativeArticlePage() {
       />
 
       <ArticleParagraph>
-        TripCase was great. But the way we travel has changed. We need more than an itinerary. We need a single place for everything. <strong>Download <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a>. Add your first trip. See how it feels to be organized.</strong>
+        TripCase was great. But the way we travel has changed. We need more than an itinerary. We need a single place for everything. <strong>Download <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link>. Add your first trip. See how it feels to be organized.</strong>
       </ArticleParagraph>
     </BlogArticleLayout>
   )

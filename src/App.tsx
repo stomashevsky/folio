@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import ScrollToTop from './components/ScrollToTop'
 import FolioAppPage from './pages/FolioAppPage'
 import PlaygroundPage from './pages/PlaygroundPage'
@@ -82,7 +82,7 @@ function RedirectHandler() {
     
     if (search && search[1] === '/') {
       // Extract the path from query string (e.g., '/government' from '?/government')
-      let pathWithParams = search.slice(1) // Removes '?' -> '/government'
+      const pathWithParams = search.slice(1) // Removes '?' -> '/government'
       
       // Find where the actual path ends (before any additional query params)
       let pathEnd = pathWithParams.length
@@ -128,15 +128,36 @@ function RedirectHandler() {
   return null
 }
 
+function PrerenderReadyMarker() {
+  const location = useLocation()
+  const [ready, setReady] = useState(false)
+
+  useEffect(() => {
+    // Used by build-time prerendering to know when the page is fully rendered.
+    // Double rAF helps ensure layout + effects (like meta tags) are applied.
+    setReady(false)
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        setReady(true)
+      })
+    })
+  }, [location.pathname, location.search, location.hash])
+
+  return ready ? <span id="prerender-ready" style={{ display: 'none' }} /> : null
+}
+
 function App() {
-  // Use Vite's BASE_URL which matches the base config
-  // In dev: '/', in production build: '/folio'
-  const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/'
+  // Detect deploy base at runtime so the same build works on:
+  // - https://folio.id/ (root)
+  // - https://stomashevsky.github.io/folio/ (GitHub Pages project site)
+  const runtimeBase =
+    typeof window !== 'undefined' && window.location.pathname.startsWith('/folio') ? '/folio' : undefined
   
   return (
-    <BrowserRouter basename={basename}>
+    <BrowserRouter basename={runtimeBase}>
       <ScrollToTop />
       <RedirectHandler />
+      <PrerenderReadyMarker />
       <Routes>
         <Route path="/" element={<FolioAppPage />} />
         <Route path="/government/playground" element={<PlaygroundPage />} />

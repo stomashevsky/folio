@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function BestGiftCardWalletAppsArticlePage() {
   return (
@@ -28,7 +29,7 @@ export default function BestGiftCardWalletAppsArticlePage() {
       <ArticleH2>Best gift card wallet apps</ArticleH2>
 
       <ArticleParagraph>
-        <strong>Folio Wallet</strong> is one of the most comprehensive digital wallets available, designed to manage not just gift cards but also a range of other documents, from payment cards to IDs. Folio's multi-functional approach and user-centered design make it a standout option for users who need an efficient way to store and organize digital information. Folio Wallet's gift card storage features include easy card scanning or manual entry, allowing users to quickly add cards with customizable organization. Users can label and categorize cards as they wish, simplifying the retrieval process. Additionally, Folio Wallet provides expiration reminders for gift cards, reducing the risk of losing unused card value. Security is also a top priority: Folio Wallet uses encryption and strong access protection to safeguard stored information. By offering these features within a sleek, intuitive design, Folio Wallet stands out as an ideal choice for those who want a one-stop solution for their digital cards. <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</a>
+        <strong>Folio Wallet</strong> is one of the most comprehensive digital wallets available, designed to manage not just gift cards but also a range of other documents, from payment cards to IDs. Folio's multi-functional approach and user-centered design make it a standout option for users who need an efficient way to store and organize digital information. Folio Wallet's gift card storage features include easy card scanning or manual entry, allowing users to quickly add cards with customizable organization. Users can label and categorize cards as they wish, simplifying the retrieval process. Additionally, Folio Wallet provides expiration reminders for gift cards, reducing the risk of losing unused card value. Security is also a top priority: Folio Wallet uses encryption and strong access protection to safeguard stored information. By offering these features within a sleek, intuitive design, Folio Wallet stands out as an ideal choice for those who want a one-stop solution for their digital cards. <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</Link>
       </ArticleParagraph>
 
       <ArticleParagraph>

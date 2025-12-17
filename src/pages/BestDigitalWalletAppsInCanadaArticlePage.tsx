@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function BestDigitalWalletAppsInCanadaArticlePage() {
   return (
@@ -34,7 +35,7 @@ export default function BestDigitalWalletAppsInCanadaArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Folio</strong> is a lesser-known but highly effective digital wallet app designed for storing important documents like passports, health cards, driver's licenses, and insurance policies. This makes it incredibly useful for securely organizing personal records in digital form. Folio offers encrypted storage and sharing options, ensuring that your sensitive information is protected. <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</a>
+        <strong>Folio</strong> is a lesser-known but highly effective digital wallet app designed for storing important documents like passports, health cards, driver's licenses, and insurance policies. This makes it incredibly useful for securely organizing personal records in digital form. Folio offers encrypted storage and sharing options, ensuring that your sensitive information is protected. <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</Link>
       </ArticleParagraph>
 
       <ArticleParagraph>

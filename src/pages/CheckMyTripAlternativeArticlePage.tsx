@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleBlockquote, ArticleTable } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function CheckMyTripAlternativeArticlePage() {
   return (
@@ -59,7 +60,7 @@ export default function CheckMyTripAlternativeArticlePage() {
       />
 
       <ArticleParagraph>
-        Choose CheckMyTrip if you only need basic itinerary management from booking confirmations. Choose <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</a> if you want your entire travel life organized and protected. Bookings, documents, tickets, and IDs. All in one secure place.
+        Choose CheckMyTrip if you only need basic itinerary management from booking confirmations. Choose <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link> if you want your entire travel life organized and protected. Bookings, documents, tickets, and IDs. All in one secure place.
       </ArticleParagraph>
 
       <ArticleBlockquote>

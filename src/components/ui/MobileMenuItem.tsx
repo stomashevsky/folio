@@ -32,6 +32,7 @@ export default function MobileMenuItem({
     'aria-current': ariaCurrent,
     ...props
 }: MobileMenuItemProps & Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'className'>) {
+    void active
     // Base classes matching Figma design
     const baseClasses = 'box-border flex gap-2 items-center justify-between w-full px-6 py-3 outline-none focus-visible:outline-none transition-all text-left'
 

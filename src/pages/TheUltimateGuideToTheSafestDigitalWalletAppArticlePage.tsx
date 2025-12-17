@@ -1,5 +1,6 @@
 import BlogArticleLayout from '../components/ui/BlogArticleLayout'
 import { ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function TheUltimateGuideToTheSafestDigitalWalletAppArticlePage() {
   return (
@@ -47,7 +48,7 @@ export default function TheUltimateGuideToTheSafestDigitalWalletAppArticlePage()
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Folio Wallet</strong> is a prime example of a versatile and secure digital wallet. Unlike other wallets focused solely on payments, Folio Wallet stores various documents, including IDs, credit cards, loyalty cards, and more. Folio Wallet uses end-to-end encryption to protect your data, ensuring that sensitive information is never stored in plain text. Tokenization adds an extra layer of safety by replacing sensitive information with secure tokens during transactions. The app features zero-knowledge architecture, meaning Folio does not have access to your data: only the user can decrypt and access information. Users can set up fingerprint or facial recognition along with a secure PIN to access their wallet. Folio sends real-time alerts for suspicious activities and document expirations. The wallet complies with security standards like GDPR and SOC2, ensuring that user data is handled according to industry best practices. Folio Wallet is ideal for users who need to store multiple types of documents securely. It provides robust encryption, easy sharing options, and features that cater to those who travel frequently or need to access documents on the go. <a href="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</a>
+        <strong>Folio Wallet</strong> is a prime example of a versatile and secure digital wallet. Unlike other wallets focused solely on payments, Folio Wallet stores various documents, including IDs, credit cards, loyalty cards, and more. Folio Wallet uses end-to-end encryption to protect your data, ensuring that sensitive information is never stored in plain text. Tokenization adds an extra layer of safety by replacing sensitive information with secure tokens during transactions. The app features zero-knowledge architecture, meaning Folio does not have access to your data: only the user can decrypt and access information. Users can set up fingerprint or facial recognition along with a secure PIN to access their wallet. Folio sends real-time alerts for suspicious activities and document expirations. The wallet complies with security standards like GDPR and SOC2, ensuring that user data is handled according to industry best practices. Folio Wallet is ideal for users who need to store multiple types of documents securely. It provides robust encryption, easy sharing options, and features that cater to those who travel frequently or need to access documents on the go. <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</Link>
       </ArticleParagraph>
 
       <ArticleParagraph>
