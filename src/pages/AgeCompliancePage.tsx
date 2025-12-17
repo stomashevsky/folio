@@ -136,10 +136,10 @@ export default function AgeCompliancePage() {
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
                 <HeroTagline icon={ageIcon}>Age compliance</HeroTagline>
-                <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+                <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px]">
                   Age verification service for global compliance
                 </h1>
-                <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
+                <p className="font-normal leading-6 text-[#737373] text-base w-full">
                   Folio helps you confirm user age quickly and securely anywhere in the world. You choose verification methods that match your risk level, from private anonymous checks to full identity verification, while staying aligned with global standards including GDPR, COPPA, DSA and others.
                 </p>
               </div>
@@ -168,10 +168,10 @@ export default function AgeCompliancePage() {
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
                 <HeroTagline icon={ageIcon}>Age compliance</HeroTagline>
-                <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+                <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
                   Age verification service for global compliance
                 </h1>
-                <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
+                <p className="font-normal leading-6 text-[#737373] text-base w-full">
                   Folio helps you confirm user age quickly and securely anywhere in the world. You choose verification methods that match your risk level, from private anonymous checks to full identity verification, while staying aligned with global standards including GDPR, COPPA, DSA and others.
                 </p>
               </div>
@@ -200,10 +200,10 @@ export default function AgeCompliancePage() {
         <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
           <div className="flex flex-col gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-4 md:gap-6 items-center text-center max-w-[576px] relative shrink-0 w-full">
-              <h2 className="font-bold leading-[36px] md:leading-[48px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+              <h2 className="font-bold leading-[36px] md:leading-[48px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px]">
                 Age checks without friction
               </h2>
-              <p className="font-normal leading-6 md:leading-7 text-[#737373] text-base md:text-lg w-full whitespace-pre-wrap">
+              <p className="font-normal leading-6 md:leading-7 text-[#737373] text-base md:text-lg w-full">
                 Age verification with Folio is fast, intuitive and smooth. Users complete a selfie, age credential or a document scan in a few seconds, keeping onboarding simple and minimising drop offs.
               </p>
             </div>
@@ -369,7 +369,7 @@ export default function AgeCompliancePage() {
                   <IconContainer size={40}>
                     <img src={method.icon} alt="" aria-hidden="true" className="w-5 h-5" />
                   </IconContainer>
-                  <div className="flex flex-col gap-2 items-start leading-6 relative shrink-0 text-base w-full whitespace-pre-wrap">
+                  <div className="flex flex-col gap-2 items-start leading-6 relative shrink-0 text-base w-full">
                     <p className="font-semibold relative shrink-0 text-[#0a0a0a] w-full">
                       {method.title}
                     </p>
@@ -389,10 +389,10 @@ export default function AgeCompliancePage() {
           <div className="hidden md:flex items-center max-w-[1280px] px-6 relative shrink-0 w-full">
             <div className="flex gap-16 items-center p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
               <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px] min-w-0">
-                <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+                <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
                   Bring accurate age verification to your product
                 </h2>
-                <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full whitespace-pre-wrap">
+                <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
                   Folio helps you protect users, satisfy regulators and maintain a smooth experience. Talk to our team to design an age assurance flow that fits your product.
                 </p>
               </div>
@@ -409,11 +409,11 @@ export default function AgeCompliancePage() {
 
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-8 items-center w-full px-6 py-16 relative shrink-0" style={BACKGROUND_STYLE}>
-            <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full whitespace-pre-wrap">
-              <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+            <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full">
+              <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
                 Bring accurate age verification to your product
               </h2>
-              <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full whitespace-pre-wrap">
+              <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
                 Folio helps you protect users, satisfy regulators and maintain a smooth experience. Talk to our team to design an age assurance flow that fits your product.
               </p>
             </div>

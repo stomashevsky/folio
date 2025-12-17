@@ -14,7 +14,7 @@ export default function Switch({ label, checked, onChange }: SwitchProps) {
       onMouseDown={(e) => e.preventDefault()}
       className={`box-border flex gap-3 items-center justify-between p-0 relative shrink-0 w-full cursor-pointer rounded-md ${FOCUS_STYLES}`}
     >
-      <p className="font-medium leading-none relative shrink-0 text-[#0a0a0a] text-sm whitespace-pre-wrap text-left">
+      <p className="font-medium leading-none relative shrink-0 text-[#0a0a0a] text-sm text-left">
         {label}
       </p>
       <div

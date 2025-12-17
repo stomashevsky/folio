@@ -54,7 +54,7 @@ function ExploreMoreCard({ item }: { item: PlatformItem }) {
           <p className="font-semibold leading-6 relative shrink-0 text-base text-[#0a0a0a] w-full break-words">
             {item.label}
           </p>
-          <p className="font-normal leading-5 relative shrink-0 text-[#737373] text-sm w-full whitespace-pre-wrap break-words">
+          <p className="font-normal leading-5 relative shrink-0 text-[#737373] text-sm w-full break-words">
             {item.description}
           </p>
         </div>

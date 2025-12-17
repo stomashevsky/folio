@@ -40,10 +40,10 @@ export default function GovernmentPage() {
           <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <HeroTagline icon={landmarkIcon}>Government</HeroTagline>
-              <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+              <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px]">
                 Digital identity aligned with global standards
               </h1>
-              <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
+              <p className="font-normal leading-6 text-[#737373] text-base w-full">
                 Tools for governments to design, test and deploy modern digital credentials, with a secure sandbox that mirrors real European digital ID flows and lets you explore demo documents, verify QR codes and see exactly what information is shared.
               </p>
             </div>
@@ -85,10 +85,10 @@ export default function GovernmentPage() {
           <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
             <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
               <HeroTagline icon={landmarkIcon}>Government</HeroTagline>
-              <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+              <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
                 Digital identity aligned with global standards
               </h1>
-              <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
+              <p className="font-normal leading-6 text-[#737373] text-base w-full">
                 Tools for governments to design, test and deploy modern digital credentials, with a secure sandbox that mirrors real European digital ID flows and lets you explore demo documents, verify QR codes and see exactly what information is shared.
               </p>
             </div>
@@ -194,7 +194,7 @@ export default function GovernmentPage() {
             />
             <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
               {/* Challenge */}
-              <div className="flex flex-col gap-1 items-start leading-6 relative shrink-0 text-base w-full whitespace-pre-wrap">
+              <div className="flex flex-col gap-1 items-start leading-6 relative shrink-0 text-base w-full">
                 <p className="font-semibold relative shrink-0 text-[#0a0a0a] w-full">
                   Challenge
                 </p>
@@ -203,7 +203,7 @@ export default function GovernmentPage() {
                 </p>
               </div>
               {/* Solution */}
-              <div className="flex flex-col gap-1 items-start leading-6 relative shrink-0 text-base w-full whitespace-pre-wrap">
+              <div className="flex flex-col gap-1 items-start leading-6 relative shrink-0 text-base w-full">
                 <p className="font-semibold relative shrink-0 text-[#0a0a0a] w-full">
                   Solution
                 </p>
@@ -213,11 +213,11 @@ export default function GovernmentPage() {
               </div>
               {/* Results */}
               <div className="flex flex-col gap-2 items-start relative shrink-0 w-full">
-                <p className="font-semibold leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
+                <p className="font-semibold leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full">
                   Results
                 </p>
                 <div className="flex gap-8 items-start relative shrink-0 w-full">
-                  <div className="flex flex-1 flex-col gap-2 items-start relative self-stretch shrink-0 whitespace-pre-wrap">
+                  <div className="flex flex-1 flex-col gap-2 items-start relative self-stretch shrink-0">
                     <p className="font-bold leading-[36px] relative shrink-0 text-[#0a0a0a] text-[30px] w-full">
                       525%
                     </p>
@@ -225,7 +225,7 @@ export default function GovernmentPage() {
                       increase in diaspora participation vs previous election
                     </p>
                   </div>
-                  <div className="flex flex-1 flex-col gap-2 items-start relative self-stretch shrink-0 whitespace-pre-wrap">
+                  <div className="flex flex-1 flex-col gap-2 items-start relative self-stretch shrink-0">
                     <p className="font-bold leading-[36px] relative shrink-0 text-[#0a0a0a] text-[30px] w-full">
                       365,000+
                     </p>
@@ -238,7 +238,7 @@ export default function GovernmentPage() {
             </div>
             {/* Testimonial */}
             <div className="border-l border-[#737373] border-r-0 border-t-0 border-b-0 box-border flex flex-col gap-3 items-start px-6 py-4 relative shrink-0 w-full">
-              <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full whitespace-pre-wrap">
+              <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full">
                 "Working with Folio has been a transformative experience… they set a new standard of excellence for how digital identity solutions should be delivered."
               </p>
               <div className="flex gap-4 items-start relative shrink-0 w-full">
@@ -252,7 +252,7 @@ export default function GovernmentPage() {
                   </div>
                 </div>
                 <div className="box-border flex flex-1 gap-2 items-center min-h-[56px] min-w-0 px-0 py-1 relative shrink-0">
-                  <p className="flex-1 font-medium leading-6 min-h-0 min-w-0 relative shrink-0 text-[#0a0a0a] text-base whitespace-pre-wrap">
+                  <p className="flex-1 font-medium leading-6 min-h-0 min-w-0 relative shrink-0 text-[#0a0a0a] text-base">
                     <span className="leading-6">Ilirjan Celibashi</span>
                     <span className="font-normal leading-6 text-[#737373]"> - State Election Commissioner, Albania</span>
                   </p>
@@ -279,7 +279,7 @@ export default function GovernmentPage() {
             />
             <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
               {/* Challenge */}
-              <div className="flex flex-col gap-1 items-start leading-6 relative shrink-0 text-base w-full whitespace-pre-wrap">
+              <div className="flex flex-col gap-1 items-start leading-6 relative shrink-0 text-base w-full">
                 <p className="font-semibold relative shrink-0 text-[#0a0a0a] w-full">
                   Challenge
                 </p>
@@ -288,7 +288,7 @@ export default function GovernmentPage() {
                 </p>
               </div>
               {/* Solution */}
-              <div className="flex flex-col gap-1 items-start leading-6 relative shrink-0 text-base w-full whitespace-pre-wrap">
+              <div className="flex flex-col gap-1 items-start leading-6 relative shrink-0 text-base w-full">
                 <p className="font-semibold relative shrink-0 text-[#0a0a0a] w-full">
                   Solution
                 </p>
@@ -298,11 +298,11 @@ export default function GovernmentPage() {
               </div>
               {/* Results */}
               <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-                <p className="font-semibold leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
+                <p className="font-semibold leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full">
                   Results
                 </p>
                 <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-                  <div className="flex flex-col gap-1 items-start relative shrink-0 w-full whitespace-pre-wrap">
+                  <div className="flex flex-col gap-1 items-start relative shrink-0 w-full">
                     <p className="font-bold leading-8 relative shrink-0 text-[#0a0a0a] text-2xl w-full">
                       525%
                     </p>
@@ -310,7 +310,7 @@ export default function GovernmentPage() {
                       increase in diaspora participation vs previous election
                     </p>
                   </div>
-                  <div className="flex flex-col gap-1 items-start relative shrink-0 w-full whitespace-pre-wrap">
+                  <div className="flex flex-col gap-1 items-start relative shrink-0 w-full">
                     <p className="font-bold leading-8 relative shrink-0 text-[#0a0a0a] text-2xl w-full">
                       365,000+
                     </p>
@@ -323,7 +323,7 @@ export default function GovernmentPage() {
             </div>
             {/* Testimonial */}
             <div className="border-l border-[#737373] border-r-0 border-t-0 border-b-0 box-border flex flex-col gap-3 items-start px-6 py-4 relative shrink-0 w-full">
-              <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full whitespace-pre-wrap">
+              <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full">
                 "Working with Folio has been a transformative experience… they set a new standard of excellence for how digital identity solutions should be delivered."
               </p>
               <div className="flex gap-4 items-start relative shrink-0 w-full">
@@ -337,7 +337,7 @@ export default function GovernmentPage() {
                   </div>
                 </div>
                 <div className="box-border flex flex-1 gap-2 items-center min-h-[56px] min-w-0 px-0 py-1 relative shrink-0">
-                  <p className="flex-1 font-medium leading-6 min-h-0 min-w-0 relative shrink-0 text-[#0a0a0a] text-base whitespace-pre-wrap">
+                  <p className="flex-1 font-medium leading-6 min-h-0 min-w-0 relative shrink-0 text-[#0a0a0a] text-base">
                     <span className="leading-6">Ilirjan Celibashi</span>
                     <span className="font-normal leading-6 text-[#737373]"> - State Election Commissioner, Albania</span>
                   </p>
@@ -372,10 +372,10 @@ export default function GovernmentPage() {
         <div className="hidden md:flex items-center max-w-[1280px] px-6 relative shrink-0 w-full">
           <div className="flex gap-16 items-center p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
             <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px] min-w-0">
-              <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+              <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
                 Supporting national-scale programs
               </h2>
-              <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full whitespace-pre-wrap">
+              <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
                 Work with us on pilots, integrations and modernization efforts.
               </p>
             </div>
@@ -405,11 +405,11 @@ export default function GovernmentPage() {
 
         {/* Mobile Layout */}
         <div className="flex md:hidden flex-col gap-8 items-center w-full px-6 py-16 relative shrink-0" style={BACKGROUND_STYLE}>
-          <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full whitespace-pre-wrap">
-            <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+          <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full">
+            <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
               Supporting national-scale programs
             </h2>
-            <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full whitespace-pre-wrap">
+            <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
               Work with us on pilots, integrations and modernization efforts.
             </p>
           </div>

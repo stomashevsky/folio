@@ -124,7 +124,7 @@ export default function BlogArticleLayout({
               </div>
 
               {/* Title and subtitle */}
-              <div className="flex flex-col gap-4 md:gap-6 items-center relative shrink-0 text-center w-full whitespace-pre-wrap">
+              <div className="flex flex-col gap-4 md:gap-6 items-center relative shrink-0 text-center w-full">
                 <h1 className="font-bold leading-[36px] md:leading-[48px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px] min-w-full relative shrink-0 w-[min-content]">
                   {title}
                 </h1>

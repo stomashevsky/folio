@@ -54,6 +54,7 @@ export default function VerificationTable({ data }: VerificationTableProps) {
                 </div>
               ) : (
                 <div className="flex flex-1 flex-col font-medium justify-center min-h-px min-w-px relative shrink-0 text-[#0a0a0a] text-sm">
+                  {/* whitespace-pre-wrap preserved: dynamic data may contain line breaks */}
                   <p className="leading-5 whitespace-pre-wrap">
                     {item.value}
                   </p>

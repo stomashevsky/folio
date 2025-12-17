@@ -66,11 +66,11 @@ export default function FAQSection({
         <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
           {/* Title Section */}
           <div className="flex flex-col gap-4 md:gap-5 items-center relative shrink-0 w-full">
-            <p className="font-bold leading-[36px] md:leading-[40px] min-w-full relative shrink-0 text-[#0a0a0a] text-[30px] md:text-[36px] text-center tracking-[0px] w-[min-content] whitespace-pre-wrap">
+            <p className="font-bold leading-[36px] md:leading-[40px] min-w-full relative shrink-0 text-[#0a0a0a] text-[30px] md:text-[36px] text-center tracking-[0px] w-[min-content]">
               {title}
             </p>
             {description && (
-              <p className="font-normal leading-6 min-w-full relative shrink-0 text-[#737373] text-base text-center w-[min-content] whitespace-pre-wrap">
+              <p className="font-normal leading-6 min-w-full relative shrink-0 text-[#737373] text-base text-center w-[min-content]">
                 {description}
               </p>
             )}

@@ -114,10 +114,10 @@ export default function NfcIdentityScanPage() {
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
                 <HeroTagline icon={nfcIcon}>NFC identity scan</HeroTagline>
-                <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+                <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px]">
                   Spot passport and ID fraud instantly
                 </h1>
-                <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
+                <p className="font-normal leading-6 text-[#737373] text-base w-full">
                   Use NFC to read embedded passport and ID chip data, adding an extra security layer without adding user friction.
                 </p>
               </div>
@@ -143,10 +143,10 @@ export default function NfcIdentityScanPage() {
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
                 <HeroTagline icon={nfcIcon}>NFC identity scan</HeroTagline>
-                <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+                <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
                   Spot passport and ID fraud instantly
                 </h1>
-                <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
+                <p className="font-normal leading-6 text-[#737373] text-base w-full">
                   Use NFC to read embedded passport and ID chip data, adding an extra security layer without adding user friction.
                 </p>
               </div>
@@ -262,7 +262,7 @@ export default function NfcIdentityScanPage() {
         {/* Key features Section */}
         <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
           <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-            <div className="flex flex-col gap-5 items-start max-w-full md:max-w-[512px] relative shrink-0 w-full md:w-auto md:flex-1 whitespace-pre-wrap">
+            <div className="flex flex-col gap-5 items-start max-w-full md:max-w-[512px] relative shrink-0 w-full md:w-auto md:flex-1">
               <h2 className="font-bold leading-[36px] md:leading-[40px] text-[30px] md:text-[36px] text-[#0a0a0a] tracking-[0px] w-full">
                 Key features
               </h2>
@@ -312,10 +312,10 @@ export default function NfcIdentityScanPage() {
           <div className="hidden md:flex items-center max-w-[1280px] px-6 relative shrink-0 w-full">
             <div className="flex gap-16 items-center p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
               <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px] min-w-0">
-                <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+                <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
                   Build a stronger identity layer
                 </h2>
-                <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full whitespace-pre-wrap">
+                <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
                   Talk with our team to see how Folio can elevate your verification flow and protect your users at every step.
                 </p>
               </div>
@@ -329,11 +329,11 @@ export default function NfcIdentityScanPage() {
 
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-8 items-center w-full px-6 py-16 relative shrink-0" style={BACKGROUND_STYLE}>
-            <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full whitespace-pre-wrap">
-              <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+            <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full">
+              <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
                 Build a stronger identity layer
               </h2>
-              <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full whitespace-pre-wrap">
+              <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
                 Talk with our team to see how Folio can elevate your verification flow and protect your users at every step.
               </p>
             </div>
@@ -357,7 +357,7 @@ function FeatureHighlight({ icon, title, description }: { icon: string; title: s
       <div className="bg-white border border-[#e5e5e5] border-solid flex items-center justify-center relative rounded-md shrink-0 size-10 shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)]">
         <img src={icon} alt="" aria-hidden="true" className="w-5 h-5" />
       </div>
-      <div className="flex flex-col gap-2 items-start leading-6 relative shrink-0 text-base w-full whitespace-pre-wrap">
+      <div className="flex flex-col gap-2 items-start leading-6 relative shrink-0 text-base w-full">
         <p className="font-semibold relative shrink-0 text-[#0a0a0a] w-full">
           {title}
         </p>

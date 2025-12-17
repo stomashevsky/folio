@@ -142,10 +142,10 @@ function FolioAppPage() {
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
-              <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+              <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px]">
                 Your documents, always with you
               </h1>
-              <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
+              <p className="font-normal leading-6 text-[#737373] text-base w-full">
                 Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find. Your essential information is always at hand when you need it.
               </p>
             </div>
@@ -183,10 +183,10 @@ function FolioAppPage() {
         <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
             <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-              <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+              <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
                 Your documents, always with you
               </h1>
-              <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
+              <p className="font-normal leading-6 text-[#737373] text-base w-full">
                 Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find. Your essential information is always at hand when you need it.
               </p>
             </div>
@@ -607,7 +607,7 @@ function ImportMethod({ icon, title, description }: { icon: string; title: strin
       <div className="bg-white border border-[#e5e5e5] border-solid flex items-center justify-center relative rounded-md shrink-0 size-10">
         <img src={icon} alt="" aria-hidden="true" className="w-5 h-5" />
       </div>
-      <div className="flex flex-col gap-2 items-center leading-6 relative shrink-0 text-base text-center w-full whitespace-pre-wrap">
+      <div className="flex flex-col gap-2 items-center leading-6 relative shrink-0 text-base text-center w-full">
         <p className="font-semibold relative shrink-0 text-[#0a0a0a] w-full">
           {title}
         </p>
@@ -621,7 +621,7 @@ function ImportMethod({ icon, title, description }: { icon: string; title: strin
 
 function StatItem({ value, description }: { value: string; description: string }) {
   return (
-    <div className="flex flex-1 flex-col gap-2 items-start relative shrink-0 whitespace-pre-wrap">
+    <div className="flex flex-1 flex-col gap-2 items-start relative shrink-0">
       <p className="font-bold leading-8 md:leading-[36px] text-2xl md:text-[30px] relative shrink-0 text-[#0a0a0a] w-full">
         {value}
       </p>

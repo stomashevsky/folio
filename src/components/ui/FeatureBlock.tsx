@@ -24,7 +24,7 @@ export default function FeatureBlock({
       <IconContainer>
         <Icon name={icon} size={20} />
       </IconContainer>
-      <div className={`flex flex-col gap-2 ${alignClasses} leading-6 relative shrink-0 text-base w-full whitespace-pre-wrap`}>
+      <div className={`flex flex-col gap-2 ${alignClasses} leading-6 relative shrink-0 text-base w-full`}>
         <p className="font-semibold relative shrink-0 text-[#0a0a0a] w-full">
           {title}
         </p>

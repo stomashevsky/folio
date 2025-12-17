@@ -11,7 +11,7 @@ interface ArticleParagraphProps {
  */
 export default function ArticleParagraph({ children }: ArticleParagraphProps) {
   return (
-    <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full whitespace-pre-wrap">
+    <p className="font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full">
       {children}
     </p>
   )

@@ -54,7 +54,7 @@ export default function BlogArticleCard({ article, variant = 'desktop' }: BlogAr
         </div>
         
         {/* Title */}
-        <p className="font-semibold leading-6 relative shrink-0 text-base w-full whitespace-pre-wrap">
+        <p className="font-semibold leading-6 relative shrink-0 text-base w-full">
           {article.title}
         </p>
       </>

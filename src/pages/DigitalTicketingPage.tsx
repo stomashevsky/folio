@@ -50,12 +50,12 @@ export default function DigitalTicketingPage() {
           <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <HeroTagline icon={ticketIcon}>Digital ticketing</HeroTagline>
-              <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+              <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px]">
                 Better tickets
                 <br aria-hidden="true" />
                 No app to build
               </h1>
-              <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
+              <p className="font-normal leading-6 text-[#737373] text-base w-full">
                 Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone.
               </p>
             </div>
@@ -89,12 +89,12 @@ export default function DigitalTicketingPage() {
           <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
             <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
               <HeroTagline icon={ticketIcon}>Digital ticketing</HeroTagline>
-              <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+              <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
                 Better tickets
                 <br aria-hidden="true" />
                 No app to build
               </h1>
-              <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
+              <p className="font-normal leading-6 text-[#737373] text-base w-full">
                 Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone.
               </p>
             </div>
@@ -346,10 +346,10 @@ export default function DigitalTicketingPage() {
         <div className="hidden md:flex items-center max-w-[1280px] px-6 relative shrink-0 w-full">
           <div className="flex gap-16 items-center p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
             <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px] min-w-0">
-              <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+              <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
                 Turn every ticket into a great experience
               </h2>
-              <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full whitespace-pre-wrap">
+              <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
                 If you deliver tickets or bookings by email, Folio gives your customers a clearer and more reliable experience without changing how you work.
               </p>
             </div>
@@ -365,11 +365,11 @@ export default function DigitalTicketingPage() {
 
         {/* Mobile Layout */}
         <div className="flex md:hidden flex-col gap-8 items-center w-full px-6 py-16 relative shrink-0" style={BACKGROUND_STYLE}>
-          <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full whitespace-pre-wrap">
-            <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+          <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full">
+            <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
               Turn every ticket into a great experience
             </h2>
-            <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full whitespace-pre-wrap">
+            <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
               If you deliver tickets or bookings by email, Folio gives your customers a clearer and more reliable experience without changing how you work.
             </p>
           </div>
@@ -402,7 +402,7 @@ function FeatureListItem({ text }: { text: string }) {
           />
         </div>
       </div>
-      <p className="flex-1 font-medium leading-6 min-h-0 min-w-0 relative shrink-0 text-[#0a0a0a] text-base whitespace-pre-wrap">
+      <p className="flex-1 font-medium leading-6 min-h-0 min-w-0 relative shrink-0 text-[#0a0a0a] text-base">
         {text}
       </p>
     </div>
@@ -415,7 +415,7 @@ function OperatorListItem({ icon, title, description }: { icon: string; title: s
       <div className="bg-white border border-[#e5e5e5] border-solid flex items-center justify-center relative rounded-md shrink-0 size-10">
         <img src={icon} alt="" aria-hidden="true" className="w-5 h-5" />
       </div>
-      <div className="flex flex-1 flex-col gap-1 items-start leading-6 relative shrink-0 text-base min-w-0 whitespace-pre-wrap">
+      <div className="flex flex-1 flex-col gap-1 items-start leading-6 relative shrink-0 text-base min-w-0">
         <p className="font-semibold relative shrink-0 text-[#0a0a0a] w-full">
           {title}
         </p>
@@ -429,7 +429,7 @@ function OperatorListItem({ icon, title, description }: { icon: string; title: s
 
 function StatItem({ value, description }: { value: string; description: string }) {
   return (
-    <div className="flex flex-1 flex-col gap-2 items-start relative shrink-0 whitespace-pre-wrap">
+    <div className="flex flex-1 flex-col gap-2 items-start relative shrink-0">
       <p className="font-bold leading-8 md:leading-[36px] text-2xl md:text-[30px] relative shrink-0 text-[#0a0a0a] w-full">
         {value}
       </p>

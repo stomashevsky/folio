@@ -149,10 +149,10 @@ export default function BehaviorInsightsPage() {
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
                 <HeroTagline icon={waypointsIcon}>Behavior insights</HeroTagline>
-                <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+                <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px]">
                   Uncover fraud with passive signals
                 </h1>
-                <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
+                <p className="font-normal leading-6 text-[#737373] text-base w-full">
                   Analyze behavioral, device, and network signals to identify risk without interrupting the user experience.
                 </p>
               </div>
@@ -178,10 +178,10 @@ export default function BehaviorInsightsPage() {
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
                 <HeroTagline icon={waypointsIcon}>Behavior insights</HeroTagline>
-                <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+                <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
                   Uncover fraud with passive signals
                 </h1>
-                <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
+                <p className="font-normal leading-6 text-[#737373] text-base w-full">
                   Analyze behavioral, device, and network signals to identify risk without interrupting the user experience.
                 </p>
               </div>
@@ -273,10 +273,10 @@ export default function BehaviorInsightsPage() {
           {/* Desktop Layout */}
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-5 items-start relative min-w-0">
-              <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+              <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
                 Built in risk intelligence
               </h2>
-              <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
+              <p className="font-normal leading-6 text-[#737373] text-base w-full">
                 Evaluate each session with an adaptive risk model trained on real world identity patterns across your user base.
               </p>
             </div>
@@ -293,10 +293,10 @@ export default function BehaviorInsightsPage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-6 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-5 items-start relative shrink-0 w-full">
-              <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+              <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
                 Built in risk intelligence
               </h2>
-              <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
+              <p className="font-normal leading-6 text-[#737373] text-base w-full">
                 Evaluate each session with an adaptive risk model trained on real world identity patterns across your user base.
               </p>
             </div>
@@ -316,10 +316,10 @@ export default function BehaviorInsightsPage() {
           {/* Desktop Layout */}
           <div className="hidden md:flex gap-16 items-start max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-5 items-start relative min-w-0 max-w-[512px]">
-              <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+              <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
                 Key features
               </h2>
-              <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
+              <p className="font-normal leading-6 text-[#737373] text-base w-full">
                 Automatically gather passive signals that add context to every user session.
               </p>
             </div>
@@ -335,10 +335,10 @@ export default function BehaviorInsightsPage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-6 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-5 items-start relative shrink-0 w-full">
-              <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+              <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
                 Key features
               </h2>
-              <p className="font-normal leading-6 text-[#737373] text-base w-full whitespace-pre-wrap">
+              <p className="font-normal leading-6 text-[#737373] text-base w-full">
                 Automatically gather passive signals that add context to every user session.
               </p>
             </div>
@@ -378,10 +378,10 @@ export default function BehaviorInsightsPage() {
           <div className="hidden md:flex items-center max-w-[1280px] px-6 relative shrink-0 w-full">
             <div className="flex gap-16 items-center p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
               <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px] min-w-0">
-                <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+                <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
                   Let's build better identity verification
                 </h2>
-                <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full whitespace-pre-wrap">
+                <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
                   Talk to our team to explore how Folio can enhance your onboarding and verification experience.
                 </p>
               </div>
@@ -395,11 +395,11 @@ export default function BehaviorInsightsPage() {
 
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-8 items-center w-full px-6 py-16 relative shrink-0" style={BACKGROUND_STYLE}>
-            <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full whitespace-pre-wrap">
-              <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap">
+            <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full">
+              <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
                 Let's build better identity verification
               </h2>
-              <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full whitespace-pre-wrap">
+              <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
                 Talk to our team to explore how Folio can enhance your onboarding and verification experience.
               </p>
             </div>
@@ -423,7 +423,7 @@ function FeatureItem({ icon, title, description }: { icon: string; title: string
       <div className="bg-white border border-[#e5e5e5] border-solid flex items-center justify-center relative rounded-lg shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] shrink-0 size-10">
         <img src={icon} alt="" aria-hidden="true" className="w-5 h-5" />
       </div>
-      <div className="flex flex-col gap-2 items-start leading-6 relative shrink-0 text-base w-full whitespace-pre-wrap">
+      <div className="flex flex-col gap-2 items-start leading-6 relative shrink-0 text-base w-full">
         <p className="font-semibold relative shrink-0 text-[#0a0a0a] w-full">
           {title}
         </p>

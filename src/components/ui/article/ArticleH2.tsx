@@ -11,7 +11,7 @@ interface ArticleH2Props {
  */
 export default function ArticleH2({ children }: ArticleH2Props) {
   return (
-    <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full whitespace-pre-wrap">
+    <h2 className="pt-8 pb-0 px-0 font-semibold leading-9 text-[30px] text-[#0a0a0a] relative shrink-0 w-full">
       {children}
     </h2>
   )

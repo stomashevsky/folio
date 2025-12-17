@@ -17,7 +17,7 @@ export default function ToolCard({ icon, title, description }: ToolCardProps) {
           <p className="font-semibold leading-6 relative shrink-0 text-base text-[#0a0a0a] w-full break-words">
             {title}
           </p>
-          <p className="font-normal leading-5 sm:min-h-[80px] relative shrink-0 text-[#737373] text-sm w-full whitespace-pre-wrap break-words">
+          <p className="font-normal leading-5 sm:min-h-[80px] relative shrink-0 text-[#737373] text-sm w-full break-words">
             {description}
           </p>
         </div>

@@ -26,12 +26,12 @@ export default function SectionHeader({
   const maxWidthClass = maxWidthClassMap[maxWidth] || `max-w-[${maxWidth}]`
   
   const headingClasses = headingLevel === 'h1'
-    ? 'font-bold leading-[36px] md:leading-[48px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap'
-    : 'font-bold leading-[36px] md:leading-[40px] text-[30px] md:text-[36px] text-[#0a0a0a] tracking-[0px] whitespace-pre-wrap'
+    ? 'font-bold leading-[36px] md:leading-[48px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px]'
+    : 'font-bold leading-[36px] md:leading-[40px] text-[30px] md:text-[36px] text-[#0a0a0a] tracking-[0px]'
   
   const descriptionClasses = headingLevel === 'h1'
-    ? `font-normal leading-6 min-w-full relative shrink-0 text-[#737373] text-base ${align === 'center' ? 'text-center' : 'text-left'} w-[min-content] whitespace-pre-wrap`
-    : `font-normal leading-6 min-w-full relative shrink-0 text-[color:#737373] text-base ${align === 'center' ? 'text-center' : 'text-left'} w-[min-content] whitespace-pre-wrap`
+    ? `font-normal leading-6 min-w-full relative shrink-0 text-[#737373] text-base ${align === 'center' ? 'text-center' : 'text-left'} w-[min-content]`
+    : `font-normal leading-6 min-w-full relative shrink-0 text-[color:#737373] text-base ${align === 'center' ? 'text-center' : 'text-left'} w-[min-content]`
 
   const HeadingTag = headingLevel
 
