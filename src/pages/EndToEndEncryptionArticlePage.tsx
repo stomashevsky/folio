@@ -1,4 +1,5 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import e2eEncryptionRecovery from '../assets/images/blog-e2e-encryption-recovery.png'
 
 export default function EndToEndEncryptionArticlePage() {
   return (
@@ -16,6 +17,11 @@ export default function EndToEndEncryptionArticlePage() {
       <ArticleParagraph>
         This isn't just marketing language. End-to-end encryption is a specific technical architecture with meaningful security implications. Understanding how it works helps you evaluate which services actually protect your data and which just claim to.
       </ArticleParagraph>
+
+      <ArticleImage 
+        src={e2eEncryptionRecovery} 
+        alt="Save Your Recovery Code screen in Folio app showing the importance of keeping recovery code safe for account access"
+      />
 
       <ArticleH2>What end-to-end encryption means</ArticleH2>
 
