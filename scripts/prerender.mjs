@@ -202,13 +202,16 @@ async function collectBlogMetadata() {
     
     const block = source.slice(blockStart, blockEnd + 1)
     
-    // Match title with single or double quotes
-    const titleMatch = block.match(/title:\s*['"]([^'"]*)['"]/s)
-    // Match description with single or double quotes (description can span lines)
-    const descMatch = block.match(/description:\s*['"]([^'"]*)['"]/s)
+    // Match title - handle escaped quotes by matching until unescaped closing quote
+    const titleMatch = block.match(/title:\s*'((?:[^'\\]|\\.)*)'/s) || block.match(/title:\s*"((?:[^"\\]|\\.)*)"/s)
+    // Match description - same approach for escaped quotes
+    const descMatch = block.match(/description:\s*'((?:[^'\\]|\\.)*)'/s) || block.match(/description:\s*"((?:[^"\\]|\\.)*)"/s)
     
-    const title = titleMatch ? titleMatch[1] : slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
-    const description = descMatch ? descMatch[1] : 'Read more on the Folio Blog.'
+    // Unescape the matched strings (convert \' to ' and \" to ")
+    const unescape = (str) => str ? str.replace(/\\'/g, "'").replace(/\\"/g, '"') : str
+    
+    const title = titleMatch ? unescape(titleMatch[1]) : slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+    const description = descMatch ? unescape(descMatch[1]) : 'Read more on the Folio Blog.'
     
     articles.push({
       path: `/blog/${slug}`,
