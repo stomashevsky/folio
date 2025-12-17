@@ -4,18 +4,18 @@ import e2eEncryptionRecovery from '../assets/images/blog-e2e-encryption-recovery
 export default function EndToEndEncryptionArticlePage() {
   return (
     <BlogArticleLayout
-      title="End-to-end encryption in digital wallets: how it works"
-      description="End-to-end encryption ensures only you can access your documents, even if the service provider is compromised. Learn how E2EE protects digital wallet data and why it matters."
+      title="Why even Folio can't see your documents"
+      description="Your documents in Folio are protected by a secret only you know. Without your Passkey or Recovery Code, no one can access your data, not even us. Here's how it works."
       date="Oct 7, 2025"
       category="Safety"
       slug="end-to-end-encryption"
     >
       <ArticleParagraph>
-        When you store sensitive documents in a digital wallet, who else can see them? With <strong>end-to-end encryption (E2EE)</strong>, the answer is clear: only you. Your data is encrypted on your device before it ever leaves, and only your device has the keys to decrypt it.
+        Here's a question worth asking about any app that stores your documents: can the company behind it see your files? For most cloud services, the honest answer is yes. They encrypt your data on their servers, but they hold the keys. If they wanted to look at your files, they could.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        This isn't just marketing language. End-to-end encryption is a specific technical architecture with meaningful security implications. Understanding how it works helps you evaluate which services actually protect your data and which just claim to.
+        Folio works differently. We use end-to-end encryption, which means your documents are encrypted on your phone before they ever reach our servers. The key that unlocks them exists only on your devices and is protected by a secret that only you know: either a <strong>Passkey</strong> stored securely on your device, or a <strong>Recovery Code</strong> that you save when setting up the app.
       </ArticleParagraph>
 
       <ArticleImage 
@@ -23,153 +23,76 @@ export default function EndToEndEncryptionArticlePage() {
         alt="Save Your Recovery Code screen in Folio app showing the importance of keeping recovery code safe for account access"
       />
 
-      <ArticleH2>What end-to-end encryption means</ArticleH2>
+      <ArticleH2>Your secret is the key to everything</ArticleH2>
 
       <ArticleParagraph>
-        In end-to-end encrypted systems, data is encrypted on the sender's device and can only be decrypted on the recipient's device. For a personal digital wallet, this means:
-      </ArticleParagraph>
-
-      <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-        <li><strong>Encryption happens locally</strong>: Your documents are encrypted on your phone or computer before being uploaded anywhere.</li>
-        <li><strong>Keys stay on your devices</strong>: The cryptographic keys needed to decrypt your data exist only on devices you control.</li>
-        <li><strong>The service can't read your data</strong>: Even the company providing the service cannot access your unencrypted documents.</li>
-        <li><strong>Server breaches don't expose content</strong>: If servers are compromised, attackers only get encrypted data they can't read.</li>
-      </ul>
-
-      <ArticleH2>E2EE vs server-side encryption</ArticleH2>
-
-      <ArticleParagraph>
-        Many services advertise encryption but use server-side encryption, which provides fundamentally different protection:
+        When you set up Folio, the app generates encryption keys on your device. These keys are what actually encrypt and decrypt your documents. But here's the important part: these keys are themselves protected by a secret that only you control.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Server-side encryption</strong>: Your data is encrypted on the company's servers. The company holds the encryption keys. They can decrypt your data if they want to, if compelled by authorities, or if breached by attackers who also obtain the keys.
+        <strong>Passkey</strong> is the modern, seamless option. It's a cryptographic credential stored in your device's secure enclave and protected by Face ID, Touch ID, or your device passcode. When you authenticate with your face or fingerprint, your device unlocks the Passkey, which then unlocks your encryption keys. The Passkey never leaves your device and can sync across your Apple or Google devices through their secure cloud keychains.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>End-to-end encryption</strong>: Your data is encrypted before reaching the company's servers. They never have access to the keys. They cannot read your data even if they wanted to, and attackers who breach their servers cannot either.
+        <strong>Recovery Code</strong> is a 24-word phrase generated when you create your account. Think of it as a master key written on paper. If you lose access to all your devices, this code is the only way to recover your documents. Without it, your data is mathematically unrecoverable.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        The difference matters enormously for sensitive documents like passports, ID cards, medical records, and financial information. With server-side encryption, you're trusting the company's security practices and policies. With E2EE, you're protected even if those fail.
+        Either way, the secret stays with you. Folio never sees it, never stores it, and has no way to recover it if you lose it.
       </ArticleParagraph>
 
-      <ArticleH2>How E2EE works technically</ArticleH2>
+      <ArticleH2>What this means in practice</ArticleH2>
 
       <ArticleParagraph>
-        End-to-end encryption relies on proven cryptographic techniques:
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Key generation</strong>: When you set up an E2EE service, cryptographic keys are generated on your device. These typically include a public key (which can be shared) and a private key (which stays secret on your device).
+        Because only your secret can unlock your encryption keys, several things become true:
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Encryption</strong>: When you add a document, it's encrypted using keys derived from your private key. Modern systems use strong symmetric encryption (like AES-256) for the actual data encryption, with asymmetric encryption protecting the symmetric keys.
+        <strong>We can't read your documents.</strong> Our servers store encrypted files that look like random data to us. Without your Passkey or Recovery Code, we have no way to decrypt them. A Folio employee with full database access would see only meaningless encrypted blobs.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Storage</strong>: The encrypted data is uploaded to the service's servers. The servers store encrypted blobs that are meaningless without your keys.
+        <strong>Hackers can't read your documents.</strong> If someone broke into our servers, they'd get encrypted data. Without your secret, that data is useless. They'd need to break modern encryption, which would take longer than the age of the universe with current technology.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Synchronization</strong>: To sync across your devices, your private key must be available on each device. This is typically accomplished through secure key backup (protected by a password only you know) or device-to-device transfer.
+        <strong>We can't hand over your documents.</strong> If authorities demanded your data, we could only provide encrypted files. We genuinely cannot decrypt them because we don't have your secret.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Decryption</strong>: When you view a document, your device retrieves the encrypted data and decrypts it locally using your private key.
+        <strong>We can't reset your access.</strong> Most services let you reset a forgotten password because they control the encryption. We can't do that. If you lose your Passkey and Recovery Code, your documents are gone forever. This isn't a limitation; it's a feature that proves the encryption is real.
       </ArticleParagraph>
 
-      <ArticleH2>What E2EE protects against</ArticleH2>
+      <ArticleH2>Why this matters for your documents</ArticleH2>
 
       <ArticleParagraph>
-        End-to-end encryption provides strong protection against several threat scenarios:
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Server breaches</strong>: If attackers compromise the service's servers, they only obtain encrypted data. Without your keys, the data is useless.
+        Your digital wallet contains some of your most sensitive information: passport scans, ID cards, medical records, financial documents. This data could enable identity theft if exposed. It could be used against you. It's exactly the kind of information you don't want sitting on some company's server where employees or hackers could access it.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Insider threats</strong>: Employees of the service provider cannot read your documents, eliminating risks from malicious or careless insiders.
+        End-to-end encryption changes the trust model. Instead of trusting Folio's security practices and hoping we never get breached, you only need to trust the mathematics of encryption and keep your secret safe. Even if we made a mistake, even if our servers were compromised, your documents would remain protected.
+      </ArticleParagraph>
+
+      <ArticleH2>How to spot real end-to-end encryption</ArticleH2>
+
+      <ArticleParagraph>
+        Many apps claim encryption but don't offer true end-to-end protection. Here's how to tell the difference:
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Legal demands</strong>: The company cannot comply with demands to produce your unencrypted data because they don't have access to it.
+        <strong>Can they reset your password?</strong> If a service can restore access to your data after you forget your password, they hold your encryption keys. That means they can read your data. True end-to-end encryption means losing your secret means losing your data.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Network interception</strong>: Data in transit is encrypted, protecting against man-in-the-middle attacks.
-      </ArticleParagraph>
-
-      <ArticleH2>What E2EE doesn't protect against</ArticleH2>
-
-      <ArticleParagraph>
-        E2EE isn't a complete security solution. It doesn't protect against:
+        <strong>Do they mention a recovery key or phrase?</strong> Services with real E2EE typically require you to save a recovery key because they can't recover your data without it. If there's no recovery mechanism you control, be skeptical.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Device compromise</strong>: If an attacker gains access to your unlocked device, they can see what you see. E2EE protects data at rest on servers, not on compromised endpoints.
+        <strong>Can they show you previews?</strong> If a web version of the service shows document thumbnails or previews without you entering a secret, the data isn't truly end-to-end encrypted. The server needs to decrypt files to generate previews.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Weak passwords</strong>: If your key backup is protected by a guessable password, attackers can potentially recover your keys.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Phishing</strong>: Social engineering attacks that trick you into revealing credentials or approving malicious access aren't prevented by encryption.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Metadata</strong>: E2EE protects content but may not hide metadata like when you access the service or how much data you store.
-      </ArticleParagraph>
-
-      <ArticleH2>E2EE in digital wallets</ArticleH2>
-
-      <ArticleParagraph>
-        For digital wallets storing identity documents, E2EE is particularly important:
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Document sensitivity</strong>: Passports, ID cards, and financial documents contain information that could enable identity theft if exposed.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Long-term storage</strong>: Documents may be stored for years. E2EE ensures they remain protected even if the service faces future security incidents.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Trust model</strong>: You shouldn't have to fully trust a service provider to store your most sensitive documents. E2EE removes that requirement.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        Folio uses end-to-end encryption to protect your documents. When you add a passport, ID card, or any other document to Folio, it's encrypted on your device with keys only you control. Our servers store only encrypted data. Even with full access to our systems, we cannot read your documents.
-      </ArticleParagraph>
-
-      <ArticleH2>Evaluating E2EE claims</ArticleH2>
-
-      <ArticleParagraph>
-        When services claim end-to-end encryption, consider asking:
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Where are keys stored?</strong> If the company can reset your password and restore access to your data, they likely hold your keys. True E2EE means losing your key means losing your data.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>What's encrypted?</strong> Some services encrypt files but not metadata, names, or previews. Understand exactly what protection is provided.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Has it been audited?</strong> Independent security audits verify that E2EE implementations work as claimed.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Is the code open source?</strong> Open source allows security researchers to verify encryption implementations.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        End-to-end encryption represents the strongest protection for data you store with third-party services. For sensitive documents like identity papers, medical records, and financial documents, E2EE should be a requirement, not a nice-to-have. Understanding how it works helps you make informed choices about where to trust your most important information.
+        Your documents deserve better than security promises. They deserve mathematical guarantees. With end-to-end encryption, your secret is the only key that matters. Keep it safe, and your documents stay private, even from us.
       </ArticleParagraph>
     </BlogArticleLayout>
   )

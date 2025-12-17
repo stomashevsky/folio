@@ -493,8 +493,8 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Safety',
     date: 'Oct 7, 2025',
-    title: 'End-to-end encryption in digital wallets: how it works',
-    description: "End-to-end encryption ensures only you can access your documents, even if the service provider is compromised. Learn how E2EE protects digital wallet data and why it matters.",
+    title: "Why even Folio can't see your documents",
+    description: "Your documents in Folio are protected by a secret only you know. Without your Passkey or Recovery Code, no one can access your data, not even us.",
     slug: 'end-to-end-encryption',
     image: blogEndToEndEncryption,
   },
