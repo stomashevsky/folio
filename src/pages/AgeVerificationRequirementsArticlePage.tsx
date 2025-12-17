@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import ageVerificationFlow from '../assets/images/blog-age-verification-flow.png'
 
@@ -102,7 +103,7 @@ export default function AgeVerificationRequirementsArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Folio supports all these verification methods. For businesses, it means choosing the right approach for each situation, using thorough verification where regulations require it, and lighter methods where privacy matters more. For users, it means one verification can work across multiple services through reusable credentials, so you're not uploading your passport to every site that asks.
+        Folio supports all these verification methods. For businesses, it means choosing the right approach for each situation, using thorough verification where regulations require it, and lighter methods where privacy matters more. For users, it means one verification can work across multiple services through reusable credentials, so you're not uploading your passport to every site that asks. Learn more about <Link to="/solutions/age-compliance" className="underline hover:text-[#737373] transition-colors">Folio's age compliance solutions</Link>.
       </ArticleParagraph>
 
       <ArticleParagraph>
