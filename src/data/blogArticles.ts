@@ -476,8 +476,8 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Research',
     date: 'Aug 23, 2025',
-    title: "Wanderlog alternative: The best app for organizing trips and documents",
-    description: "Wanderlog helps plan activities. But what about your tickets, passports, and bookings? Discover an app that keeps everything secure and organized.",
+    title: "Wanderlog plans your trip. But where do you keep the actual tickets?",
+    description: "Wanderlog is great for deciding what to do. But once you've booked flights, hotels, and activities, you need somewhere to keep them.",
     slug: 'wanderlog-alternative',
     image: blogWanderlogAlternative,
   },
