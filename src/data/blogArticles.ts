@@ -517,8 +517,8 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Product',
     date: 'Oct 28, 2025',
-    title: 'NFC chip reading for secure identity verification',
-    description: "Modern passports and ID cards contain NFC chips with encrypted data that's nearly impossible to forge. Learn how NFC identity verification works and why it provides the highest level of document authentication.",
+    title: 'How NFC chip scanning verifies your passport in seconds',
+    description: "Your passport has a chip that proves it's genuine. Learn how NFC scanning works, what it verifies, and why it's the most secure way to confirm document authenticity.",
     slug: 'nfc-identity-verification',
     image: blogNfcIdentityVerification,
   },
