@@ -1,5 +1,6 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import { Link } from 'react-router-dom'
+import mdlScreenImage from '../assets/images/blog-mdl-folio-screen.png'
 
 export default function MobileDriversLicenseArticlePage() {
   return (
@@ -35,6 +36,11 @@ export default function MobileDriversLicenseArticlePage() {
       <ArticleParagraph>
         The credential is also locked to your specific phone. It can't be copied to another device. Presenting it requires Face ID or fingerprint authentication. If someone steals your phone, they can't use your license because they can't unlock the credential.
       </ArticleParagraph>
+
+      <ArticleImage
+        src={mdlScreenImage}
+        alt="Mobile driver's license in Folio app showing a green credential card with Show QR code button for verification"
+      />
 
       <ArticleH2>The privacy surprise</ArticleH2>
 
@@ -97,7 +103,7 @@ export default function MobileDriversLicenseArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        That world is arriving faster than most people realize. Whether you get your mDL through your state, Apple Wallet, or another app, the shift toward digital identity is underway. For those already collecting important documents digitally, <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link> keeps licenses, IDs, and other credentials organized and secure in one place.
+        That world is arriving faster than most people realize. Whether you get your mDL through your state, Apple Wallet, or another app, the shift toward digital identity is underway. <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link> supports mobile driver's licenses with QR code presentation for verification, keeping your license alongside passports, travel documents, and other credentials in one secure place.
       </ArticleParagraph>
     </BlogArticleLayout>
   )
