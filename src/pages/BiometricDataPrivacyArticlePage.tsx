@@ -1,212 +1,109 @@
+import { Link } from 'react-router-dom'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
 
 export default function BiometricDataPrivacyArticlePage() {
   return (
     <BlogArticleLayout
-      title="Biometric data privacy and GDPR compliance"
-      description="Biometric data like facial scans and fingerprints receive special protection under privacy laws. Learn what GDPR requires for biometric data and how businesses can handle it responsibly."
+      title="What happens to your face data after identity verification"
+      description="When you take a selfie for identity verification, where does that image go? Who sees it? How long is it kept? Here's what you should know about biometric data and what to ask before sharing it."
       date="Sep 20, 2025"
       category="Safety"
       slug="biometric-data-privacy"
     >
       <ArticleParagraph>
-        Your face is unique. So are your fingerprints. When businesses collect this <strong>biometric data</strong> for identity verification, they're handling some of the most sensitive personal information possible. Unlike passwords, you can't change your biometrics if they're compromised.
+        You're signing up for a new service, and they ask for a selfie. You hold up your phone, snap the photo, and wait for verification. But here's a question worth asking: what happens to that image of your face? Where does it go? Who can see it? And how long will it exist on someone else's servers?
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Privacy regulations recognize this sensitivity. The EU's General Data Protection Regulation (GDPR) classifies biometric data as a "special category" requiring additional protections. Understanding these requirements helps both businesses implement compliant verification systems and individuals make informed decisions about sharing biometric data.
+        We're writing about this because Folio uses face matching for identity verification. When you verify your identity with us, we process your selfie to confirm you're the person on your ID document. That's biometric data, and it deserves special care. We think you should understand what happens to it, not just with us, but with any service that asks for your face.
       </ArticleParagraph>
 
-      <ArticleH2>What counts as biometric data</ArticleH2>
+      <ArticleH2>Why face data is different from other data</ArticleH2>
 
       <ArticleParagraph>
-        Under GDPR, biometric data is defined as personal data resulting from specific technical processing relating to physical, physiological, or behavioral characteristics that allow unique identification. This includes:
-      </ArticleParagraph>
-
-      <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-        <li><strong>Facial images</strong>: Photos processed through facial recognition or face matching systems to identify or verify individuals.</li>
-        <li><strong>Fingerprints</strong>: Digital representations of fingerprint patterns used for authentication.</li>
-        <li><strong>Iris and retina scans</strong>: Eye pattern analysis for identity verification.</li>
-        <li><strong>Voice prints</strong>: Audio analysis that uniquely identifies a speaker.</li>
-        <li><strong>Gait analysis</strong>: Movement patterns that can identify individuals.</li>
-      </ul>
-
-      <ArticleParagraph>
-        Importantly, a simple photograph isn't automatically biometric data under GDPR. It becomes biometric data when processed through systems designed to uniquely identify someone. A passport photo stored as an image isn't biometric data; that same photo run through face matching software is.
-      </ArticleParagraph>
-
-      <ArticleH2>GDPR special category requirements</ArticleH2>
-
-      <ArticleParagraph>
-        GDPR Article 9 establishes strict rules for processing special category data, including biometric data:
+        If your password leaks, you change it. If your email address gets exposed, you can create a new one. But you can't change your face. Biometric data is permanent. Once it's out there, it's out there forever.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Default prohibition</strong>: Processing biometric data for identification purposes is prohibited by default. Organizations must establish a specific legal basis to proceed.
+        Privacy laws recognize this. Under GDPR (the EU's privacy regulation), biometric data is classified as "special category" data, meaning it requires extra protection. Similar laws exist in California, Illinois, Brazil, and many other places. The rules are stricter because the stakes are higher.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Explicit consent</strong>: One permitted basis is explicit consent: clear, affirmative agreement to the specific processing. Consent must be freely given, informed, and withdrawable.
+        Here's what makes your selfie "biometric data" in legal terms: it's not just about storing a photo. It becomes biometric data when that photo is processed through systems that can identify you, like face matching or facial recognition. A photo sitting in a folder is just an image. That same photo run through face matching software is biometric data with special legal protections.
+      </ArticleParagraph>
+
+      <ArticleH2>Questions to ask before sharing your face</ArticleH2>
+
+      <ArticleParagraph>
+        Not all services handle biometric data responsibly. Before you take that selfie, here's what to consider:
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Substantial public interest</strong>: Processing may be permitted for substantial public interest with appropriate safeguards, but this requires specific legal authorization.
+        <strong>Why do they need it?</strong> Face verification makes sense for opening a bank account or accessing sensitive information. It makes less sense for signing up to comment on a blog. If the service doesn't clearly explain why biometric verification is necessary, that's a red flag.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Legal claims</strong>: Processing necessary for establishing, exercising, or defending legal claims is permitted.
+        <strong>What do they keep?</strong> Some services store your actual face image. Others convert it to a mathematical template that can't be reversed back into a photo. Templates are safer because even if they leak, no one can recreate your face from them. Ask what format they store and for how long.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Employment context</strong>: In employment situations, specific legal basis and safeguards are required.
-      </ArticleParagraph>
-
-      <ArticleH2>Consent requirements</ArticleH2>
-
-      <ArticleParagraph>
-        When relying on consent for biometric processing, GDPR sets high standards:
+        <strong>Who processes it?</strong> Many services use third-party vendors for identity verification. That means your face data might travel to a company you've never heard of. Find out who handles your data and what protections they provide.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Explicit and specific</strong>: Consent must explicitly cover biometric processing for stated purposes. Bundled consent buried in general terms isn't valid.
+        <strong>Can you delete it?</strong> Under GDPR and similar laws, you have the right to request deletion of your biometric data. A service that makes this difficult or impossible is either poorly designed or deliberately hiding something.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Freely given</strong>: Users must have genuine choice. If refusing biometric verification means losing access to necessary services with no alternative, consent may not be considered freely given.
+        <strong>What if they get hacked?</strong> Every company says they take security seriously. But breaches happen. Ask about encryption, access controls, and what happens to your data if the worst occurs.
+      </ArticleParagraph>
+
+      <ArticleH2>How responsible services handle your face data</ArticleH2>
+
+      <ArticleParagraph>
+        Good practices exist. Here's what to look for:
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Informed</strong>: Users must understand what data is collected, how it will be used, who will access it, and how long it will be retained.
+        <strong>Minimal collection.</strong> A responsible service captures only what's needed. If they're matching your selfie to your ID, they need one clear photo, not a video of you from multiple angles. More data isn't better; it's more risk.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Withdrawable</strong>: Users must be able to withdraw consent as easily as they gave it, with clear instructions on how to do so.
+        <strong>Clear purpose.</strong> They tell you exactly why they need your face data and don't use it for anything else. Your verification selfie shouldn't end up training their AI or being analyzed for marketing insights.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Documented</strong>: Organizations must be able to demonstrate valid consent was obtained.
-      </ArticleParagraph>
-
-      <ArticleH2>Data minimization and purpose limitation</ArticleH2>
-
-      <ArticleParagraph>
-        GDPR's core principles apply with particular force to biometric data:
+        <strong>Limited retention.</strong> Once verification is complete, the raw face image should be deleted. Some services keep it for days, others for years, and some forever. Shorter is better. The best services delete images immediately after processing and keep only the verification result.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Data minimization</strong>: Collect only the biometric data necessary for the specific purpose. If face matching requires a single selfie, don't collect multiple images "just in case."
+        <strong>Strong encryption.</strong> Your face data should be encrypted when it's sent over the internet and when it's stored. This protects it from interception and reduces damage if servers are breached.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Purpose limitation</strong>: Biometric data collected for one purpose cannot be repurposed without new consent. Face images collected for identity verification cannot later be used for marketing analytics.
+        <strong>Real consent.</strong> You should explicitly agree to biometric processing before it happens, not buried in a terms of service you never read. And you should be able to withdraw consent and request deletion whenever you want.
+      </ArticleParagraph>
+
+      <ArticleH2>How Folio handles your biometric data</ArticleH2>
+
+      <ArticleParagraph>
+        Since we ask for your face during identity verification, here's exactly what we do with it:
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Storage limitation</strong>: Retain biometric data only as long as necessary. Once verification is complete, consider whether raw biometric data needs to be kept.
+        When you take a selfie for verification, it's compared to the photo on your ID document to confirm you're the same person. This comparison produces a match score. We use that score to verify your identity, then delete the raw facial images. We don't keep your selfie sitting on a server indefinitely.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Template vs raw data</strong>: Many systems convert biometric data into mathematical templates that can't be reversed to recreate the original image. Storing templates rather than raw data reduces risk.
-      </ArticleParagraph>
-
-      <ArticleH2>Security requirements</ArticleH2>
-
-      <ArticleParagraph>
-        GDPR Article 32 requires appropriate security measures, with requirements scaling to data sensitivity:
+        We don't use your face data for anything except verification. We don't train AI models on it, we don't analyze it for insights, we don't share it with advertisers. The purpose is verification, period.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Encryption</strong>: Biometric data should be encrypted both in transit and at rest.
+        All biometric processing happens with your explicit consent. You know exactly what's happening and why. And if you want your data deleted, you can request it, and we'll honor that request.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Access controls</strong>: Strict limits on who can access biometric data, with logging of all access.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Segregation</strong>: Consider storing biometric data separately from other personal data, reducing exposure if other systems are compromised.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Regular testing</strong>: Security measures must be regularly tested and evaluated.
-      </ArticleParagraph>
-
-      <ArticleH2>Retention and deletion</ArticleH2>
-
-      <ArticleParagraph>
-        Organizations must establish clear retention policies for biometric data:
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Define retention periods</strong>: Specify how long biometric data is kept and justify that duration.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Automatic deletion</strong>: Implement systems to automatically delete biometric data when retention periods expire.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Deletion on request</strong>: Honor user requests to delete biometric data, subject to legitimate retention requirements.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Verify deletion</strong>: Ensure biometric data is actually deleted from all systems, including backups.
-      </ArticleParagraph>
-
-      <ArticleH2>International considerations</ArticleH2>
-
-      <ArticleParagraph>
-        Biometric privacy regulations vary globally:
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>US state laws</strong>: Illinois BIPA (Biometric Information Privacy Act) requires written consent and provides private right of action. Texas and Washington have similar laws with different enforcement mechanisms.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>California CCPA/CPRA</strong>: Classifies biometric data as sensitive personal information with additional disclosure requirements.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Brazil LGPD</strong>: Similar to GDPR, treats biometric data as sensitive data requiring explicit consent or legal basis.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>China PIPL</strong>: Requires separate consent for sensitive personal information including biometric data.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        Organizations operating globally must comply with the requirements of all applicable jurisdictions.
-      </ArticleParagraph>
-
-      <ArticleH2>Best practices for biometric processing</ArticleH2>
-
-      <ArticleParagraph>
-        Organizations handling biometric data should:
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Conduct Data Protection Impact Assessments</strong>: GDPR requires DPIAs for high-risk processing, which typically includes biometric processing.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Provide clear privacy notices</strong>: Explain biometric data collection in accessible language before processing begins.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Offer alternatives where possible</strong>: Give users non-biometric options when feasible to ensure consent is freely given.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Work with compliant vendors</strong>: Ensure third-party providers handling biometric data meet GDPR requirements through appropriate contracts and due diligence.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        Folio's approach to biometric data prioritizes privacy and compliance. Face matching for identity verification uses biometric processing, so we implement strict data minimization, clear consent mechanisms, and appropriate security controls. Biometric templates are processed for verification purposes and not retained longer than necessary. Users maintain control over their data with clear options to understand and manage how it's used.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        Biometric data enables powerful identity verification capabilities, but its sensitivity demands careful handling. Organizations that approach biometric processing thoughtfully, with proper consent, security, and retention practices, can offer enhanced verification while respecting user privacy and complying with regulations like GDPR.
+        We're transparent about this because we think everyone should be. If a service asks for your face and can't clearly explain what happens to it, consider whether you really need to use that service. Your biometric data is uniquely yours. It deserves to be treated with care. Learn more about how we handle identity verification in our <Link to="/platform/liveness-check" className="underline hover:text-[#737373] transition-colors">liveness check</Link> and <Link to="/platform/face-match" className="underline hover:text-[#737373] transition-colors">face match</Link> documentation.
       </ArticleParagraph>
     </BlogArticleLayout>
   )

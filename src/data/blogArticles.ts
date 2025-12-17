@@ -501,8 +501,8 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Safety',
     date: 'Sep 20, 2025',
-    title: 'Biometric data privacy and GDPR compliance',
-    description: 'Biometric data like facial scans and fingerprints receive special protection under privacy laws. Learn what GDPR requires for biometric data and how businesses can handle it responsibly.',
+    title: 'What happens to your face data after identity verification',
+    description: "When you take a selfie for identity verification, where does that image go? Who sees it? How long is it kept? Here's what you should know about biometric data.",
     slug: 'biometric-data-privacy',
     image: blogBiometricDataPrivacy,
   },
