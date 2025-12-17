@@ -6,7 +6,7 @@ export default function DigitalCredentialsGovernmentArticlePage() {
     <BlogArticleLayout
       title="Digital credentials for government services: use cases and benefits"
       description="Governments worldwide are adopting digital credentials to improve citizen services and reduce fraud. Explore real-world use cases, implementation benefits, and lessons from successful deployments."
-      date="Oct 21, 2025"
+      date="Sep 10, 2025"
       category="Company"
       slug="digital-credentials-government"
     >
