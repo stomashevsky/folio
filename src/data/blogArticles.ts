@@ -525,8 +525,8 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Safety',
     date: 'Sep 9, 2025',
-    title: 'Digital passport copies: legality and best practices',
-    description: 'Is it safe and legal to store a digital copy of your passport? Learn when you need passport copies, how to store them securely, and what mistakes to avoid.',
+    title: 'Why you need a digital copy of your passport',
+    description: 'Discover the benefits of keeping a digital passport copy: instant access, emergency backup, faster check-ins, and secure storage. Essential for every traveler.',
     slug: 'digital-passport-copies',
     image: blogDigitalPassportCopies,
   },
