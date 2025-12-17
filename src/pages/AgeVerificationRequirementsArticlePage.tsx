@@ -1,4 +1,5 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import ageVerificationFlow from '../assets/images/blog-age-verification-flow.png'
 
 export default function AgeVerificationRequirementsArticlePage() {
   return (
@@ -9,6 +10,11 @@ export default function AgeVerificationRequirementsArticlePage() {
       category="Research"
       slug="age-verification-requirements"
     >
+      <ArticleImage 
+        src={ageVerificationFlow} 
+        alt="Age verification flow in Folio: verify your age screen, face verification with checklist, and document selection with passport and driving licence options"
+      />
+
       <ArticleParagraph>
         Age verification has evolved from a checkbox confirmation to a serious regulatory requirement. Governments worldwide are tightening rules around how businesses verify user ages, particularly for services involving gambling, alcohol, adult content, and financial products. Understanding these requirements is essential for businesses operating in regulated industries.
       </ArticleParagraph>
