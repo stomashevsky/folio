@@ -374,7 +374,7 @@ export default function GovernmentPage() {
           <div className="flex gap-16 items-center p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
             <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px] min-w-0">
               <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-                Supporting national-scale programs
+                Supporting <span className="whitespace-nowrap">national-scale</span> programs
               </h2>
               <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
                 Work with us on pilots, integrations and modernization efforts.
@@ -408,7 +408,7 @@ export default function GovernmentPage() {
         <div className="flex md:hidden flex-col gap-8 items-center w-full px-6 py-16 relative shrink-0" style={BACKGROUND_STYLE}>
           <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full">
             <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
-              Supporting national-scale programs
+              Supporting <span className="whitespace-nowrap">national-scale</span> programs
             </h2>
             <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
               Work with us on pilots, integrations and modernization efforts.
