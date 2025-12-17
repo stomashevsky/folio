@@ -1,5 +1,6 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import { Link } from 'react-router-dom'
+import blogDigitalPassportCopiesHero from '../assets/images/blog-digital-passport-copies-hero.png'
 
 export default function DigitalPassportCopiesArticlePage() {
   return (
@@ -17,6 +18,11 @@ export default function DigitalPassportCopiesArticlePage() {
       <ArticleParagraph>
         These moments happen constantly when traveling. Having a digital copy of your passport solves all of them instantly. It's not about replacing your physical passport, it's about having your essential information accessible whenever you need it, without the risk of carrying your original document everywhere.
       </ArticleParagraph>
+
+      <ArticleImage 
+        src={blogDigitalPassportCopiesHero} 
+        alt="Digital passport copy in Folio Wallet app showing passport scan and extracted data"
+      />
 
       <ArticleH2>Why keep a digital passport copy</ArticleH2>
 
