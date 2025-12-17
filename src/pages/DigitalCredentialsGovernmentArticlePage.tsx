@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import digitalCredentialsCards from '../assets/images/blog-digital-credentials-cards.png'
 
 export default function DigitalCredentialsGovernmentArticlePage() {
   return (
@@ -61,6 +62,11 @@ export default function DigitalCredentialsGovernmentArticlePage() {
       <ArticleParagraph>
         <strong>Audit trails</strong>: Complete records of credential issuance and verification support program accountability and fraud investigation.
       </ArticleParagraph>
+
+      <ArticleImage 
+        src={digitalCredentialsCards} 
+        alt="Digital credentials in Folio wallet: Age 18+ verification card, Health Insurance card, and Library Card with QR code display options"
+      />
 
       <ArticleH2>Business licensing and permits</ArticleH2>
 
