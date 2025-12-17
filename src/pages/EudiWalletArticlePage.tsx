@@ -5,7 +5,7 @@ export default function EudiWalletArticlePage() {
     <BlogArticleLayout
       title="What is EUDI Wallet and why it matters for Europe"
       description="The European Digital Identity Wallet will transform how EU citizens interact with government and business services. Learn what EUDI Wallet is, how it works, and when it's coming."
-      date="Jul 15, 2025"
+      date="Sep 7, 2025"
       category="Product"
       slug="eudi-wallet"
     >

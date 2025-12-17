@@ -319,7 +319,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   },
   {
     category: 'Product',
-    date: 'Jul 15, 2025',
+    date: 'Sep 7, 2025',
     title: 'What is EUDI Wallet and why it matters for Europe',
     description: 'The European Digital Identity Wallet will transform how EU citizens interact with government and business services. Learn what EUDI Wallet is, how it works, and when it\'s coming.',
     slug: 'eudi-wallet',
@@ -391,7 +391,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   },
   {
     category: 'Research',
-    date: 'Aug 26, 2025',
+    date: 'Sep 27, 2025',
     title: 'Age verification requirements by industry: gaming, fintech, social media',
     description: 'Different industries face different age verification requirements. Learn what regulations apply to online gaming, financial services, social media, and e-commerce, and how to implement compliant verification.',
     slug: 'age-verification-requirements',
@@ -415,7 +415,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   },
   {
     category: 'Research',
-    date: 'Sep 23, 2025',
+    date: 'Aug 23, 2025',
     title: "Wanderlog alternative: The best app for organizing trips and documents",
     description: "Wanderlog helps plan activities. But what about your tickets, passports, and bookings? Discover an app that keeps everything secure and organized.",
     slug: 'wanderlog-alternative',

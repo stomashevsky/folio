@@ -5,7 +5,7 @@ export default function AgeVerificationRequirementsArticlePage() {
     <BlogArticleLayout
       title="Age verification requirements by industry: gaming, fintech, social media"
       description="Different industries face different age verification requirements. Learn what regulations apply to online gaming, financial services, social media, and e-commerce, and how to implement compliant verification."
-      date="Aug 26, 2025"
+      date="Sep 27, 2025"
       category="Research"
       slug="age-verification-requirements"
     >

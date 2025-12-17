@@ -5,7 +5,7 @@ export default function WanderlogAlternativeArticlePage() {
     <BlogArticleLayout
       title="Wanderlog alternative: The best app for organizing trips and documents"
       description="Wanderlog helps plan activities. But what about your tickets, passports, and bookings? Discover an app that keeps everything secure and organized."
-      date="Sep 23, 2025"
+      date="Aug 23, 2025"
       category="Research"
       slug="wanderlog-alternative"
     >
