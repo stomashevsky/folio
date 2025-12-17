@@ -41,6 +41,28 @@ function toOutputPath(route) {
   return path.join(clean, 'index.html')
 }
 
+function rewriteRelativeAssetPaths(route, html) {
+  // With Vite base './' the root HTML references assets as "./assets/...".
+  // For nested routes (e.g. /blog/ -> dist/blog/index.html) that becomes /blog/assets/... and breaks.
+  // Rewrite to the correct depth-relative path so GH Pages /folio/blog/ loads CSS/JS correctly.
+  const depth = route.split('/').filter(Boolean).length
+  if (depth === 0) return html
+
+  const prefix = '../'.repeat(depth)
+
+  return html
+    // Vite assets
+    .replaceAll('href="./assets/', `href="${prefix}assets/`)
+    .replaceAll('src="./assets/', `src="${prefix}assets/`)
+    .replaceAll('href="assets/', `href="${prefix}assets/`)
+    .replaceAll('src="assets/', `src="${prefix}assets/`)
+    // Public files (favicon/manifest) are referenced relatively in index.html template
+    .replaceAll('href="favicon.svg"', `href="${prefix}favicon.svg"`)
+    .replaceAll('href="./favicon.svg"', `href="${prefix}favicon.svg"`)
+    .replaceAll('href="site.webmanifest"', `href="${prefix}site.webmanifest"`)
+    .replaceAll('href="./site.webmanifest"', `href="${prefix}site.webmanifest"`)
+}
+
 async function ensureDir(filePath) {
   await fs.mkdir(path.dirname(filePath), { recursive: true })
 }
@@ -78,7 +100,8 @@ async function main() {
 
       // Ensure canonical/ogUrl are folio.id even if tested on GitHub Pages.
       // (The app code already sets these, prerender just captures HTML.)
-      await fs.writeFile(outAbs, processed.html.trim(), 'utf8')
+      const html = rewriteRelativeAssetPaths(route, processed.html.trim())
+      await fs.writeFile(outAbs, html, 'utf8')
 
       console.log(`[prerender] OK  ${route} -> ${outRel}`)
     } catch (e) {
