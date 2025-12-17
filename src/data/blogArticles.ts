@@ -460,8 +460,8 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Research',
     date: 'Sep 2, 2025',
-    title: 'Digital ticketing for events: benefits and implementation',
-    description: 'Digital tickets are replacing paper for events of all sizes. Learn how digital ticketing works, what benefits it provides, and how to implement it effectively for your events.',
+    title: 'How to organize all your event tickets in one app',
+    description: 'Stop searching through emails for tickets. Learn how to keep concert, sports, and event tickets organized in one secure app with offline access.',
     slug: 'digital-ticketing-events',
     image: blogDigitalTicketingEvents,
   },
