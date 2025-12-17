@@ -435,9 +435,9 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   },
   {
     category: 'Research',
-    date: 'Aug 18, 2025',
-    title: '10 travel hacks that actually work',
-    description: 'Simple, practical tips that make travel smoother. Tested by real travelers. No fluff. Just results.',
+    date: 'Aug 10, 2025',
+    title: "10 travel hacks that actually work (and 3 that don't)",
+    description: "Most travel tips are useless. These ten actually save time and money. Plus three popular hacks that sound good but rarely work.",
     slug: '10-travel-hacks-that-actually-work',
     image: blogTenTravelHacks,
   },
