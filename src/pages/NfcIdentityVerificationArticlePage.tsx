@@ -1,4 +1,4 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import nfcScanningFlow from '../assets/images/blog-nfc-scanning-flow.png'
 
 export default function NfcIdentityVerificationArticlePage() {
@@ -61,12 +61,6 @@ export default function NfcIdentityVerificationArticlePage() {
       <ArticleParagraph>
         <strong>Active Authentication</strong>: Some documents support an additional check where the chip proves it possesses a private key that matches a public key stored in the signed data. This confirms the chip itself is genuine and not a clone.
       </ArticleParagraph>
-
-      <img 
-        src={nfcScanningFlow} 
-        alt="NFC identity scanning process showing three mobile screens: checking for NFC chip symbol, document scanning instructions, and ready to scan prompt" 
-        className="w-full rounded-xl my-8"
-      />
 
       <ArticleH2>Advantages over visual document inspection</ArticleH2>
 
@@ -135,6 +129,11 @@ export default function NfcIdentityVerificationArticlePage() {
       </ArticleParagraph>
 
       <ArticleH2>NFC identity scanning with Folio</ArticleH2>
+
+      <ArticleImage 
+        src={nfcScanningFlow} 
+        alt="NFC identity scanning process showing three mobile screens: checking for NFC chip symbol, document scanning instructions, and ready to scan prompt"
+      />
 
       <ArticleParagraph>
         Folio's NFC identity scan extracts and verifies data from chip-enabled passports and ID cards. The system guides users through the scanning process, validates cryptographic signatures against issuing authority certificates, and compares chip data with visually extracted information to detect discrepancies.

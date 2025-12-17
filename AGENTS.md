@@ -299,6 +299,23 @@ This file contains all rules and principles that must be followed for every chan
   - Example: `<p><strong>Folio</strong> is a digital wallet app...</p>` instead of `<h3>Folio</h3><p>is a digital wallet app...</p>`
 - **Reference**: Follow the structure style of OpenAI blog articles (e.g., https://openai.com/index/group-chats-in-chatgpt/) which use minimal headings and longer flowing paragraphs
 
+#### 9.11. Article images
+
+- **All images in blog articles must use the `ArticleImage` component** from `src/components/ui/ArticleImage.tsx`
+- Images automatically break out of the text container (768px) to display at wider width (max 1200px), similar to OpenAI blog design
+- **Do not use plain `<img>` tags** in article content
+- Props: `src` (required), `alt` (required), `className` (optional for additional styling)
+- Example:
+  ```tsx
+  import { ArticleImage } from '../components/ui'
+  
+  <ArticleImage 
+    src={imageSource} 
+    alt="Descriptive alt text"
+  />
+  ```
+- The component handles responsive behavior automatically: constrained on mobile, wider on desktop
+
 ## Workflow
 
 1. **Before creating a new element:**

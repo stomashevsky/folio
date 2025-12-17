@@ -48,3 +48,7 @@ export type { BlogArticleLayoutProps } from './BlogArticleLayout'
 // Article typography components
 export { ArticleH2, ArticleParagraph, ArticleBlockquote, ArticleList, ArticleTable } from './article'
 export type { ArticleTableColumn, ArticleTableRow, ArticleTableProps } from './article'
+
+// Article media components
+export { default as ArticleImage } from './ArticleImage'
+export type { ArticleImageProps } from './ArticleImage'
