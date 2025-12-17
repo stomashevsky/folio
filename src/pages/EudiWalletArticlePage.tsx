@@ -5,42 +5,35 @@ import eudiWalletHowItWorks from '../assets/images/blog-eudi-wallet-how-it-works
 export default function EudiWalletArticlePage() {
   return (
     <BlogArticleLayout
-      title="What is EUDI Wallet and why it matters for Europe"
-      description="The European Digital Identity Wallet will transform how EU citizens interact with government and business services. Learn what EUDI Wallet is, how it works, and when it's coming."
+      title="The EU is giving everyone a digital ID wallet. Here's what that means."
+      description="By 2026, every EU country must offer citizens a free digital identity wallet. You'll prove your age without showing your birth date, open bank accounts without photocopying your passport, and carry credentials that work across all 27 countries."
       date="Oct 25, 2025"
       category="Product"
       slug="eudi-wallet"
     >
       <ArticleParagraph>
-        By 2026, every EU member state must offer its citizens a <strong>European Digital Identity Wallet (EUDI Wallet)</strong>. This isn't just another government app. It's a fundamental shift in how identity works, giving citizens secure, portable digital credentials they control and can use across borders.
+        Imagine proving you're over 18 without revealing your birthday. Opening a bank account without photocopying your passport. Showing a hotel your ID without handing over a document they could lose or misuse. By 2026, this will be reality for everyone in the European Union.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        The EUDI Wallet represents Europe's answer to the challenge of digital identity. How do you prove who you are online as reliably as you can with a physical ID card? How do you share only the information needed without revealing everything? And how do you do this across 27 countries with different systems and languages?
+        The EU is requiring every member state to offer citizens a free digital identity wallet. It's called the <strong>EUDI Wallet</strong>, and it's not just another government app. It's a complete rethinking of how identity works in the digital age: you control your data, share only what's needed, and your credentials work across all 27 EU countries.
       </ArticleParagraph>
 
-      <ArticleH2>The EU Digital Identity Regulation</ArticleH2>
+      <ArticleH2>What problem this solves</ArticleH2>
 
       <ArticleParagraph>
-        The legal foundation for EUDI Wallet is the revised eIDAS Regulation (eIDAS 2.0), which came into force in 2024. This regulation requires all EU member states to issue digital identity wallets that meet common technical standards and are mutually recognized across the Union.
+        Right now, proving your identity online is a mess. Every service asks for your full passport or ID card. You upload the same documents over and over. Each company stores copies of your personal information on their servers, where it could be breached or misused. And if you move between EU countries, you often start from scratch because systems don't talk to each other.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Key requirements include:
+        Physical documents aren't much better. You hand your passport to a hotel clerk who might photocopy it and file it who-knows-where. You show your driver's license to prove you can rent a car, but the rental company also sees your home address. Every identity check reveals more than necessary.
       </ArticleParagraph>
-
-      <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-        <li><strong>Universal availability</strong>: Every EU citizen and resident must be able to obtain an EUDI Wallet for free.</li>
-        <li><strong>Cross-border recognition</strong>: A wallet issued in any member state must be accepted in all others.</li>
-        <li><strong>Private sector acceptance</strong>: Large platforms and certain industries must accept EUDI Wallet for identity verification.</li>
-        <li><strong>User control</strong>: Citizens decide what information to share and with whom, maintaining detailed control over their data.</li>
-      </ul>
-
-      <ArticleH2>How EUDI Wallet works</ArticleH2>
 
       <ArticleParagraph>
-        At its core, EUDI Wallet is a smartphone application that stores and presents verifiable digital credentials. These credentials are cryptographically signed by authoritative issuers, making them trustworthy and tamper-proof.
+        The EUDI Wallet flips this around. Instead of giving away copies of documents, you hold verified credentials on your phone and share specific facts when needed. The bar wants to know if you're over 18? Your wallet confirms "yes" without revealing your exact age. A bank needs to verify your identity? Your wallet provides trusted government-verified data without you uploading passport photos to yet another server.
       </ArticleParagraph>
+
+      <ArticleH2>How it actually works</ArticleH2>
 
       <ArticleImage 
         src={eudiWalletHowItWorks} 
@@ -48,123 +41,69 @@ export default function EudiWalletArticlePage() {
       />
 
       <ArticleParagraph>
-        <strong>Credential issuance</strong>: Government agencies, educational institutions, and other trusted entities issue credentials directly to a citizen's wallet. This might include national ID data, driving licenses, educational qualifications, or professional certifications.
+        The EUDI Wallet is an app on your phone that holds digital credentials issued by trusted sources. Your government issues your core identity credential. Your university issues your degree. Your employer issues your professional certification. Each credential is cryptographically signed, meaning anyone can verify it's genuine without calling the issuer.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Selective disclosure</strong>: When presenting credentials, users share only what's necessary. Proving you're over 18 doesn't require revealing your exact birth date. Confirming your professional license doesn't mean sharing your home address.
+        When a service needs to verify something about you, they send a request to your wallet. You see exactly what they're asking for and decide whether to share it. If you agree, your wallet sends only the requested information, nothing more. The bar doesn't get your home address when checking your age. The car rental doesn't get your medical history when verifying your license.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Verification</strong>: Relying parties (businesses or services requesting identity proof) can verify credentials cryptographically without contacting the issuer. This enables offline verification while maintaining security.
+        Here's the privacy twist: the government that issued your credential doesn't learn where you use it. The bar that checks your age doesn't get data they didn't ask for. No central database tracks all your identity checks. The system is designed so that no single entity, including governments, can surveil how you use your credentials.
+      </ArticleParagraph>
+
+      <ArticleH2>What you'll be able to do</ArticleH2>
+
+      <ArticleParagraph>
+        <strong>Travel across the EU</strong> with digital credentials that every country accepts. Check into a hotel in Portugal using credentials issued in Germany. Rent a car in Italy without explaining why your Swedish ID card looks different from what they're used to.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Privacy by design</strong>: The architecture prevents tracking users across different verifications. Issuers don't learn where credentials are used, and verifiers don't receive unnecessary information.
-      </ArticleParagraph>
-
-      <ArticleH2>Use cases across sectors</ArticleH2>
-
-      <ArticleParagraph>
-        EUDI Wallet will enable numerous practical applications:
+        <strong>Open bank accounts</strong> without the usual identity verification hassle. Instead of uploading passport photos and waiting for manual review, your wallet provides verified identity data that banks can trust immediately.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Government services</strong>: Access public services across borders without navigating different national systems. File taxes, apply for permits, or access healthcare records using a single trusted identity.
+        <strong>Access government services</strong> across borders. File taxes, apply for permits, or access healthcare in any EU country using the same digital identity.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Financial services</strong>: Open bank accounts, apply for loans, or complete KYC requirements using verified credentials. Banks can trust the identity information without conducting their own document verification.
+        <strong>Prove qualifications instantly.</strong> Job applications could include verified credentials for your degrees and certifications that employers can check in seconds, eliminating fake diploma concerns.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Travel</strong>: Check into hotels, rent cars, or board flights using digital credentials. Border crossings within the EU become smoother with verified identity at hand.
+        <strong>Verify your age</strong> for restricted services without revealing unnecessary information. Buying alcohol online? The store confirms you're old enough without learning your exact birthday or home address.
+      </ArticleParagraph>
+
+      <ArticleH2>When this is happening</ArticleH2>
+
+      <ArticleParagraph>
+        The regulation is already in force. Large-scale pilots are running across EU countries, testing real implementations with actual users and services. By 2026, every member state must offer a compliant wallet to citizens for free.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Healthcare</strong>: Access medical records, present insurance information, or prove vaccination status across EU healthcare systems.
+        Starting in 2026, large online platforms and certain industries will be required to accept EUDI Wallet credentials. This creates a network effect: once major services accept the wallet, smaller ones will follow because users will expect it.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Education</strong>: Present educational qualifications for job applications or further study, with employers and institutions able to instantly verify authenticity.
+        Each country will develop its own wallet app, but all must meet the same technical standards and accept credentials from other countries. Think of it like passports: every country issues its own, but all EU countries accept each other's for travel.
+      </ArticleParagraph>
+
+      <ArticleH2>Why this matters beyond Europe</ArticleH2>
+
+      <ArticleParagraph>
+        The EUDI Wallet is built on international standards that work globally. While the legal requirement only applies to EU countries, the technology can interoperate with similar systems elsewhere. As more countries develop digital identity systems, credentials could eventually work across continents.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Age verification</strong>: Prove you're old enough for age-restricted services without revealing your exact age or other personal details.
-      </ArticleParagraph>
-
-      <ArticleH2>Technical architecture</ArticleH2>
-
-      <ArticleParagraph>
-        EUDI Wallet builds on established cryptographic standards and protocols:
+        This also sets expectations. Once 450 million EU residents have digital wallets that share only necessary information, they'll expect the same experience everywhere. Businesses outside the EU will face pressure to adopt similar privacy-respecting verification.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Verifiable credentials</strong>: Credentials follow W3C standards, ensuring interoperability with broader international efforts in digital identity.
+        Folio is building for this future. Our platform works with the credential formats and verification protocols that EUDI Wallet uses, so businesses can accept these credentials alongside traditional verification methods. You can see how verifiable credentials work in our <Link to="/government/playground" className="underline hover:text-[#737373] transition-colors">interactive playground</Link>, which lets you issue and verify credentials yourself.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Decentralized identifiers</strong>: Users aren't dependent on any single authority. The architecture supports multiple credential issuers and doesn't create central databases of citizen activities.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Secure elements</strong>: Sensitive cryptographic keys are protected by hardware security features in smartphones, preventing extraction even if a device is compromised.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Offline capability</strong>: Many verifications can occur without internet connectivity, important for accessibility and reliability.
-      </ArticleParagraph>
-
-      <ArticleH2>Implementation timeline</ArticleH2>
-
-      <ArticleParagraph>
-        The rollout of EUDI Wallet follows a phased approach:
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Large-scale pilots</strong>: Multiple pilot projects across member states are testing real-world implementations with actual users and services.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Technical specifications</strong>: The Architecture and Reference Framework provides detailed technical requirements that all implementations must follow.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Member state implementations</strong>: Each country develops its own compliant wallet, potentially building on the EU's reference implementation.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Mandatory acceptance</strong>: From 2026, certain sectors must accept EUDI Wallet for identity verification, driving adoption on the relying party side.
-      </ArticleParagraph>
-
-      <ArticleH2>Implications for businesses</ArticleH2>
-
-      <ArticleParagraph>
-        Organizations operating in the EU should prepare for EUDI Wallet:
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Identity verification</strong>: Current identity verification processes will need to accept EUDI Wallet credentials. This may simplify verification while requiring technical integration.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Regulatory compliance</strong>: Large online platforms must accept EUDI Wallet. Other sectors will find acceptance increasingly expected by customers and potentially required by regulation.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Customer experience</strong>: EUDI Wallet enables faster, smoother identity verification. Early adopters can differentiate on user experience.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Data minimization</strong>: Selective disclosure changes what data businesses receive. Systems designed around collecting full identity documents will need updating.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        Folio's identity platform is designed to work with emerging digital identity standards, including the credential formats and verification protocols that EUDI Wallet will use. As the ecosystem develops, businesses using Folio will be positioned to accept EUDI Wallet credentials alongside existing verification methods. You can explore how verifiable credentials work in practice with our <Link to="/government/playground" className="underline hover:text-[#737373] transition-colors">interactive playground</Link>, which demonstrates credential issuance and verification flows.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        The EUDI Wallet represents a significant step toward user-controlled digital identity. While implementation will take time and coordination across 27 countries, the direction is clear: citizens will have portable, secure digital credentials that work across borders and sectors. Organizations that prepare now will be ready to serve the next generation of digital identity.
+        The shift to user-controlled digital identity is coming. The EUDI Wallet puts Europe at the forefront, but the implications extend far beyond. How we prove who we are online is about to fundamentally change, and for once, the change puts users in control.
       </ArticleParagraph>
     </BlogArticleLayout>
   )

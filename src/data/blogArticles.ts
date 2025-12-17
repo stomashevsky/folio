@@ -380,8 +380,8 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Product',
     date: 'Oct 25, 2025',
-    title: 'What is EUDI Wallet and why it matters for Europe',
-    description: 'The European Digital Identity Wallet will transform how EU citizens interact with government and business services. Learn what EUDI Wallet is, how it works, and when it\'s coming.',
+    title: "The EU is giving everyone a digital ID wallet. Here's what that means.",
+    description: "By 2026, every EU country must offer citizens a free digital identity wallet. Prove your age without showing your birth date, open bank accounts without photocopying your passport.",
     slug: 'eudi-wallet',
     image: blogEudiWallet,
   },
