@@ -41,7 +41,6 @@ import blogRegularVsDigitalWallets from '../assets/images/blog-regular-vs-digita
 import blogAreDigitalWalletsSafe from '../assets/images/blog-are-digital-wallets-safe.png'
 import blogAppleGiftCardAddToWallet from '../assets/images/blog-apple-gift-card-add-to-wallet.png'
 import blogCanADigitalWalletBeHacked from '../assets/images/blog-can-a-digital-wallet-be-hacked.png'
-import blogTheUltimateGuideToTheSafestDigitalWalletApp from '../assets/images/blog-the-ultimate-guide-to-the-safest-digital-wallet-app.png'
 import blogHowToAddAndStoreYourMedicalCard from '../assets/images/blog-how-to-add-and-store-your-medical-card.png'
 import blogTheBestDigitalWalletsForAndroid from '../assets/images/blog-the-best-digital-wallets-for-android.png'
 import blogHowToStoreAndUseLoyaltyCardsOnYourIphone from '../assets/images/blog-how-to-store-and-use-loyalty-cards-on-your-iphone.png'
@@ -114,7 +113,6 @@ const BLOG_OG_IMAGE_BY_SLUG: Record<string, string> = {
   'the-best-digital-wallets-for-android': 'blog-the-best-digital-wallets-for-android.png',
   'the-best-digital-wallets-for-iphone': 'blog-the-best-digital-wallets-for-iphone.png',
   'the-best-event-ticket-apps': 'blog-best-event-ticket-apps.png',
-  'the-ultimate-guide-to-the-safest-digital-wallet-app': 'blog-the-ultimate-guide-to-the-safest-digital-wallet-app.png',
   'tripcase-alternative': 'blog-tripcase-alternative.png',
   'tripit-alternative': 'blog-tripit-alternative.png',
   'tripsy-alternative-travel-app': 'blog-tripsy-alternative.png',
@@ -197,14 +195,6 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     description: 'Learn about digital wallet security risks and how to protect yourself. Discover what makes a wallet legit and secure, and what to do if your wallet is compromised.',
     slug: 'can-a-digital-wallet-be-hacked',
     image: blogCanADigitalWalletBeHacked,
-  },
-  {
-    category: 'Safety',
-    date: 'Sep 10, 2024',
-    title: 'The ultimate guide to the safest digital wallet app',
-    description: 'Discover the safest digital wallet apps and learn how to choose the most secure wallet for your needs. Explore security features, best practices, and why digital wallet security matters.',
-    slug: 'the-ultimate-guide-to-the-safest-digital-wallet-app',
-    image: blogTheUltimateGuideToTheSafestDigitalWalletApp,
   },
   // Q4 2024
   {
