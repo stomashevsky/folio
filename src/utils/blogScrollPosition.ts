@@ -49,6 +49,34 @@ export function restoreBlogScrollPosition(): boolean {
 }
 
 /**
+ * Get saved blog page state without side effects.
+ * Use this for synchronous state initialization.
+ */
+export function getSavedBlogPageState(): BlogPageState | null {
+  const saved = sessionStorage.getItem(BLOG_PAGE_STATE_KEY)
+  if (!saved) return null
+
+  try {
+    const parsed = JSON.parse(saved) as Partial<BlogPageState>
+    if (
+      typeof parsed.scrollY === 'number' &&
+      typeof parsed.displayedArticles === 'number' &&
+      typeof parsed.selectedCategory === 'string'
+    ) {
+      return {
+        scrollY: parsed.scrollY,
+        displayedArticles: parsed.displayedArticles,
+        selectedCategory: parsed.selectedCategory
+      }
+    }
+  } catch {
+    return null
+  }
+
+  return null
+}
+
+/**
  * Restore blog page state (scroll + UI state).
  * Does NOT remove saved state - call clearBlogPageState() after restoring scroll.
  */

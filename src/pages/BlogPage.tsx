@@ -6,7 +6,7 @@ import { Button, BlogArticleCard } from '../components/ui'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
 import { blogArticles, type BlogCategory } from '../data/blogArticles'
-import { restoreBlogPageState, saveBlogPageState, isBlogScrollRestoring, clearBlogPageState } from '../utils/blogScrollPosition'
+import { getSavedBlogPageState, saveBlogPageState, isBlogScrollRestoring, clearBlogPageState } from '../utils/blogScrollPosition'
 
 const categories: BlogCategory[] = ['All', 'Company', 'Product', 'Guides', 'Research', 'Safety', 'Business']
 
@@ -19,8 +19,29 @@ export default function BlogPage() {
   const isValidCategory = categoryParam && categories.includes(categoryParam as BlogCategory)
   const initialCategory = isValidCategory ? (categoryParam as BlogCategory) : 'All'
   
-  const [selectedCategory, setSelectedCategory] = useState<BlogCategory>(initialCategory)
-  const [displayedArticles, setDisplayedArticles] = useState(15)
+  // Use lazy initialization to restore state synchronously on mount
+  // This prevents race conditions with useEffect-based restoration
+  const [selectedCategory, setSelectedCategory] = useState<BlogCategory>(() => {
+    // Only restore if coming from "Back to Blog" and no URL category
+    if (location.state?.restoreScroll && !categoryParam) {
+      const savedState = getSavedBlogPageState()
+      if (savedState?.selectedCategory && categories.includes(savedState.selectedCategory as BlogCategory)) {
+        return savedState.selectedCategory as BlogCategory
+      }
+    }
+    return initialCategory
+  })
+  
+  const [displayedArticles, setDisplayedArticles] = useState(() => {
+    // Only restore if coming from "Back to Blog"
+    if (location.state?.restoreScroll) {
+      const savedState = getSavedBlogPageState()
+      if (savedState?.displayedArticles && typeof savedState.displayedArticles === 'number') {
+        return savedState.displayedArticles
+      }
+    }
+    return 15
+  })
   const [showLeftFade, setShowLeftFade] = useState(false)
   const [showRightFade, setShowRightFade] = useState(false)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
@@ -60,62 +81,35 @@ export default function BlogPage() {
     }
   }, [categoryParam, location.state?.restoreScroll])
 
-  // Restore scroll position when returning from article via "Back to blog" button
+  // Sync URL with restored category (state was already initialized synchronously)
   useEffect(() => {
-    // Only restore once per navigation
+    // Only sync URL once per navigation when restoring
     if (hasRestoredStateRef.current) {
       return
     }
     
-    // Check if we have saved state in sessionStorage
-    const hasSavedState = sessionStorage.getItem('blogPageState') !== null
-    
-    // Check if URL has an explicit category parameter
+    // Check if we restored state (via lazy initialization)
+    const isRestoring = location.state?.restoreScroll === true
     const urlHasCategory = searchParams.get('category') !== null
     
-    // Only restore from sessionStorage if:
-    // 1. We're returning via "Back to blog" button (explicit restoreScroll flag)
-    // 2. AND there's no explicit category in URL (URL takes priority)
-    const shouldRestoreFromStorage = 
-      location.state?.restoreScroll === true && 
-      hasSavedState && 
-      !urlHasCategory
-    
-    if (shouldRestoreFromStorage) {
-      const savedState = restoreBlogPageState()
-      if (savedState) {
-        if (savedState.selectedCategory && categories.includes(savedState.selectedCategory as BlogCategory)) {
-          setSelectedCategory(savedState.selectedCategory as BlogCategory)
-          if (savedState.selectedCategory === 'All') {
-            setSearchParams({})
-          } else {
-            setSearchParams({ category: savedState.selectedCategory })
-          }
-        }
-
-        if (savedState.displayedArticles) {
-          setDisplayedArticles(savedState.displayedArticles)
-        }
-        
-        hasRestoredStateRef.current = true
+    if (isRestoring && !urlHasCategory) {
+      // State was restored via lazy init, now sync URL if needed
+      if (selectedCategory !== 'All') {
+        setSearchParams({ category: selectedCategory })
       }
+      hasRestoredStateRef.current = true
     }
     
     // Update previous pathname for next render
     const currentPath = location.pathname
     if (currentPath.startsWith('/blog/')) {
-      // We're on an article page, update the ref for next time
       prevPathnameRef.current = currentPath
-      hasRestoredStateRef.current = false // Reset flag when navigating to article
-    } else if (currentPath === '/blog') {
-      // We're on blog page - keep previous pathname for detection
-      // Don't update prevPathnameRef here to preserve it for browser back detection
-    } else {
-      // We're on a different page, clear the ref
+      hasRestoredStateRef.current = false
+    } else if (currentPath !== '/blog') {
       prevPathnameRef.current = null
       hasRestoredStateRef.current = false
     }
-  }, [location.state, location.pathname, setSearchParams, searchParams])
+  }, [location.state, location.pathname, setSearchParams, searchParams, selectedCategory])
 
   // Note: Scroll restoration is now handled in ScrollToTop component
 
