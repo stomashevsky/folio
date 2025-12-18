@@ -1,63 +1,69 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
 import { Link } from 'react-router-dom'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import folioScreens from '../assets/images/blog-what-is-digital-wallet-folio-screens.png'
 
 export default function WhatIsADigitalWalletArticlePage() {
   return (
     <BlogArticleLayout
       title="What is a digital wallet?"
       description="Learn what a digital wallet is, how it works, and how to use one. Discover the benefits, security features, and types of digital wallets available for Android and iPhone."
-      date="Aug 27, 2024"
+      date="Jan 15, 2024"
       category="Guides"
       slug="what-is-a-digital-wallet"
     >
       <ArticleParagraph>
-        A digital wallet is a software application or online service that stores your payment information and other essential details securely on your smartphone, tablet, or computer. This allows you to make transactions electronically without needing physical cards or cash. Digital wallets are designed to simplify payments and enhance security. You can use them to store credit and debit cards, loyalty cards, gift cards, and even digital tickets. You know how it's always a hassle digging through your wallet for cards or IDs? Try to start using a wallet app, for instance, <strong>Folio Wallet</strong>, because it's been a game changer. It lets you store all that stuff in one place on your phone, which is so much easier. Plus, it's got strong encryption, so everything's super secure. You even get reminders when your gift cards are about to expire, and having your medical info handy in case of an emergency is a big plus. It's been really convenient, especially on days when you forget your wallet at home.
-      </ArticleParagraph>
-
-      <ArticleH2>How does a digital wallet work</ArticleH2>
-
-      <ArticleParagraph>
-        To understand how a digital wallet works, it's crucial to delve into the technology behind it. When you add a credit or debit card to your digital wallet account, the app encrypts your payment details. Instead of transmitting your actual card number, the wallet generates a unique token for each transaction. This token is a random sequence of numbers that represents your card information. The merchant's payment terminal uses this token to process the payment, keeping your real card details hidden from potential thieves. This process is coupled with additional security layers such as biometric authentication (fingerprint or facial recognition) and secure PIN codes, ensuring that even if someone steals your device, they can't access your payment information without proper authorization.
+        You're at the checkout counter. The cashier says your total. You reach for your phone instead of your wallet, tap it against the terminal, and the payment goes through. No fumbling for cards, no counting cash, no signature required. That's a digital wallet in action, but tap-to-pay is just the beginning of what these apps can do.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        A digital wallet operates by securely linking your payment information to the retailer or service provider you wish to transact with. This connection can be established through various technologies. Near Field Communication (NFC) allows contactless payments by holding your device close to a compatible card reader. <strong>Apple Pay</strong> and <strong>Samsung Pay</strong> use this technology. Magnetic Secure Transmission (MST) creates a magnetic signal to mimic the magnetic stripe on a credit card, used by Samsung Pay. QR Codes allow you to scan a QR code with your smartphone to make payments, as seen with <strong>PayPal</strong>. When you pay with a digital wallet, your actual card number is not transmitted. Instead, a unique token or encrypted information is used, adding an extra layer of security.
+        A digital wallet is an app that stores information you'd normally keep in a physical wallet: payment cards, IDs, tickets, loyalty cards, insurance documents. The difference is that everything lives on your phone, protected by encryption and biometric authentication. Some digital wallets focus on payments. Others handle documents. The best ones do both.
+      </ArticleParagraph>
+
+      <ArticleH2>How digital wallets work</ArticleH2>
+
+      <ArticleParagraph>
+        When you add a credit card to a digital wallet, the app doesn't store your actual card number. Instead, it creates a token: a random string of characters that represents your card for transactions. When you tap to pay, the terminal receives this token, not your real card details. If someone intercepts the transaction, they get useless data. Your actual card number stays hidden.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        This tokenization happens alongside encryption. Your card details are scrambled before being stored, and only your device can unscramble them. Add biometric authentication (Face ID, fingerprint) and you have multiple layers of security that physical cards simply can't match. A stolen credit card can be used immediately. A stolen phone with a digital wallet requires your face or fingerprint to unlock.
       </ArticleParagraph>
 
       <ArticleH2>Types of digital wallets</ArticleH2>
 
       <ArticleParagraph>
-        Digital wallets come in several types, each suited to different needs. Closed wallets are issued by a specific company and can only be used with that company's products or services. For example, Amazon Pay is a closed wallet that only works with Amazon and affiliated retailers. Semi-closed wallets allow transactions at a list of approved merchants. They offer more flexibility than closed wallets but still require agreements with participating vendors. Open wallets are provided by banks or financial institutions and support a broad range of transactions, including ATM withdrawals and fund transfers. Examples include PayPal and Skrill.
-      </ArticleParagraph>
-
-      <ArticleH2>Benefits and getting started</ArticleH2>
-
-      <ArticleParagraph>
-        Opening a digital wallet is a straightforward process that begins with selecting a compatible app based on your device. To get started, download the app from your device's app store, then follow the setup instructions. You'll need to enter your payment details and possibly verify your identity through the app. Once your digital wallet account is set up, you can begin adding various payment methods, such as credit cards, debit cards, and even gift cards. To use a digital card, choose your digital wallet depending on your device, select a compatible wallet app. Enter your credit or debit card details into the wallet app, and your information will be encrypted for security. For in-store purchases, hold your device near the payment terminal. For online transactions, select the digital wallet at checkout and authorize the payment.
+        <strong>Payment wallets</strong> like Apple Pay, Google Pay, and Samsung Pay focus on contactless payments. They work at any terminal that accepts tap-to-pay, which is most retailers now. These wallets also store boarding passes, transit cards, and event tickets from participating providers. The limitation: they're picky about what they accept. If a document doesn't come from an approved source in the right format, you can't add it.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Using a digital card for payments is as simple as waving your device near a payment terminal or tapping a button on your screen. When you pay with a digital card, the process involves authenticating the payment via your digital wallet. For in-store transactions, ensure that the point-of-sale system supports contactless payments. With online purchases, select the digital wallet as your payment method at checkout, and authorize the payment. This method not only speeds up the checkout process but also enhances security by using encrypted tokens rather than your actual card details.
+        <strong>Peer-to-peer wallets</strong> like Venmo, PayPal, and Cash App handle money transfers between people. Splitting dinner, paying rent to a roommate, sending a birthday gift: these apps make it instant. Some also offer debit cards linked to your balance for spending at stores.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        One of the primary benefits of a wallet app on Android or iPhone is the ease of use and organization. A digital wallet allows you to consolidate various payment methods and important documents into one convenient app. This includes credit and debit cards, loyalty programs, and even event tickets. By managing these items digitally, you reduce the risk of losing physical cards and make transactions faster and more efficient. Additionally, the advanced security features such as encryption and tokenization provide peace of mind by protecting your sensitive information from fraud. Convenience is a major benefit: no need to carry physical cards or cash, just use your device to make payments. Security is another key advantage: advanced encryption and tokenization protect your payment details from theft. Organization is important too: store not just payment cards, but also tickets, coupons, and loyalty cards in one place.
+        <strong>Document wallets</strong> store what payment wallets won't: passports, driver's licenses, insurance cards, medical records, visa documents. These apps focus on organization and secure storage rather than payments.
+      </ArticleParagraph>
+
+      <ArticleImage
+        src={folioScreens}
+        alt="Folio digital wallet showing organized documents including payment cards, IDs, and travel documents with folder organization"
+      />
+
+      <ArticleParagraph>
+        <strong>Folio</strong> falls into this last category but goes further than most. It stores any document you can photograph or import: IDs, passports, insurance policies, tickets, loyalty cards, even handwritten notes. Everything is encrypted end-to-end and protected with passkeys, meaning only you can access your documents. Folio can't read them, and neither can anyone who might breach their servers. The app also extracts text from documents automatically, so you can copy passport numbers or policy details without typing them. Expiration reminders keep you from being caught with an outdated ID. Shared folders let family members access travel documents without texting screenshots. <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Available free on iOS and Android.</Link>
+      </ArticleParagraph>
+
+      <ArticleH2>Why use a digital wallet</ArticleH2>
+
+      <ArticleParagraph>
+        The practical benefits are obvious: less bulk in your pocket, faster checkouts, documents always with you. But the security advantages matter more. Physical cards can be skimmed, cloned, or stolen. Physical documents can be lost, damaged, or left at home when you need them. Digital versions protected by encryption and biometrics solve both problems.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        There are some potential drawbacks to consider. Limited acceptance means not all merchants accept digital wallet payments yet. Device dependency is another consideration: if your device is lost or runs out of battery, you lose access to your digital wallet. Many wallet apps are available for free. For instance, several popular wallet apps can be downloaded and used without any charge. However, while the app itself may be free, using certain features or making specific types of transactions might incur fees, like it's in PayPal, depending on the app's policies or the associated financial institutions. Always check the terms of service and fee structure for your chosen wallet payment method to avoid any unexpected costs. In general, the basic functionality of storing and using payment cards is free, making it an accessible option for most users. As we go back to <strong>Folio Wallet</strong>, it is totally free to download. It means that you do not need to pay for getting the app. All you have to do is to find it in the App Store or Google Play, tap the download button and enjoy. <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</Link>
+        There's also the organization factor. Your physical wallet holds maybe a dozen cards before it becomes unwieldy. A digital wallet holds hundreds without getting thicker. Every loyalty card from every store, every insurance policy, every ticket: searchable, sortable, always accessible.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Ensuring the security of your digital wallet account is vital. Besides encryption and tokenization, many wallet apps include features like automatic lock after inactivity, biometric access, and real-time transaction notifications. These security measures help monitor and protect your account from unauthorized access. It's also advisable to enable two-factor authentication for an added layer of protection, which requires a second form of verification in addition to your password or biometric data.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        Another exciting development is the use of digital wallets in conjunction with Internet of Things (IoT) devices. For instance, smart home systems and wearables can now interface directly with your digital wallet to facilitate automatic payments. Imagine a smart refrigerator that can order groceries and process payments through your wallet app on Android or digital wallet on iPhone, all without requiring manual intervention. This level of integration highlights the growing role of digital wallets in creating a seamless, interconnected lifestyle. Moreover, the rise of digital wallet devices in the form of smartwatches and fitness trackers is redefining how we interact with our finances. These devices enable users to pay with a digital card directly from their wrists, making transactions as simple as a flick of the wrist. As this technology evolves, we can expect further enhancements in convenience and functionality, driving greater adoption of wallet payment methods across various sectors.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        Digital wallets represent a significant advancement in how we handle payments, offering both convenience and security. Whether you're using a wallet app on Android, an iPhone, or a dedicated digital wallet device, these tools streamline transactions and protect your financial information. By understanding how digital wallets work and choosing the right type for your needs, you can simplify your daily transactions and enjoy the benefits of modern payment technology.
+        The main limitation is acceptance. Not every situation accepts digital IDs yet. Some transactions still require physical cards. Battery death means no access. For now, most people use digital wallets alongside physical ones rather than replacing them entirely. But the trend is clear: more businesses accept digital payments every year, more governments issue digital IDs, more services go paperless. The wallet in your pocket is slowly becoming optional.
       </ArticleParagraph>
     </BlogArticleLayout>
   )

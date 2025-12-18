@@ -1,47 +1,71 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
 import { Link } from 'react-router-dom'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import loyaltyScreen from '../assets/images/blog-loyalty-cards-folio-screen.png'
 
 export default function HowToStoreAndUseLoyaltyCardsOnYourIphoneArticlePage() {
   return (
     <BlogArticleLayout
       title="How to store and use loyalty cards on an iPhone"
       description="Learn how to store and use loyalty cards on your iPhone with digital wallets. Compare Apple Wallet, Stocard, and Folio Wallet to find the best solution for managing your loyalty cards."
-      date="Sep 4, 2024"
+      date="Mar 5, 2024"
       category="Research"
       slug="how-to-store-and-use-loyalty-cards-on-your-iphone"
     >
       <ArticleParagraph>
-        With apps like Apple Wallet, Stocard, and Folio Wallet, managing loyalty cards on your iPhone has never been simpler. These digital wallets let you either scan or input your card details manually, granting you instant access to your cards whenever you need them. By digitizing your cards, you can declutter your physical wallet while ensuring that your rewards and discounts are always at your fingertips.
-      </ArticleParagraph>
-
-      <ArticleH2>Advantages of digital wallets for loyalty cards</ArticleH2>
-
-      <ArticleParagraph>
-        Switching to digital wallets for your loyalty cards offers several advantages. Convenience is a major benefit: say goodbye to the hassle of carrying physical cards. Access your loyalty cards anywhere, anytime, and eliminate the worry of losing or forgetting them. Organization is another key advantage: keep all your cards neatly organized in one app, making it easy to find the one you need without rifling through a stack. Digital cards mean less bulk in your wallet or purse, freeing up space for other essentials. You can enjoy real-time updates on rewards and special offers, ensuring you never miss out on deals from your favorite stores. Digital wallets employ encryption and biometric features, such as Face ID or Touch ID, to protect your card data. Help reduce plastic waste by opting for digital cards over physical ones. Many digital wallets sync with mobile payment systems, streamlining your shopping experience.
-      </ArticleParagraph>
-
-      <ArticleH2>Digital wallet apps for iPhone</ArticleH2>
-
-      <ArticleParagraph>
-        When deciding on a digital wallet app for your iPhone, focus on your priorities. Consider which cards you need to store, whether they're loyalty, membership, or payment cards. Seek out apps with robust security measures, user-friendly interfaces, and additional features like notifications and real-time updates. Apple Wallet, Stocard, and Folio Wallet are all popular options, each with its own unique strengths.
+        The cashier asks if you have a rewards card. You know you do, somewhere. You signed up months ago. The physical card is probably in a drawer at home, or maybe it fell behind the couch. Meanwhile, there's a line forming behind you. This scene plays out millions of times daily, and the solution has been on your phone the whole time.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Apple Wallet</strong> is more than just a cardholder: it's your one-stop travel companion, shopping assistant, and ticket organizer. Developed by Apple Inc., this app transforms your iPhone into a hub of convenience, seamlessly integrating with the iOS ecosystem for a streamlined user experience. Apple Wallet easily stores and accesses loyalty cards from your favorite stores, ensuring your rewards and discounts are always available with just a tap. The app simplifies transactions with Apple Pay, which lets you add credit, debit, and prepaid cards for secure, contactless payments. Supported by a wide range of banks globally, it lightens your wallet load. You can use your iPhone or Apple Watch to pay for public transportation, bypassing lines in many cities worldwide. The app manages your concert tickets and boarding passes by storing them in Apple Wallet, allowing for easy scanning at events and gates. You can keep important health documents, including vaccination records, on your phone for quick access whenever necessary. Apple Wallet also supports unlocking your car or accessing campus facilities using your iPhone or Apple Watch, thanks to partnerships with select carmakers and educational institutions. Apple Wallet uses advanced security protocols, assigning device-specific numbers and unique transaction codes for Apple Pay. Card details aren't stored on your device or Apple's servers, and transactions are authenticated via Face ID, Touch ID, or passcode. Apple Wallet's intuitive design ensures your cards and passes are always at your fingertips. Benefit from real-time notifications for transactions, updates on loyalty points, and reminders for events or travel. Part of the iOS family, Apple Wallet effortlessly integrates with other Apple services. Access cards from the lock screen, within apps, or using Siri, while enjoying peace of mind with information synced across all your Apple devices. Apple Wallet is your gateway to an organized and secure digital life. With its integration with Apple Pay, robust security, and user-friendly design, it's a must-have app for iPhone users.
+        Digital wallets turn that stack of plastic loyalty cards into barcodes on your screen. Scan the original card once, and it lives in your phone forever. At checkout, pull up the barcode, let the cashier scan it, collect your points. No more lost cards, no more forgotten rewards.
+      </ArticleParagraph>
+
+      <ArticleH2>Apple Wallet for loyalty cards</ArticleH2>
+
+      <ArticleParagraph>
+        Apple Wallet comes pre-installed on every iPhone, making it the obvious first choice. It stores loyalty cards from participating retailers: Walgreens, Target, Dunkin', and many others. When a business supports Apple Wallet, you'll typically see an "Add to Apple Wallet" button in their app or on emailed receipts. Tap it, and the card appears in your Wallet.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Stocard</strong> is the app of choice for those looking to streamline their loyalty cards. Designed for efficiency and simplicity, it lets you digitize and manage your loyalty cards so that rewards and discounts are always accessible. Available on both iOS and Android in Europe, Australia and Canada. Stocard allows you to declutter your wallet by storing loyalty cards from thousands of retailers, allowing quick access to rewards and discounts right from your phone. Each card stored in Stocard comes with a digital barcode that can be scanned at checkout, making the process of redeeming points fast and effortless. Easily add loyalty cards to iOS wallet by scanning barcodes with your smartphone camera or entering details manually. Stocard's extensive database makes adding cards from various retailers simple. You can get exclusive deals and coupons from your favorite stores, updated regularly to help you save money and take advantage of promotions. Receive real-time notifications about loyalty points, rewards, and special offers, ensuring you never miss a chance to benefit. Keep your cards and information synchronized across devices, whether you're using an iPhone, iPad, or Android. While it doesn't offer biometric authentication like Face ID or Touch ID, it upholds high data protection standards. Stocard's clean and intuitive interface makes it easy to add loyalty cards to iOS wallet. Its straightforward design ensures quick access to your loyalty cards without any hassle. While Stocard excels at managing loyalty cards, it doesn't integrate with payment systems like Apple Pay or support transit cards. It's perfect for users focused on maximizing loyalty rewards, though those seeking a more comprehensive digital wallet might look elsewhere.
+        The limitation is that word "participating." Apple Wallet only accepts cards in the .pkpass format that Apple specifies. Your local coffee shop's punch card? Probably not supported. That gym membership with a barcode? Unlikely. Apple Wallet works beautifully when it works, but it rejects more cards than it accepts.
+      </ArticleParagraph>
+
+      <ArticleH2>Stocard for rewards programs</ArticleH2>
+
+      <ArticleParagraph>
+        Stocard focuses specifically on loyalty cards and handles them well. Open the app, scan a barcode, and the card is saved. Stocard recognizes most major retailers automatically, pulling in the logo and formatting the card nicely. At checkout, open the app, find your card, show the barcode. The app also surfaces deals and offers from stores you've added.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Folio Wallet</strong> serves as your comprehensive solution for managing a variety of cards and documents digitally. This versatile app goes beyond loyalty cards, designed to simplify your life by organizing payment cards, identification documents, and more. Easily access your loyalty and membership cards from numerous retailers and organizations, enjoying rewards and points without carrying physical cards. While Folio Wallet doesn't support contactless payments like Apple Pay, it conveniently stores and organizes your credit, debit, and prepaid cards. Securely store digitized copies of important ID documents like driver's licenses, passports, and national IDs for instant access when needed. Keep all your travel-related documents organized, including boarding passes, hotel reservations, and car rental details, so you're always prepared for your next trip. Maintain digital copies of insurance cards, ensuring you're ready for emergencies at a moment's notice. Effortlessly manage and redeem gift cards and coupons at checkout, saving both time and money. Add cards by scanning them with your smartphone camera or manually entering the details, simplifying the digitization of any card type. Generate digital barcodes and QR codes for stored cards, allowing for seamless scanning and redemption at checkout. Organize stored cards and documents with custom categories tailored to your needs, enhancing organization and retrieval. Stay informed with alerts for important events like upcoming flights, expiring documents, or available offers, ensuring you never miss an opportunity. Protect your data across devices with cloud backup and synchronization, keeping your information safe even if you lose your device. Access your documents anytime, even without an internet connection, ensuring you always have important information at your fingertips. Folio Wallet employs advanced encryption to protect your data, maintaining high-security standards to keep your information safe. It uses robust security measures to safeguard your data, including PIN and biometric authentication, end-to-end encryption, security alerts and notifications. Folio Wallet's user-friendly design features an intuitive interface that simplifies adding, organizing, and accessing stored items. Customizable categories and efficient search functions enhance the user experience, making it easy to locate what you need. Compatible with both iOS and Android, Folio Wallet is accessible to a wide audience. While it doesn't integrate with payment systems like Apple Pay, it excels at storing a wide range of documents, offering a comprehensive solution for users looking to digitize various card types and documents. <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</Link>
+        The downside is scope. Stocard does loyalty cards and nothing else. If you want to store your insurance card alongside your CVS rewards, or keep your concert tickets near your coffee shop points, you'll need a second app. Stocard also lacks expiration tracking, so if a rewards account goes dormant, you won't know until you try to use it.
       </ArticleParagraph>
 
-      <ArticleH2>Choosing the right digital wallet</ArticleH2>
+      <ArticleH2>Folio for everything in one place</ArticleH2>
 
       <ArticleParagraph>
-        Selecting the best digital wallet app for your iPhone depends on your individual needs. Each app, Apple Wallet, Stocard, and Folio Wallet, offers distinct advantages. Apple Wallet is great for users entrenched in the Apple ecosystem. It handles everything from loyalty and payment cards to transit and ID cards, integrating seamlessly with Apple Pay for quick transactions. Its security features, like Face ID and Touch ID, ensure your data is well-protected. Stocard is ideal if your primary focus is loyalty cards. It boasts an extensive retailer database, real-time updates, and special offers to maximize your rewards. It's straightforward and effective, though it doesn't support payments or transit cards. Folio Wallet offers the most flexibility. It goes beyond loyalty cards, storing payment cards, IDs, travel documents, and insurance cards. With offline access, cloud backup, and sharing features, it's excellent for organizing various documents. Ultimately, the right choice hinges on whether you need an all-in-one payment solution, a focused loyalty card manager, or a versatile document organizer. Pick the app that best fits your lifestyle and simplifies your digital life.
+        <strong>Folio</strong> takes a different approach: store any card or document, not just loyalty programs. Add your Starbucks card next to your passport, your gym membership next to your insurance policy. Everything lives in one app, organized by folders you create.
+      </ArticleParagraph>
+
+      <ArticleImage
+        src={loyaltyScreen}
+        alt="Folio app showing a stored card with barcode ready to scan at checkout"
+      />
+
+      <ArticleParagraph>
+        Adding a card works like Stocard: open the app, tap +, scan the barcode or take a photo. Folio extracts any text automatically, so you can copy account numbers without typing. Set expiration dates for cards that have them, and get reminders before they lapse. Everything is encrypted end-to-end and protected with passkeys, so even Folio can't see your card data. <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Available free on iOS and Android.</Link>
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        The trade-off is that Folio doesn't have Stocard's retailer database with automatic logos and formatting. You're adding cards manually. But you're also not limited to what a database recognizes. That local bakery's loyalty card that no major app supports? Folio handles it the same as Target or Starbucks.
+      </ArticleParagraph>
+
+      <ArticleH2>Which approach works best</ArticleH2>
+
+      <ArticleParagraph>
+        If you only shop at major chains that support Apple Wallet, stick with what's built into your phone. It's seamless and requires no extra apps. If you have dozens of loyalty cards from various retailers, Stocard's focused approach and automatic recognition make management easier. If you want loyalty cards alongside other documents like IDs, insurance, and tickets, Folio's unified approach prevents app sprawl.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        Many people use a combination: Apple Wallet for cards that support it natively, Folio for everything else. The goal is never again standing at a register wondering where that rewards card went. However you achieve it, digital storage beats a wallet stuffed with plastic.
       </ArticleParagraph>
     </BlogArticleLayout>
   )
