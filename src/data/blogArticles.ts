@@ -42,7 +42,6 @@ import blogAreDigitalWalletsSafe from '../assets/images/blog-are-digital-wallets
 import blogAppleGiftCardAddToWallet from '../assets/images/blog-apple-gift-card-add-to-wallet.png'
 import blogCanADigitalWalletBeHacked from '../assets/images/blog-can-a-digital-wallet-be-hacked.png'
 import blogTheUltimateGuideToTheSafestDigitalWalletApp from '../assets/images/blog-the-ultimate-guide-to-the-safest-digital-wallet-app.png'
-import blogWhatIsADigitalDriversLicense from '../assets/images/blog-what-is-a-digital-drivers-license.png'
 import blogHowToAddAndStoreYourMedicalCard from '../assets/images/blog-how-to-add-and-store-your-medical-card.png'
 import blogTheBestDigitalWalletsForAndroid from '../assets/images/blog-the-best-digital-wallets-for-android.png'
 import blogHowToStoreAndUseLoyaltyCardsOnYourIphone from '../assets/images/blog-how-to-store-and-use-loyalty-cards-on-your-iphone.png'
@@ -120,7 +119,6 @@ const BLOG_OG_IMAGE_BY_SLUG: Record<string, string> = {
   'tripit-alternative': 'blog-tripit-alternative.png',
   'tripsy-alternative-travel-app': 'blog-tripsy-alternative.png',
   'wanderlog-alternative': 'blog-wanderlog-alternative.png',
-  'what-is-a-digital-drivers-license': 'blog-what-is-a-digital-drivers-license.png',
   'what-is-a-digital-wallet': 'blog-what-is-a-digital-wallet.png',
   'what-is-liveness-detection': 'blog-what-is-liveness-detection.png',
   'you-can-now-store-tickets-in-folio-wallet': 'blog-you-can-now-store-tickets-in-folio-wallet.png',
@@ -207,14 +205,6 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     description: 'Discover the safest digital wallet apps and learn how to choose the most secure wallet for your needs. Explore security features, best practices, and why digital wallet security matters.',
     slug: 'the-ultimate-guide-to-the-safest-digital-wallet-app',
     image: blogTheUltimateGuideToTheSafestDigitalWalletApp,
-  },
-  {
-    category: 'Product',
-    date: 'Sep 24, 2024',
-    title: "What is a digital driver's license?",
-    description: "Learn about digital driver's licenses and how to get one. Discover the benefits, security features, and where you can use a DDL in 2024.",
-    slug: 'what-is-a-digital-drivers-license',
-    image: blogWhatIsADigitalDriversLicense,
   },
   // Q4 2024
   {

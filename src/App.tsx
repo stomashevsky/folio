@@ -45,7 +45,6 @@ import RegularVsDigitalWalletsArticlePage from './pages/RegularVsDigitalWalletsA
 import AreDigitalWalletsSafeArticlePage from './pages/AreDigitalWalletsSafeArticlePage'
 import CanADigitalWalletBeHackedArticlePage from './pages/CanADigitalWalletBeHackedArticlePage'
 import TheUltimateGuideToTheSafestDigitalWalletAppArticlePage from './pages/TheUltimateGuideToTheSafestDigitalWalletAppArticlePage'
-import WhatIsADigitalDriversLicenseArticlePage from './pages/WhatIsADigitalDriversLicenseArticlePage'
 import HowToAddAndStoreYourMedicalCardArticlePage from './pages/HowToAddAndStoreYourMedicalCardArticlePage'
 import TheBestDigitalWalletsForAndroidArticlePage from './pages/TheBestDigitalWalletsForAndroidArticlePage'
 import TheBestDigitalWalletsForIphoneArticlePage from './pages/TheBestDigitalWalletsForIphoneArticlePage'
@@ -205,7 +204,6 @@ function App() {
         <Route path="/blog/are-digital-wallets-safe" element={<AreDigitalWalletsSafeArticlePage />} />
         <Route path="/blog/can-a-digital-wallet-be-hacked" element={<CanADigitalWalletBeHackedArticlePage />} />
         <Route path="/blog/the-ultimate-guide-to-the-safest-digital-wallet-app" element={<TheUltimateGuideToTheSafestDigitalWalletAppArticlePage />} />
-        <Route path="/blog/what-is-a-digital-drivers-license" element={<WhatIsADigitalDriversLicenseArticlePage />} />
         <Route path="/blog/how-to-add-and-store-your-medical-card" element={<HowToAddAndStoreYourMedicalCardArticlePage />} />
         <Route path="/blog/the-best-digital-wallets-for-android" element={<TheBestDigitalWalletsForAndroidArticlePage />} />
         <Route path="/blog/the-best-digital-wallets-for-iphone" element={<TheBestDigitalWalletsForIphoneArticlePage />} />
