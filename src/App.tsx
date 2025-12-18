@@ -62,6 +62,9 @@ import ManagingFamilyTravelDocumentsArticlePage from './pages/ManagingFamilyTrav
 import TermsPage from './pages/TermsPage'
 import PrivacyPage from './pages/PrivacyPage'
 import SecurityPage from './pages/SecurityPage'
+import IdWalletAppPage from './pages/IdWalletAppPage'
+import CardScannerAppPage from './pages/CardScannerAppPage'
+import LoyaltyCardAppPage from './pages/LoyaltyCardAppPage'
 import NotFoundPage from './pages/NotFoundPage'
 
 // Fallback handler in case the script in index.html didn't run
@@ -212,6 +215,9 @@ function App() {
         <Route path="/blog/biometric-data-privacy" element={<BiometricDataPrivacyArticlePage />} />
         <Route path="/blog/digital-passport-copies" element={<DigitalPassportCopiesArticlePage />} />
         <Route path="/blog/managing-family-travel-documents" element={<ManagingFamilyTravelDocumentsArticlePage />} />
+        <Route path="/id-wallet-app" element={<IdWalletAppPage />} />
+        <Route path="/card-scanner-app" element={<CardScannerAppPage />} />
+        <Route path="/loyalty-card-app" element={<LoyaltyCardAppPage />} />
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/security" element={<SecurityPage />} />

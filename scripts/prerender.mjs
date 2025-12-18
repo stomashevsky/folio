@@ -118,6 +118,25 @@ const STATIC_PAGES = [
     description: 'Review and manage verification cases with a streamlined interface for your team.',
     ogImage: 'review-workspace-hero.png',
   },
+  // SEO product pages
+  {
+    path: '/id-wallet-app',
+    title: 'ID card wallet app - Digital card holder for driver license | Folio',
+    description: 'Folio ID card wallet app allows you to easily manage ID cards and driver licenses. Keep everything safe with end-to-end encryption. Available on iOS and Android.',
+    ogImage: 'folio-app-hero.png',
+  },
+  {
+    path: '/card-scanner-app',
+    title: 'Card scanner app for iPhone and Android | Folio',
+    description: 'Folio card scanner app allows you to easily scan cards and documents. Keep everything safe with end-to-end encryption. Available on iOS and Android.',
+    ogImage: 'folio-app-hero.png',
+  },
+  {
+    path: '/loyalty-card-app',
+    title: 'Loyalty card app - Membership and reward cards wallet app | Folio',
+    description: 'Folio loyalty card app allows you to easily manage loyalty cards and membership cards. Keep everything safe with end-to-end encryption. Available on iOS and Android.',
+    ogImage: 'folio-app-hero.png',
+  },
   // Legal pages
   {
     path: '/terms',
