@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function KycAmlComplianceArticlePage() {
   return (
@@ -158,7 +159,7 @@ export default function KycAmlComplianceArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Folio's identity verification platform supports KYC and AML compliance with configurable verification workflows, global document coverage, biometric verification, and integration with screening services. The platform generates audit-ready reports documenting verification results and decision rationale.
+        <Link to="/platform/id-verification" className="underline hover:text-[#737373] transition-colors">Folio's identity verification platform</Link> supports KYC and AML compliance with configurable verification workflows, global document coverage, biometric verification, and integration with screening services. The platform generates audit-ready reports documenting verification results and decision rationale.
       </ArticleParagraph>
 
       <ArticleParagraph>
