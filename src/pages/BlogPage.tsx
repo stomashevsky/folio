@@ -19,29 +19,23 @@ export default function BlogPage() {
   const isValidCategory = categoryParam && categories.includes(categoryParam as BlogCategory)
   const initialCategory = isValidCategory ? (categoryParam as BlogCategory) : 'All'
   
-  // Use lazy initialization to restore state synchronously on mount
-  // This prevents race conditions with useEffect-based restoration
-  const [selectedCategory, setSelectedCategory] = useState<BlogCategory>(() => {
-    // Only restore if coming from "Back to Blog" and no URL category
-    if (location.state?.restoreScroll && !categoryParam) {
-      const savedState = getSavedBlogPageState()
-      if (savedState?.selectedCategory && categories.includes(savedState.selectedCategory as BlogCategory)) {
-        return savedState.selectedCategory as BlogCategory
-      }
-    }
-    return initialCategory
-  })
+  // Check if we should restore state from sessionStorage
+  // State is saved when user clicks "Load more" or changes category
+  // State is cleared when navigating away from blog or when URL has explicit category
+  const savedState = getSavedBlogPageState()
+  const shouldRestore = savedState !== null && !categoryParam
   
-  const [displayedArticles, setDisplayedArticles] = useState(() => {
-    // Only restore if coming from "Back to Blog"
-    if (location.state?.restoreScroll) {
-      const savedState = getSavedBlogPageState()
-      if (savedState?.displayedArticles && typeof savedState.displayedArticles === 'number') {
-        return savedState.displayedArticles
-      }
-    }
-    return 15
-  })
+  const [selectedCategory, setSelectedCategory] = useState<BlogCategory>(
+    shouldRestore && savedState.selectedCategory && categories.includes(savedState.selectedCategory as BlogCategory)
+      ? savedState.selectedCategory as BlogCategory
+      : initialCategory
+  )
+  
+  const [displayedArticles, setDisplayedArticles] = useState(
+    shouldRestore && typeof savedState?.displayedArticles === 'number'
+      ? savedState.displayedArticles
+      : 15
+  )
   const [showLeftFade, setShowLeftFade] = useState(false)
   const [showRightFade, setShowRightFade] = useState(false)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
