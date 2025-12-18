@@ -339,7 +339,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Research',
     date: 'May 14, 2025',
-    title: 'Best Apple Wallet Alternatives',
+    title: 'Best Apple Wallet alternatives',
     description: 'Apple Wallet is great for tap-to-pay and boarding passes, but it has limitations. Discover five powerful iOS apps that fill Wallet\'s gaps: secure document storage, multi-card management, and automated trip planning.',
     slug: 'best-apple-wallet-alternatives',
     image: blogBestAppleWalletAlternatives,
