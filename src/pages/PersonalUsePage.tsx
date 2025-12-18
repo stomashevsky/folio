@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import FAQSection, { FAQItem } from '../components/sections/FAQSection'
+import ReviewsSection from '../components/sections/ReviewsSection'
 import PasskeysSection from '../components/sections/PasskeysSection'
 import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import { usePageTitle } from '../hooks/usePageTitle'
@@ -509,6 +510,9 @@ function FolioAppPage() {
           </div>
         </div>
       </section>
+
+      {/* Reviews Section */}
+      <ReviewsSection />
 
       {/* FAQ Section */}
       <FAQSection 
