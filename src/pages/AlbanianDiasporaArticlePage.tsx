@@ -1,5 +1,6 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleBlockquote } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleBlockquote, ArticleImage } from '../components/ui'
 import { Link } from 'react-router-dom'
+import blogAlbanianDiasporaCec from '../assets/images/blog-albanian-diaspora-cec.png'
 
 export default function AlbanianDiasporaArticlePage() {
   return (
@@ -17,6 +18,11 @@ export default function AlbanianDiasporaArticlePage() {
       <ArticleParagraph>
         "This is a historic moment for elections in Albania, as for the first time, our fellow citizens residing outside the Republic of Albania will have the opportunity to vote from where they live," said <strong>Ilirjan Celibashi</strong>, State Election Commissioner. "Working with Folio has been a transformative experience. Their innovative approach and unwavering commitment didn't just help us exceed our goals for voter registration, they set a new standard of excellence for how digital identity solutions should be delivered in Albania and worldwide."
       </ArticleParagraph>
+
+      <ArticleImage 
+        src={blogAlbanianDiasporaCec} 
+        alt="Central Election Commission of Albania press conference announcing the diaspora voter registration platform"
+      />
 
       <ArticleH2>Enabling a borderless democracy</ArticleH2>
 
