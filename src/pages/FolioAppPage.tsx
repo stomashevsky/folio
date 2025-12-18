@@ -41,24 +41,36 @@ const BACKGROUND_STYLE = {
 
 const FOLIO_APP_FAQ: FAQItem[] = [
   {
-    q: 'What types of documents can I add to Folio?',
-    a: 'You can add passports, ID cards, residence permits, tickets, bookings, payment cards and any other document from photos, PDFs or emails.',
+    q: 'What is Folio?',
+    a: 'Folio is a digital wallet app that keeps your passports, IDs, tickets, bookings and cards organized in one secure place. It works on iPhone and Android.',
   },
   {
-    q: 'Can I trust Folio with sensitive documents?',
-    a: 'Yes. Your data is end to end encrypted with keys only you control. Even with cloud sync, no one at Folio can view your documents.',
+    q: 'What types of documents can I store?',
+    a: 'Passports, ID cards, residence permits, driver\'s licenses, travel tickets (flights, trains, hotels, events), payment cards, gift cards, loyalty cards and any other personal document.',
   },
   {
-    q: 'Will my documents sync across devices?',
-    a: 'Yes. Your encrypted library syncs through the cloud so everything stays available on your iPhone or Android phone.',
+    q: 'How do I add documents?',
+    a: 'You can scan with your camera, upload photos from your library, import PDFs, or forward booking emails to docs@folio.id. Folio automatically extracts key details.',
   },
   {
-    q: 'Can I share documents with others?',
-    a: 'Yes. Shared folders let you safely share selected documents with family or friends. People you share with always see the latest version.',
+    q: 'Is my data secure?',
+    a: 'Yes. All documents are end-to-end encrypted with keys only you control. Even with cloud sync enabled, no one at Folio can access your data.',
   },
   {
-    q: 'Is Folio free to use?',
-    a: 'Yes. Folio is free and gives you unlimited access to document storage, smart tickets, the travel timeline and all core features.',
+    q: 'Can I access documents offline?',
+    a: 'Yes. Documents are stored locally on your device and available without internet. Cloud sync keeps everything updated when you\'re back online.',
+  },
+  {
+    q: 'Will I get reminders before documents expire?',
+    a: 'Yes. Folio sends gentle reminders before your passport, ID or any other document expires so you\'re never caught off guard.',
+  },
+  {
+    q: 'Can I share documents with family?',
+    a: 'Yes. Create shared folders to safely share travel plans, tickets or IDs with family and friends. Everyone sees the latest versions automatically.',
+  },
+  {
+    q: 'Is Folio free?',
+    a: 'Yes. Folio is completely free with unlimited document storage, travel timeline, expiry alerts and all core features.',
   },
 ]
 
