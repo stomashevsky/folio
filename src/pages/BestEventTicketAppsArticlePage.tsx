@@ -1,43 +1,69 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import { Link } from 'react-router-dom'
+import eventTicketsImage from '../assets/images/blog-event-tickets-folio.png'
 
 export default function BestEventTicketAppsArticlePage() {
   return (
     <BlogArticleLayout
-      title="The best event ticket apps"
-      description="From concerts to conferences: discover apps that keep your tickets organized, accessible, and secure."
+      title="Where did I put that ticket? (The event ticket organization problem)"
+      description="Concert in Ticketmaster, conference badge in email, theme park as a screenshot. Here's how to stop losing tickets."
       date="Jul 24, 2025"
       category="Research"
       slug="the-best-event-ticket-apps"
     >
       <ArticleParagraph>
-        Event tickets live in emails. PDF attachments. Screenshots. Multiple apps. Finding the right ticket when you need it shouldn't be a treasure hunt. The right app keeps everything in one place. Organized. Accessible. Secure. Ready when you arrive at the venue.
-      </ArticleParagraph>
-
-      <ArticleH2>The best apps for managing event tickets</ArticleH2>
-
-      <ArticleParagraph>
-        <strong>Ticketmaster</strong> is where most major events sell tickets. The app stores your purchases and shows upcoming events you've bought tickets for. It's convenient if you only buy through Ticketmaster. But your tickets are locked inside. You can't export them or add tickets from other sources. Best for fans who buy most tickets through Ticketmaster and don't need to organize tickets from multiple sources.
+        You're at the venue entrance. The line is moving. You search your email for "ticket" and get 47 results. None of them is the one you need. You try "concert" and find last year's show. The person behind you sighs. You scroll frantically through screenshots, then remember the ticket might be in a different email account entirely.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Eventbrite</strong> helps you discover local events and keeps track of tickets you've purchased. It works well for smaller venues, workshops, and conferences. The app shows your upcoming events in a clean timeline. You can add tickets manually if you received them elsewhere. Best for discovering local events and managing tickets from Eventbrite purchases.
+        This happens because tickets are fragmented across a dozen places. And every app that claims to solve this actually makes it worse.
+      </ArticleParagraph>
+
+      <ArticleH2>The fragmentation problem</ArticleH2>
+
+      <ArticleParagraph>
+        Look at where your tickets actually live. The concert is in the Ticketmaster app, but you can't export it anywhere else. The conference badge came as an email PDF. The theme park sent a booking confirmation with a barcode buried in the middle of the page. The theater emailed a screenshot. The sports game is in a team-specific app you downloaded once.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Apple Wallet</strong> lets you add tickets directly to your iPhone. Double-tap the side button or power button to access them instantly. Even when your phone is locked. It works great if tickets are Wallet-compatible. But many events don't support it. And you can't organize or search your tickets. They just appear in a list. Best for iPhone users who want quick access to compatible tickets.
+        Each ticket is locked in its own silo. When you need one, you have to remember which silo it's in, open the right app or email, and hope you can find it before the line loses patience.
+      </ArticleParagraph>
+
+      <ArticleH2>What each app actually does</ArticleH2>
+
+      <ArticleParagraph>
+        <strong>Ticketmaster and Eventbrite</strong> store tickets, but only tickets you bought through them. You can't add a theater ticket or conference badge. They're ticket sellers first, organizers second. If you buy from multiple sources, you still have multiple apps.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Google Wallet</strong> serves the same purpose for Android users. Quick access to tickets from your lock screen. Works with compatible events. Like Apple Wallet, it's limited to compatible tickets. Organization options are minimal. And you can't add tickets from just any source. Best for Android users who want quick access to Wallet-compatible tickets.
+        <strong>Apple Wallet and Google Wallet</strong> work great for compatible tickets. Double-tap to access, even from the lock screen. The problem: many events don't support wallet integration. That theme park PDF won't go into Apple Wallet. Neither will most conference badges or smaller venue tickets.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong><Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link></strong> accepts tickets from anywhere. Forward an email. Upload a PDF. Take a photo. It extracts the details and creates a clean, searchable ticket. All your tickets live in one timeline. Concerts. Sports. Conferences. Theater. You can search by date, venue, or event name. Everything works offline. It also stores your other important documents. Passports. IDs. Travel bookings. All encrypted and protected. Best for anyone who wants all tickets organized in one place, regardless of where you bought them.
+        <strong>Screenshots and email</strong> technically work, but they're unsearchable, unorganized, and easy to lose. Three months from now, you won't remember if that concert ticket was a screenshot, a PDF, or forwarded from someone else.
+      </ArticleParagraph>
+
+      <ArticleH2>One place for everything</ArticleH2>
+
+      <ArticleParagraph>
+        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link> takes tickets from anywhere. Forward the email, upload the PDF, photograph the paper ticket. It extracts the event name, date, venue, seat information, and barcode. Everything appears in a timeline sorted by date.
+      </ArticleParagraph>
+
+      <ArticleImage
+        src={eventTicketsImage}
+        alt="Folio app showing event tickets: La Perle by Dragone with QR code and PortAventura theme park ticket with barcode"
+      />
+
+      <ArticleParagraph>
+        Standing at the venue entrance, you open one app. Your tickets are sorted by date. Today's event is at the top. Tap it. The barcode or QR code is right there, ready to scan. No searching through email. No remembering which app you bought it from. No frantically scrolling through screenshots.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        The best app depends on how you buy and manage tickets. If you only buy through Ticketmaster, their app works fine. If you want quick access on iPhone or Android, use your device's Wallet app. But if you buy tickets from multiple sources, need to organize them, or want everything in one searchable place, Folio Wallet gives you that flexibility. Your tickets shouldn't be scattered across emails and apps. The right app keeps them organized, accessible, and ready when you need them. Whether you're a concert-goer, sports fan, or conference attendee, there's an app that fits how you buy and manage tickets. Choose one that makes your life easier.
+        For theme parks and multi-day events, all the details are visible at a glance: valid dates, age categories, venue address. For concerts and theater, seat information and ticket class appear prominently. The original PDF or image stays attached if you need it, but you rarely do because everything important is already extracted.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        The practical difference: instead of five apps and three email searches, you have one timeline. Whether it's a concert tonight, a conference next week, or a theme park trip next month, everything lives in the same place. Works offline too, so you're not dependent on venue WiFi when you need to show your ticket.
       </ArticleParagraph>
     </BlogArticleLayout>
   )

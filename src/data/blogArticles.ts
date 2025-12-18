@@ -404,8 +404,8 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Research',
     date: 'Jul 24, 2025',
-    title: 'The best event ticket apps',
-    description: 'From concerts to conferences: discover apps that keep your tickets organized, accessible, and secure.',
+    title: 'Where did I put that ticket? (The event ticket organization problem)',
+    description: 'Concert in Ticketmaster, conference badge in email, theme park as a screenshot. Here\'s how to stop losing tickets.',
     slug: 'the-best-event-ticket-apps',
     image: blogBestEventTicketApps,
   },
