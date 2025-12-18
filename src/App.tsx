@@ -42,11 +42,7 @@ import BestDigitalWalletAppsInCanadaArticlePage from './pages/BestDigitalWalletA
 import DigitalWalletAppsForEveryNeedArticlePage from './pages/DigitalWalletAppsForEveryNeedArticlePage'
 import BestGiftCardWalletAppsArticlePage from './pages/BestGiftCardWalletAppsArticlePage'
 import RegularVsDigitalWalletsArticlePage from './pages/RegularVsDigitalWalletsArticlePage'
-import AreDigitalWalletsSafeArticlePage from './pages/AreDigitalWalletsSafeArticlePage'
-import CanADigitalWalletBeHackedArticlePage from './pages/CanADigitalWalletBeHackedArticlePage'
 import HowToAddAndStoreYourMedicalCardArticlePage from './pages/HowToAddAndStoreYourMedicalCardArticlePage'
-import TheBestDigitalWalletsForAndroidArticlePage from './pages/TheBestDigitalWalletsForAndroidArticlePage'
-import TheBestDigitalWalletsForIphoneArticlePage from './pages/TheBestDigitalWalletsForIphoneArticlePage'
 import WhatIsADigitalWalletArticlePage from './pages/WhatIsADigitalWalletArticlePage'
 import HowToStoreAndUseLoyaltyCardsOnYourIphoneArticlePage from './pages/HowToStoreAndUseLoyaltyCardsOnYourIphoneArticlePage'
 import AppleGiftCardAddToWalletArticlePage from './pages/AppleGiftCardAddToWalletArticlePage'
@@ -200,11 +196,7 @@ function App() {
         <Route path="/blog/digital-wallet-apps-for-every-need" element={<DigitalWalletAppsForEveryNeedArticlePage />} />
         <Route path="/blog/best-gift-card-wallet-apps" element={<BestGiftCardWalletAppsArticlePage />} />
         <Route path="/blog/regular-vs-digital-wallets" element={<RegularVsDigitalWalletsArticlePage />} />
-        <Route path="/blog/are-digital-wallets-safe" element={<AreDigitalWalletsSafeArticlePage />} />
-        <Route path="/blog/can-a-digital-wallet-be-hacked" element={<CanADigitalWalletBeHackedArticlePage />} />
         <Route path="/blog/how-to-add-and-store-your-medical-card" element={<HowToAddAndStoreYourMedicalCardArticlePage />} />
-        <Route path="/blog/the-best-digital-wallets-for-android" element={<TheBestDigitalWalletsForAndroidArticlePage />} />
-        <Route path="/blog/the-best-digital-wallets-for-iphone" element={<TheBestDigitalWalletsForIphoneArticlePage />} />
         <Route path="/blog/what-is-a-digital-wallet" element={<WhatIsADigitalWalletArticlePage />} />
         <Route path="/blog/how-to-store-and-use-loyalty-cards-on-your-iphone" element={<HowToStoreAndUseLoyaltyCardsOnYourIphoneArticlePage />} />
         <Route path="/blog/apple-gift-card-add-to-wallet" element={<AppleGiftCardAddToWalletArticlePage />} />

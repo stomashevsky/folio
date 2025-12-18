@@ -38,13 +38,9 @@ import blogBestDigitalWalletAppsInCanada from '../assets/images/blog-best-digita
 import blogDigitalWalletAppsForEveryNeed from '../assets/images/blog-digital-wallet-apps-for-every-need.png'
 import blogBestGiftCardWalletApps from '../assets/images/blog-best-gift-card-wallet-apps.png'
 import blogRegularVsDigitalWallets from '../assets/images/blog-regular-vs-digital-wallets.png'
-import blogAreDigitalWalletsSafe from '../assets/images/blog-are-digital-wallets-safe.png'
 import blogAppleGiftCardAddToWallet from '../assets/images/blog-apple-gift-card-add-to-wallet.png'
-import blogCanADigitalWalletBeHacked from '../assets/images/blog-can-a-digital-wallet-be-hacked.png'
 import blogHowToAddAndStoreYourMedicalCard from '../assets/images/blog-how-to-add-and-store-your-medical-card.png'
-import blogTheBestDigitalWalletsForAndroid from '../assets/images/blog-the-best-digital-wallets-for-android.png'
 import blogHowToStoreAndUseLoyaltyCardsOnYourIphone from '../assets/images/blog-how-to-store-and-use-loyalty-cards-on-your-iphone.png'
-import blogTheBestDigitalWalletsForIphone from '../assets/images/blog-the-best-digital-wallets-for-iphone.png'
 import blogWhatIsADigitalWallet from '../assets/images/blog-what-is-a-digital-wallet.png'
 
 export type BlogCategory = 'All' | 'Company' | 'Product' | 'Guides' | 'Research' | 'Safety'
@@ -80,7 +76,6 @@ const BLOG_OG_IMAGE_BY_SLUG: Record<string, string> = {
   'albanian-diaspora-voter-registration': 'blog-albanian-diaspora-voter-registration.png',
   'app-in-the-air-alternative': 'blog-app-in-the-air-alternative.png',
   'apple-gift-card-add-to-wallet': 'blog-apple-gift-card-add-to-wallet.png',
-  'are-digital-wallets-safe': 'blog-are-digital-wallets-safe.png',
   'best-apple-wallet-alternatives': 'blog-best-apple-wallet-alternatives.png',
   'best-apps-to-plan-travel': 'blog-best-apps-to-plan-travel.png',
   'best-digital-wallet-apps-in-canada': 'blog-best-digital-wallet-apps-in-canada.png',
@@ -89,7 +84,6 @@ const BLOG_OG_IMAGE_BY_SLUG: Record<string, string> = {
   'best-google-wallet-alternatives': 'blog-best-google-wallet-alternatives.png',
   'best-id-scanner-app': 'blog-best-id-scanner-app.png',
   'biometric-data-privacy': 'blog-biometric-data-privacy.png',
-  'can-a-digital-wallet-be-hacked': 'blog-can-a-digital-wallet-be-hacked.png',
   'checkmytrip-alternative': 'blog-checkmytrip-alternative.png',
   'client-onboarding-best-practices': 'blog-client-onboarding-best-practices.png',
   'digital-credentials-government': 'blog-digital-credentials-government.png',
@@ -110,8 +104,6 @@ const BLOG_OG_IMAGE_BY_SLUG: Record<string, string> = {
   'nfc-identity-verification': 'blog-nfc-identity-verification.png',
   'pass2u-alternative': 'blog-pass2u-alternative.png',
   'regular-vs-digital-wallets': 'blog-regular-vs-digital-wallets.png',
-  'the-best-digital-wallets-for-android': 'blog-the-best-digital-wallets-for-android.png',
-  'the-best-digital-wallets-for-iphone': 'blog-the-best-digital-wallets-for-iphone.png',
   'the-best-event-ticket-apps': 'blog-best-event-ticket-apps.png',
   'tripcase-alternative': 'blog-tripcase-alternative.png',
   'tripit-alternative': 'blog-tripit-alternative.png',
@@ -140,14 +132,6 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   },
   {
     category: 'Research',
-    date: 'Feb 8, 2024',
-    title: 'The best digital wallets for iPhone in 2024',
-    description: 'Discover the best digital wallet apps for iPhone. Compare Apple Wallet, Folio Wallet, Stocard, Curve, and Venmo to find the perfect wallet for your needs.',
-    slug: 'the-best-digital-wallets-for-iphone',
-    image: blogTheBestDigitalWalletsForIphone,
-  },
-  {
-    category: 'Research',
     date: 'Mar 5, 2024',
     title: 'How to store and use loyalty cards on an iPhone',
     description: 'Learn how to store and use loyalty cards on your iPhone with digital wallets. Compare Apple Wallet, Stocard, and Folio Wallet to find the best solution for managing your loyalty cards.',
@@ -164,14 +148,6 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogRegularVsDigitalWallets,
   },
   {
-    category: 'Research',
-    date: 'May 3, 2024',
-    title: 'The best digital wallets for Android in 2024',
-    description: 'Discover the best digital wallet apps for Android. Compare Google Wallet, Folio Wallet, Stocard, Curve, and Venmo to find the perfect wallet for your needs.',
-    slug: 'the-best-digital-wallets-for-android',
-    image: blogTheBestDigitalWalletsForAndroid,
-  },
-  {
     category: 'Product',
     date: 'Jun 7, 2024',
     title: 'How to add and store your medical card and health insurance in digital wallet',
@@ -180,22 +156,6 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogHowToAddAndStoreYourMedicalCard,
   },
   // Q3 2024
-  {
-    category: 'Safety',
-    date: 'Jul 18, 2024',
-    title: 'Are digital wallets safe to use?',
-    description: 'Explore the security features, risks, and best practices of digital wallets. Learn how to protect your digital wallet and recognize secure wallet apps.',
-    slug: 'are-digital-wallets-safe',
-    image: blogAreDigitalWalletsSafe,
-  },
-  {
-    category: 'Safety',
-    date: 'Aug 6, 2024',
-    title: 'Can a digital wallet be hacked?',
-    description: 'Learn about digital wallet security risks and how to protect yourself. Discover what makes a wallet legit and secure, and what to do if your wallet is compromised.',
-    slug: 'can-a-digital-wallet-be-hacked',
-    image: blogCanADigitalWalletBeHacked,
-  },
   // Q4 2024
   {
     category: 'Product',
