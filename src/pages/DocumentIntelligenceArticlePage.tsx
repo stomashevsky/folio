@@ -1,4 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { Link } from 'react-router-dom'
 
 export default function DocumentIntelligenceArticlePage() {
   return (
@@ -135,7 +136,7 @@ export default function DocumentIntelligenceArticlePage() {
       <ArticleH2>Document intelligence with Folio</ArticleH2>
 
       <ArticleParagraph>
-        Folio's document intelligence platform combines automatic classification with intelligent extraction and validation. The system accepts documents through secure upload interfaces with built-in guidance to help users capture quality images.
+        <Link to="/platform/document-intelligence" className="underline hover:text-[#737373] transition-colors">Folio's document intelligence platform</Link> combines automatic classification with intelligent extraction and validation. The system accepts documents through secure upload interfaces with built-in guidance to help users capture quality images.
       </ArticleParagraph>
 
       <ArticleParagraph>
