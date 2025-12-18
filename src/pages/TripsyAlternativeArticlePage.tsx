@@ -1,78 +1,76 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleBlockquote, ArticleTable } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import { Link } from 'react-router-dom'
+import folioScreensImage from '../assets/images/blog-tripsy-folio-screens.png'
 
 export default function TripsyAlternativeArticlePage() {
   return (
     <BlogArticleLayout
-      title="Tripsy alternative: A smarter way to organize your travels"
-      description="Looking beyond Tripsy? Discover a travel app that keeps your documents secure, your itinerary clear, and your journey stress-free."
+      title="Tripsy plans your trip. But where do you keep your tickets?"
+      description="Tripsy is great for deciding what to do. But once you've booked flights, hotels, and activities, you need somewhere to store them. Here's how the two apps work together."
       date="Sep 20, 2025"
       category="Research"
       slug="tripsy-alternative-travel-app"
     >
       <ArticleParagraph>
-        Planning a trip involves a lot of moving parts. Flights. Hotels. Activities. Transfers. Documents. And somehow, you need to keep track of it all. That's where travel apps come in. And Tripsy has been one of the most popular choices for years.
+        You've planned a perfect Barcelona trip in Tripsy. Day 1: flight from London, check into Hotel Arts, dinner at a tapas place you bookmarked. Day 2: Sagrada Familia in the morning, Gothic Quarter walking tour, flamenco show at night. Day 3: day trip to Tarragona by train, PortAventura in the afternoon. The itinerary looks beautiful. Everything synced to your calendar.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        But what if you want something different? Something that focuses on security, privacy, and keeping every important document in one place? Let's explore.
-      </ArticleParagraph>
-
-      <ArticleH2>What is Tripsy</ArticleH2>
-
-      <ArticleParagraph>
-        Tripsy is a beautifully designed travel app. It helps you organize every detail of your journey in one place. Instead of scattered emails and random notes, Tripsy brings everything together into a clear itinerary. Flights. Hotels. Sightseeing. All arranged in chronological order.
+        Then you actually book everything. Now you have a flight confirmation email from British Airways. A hotel booking PDF from Booking.com. Sagrada Familia tickets in another email. Train tickets from Renfe. PortAventura entrance tickets. Each in a different inbox, different format, different place.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Tripsy has earned its reputation for good reasons. Day-by-day planning lets you build detailed schedules with everything synced to your calendar. Real-time flight updates notify you about delays, gate changes, and cancellations. Weather forecasts show what to pack with a 10-day forecast built into your itinerary. Collaboration features let you share trips with friends and family, assign roles, and plan together. Your entire trip stays accessible offline without an internet connection. And travel stats track how many countries you've visited and days you've spent traveling. It's intuitive. It's visually appealing. And it makes planning feel enjoyable.
+        Where do those go?
       </ArticleParagraph>
 
-      <ArticleH2>Folio Wallet: The best Tripsy alternative</ArticleH2>
+      <ArticleH2>What Tripsy does well</ArticleH2>
 
       <ArticleParagraph>
-        While Tripsy excels at trip planning, some travelers need something more. An alternative that focuses on document security. Safe storage. And absolute clarity. That's Folio Wallet. Think of it as a digital vault for your entire journey. Not just an itinerary planner. A secure home for everything you need when you travel.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        Folio Wallet offers document and card storage for passports, ID cards, driver's licenses, travel insurance, boarding passes, hotel confirmations, and bank cards. All in one secure place. Smart travel timeline automatically extracts details from PDFs, photos, or forwarded confirmation emails and builds a clear timeline. No manual entry needed. Everything is accessible offline, whether you're in the air, on a mountain, or in a foreign country with no signal.
+        Tripsy is a genuinely good trip planning app. You build day-by-day itineraries. Add activities, restaurants, sights. See weather forecasts for your travel dates. Share plans with travel companions who can add their own ideas. Everything syncs to your calendar. The interface is beautiful and the planning experience is enjoyable.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Expiration reminders alert you before your passport or travel insurance expires, so you never get caught off guard. Top-notch security includes AES-256 encryption, zero-knowledge architecture, Face ID and Touch ID, GDPR compliance, and SOC 2 certification. Your data stays yours. Cloud backup and sync let you access your wallet across all your devices, with everything staying encrypted. Secure sharing lets you create shared folders for group trips, share with a link, and manage or revoke access anytime.
+        For the "what should we do" phase of trip planning, it's excellent. You can spend hours happily organizing the perfect itinerary, moving things around, optimizing your days.
+      </ArticleParagraph>
+
+      <ArticleH2>The gap it doesn't fill</ArticleH2>
+
+      <ArticleParagraph>
+        But when you're standing at the boarding gate, you don't need to know what you planned. You need your actual boarding pass. When you arrive at the hotel exhausted, you need the confirmation number. When the museum asks to scan your ticket, you need to find it in your email while the queue grows behind you.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        If Tripsy is the creative planner, Folio Wallet is the secure vault. It guarantees peace of mind. Every essential document, from boarding passes to travel insurance, lives in your pocket. Encrypted. Ready when you need it. Folio is especially valuable if you worry about losing printed tickets or IDs during a trip, want one app for both travel and personal documents, or need strong privacy protection while traveling abroad.
+        This is the gap: Tripsy helps you plan, but it doesn't solve the "where's my ticket" problem. You still end up searching through emails at the worst possible moments. You still screenshot boarding passes and lose them in your camera roll. You still forward confirmations to yourself and forget which email you used.
       </ArticleParagraph>
 
-      <ArticleH2>Tripsy vs Folio Wallet</ArticleH2>
-
-      <ArticleTable
-        columns={[
-          { header: 'Feature', key: 'feature' },
-          { header: 'Tripsy', key: 'tripsy' },
-          { header: 'Folio Wallet', key: 'folio' },
-        ]}
-        rows={[
-          { feature: 'Itinerary planning', tripsy: 'Detailed day-by-day planner', folio: 'Auto-built from tickets' },
-          { feature: 'Collaboration', tripsy: 'Invite friends, assign roles', folio: 'Shared folders with access control' },
-          { feature: 'Flight updates', tripsy: 'Real-time notifications', folio: '~Coming soon' },
-          { feature: 'Document storage', tripsy: '~Secondary feature', folio: 'Core focus' },
-          { feature: 'Offline access', tripsy: '✓', folio: '✓' },
-          { feature: 'Security', tripsy: 'iCloud + SSL + biometrics', folio: 'AES-256, SOC2, GDPR, zero-knowledge' },
-          { feature: 'Price', tripsy: 'Free + $39/year', folio: 'Free' },
-          { feature: 'Best for', tripsy: 'Trip planning', folio: 'Secure document management' },
-        ]}
+      <ArticleImage
+        src={folioScreensImage}
+        alt="Folio app showing Barcelona trip timeline with hotel, flights, museum tickets, and train ticket detail with QR code"
       />
 
+      <ArticleH2>What Folio does differently</ArticleH2>
+
       <ArticleParagraph>
-        Choose Tripsy if you want a trip planning app that creates beautiful itineraries, syncs with your calendar, and lets you collaborate with friends. Choose <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link> if you want an app that focuses on security, privacy, and storing every important travel document in one place. Or use both. Tripsy for planning. Folio Wallet for security. Together, they cover everything.
+        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link> solves the storage problem. Forward your confirmation emails, import PDFs, photograph paper tickets. Folio extracts the details automatically: dates, times, locations, confirmation numbers. Everything appears on a timeline sorted by when you need it.
       </ArticleParagraph>
 
-      <ArticleBlockquote>
-        Your documents. Your passport. Your tickets. All in one secure place. Ready when you are.
-      </ArticleBlockquote>
+      <ArticleParagraph>
+        At the gate, your boarding pass is one tap away. At the hotel, the confirmation is right there. At the museum, the QR code is ready to scan. No searching. No "which email was it in?" Everything works offline, so you're not dependent on airport WiFi or expensive roaming data.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        For family trips or groups, shared folders mean everyone has access to the same documents. Both parents can pull up the hotel booking. All four friends have the concert tickets. If someone gets separated or delayed, they're not stranded without information.
+      </ArticleParagraph>
+
+      <ArticleH2>Using them together</ArticleH2>
+
+      <ArticleParagraph>
+        Tripsy and Folio aren't really competitors. They solve different problems. You can use Tripsy to plan what to do, then Folio to store the tickets once you've booked. Or if you don't need detailed itinerary planning, just use Folio: import your bookings, and it builds a timeline automatically from the ticket details.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        One practical difference: Tripsy costs $39/year for premium features. Folio is free. If you're looking for an alternative because of price, that's a real consideration. But the bigger question is what problem you're actually trying to solve. Planning what to do? Tripsy. Keeping your tickets organized? Folio. Both? Use both.
+      </ArticleParagraph>
     </BlogArticleLayout>
   )
 }

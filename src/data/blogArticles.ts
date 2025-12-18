@@ -420,8 +420,8 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Research',
     date: 'Aug 5, 2025',
-    title: "Tripsy alternative: A smarter way to organize your travels",
-    description: "Looking beyond Tripsy? Discover a travel app that keeps your documents secure, your itinerary clear, and your journey stress-free.",
+    title: "Tripsy plans your trip. But where do you keep your tickets?",
+    description: "Tripsy is great for deciding what to do. But once you've booked flights, hotels, and activities, you need somewhere to store them.",
     slug: 'tripsy-alternative-travel-app',
     image: blogTripsyAlternative,
   },
