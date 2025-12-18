@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import walletOverview from '../assets/images/blog-wallet-overview-folio.png'
+import giftCardScreen from '../assets/images/blog-gift-card-folio-screen.png'
 
 export default function BestGiftCardWalletAppsArticlePage() {
   return (
@@ -36,8 +36,8 @@ export default function BestGiftCardWalletAppsArticlePage() {
       </ArticleParagraph>
 
       <ArticleImage
-        src={walletOverview}
-        alt="Folio wallet showing organized cards including payment cards, gift cards, and loyalty cards with easy access to barcodes and details"
+        src={giftCardScreen}
+        alt="Folio app showing Amazon gift card with barcode, hidden code, $100 balance, and options to share or organize with labels"
       />
 
       <ArticleParagraph>
