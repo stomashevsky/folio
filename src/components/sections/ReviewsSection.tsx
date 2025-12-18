@@ -70,18 +70,9 @@ function ReviewCard({ review }: { review: Review }) {
   )
 }
 
-// Background style matching other sections
-const BACKGROUND_STYLE = {
-  backgroundImage:
-    'linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(90deg, rgba(229, 229, 229, 1) 0%, rgba(229, 229, 229, 1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%)',
-}
-
 export default function ReviewsSection() {
   return (
-    <section 
-      className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full"
-      style={BACKGROUND_STYLE}
-    >
+    <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
       <div className="flex flex-col gap-10 md:gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
         <SectionHeader
           title="What our users say"
