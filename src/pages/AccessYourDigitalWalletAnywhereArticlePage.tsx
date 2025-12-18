@@ -1,50 +1,69 @@
-import BlogArticleLayout from '../components/ui/BlogArticleLayout'
-import { ArticleH2, ArticleParagraph } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import { Link } from 'react-router-dom'
+import walletOverviewImage from '../assets/images/blog-wallet-overview-folio.png'
 
 export default function AccessYourDigitalWalletAnywhereArticlePage() {
   return (
     <BlogArticleLayout
-      title="Access your digital wallet anywhere"
-      description="A simpler way to keep every document with you on iOS and Android"
+      title="One app for your passport, tickets, and everything in between"
+      description="Your passport is a PDF. Your boarding pass is in email. Your hotel confirmation is a screenshot. Here's a better way."
       date="Jul 1, 2025"
       category="Product"
       slug="access-your-digital-wallet-anywhere"
     >
       <ArticleParagraph>
-        Folio Wallet on iOS and Android is designed to eliminate the stress of managing documents during travel, everyday errands or busy workdays. It brings everything together in one secure place, instantly accessible on any device you use. What used to be hidden inside bulky PDFs or scattered across email threads now appears as clean, structured cards that are ready at a glance. From passports and residence permits to hotel bookings, flight tickets and payment cards, every document becomes effortless to read and even easier to find.
+        Your passport is a PDF somewhere in your Files app. Your boarding pass is an email attachment you'll need to find at the gate. The hotel confirmation is a screenshot buried in your camera roll. Your train ticket is in a different email, from a different booking site, in a different format.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Open Folio and you step into a space where everything is already organized. Personal IDs, tickets, bookings and cards are arranged into simple visual categories so you always know where each item lives. Adding new documents takes only a moment. Upload a PDF from your phone, import files from mail apps, drop images from your gallery or send them through AirDrop or messaging apps. Folio extracts the important details automatically and transforms them into a neatly formatted card.
+        Each document lives in a different place. When you need one, you search. Sometimes you find it quickly. Sometimes you're standing at the counter, scrolling frantically, while the queue grows behind you.
       </ArticleParagraph>
 
-      <ArticleH2>
-        Travel documents with exceptional clarity
-      </ArticleH2>
+      <ArticleH2>One place for everything</ArticleH2>
 
       <ArticleParagraph>
-        Travel documents receive exceptional clarity. Your boarding passes, train tickets, event entries and hotel stays are displayed as bright, structured cards with readable times, routes, barcodes and QR codes. Hotel bookings include check-in and check-out windows, room types and full addresses. Transportation tickets highlight departure stations, platforms, seat numbers and class, all color coded for comfort and confidence in the moment.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        Your IDs are treated with the same attention. Passports, identity cards, residence permits, driver licenses and payment cards appear in a unified layout with encrypted storage on your device. Expiry dates are tracked automatically and reminders arrive ahead of time so renewals never catch you by surprise.
-      </ArticleParagraph>
-
-      <ArticleH2>
-        Stay ready for what is ahead
-      </ArticleH2>
-
-      <ArticleParagraph>
-        Folio helps you stay ready for what is ahead. The Timeline view builds a chronological schedule from all your tickets and bookings. Flights, hotels, attractions and transfers fit together into a single, flowing plan without any manual work. Documents can also be translated instantly. If you receive a reservation in another language, Folio turns it into a version you can read easily while keeping the original structure intact. Perfect for international trips where clarity matters most.
+        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link> puts all your documents in one app. IDs: passport, driver's license, residence permit, national ID. Tickets: flights, trains, buses, concerts, museums. Bookings: hotels, restaurants, car rentals. Cards: payment cards, insurance, membership cards, loyalty programs.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Shared folders make coordination simple. Whether you travel with friends, plan family vacations or manage documents for someone else, everyone sees the same set of shared items while private documents remain private. And because Folio works on both iOS and Android, your documents are always with you. Open your wallet on your phone or tablet, switch devices whenever you want and everything stays synced. Smart alerts notify you when upcoming trips approach or when important documents are about to expire.
+        Import from anywhere. Forward a confirmation email, and Folio extracts the ticket details automatically. Upload a PDF, and it becomes a readable card with the important information visible. Take a photo of a paper document, and it gets scanned and structured.
+      </ArticleParagraph>
+
+      <ArticleImage
+        src={walletOverviewImage}
+        alt="Folio app showing passport with all details, bus ticket with barcode ready to scan, and trip timeline with hotels, flights, and activities"
+      />
+
+      <ArticleH2>Not PDFs you zoom into</ArticleH2>
+
+      <ArticleParagraph>
+        The problem with PDFs is finding the information you need. The barcode is on page 2. The confirmation number is in tiny text at the bottom. The departure time is buried in a paragraph. You zoom in, scroll around, try to find what matters.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Folio is built to make document management feel effortless. No clutter, no searching, no zooming through PDF pages. Just a digital wallet that quietly organizes the most important parts of your life so you can focus on the experience, not the paperwork. <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available free on iOS and Android.</Link>
+        Folio extracts the key details and displays them clearly. Your bus ticket shows the departure time, stations, seat number, and barcode prominently. Your passport shows your name, number, and expiry date without opening a file. Your hotel booking shows check-in time, address, and confirmation number at a glance.
+      </ArticleParagraph>
+
+      <ArticleH2>Timeline for travel</ArticleH2>
+
+      <ArticleParagraph>
+        When you're traveling, documents have dates. Flight on Tuesday, hotel check-in the same day, museum tickets for Wednesday, train on Thursday. The Timeline view organizes everything chronologically. Open it and see what's coming up next, what documents you'll need today, and what's scheduled for later in the trip.
+      </ArticleParagraph>
+
+      <ArticleH2>Shared folders for groups</ArticleH2>
+
+      <ArticleParagraph>
+        Traveling with family or friends? Create a shared folder. Everyone with access sees the same documents. Both parents have the hotel confirmation. All four friends have the concert tickets. When one person adds a new booking, everyone sees it immediately. No forwarding emails. No "can you send me that again?"
+      </ArticleParagraph>
+
+      <ArticleH2>Works offline</ArticleH2>
+
+      <ArticleParagraph>
+        Airport WiFi is unreliable. International data is expensive. The moment you need a document is often the moment you don't have connectivity. Everything in Folio works offline. Your passport, your boarding pass, your hotel confirmation, all accessible without internet.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        Free on iOS and Android. Your documents sync across devices and stay encrypted. One app for everything you used to scatter across emails, screenshots, and downloads.
       </ArticleParagraph>
     </BlogArticleLayout>
   )

@@ -372,8 +372,8 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Product',
     date: 'Jul 1, 2025',
-    title: 'Access your digital wallet anywhere',
-    description: 'A simpler way to keep every document with you on iOS and Android',
+    title: 'One app for your passport, tickets, and everything in between',
+    description: "Your passport is a PDF. Your boarding pass is in email. Your hotel confirmation is a screenshot. Here's a better way.",
     slug: 'access-your-digital-wallet-anywhere',
     image: blogAccessYourDigitalWalletAnywhere,
   },
