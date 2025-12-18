@@ -1,71 +1,66 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleBlockquote, ArticleTable } from '../components/ui'
 import { Link } from 'react-router-dom'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import folioScreens from '../assets/images/blog-checkmytrip-folio-screens.png'
 
 export default function CheckMyTripAlternativeArticlePage() {
   return (
     <BlogArticleLayout
-      title="CheckMyTrip alternative: A smarter way to manage your travel"
+      title="CheckMyTrip alternative: a smarter way to manage your travel"
       description="CheckMyTrip organizes your bookings. But what about your passport, insurance, and event tickets? Discover an app that stores everything in one secure place."
       date="Sep 18, 2025"
       category="Research"
       slug="checkmytrip-alternative"
     >
       <ArticleParagraph>
-        CheckMyTrip has been a reliable tool for travelers who want their itinerary in one place. You forward your booking confirmations, and it creates an organized trip timeline. But CheckMyTrip focuses mainly on bookings. What if you also need your passport, insurance documents, or event tickets organized? You need something more complete.
-      </ArticleParagraph>
-
-      <ArticleH2>What CheckMyTrip offers</ArticleH2>
-
-      <ArticleParagraph>
-        CheckMyTrip is an itinerary management app powered by Amadeus, a major travel technology company. It pulls together flight, hotel, and car rental bookings into a single view. You get real-time flight updates, terminal and gate information, and weather forecasts. It syncs with your calendar and works offline. For simple trip organization, it works well.
-      </ArticleParagraph>
-
-      <ArticleH2>Where CheckMyTrip falls short</ArticleH2>
-
-      <ArticleParagraph>
-        CheckMyTrip is built around bookings from travel providers. It doesn't support general document storage. You can't store your passport, visa, or travel insurance. You can't add tickets from sources that aren't in its system. Security is standard, not exceptional. And sharing is limited. If you travel with complex itineraries or need secure document storage, CheckMyTrip leaves gaps.
-      </ArticleParagraph>
-
-      <ArticleH2>Folio Wallet: A complete CheckMyTrip alternative</ArticleH2>
-
-      <ArticleParagraph>
-        Folio Wallet combines itinerary organization with secure document storage. Your trips are organized automatically. And every document you need for travel lives in one encrypted vault.
+        You're at Barcelona Sants station. The train to Tarragona leaves in eight minutes. You need your Renfe ticket, the one with the QR code. You open CheckMyTrip, scroll through your itinerary, and realize: the train ticket isn't there. CheckMyTrip never imported it because Renfe isn't in its system. Now you're searching through email while the departure board counts down.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Travel timeline is built from your tickets and bookings. Flights. Hotels. Trains. Events. All organized chronologically. Document vault stores passports, IDs, driver's licenses, visas, insurance papers, and more. Protected with AES-256 encryption and zero-knowledge architecture.
+        This is the gap between what CheckMyTrip promises and how travel actually works. CheckMyTrip pulls bookings from airlines, hotels, and car rentals connected to the Amadeus system. But European train operators like Renfe, SNCF, and Trenitalia often don't sync. Event tickets from local museums don't appear. That concert you booked through a Spanish ticketing site? Not there. Your passport, visa, and travel insurance? CheckMyTrip doesn't store documents at all.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Flexible import lets you add documents from email, PDF, or photo. Folio extracts the details automatically. Shared folders let you share trip documents securely with travel companions. Everyone stays in sync.
+        For a simple flight and hotel trip booked through major providers, CheckMyTrip works fine. But most interesting trips involve more: trains between cities, entrance tickets to attractions, local experiences booked directly. The moment your trip gets interesting, CheckMyTrip shows you an incomplete picture.
       </ArticleParagraph>
 
-      <ArticleH2>CheckMyTrip vs Folio Wallet</ArticleH2>
+      <ArticleH2>What travelers actually need</ArticleH2>
 
-      <ArticleTable
-        columns={[
-          { header: 'Feature', key: 'feature' },
-          { header: 'CheckMyTrip', key: 'checkmytrip' },
-          { header: 'Folio Wallet', key: 'folio' },
-        ]}
-        rows={[
-          { feature: 'Trip itinerary', checkmytrip: 'From booking confirmations', folio: 'From any ticket or document' },
-          { feature: 'Flight updates', checkmytrip: '✓', folio: '~Coming soon' },
-          { feature: 'Document storage', checkmytrip: '—', folio: 'IDs, passports, insurance, tickets' },
-          { feature: 'PDF & photo import', checkmytrip: '~Limited', folio: '✓' },
-          { feature: 'Offline access', checkmytrip: '✓', folio: '✓' },
-          { feature: 'Security', checkmytrip: 'Standard', folio: 'AES-256, zero-knowledge, SOC 2' },
-          { feature: 'Shared folders', checkmytrip: '~Limited', folio: '✓' },
-        ]}
+      <ArticleParagraph>
+        A trip to Spain might include a flight booked through an airline, a high-speed train from Barcelona to Tarragona, entrance tickets to Sagrada Familia, a hotel in the city, and another hotel at PortAventura. You need your passport for check-in, travel insurance in case something goes wrong, and the QR codes for every ticket ready to scan at a moment's notice. That's five different booking sources, three document types, and zero tolerance for searching through email at a turnstile.
+      </ArticleParagraph>
+
+      <ArticleImage
+        src={folioScreens}
+        alt="Folio app showing Renfe train ticket from Barcelona Sants to Camp de Tarragona with QR code and seat details, alongside trip timeline with hotel bookings, flights, and Sagrada Familia entrance tickets"
       />
 
       <ArticleParagraph>
-        Choose CheckMyTrip if you only need basic itinerary management from booking confirmations. Choose <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link> if you want your entire travel life organized and protected. Bookings, documents, tickets, and IDs. All in one secure place.
+        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link> handles all of it. Forward the confirmation email, upload the PDF, or photograph the ticket. Folio extracts the details automatically and organizes everything into a chronological timeline. The Renfe train appears alongside your flight. The Sagrada Familia tickets show up on the day you're visiting. Your passport and insurance live in the same app, encrypted and accessible offline.
       </ArticleParagraph>
 
-      <ArticleBlockquote>
-        Your bookings. Your documents. Your entire trip. Organized and secure. In one app.
-      </ArticleBlockquote>
+      <ArticleH2>Where CheckMyTrip struggles</ArticleH2>
+
+      <ArticleParagraph>
+        CheckMyTrip's reliance on the Amadeus network means it works best for travelers who book everything through major platforms. Book a train directly from the operator's website, and you're on your own. Buy tickets to a local attraction, museum, or concert, and they won't appear in your itinerary. Need to share your complete trip with a travel companion? CheckMyTrip's sharing is limited to viewing, not collaborative organizing.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        The app also lacks document storage entirely. There's nowhere to keep your passport scan for hotel check-ins, your visa for border crossings, or your travel insurance for emergencies. These documents are essential to travel, yet CheckMyTrip treats them as someone else's problem.
+      </ArticleParagraph>
+
+      <ArticleH2>For trips that go beyond flights and hotels</ArticleH2>
+
+      <ArticleParagraph>
+        Folio accepts tickets and documents from any source. A PDF from Renfe imports the same way as a confirmation from British Airways. A screenshot of your museum ticket works alongside your hotel booking. Everything appears in one timeline, sorted by date and time. When you arrive at Barcelona Sants, you tap the train ticket and the QR code fills your screen. No email searching. No panic.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        For group travel, shared folders let everyone access the same documents. Your partner sees the hotel confirmation. Your parents have the flight details. Everyone has what they need without forwarding emails or texting screenshots. And because Folio uses end-to-end encryption, shared documents stay private between the people you've invited.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        CheckMyTrip remains useful for travelers who book simple itineraries through connected providers and don't need document storage. But if your trips involve trains, local attractions, multiple booking sources, or travel documents, you'll spend more time working around CheckMyTrip's limitations than benefiting from its organization. An app that accepts everything and stores it securely isn't a luxury. It's what travel actually requires.
+      </ArticleParagraph>
     </BlogArticleLayout>
   )
 }
