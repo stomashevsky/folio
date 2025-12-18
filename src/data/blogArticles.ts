@@ -17,7 +17,7 @@ import blogDigitalPassportCopies from '../assets/images/blog-digital-passport-co
 import blogManagingFamilyTravelDocuments from '../assets/images/blog-managing-family-travel-documents.png'
 import blogTripCaseAlternative from '../assets/images/blog-tripcase-alternative.png'
 import blogTripsyAlternative from '../assets/images/blog-tripsy-alternative.png'
-import blogTripItAlternative from '../assets/images/blog-tripit-alternative-screens.png'
+import blogTripItAlternative from '../assets/images/blog-tripit-alternative-cover.png'
 import blogPass2UAlternative from '../assets/images/blog-pass2u-alternative.png'
 import blogAppInTheAirAlternative from '../assets/images/blog-app-in-the-air-alternative.png'
 import blogCheckMyTripAlternative from '../assets/images/blog-checkmytrip-alternative.png'
