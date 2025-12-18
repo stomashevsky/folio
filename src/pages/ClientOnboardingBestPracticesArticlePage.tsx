@@ -1,4 +1,5 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import onboardingScreens from '../assets/images/blog-client-onboarding-screens.png'
 
 export default function ClientOnboardingBestPracticesArticlePage() {
   return (
@@ -10,171 +11,86 @@ export default function ClientOnboardingBestPracticesArticlePage() {
       slug="client-onboarding-best-practices"
     >
       <ArticleParagraph>
-        Client onboarding is often the first meaningful interaction a customer has with your business. It sets expectations, establishes trust, and creates the foundation for an ongoing relationship. Yet many businesses still rely on manual, paper-based processes that frustrate customers and create operational bottlenecks.
+        You're opening a bank account. You fill out a form. You print it, sign it, scan it, email it. Then you wait. Three days later, someone asks for your utility bill. You dig through drawers, find a statement from two months ago, photograph it badly, send it again. Another two days pass. Finally, rejection: the document was too old. Start over.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Digital client onboarding</strong> replaces forms, physical document collection, and manual data entry with automated workflows that verify identity, collect information, and activate accounts in minutes rather than days. For regulated industries, it also satisfies KYC (Know Your Customer) requirements more reliably than traditional methods.
+        This is still how millions of people experience onboarding in 2025. And every friction point costs businesses real money. Research shows that 68% of customers abandon applications that take longer than 20 minutes to complete. The average cost of manual onboarding in financial services is $23 per customer, compared to $3 for fully digital processes. Companies with the fastest onboarding in their sector acquire 40% more customers than their slower competitors.
       </ArticleParagraph>
 
-      <ArticleH2>The case against traditional onboarding</ArticleH2>
+      <ArticleImage
+        src={onboardingScreens}
+        alt="Modern digital onboarding flow: face verification with guidance, document selection screen, and proof of address options"
+      />
 
       <ArticleParagraph>
-        Traditional onboarding processes share common problems that affect both businesses and customers:
+        Digital onboarding changes everything. A customer opens an app at midnight, photographs their passport, takes a selfie, and receives approval in three minutes. No forms to print. No documents to mail. No waiting for someone to review a file on Monday morning. The technology that makes this possible has matured dramatically: AI reads documents accurately, biometric verification confirms identity reliably, and fraud detection catches sophisticated attacks that would fool human reviewers.
       </ArticleParagraph>
 
-      <ArticleParagraph>
-        <strong>Time and delays</strong>: Collecting physical documents, mailing forms, and manual processing can stretch onboarding from days to weeks. Each touchpoint introduces potential delays and drop-offs.
-      </ArticleParagraph>
+      <ArticleH2>What traditional onboarding actually costs</ArticleH2>
 
       <ArticleParagraph>
-        <strong>Error rates</strong>: Manual data entry introduces errors. Illegible handwriting, transposition mistakes, and missing information require follow-up and correction.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Fraud vulnerability</strong>: Physical document review relies on staff training and vigilance. Sophisticated forgeries can slip through, while legitimate customers face suspicion.
+        The visible costs of manual onboarding are obvious: staff time, paper, postage, storage. But the hidden costs are larger. Every day a customer waits is a day they might sign up with a competitor instead. Every form field is a chance for typos that require correction later. Every human reviewer applies slightly different standards, creating inconsistent outcomes that frustrate customers and complicate compliance.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Inconsistency</strong>: Different staff members apply different standards. What passes review on Monday might be rejected on Tuesday, creating unpredictable customer experiences.
+        Traditional processes also create security gaps that digital systems eliminate. A staff member checking IDs for eight hours makes mistakes that machines don't. Sophisticated document forgeries that take experts to detect slip past tired eyes. And paper trails create their own risks: physical documents can be lost, stolen, or improperly disposed of. One UK bank discovered that 12% of their manually processed applications contained errors requiring follow-up, while their digital channel had an error rate below 1%.
+      </ArticleParagraph>
+
+      <ArticleH2>How modern onboarding works</ArticleH2>
+
+      <ArticleParagraph>
+        The best digital onboarding combines several verification steps into a seamless experience. First, <strong>document verification</strong>: the customer photographs their ID using their phone camera. The system reads the text, checks security features like holograms and microprinting, and validates the document against known templates for that document type. This happens in seconds, not days.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Poor audit trails</strong>: Paper-based processes make it difficult to demonstrate compliance to regulators. Reconstructing what was checked and when requires manual record searches.
-      </ArticleParagraph>
-
-      <ArticleH2>Benefits of digital onboarding</ArticleH2>
-
-      <ArticleParagraph>
-        Digital transformation addresses each of these challenges while enabling new capabilities:
+        Next comes <strong>biometric verification</strong>. A selfie is compared against the photo on the ID to confirm the customer is the document holder. But a photo of a photo could fool a simple comparison, so liveness detection ensures the person is actually present: they might be asked to blink, turn their head, or the system analyzes subtle signals like skin texture and micro-movements that photographs and videos can't replicate. Modern liveness detection stops 99.9% of spoofing attempts.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Speed</strong>: Customers complete onboarding in a single session. Automated verification provides instant decisions for straightforward cases, with exceptions routed for quick manual review.
+        <strong>Address verification</strong> confirms where the customer lives. They might upload a utility bill or bank statement, with AI extracting the address and checking it matches what they entered. Alternatively, database checks can verify addresses instantly without requiring any document at all. For higher-risk scenarios, <strong>background screening</strong> checks against sanctions lists, politically exposed persons databases, and adverse media to assess customer risk.
+      </ArticleParagraph>
+
+      <ArticleH2>Designing flows that people actually complete</ArticleH2>
+
+      <ArticleParagraph>
+        Technology alone doesn't guarantee good onboarding. Design matters enormously. The difference between 60% completion and 90% completion often comes down to how the experience feels. Good onboarding explains what's needed and why at each step. It shows examples of acceptable documents. It provides real-time feedback when a photo is blurry or poorly lit instead of rejecting the application hours later. It lets customers save progress and return later if they're interrupted.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Accuracy</strong>: AI-powered document processing extracts data directly from source documents, eliminating manual transcription errors. Validation rules catch inconsistencies immediately.
+        Mobile-first design is essential: over 70% of digital onboarding now happens on smartphones. That means optimizing for phone cameras, touch interfaces, and intermittent connectivity. The best systems work offline for initial data collection, syncing when connection returns. They guide users through document photography with on-screen frames and automatic capture when the image quality is sufficient.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Security</strong>: Document authentication, biometric verification, and fraud detection provide stronger assurance than visual inspection. Consistent application of rules prevents human bias.
+        When things go wrong, good error handling makes the difference between a retry and an abandoned application. "Your document couldn't be verified" frustrates users. "We couldn't read the expiry date because of a shadow. Try photographing in brighter light with the document flat on a table" gives them a path forward. Every rejection should include a specific reason and clear instructions for fixing it.
+      </ArticleParagraph>
+
+      <ArticleH2>Measuring what matters</ArticleH2>
+
+      <ArticleParagraph>
+        Smart teams track specific metrics that reveal onboarding health. <strong>Completion rate</strong> shows what percentage of people who start actually finish. Anything below 70% indicates serious friction worth investigating. <strong>Time to completion</strong> matters both for customer experience and operational cost: the best consumer onboarding completes in under five minutes, while business onboarding with enhanced due diligence might take 15-20 minutes. <strong>First-attempt success rate</strong> reveals whether your guidance is clear enough, with leading companies achieving 85%+ success on the first try.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Scalability</strong>: Digital processes scale without proportional headcount increases. Handle peak periods and growth without expanding back-office staff.
+        <strong>Fraud detection rate</strong> measures security effectiveness, but must be balanced against false positive rates. Catching more fraud is pointless if you're also rejecting legitimate customers. The best systems catch over 95% of fraudulent attempts while keeping false positives below 2%. Finally, <strong>customer satisfaction</strong> surveys reveal how onboarding affects the relationship. Poor onboarding experiences correlate strongly with early churn, even when customers successfully complete the process.
+      </ArticleParagraph>
+
+      <ArticleH2>Industry-specific realities</ArticleH2>
+
+      <ArticleParagraph>
+        Different sectors face different requirements. <strong>Financial services</strong> operate under strict KYC and AML regulations that mandate specific verification steps. But risk-based approaches allow streamlined onboarding for low-risk customers while applying enhanced due diligence where warranted. A student opening their first savings account doesn't need the same scrutiny as someone transferring large sums internationally.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Compliance</strong>: Automatic logging creates complete audit trails. Generate compliance reports on demand and demonstrate consistent policy application to regulators.
-      </ArticleParagraph>
-
-      <ArticleH2>Key components of modern onboarding</ArticleH2>
-
-      <ArticleParagraph>
-        Effective digital onboarding combines several verification capabilities:
+        <strong>Real estate</strong> combines identity verification with background checks for tenant screening. International buyers may require additional documentation and verification against foreign databases. <strong>Healthcare</strong> must verify patient identity to prevent medical identity theft while maintaining HIPAA compliance for data handling. <strong>Legal services</strong> need identity confirmation before engagement, often combined with conflict checks and electronic signature collection for engagement letters.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Identity document verification</strong>: Customers photograph their ID using a smartphone. The system extracts data, checks security features, and validates document authenticity.
+        Folio's onboarding platform handles these variations through configurable verification workflows. Set the verification steps appropriate for your industry and risk level. Send customers a link; they complete verification from any device. You receive timestamped results with complete audit trails ready for regulatory review. The same technology that verifies a new banking customer can screen a rental applicant or confirm a patient's identity, adapting to each context while maintaining the smooth experience that drives completion rates.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Biometric verification</strong>: A selfie compared against the ID photo confirms the customer is the document holder. Liveness detection prevents spoofing with photos or videos.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Address verification</strong>: Proof of address documents (utility bills, bank statements) validate customer residence. Alternatively, database checks can confirm address without document submission.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Risk screening</strong>: Background checks against sanctions lists, politically exposed persons (PEP) databases, and adverse media help assess customer risk levels.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Electronic signatures</strong>: Capture legally binding consent and agreement acceptance without physical paperwork.
-      </ArticleParagraph>
-
-      <ArticleH2>Designing the onboarding flow</ArticleH2>
-
-      <ArticleParagraph>
-        The best onboarding flows balance thoroughness with user experience. Consider these design principles:
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Progressive disclosure</strong>: Don't overwhelm users with all requirements upfront. Guide them through steps progressively, explaining what's needed and why at each stage.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Mobile-first design</strong>: Most customers onboard via smartphones. Optimize document capture for phone cameras, design for touch interfaces, and test on real devices.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Clear guidance</strong>: Provide explicit instructions for document photography. Show examples of good and bad captures. Offer real-time feedback on image quality.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Graceful error handling</strong>: When problems occur, explain what went wrong and how to fix it. Allow retries without starting over. Offer human support when automated processes fail.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Status transparency</strong>: Show progress through the onboarding process. If verification takes time, communicate expected timelines and provide status updates.
-      </ArticleParagraph>
-
-      <ArticleH2>Measuring onboarding success</ArticleH2>
-
-      <ArticleParagraph>
-        Track these metrics to evaluate and improve your onboarding process:
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Completion rate</strong>: What percentage of users who start onboarding successfully complete it? Identify where users drop off and why.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Time to completion</strong>: How long does onboarding take? Benchmark against industry standards and track improvements over time.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>First-attempt success rate</strong>: How often do users complete verification without needing retries or manual intervention? Higher rates indicate clearer guidance and better UX.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Fraud detection rate</strong>: How many fraudulent attempts are caught during onboarding? Balance detection with false positive rates.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Customer satisfaction</strong>: Survey customers about their onboarding experience. Friction during onboarding correlates with early churn.
-      </ArticleParagraph>
-
-      <ArticleH2>Industry-specific considerations</ArticleH2>
-
-      <ArticleParagraph>
-        Different industries face unique onboarding requirements:
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Financial services</strong>: Strict KYC and AML requirements mandate specific verification steps. Risk-based approaches allow streamlined onboarding for low-risk customers while applying enhanced due diligence where needed.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Legal and professional services</strong>: Client identification rules require verifying identity before engagement. Document collection for conflicts checks and engagement letters integrates with identity verification.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Healthcare</strong>: Patient identity verification prevents medical identity theft. HIPAA compliance requirements affect how data is collected and stored.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Real estate</strong>: Tenant and buyer verification combines identity confirmation with background checks. International buyers may require additional documentation.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        Folio's client onboarding platform supports these workflows with configurable verification steps, global document coverage, and compliance-ready reporting. Send a secure link to clients, let them complete verification from any device, and receive timestamped results with full audit trails. The platform adapts to industry-specific requirements while maintaining the smooth experience that drives conversion and satisfaction.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        Digital onboarding isn't just about modernization. It's a competitive advantage that reduces costs, improves compliance, and creates better first impressions. As customer expectations continue rising and regulatory requirements tighten, businesses that invest in effective digital onboarding will outpace those still relying on manual processes.
+        The gap between good and bad onboarding grows wider every year. Customers now expect instant, mobile-friendly experiences. Regulators demand thorough verification with complete documentation. The companies that thrive are those that deliver both simultaneously: rigorous enough to satisfy compliance, seamless enough that customers actually complete the process. In a world where switching costs approach zero, onboarding isn't just an operational detail. It's a competitive advantage that compounds over time.
       </ArticleParagraph>
     </BlogArticleLayout>
   )
