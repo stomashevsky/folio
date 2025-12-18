@@ -5,6 +5,7 @@ import { SectionHeader, ToolCard, HeroTagline, StoreBadge, StoreQrBadge, Button 
 import FooterSection from '../components/sections/FooterSection'
 import FAQSection, { FAQItem } from '../components/sections/FAQSection'
 import PasskeysSection from '../components/sections/PasskeysSection'
+import ReviewsSection from '../components/sections/ReviewsSection'
 import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
@@ -442,8 +443,11 @@ function FolioAppPage() {
         </div>
       </section>
 
+      {/* Reviews Section */}
+      <ReviewsSection />
+
       {/* FAQ Section */}
-      <FAQSection 
+      <FAQSection
         faqData={FOLIO_APP_FAQ}
         title="Frequently asked questions"
       />
