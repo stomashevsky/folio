@@ -1,6 +1,6 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleTable, ArticleImage } from '../components/ui'
 import { Link } from 'react-router-dom'
-import blogTripitAlternative from '../assets/images/blog-tripit-alternative.png'
+import blogTripitAlternativeScreens from '../assets/images/blog-tripit-alternative-screens.png'
 
 export default function TripItAlternativeArticlePage() {
   return (
@@ -44,7 +44,7 @@ export default function TripItAlternativeArticlePage() {
       </ArticleParagraph>
 
       <ArticleImage 
-        src={blogTripitAlternative} 
+        src={blogTripitAlternativeScreens} 
         alt="Folio Wallet showing bus ticket with barcode, event ticket with QR code, and a trip timeline with hotels, flights, and attraction tickets"
       />
 
