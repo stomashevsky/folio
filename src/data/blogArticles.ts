@@ -36,7 +36,6 @@ import blogBestAppleWalletAlternatives from '../assets/images/blog-best-apple-wa
 import blogAccessYourDigitalWalletAnywhere from '../assets/images/blog-access-your-digital-wallet-anywhere.png'
 import blogBestDigitalWalletAppsInCanada from '../assets/images/blog-best-digital-wallet-apps-in-canada.png'
 import blogDigitalWalletAppsForEveryNeed from '../assets/images/blog-digital-wallet-apps-for-every-need.png'
-import blogHowToSecureYourWalletOnIphone from '../assets/images/blog-how-to-secure-your-wallet-on-iphone.png'
 import blogBestGiftCardWalletApps from '../assets/images/blog-best-gift-card-wallet-apps.png'
 import blogRegularVsDigitalWallets from '../assets/images/blog-regular-vs-digital-wallets.png'
 import blogAreDigitalWalletsSafe from '../assets/images/blog-are-digital-wallets-safe.png'
@@ -105,7 +104,6 @@ const BLOG_OG_IMAGE_BY_SLUG: Record<string, string> = {
   'face-matching-technology': 'blog-face-matching-technology.png',
   'flight-tickets-on-iphone': 'blog-flight-tickets-on-iphone.png',
   'how-to-add-and-store-your-medical-card': 'blog-how-to-add-and-store-your-medical-card.png',
-  'how-to-secure-your-wallet-on-iphone': 'blog-how-to-secure-your-wallet-on-iphone.png',
   'how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app': 'blog-how-to-share-travel-plans.png',
   'how-to-store-and-use-loyalty-cards-on-your-iphone': 'blog-how-to-store-and-use-loyalty-cards-on-your-iphone.png',
   'kyc-aml-compliance': 'blog-kyc-aml-compliance.png',
@@ -242,14 +240,6 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     description: 'Discover the best gift card wallet apps for organizing and securing your cards digitally. Compare features and find the perfect solution for managing gift cards.',
     slug: 'best-gift-card-wallet-apps',
     image: blogBestGiftCardWalletApps,
-  },
-  {
-    category: 'Guides',
-    date: 'Nov 19, 2024',
-    title: 'How to secure your wallet on iPhone',
-    description: 'Learn how to secure your digital wallet on iPhone with built-in features and best practices. Protect your cards, IDs, and documents.',
-    slug: 'how-to-secure-your-wallet-on-iphone',
-    image: blogHowToSecureYourWalletOnIphone,
   },
   {
     category: 'Research',
