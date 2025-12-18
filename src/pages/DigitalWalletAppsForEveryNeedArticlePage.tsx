@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import walletOverview from '../assets/images/blog-wallet-overview-folio.png'
+import folioScreens from '../assets/images/blog-digital-wallet-apps-folio-screens.png'
 
 export default function DigitalWalletAppsForEveryNeedArticlePage() {
   return (
@@ -36,7 +36,7 @@ export default function DigitalWalletAppsForEveryNeedArticlePage() {
       </ArticleParagraph>
 
       <ArticleImage
-        src={walletOverview}
+        src={folioScreens}
         alt="Folio app showing organized documents including payment cards, IDs, travel documents, and tickets with folder organization"
       />
 
