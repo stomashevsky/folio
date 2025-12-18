@@ -32,7 +32,7 @@ export default function AppleGiftCardAddToWalletArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Adding your Apple gift card to Folio is straightforward: open the app, tap Add, then select Gift Card. You can either scan the card's code with your camera or enter the details manually. Once added, you'll see your card's current balance at a glance, receive notifications when the balance changes, and get reminders before your card expires. This is especially useful if you have multiple gift cards from different retailers, as Folio organizes them all in one convenient dashboard.
+        Adding your Apple gift card to Folio is straightforward: open the app, tap the + icon, then select Any Document. You can choose from several options: scan the card with your camera, choose an existing photo, import a PDF, or enter the details manually. Once added, you can access your card instantly and get reminders before it expires. This is especially useful if you have multiple gift cards from different retailers, as Folio organizes them all in one convenient place alongside your other documents.
       </ArticleParagraph>
 
       <ArticleParagraph>

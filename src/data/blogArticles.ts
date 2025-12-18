@@ -34,7 +34,6 @@ import blogYouCanNowStoreTickets from '../assets/images/blog-you-can-now-store-t
 import blogBestGoogleWalletAlternatives from '../assets/images/blog-best-google-wallet-alternatives.png'
 import blogBestAppleWalletAlternatives from '../assets/images/blog-best-apple-wallet-alternatives.png'
 import blogAccessYourDigitalWalletAnywhere from '../assets/images/blog-access-your-digital-wallet-anywhere.png'
-import blogHowToAddGiftCardsToYourWalletApp from '../assets/images/blog-how-to-add-gift-cards-to-your-wallet-app.png'
 import blogBestDigitalWalletAppsInCanada from '../assets/images/blog-best-digital-wallet-apps-in-canada.png'
 import blogDigitalWalletAppsForEveryNeed from '../assets/images/blog-digital-wallet-apps-for-every-need.png'
 import blogHowToSecureYourWalletOnIphone from '../assets/images/blog-how-to-secure-your-wallet-on-iphone.png'
@@ -106,7 +105,6 @@ const BLOG_OG_IMAGE_BY_SLUG: Record<string, string> = {
   'face-matching-technology': 'blog-face-matching-technology.png',
   'flight-tickets-on-iphone': 'blog-flight-tickets-on-iphone.png',
   'how-to-add-and-store-your-medical-card': 'blog-how-to-add-and-store-your-medical-card.png',
-  'how-to-add-gift-cards-to-your-wallet-app': 'blog-how-to-add-gift-cards-to-your-wallet-app.png',
   'how-to-secure-your-wallet-on-iphone': 'blog-how-to-secure-your-wallet-on-iphone.png',
   'how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app': 'blog-how-to-share-travel-plans.png',
   'how-to-store-and-use-loyalty-cards-on-your-iphone': 'blog-how-to-store-and-use-loyalty-cards-on-your-iphone.png',
@@ -263,14 +261,6 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   },
   // ===== 2025 ARTICLES =====
   // Q1 2025
-  {
-    category: 'Product',
-    date: 'Jan 6, 2025',
-    title: 'How to add gift cards to your wallet app',
-    description: 'Managing physical gift cards can be a hassle. Learn how to store and organize your gift cards digitally in Folio Wallet with simple steps.',
-    slug: 'how-to-add-gift-cards-to-your-wallet-app',
-    image: blogHowToAddGiftCardsToYourWalletApp,
-  },
   {
     category: 'Research',
     date: 'Jan 21, 2025',

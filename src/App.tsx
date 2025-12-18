@@ -38,7 +38,6 @@ import YouCanNowStoreTicketsInFolioWalletArticlePage from './pages/YouCanNowStor
 import BestGoogleWalletAlternativesArticlePage from './pages/BestGoogleWalletAlternativesArticlePage'
 import BestAppleWalletAlternativesArticlePage from './pages/BestAppleWalletAlternativesArticlePage'
 import AccessYourDigitalWalletAnywhereArticlePage from './pages/AccessYourDigitalWalletAnywhereArticlePage'
-import HowToAddGiftCardsToYourWalletAppArticlePage from './pages/HowToAddGiftCardsToYourWalletAppArticlePage'
 import BestDigitalWalletAppsInCanadaArticlePage from './pages/BestDigitalWalletAppsInCanadaArticlePage'
 import DigitalWalletAppsForEveryNeedArticlePage from './pages/DigitalWalletAppsForEveryNeedArticlePage'
 import HowToSecureYourWalletOnIphoneArticlePage from './pages/HowToSecureYourWalletOnIphoneArticlePage'
@@ -198,7 +197,6 @@ function App() {
         <Route path="/blog/how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app" element={<HowToShareTravelPlansArticlePage />} />
         <Route path="/blog/you-can-now-store-tickets-in-folio-wallet" element={<YouCanNowStoreTicketsInFolioWalletArticlePage />} />
         <Route path="/blog/access-your-digital-wallet-anywhere" element={<AccessYourDigitalWalletAnywhereArticlePage />} />
-        <Route path="/blog/how-to-add-gift-cards-to-your-wallet-app" element={<HowToAddGiftCardsToYourWalletAppArticlePage />} />
         <Route path="/blog/best-google-wallet-alternatives" element={<BestGoogleWalletAlternativesArticlePage />} />
         <Route path="/blog/best-apple-wallet-alternatives" element={<BestAppleWalletAlternativesArticlePage />} />
         <Route path="/blog/best-digital-wallet-apps-in-canada" element={<BestDigitalWalletAppsInCanadaArticlePage />} />
