@@ -148,7 +148,7 @@ function FolioAppPage() {
               </p>
             </div>
             <div className="flex flex-wrap gap-3 items-start relative shrink-0 w-full">
-              <Button variant="primary" size="md" href="/#get-the-app">
+              <Button variant="primary" size="md" onClick={() => scrollToSection('get-the-app')}>
                 Get the app
               </Button>
             </div>
@@ -177,7 +177,7 @@ function FolioAppPage() {
               </p>
             </div>
             <div className="flex flex-wrap gap-3 items-start relative shrink-0 w-full">
-              <Button variant="primary" size="md" href="/#get-the-app">
+              <Button variant="primary" size="md" onClick={() => scrollToSection('get-the-app')}>
                 Get the app
               </Button>
             </div>
