@@ -1,86 +1,79 @@
-import BlogArticleLayout from '../components/ui/BlogArticleLayout'
-import { ArticleH2, ArticleParagraph } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import { Link } from 'react-router-dom'
+import idScannerImage from '../assets/images/blog-id-scanner-folio.png'
 
 export default function BestIdScannerAppArticlePage() {
   return (
     <BlogArticleLayout
-      title="Best ID scanner apps for Android and iPhone"
-      description="Turn your phone into a secure ID scanner. Discover the best apps to digitize, store, and protect your identification documents."
+      title="Your wallet got stolen abroad. Do you have a copy of your license?"
+      description="Nobody thinks about digital ID copies until they need one. Here are the situations where you'll thank yourself for having them."
       date="Jun 25, 2025"
       category="Research"
       slug="best-id-scanner-app"
     >
       <ArticleParagraph>
-        Your passport. Your driver's license. Your ID card. These documents prove who you are, but they're easy to lose, damage, or forget. A digital copy lives on your phone. Always accessible. Always secure. Modern ID scanner apps turn your smartphone into a professional scanner, no bulky equipment needed.
-      </ArticleParagraph>
-
-      <ArticleH2>
-        Why you need an ID scanner app and what to look for
-      </ArticleH2>
-
-      <ArticleParagraph>
-        A regular photo of your ID isn't enough. It's blurry. It has glare. It's hard to read. A dedicated scanner app fixes that. It detects edges automatically. Removes shadows. Adjusts lighting. The result looks like it came from a professional scanner. Many apps also recognize text using OCR. That means you can copy details, search your files, and export data, not just store an image.
+        You're at the car rental counter in Barcelona. Your wallet was stolen from your bag on the metro. The rental is prepaid, the car is waiting, but they need to see your driver's license. You don't have it. The physical card is gone.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Not all scanner apps are equal. Here's what matters: scan quality with clear, sharp images and accurate edge detection, OCR recognition that converts printed text into editable digital text, security with encryption and biometric access to protect your data, offline mode to scan IDs without internet connection, cross-platform support that works smoothly on both Android and iPhone, organization with labels, folders, and categories for easy management, and file formats that save scans as PDFs or images.
+        If you had a digital copy on your phone, you could show them. Many rental companies accept a clear scan for pickup, especially when you can also show a police report. Without one, you're stuck calling banks, canceling cards, and figuring out how to get around a foreign city without a car.
       </ArticleParagraph>
 
-      <ArticleH2>
-        How to scan your ID
-      </ArticleH2>
+      <ArticleH2>When you'll need a digital ID copy</ArticleH2>
 
       <ArticleParagraph>
-        It takes less than a minute. No special equipment needed. Install a scanner app like Folio Wallet, Adobe Scan, or Microsoft Lens. Open the app and select "Scan ID" or "Document" mode. Place your ID on a flat surface with good lighting. Avoid reflections. Align the ID within the guide frame. Most apps detect edges automatically. Hold steady and let the app capture the image. Review, crop if needed, then save as PDF or image. Store in an encrypted wallet app like Folio for extra security.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        On iPhone, Notes has basic scanning. On Android, Google Drive offers similar features. But dedicated ID scanner apps deliver better accuracy and organization.
-      </ArticleParagraph>
-
-      <ArticleH2>
-        The best ID scanner apps
-      </ArticleH2>
-
-      <ArticleParagraph>
-        <strong><Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link></strong> is a secure ID scanner designed for people who want more than just a scan. Scan any physical ID or upload an existing PDF. The app automatically detects text, dates, and key details. It organizes everything into categories like Identity, Travel, and Health. For travelers, Folio builds a visual trip timeline from your scanned tickets and bookings. Everything in one place. Scan both sides of an ID and merge into one PDF. Automatic OCR reads important information. AES-256 encryption and biometric login. Zero-knowledge architecture means even we can't access your files. Works offline. Syncs across devices when you choose. Folio Wallet is ideal for anyone who wants secure, organized storage for identification documents.
+        The scenarios are more common than you'd think. Hotels often want a passport copy at check-in. Instead of handing over your actual passport (which you then need to remember to retrieve), you can show a digital copy and keep the original locked in the room safe. Some hotels will accept the scan; others will still want the physical document, but at least you have options.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>IDScan.net</strong> is professional-grade. It scans and authenticates driver's licenses, passports, and national IDs from more than 200 countries. It reads MRZ codes, barcodes, and embedded chips. Then checks them against databases to confirm validity. Hotels, banks, and event organizers use it for verification. Available for Android and iPhone. Free trial for personal use. Designed for business environments but useful for anyone who wants the highest accuracy.
+        Online applications increasingly require ID uploads. Bank accounts, government services, visa applications, apartment rentals. Having a clean, readable scan ready means you're not scrambling to take a photo with your phone camera at the last minute.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Adobe Scan</strong> transforms paper documents into digital PDFs. It automatically enhances image quality, removes shadows, and supports OCR for accurate text capture. Scan IDs, receipts, and contracts. Organize everything within Adobe Cloud. Clean interface. Files can be renamed, sorted, and shared instantly. Free to download with optional upgrades. Available on Android and iPhone.
+        Emergencies are the worst time to realize you don't have a copy. If you need to prove your identity to police, a hospital, or an embassy, a digital copy can help while you sort out replacing the physical document. It's not always accepted as a legal substitute, but it's better than nothing when you're stuck.
+      </ArticleParagraph>
+
+      <ArticleImage
+        src={idScannerImage}
+        alt="Folio app scanning passport photo page and ID card with automatic edge detection and clear capture instructions"
+      />
+
+      <ArticleH2>Why a regular photo isn't enough</ArticleH2>
+
+      <ArticleParagraph>
+        Take a photo of your driver's license with your phone camera right now. Look at it. There's probably glare from the overhead light. The edges aren't straight. Part of the text is in shadow. The holographic security features create weird reflections. When someone needs to read the license number or verify the expiry date, they're squinting at a blurry image.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Microsoft Lens</strong> is clean, fast, and deeply integrated with Office. Scan ID cards, passports, or business cards. Convert them into PDFs or editable Word files. Perfect for professionals who already use Microsoft products. Integrates directly with OneDrive. Everything syncs automatically. Completely free. Works offline. Available on Android and iPhone.
+        Scanner apps fix this. They detect the document edges automatically, correct the perspective so everything is rectangular, adjust the lighting to remove shadows, and enhance contrast so text is readable. The MRZ code at the bottom of your passport (those two lines of letters and numbers) needs to be machine-readable. A good scan makes it so; a photo usually doesn't.
+      </ArticleParagraph>
+
+      <ArticleH2>Where not to store your ID scans</ArticleH2>
+
+      <ArticleParagraph>
+        Your camera roll is the worst place. The scan gets buried among thousands of photos. No security: anyone who picks up your unlocked phone can scroll through. And if your phone is backed up to cloud photos, your ID is now sitting on a server, unencrypted.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>CamScanner</strong> is one of the original scanning apps, refined over years. Fast scanning, smart cropping, and sharp results. Scan IDs, invoices, and official forms. Automatically detects document edges. Enhances contrast. Saves in PDF format. You can annotate, add watermarks, and organize scans into folders. Free tier available. Paid upgrades for cloud storage and multi-user access. Available on Android and iPhone.
+        Emailing scans to yourself is common but risky. That email sits in your inbox forever, searchable. If your email account is compromised, so is your ID. Same problem with unencrypted cloud drives: convenient but exposed.
       </ArticleParagraph>
 
-      <ArticleH2>
-        Security, tips, and why it matters for travelers
-      </ArticleH2>
+      <ArticleH2>A better approach</ArticleH2>
 
       <ArticleParagraph>
-        When you scan a passport, driver's license, or ID card, you're trusting the app with sensitive information. Look for encryption. Check if data stays on your device or uploads to servers. Review the privacy policy before scanning anything confidential. Folio Wallet uses zero-knowledge encryption. Even we can't read your files. You control sharing with revocable links. For documents that matter, that's the level of protection you want. Avoid free apps that display ads or require unnecessary permissions. Choose trusted options with transparent policies and verified security standards.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        For better scans, use good lighting with natural light or a bright lamp and avoid shadows and glare. Place your ID on a flat surface with a contrasting background. Keep it flat and centered. Hold your phone steady for sharper results. Use a scanner app instead of just taking a photo. A dedicated app enhances clarity and readability. Always store IDs in an encrypted app or folder. Back up regularly by saving important PDFs to a secure cloud service.
+        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link> is built for this. Point your camera at your passport or ID card, and it captures a clean scan with automatic edge detection. The app extracts key details: your name, document number, expiry date. Everything is encrypted on your device. Biometric lock means even if someone has your phone, they can't access your documents.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Travelers face situations where ID verification is required. Hotel check-ins. Airport security. Car rentals. Medical emergencies abroad. Having a digital version of your ID or passport stored securely in an app like Folio Wallet ensures you can prove your identity even if the physical document is misplaced. Since Folio works offline, you can access your files in airplane mode or in areas without internet. For frequent travelers, it's one of the simplest ways to stay organized and reduce stress during trips.
+        Your IDs are organized separately from your photos. Passport, driver's license, national ID, residence permit: each has its own card with the important information visible. When you need to show one, you open the app, authenticate with Face ID or fingerprint, and there it is.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        For privacy and organization, Folio Wallet offers excellent scanning and storage features in one secure place. For professional or business-level verification, IDScan.net is a powerful choice. For quick everyday use, Adobe Scan, Microsoft Lens, and CamScanner are great options. The best ID scanner app is the one you'll actually use. Download one. Scan your first ID. See how it feels to have everything organized and secure.
+        Works offline. No internet required to access your documents. Useful when you're abroad without data, in airplane mode, or somewhere with poor connectivity. The scan is on your phone, not on a server you need to reach.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        Spend five minutes scanning your IDs now. The next time you're at a counter, a border, or an emergency, you'll have a backup that might save hours of frustration.
       </ArticleParagraph>
     </BlogArticleLayout>
   )

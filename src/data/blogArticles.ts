@@ -549,8 +549,8 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Research',
     date: 'Jun 25, 2025',
-    title: 'Best ID scanner apps for Android and iPhone',
-    description: 'Turn your phone into a secure ID scanner. Discover the best apps to digitize, store, and protect your identification documents.',
+    title: 'Your wallet got stolen abroad. Do you have a copy of your license?',
+    description: "Nobody thinks about digital ID copies until they need one. Here are the situations where you'll thank yourself for having them.",
     slug: 'best-id-scanner-app',
     image: blogBestIdScannerApp,
   },
