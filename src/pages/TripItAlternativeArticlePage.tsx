@@ -7,7 +7,7 @@ export default function TripItAlternativeArticlePage() {
     <BlogArticleLayout
       title="TripIt alternative: A smarter way to organize your travels"
       description="TripIt keeps your itinerary in order. But what if you need more? Discover an app that stores your bookings, documents, and tickets in one secure place."
-      date="Sep 12, 2025"
+      date="Apr 8, 2025"
       category="Research"
       slug="tripit-alternative"
     >

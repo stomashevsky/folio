@@ -8,7 +8,7 @@ import { getOgImageUrl } from '../configs/ogImages'
 import { blogArticles, type BlogCategory } from '../data/blogArticles'
 import { restoreBlogPageState, saveBlogPageState, isBlogScrollRestoring, clearBlogPageState } from '../utils/blogScrollPosition'
 
-const categories: BlogCategory[] = ['All', 'Company', 'Product', 'Guides', 'Research', 'Safety']
+const categories: BlogCategory[] = ['All', 'Company', 'Product', 'Guides', 'Research', 'Safety', 'Business']
 
 export default function BlogPage() {
   const location = useLocation()

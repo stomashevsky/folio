@@ -7,7 +7,7 @@ export default function OrganizeTicketsBookingsArticlePage() {
     <BlogArticleLayout
       title="How to keep all your tickets and bookings in one app"
       description="Flights, trains, hotels, concerts: stop searching through emails. Keep all your travel tickets and bookings organized in one secure app."
-      date="Sep 2, 2025"
+      date="Jul 8, 2025"
       category="Research"
       slug="organize-tickets-bookings"
     >

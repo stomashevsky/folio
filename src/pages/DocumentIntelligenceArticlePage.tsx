@@ -7,7 +7,7 @@ export default function DocumentIntelligenceArticlePage() {
       title="Document intelligence: AI-powered document processing explained"
       description="Document intelligence uses AI to automatically classify, extract, and verify information from documents. Learn how this technology streamlines business processes and improves compliance."
       date="Feb 11, 2025"
-      category="Product"
+      category="Business"
       slug="document-intelligence"
     >
       <ArticleParagraph>

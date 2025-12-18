@@ -7,7 +7,7 @@ export default function BiometricDataPrivacyArticlePage() {
     <BlogArticleLayout
       title="What happens to your face data after identity verification"
       description="When you take a selfie for identity verification, where does that image go? Who sees it? How long is it kept? Here's what you should know about biometric data and what to ask before sharing it."
-      date="Sep 20, 2025"
+      date="Aug 18, 2025"
       category="Safety"
       slug="biometric-data-privacy"
     >

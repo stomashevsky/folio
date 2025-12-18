@@ -7,7 +7,7 @@ export default function KycAmlComplianceArticlePage() {
       title="KYC and AML compliance: a complete guide for businesses"
       description="KYC (Know Your Customer) and AML (Anti-Money Laundering) requirements affect businesses across industries. Learn what these regulations require and how to build compliant verification processes."
       date="Mar 14, 2025"
-      category="Guides"
+      category="Business"
       slug="kyc-aml-compliance"
     >
       <ArticleParagraph>

@@ -7,7 +7,7 @@ export default function DigitalPassportCopiesArticlePage() {
     <BlogArticleLayout
       title="Why you need a digital copy of your passport"
       description="Discover the benefits of keeping a digital passport copy: instant access, emergency backup, faster check-ins, and secure storage. Essential for every traveler."
-      date="Sep 9, 2025"
+      date="Jun 3, 2025"
       category="Safety"
       slug="digital-passport-copies"
     >

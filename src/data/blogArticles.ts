@@ -16,7 +16,6 @@ import blogBiometricDataPrivacy from '../assets/images/blog-biometric-data-priva
 import blogDigitalPassportCopies from '../assets/images/blog-digital-passport-copies.png'
 import blogManagingFamilyTravelDocuments from '../assets/images/blog-managing-family-travel-documents.png'
 import blogTripCaseAlternative from '../assets/images/blog-tripcase-alternative.png'
-import blogTripsyAlternative from '../assets/images/blog-tripsy-alternative.png'
 import blogTripItAlternative from '../assets/images/blog-tripit-alternative.png'
 import blogPass2UAlternative from '../assets/images/blog-pass2u-alternative.png'
 import blogAppInTheAirAlternative from '../assets/images/blog-app-in-the-air-alternative.png'
@@ -24,7 +23,6 @@ import blogCheckMyTripAlternative from '../assets/images/blog-checkmytrip-altern
 import blogWanderlogAlternative from '../assets/images/blog-wanderlog-alternative.png'
 import blogBestDocumentScanningApps from '../assets/images/blog-best-document-scanning-apps.png'
 import blogBestIdScannerApp from '../assets/images/blog-best-id-scanner-app.png'
-import blogSevenUsefulApps from '../assets/images/blog-7-useful-apps-for-planning-your-trip.png'
 import blogTenTravelHacks from '../assets/images/blog-10-travel-hacks-that-actually-work.png'
 import blogBestAppsToPlanTravel from '../assets/images/blog-best-apps-to-plan-travel.png'
 import blogBestEventTicketApps from '../assets/images/blog-best-event-ticket-apps.png'
@@ -43,7 +41,7 @@ import blogHowToAddAndStoreYourMedicalCard from '../assets/images/blog-how-to-ad
 import blogHowToStoreAndUseLoyaltyCardsOnYourIphone from '../assets/images/blog-how-to-store-and-use-loyalty-cards-on-your-iphone.png'
 import blogWhatIsADigitalWallet from '../assets/images/blog-what-is-a-digital-wallet.png'
 
-export type BlogCategory = 'All' | 'Company' | 'Product' | 'Guides' | 'Research' | 'Safety'
+export type BlogCategory = 'All' | 'Company' | 'Product' | 'Guides' | 'Research' | 'Safety' | 'Business'
 
 export interface BlogArticle {
   category: Exclude<BlogCategory, 'All'>
@@ -70,7 +68,6 @@ export const sortArticlesByDate = (articles: BlogArticle[]): BlogArticle[] => {
 
 const BLOG_OG_IMAGE_BY_SLUG: Record<string, string> = {
   '10-travel-hacks-that-actually-work': 'blog-10-travel-hacks-that-actually-work.png',
-  '7-useful-apps-for-planning-your-trip': 'blog-7-useful-apps-for-planning-your-trip.png',
   'access-your-digital-wallet-anywhere': 'blog-access-your-digital-wallet-anywhere.png',
   'age-verification-requirements': 'blog-age-verification-requirements.png',
   'albanian-diaspora-voter-registration': 'blog-albanian-diaspora-voter-registration.png',
@@ -107,7 +104,6 @@ const BLOG_OG_IMAGE_BY_SLUG: Record<string, string> = {
   'the-best-event-ticket-apps': 'blog-best-event-ticket-apps.png',
   'tripcase-alternative': 'blog-tripcase-alternative.png',
   'tripit-alternative': 'blog-tripit-alternative.png',
-  'tripsy-alternative-travel-app': 'blog-tripsy-alternative.png',
   'wanderlog-alternative': 'blog-wanderlog-alternative.png',
   'what-is-a-digital-wallet': 'blog-what-is-a-digital-wallet.png',
   'what-is-liveness-detection': 'blog-what-is-liveness-detection.png',
@@ -200,7 +196,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogTripCaseAlternative,
   },
   {
-    category: 'Product',
+    category: 'Business',
     date: 'Feb 11, 2025',
     title: 'Document intelligence: AI-powered document processing explained',
     description: 'Document intelligence uses AI to automatically classify, extract, and verify information from documents. Learn how this technology streamlines business processes and improves compliance.',
@@ -216,7 +212,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogPass2UAlternative,
   },
   {
-    category: 'Guides',
+    category: 'Business',
     date: 'Mar 14, 2025',
     title: 'KYC and AML compliance: a complete guide for businesses',
     description: 'KYC (Know Your Customer) and AML (Anti-Money Laundering) requirements affect businesses across industries. Learn what these regulations require and how to build compliant verification processes.',
@@ -241,7 +237,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogTripItAlternative,
   },
   {
-    category: 'Product',
+    category: 'Business',
     date: 'Apr 22, 2025',
     title: 'Face matching technology: how businesses verify identity online',
     description: "Face matching compares a live selfie to an ID photo to confirm identity. Learn how this technology works, where it's used, and what makes it different from face recognition.",
@@ -273,7 +269,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogBestGoogleWalletAlternatives,
   },
   {
-    category: 'Guides',
+    category: 'Business',
     date: 'Jun 9, 2025',
     title: 'Client onboarding best practices: digital vs traditional',
     description: 'Digital client onboarding transforms how businesses verify and activate new customers. Learn the key differences from traditional methods and best practices for implementing effective onboarding workflows.',
@@ -338,14 +334,6 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogBestAppsToPlanTravel,
   },
   {
-    category: 'Research',
-    date: 'Aug 5, 2025',
-    title: "Tripsy plans your trip. But where do you keep your tickets?",
-    description: "Tripsy is great for deciding what to do. But once you've booked flights, hotels, and activities, you need somewhere to store them.",
-    slug: 'tripsy-alternative-travel-app',
-    image: blogTripsyAlternative,
-  },
-  {
     category: 'Product',
     date: 'Aug 12, 2025',
     title: "Your driver's license is going digital. Here's what that actually means.",
@@ -362,15 +350,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogTenTravelHacks,
   },
   {
-    category: 'Research',
-    date: 'Aug 20, 2025',
-    title: "7 apps that actually help when you're traveling (and what each one does best)",
-    description: "Every travel app claims to be essential. Here's an honest look at seven that solve real problems, what they're good at, and where they fall short.",
-    slug: '7-useful-apps-for-planning-your-trip',
-    image: blogSevenUsefulApps,
-  },
-  {
-    category: 'Research',
+    category: 'Business',
     date: 'Sep 27, 2025',
     title: 'How age verification actually works online',
     description: "From buying wine online to signing up for apps, age checks are everywhere. Learn how different verification methods work, why some are more private than others, and what happens to your data.",
@@ -379,7 +359,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   },
   {
     category: 'Research',
-    date: 'Sep 2, 2025',
+    date: 'Jul 8, 2025',
     title: 'How to keep all your tickets and bookings in one app',
     description: 'Flights, trains, hotels, concerts: stop searching through emails. Keep all your travel tickets and bookings organized in one secure app.',
     slug: 'organize-tickets-bookings',
@@ -387,7 +367,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   },
   {
     category: 'Research',
-    date: 'Sep 16, 2025',
+    date: 'Aug 26, 2025',
     title: "App in the Air shut down. Here's where frequent flyers are going instead.",
     description: "After years of tracking flights for millions of travelers, App in the Air is gone. If you're looking for a replacement that does even more, Folio Wallet is the answer.",
     slug: 'app-in-the-air-alternative',
@@ -402,7 +382,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     image: blogWanderlogAlternative,
   },
   {
-    category: 'Product',
+    category: 'Business',
     date: 'Sep 30, 2025',
     title: 'How liveness detection stops fraudsters from using your photo',
     description: "Someone has your photo. Can they use it to pass identity verification? With liveness detection, the answer is no. Learn how this technology tells the difference between you and a picture of you.",
@@ -420,7 +400,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   },
   {
     category: 'Safety',
-    date: 'Sep 20, 2025',
+    date: 'Aug 18, 2025',
     title: 'What happens to your face data after identity verification',
     description: "When you take a selfie for identity verification, where does that image go? Who sees it? How long is it kept? Here's what you should know about biometric data.",
     slug: 'biometric-data-privacy',
@@ -428,14 +408,14 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   },
   {
     category: 'Company',
-    date: 'Sep 10, 2025',
+    date: 'Jul 14, 2025',
     title: 'How governments are replacing paper documents with digital credentials',
     description: "What if you could vote from abroad, prove your age without showing your ID, or access government services without waiting in line? Digital credentials are making this happen.",
     slug: 'digital-credentials-government',
     image: blogDigitalCredentialsGovernment,
   },
   {
-    category: 'Product',
+    category: 'Business',
     date: 'Oct 28, 2025',
     title: 'How NFC chip scanning verifies your passport in seconds',
     description: "Your passport has a chip that proves it's genuine. Learn how NFC scanning works, what it verifies, and why it's the most secure way to confirm document authenticity.",
@@ -444,7 +424,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   },
   {
     category: 'Safety',
-    date: 'Sep 9, 2025',
+    date: 'Jun 3, 2025',
     title: 'Why you need a digital copy of your passport',
     description: 'Discover the benefits of keeping a digital passport copy: instant access, emergency backup, faster check-ins, and secure storage. Essential for every traveler.',
     slug: 'digital-passport-copies',

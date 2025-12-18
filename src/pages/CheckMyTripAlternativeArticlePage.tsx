@@ -7,7 +7,7 @@ export default function CheckMyTripAlternativeArticlePage() {
     <BlogArticleLayout
       title="CheckMyTrip alternative: a smarter way to manage your travel"
       description="CheckMyTrip organizes your bookings. But what about your passport, insurance, and event tickets? Discover an app that stores everything in one secure place."
-      date="Sep 18, 2025"
+      date="May 6, 2025"
       category="Research"
       slug="checkmytrip-alternative"
     >

@@ -7,7 +7,7 @@ export default function ClientOnboardingBestPracticesArticlePage() {
       title="Client onboarding best practices: digital vs traditional"
       description="Digital client onboarding transforms how businesses verify and activate new customers. Learn the key differences from traditional methods and best practices for implementing effective onboarding workflows."
       date="Jun 9, 2025"
-      category="Guides"
+      category="Business"
       slug="client-onboarding-best-practices"
     >
       <ArticleParagraph>

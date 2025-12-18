@@ -7,7 +7,7 @@ export default function DigitalCredentialsGovernmentArticlePage() {
     <BlogArticleLayout
       title="How governments are replacing paper documents with digital credentials"
       description="What if you could vote from abroad, prove your age without showing your ID, or access government services without waiting in line? Digital credentials are making this happen, and some countries are already seeing results."
-      date="Sep 10, 2025"
+      date="Jul 14, 2025"
       category="Company"
       slug="digital-credentials-government"
     >

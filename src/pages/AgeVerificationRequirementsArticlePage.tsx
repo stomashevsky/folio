@@ -8,7 +8,7 @@ export default function AgeVerificationRequirementsArticlePage() {
       title="How age verification actually works online"
       description="From buying wine online to signing up for apps, age checks are everywhere. Learn how different verification methods work, why some are more private than others, and what happens to your data."
       date="Sep 27, 2025"
-      category="Research"
+      category="Business"
       slug="age-verification-requirements"
     >
       <ArticleParagraph>

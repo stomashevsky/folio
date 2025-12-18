@@ -7,7 +7,7 @@ export default function FaceMatchingTechnologyArticlePage() {
       title="Face matching technology: how businesses verify identity online"
       description="Face matching compares a live selfie to an ID photo to confirm identity. Learn how this technology works, where it's used, and what makes it different from face recognition."
       date="Apr 22, 2025"
-      category="Product"
+      category="Business"
       slug="face-matching-technology"
     >
       <ArticleParagraph>

@@ -8,7 +8,7 @@ export default function WhatIsLivenessDetectionArticlePage() {
       title="How liveness detection stops fraudsters from using your photo"
       description="Someone has your photo. Can they use it to pass identity verification? With liveness detection, the answer is no. Learn how this technology tells the difference between you and a picture of you."
       date="Sep 30, 2025"
-      category="Product"
+      category="Business"
       slug="what-is-liveness-detection"
     >
       <ArticleParagraph>

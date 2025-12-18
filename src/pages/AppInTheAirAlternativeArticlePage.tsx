@@ -7,7 +7,7 @@ export default function AppInTheAirAlternativeArticlePage() {
     <BlogArticleLayout
       title="App in the Air shut down. Here's where frequent flyers are going instead."
       description="After years of tracking flights for millions of travelers, App in the Air is gone. If you're looking for a replacement that does even more, Folio Wallet is the answer."
-      date="Sep 16, 2025"
+      date="Aug 26, 2025"
       category="Research"
       slug="app-in-the-air-alternative"
     >

@@ -7,7 +7,7 @@ export default function TripCaseAlternativeArticlePage() {
     <BlogArticleLayout
       title="TripCase alternative: The travel organizer you'll love"
       description="TripCase is gone. Your next trip doesn't have to be chaos. Meet the app that keeps every flight, hotel, and document in one beautiful place."
-      date="Sep 4, 2025"
+      date="Jan 21, 2025"
       category="Research"
       slug="tripcase-alternative"
     >

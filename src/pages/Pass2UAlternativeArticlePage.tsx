@@ -7,7 +7,7 @@ export default function Pass2UAlternativeArticlePage() {
     <BlogArticleLayout
       title="Pass2U alternative: A smarter way to organize your passes"
       description="Pass2U extends Apple Wallet with custom cards. But what if you need more? Discover an app that organizes all your documents with real security."
-      date="Sep 10, 2025"
+      date="Feb 25, 2025"
       category="Research"
       slug="pass2u-alternative"
     >
