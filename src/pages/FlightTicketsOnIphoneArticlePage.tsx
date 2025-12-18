@@ -1,42 +1,73 @@
-import BlogArticleLayout from '../components/ui/BlogArticleLayout'
-import { ArticleH2, ArticleParagraph } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import { Link } from 'react-router-dom'
+import flightTicketsImage from '../assets/images/blog-flight-tickets-folio.png'
 
 export default function FlightTicketsOnIphoneArticlePage() {
   return (
     <BlogArticleLayout
-      title="Flight tickets on iPhone"
-      description="Keep your boarding passes organized and accessible. Discover the best ways to manage flight tickets on your iPhone."
+      title="You have 30 seconds to find your boarding pass. Where is it?"
+      description="The gate is closing, your phone has 47 PDFs, and the barcode is somewhere. Here's how to never lose a boarding pass again."
       date="Jul 22, 2025"
       category="Product"
       slug="flight-tickets-on-iphone"
     >
       <ArticleParagraph>
-        Your flight ticket arrives in an email. You download the PDF. Take a screenshot. Forward it to yourself. By the time you reach the airport, it's buried somewhere on your iPhone. Your boarding pass should be easy to find. Ready when you need it. Accessible even when you're rushing through security.
-      </ArticleParagraph>
-
-      <ArticleH2>
-        The best ways to manage flight tickets on your iPhone
-      </ArticleH2>
-
-      <ArticleParagraph>
-        <strong>Apple Wallet</strong> is built into your iPhone. Double-tap the side button or power button to access your boarding pass instantly. Even when your phone is locked. Many airlines automatically add boarding passes to Wallet when you check in. It updates automatically with gate changes and flight status. The limitation: not all airlines support Wallet. And if you have tickets from multiple airlines, they're scattered across different apps. There's no search or organization. Best for quick access to compatible airline tickets. Works great if you mostly fly with Wallet-supported airlines.
+        The gate agent is waiting. You're scrolling through email, searching "boarding pass," finding six results from different trips. You open the Files app. There are 47 PDFs. You try the airline app but it logged you out. You need the password. The queue behind you is getting impatient. Your flight is boarding.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Most major airlines have their own apps. United. Delta. American. British Airways. Each stores your tickets for flights booked directly with them. These apps show your upcoming flights, check-in reminders, and gate information. Some even send push notifications for delays and gate changes. The problem: you end up with multiple apps. One for each airline you fly. There's no single place to see all your trips. Searching across apps is tedious. Best if you only fly with one or two airlines and don't mind switching between apps.
+        This happens because boarding passes end up scattered across your iPhone with no reliable way to find them when you need them most.
+      </ArticleParagraph>
+
+      <ArticleH2>Why this keeps happening</ArticleH2>
+
+      <ArticleParagraph>
+        Your boarding pass arrives as an email attachment. You download the PDF to look at it, then forget where it went. The Files app buries it among dozens of other downloads. Three weeks later, you can't find it.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Your tickets arrive as PDF attachments in email. You can keep them there. Search your inbox when you need one. It works, but it's messy. Tickets mix with other emails. Finding the right one takes time. Opening PDFs isn't fast. And if you're offline, attachments might not load. Best only if you have very few flights and don't mind digging through email.
+        The airline app works, but only for that airline. Fly Ryanair to Barcelona, then Vueling to Paris, and you need two different apps. Each requires login. Each times out. Each stores tickets differently.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong><Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link></strong> accepts flight tickets from anywhere. Forward an email. Upload a PDF. Take a photo. It extracts the details and creates a clean, searchable ticket. All your flights live in one timeline. Past trips. Upcoming journeys. Multiple airlines. You can search by date, airline, or destination. Everything works offline. It also stores your travel documents. Passports. IDs. Hotel bookings. Travel insurance. All in one secure, encrypted place. Best for anyone who wants all flights organized in one place, regardless of which airline or booking site you used.
+        Apple Wallet is great when it works. Double-tap to access your pass instantly, even from the lock screen. But many airlines don't support it. Budget carriers especially. And if your airline doesn't add passes automatically, you're back to hunting through email.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        At the airport, every second counts. You don't want to search through emails or switch between apps. You want your boarding pass ready. The right app keeps everything organized. You can see your upcoming flights at a glance. Access past tickets for expense reports. Find any trip quickly. It's not just about convenience. It's about peace of mind. Knowing your ticket is there when you need it. If you only fly occasionally and always with the same airline, their app might be enough. If you want quick access from your lock screen, use Apple Wallet. But if you fly with multiple airlines, need to organize past and future trips, or want everything in one searchable place, Folio Wallet gives you that flexibility. Your iPhone is powerful. Your flight tickets should be just as powerful. Organized. Accessible. Ready when you are.
+        Screenshots seem like the solution until you have 2,000 photos and can't find anything. "It's somewhere in October" doesn't help when you're standing at the gate.
+      </ArticleParagraph>
+
+      <ArticleH2>What actually works</ArticleH2>
+
+      <ArticleParagraph>
+        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link> takes boarding passes from anywhere. Forward the confirmation email. Upload the PDF. Photograph a printout. It extracts the flight details, the barcode, the seat, the gate, the baggage allowance. Everything appears on a timeline sorted by date.
+      </ArticleParagraph>
+
+      <ArticleImage
+        src={flightTicketsImage}
+        alt="Folio app showing flight tickets: Ryanair London to Barcelona and Vueling Valencia to Paris with barcodes, seat assignments, and gate information"
+      />
+
+      <ArticleParagraph>
+        At the gate, you open one app. Your flights are sorted by date. Today's flight is at the top. The barcode is displayed prominently, ready to scan. No searching. No login. No scrolling through email. Works offline too, so you're not dependent on airport WiFi.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        The details you actually need are visible at a glance: seat 12F, gate A36, boarding time 07:55, 10kg cabin bag. The original PDF stays attached if the gate agent asks for it, but the barcode is what matters and it's right there.
+      </ArticleParagraph>
+
+      <ArticleH2>The practical difference</ArticleH2>
+
+      <ArticleParagraph>
+        With multiple apps and email, you spend 30 seconds (or more) finding your boarding pass while the gate agent waits. With everything in one place, you spend two seconds: open app, tap flight, show barcode.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        This matters most when things go wrong. Flight cancelled, rebooked on a different airline, new boarding pass arrives while you're running through the terminal. With Folio, forward the email, the new pass appears in your timeline immediately. No hunting through inbox. No trying to remember which airline app to download.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        If you fly once a year with one airline, their app is probably fine. If you fly multiple airlines, book through different sites, or just want to stop losing boarding passes, having everything in one searchable timeline solves the problem permanently.
       </ArticleParagraph>
     </BlogArticleLayout>
   )

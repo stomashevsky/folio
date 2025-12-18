@@ -396,8 +396,8 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Product',
     date: 'Jul 22, 2025',
-    title: 'Flight tickets on iPhone',
-    description: 'Keep your boarding passes organized and accessible. Discover the best ways to manage flight tickets on your iPhone.',
+    title: 'You have 30 seconds to find your boarding pass. Where is it?',
+    description: "The gate is closing, your phone has 47 PDFs, and the barcode is somewhere. Here's how to never lose a boarding pass again.",
     slug: 'flight-tickets-on-iphone',
     image: blogFlightTicketsOnIphone,
   },
