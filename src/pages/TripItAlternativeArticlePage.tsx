@@ -1,5 +1,6 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleBlockquote, ArticleTable } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleTable, ArticleImage } from '../components/ui'
 import { Link } from 'react-router-dom'
+import blogTripitAlternative from '../assets/images/blog-tripit-alternative.png'
 
 export default function TripItAlternativeArticlePage() {
   return (
@@ -11,33 +12,54 @@ export default function TripItAlternativeArticlePage() {
       slug="tripit-alternative"
     >
       <ArticleParagraph>
-        For travelers who want to stay organized, TripIt has been a popular choice. It creates itineraries from your booking confirmations. It syncs with your calendar. It keeps your travel plans accessible and tidy. But what happens when you need more than a simple itinerary? What if you want a secure vault for your documents too?
-      </ArticleParagraph>
-
-      <ArticleH2>What TripIt does well</ArticleH2>
-
-      <ArticleParagraph>
-        TripIt simplifies travel organization. You forward your confirmation emails, and it builds a detailed itinerary. You can view flight times, hotel addresses, rental car info, and restaurant reservations in one place. TripIt Pro adds real-time alerts for delays, gate changes, and cancellations. It syncs with your calendar and shares trip details with others. For many travelers, this is exactly what they need.
-      </ArticleParagraph>
-
-      <ArticleH2>Where TripIt falls short</ArticleH2>
-
-      <ArticleParagraph>
-        TripIt is an itinerary app. Not a document vault. You can store your flight details, but not your passport scan. You can track your hotel booking, but not your travel insurance policy. If you want to keep digital copies of IDs, visas, or tickets alongside your itinerary, TripIt doesn't offer that. You'll need a second app. Or a folder of screenshots. Neither is ideal. TripIt also struggles with group travel. Sharing a trip means giving others a view of your plans. It doesn't offer secure collaborative folders or fine-grained access control.
-      </ArticleParagraph>
-
-      <ArticleH2>Folio Wallet: A secure TripIt alternative</ArticleH2>
-
-      <ArticleParagraph>
-        Folio Wallet combines the best of travel organization with secure document storage. You get a smart timeline for your trips. You also get a digital vault for every important document in your life.
+        You're standing at the hotel reception desk in Barcelona. The clerk asks for your booking confirmation. You open your email and start scrolling. The confirmation is somewhere in there, buried under newsletters, work emails, and spam. Two minutes pass. The line behind you grows. You finally find it, but now they need your passport details. Those are in your Photos app, mixed with 500 vacation pictures from last year. Sound familiar?
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Travel timeline is automatically generated from the tickets and bookings you add. Flights. Hotels. Trains. Events. Everything is arranged chronologically and accessible anytime. Document storage includes passports, ID cards, visas, travel insurance, driver's licenses, and more. All stored with AES-256 encryption and zero-knowledge architecture. Your data stays yours.
+        This is the reality of travel organization for most people. TripIt promised to fix it by turning your confirmation emails into neat itineraries. And it does that well. But for many travelers, an itinerary isn't enough. You need your actual tickets. Your passport scan. Your travel insurance. Your visa. And you need them accessible in seconds, not scattered across five different apps.
+      </ArticleParagraph>
+
+      <ArticleH2>What TripIt does and doesn't do</ArticleH2>
+
+      <ArticleParagraph>
+        TripIt is genuinely useful for one thing: building itineraries from email. Forward your flight confirmation, and it extracts the details into a timeline. Hotel bookings, car rentals, restaurant reservations all get parsed and organized. TripIt Pro adds real-time flight alerts, which frequent flyers find valuable.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Shared folders let you create secure spaces for group trips. Share documents with family or colleagues. Control who sees what. Everything syncs across devices. Offline access means your documents are always there when you need them, even without internet. In the air. Underground. Abroad. And expiration alerts notify you before any document expires. Passports. Insurance. IDs.
+        But TripIt stops at the itinerary. It tells you that you have a flight at 3pm, but it doesn't store the actual ticket with the barcode you need to board. It knows you're staying at Hotel Arts Barcelona, but it can't store the PDF confirmation with the cancellation policy you might need to reference. And it definitely can't store your passport scan, driver's license, or travel insurance documents. For those, you're on your own.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        There are other limitations. TripIt's email parsing works best with English-language confirmations from major booking sites. Book a local bus in Spain or a train in Japan, and the automatic parsing often fails. You end up manually entering details anyway. And TripIt Pro costs $49 per year, primarily for flight alerts that your airline's own app provides for free.
+      </ArticleParagraph>
+
+      <ArticleH2>What travelers actually need</ArticleH2>
+
+      <ArticleParagraph>
+        Think about what you actually reach for during a trip. At the airport, you need your boarding pass with a scannable barcode. At the hotel, you need the confirmation with booking reference. At the car rental desk, you need your driver's license. Crossing a border, you need your passport and possibly a visa. At the concert venue, you need the event ticket with QR code. If something goes wrong, you need your travel insurance policy number.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        A good travel app should store all of these, make them instantly findable, and work offline when you're in airplane mode or don't have data abroad. It should also help with group trips, where multiple people need access to the same Airbnb check-in code or the restaurant reservation details.
+      </ArticleParagraph>
+
+      <ArticleImage 
+        src={blogTripitAlternative} 
+        alt="Folio Wallet showing bus ticket with barcode, event ticket with QR code, and a trip timeline with hotels, flights, and attraction tickets"
+      />
+
+      <ArticleH2>How Folio Wallet handles travel differently</ArticleH2>
+
+      <ArticleParagraph>
+        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio Wallet</Link> approaches travel organization from a different angle. Instead of parsing emails into an itinerary, it stores the actual documents and tickets you need, then automatically organizes them into a timeline.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        Add a bus ticket, and the app extracts the departure time, route, and seat number. The barcode stays scannable right from your phone. Add an event ticket, and it reads the date, venue, and seat info from the QR code. Add a flight booking, and it joins your timeline alongside everything else. The result is a chronological view of your entire trip with every ticket and document you need, accessible with a tap.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        Beyond tickets, you can store passport scans, visa photos, driver's licenses, travel insurance PDFs, and hotel confirmations. Everything lives in one place with AES-256 encryption. For group trips, shared folders let everyone access the documents they need. Your travel companion can see the Airbnb door code without you having to screenshot and send it. And expiration alerts warn you months before your passport or visa runs out, so you don't book a trip only to realize you can't actually go.
       </ArticleParagraph>
 
       <ArticleH2>TripIt vs Folio Wallet</ArticleH2>
@@ -50,22 +72,19 @@ export default function TripItAlternativeArticlePage() {
         ]}
         rows={[
           { feature: 'Trip itinerary', tripit: 'Email parsing, calendar sync', folio: 'Auto-timeline from tickets' },
-          { feature: 'Document storage', tripit: '~Itinerary only', folio: 'Full vault: IDs, passports, insurance' },
-          { feature: 'Collaboration', tripit: 'Trip sharing', folio: 'Secure shared folders' },
-          { feature: 'Flight alerts', tripit: '✓ (Pro)', folio: '~Coming soon' },
-          { feature: 'Offline access', tripit: '✓', folio: '✓' },
-          { feature: 'Security', tripit: 'Standard encryption', folio: 'AES-256, zero-knowledge, SOC 2' },
+          { feature: 'Document storage', tripit: 'Itinerary only', folio: 'Full vault: IDs, passports, insurance' },
+          { feature: 'Scannable tickets', tripit: 'No', folio: 'Barcodes and QR codes' },
+          { feature: 'Collaboration', tripit: 'View-only sharing', folio: 'Shared folders with access control' },
+          { feature: 'Flight alerts', tripit: 'Yes (Pro only)', folio: 'Coming soon' },
+          { feature: 'Offline access', tripit: 'Yes', folio: 'Yes' },
+          { feature: 'Security', tripit: 'Standard encryption', folio: 'AES-256, zero-knowledge' },
           { feature: 'Price', tripit: 'Free / $49/year Pro', folio: 'Free' },
         ]}
       />
 
       <ArticleParagraph>
-        Choose TripIt if you only need an itinerary builder and value real-time flight alerts. Choose <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link> if you want both travel organization and secure document storage in one place. TripIt keeps your trips tidy. Folio keeps your entire travel life secure.
+        TripIt remains a solid choice if you primarily want automatic itinerary creation from emails and value real-time flight alerts. Folio Wallet makes more sense if you want your actual tickets, documents, and bookings stored securely in one app, organized into a timeline, and accessible to everyone traveling with you.
       </ArticleParagraph>
-
-      <ArticleBlockquote>
-        Your itinerary. Your documents. Your tickets. All protected. All in one place.
-      </ArticleBlockquote>
     </BlogArticleLayout>
   )
 }
