@@ -412,8 +412,8 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Research',
     date: 'Jul 29, 2025',
-    title: 'Best apps to plan travel: 2025 guide',
-    description: 'Planning a trip can be both exciting and stressful. These apps will save you time, money, and a lot of headaches.',
+    title: 'The only travel apps you actually need (and which to skip)',
+    description: "Most travel app lists include 20 apps you'll never use. Here are the ones that solve real problems.",
     slug: 'best-apps-to-plan-travel',
     image: blogBestAppsToPlanTravel,
   },

@@ -1,51 +1,83 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import { Link } from 'react-router-dom'
+import folioScreensImage from '../assets/images/blog-best-apps-folio-screens.png'
 
 export default function BestAppsToPlanTravelArticlePage() {
   return (
     <BlogArticleLayout
-      title="Best apps to plan travel: 2025 guide"
-      description="Planning a trip can be both exciting and stressful. These apps will save you time, money, and a lot of headaches."
+      title="The only travel apps you actually need (and which to skip)"
+      description="Most travel app lists include 20 apps you'll never use. Here are the ones that solve real problems, organized by when you need them."
       date="Jul 29, 2025"
       category="Research"
       slug="best-apps-to-plan-travel"
     >
       <ArticleParagraph>
-        Planning a trip can feel overwhelming. Between booking flights, finding the best hotels, and organizing activities, things can quickly get complicated. The right apps can take the stress out of the process. They help you focus on what matters: enjoying the journey.
+        Search "best travel apps" and you'll find lists with 20+ recommendations. Download them all, use maybe two, delete the rest after your trip. The truth is you need 4-5 apps maximum, each solving one specific problem well. Here's what actually matters, organized by when you need it.
       </ArticleParagraph>
 
-      <ArticleH2>The best apps to plan your trip</ArticleH2>
+      <ArticleH2>For planning what to do: Wanderlog</ArticleH2>
 
       <ArticleParagraph>
-        <strong>Wanderlog</strong> is like your best friend who's super organized but also loves adventure. It's an itinerary planner that lets you collaborate with friends and even track your budget. You can plan everything from flights to daily activities in one place. The map view is a lifesaver when you're trying to maximize your time. Best for group trips or anyone who loves having all their plans in one place.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong><Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link></strong> is a free travel planner that builds your trip timeline in seconds. Upload images, PDFs, or simply forward a confirmation email. Your itinerary appears at a glance. You can also store documents like passports, IDs, and medical cards. All encrypted for your safety. Imagine arriving at the airport with all your trip details in one place. No app switching. No digging through emails. Best for travelers who like everything neatly organized.
+        <strong>Wanderlog</strong> is the best free trip planner. Add destinations, restaurants, activities. See everything on a map to optimize your days. Share with travel companions who can add their own ideas. Track your budget as you plan.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>TripIt</strong> is the OG of travel planning apps. Just forward your confirmation emails. Flights, hotels, rental cars. It creates a neat, master itinerary for you. You don't have to lift a finger after forwarding your emails. It even syncs with your calendar so you'll never forget check-in times. Best for busy travelers who want everything automated.
+        The limitation: Wanderlog is great for deciding what to do, but doesn't solve the "where's my boarding pass" problem. You still need somewhere to store the actual tickets once you book.
+      </ArticleParagraph>
+
+      <ArticleH2>For finding deals: Google Flights</ArticleH2>
+
+      <ArticleParagraph>
+        <strong>Google Flights</strong> is unbeatable for flight search. The flexible dates calendar shows you the cheapest days to fly at a glance. Price tracking alerts you when fares drop. The "explore" feature shows where you can go within your budget.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Kayak</strong> is more than just a travel booking app. It's a travel organizer that helps you find the best deals on flights, hotels, and car rentals. The price alerts feature is amazing for scoring discounts. It also shows you flexible date options to help you save even more. Best for budget-conscious travelers who want a one-stop-shop for booking and planning.
+        Skip the dedicated booking apps like Hopper or Kayak for actual booking. They rarely beat Google Flights on price, and their "price predictions" are marketing more than science. Use Google Flights to find the best option, then book directly with the airline.
+      </ArticleParagraph>
+
+      <ArticleH2>For storing tickets and documents: Folio</ArticleH2>
+
+      <ArticleParagraph>
+        <strong><Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link></strong> solves the most common travel frustration: finding your tickets when you need them. Forward confirmation emails, import PDFs, photograph paper tickets. Folio extracts dates, times, locations and creates a timeline automatically.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>TripAdvisor</strong> has been the go-to app for travel reviews for years. But it's also a handy tool for planning your trip. You can read reviews, book hotels, and even find great restaurants near you. Honest reviews from real travelers make it easier to avoid tourist traps. Best for anyone who values traveler feedback when planning their itinerary.
+        At the gate, your boarding pass is one tap away. At the hotel, the confirmation is right there. The bus ticket barcode, the concert QR code, everything works offline. For group trips, shared folders mean everyone has access to the same documents.
+      </ArticleParagraph>
+
+      <ArticleImage
+        src={folioScreensImage}
+        alt="Folio app showing trip timeline, bus ticket with barcode, and event ticket with QR code"
+      />
+
+      <ArticleH2>For flight tracking: Flighty (maybe)</ArticleH2>
+
+      <ArticleParagraph>
+        <strong>Flighty</strong> is genuinely impressive. It shows where your inbound aircraft is, predicts delays before airlines announce them, tracks gate changes in real-time. The interface is beautiful and the data is faster than most airline apps.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        If you're hitting the open road, <strong>Roadtrippers</strong> is a must. It helps you map out your route and discover unique stops. Scenic viewpoints. Quirky attractions. Hidden diners. It's perfect for road trips with multiple stops. You'll never miss the world's largest ball of yarn again. Best for road warriors who want to make the journey as memorable as the destination.
+        The honest assessment: it costs $50/year. If you fly 10+ times a year, the early delay warnings are worth it. If you fly twice a year, just use your airline's app. It's free and good enough for occasional travelers.
+      </ArticleParagraph>
+
+      <ArticleH2>What to skip</ArticleH2>
+
+      <ArticleParagraph>
+        <strong>TripAdvisor</strong> was essential a decade ago. Now Google Maps has reviews, photos, and ratings for almost everything. You don't need a separate app.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Flighty</strong> is a powerful flight tracker built for frequent flyers. It gives you real-time updates, delay predictions, gate changes, and even shows where your incoming aircraft is. Flighty pulls data from FAA, FlightAware, and airline sources to provide incredibly fast alerts. The sleek interface also tracks your flight history over time. Best for business travelers and frequent flyers who want early warnings and detailed insight into every leg of their journey.
+        <strong>All-in-one travel apps</strong> that promise to handle planning, booking, documents, and tracking. They do everything adequately and nothing well. Better to use specialized apps that excel at one thing.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        The best app to plan travel depends on your style. Need an instant timetable that shows all details at once? Folio Wallet is your best friend. Planning a road trip? Roadtrippers have your back. Want to save on bookings? Kayak is unbeatable. Traveling is supposed to be fun, not stressful. With these apps, you can plan your vacation, keep your documents safe, and discover amazing places along the way. Whether you're a frequent flyer, a road tripper, or someone who just loves a good adventure, there's an app here for you.
+        <strong>Most hotel booking apps.</strong> Booking.com and Hotels.com have apps, but their websites work fine. You'll book hotels maybe twice for a trip. The websites are better for comparing options anyway.
+      </ArticleParagraph>
+
+      <ArticleH2>The minimal setup</ArticleH2>
+
+      <ArticleParagraph>
+        For most trips: Wanderlog to plan, Google Flights to find deals, Folio to store your tickets, your airline's app for check-in. Four apps. That's it. Add Flighty if you're a frequent flyer, Google Maps for navigation. You don't need 20 apps. You need the right 4-5 that actually solve problems you have.
       </ArticleParagraph>
     </BlogArticleLayout>
   )
