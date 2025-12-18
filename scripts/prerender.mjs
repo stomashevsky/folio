@@ -131,6 +131,12 @@ const STATIC_PAGES = [
     description: 'How Folio collects, uses, and protects your personal data.',
     ogImage: 'folio-app-hero.png',
   },
+  {
+    path: '/security',
+    title: 'Security | Folio Wallet',
+    description: 'Learn how Folio protects your documents with end-to-end encryption, zero-knowledge architecture, and industry-leading security standards.',
+    ogImage: 'folio-app-hero.png',
+  },
 ]
 
 // Blog OG image mapping (same as BLOG_OG_IMAGE_BY_SLUG in blogArticles.ts)

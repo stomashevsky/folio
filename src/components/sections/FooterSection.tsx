@@ -107,6 +107,7 @@ export default function FooterSection() {
               <div className="flex flex-col gap-3 items-start w-full">
                 <FooterLink to="/terms">Terms of Use</FooterLink>
                 <FooterLink to="/privacy">Privacy Policy</FooterLink>
+                <FooterLink to="/security">Security</FooterLink>
               </div>
             </div>
           </div>
