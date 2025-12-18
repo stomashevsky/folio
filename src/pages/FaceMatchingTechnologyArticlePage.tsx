@@ -1,4 +1,5 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import blogFaceMatchingVerification from '../assets/images/blog-face-matching-verification.png'
 
 export default function FaceMatchingTechnologyArticlePage() {
   return (
@@ -10,128 +11,80 @@ export default function FaceMatchingTechnologyArticlePage() {
       slug="face-matching-technology"
     >
       <ArticleParagraph>
-        When someone applies for a bank account online, how does the bank know the person holding the ID is actually the person pictured on it? The answer is <strong>face matching</strong>, a biometric technology that compares a live selfie against a photo from an identity document to verify that they're the same person.
+        You're opening a bank account from your couch. You've uploaded photos of your driver's license, entered your personal details, and now comes the final step: the app asks you to take a selfie. Why? Because having your ID isn't enough. The bank needs to know that the person holding the ID is the same person pictured on it.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Face matching has become essential for digital identity verification. It bridges the gap between possessing an ID document and proving you're the legitimate owner of that document. Without it, remote verification would rely entirely on document authenticity, leaving a significant vulnerability for fraudsters who obtain stolen or counterfeit IDs.
+        This is <strong>face matching</strong>: comparing your selfie to the photo on your ID to verify you're who you claim to be. It's the technology that makes remote identity verification possible, whether you're opening a bank account, signing up for a crypto exchange, or renting an apartment.
       </ArticleParagraph>
+
+      <ArticleImage 
+        src={blogFaceMatchingVerification} 
+        alt="Face matching verification showing a selfie capture screen with a person's face and their Portuguese ID card for comparison"
+      />
 
       <ArticleH2>Face matching vs face recognition</ArticleH2>
 
       <ArticleParagraph>
-        These terms are often confused, but they describe fundamentally different technologies with different use cases and privacy implications.
+        These terms sound similar but work very differently, and the distinction matters for privacy.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Face recognition</strong> identifies an unknown person by searching through a database of faces. Security systems use it to find matches among thousands or millions of stored images. This technology raises significant privacy concerns because it can identify people without their knowledge or consent.
+        <strong>Face recognition</strong> searches a database to identify an unknown person. Security cameras in a stadium might scan thousands of faces looking for matches against a watchlist. This technology can identify people without their knowledge or consent, which is why it faces heavy regulation or outright bans in many places.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Face matching</strong> (also called face verification or 1:1 matching) compares exactly two images to determine if they show the same person. The user initiates the comparison by taking a selfie and submitting their ID. There's no database search involved, and the technology only answers one question: do these two specific images show the same person?
+        <strong>Face matching</strong> is simpler and more privacy-friendly. It only compares two specific images: the selfie you just took and the photo on your ID. There's no database search, no surveillance. The system just answers one question: are these photos of the same person? You initiate the check yourself, and you consent to the comparison.
+      </ArticleParagraph>
+
+      <ArticleH2>How it works</ArticleH2>
+
+      <ArticleParagraph>
+        The concept is straightforward. You take a selfie, and the system extracts the photo from your ID document. It then analyzes both faces to create a "fingerprint" of facial features: the distance between your eyes, the shape of your jawline, the proportions of your face. Finally, it compares these fingerprints and calculates a similarity score.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        This distinction matters for compliance. Face matching for identity verification is generally accepted under privacy regulations because users consent to the specific comparison. Mass surveillance using face recognition faces much stricter scrutiny and is banned or heavily regulated in many jurisdictions.
+        If the score is high enough, you're verified. If not, you might be asked to try again with better lighting, or a human reviewer might take a look. Businesses can adjust how strict the matching is based on their needs: tighter security means fewer false matches but potentially more legitimate users getting rejected.
       </ArticleParagraph>
 
-      <ArticleH2>How face matching works</ArticleH2>
+      <ArticleH2>Why liveness detection matters</ArticleH2>
 
       <ArticleParagraph>
-        Modern face matching systems use deep learning models trained on millions of face images to create mathematical representations of facial features. Here's how the process typically works:
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Image capture and preprocessing</strong>: The system captures a selfie and extracts the photo from the ID document. Both images are normalized for lighting, rotation, and scale. Quality checks ensure the images are clear enough for accurate comparison.
+        Face matching alone has a weakness: what if someone holds up a photo of the ID owner instead of their own face? Or plays a video? That's where liveness detection comes in.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Feature extraction</strong>: A neural network analyzes each face and generates a numerical vector (sometimes called a face embedding or template) that represents the unique characteristics of that face. This vector captures geometric relationships between facial features, textures, and other distinguishing attributes.
+        Liveness detection confirms you're a real person, physically present, not a printed photo or a screen displaying a video. Modern systems analyze subtle cues like skin texture, micro-movements, and 3D depth to distinguish real faces from fakes. Some ask you to turn your head or blink. Others work passively without requiring any specific actions.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Similarity calculation</strong>: The system compares the two vectors mathematically. The result is a similarity score indicating how likely it is that both images show the same person.
+        A fraudster might get their hands on a stolen ID and a photo of its owner. They're unlikely to pass liveness detection. This combination of face matching and liveness creates a much stronger verification than either could provide alone.
+      </ArticleParagraph>
+
+      <ArticleH2>Challenges the technology handles</ArticleH2>
+
+      <ArticleParagraph>
+        Your ID photo might be five years old. You may have grown a beard, changed your hairstyle, or simply aged. The photo on your ID was probably taken in a government office with harsh fluorescent lighting, while your selfie comes from your phone's front camera in your living room. These differences make the comparison harder, but good face matching systems account for them.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Decision and threshold</strong>: Based on the similarity score and a configured threshold, the system returns a match or no-match result. Businesses can adjust thresholds based on their risk tolerance: higher thresholds reduce false matches but may reject some legitimate users.
+        Fairness is another consideration. Early face matching systems performed worse for people with darker skin tones. Modern systems trained on diverse datasets have largely addressed this, but companies deploying face matching should test for accuracy across different demographic groups.
       </ArticleParagraph>
 
-      <ArticleH2>Challenges in face matching</ArticleH2>
+      <ArticleH2>Where you'll encounter it</ArticleH2>
 
       <ArticleParagraph>
-        Face matching technology has improved dramatically, but several challenges remain:
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Aging and appearance changes</strong>: ID photos may be several years old. People's appearance changes over time due to aging, weight changes, hairstyle, or facial hair. Good face matching systems account for these natural variations while still detecting fraudulent attempts.
+        Face matching has become standard wherever businesses need to verify identity remotely. Banks and fintech apps use it when you open accounts or apply for loans. Crypto exchanges require it before you can trade or withdraw funds. Telehealth platforms verify patients before prescribing medications. Government services from voter registration to benefits applications rely on it to prevent fraud. Even gig economy platforms use face matching to verify drivers and renters, building trust between strangers.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Image quality differences</strong>: ID photos are often low resolution, poorly lit, or printed on textured surfaces. Selfies vary widely in quality depending on device cameras and lighting conditions. The comparison must work reliably despite these differences.
+        The common thread: any situation where someone needs to prove they're the person on an ID document, without being physically present to show that ID to a human.
       </ArticleParagraph>
 
-      <ArticleParagraph>
-        <strong>Demographic fairness</strong>: Early face matching systems showed higher error rates for certain demographic groups, particularly people with darker skin tones. Modern systems trained on diverse datasets perform more consistently across all populations, but fairness testing remains essential.
-      </ArticleParagraph>
+      <ArticleH2>The complete verification picture</ArticleH2>
 
       <ArticleParagraph>
-        <strong>Presentation attacks</strong>: Fraudsters attempt to fool face matching with photos, videos, masks, or deepfakes of the victim. This is why face matching should always be combined with liveness detection to confirm the person is physically present.
-      </ArticleParagraph>
-
-      <ArticleH2>Where face matching is used</ArticleH2>
-
-      <ArticleParagraph>
-        Face matching has become standard across industries that need to verify identity remotely:
-      </ArticleParagraph>
-
-      <ul className="block font-normal leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full space-y-2 pl-6 list-disc">
-        <li><strong>Financial services</strong>: Banks, credit unions, and fintech companies use face matching during account opening, loan applications, and high-risk transactions.</li>
-        <li><strong>Cryptocurrency exchanges</strong>: KYC requirements mandate identity verification before users can trade or withdraw funds.</li>
-        <li><strong>Online gambling</strong>: Age and identity verification prevent underage gambling and fraud.</li>
-        <li><strong>Healthcare</strong>: Telehealth platforms verify patient identity before consultations or prescription services.</li>
-        <li><strong>Government services</strong>: Digital ID programs, voter registration, and benefits distribution rely on face matching to prevent fraud.</li>
-        <li><strong>Sharing economy</strong>: Ride-sharing, home rental, and gig economy platforms verify users to build trust and safety.</li>
-      </ul>
-
-      <ArticleH2>Building effective face matching workflows</ArticleH2>
-
-      <ArticleParagraph>
-        Face matching works best as part of a complete identity verification workflow. A typical implementation includes:
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Document capture and authentication</strong>: First, verify that the ID document itself is genuine. Check security features, detect tampering, and extract the photo and data fields.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Liveness detection</strong>: Confirm the user is physically present and not presenting a photo or video of someone else.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Face matching</strong>: Compare the live selfie against the ID photo to confirm the user is the document holder.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Data verification</strong>: Cross-reference extracted data against external databases to detect synthetic identities or data inconsistencies.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        Each layer adds confidence. A fraudster might obtain a stolen ID, but they're unlikely to pass liveness detection. Someone might create a convincing deepfake, but it won't match a genuine document's embedded data. Layered verification creates defense in depth.
-      </ArticleParagraph>
-
-      <ArticleH2>Face matching with Folio</ArticleH2>
-
-      <ArticleParagraph>
-        Folio's face match capability compares a live selfie with the photo extracted from an identity document. The system provides a confidence score indicating match quality and supports configurable thresholds to balance security with user experience.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        Face matching integrates with Folio's document verification and liveness check to create a complete identity verification workflow. Businesses can configure the verification flow to match their specific requirements, whether that's a quick check for low-risk transactions or comprehensive verification for regulated industries.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        As identity verification becomes increasingly digital, face matching provides the critical link between physical identity documents and the real people who own them. Combined with document authentication and liveness detection, it enables secure remote verification that meets both regulatory requirements and user expectations.
+        Face matching works best as one layer in a complete verification workflow. First, verify the ID document itself is genuine by checking security features and detecting tampering. Then confirm the person is physically present with liveness detection. Finally, compare their face to the ID photo. Each layer catches different types of fraud, and together they create strong protection against identity theft.
       </ArticleParagraph>
     </BlogArticleLayout>
   )
