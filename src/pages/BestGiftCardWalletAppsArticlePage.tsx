@@ -1,53 +1,73 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
 import { Link } from 'react-router-dom'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import walletOverview from '../assets/images/blog-wallet-overview-folio.png'
 
 export default function BestGiftCardWalletAppsArticlePage() {
   return (
     <BlogArticleLayout
       title="Best gift card wallet apps for hassle-free digital organization"
       description="Discover the best gift card wallet apps for organizing and securing your cards digitally. Compare features and find the perfect solution for managing gift cards."
-      date="Nov 14, 2024"
+      date="Nov 5, 2024"
       category="Research"
       slug="best-gift-card-wallet-apps"
     >
       <ArticleParagraph>
-        Digital wallets have revolutionized how we handle our personal documents, with one of their best uses being gift card storage. No more forgetting cards at home or worrying about expiration dates: gift card wallets help organize and protect card data digitally, right on your device. Among the many options, Folio Wallet stands out as a versatile solution for managing various cards and documents with ease. Here's a look at why gift card wallets are so useful.
-      </ArticleParagraph>
-
-      <ArticleH2>Benefits of storing gift cards in digital wallets</ArticleH2>
-
-      <ArticleParagraph>
-        Using a digital wallet for gift card storage offers clear advantages. Convenience tops the list: it's as simple as tapping your phone to access any stored card without carrying a physical stack. Organization is another key benefit: by consolidating all gift cards in one app, users avoid misplaced or forgotten cards, while digital wallets also help users track upcoming expiration dates. Security is also a strong draw: storing cards digitally minimizes the risk of loss or theft. Many digital wallets add layers of protection with secure logins, encrypted data, and device-based authentication, giving users peace of mind.
-      </ArticleParagraph>
-
-      <ArticleH2>Key features to look for in a gift card wallet app</ArticleH2>
-
-      <ArticleParagraph>
-        While many digital wallets support gift card storage, not all are created equal. The best apps offer ease of use: a good wallet app will be intuitive, letting users add, access, and organize gift cards without hassle. Expiration reminders are important: notifications about approaching expiration dates help avoid losing value on forgotten cards. Security is essential: strong password protection and encryption ensure that card data stays safe, adding a layer of reassurance.
-      </ArticleParagraph>
-
-      <ArticleH2>Best gift card wallet apps</ArticleH2>
-
-      <ArticleParagraph>
-        <strong>Folio Wallet</strong> is one of the most comprehensive digital wallets available, designed to manage not just gift cards but also a range of other documents, from payment cards to IDs. Folio's multi-functional approach and user-centered design make it a standout option for users who need an efficient way to store and organize digital information. Adding gift cards is simple: tap the + icon, select Any Document, then scan the card with your camera, choose an existing photo, import a PDF, or enter details manually. Folio Wallet provides expiration reminders for cards, reducing the risk of losing unused value. Security is a top priority: Folio Wallet uses end-to-end encryption with passkeys and biometric authentication to safeguard stored information. By offering these features within a sleek, intuitive design, Folio Wallet stands out as an ideal choice for those who want a one-stop solution for their digital cards. <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</Link>
+        You're at the checkout, ready to use that $50 Starbucks card your aunt gave you last Christmas. You open your wallet app, scroll through dozens of cards, and realize: it expired two weeks ago. The balance is gone. This happens more often than anyone admits. Gift cards worth billions of dollars go unused every year, not because people don't want to spend them, but because they forget they exist or lose track of when they expire.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        In addition to Folio Wallet, several other apps provide solid options for gift card storage. <strong>Stocard</strong> is known for loyalty card storage, and it also supports gift cards, offering a straightforward option for storing multiple cards. For iOS users, <strong>Apple Wallet</strong> provides an easy, integrated option for digital storage, with limited customization but excellent accessibility on Apple devices. Similar to Apple Wallet, <strong>Google Wallet</strong> offers Android users seamless gift card storage within a clean, user-friendly interface. <strong>Gyft</strong> is a dedicated app for gift cards, allowing users to purchase, store, and redeem gift cards with a specialized approach.
+        The solution is simple: store your gift cards in an app that actually helps you use them. Not all wallet apps are equal, though. Some bury gift cards among loyalty programs and payment methods. Others lack expiration reminders entirely. Here's what to look for and which apps do it best.
+      </ArticleParagraph>
+
+      <ArticleH2>What makes a good gift card wallet</ArticleH2>
+
+      <ArticleParagraph>
+        The best gift card apps share three features. First, easy entry: you should be able to scan a card with your camera, import a photo, or type the number manually. Second, expiration tracking: the app should warn you before a card expires, ideally with enough time to actually use it. Third, quick access: when you're at the register, you need the barcode or card number in two taps, not five.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Among gift card wallet apps, Folio Wallet's combination of user-friendliness and versatility makes it an excellent choice. For users who want more than just basic gift card storage, Folio's support for multiple document types and customizable categories makes it ideal. Its well-designed interface, focused on easy access and high security, simplifies gift card organization and retrieval, making it particularly useful for people managing various card types.
+        Security matters too. Gift cards are essentially cash. If someone gets your card number and PIN, they can drain the balance before you notice. A good wallet app protects your cards with encryption and device-based authentication, so even if you lose your phone, your gift cards stay safe.
       </ArticleParagraph>
 
-      <ArticleH2>Tips for managing gift cards in a digital wallet</ArticleH2>
+      <ArticleH2>The best apps for gift card storage</ArticleH2>
 
       <ArticleParagraph>
-        To make the most of digital storage for gift cards, keep these tips in mind. Set up reminders for approaching expiration dates to avoid losing any remaining balance. Organize by category if your app supports it, making it easier to locate specific cards. Secure your device with a strong password or PIN, enhancing the safety of your digital wallet data.
+        <strong>Folio</strong> treats gift cards as first-class citizens. Add a card by tapping the + icon, selecting Any Document, then scanning with your camera, choosing an existing photo, importing a PDF, or entering details manually. Once added, you can set expiration dates and get reminders before the deadline approaches. Everything is encrypted end-to-end and protected with passkeys and biometric authentication.
+      </ArticleParagraph>
+
+      <ArticleImage
+        src={walletOverview}
+        alt="Folio wallet showing organized cards including payment cards, gift cards, and loyalty cards with easy access to barcodes and details"
+      />
+
+      <ArticleParagraph>
+        What sets Folio apart is organization. Gift cards sit alongside your other important items: payment cards, IDs, insurance documents, event tickets. You can create folders to group cards by store or occasion. When you're at Target, you see your Target gift card immediately, not buried under Starbucks and Amazon cards you won't use today. Shared folders let you give family members access to household gift cards without texting screenshots back and forth. <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Available free on iOS and Android.</Link>
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Digital wallets provide a modern, effective way to organize and protect gift cards, ensuring they're always ready to use. Folio Wallet stands out as a top choice, especially for users seeking an intuitive, secure app that manages more than just gift cards. Whether you're a fan of streamlined apps like Apple Wallet or want the multi-functional approach of Folio Wallet, these digital solutions make keeping track of gift cards easier than ever.
+        <strong>Stocard</strong> started as a loyalty card app but handles gift cards too. The interface is clean, scanning works well, and most major retailers are recognized automatically. The downside: Stocard focuses heavily on loyalty programs and shopping offers, so the experience is cluttered if you just want simple gift card storage. There's also no expiration reminder feature, which defeats the main purpose of tracking gift cards digitally.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        <strong>Apple Wallet</strong> accepts gift cards from participating retailers, but the list is limited. If the store has issued a proper .pkpass file, you can add it. If not, you're out of luck. There's no way to manually enter a gift card number or scan a physical card. For iPhone users who happen to receive compatible digital gift cards, it works seamlessly. For everyone else, it's not a complete solution.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        <strong>Google Wallet</strong> has similar limitations. It stores gift cards from supported retailers and integrates with Google Pay for easy checkout. The experience is smooth when it works, but coverage is inconsistent. Many smaller retailers and restaurant chains aren't supported, leaving gaps in your collection.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        <strong>Gyft</strong> takes a different approach: it's primarily a gift card marketplace where you buy, send, and store cards. If you frequently purchase digital gift cards, Gyft keeps them organized and ready to use. The app also offers deals and cashback on certain purchases. The limitation is that Gyft works best with cards bought through its platform. Adding existing physical gift cards is possible but not the app's strength.
+      </ArticleParagraph>
+
+      <ArticleH2>Making the most of your gift cards</ArticleH2>
+
+      <ArticleParagraph>
+        Whichever app you choose, a few habits help. Add gift cards immediately when you receive them, not "later" when you'll forget. Set expiration reminders if your app supports them, or add calendar events if it doesn't. Check your collection before shopping trips, especially for stores you don't visit often. That $25 Barnes & Noble card from your birthday might be the push you need to finally buy that book.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        For most people, Folio offers the best combination of easy entry, expiration tracking, and organization. It's designed for people who want all their important cards and documents in one secure place, not just gift cards. If you're already using Apple Wallet or Google Wallet for payments and just need gift card support, Stocard or Gyft can fill the gap. The worst option is no app at all, leaving gift cards to expire forgotten in a drawer.
       </ArticleParagraph>
     </BlogArticleLayout>
   )
