@@ -1,42 +1,69 @@
-import BlogArticleLayout from '../components/ui/BlogArticleLayout'
-import { ArticleH2, ArticleParagraph } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import { Link } from 'react-router-dom'
+import shareTravelImage from '../assets/images/blog-share-travel-folio.png'
 
 export default function HowToShareTravelPlansArticlePage() {
   return (
     <BlogArticleLayout
-      title="How to share your travel plans with friends using a trip planner app"
-      description="Planning a trip with others? Discover how trip planner apps make it easy to share itineraries, collaborate, and keep everyone in sync."
+      title="Your friend booked the hotel. Now they're stuck in traffic. Do you have the confirmation?"
+      description="Group trips fall apart when one person has all the bookings. Here's how to make sure everyone has access to everything."
       date="Jul 18, 2025"
       category="Product"
       slug="how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app"
     >
       <ArticleParagraph>
-        You're planning a trip with friends. Flights booked. Hotels reserved. Activities planned. But everyone keeps asking: what time is the flight? Where are we staying? What's the address? Sharing travel plans shouldn't mean sending screenshots through multiple text messages. Everyone should have the same information. Accessible. Clear. Always up to date.
-      </ArticleParagraph>
-
-      <ArticleH2>
-        How trip planner apps make sharing simple
-      </ArticleH2>
-
-      <ArticleParagraph>
-        When you travel with others, everyone needs to know the plan. Flight times. Hotel addresses. Restaurant reservations. Meeting points. Without a shared itinerary, confusion happens. Someone arrives at the wrong gate. Another person shows up late because they didn't know the time changed. Plans get lost in email threads. A trip planner app keeps everyone on the same page. One source of truth. Always accessible. Updated in real time.
+        You're standing at the hotel front desk. Your friend booked the room, but their flight was delayed. The receptionist is asking for the confirmation number. You check your messages: nothing. You search your email: nothing. The booking is in your friend's inbox, on a phone that's currently somewhere over the Atlantic.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        The most common way people share travel plans is through email threads and text messages. Forward confirmation emails. Send screenshots. Copy and paste addresses. It works, but it's messy. Information spreads across multiple messages. Updates get buried. People miss important changes. And if someone's offline, they don't see updates at all. There's a better way.
+        This is the single point of failure problem. Group trips spread information across multiple people's inboxes. When the person with the booking isn't there, everyone else is stuck.
+      </ArticleParagraph>
+
+      <ArticleH2>Why forwarding doesn't work</ArticleH2>
+
+      <ArticleParagraph>
+        The obvious solution is forwarding emails. Someone books the hotel, forwards the confirmation to everyone. Someone else books train tickets, forwards those too. In theory, everyone has everything.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Trip planner apps are built for sharing. You create one itinerary. Everyone gets access. Updates sync automatically. Everyone sees changes instantly. Some apps let you invite collaborators. They can add flights, hotels, activities. Everyone contributes. Everyone stays informed. Others work as a shared timeline. You build the itinerary. Share it as a link. Friends view it on their phone. No app download required.
+        In practice, it falls apart. The forwarded email gets buried under 50 other messages. Someone's phone is on airplane mode and the attachment won't load. The person who needs the confirmation is scrolling through a group chat trying to find a screenshot from three weeks ago. Updates don't sync. Someone changed the reservation but forgot to forward the new confirmation.
+      </ArticleParagraph>
+
+      <ArticleH2>Shared folders: everyone has everything</ArticleH2>
+
+      <ArticleParagraph>
+        The real solution is shared access to documents, not copies of documents. When you add a hotel booking to a shared folder, everyone with access sees it immediately. Not a forwarded copy that might be outdated, but the actual document you're looking at.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong><Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio Wallet</Link></strong> creates a complete trip timeline from your tickets, bookings, and documents. Forward confirmation emails. Upload PDFs. Take photos. Everything organizes into one clear timeline. Share your trip with a single link. Friends can view the full itinerary on their phone or computer. They see flights, hotels, restaurants, activities. All in chronological order. With dates, times, and addresses. When you update your trip, everyone sees the changes. Add a restaurant reservation. Update a flight time. Change a hotel. The shared link stays current. No one needs to download an app. No one needs an account. Just click the link and see your shared trip.
+        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link> works this way. Create a folder for your trip. Import your bookings: forward the confirmation email, upload the PDF, photograph the printout. Invite your travel companions. Now everyone sees the same timeline with the same documents.
+      </ArticleParagraph>
+
+      <ArticleImage
+        src={shareTravelImage}
+        alt="Folio app showing import options, shared trip timeline with hotel, flights, and activities, and train ticket details for two passengers"
+      />
+
+      <ArticleParagraph>
+        The flight shows both travelers tagged. The train ticket shows seats for two people. The hotel confirmation is visible to everyone in the folder. When you're at the front desk and your friend is delayed, you pull up the same confirmation they would show. No searching. No "can you screenshot that?"
+      </ArticleParagraph>
+
+      <ArticleH2>How it works in practice</ArticleH2>
+
+      <ArticleParagraph>
+        Before your trip: one person creates a shared folder and invites the others. As bookings come in, anyone can add them. Forward the confirmation email to your Folio address, or upload the PDF directly. The app extracts dates, times, confirmation numbers, and builds a timeline.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        The best trip planner apps make sharing effortless. One link to share. No complicated setup. Works on any device. Updates automatically. Your friends shouldn't need to create accounts or download apps. They should be able to view your trip instantly. On their phone. On their laptop. Anywhere. And when plans change, everyone should see updates immediately. No need to send new messages or make phone calls. The shared itinerary updates itself. Planning a trip with friends doesn't have to mean constant texts asking for information. A trip planner app keeps everyone informed and organized. Create your itinerary. Share it with one link. Let everyone access the same plan. Stay in sync. Enjoy your trip. Traveling together should bring you closer, not create confusion. The right app makes all the difference.
+        During your trip: anyone can show any document. At the train station, either person can pull up the tickets with the QR code. At the museum, anyone has the entrance tickets. If plans change and someone adds a new restaurant reservation, it appears for everyone immediately.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        The practical difference: the person who booked doesn't need to be present. If one friend is running late, the others check in to the hotel. If someone's phone dies, the other person has the train tickets. No one is the single point of failure anymore.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        Group trips work better when everyone has access to everything. Not screenshots that get lost, not forwarded emails that get buried, but shared documents that stay current. Less "can you send me that again?" More actually enjoying the trip together.
       </ArticleParagraph>
     </BlogArticleLayout>
   )

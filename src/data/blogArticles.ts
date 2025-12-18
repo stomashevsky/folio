@@ -388,8 +388,8 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Product',
     date: 'Jul 18, 2025',
-    title: 'How to share your travel plans with friends using a trip planner app',
-    description: 'Planning a trip with others? Discover how trip planner apps make it easy to share itineraries, collaborate, and keep everyone in sync.',
+    title: "Your friend booked the hotel. Now they're stuck in traffic. Do you have the confirmation?",
+    description: "Group trips fall apart when one person has all the bookings. Here's how to make sure everyone has access to everything.",
     slug: 'how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app',
     image: blogHowToShareTravelPlans,
   },
