@@ -41,6 +41,8 @@ export default function BlogPage() {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const prevPathnameRef = useRef<string | null>(location.pathname)
   const hasRestoredStateRef = useRef(false)
+  // Track if we just restored from sessionStorage to prevent effect from resetting displayedArticles
+  const justRestoredRef = useRef(shouldRestore)
 
   const filteredArticles = selectedCategory === 'All'
     ? blogArticles
@@ -57,7 +59,13 @@ export default function BlogPage() {
     
     setSelectedCategory(prev => {
       if (prev !== newCategory) {
-        setDisplayedArticles(15)
+        // Don't reset displayedArticles if we just restored from sessionStorage
+        // This prevents losing the "Load more" state when returning via "Back to Blog"
+        if (justRestoredRef.current) {
+          justRestoredRef.current = false
+        } else {
+          setDisplayedArticles(15)
+        }
       }
       return newCategory
     })
