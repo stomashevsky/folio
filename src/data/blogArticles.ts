@@ -363,8 +363,8 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   {
     category: 'Product',
     date: 'Jun 18, 2025',
-    title: 'You can now store tickets in Folio Wallet',
-    description: 'Many of you already use Folio Wallet as a convenient place to keep your cards and personal documents. Now you can also store all of your travel-related paperwork in the same space.',
+    title: "Bus, train, concert. Three tickets from three apps. Where's the barcode?",
+    description: "Real trips have tickets scattered everywhere. Here's how to stop searching at every gate.",
     slug: 'you-can-now-store-tickets-in-folio-wallet',
     image: blogYouCanNowStoreTickets,
   },
