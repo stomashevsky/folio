@@ -67,7 +67,19 @@ export default function FooterSection() {
             </div>
           </div>
 
-          {/* Column 3: Platform */}
+          {/* Column 3: Features */}
+          <div className="flex flex-col gap-4 items-start min-w-[200px] flex-1">
+            <p className="font-normal leading-5 text-[#737373] text-sm w-full">
+              Features
+            </p>
+            <div className="flex flex-col gap-3 items-start w-full">
+              <FooterLink to="/id-wallet-app">ID wallet</FooterLink>
+              <FooterLink to="/card-scanner-app">Card scanner</FooterLink>
+              <FooterLink to="/loyalty-card-app">Loyalty cards</FooterLink>
+            </div>
+          </div>
+
+          {/* Column 4: Platform */}
           <div className="flex flex-col gap-4 items-start min-w-[200px] flex-1">
             <p className="font-normal leading-5 text-[#737373] text-sm w-full">
               Platform
@@ -86,7 +98,7 @@ export default function FooterSection() {
             </div>
           </div>
 
-          {/* Column 4: Solutions + Terms & Policies */}
+          {/* Column 5: Solutions + Terms & Policies */}
           <div className="flex flex-col gap-10 items-start min-w-[200px] flex-1">
             {/* Solutions section */}
             <div className="flex flex-col gap-4 items-start w-full">
