@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react'
+
 interface ArticleImageProps {
   /** Image source URL */
   src: string
@@ -17,6 +19,7 @@ interface ArticleImageProps {
  * - Image max width: 1200px
  * - Expansion on each side: (1200 - 768) / 2 = 216px
  * - On mobile: stays within viewport with 24px padding on each side
+ * - Shows gray placeholder while loading
  * 
  * Usage:
  * ```tsx
@@ -27,22 +30,34 @@ interface ArticleImageProps {
  * ```
  */
 export default function ArticleImage({ src, alt, className = '' }: ArticleImageProps) {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setIsLoading(true)
+  }, [src])
+
   return (
-    <figure className="my-8 w-full">
-      <img
-        src={src}
-        alt={alt}
-        className={`w-full rounded-xl mx-auto ${className}`}
-        style={{
-          // On mobile: 100% of container (which respects px-6 padding)
-          // On larger screens: expand up to 1200px, breaking out of 768px container
-          width: 'min(1200px, calc(100vw - 48px))',
-          maxWidth: 'min(1200px, calc(100vw - 48px))',
-          // Center the image by using negative margin to offset the expansion
-          // marginLeft calculation: pull left by half of the expansion amount
-          marginLeft: 'calc((100% - min(1200px, calc(100vw - 48px))) / 2)',
-        }}
-      />
+    <figure 
+      className="my-8 w-full"
+      style={{
+        // On mobile: 100% of container (which respects px-6 padding)
+        // On larger screens: expand up to 1200px, breaking out of 768px container
+        width: 'min(1200px, calc(100vw - 48px))',
+        maxWidth: 'min(1200px, calc(100vw - 48px))',
+        // Center the image by using negative margin to offset the expansion
+        // marginLeft calculation: pull left by half of the expansion amount
+        marginLeft: 'calc((100% - min(1200px, calc(100vw - 48px))) / 2)',
+      }}
+    >
+      <div className="relative w-full rounded-xl overflow-hidden bg-[#f5f5f5]" style={{ aspectRatio: '3/2' }}>
+        <img
+          src={src}
+          alt={alt}
+          className={`absolute inset-0 w-full h-full object-cover rounded-xl transition-opacity duration-200 ${isLoading ? 'opacity-0' : 'opacity-100'} ${className}`}
+          onLoad={() => setIsLoading(false)}
+          onError={() => setIsLoading(false)}
+        />
+      </div>
     </figure>
   )
 }

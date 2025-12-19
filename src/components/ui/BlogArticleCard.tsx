@@ -1,7 +1,35 @@
+import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import type { BlogArticle } from '../../data/blogArticles'
 import imagePlaceholder from '../../assets/images/image-placeholder.png'
 import { saveBlogPageState, clearBlogPageState } from '../../utils/blogScrollPosition'
+
+interface BlogImageProps {
+  src: string
+  alt: string
+  priority?: boolean
+}
+
+function BlogImage({ src, alt, priority = false }: BlogImageProps) {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setIsLoading(true)
+  }, [src])
+
+  return (
+    <div className="relative rounded-lg w-full aspect-[3/2] overflow-hidden bg-[#f5f5f5]">
+      <img 
+        src={src} 
+        alt={alt}
+        className={`absolute inset-0 w-full h-full object-cover object-center rounded-lg transition-all duration-300 ease-out group-hover:scale-105 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+        loading={priority ? 'eager' : 'lazy'}
+        onLoad={() => setIsLoading(false)}
+        onError={() => setIsLoading(false)}
+      />
+    </div>
+  )
+}
 
 interface BlogArticleCardProps {
   article: BlogArticle
@@ -45,14 +73,11 @@ export default function BlogArticleCard({ article, variant = 'desktop', priority
     const coreContent = (
       <>
         {/* Image - with zoom on hover */}
-        <div className="relative rounded-lg w-full aspect-[3/2] overflow-hidden">
-          <img 
-            src={article.image || imagePlaceholder} 
-            alt={article.title}
-            className="absolute inset-0 w-full h-full object-cover object-center rounded-lg transition-transform duration-300 ease-out group-hover:scale-105"
-            loading={priority ? 'eager' : 'lazy'}
-          />
-        </div>
+        <BlogImage 
+          src={article.image || imagePlaceholder} 
+          alt={article.title}
+          priority={priority}
+        />
         
         {/* Title */}
         <p className="font-semibold leading-6 relative shrink-0 text-base w-full">
@@ -90,14 +115,11 @@ export default function BlogArticleCard({ article, variant = 'desktop', priority
   const articleContent = (
     <div className="flex flex-col gap-4 w-full">
       {/* Image - aspect ratio 3:2 with zoom on hover */}
-      <div className="relative rounded-lg w-full aspect-[3/2] overflow-hidden">
-        <img 
-          src={article.image || imagePlaceholder} 
-          alt={article.title}
-          className="absolute inset-0 w-full h-full object-cover object-center rounded-lg transition-transform duration-300 ease-out group-hover:scale-105"
-          loading={priority ? 'eager' : 'lazy'}
-        />
-      </div>
+      <BlogImage 
+        src={article.image || imagePlaceholder} 
+        alt={article.title}
+        priority={priority}
+      />
       
       {/* Content */}
       <div className="flex flex-col gap-3 w-full">
