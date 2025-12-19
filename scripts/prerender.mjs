@@ -310,40 +310,64 @@ async function ensureDir(filePath) {
 }
 
 /**
+ * Check if a port is available by trying to connect to it
+ */
+async function waitForServer(url, maxAttempts = 60, intervalMs = 1000) {
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      const response = await fetch(url, { method: 'HEAD' })
+      if (response.ok || response.status === 304) {
+        return true
+      }
+    } catch {
+      // Server not ready yet, continue waiting
+    }
+    if (attempt < maxAttempts) {
+      await new Promise(resolve => setTimeout(resolve, intervalMs))
+    }
+  }
+  return false
+}
+
+/**
  * Start the Vite preview server
  */
 function startPreviewServer() {
   return new Promise((resolve, reject) => {
-    const server = spawn('npx', ['vite', 'preview', '--port', PREVIEW_PORT.toString()], {
+    // Use direct path to vite to avoid npx overhead in CI
+    const vitePath = path.join(repoRoot, 'node_modules', '.bin', 'vite')
+    
+    const server = spawn(vitePath, ['preview', '--port', PREVIEW_PORT.toString()], {
       cwd: repoRoot,
       stdio: ['ignore', 'pipe', 'pipe'],
-      shell: true,
     })
     
-    let started = false
-    
+    // Log output for debugging
     server.stdout.on('data', (data) => {
-      const output = data.toString()
-      if (output.includes('Local:') && !started) {
-        started = true
-        // Give it a moment to fully initialize
-        setTimeout(() => resolve(server), 1000)
-      }
+      console.log('[preview]', data.toString().trim())
     })
     
     server.stderr.on('data', (data) => {
-      console.error('[preview]', data.toString())
+      console.error('[preview]', data.toString().trim())
     })
     
     server.on('error', reject)
     
-    // Timeout after 30 seconds
-    setTimeout(() => {
-      if (!started) {
+    // Wait for server to be ready using HTTP check instead of output parsing
+    waitForServer(PREVIEW_URL, 60, 1000)
+      .then((ready) => {
+        if (ready) {
+          console.log('[prerender] Preview server is responding')
+          resolve(server)
+        } else {
+          server.kill()
+          reject(new Error('Preview server failed to start within 60 seconds'))
+        }
+      })
+      .catch((error) => {
         server.kill()
-        reject(new Error('Preview server failed to start within 30 seconds'))
-      }
-    }, 30000)
+        reject(error)
+      })
   })
 }
 
