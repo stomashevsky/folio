@@ -7,6 +7,7 @@ import GetTheAppSection from '../components/sections/GetTheAppSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
 import { scrollToTop } from '../utils/scrollToTop'
+import { scrollToSection } from '../utils/scrollToSection'
 import { PLATFORM_ITEMS } from '../constants/platformItems'
 
 // Images
@@ -32,10 +33,6 @@ const BACKGROUND_STYLE = {
     'linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(90deg, rgba(229, 229, 229, 1) 0%, rgba(229, 229, 229, 1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%)',
 }
 
-// Selected 6 best platform items for homepage (excluding Phone/email validation)
-const HOMEPAGE_PLATFORM_ITEMS = PLATFORM_ITEMS.filter(item => 
-  ['ID verification', 'Document intelligence', 'Liveness check', 'Face match', 'NFC identity scan', 'Data source checks'].includes(item.label)
-)
 
 const SOLUTIONS = [
   { icon: ageIcon, title: 'Age compliance', description: 'Verify age for regulated industries', to: '/solutions/age-compliance' },
@@ -83,7 +80,7 @@ function HomePage() {
               <Button variant="primary" onClick={() => handleNavigate('/wallet')}>
                 Get the app
               </Button>
-              <Button variant="secondary" onClick={() => handleNavigate('/platform')}>
+              <Button variant="secondary" onClick={() => scrollToSection('platform')}>
                 For business
               </Button>
             </div>
@@ -146,7 +143,7 @@ function HomePage() {
         </section>
 
         {/* Platform Section (B2B) */}
-        <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
+        <section id="platform" className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           {/* Desktop Layout */}
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
@@ -170,10 +167,7 @@ function HomePage() {
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative shrink-0">
-                <Button variant="primary" onClick={() => handleNavigate('/platform')}>
-                  Explore platform
-                </Button>
-                <Button variant="outline" href="mailto:contact@folio.id">
+                <Button variant="primary" href="mailto:contact@folio.id">
                   Contact sales
                 </Button>
               </div>
@@ -202,10 +196,7 @@ function HomePage() {
               />
             </div>
             <div className="flex flex-wrap gap-3 items-start relative shrink-0 w-full">
-              <Button variant="primary" onClick={() => handleNavigate('/platform')}>
-                Explore platform
-              </Button>
-              <Button variant="outline" href="mailto:contact@folio.id">
+              <Button variant="primary" href="mailto:contact@folio.id">
                 Contact sales
               </Button>
             </div>
@@ -214,7 +205,7 @@ function HomePage() {
           {/* Products Grid */}
           <div className="flex flex-col gap-10 md:gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full mt-8 md:mt-12">
             <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
-              {HOMEPAGE_PLATFORM_ITEMS.map((item) => (
+              {PLATFORM_ITEMS.map((item) => (
                 <ToolCard
                   key={item.path}
                   icon={item.icon}

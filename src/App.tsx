@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react'
 import ScrollToTop from './components/ScrollToTop'
 import HomePage from './pages/HomePage'
 import WalletPage from './pages/WalletPage'
-import PlatformPage from './pages/PlatformPage'
 import PlaygroundPage from './pages/PlaygroundPage'
 import DigitalTicketingPage from './pages/DigitalTicketingPage'
 import AgeCompliancePage from './pages/AgeCompliancePage'
@@ -160,7 +159,6 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/wallet" element={<WalletPage />} />
-        <Route path="/platform" element={<PlatformPage />} />
         <Route path="/government/playground" element={<PlaygroundPage />} />
         <Route path="/solutions/digital-ticketing" element={<DigitalTicketingPage />} />
         <Route path="/solutions/age-compliance" element={<AgeCompliancePage />} />

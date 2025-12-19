@@ -27,12 +27,6 @@ const STATIC_PAGES = [
     ogImage: 'folio-app-hero.png',
   },
   {
-    path: '/platform',
-    title: 'Verification Platform | Folio',
-    description: 'Identity verification, document intelligence, liveness detection and more. Build trust at scale with Folio verification platform.',
-    ogImage: 'folio-app-hero.png',
-  },
-  {
     path: '/blog',
     title: 'Blog | Folio Wallet',
     description: 'Case studies, product insights and practical guides on travel, documents and digital identity.',
