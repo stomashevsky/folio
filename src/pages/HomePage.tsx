@@ -12,6 +12,7 @@ import { PLATFORM_ITEMS } from '../constants/platformItems'
 // Images
 import folioAppHero from '../assets/images/folio-app-hero.png'
 import governmentSolutionsHero from '../assets/images/government-solutions-hero.png'
+import governmentTestimonialAvatar from '../assets/images/government-testimonial-avatar.png'
 
 // Video
 import livenessCheckHero from '../assets/images/liveness-check-hero.mp4'
@@ -293,6 +294,29 @@ function HomePage() {
                 alt="Digital credentials preview"
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               />
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonial Section */}
+        <section className="flex flex-col items-center px-0 py-16 md:py-24 relative w-full" style={BACKGROUND_STYLE}>
+          <div className="flex flex-col gap-8 items-center max-w-[672px] px-6 w-full">
+            <p className="font-medium leading-7 md:leading-7 text-lg md:text-xl text-[#0a0a0a] text-center">
+              "Working with Folio has been a transformative experience… they set a new standard of excellence for how digital identity solutions should be delivered."
+            </p>
+            <div className="flex flex-col gap-4 items-center">
+              <div className="relative rounded-full shrink-0 w-12 h-12 md:w-14 md:h-14">
+                <img
+                  src={governmentTestimonialAvatar}
+                  alt="Ilirjan Celibashi"
+                  className="absolute inset-0 object-cover rounded-full w-full h-full"
+                />
+              </div>
+              <div className="flex flex-col md:flex-row gap-0.5 md:gap-2 items-center text-base text-center">
+                <span className="font-medium text-[#0a0a0a]">Ilirjan Celibashi</span>
+                <span className="hidden md:inline text-[#737373]">·</span>
+                <span className="font-normal text-[#737373]">State Election Commissioner, Albania</span>
+              </div>
             </div>
           </div>
         </section>
