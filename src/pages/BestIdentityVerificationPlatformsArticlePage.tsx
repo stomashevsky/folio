@@ -1,176 +1,133 @@
-import { BlogArticleLayout, ArticleH2, ArticleH3, ArticleParagraph, ArticleList, ArticleTable, ArticleImage } from '../components/ui'
+import { Link } from 'react-router-dom'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleList, ArticleTable } from '../components/ui'
 import type { ArticleTableColumn, ArticleTableRow } from '../components/ui'
-import blogImage from '../assets/images/blog-best-identity-verification-platforms.png'
 
 const comparisonColumns: ArticleTableColumn[] = [
   { key: 'feature', header: 'Feature' },
   { key: 'folio', header: 'Folio' },
   { key: 'onfido', header: 'Onfido' },
   { key: 'veriff', header: 'Veriff' },
-  { key: 'yoti', header: 'Yoti' },
   { key: 'jumio', header: 'Jumio' },
 ]
 
 const comparisonRows: ArticleTableRow[] = [
-  { feature: 'Document verification', folio: 'Yes', onfido: 'Yes', veriff: 'Yes', yoti: 'Yes', jumio: 'Yes' },
-  { feature: 'Liveness detection', folio: 'Yes', onfido: 'Yes', veriff: 'Yes', yoti: 'Yes', jumio: 'Yes' },
-  { feature: 'Face matching', folio: 'Yes', onfido: 'Yes', veriff: 'Yes', yoti: 'Yes', jumio: 'Yes' },
-  { feature: 'NFC chip reading', folio: 'Yes', onfido: 'Yes', veriff: 'Yes', yoti: 'Limited', jumio: 'Yes' },
-  { feature: 'Global ID coverage', folio: '200+', onfido: '195+', veriff: '190+', yoti: '200+', jumio: '200+' },
-  { feature: 'EUDI compatible', folio: 'Yes', onfido: 'Planned', veriff: 'Planned', yoti: 'Limited', jumio: 'Planned' },
-  { feature: 'Consumer wallet app', folio: 'Yes', onfido: 'No', veriff: 'No', yoti: 'Yes', jumio: 'No' },
-  { feature: 'Transparent pricing', folio: 'Yes', onfido: 'Custom', veriff: 'Custom', yoti: 'Custom', jumio: 'Custom' },
-  { feature: 'Self-service setup', folio: 'Yes', onfido: 'Limited', veriff: 'Yes', yoti: 'No', jumio: 'No' },
+  { feature: 'Document verification', folio: 'Yes', onfido: 'Yes', veriff: 'Yes', jumio: 'Yes' },
+  { feature: 'Liveness detection', folio: 'Yes', onfido: 'Yes', veriff: 'Yes', jumio: 'Yes' },
+  { feature: 'NFC chip reading', folio: 'Yes', onfido: 'Yes', veriff: 'Yes', jumio: 'Yes' },
+  { feature: 'EUDI compatible', folio: 'Yes', onfido: 'Planned', veriff: 'Planned', jumio: 'Planned' },
+  { feature: 'Consumer wallet app', folio: 'Yes', onfido: 'No', veriff: 'No', jumio: 'No' },
+  { feature: 'Transparent pricing', folio: 'Yes', onfido: 'Custom quote', veriff: 'Custom quote', jumio: 'Custom quote' },
+  { feature: 'Self-service setup', folio: 'Yes', onfido: 'Sales call', veriff: 'Yes', jumio: 'Sales call' },
 ]
 
 export default function BestIdentityVerificationPlatformsArticlePage() {
   return (
     <BlogArticleLayout
       title="Best identity verification platforms in 2025"
-      description="A comprehensive comparison of leading identity verification platforms: Folio, Onfido, Veriff, Yoti, and Jumio. Learn which solution fits your business needs."
+      description="A practical comparison of identity verification platforms for businesses. Learn which solution fits your needs: Folio, Onfido, Veriff, or Jumio."
       date="Dec 15, 2025"
       category="Research"
       slug="best-identity-verification-platforms"
     >
       <ArticleParagraph>
-        Identity verification has become essential for businesses operating online. From fintech startups to established banks, companies need reliable ways to confirm customers are who they claim to be. But the market is crowded with options, each claiming to offer the best combination of accuracy, speed, and compliance.
+        You need to verify your users. Maybe you are launching a fintech app, running a marketplace, or building something that requires knowing who is on the other side. The question is not whether to verify, but which platform to use.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        This guide examines the leading identity verification platforms in 2025, comparing their capabilities, pricing approaches, and ideal use cases. Whether you are building a new product or replacing an existing provider, understanding these differences will help you make an informed decision.
+        After testing the major players, here is what actually matters when choosing an identity verification platform, and which ones deliver.
       </ArticleParagraph>
 
-      <ArticleImage
-        src={blogImage}
-        alt="Identity verification platforms comparison showing document scanning and face matching"
-      />
-
-      <ArticleH2>What to look for in an identity verification platform</ArticleH2>
+      <ArticleH2>What you actually need</ArticleH2>
 
       <ArticleParagraph>
-        Before comparing specific vendors, it helps to understand the core capabilities that matter most:
+        Most platforms offer similar core features: document scanning, face matching, liveness detection. The differences are in the details:
       </ArticleParagraph>
 
       <ArticleList>
-        <li>Document verification: The ability to check if an ID document is genuine and unaltered</li>
-        <li>Liveness detection: Confirming a real person is present, not a photo or video</li>
-        <li>Face matching: Comparing the person to the photo on their document</li>
-        <li>Data extraction: Pulling information from documents accurately</li>
-        <li>Fraud detection: Identifying suspicious patterns and repeat offenders</li>
-        <li>Compliance support: Meeting KYC, AML, and regional requirements</li>
-        <li>Integration options: APIs, SDKs, and no-code solutions</li>
-        <li>Global coverage: Supporting documents from many countries</li>
+        <li>Can you try it without a sales call?</li>
+        <li>How fast can you integrate?</li>
+        <li>What happens when verification fails?</li>
+        <li>How much does it actually cost?</li>
+        <li>Does it work with the documents your users have?</li>
       </ArticleList>
 
-      <ArticleH2>Platform comparison at a glance</ArticleH2>
+      <ArticleParagraph>
+        These practical questions matter more than feature checklists. A platform with every feature is useless if integration takes three months.
+      </ArticleParagraph>
+
+      <ArticleH2>Quick comparison</ArticleH2>
 
       <ArticleTable columns={comparisonColumns} rows={comparisonRows} />
 
-      <ArticleH2>Detailed platform reviews</ArticleH2>
-
-      <ArticleH3>Folio</ArticleH3>
+      <ArticleH2>Folio: verification plus a wallet your users keep</ArticleH2>
 
       <ArticleParagraph>
-        Folio takes a unique approach by combining identity verification infrastructure with a consumer-facing digital wallet app. This dual focus means businesses can verify customers while those customers benefit from a secure place to store their documents.
+        <Link to="/platform/id-verification" className="underline hover:text-[#737373] transition-colors">Folio</Link> does something different. Instead of just verifying users once and forgetting about them, Folio gives verified users a digital wallet where they store their documents. This creates ongoing value for both sides.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        The platform includes document verification, liveness detection, face matching, and NFC chip reading for modern passports and ID cards. What sets Folio apart is its transparent pricing and developer-friendly approach. You can see costs upfront and integrate the API without lengthy sales calls. The platform also offers full EUDI (European Digital Identity) compatibility, positioning it well for upcoming EU regulations.
+        For businesses, Folio offers the full verification stack: document verification for 200+ countries, liveness detection, face matching, and NFC chip reading for passports. The platform is already EUDI compatible, which matters if you operate in Europe or plan to.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Best for:</strong> Startups and mid-size companies wanting transparent pricing, European businesses preparing for EUDI, and organizations that value the dual consumer wallet plus business verification approach.
-      </ArticleParagraph>
-
-      <ArticleH3>Onfido</ArticleH3>
-
-      <ArticleParagraph>
-        Onfido has established itself as a market leader, particularly in fintech and financial services. The platform uses AI to verify documents from 195+ countries and includes Atlas AI for fraud detection. Onfido offers a comprehensive suite of verification checks and has strong compliance credentials.
+        The practical advantage is speed. You can sign up, test the API, and integrate without waiting for a sales team. Pricing is transparent. Documentation is clear. If you are a startup or mid-size company that needs to move fast, this matters.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        The platform requires custom pricing discussions for most use cases, which can slow down evaluation for smaller companies. Integration typically involves working with their sales and implementation teams. Onfido was acquired by Entrust in 2024, which may affect its roadmap and pricing structure.
+        The consumer wallet side means your users get something useful from verification. Instead of just checking a box, they get a secure place to store their passport, ID, and travel documents. This can improve conversion because users see value in completing verification.
+      </ArticleParagraph>
+
+      <ArticleH2>Onfido: the enterprise choice</ArticleH2>
+
+      <ArticleParagraph>
+        Onfido is what you pick when your compliance team has specific requirements and you have budget to match. The platform covers 195+ countries and has deep integrations with banking and financial services workflows.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Best for:</strong> Enterprise financial services companies, organizations with complex compliance requirements, and businesses that prefer working with established vendors.
+        The trade-off is complexity. Expect sales calls, custom pricing discussions, and longer integration timelines. Onfido was acquired by Entrust in 2024, so the roadmap may shift. For large enterprises with dedicated compliance teams, this complexity is manageable. For startups, it can be a bottleneck.
       </ArticleParagraph>
 
-      <ArticleH3>Veriff</ArticleH3>
+      <ArticleH2>Veriff: fast verification, volume pricing</ArticleH2>
 
       <ArticleParagraph>
-        Veriff emphasizes speed and user experience, claiming verification times under 6 seconds for straightforward cases. The Estonian company has grown rapidly and serves clients across fintech, marketplaces, and mobility sectors. They offer a self-service option for smaller volumes, making it easier to get started.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        The platform includes biometric verification, document checks, and proof of address verification. Veriff also offers age estimation and device intelligence features. Their pricing is typically volume-based with custom quotes for larger implementations.
+        Veriff focuses on speed: under 6 seconds for straightforward verifications. The Estonian company has grown quickly and offers a self-service option that lets you start without a sales call.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Best for:</strong> Companies prioritizing verification speed, marketplace and sharing economy businesses, and European companies wanting a regional provider.
+        Pricing is volume-based, which works well if you have predictable verification needs. The platform covers biometric verification, document checks, and proof of address. For marketplaces and sharing economy businesses, Veriff is often a good fit.
       </ArticleParagraph>
 
-      <ArticleH3>Yoti</ArticleH3>
+      <ArticleH2>Jumio: the legacy player</ArticleH2>
 
       <ArticleParagraph>
-        Yoti combines identity verification with a consumer identity app that has over 12 million downloads. This approach lets verified users prove their identity across multiple services without repeating verification. The platform is particularly strong in age verification for regulated industries.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        The company has partnerships with government identity programs and maintains certifications for age estimation accuracy. Yoti offers both reusable identity and one-time verification options. The consumer app focus means stronger positioning for businesses wanting ongoing identity relationships with customers.
+        Jumio has been around the longest and has processed billions of verifications. The platform offers comprehensive features including AML screening and address verification. It supports 200+ countries with thousands of document types.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Best for:</strong> Age-restricted industries, businesses wanting reusable customer identities, and organizations in the UK where Yoti has strong government partnerships.
+        The focus is on enterprise clients. Expect negotiated pricing, dedicated implementation support, and features designed for heavily regulated industries. If you are a large bank or gambling company with complex compliance needs, Jumio can handle it. If you need to launch in weeks rather than months, look elsewhere.
       </ArticleParagraph>
 
-      <ArticleH3>Jumio</ArticleH3>
+      <ArticleH2>How to decide</ArticleH2>
 
       <ArticleParagraph>
-        Jumio is one of the longest-established players in identity verification, processing billions of transactions. The platform offers document verification, biometric authentication, AML screening, and address verification. Jumio KYX Platform provides an end-to-end solution for regulatory compliance.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        The company supports 200+ countries and territories with 5,000+ ID document types. Jumio tends to focus on enterprise clients with dedicated implementation support. Pricing is negotiated and typically suits organizations with significant verification volumes.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>Best for:</strong> Large enterprises, heavily regulated industries like banking and gambling, and organizations needing comprehensive AML screening.
-      </ArticleParagraph>
-
-      <ArticleH2>How to choose the right platform</ArticleH2>
-
-      <ArticleParagraph>
-        The best identity verification platform depends on your specific situation. Consider these factors:
+        Your choice depends on your situation:
       </ArticleParagraph>
 
       <ArticleList>
-        <li>Volume and budget: Enterprise platforms like Jumio and Onfido suit high-volume use cases with custom pricing. Folio and Veriff offer more accessible entry points.</li>
-        <li>Speed to integrate: If you need to launch quickly, look for self-service options and clear documentation. Folio and Veriff allow faster evaluation than platforms requiring sales involvement.</li>
-        <li>Geographic focus: European businesses should prioritize EUDI readiness. Companies operating globally need broad document coverage.</li>
-        <li>Compliance requirements: Heavily regulated industries may need platforms with established audit trails and compliance certifications.</li>
-        <li>User experience: Consumer-facing products benefit from platforms that minimize friction. Compare verification times and drop-off rates.</li>
-        <li>Long-term relationship: Platforms with consumer apps (Folio, Yoti) enable ongoing identity relationships, not just one-time verification.</li>
+        <li><strong>Moving fast with limited budget:</strong> Folio or Veriff. Both offer self-service and transparent pricing.</li>
+        <li><strong>European market and EUDI compliance:</strong> Folio is already compatible. Others are still planning.</li>
+        <li><strong>Enterprise with complex compliance:</strong> Onfido or Jumio. They have the certifications and enterprise support.</li>
+        <li><strong>Want users to get ongoing value:</strong> Folio. The wallet means users benefit beyond verification.</li>
       </ArticleList>
 
-      <ArticleH2>The future of identity verification</ArticleH2>
+      <ArticleH2>Test before you commit</ArticleH2>
 
       <ArticleParagraph>
-        Several trends are shaping where the industry is heading. The European Digital Identity Wallet (EUDI) will require new approaches to verification and credential issuance. Decentralized identity standards are gaining traction, potentially changing how verification data is stored and shared. AI continues to improve both the accuracy of verification and the sophistication of fraud attempts.
+        The best way to choose is to test. Try the platforms with real documents from your target markets. Check how they handle edge cases: expired documents, poor lighting, unusual ID formats. See how the API documentation reads. Talk to their support.
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Platforms that combine strong verification capabilities with forward-looking features like EUDI support and reusable credentials are better positioned for these changes. Consider not just what you need today, but how your verification requirements might evolve.
-      </ArticleParagraph>
-
-      <ArticleH2>Getting started</ArticleH2>
-
-      <ArticleParagraph>
-        Most platforms offer trial periods or sandbox environments. Before committing, test with your actual use cases: documents from your target markets, the user flows you plan to implement, and integration with your existing systems. Pay attention to verification times, accuracy on edge cases, and how the platform handles failures.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        Identity verification is a critical part of building trust with customers while meeting compliance requirements. The right platform makes this process smoother for both your team and the people you serve.
+        Identity verification is not something you want to switch frequently. Take time to test properly, but do not let the evaluation drag on. A platform that lets you start testing quickly is often a platform that lets you integrate quickly too.
       </ArticleParagraph>
     </BlogArticleLayout>
   )

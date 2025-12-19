@@ -1,7 +1,7 @@
 import { useState, useEffect, memo } from 'react'
 import { useLocation } from 'react-router-dom'
 import Navbar from '../components/Navbar'
-import { SectionHeader, ToolCard, HeroTagline, Button, AISummary } from '../components/ui'
+import { SectionHeader, ToolCard, HeroTagline, Button } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
 import FooterSection from '../components/sections/FooterSection'
 import FAQSection, { FAQItem } from '../components/sections/FAQSection'
@@ -55,8 +55,8 @@ const FOLIO_APP_FAQ: FAQItem[] = [
     a: 'You can scan with your camera, upload photos from your library, import PDFs, or forward booking emails to docs@folio.id. Folio automatically extracts key details.',
   },
   {
-    q: 'Is my data secure?',
-    a: 'Yes. All documents are end-to-end encrypted with keys only you control. Even with cloud sync enabled, no one at Folio can access your data.',
+    q: 'How does Folio protect my documents?',
+    a: 'Folio uses end-to-end encryption with AES-256. Your documents are encrypted on your device with keys only you control. Even Folio cannot access your data. Biometric protection (Face ID, fingerprint) adds an extra layer of security.',
   },
   {
     q: 'Can I access documents offline?',
@@ -69,6 +69,10 @@ const FOLIO_APP_FAQ: FAQItem[] = [
   {
     q: 'Can I share documents with family?',
     a: 'Yes. Create shared folders to safely share travel plans, tickets or IDs with family and friends. Everyone sees the latest versions automatically.',
+  },
+  {
+    q: 'What platforms is Folio available on?',
+    a: 'Folio is available on iOS (iPhone and iPad) and Android devices. You can download it for free from the App Store or Google Play Store.',
   },
   {
     q: 'Is Folio free?',
@@ -459,42 +463,6 @@ function WalletPage() {
 
       {/* Reviews Section */}
       <ReviewsSection />
-
-      {/* AI Summary Section - Structured content for AI citation */}
-      <section className="bg-white flex flex-col items-center px-0 py-16 md:py-24 relative w-full">
-        <div className="max-w-[672px] px-6 w-full">
-          <AISummary
-            title="Quick facts about Folio Wallet"
-            description="Key information about Folio for quick reference."
-            items={[
-              {
-                question: 'What is Folio Wallet?',
-                answer: 'Folio is a free digital wallet app for iOS and Android that securely stores passports, IDs, tickets, cards, and other personal documents. It uses end-to-end encryption and zero-knowledge architecture to protect your data.',
-              },
-              {
-                question: 'Is Folio Wallet free?',
-                answer: 'Yes, Folio Wallet is completely free with unlimited document storage, travel timeline, expiry alerts, and all core features. There are no premium tiers or hidden fees.',
-              },
-              {
-                question: 'How does Folio protect my documents?',
-                answer: 'Folio uses end-to-end encryption with AES-256, meaning your documents are encrypted on your device with keys only you control. Even Folio cannot access your data. Biometric protection (Face ID, fingerprint) adds an extra layer of security.',
-              },
-              {
-                question: 'What documents can I store in Folio?',
-                answer: 'You can store passports, ID cards, driver\'s licenses, residence permits, flight tickets, train tickets, hotel bookings, event tickets, payment cards, gift cards, loyalty cards, medical cards, and any other personal documents.',
-              },
-              {
-                question: 'Can I access my documents offline?',
-                answer: 'Yes, all documents are stored locally on your device and available without internet connection. Cloud sync keeps everything updated when you\'re back online.',
-              },
-              {
-                question: 'What platforms is Folio available on?',
-                answer: 'Folio Wallet is available on iOS (iPhone and iPad) and Android devices. You can download it for free from the App Store or Google Play Store.',
-              },
-            ]}
-          />
-        </div>
-      </section>
 
       {/* FAQ Section */}
       <FAQSection
