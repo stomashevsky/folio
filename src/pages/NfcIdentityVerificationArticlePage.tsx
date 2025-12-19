@@ -7,7 +7,7 @@ export default function NfcIdentityVerificationArticlePage() {
     <BlogArticleLayout
       title="How NFC chip scanning verifies your passport in seconds"
       description="Your passport has a chip that proves it's genuine. Learn how NFC scanning works, what it verifies, and why it's the most secure way to confirm document authenticity."
-      date="Oct 28, 2025"
+      date="Oct 20, 2025"
       category="Business"
       slug="nfc-identity-verification"
     >

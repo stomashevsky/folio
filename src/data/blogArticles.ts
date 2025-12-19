@@ -420,7 +420,7 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
   },
   {
     category: 'Business',
-    date: 'Oct 28, 2025',
+    date: 'Oct 20, 2025',
     title: 'How NFC chip scanning verifies your passport in seconds',
     description: "Your passport has a chip that proves it's genuine. Learn how NFC scanning works, what it verifies, and why it's the most secure way to confirm document authenticity.",
     slug: 'nfc-identity-verification',
