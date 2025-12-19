@@ -40,6 +40,8 @@ import blogAppleGiftCardAddToWallet from '../assets/images/blog-apple-gift-card-
 import blogHowToAddAndStoreYourMedicalCard from '../assets/images/blog-how-to-add-and-store-your-medical-card.png'
 import blogHowToStoreAndUseLoyaltyCardsOnYourIphone from '../assets/images/blog-how-to-store-and-use-loyalty-cards-on-your-iphone.png'
 import blogWhatIsADigitalWallet from '../assets/images/blog-what-is-a-digital-wallet.png'
+import blogBestIdentityVerificationPlatforms from '../assets/images/blog-best-identity-verification-platforms.png'
+import blogCompleteGuideIdentityVerification from '../assets/images/blog-complete-guide-identity-verification.png'
 
 export type BlogCategory = 'All' | 'Company' | 'Product' | 'Guides' | 'Research' | 'Safety' | 'Business'
 
@@ -108,6 +110,8 @@ const BLOG_OG_IMAGE_BY_SLUG: Record<string, string> = {
   'what-is-a-digital-wallet': 'blog-what-is-a-digital-wallet.png',
   'what-is-liveness-detection': 'blog-what-is-liveness-detection.png',
   'you-can-now-store-tickets-in-folio-wallet': 'blog-you-can-now-store-tickets-in-folio-wallet.png',
+  'best-identity-verification-platforms': 'blog-best-identity-verification-platforms.png',
+  'complete-guide-identity-verification': 'blog-complete-guide-identity-verification.png',
 }
 
 export function getBlogOgImageUrl(slug: string): string | undefined {
@@ -453,6 +457,22 @@ export const blogArticles: BlogArticle[] = sortArticlesByDate([
     description: "Nobody thinks about digital ID copies until they need one. Here are the situations where you'll thank yourself for having them.",
     slug: 'best-id-scanner-app',
     image: blogBestIdScannerApp,
+  },
+  {
+    category: 'Research',
+    date: 'Dec 15, 2025',
+    title: 'Best identity verification platforms in 2025',
+    description: 'A comprehensive comparison of leading identity verification platforms: Folio, Onfido, Veriff, Yoti, and Jumio. Learn which solution fits your business needs.',
+    slug: 'best-identity-verification-platforms',
+    image: blogBestIdentityVerificationPlatforms,
+  },
+  {
+    category: 'Guides',
+    date: 'Dec 18, 2025',
+    title: 'The complete guide to digital identity verification',
+    description: 'Everything you need to know about digital identity verification: how it works, key technologies, compliance requirements, and how to choose the right solution for your business.',
+    slug: 'complete-guide-identity-verification',
+    image: blogCompleteGuideIdentityVerification,
   },
 ])
 

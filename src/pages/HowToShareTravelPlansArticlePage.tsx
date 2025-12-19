@@ -1,4 +1,4 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, HowToSchema } from '../components/ui'
 import { Link } from 'react-router-dom'
 import shareTravelImage from '../assets/images/blog-share-travel-folio.png'
 
@@ -11,6 +11,19 @@ export default function HowToShareTravelPlansArticlePage() {
       category="Product"
       slug="how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app"
     >
+      <HowToSchema
+        name="How to share travel plans with friends using Folio"
+        description="Step-by-step guide to sharing trip bookings and travel documents with friends and family using shared folders in Folio."
+        totalTime="PT10M"
+        steps={[
+          { name: "Download Folio app", text: "Install Folio Wallet from the App Store or Google Play Store on your phone." },
+          { name: "Create a shared folder", text: "Open Folio and create a new folder for your trip. Give it a descriptive name like 'Barcelona Trip 2025'." },
+          { name: "Invite travel companions", text: "Tap the share button and invite your friends and family by sending them an invitation link." },
+          { name: "Add your bookings", text: "Import bookings by forwarding confirmation emails to your Folio address, uploading PDFs, or photographing printouts." },
+          { name: "Let others add their bookings", text: "Anyone in the shared folder can add their own bookings. All documents appear in a shared timeline visible to everyone." },
+          { name: "Access documents during the trip", text: "During your trip, anyone can show any document at check-in, train stations, or venues. No need to wait for the person who booked." },
+        ]}
+      />
       <ArticleParagraph>
         You're standing at the hotel front desk. Your friend booked the room, but their flight was delayed. The receptionist is asking for the confirmation number. You check your messages: nothing. You search your email: nothing. The booking is in your friend's inbox, on a phone that's currently somewhere over the Atlantic.
       </ArticleParagraph>

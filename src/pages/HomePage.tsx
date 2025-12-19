@@ -105,6 +105,10 @@ function HomePage() {
                 src={folioAppHero}
                 alt="Folio app showing passport, ID card and travel tickets organized in a digital wallet"
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+                loading="eager"
+                fetchPriority="high"
+                width={480}
+                height={480}
               />
             </div>
           </div>
@@ -130,6 +134,10 @@ function HomePage() {
                 src={folioAppHero}
                 alt="Folio app showing passport, ID card and travel tickets organized in a digital wallet"
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+                loading="eager"
+                fetchPriority="high"
+                width={480}
+                height={480}
               />
             </div>
           </div>
@@ -265,6 +273,9 @@ function HomePage() {
                 src={governmentSolutionsHero}
                 alt="Government digital credentials including voter card and national ID on mobile phone"
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+                loading="lazy"
+                width={480}
+                height={480}
               />
             </div>
           </div>
@@ -293,6 +304,9 @@ function HomePage() {
                 src={governmentSolutionsHero}
                 alt="Government digital credentials including voter card and national ID on mobile phone"
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+                loading="lazy"
+                width={480}
+                height={480}
               />
             </div>
           </div>
@@ -310,6 +324,9 @@ function HomePage() {
                   src={governmentTestimonialAvatar}
                   alt="Ilirjan Celibashi"
                   className="absolute inset-0 object-cover rounded-full w-full h-full"
+                  loading="lazy"
+                  width={56}
+                  height={56}
                 />
               </div>
               <div className="flex flex-col md:flex-row gap-0.5 md:gap-2 items-center text-base text-center">

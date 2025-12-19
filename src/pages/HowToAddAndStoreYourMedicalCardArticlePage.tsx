@@ -1,4 +1,4 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, HowToSchema } from '../components/ui'
 import { Link } from 'react-router-dom'
 import medicalScreen from '../assets/images/blog-medical-card-folio-screen.png'
 
@@ -11,6 +11,19 @@ export default function HowToAddAndStoreYourMedicalCardArticlePage() {
       category="Product"
       slug="how-to-add-and-store-your-medical-card"
     >
+      <HowToSchema
+        name="How to store your medical card in a digital wallet"
+        description="Step-by-step guide to storing your medical insurance card securely in the Folio digital wallet app."
+        totalTime="PT5M"
+        steps={[
+          { name: "Download Folio app", text: "Install Folio Wallet from the App Store or Google Play Store on your iPhone or Android device." },
+          { name: "Open the app", text: "Launch Folio and create an account or sign in with your existing account." },
+          { name: "Select health category", text: "Navigate to the health documents category in the app." },
+          { name: "Scan your medical card", text: "Use your phone camera to scan your physical insurance card, or import an existing photo of the card." },
+          { name: "Review extracted data", text: "Folio automatically extracts text including member ID, group number, and policy details. Verify the information is correct." },
+          { name: "Save the card", text: "Save the card to your digital wallet. It will be stored securely with end-to-end encryption." },
+        ]}
+      />
       <ArticleParagraph>
         You're at the doctor's office and they ask for your insurance card. You reach for your wallet, flip through receipts and old loyalty cards, and realize you left it at home. Now imagine the same scenario, but this time you pull out your phone, tap twice, and show your insurance details on screen. That's the difference a digital wallet makes for health documents.
       </ArticleParagraph>

@@ -1,6 +1,8 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { spawn } from 'node:child_process'
+import puppeteer from 'puppeteer'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -8,6 +10,10 @@ const repoRoot = path.resolve(__dirname, '..')
 
 const distDir = path.join(repoRoot, 'dist')
 const indexHtmlPath = path.join(distDir, 'index.html')
+
+// Preview server configuration
+const PREVIEW_PORT = 4173
+const PREVIEW_URL = `http://localhost:${PREVIEW_PORT}`
 
 // OG image base URL - same as in src/configs/ogImages.ts
 const OG_IMAGE_BASE_URL = 'https://stomashevsky.github.io/folio/og-images'
@@ -55,13 +61,13 @@ const STATIC_PAGES = [
     path: '/solutions/age-compliance',
     title: 'Age Compliance | Folio Wallet',
     description: 'Age verification service for global compliance. Confirm user age quickly and securely with verification methods that match your risk level.',
-    ogImage: 'folio-app-hero.png', // No specific image, use default
+    ogImage: 'folio-app-hero.png',
   },
   {
     path: '/solutions/client-onboarding',
     title: 'Client Onboarding | Folio Wallet',
     description: 'Streamlined KYC for regulated businesses. Client verification that is fast, compliant, and audit-ready.',
-    ogImage: 'folio-app-hero.png', // No specific image, use default
+    ogImage: 'folio-app-hero.png',
   },
   // Platform
   {
@@ -162,6 +168,20 @@ const STATIC_PAGES = [
     description: 'Learn how Folio protects your documents with end-to-end encryption, zero-knowledge architecture, and industry-leading security standards.',
     ogImage: 'folio-app-hero.png',
   },
+  // About page
+  {
+    path: '/about',
+    title: 'About | Folio',
+    description: 'Learn about Folio, the digital identity wallet for secure document storage and verification.',
+    ogImage: 'folio-app-hero.png',
+  },
+  // FAQ page
+  {
+    path: '/faq',
+    title: 'Frequently Asked Questions | Folio',
+    description: 'Find answers to common questions about Folio Wallet, digital identity, security, and more.',
+    ogImage: 'folio-app-hero.png',
+  },
 ]
 
 // Blog OG image mapping (same as BLOG_OG_IMAGE_BY_SLUG in blogArticles.ts)
@@ -217,6 +237,8 @@ const BLOG_OG_IMAGES = {
   'what-is-a-digital-wallet': 'blog-what-is-a-digital-wallet.png',
   'what-is-liveness-detection': 'blog-what-is-liveness-detection.png',
   'you-can-now-store-tickets-in-folio-wallet': 'blog-you-can-now-store-tickets-in-folio-wallet.png',
+  'best-identity-verification-platforms': 'blog-best-identity-verification-platforms.png',
+  'complete-guide-identity-verification': 'blog-complete-guide-identity-verification.png',
 }
 
 /**
@@ -274,70 +296,6 @@ function toOutputPath(route) {
   return path.join(clean, 'index.html')
 }
 
-function rewriteAssetPaths(route, html) {
-  // Convert relative asset paths based on route depth
-  const depth = route.split('/').filter(Boolean).length
-  const prefix = depth === 0 ? './' : '../'.repeat(depth)
-
-  return html
-    .replaceAll('href="./assets/', `href="${prefix}assets/`)
-    .replaceAll('src="./assets/', `src="${prefix}assets/`)
-    .replaceAll('href="assets/', `href="${prefix}assets/`)
-    .replaceAll('src="assets/', `src="${prefix}assets/`)
-    .replaceAll('href="favicon.svg"', `href="${prefix}favicon.svg"`)
-    .replaceAll('href="./favicon.svg"', `href="${prefix}favicon.svg"`)
-    .replaceAll('href="site.webmanifest"', `href="${prefix}site.webmanifest"`)
-    .replaceAll('href="./site.webmanifest"', `href="${prefix}site.webmanifest"`)
-}
-
-function replaceMetaTags(html, metadata) {
-  const ogImageUrl = `${OG_IMAGE_BASE_URL}/${metadata.ogImage}`
-  
-  // Replace OG tags (handle both > and /> endings)
-  html = html.replace(
-    /<meta property="og:title" content="[^"]*"\s*\/?>/,
-    `<meta property="og:title" content="${escapeHtml(metadata.title)}" />`
-  )
-  html = html.replace(
-    /<meta property="og:description" content="[^"]*"\s*\/?>/,
-    `<meta property="og:description" content="${escapeHtml(metadata.description)}" />`
-  )
-  html = html.replace(
-    /<meta property="og:image" content="[^"]*"\s*\/?>/,
-    `<meta property="og:image" content="${ogImageUrl}" />`
-  )
-  
-  // Replace Twitter tags
-  html = html.replace(
-    /<meta property="twitter:title" content="[^"]*"\s*\/?>/,
-    `<meta property="twitter:title" content="${escapeHtml(metadata.title)}" />`
-  )
-  html = html.replace(
-    /<meta property="twitter:description" content="[^"]*"\s*\/?>/,
-    `<meta property="twitter:description" content="${escapeHtml(metadata.description)}" />`
-  )
-  html = html.replace(
-    /<meta property="twitter:image" content="[^"]*"\s*\/?>/,
-    `<meta property="twitter:image" content="${ogImageUrl}" />`
-  )
-  
-  // Replace page title
-  html = html.replace(
-    /<title>[^<]*<\/title>/,
-    `<title>${escapeHtml(metadata.title)}</title>`
-  )
-  html = html.replace(
-    /<meta name="title" content="[^"]*"\s*\/?>/,
-    `<meta name="title" content="${escapeHtml(metadata.title)}" />`
-  )
-  html = html.replace(
-    /<meta name="description" content="[^"]*"\s*\/?>/,
-    `<meta name="description" content="${escapeHtml(metadata.description)}" />`
-  )
-  
-  return html
-}
-
 function escapeHtml(str) {
   return str
     .replace(/&/g, '&amp;')
@@ -351,50 +309,205 @@ async function ensureDir(filePath) {
   await fs.mkdir(path.dirname(filePath), { recursive: true })
 }
 
-async function main() {
-  console.log('[prerender] Starting static HTML generation (no Puppeteer)')
+/**
+ * Start the Vite preview server
+ */
+function startPreviewServer() {
+  return new Promise((resolve, reject) => {
+    const server = spawn('npx', ['vite', 'preview', '--port', PREVIEW_PORT.toString()], {
+      cwd: repoRoot,
+      stdio: ['ignore', 'pipe', 'pipe'],
+      shell: true,
+    })
+    
+    let started = false
+    
+    server.stdout.on('data', (data) => {
+      const output = data.toString()
+      if (output.includes('Local:') && !started) {
+        started = true
+        // Give it a moment to fully initialize
+        setTimeout(() => resolve(server), 1000)
+      }
+    })
+    
+    server.stderr.on('data', (data) => {
+      console.error('[preview]', data.toString())
+    })
+    
+    server.on('error', reject)
+    
+    // Timeout after 30 seconds
+    setTimeout(() => {
+      if (!started) {
+        server.kill()
+        reject(new Error('Preview server failed to start within 30 seconds'))
+      }
+    }, 30000)
+  })
+}
+
+/**
+ * Render a page using Puppeteer and return the HTML
+ */
+async function renderPageWithPuppeteer(browser, route, metadata) {
+  const page = await browser.newPage()
   
-  // Read the base index.html
-  const baseHtml = await fs.readFile(indexHtmlPath, 'utf8')
+  try {
+    // Navigate to the page
+    const url = `${PREVIEW_URL}${route}`
+    await page.goto(url, { 
+      waitUntil: 'networkidle0',
+      timeout: 30000 
+    })
+    
+    // Wait for React to render (look for content in the root div)
+    await page.waitForSelector('#root > *', { timeout: 10000 })
+    
+    // Additional wait for dynamic content
+    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 500)))
+    
+    // Get the rendered HTML
+    let html = await page.content()
+    
+    // Update meta tags with correct values (Puppeteer might have different runtime values)
+    const ogImageUrl = `${OG_IMAGE_BASE_URL}/${metadata.ogImage}`
+    
+    // Ensure correct title
+    html = html.replace(
+      /<title>[^<]*<\/title>/,
+      `<title>${escapeHtml(metadata.title)}</title>`
+    )
+    
+    // Ensure correct meta description
+    html = html.replace(
+      /<meta name="description" content="[^"]*"\s*\/?>/,
+      `<meta name="description" content="${escapeHtml(metadata.description)}" />`
+    )
+    
+    // Ensure correct OG tags
+    html = html.replace(
+      /<meta property="og:title" content="[^"]*"\s*\/?>/,
+      `<meta property="og:title" content="${escapeHtml(metadata.title)}" />`
+    )
+    html = html.replace(
+      /<meta property="og:description" content="[^"]*"\s*\/?>/,
+      `<meta property="og:description" content="${escapeHtml(metadata.description)}" />`
+    )
+    html = html.replace(
+      /<meta property="og:image" content="[^"]*"\s*\/?>/,
+      `<meta property="og:image" content="${ogImageUrl}" />`
+    )
+    
+    // Ensure correct Twitter tags
+    html = html.replace(
+      /<meta property="twitter:title" content="[^"]*"\s*\/?>/,
+      `<meta property="twitter:title" content="${escapeHtml(metadata.title)}" />`
+    )
+    html = html.replace(
+      /<meta property="twitter:description" content="[^"]*"\s*\/?>/,
+      `<meta property="twitter:description" content="${escapeHtml(metadata.description)}" />`
+    )
+    html = html.replace(
+      /<meta property="twitter:image" content="[^"]*"\s*\/?>/,
+      `<meta property="twitter:image" content="${ogImageUrl}" />`
+    )
+    
+    // Remove Vite-specific scripts that might interfere
+    html = html.replace(/<script type="module"[^>]*@vite[^<]*<\/script>/g, '')
+    
+    return html
+  } finally {
+    await page.close()
+  }
+}
+
+/**
+ * Fix asset paths for nested routes
+ */
+function fixAssetPaths(html, route) {
+  const depth = route.split('/').filter(Boolean).length
+  if (depth === 0) return html
+  
+  const prefix = '../'.repeat(depth)
+  
+  // Fix relative paths that start with ./
+  html = html.replace(/href="\.\/assets\//g, `href="${prefix}assets/`)
+  html = html.replace(/src="\.\/assets\//g, `src="${prefix}assets/`)
+  html = html.replace(/href="\.\/favicon\.svg"/g, `href="${prefix}favicon.svg"`)
+  html = html.replace(/href="\.\/site\.webmanifest"/g, `href="${prefix}site.webmanifest"`)
+  
+  // Fix paths without ./
+  html = html.replace(/href="assets\//g, `href="${prefix}assets/`)
+  html = html.replace(/src="assets\//g, `src="${prefix}assets/`)
+  html = html.replace(/href="favicon\.svg"/g, `href="${prefix}favicon.svg"`)
+  html = html.replace(/href="site\.webmanifest"/g, `href="${prefix}site.webmanifest"`)
+  
+  return html
+}
+
+async function main() {
+  console.log('[prerender] Starting full HTML pre-rendering with Puppeteer')
   
   // Collect all routes and their metadata
   const blogMetadata = await collectBlogMetadata()
   const allRoutes = [...STATIC_PAGES, ...blogMetadata]
   
-  console.log(`[prerender] Generating ${allRoutes.length} pages`)
+  console.log(`[prerender] Found ${allRoutes.length} pages to render`)
+  
+  // Start preview server
+  console.log('[prerender] Starting preview server...')
+  let previewServer
+  try {
+    previewServer = await startPreviewServer()
+    console.log('[prerender] Preview server started')
+  } catch (error) {
+    console.error('[prerender] Failed to start preview server:', error.message)
+    process.exitCode = 1
+    return
+  }
+  
+  // Launch Puppeteer
+  console.log('[prerender] Launching browser...')
+  const browser = await puppeteer.launch({
+    headless: 'new',
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  })
   
   let generated = 0
   let failed = 0
   
-  for (const metadata of allRoutes) {
-    try {
-      const route = metadata.path
-      const outRel = toOutputPath(route)
-      const outAbs = path.join(distDir, outRel)
-      
-      // Skip root index.html - it's already the main entry point
-      if (outRel === 'index.html') {
-        // Still update OG tags for home page
-        let html = replaceMetaTags(baseHtml, metadata)
+  try {
+    for (const metadata of allRoutes) {
+      try {
+        const route = metadata.path
+        const outRel = toOutputPath(route)
+        const outAbs = path.join(distDir, outRel)
+        
+        // Render the page
+        let html = await renderPageWithPuppeteer(browser, route, metadata)
+        
+        // Fix asset paths for nested routes
+        if (route !== '/') {
+          html = fixAssetPaths(html, route)
+        }
+        
+        // Ensure directory exists
+        await ensureDir(outAbs)
+        
+        // Write the file
         await fs.writeFile(outAbs, html, 'utf8')
         console.log(`[prerender] OK  ${route} -> ${outRel}`)
         generated++
-        continue
+      } catch (e) {
+        console.error(`[prerender] FAIL ${metadata.path}:`, e.message)
+        failed++
       }
-      
-      await ensureDir(outAbs)
-      
-      // Create HTML with correct meta tags and asset paths
-      let html = replaceMetaTags(baseHtml, metadata)
-      html = rewriteAssetPaths(route, html)
-      
-      await fs.writeFile(outAbs, html, 'utf8')
-      console.log(`[prerender] OK  ${route} -> ${outRel}`)
-      generated++
-    } catch (e) {
-      console.error(`[prerender] FAIL ${metadata.path}:`, e.message)
-      failed++
     }
+  } finally {
+    // Cleanup
+    await browser.close()
+    previewServer.kill()
   }
   
   console.log(`[prerender] Done: ${generated} generated, ${failed} failed`)

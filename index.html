@@ -12,6 +12,10 @@
     <meta name="theme-color" content="#0A0A0A" />
     <meta name="msapplication-TileColor" content="#0A0A0A" />
     
+    <!-- Preload critical resources for LCP optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
     <!-- Primary Meta Tags -->
     <title>Folio app | Folio Wallet</title>
     <meta name="title" content="Folio app | Folio Wallet" />
@@ -38,16 +42,50 @@
     <meta property="twitter:description" content="Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find." />
     <meta property="twitter:image" content="https://stomashevsky.github.io/folio/og-images/folio-app-hero.png" />
     
-    <!-- JSON-LD Structured Data -->
+    <!-- JSON-LD Structured Data: Organization -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Folio app",
+      "@type": "Organization",
+      "name": "Folio",
+      "url": "https://folio.id",
+      "logo": "https://folio.id/favicon.svg",
+      "description": "Folio provides secure digital identity infrastructure. Document storage for individuals, verification platform for businesses, and digital credentials for governments.",
+      "foundingDate": "2023",
+      "sameAs": [
+        "https://apps.apple.com/app/folio-wallet/id6504502828",
+        "https://play.google.com/store/apps/details?id=id.folio.app"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "contact@folio.id",
+        "contactType": "customer service",
+        "availableLanguage": ["English"]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "EU"
+      }
+    }
+    </script>
+    
+    <!-- JSON-LD Structured Data: MobileApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "Folio Wallet",
       "description": "Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find.",
-      "url": "https://folio.id/",
+      "url": "https://folio.id/wallet",
       "applicationCategory": "UtilityApplication",
-      "operatingSystem": "Web",
+      "operatingSystem": "iOS, Android",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "ratingCount": "500",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -57,7 +95,31 @@
         "@type": "Organization",
         "name": "Folio",
         "url": "https://folio.id"
-      }
+      },
+      "featureList": [
+        "End-to-end encryption",
+        "Zero-knowledge architecture",
+        "Biometric protection (Face ID, fingerprint)",
+        "Document import from email, PDF, or photo",
+        "AI-powered data extraction",
+        "EUDI Wallet compatible"
+      ],
+      "screenshot": "https://folio.id/og-images/folio-app-hero.png",
+      "downloadUrl": [
+        "https://apps.apple.com/app/folio-wallet/id6504502828",
+        "https://play.google.com/store/apps/details?id=id.folio.app"
+      ]
+    }
+    </script>
+    
+    <!-- JSON-LD Structured Data: WebSite with SearchAction -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Folio",
+      "url": "https://folio.id",
+      "description": "Secure document storage for individuals. Verification platform for businesses. Digital credentials for governments."
     }
     </script>
     

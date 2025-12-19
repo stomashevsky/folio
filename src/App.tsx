@@ -60,6 +60,8 @@ import EndToEndEncryptionArticlePage from './pages/EndToEndEncryptionArticlePage
 import BiometricDataPrivacyArticlePage from './pages/BiometricDataPrivacyArticlePage'
 import DigitalPassportCopiesArticlePage from './pages/DigitalPassportCopiesArticlePage'
 import ManagingFamilyTravelDocumentsArticlePage from './pages/ManagingFamilyTravelDocumentsArticlePage'
+import BestIdentityVerificationPlatformsArticlePage from './pages/BestIdentityVerificationPlatformsArticlePage'
+import CompleteGuideIdentityVerificationArticlePage from './pages/CompleteGuideIdentityVerificationArticlePage'
 import TermsPage from './pages/TermsPage'
 import PrivacyPage from './pages/PrivacyPage'
 import SecurityPage from './pages/SecurityPage'
@@ -68,6 +70,7 @@ import CardScannerAppPage from './pages/CardScannerAppPage'
 import LoyaltyCardAppPage from './pages/LoyaltyCardAppPage'
 import NotFoundPage from './pages/NotFoundPage'
 import AboutPage from './pages/AboutPage'
+import FaqPage from './pages/FaqPage'
 import CookieConsent from './components/CookieConsent'
 
 // Fallback handler in case the script in index.html didn't run
@@ -219,6 +222,8 @@ function App() {
         <Route path="/blog/biometric-data-privacy" element={<BiometricDataPrivacyArticlePage />} />
         <Route path="/blog/digital-passport-copies" element={<DigitalPassportCopiesArticlePage />} />
         <Route path="/blog/managing-family-travel-documents" element={<ManagingFamilyTravelDocumentsArticlePage />} />
+        <Route path="/blog/best-identity-verification-platforms" element={<BestIdentityVerificationPlatformsArticlePage />} />
+        <Route path="/blog/complete-guide-identity-verification" element={<CompleteGuideIdentityVerificationArticlePage />} />
         <Route path="/id-wallet-app" element={<IdWalletAppPage />} />
         <Route path="/card-scanner-app" element={<CardScannerAppPage />} />
         <Route path="/loyalty-card-app" element={<LoyaltyCardAppPage />} />
@@ -226,6 +231,7 @@ function App() {
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/security" element={<SecurityPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/faq" element={<FaqPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>

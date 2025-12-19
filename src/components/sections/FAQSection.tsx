@@ -60,8 +60,27 @@ export default function FAQSection({
     setIsFaqOpen(index)
   }
 
+  // Generate FAQPage schema for SEO
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqData.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.a,
+      },
+    })),
+  }
+
   return (
     <div className="bg-white box-border flex flex-col gap-6 items-center px-0 py-16 md:py-24 relative shrink-0 w-full">
+      {/* FAQPage Schema for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="box-border flex flex-col gap-10 md:gap-16 items-center max-w-[672px] px-6 py-0 relative shrink-0 w-full">
         <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
           {/* Title Section */}
