@@ -1,6 +1,6 @@
 import { memo } from 'react'
 import Navbar from '../components/Navbar'
-import { SectionHeader, ToolCard, Button, HeroTagline } from '../components/ui'
+import { SectionHeader, ToolCard, Button, HeroTagline, CertificationCard } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
@@ -10,8 +10,10 @@ import lockKeyholeIcon from '../assets/icons/LockKeyhole.svg'
 import keyRoundIcon from '../assets/icons/KeyRound.svg'
 import smartphoneIcon from '../assets/icons/Smartphone.svg'
 import shieldCheckIcon from '../assets/icons/ShieldCheck.svg'
-import shieldPlusIcon from '../assets/icons/ShieldPlus.svg'
 import fingerprintIcon from '../assets/icons/Fingerprint.svg'
+import iso27001Logo from '../assets/icons/Iso27001.svg'
+import soc2Logo from '../assets/icons/Soc2.svg'
+import gdprLogo from '../assets/icons/Gdpr.svg'
 
 // Background style matching other sections
 const BACKGROUND_STYLE = {
@@ -131,18 +133,18 @@ function SecurityPage() {
             />
             
             <div className="flex flex-col sm:grid sm:grid-cols-3 gap-6 items-start sm:items-stretch justify-center w-full max-w-[900px] min-w-0">
-              <ToolCard
-                icon={shieldCheckIcon}
+              <CertificationCard
+                logo={iso27001Logo}
                 title="ISO 27001"
                 description="Certified information security management ensuring systematic protection of sensitive data."
               />
-              <ToolCard
-                icon={shieldPlusIcon}
+              <CertificationCard
+                logo={soc2Logo}
                 title="SOC 2 Type II"
                 description="Independent verification of our security controls, availability, and confidentiality practices."
               />
-              <ToolCard
-                icon={shieldCheckIcon}
+              <CertificationCard
+                logo={gdprLogo}
                 title="GDPR compliant"
                 description="Full compliance with European data protection regulations, giving you control over your personal data."
               />
