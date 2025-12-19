@@ -1,10 +1,13 @@
 import { useEffect, useRef } from 'react'
 
 /**
- * Hook to lock/unlock body scroll when modal is open
+ * Hook to lock/unlock body scroll when modal/menu is open
  * 
- * Prevents background scrolling when a modal is open by setting `overflow: hidden` on the body.
- * Preserves the original overflow value and restores it when unlocked.
+ * Prevents background scrolling when a modal is open by setting `position: fixed` on the body.
+ * This approach works reliably on iOS Safari and other mobile browsers where `overflow: hidden`
+ * alone is not sufficient.
+ * 
+ * Preserves the scroll position and restores it when unlocked.
  * Handles nested modals correctly by only saving/restoring when necessary.
  * 
  * @param isLocked - Whether to lock the body scroll (true) or unlock it (false)
@@ -18,35 +21,49 @@ import { useEffect, useRef } from 'react'
  * ```
  */
 export function useBodyScrollLock(isLocked: boolean) {
-  const originalOverflowRef = useRef<string | null>(null)
+  const scrollPositionRef = useRef<number>(0)
+  const isLockedRef = useRef<boolean>(false)
 
   useEffect(() => {
-    if (isLocked) {
-      // Save the current overflow value if not already saved
-      // Only save if overflow is not already 'hidden' (for nested modals)
-      if (originalOverflowRef.current === null) {
-        const currentOverflow = document.body.style.overflow || ''
-        // If overflow is already hidden, it means another modal is open
-        // In that case, we don't need to save/restore
-        if (currentOverflow !== 'hidden') {
-          originalOverflowRef.current = currentOverflow
-        }
-      }
-      // Lock the scroll
+    if (isLocked && !isLockedRef.current) {
+      // Save the current scroll position
+      scrollPositionRef.current = window.scrollY
+      
+      // Lock the scroll using position: fixed approach for iOS Safari compatibility
       document.body.style.overflow = 'hidden'
-    } else {
-      // Restore the original overflow value only if we saved one
-      if (originalOverflowRef.current !== null) {
-        document.body.style.overflow = originalOverflowRef.current
-        originalOverflowRef.current = null
-      }
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${scrollPositionRef.current}px`
+      document.body.style.left = '0'
+      document.body.style.right = '0'
+      document.body.style.width = '100%'
+      
+      isLockedRef.current = true
+    } else if (!isLocked && isLockedRef.current) {
+      // Unlock and restore scroll position
+      document.body.style.overflow = ''
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.left = ''
+      document.body.style.right = ''
+      document.body.style.width = ''
+      
+      // Restore scroll position
+      window.scrollTo(0, scrollPositionRef.current)
+      
+      isLockedRef.current = false
     }
 
     // Cleanup function
     return () => {
-      if (isLocked && originalOverflowRef.current !== null) {
-        document.body.style.overflow = originalOverflowRef.current
-        originalOverflowRef.current = null
+      if (isLockedRef.current) {
+        document.body.style.overflow = ''
+        document.body.style.position = ''
+        document.body.style.top = ''
+        document.body.style.left = ''
+        document.body.style.right = ''
+        document.body.style.width = ''
+        window.scrollTo(0, scrollPositionRef.current)
+        isLockedRef.current = false
       }
     }
   }, [isLocked])
