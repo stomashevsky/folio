@@ -316,7 +316,7 @@ export default function DigitalTicketingPage() {
               description="Folio works for any service where customers receive tickets or confirmations by email."
               align="left"
             />
-            <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
+            <div className="flex flex-col gap-11 items-start relative shrink-0 w-full">
               <OperatorListItem
                 icon={ticketIcon}
                 title="Events and venues"
