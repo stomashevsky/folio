@@ -1,6 +1,6 @@
 import { memo } from 'react'
 import Navbar from '../components/Navbar'
-import { SectionHeader, ToolCard, Button } from '../components/ui'
+import { SectionHeader, ToolCard, Button, HeroTagline } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
@@ -45,6 +45,7 @@ function SecurityPage() {
         {/* Hero Section */}
         <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full">
           <div className="flex flex-col gap-6 items-center max-w-[768px] px-6 py-0 relative shrink-0 w-full text-center">
+            <HeroTagline icon={shieldCheckIcon}>Security</HeroTagline>
             <h1 className="font-bold leading-9 md:leading-[48px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px]">
               Your data stays yours
             </h1>
