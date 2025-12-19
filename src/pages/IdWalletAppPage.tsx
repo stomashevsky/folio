@@ -1,12 +1,13 @@
 import { memo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
-import { SectionHeader, ToolCard, Button } from '../components/ui'
+import { SectionHeader, ToolCard, Button, HeroTagline } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import FAQSection, { FAQItem } from '../components/sections/FAQSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
 import { scrollToSection } from '../utils/scrollToSection'
+import idWalletAppHero from '../assets/images/id-wallet-app-hero.png'
 import idCardIcon from '../assets/icons/IdCard.svg'
 import shieldCheckIcon from '../assets/icons/ShieldCheck.svg'
 import smartphoneIcon from '../assets/icons/Smartphone.svg'
@@ -62,20 +63,67 @@ function IdWalletAppPage() {
       <main className="flex-1 w-full">
         {/* Hero Section */}
         <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full">
-          <div className="flex flex-col gap-6 items-center max-w-[768px] px-6 py-0 relative shrink-0 w-full text-center">
-            <h1 className="font-bold leading-9 md:leading-[48px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px]">
-              ID card wallet app
-            </h1>
-            <p className="font-normal leading-6 text-[#737373] text-base w-full">
-              Keep your passports, ID cards, and driver licenses organized in one secure digital wallet. Folio extracts key details automatically, reminds you before documents expire, and keeps everything protected with end-to-end encryption.
-            </p>
-            <div className="flex flex-wrap gap-3 items-center justify-center">
-              <Button variant="primary" onClick={() => scrollToSection('get-the-app')}>
-                Get the app
-              </Button>
-              <Button variant="secondary" onClick={() => navigate('/')}>
-                Learn more
-              </Button>
+          {/* Desktop Layout */}
+          <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+            <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
+              <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
+                <HeroTagline icon={idCardIcon}>ID wallet</HeroTagline>
+                <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px]">
+                  ID card wallet app
+                </h1>
+                <p className="font-normal leading-6 text-[#737373] text-base w-full">
+                  Keep your passports, ID cards, and driver licenses organized in one secure digital wallet. Folio extracts key details automatically, reminds you before documents expire, and keeps everything protected with end-to-end encryption.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-3 items-start relative shrink-0 w-full">
+                <Button variant="primary" onClick={() => scrollToSection('get-the-app')}>
+                  Get the app
+                </Button>
+                <Button variant="secondary" onClick={() => navigate('/')}>
+                  Learn more
+                </Button>
+              </div>
+            </div>
+            <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
+              <img
+                src={idWalletAppHero}
+                alt="ID card wallet app preview"
+                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+                fetchPriority="high"
+                loading="eager"
+              />
+            </div>
+          </div>
+
+          {/* Mobile Layout */}
+          <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+            <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
+              <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
+                <HeroTagline icon={idCardIcon}>ID wallet</HeroTagline>
+                <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
+                  ID card wallet app
+                </h1>
+                <p className="font-normal leading-6 text-[#737373] text-base w-full">
+                  Keep your passports, ID cards, and driver licenses organized in one secure digital wallet. Folio extracts key details automatically, reminds you before documents expire, and keeps everything protected with end-to-end encryption.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-3 items-start relative shrink-0 w-full">
+                <Button variant="primary" onClick={() => scrollToSection('get-the-app')}>
+                  Get the app
+                </Button>
+                <Button variant="secondary" onClick={() => navigate('/')}>
+                  Learn more
+                </Button>
+              </div>
+            </div>
+            <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
+              <img
+                src={idWalletAppHero}
+                alt="ID card wallet app preview"
+                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+                fetchPriority="high"
+                loading="eager"
+              />
             </div>
           </div>
         </section>

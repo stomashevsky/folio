@@ -1,12 +1,13 @@
 import { memo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
-import { SectionHeader, ToolCard, Button } from '../components/ui'
+import { SectionHeader, ToolCard, Button, HeroTagline } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import FAQSection, { FAQItem } from '../components/sections/FAQSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
 import { scrollToSection } from '../utils/scrollToSection'
+import cardScannerAppHero from '../assets/images/card-scanner-app-hero.png'
 import scanTextIcon from '../assets/icons/ScanText.svg'
 import cameraIcon from '../assets/icons/Camera.svg'
 import shieldCheckIcon from '../assets/icons/ShieldCheck.svg'
@@ -62,20 +63,67 @@ function CardScannerAppPage() {
       <main className="flex-1 w-full">
         {/* Hero Section */}
         <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full">
-          <div className="flex flex-col gap-6 items-center max-w-[768px] px-6 py-0 relative shrink-0 w-full text-center">
-            <h1 className="font-bold leading-9 md:leading-[48px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px]">
-              Card scanner app
-            </h1>
-            <p className="font-normal leading-6 text-[#737373] text-base w-full">
-              Scan any card or document with your phone camera. Folio automatically extracts important details using OCR and stores everything securely with end-to-end encryption. Available free on iPhone and Android.
-            </p>
-            <div className="flex flex-wrap gap-3 items-center justify-center">
-              <Button variant="primary" onClick={() => scrollToSection('get-the-app')}>
-                Get the app
-              </Button>
-              <Button variant="secondary" onClick={() => navigate('/')}>
-                Learn more
-              </Button>
+          {/* Desktop Layout */}
+          <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+            <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
+              <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
+                <HeroTagline icon={scanTextIcon}>Card scanner</HeroTagline>
+                <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px]">
+                  Card scanner app
+                </h1>
+                <p className="font-normal leading-6 text-[#737373] text-base w-full">
+                  Scan any card or document with your phone camera. Folio automatically extracts important details using OCR and stores everything securely with end-to-end encryption. Available free on iPhone and Android.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-3 items-start relative shrink-0 w-full">
+                <Button variant="primary" onClick={() => scrollToSection('get-the-app')}>
+                  Get the app
+                </Button>
+                <Button variant="secondary" onClick={() => navigate('/')}>
+                  Learn more
+                </Button>
+              </div>
+            </div>
+            <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
+              <img
+                src={cardScannerAppHero}
+                alt="Card scanner app preview"
+                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+                fetchPriority="high"
+                loading="eager"
+              />
+            </div>
+          </div>
+
+          {/* Mobile Layout */}
+          <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+            <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
+              <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
+                <HeroTagline icon={scanTextIcon}>Card scanner</HeroTagline>
+                <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
+                  Card scanner app
+                </h1>
+                <p className="font-normal leading-6 text-[#737373] text-base w-full">
+                  Scan any card or document with your phone camera. Folio automatically extracts important details using OCR and stores everything securely with end-to-end encryption. Available free on iPhone and Android.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-3 items-start relative shrink-0 w-full">
+                <Button variant="primary" onClick={() => scrollToSection('get-the-app')}>
+                  Get the app
+                </Button>
+                <Button variant="secondary" onClick={() => navigate('/')}>
+                  Learn more
+                </Button>
+              </div>
+            </div>
+            <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
+              <img
+                src={cardScannerAppHero}
+                alt="Card scanner app preview"
+                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+                fetchPriority="high"
+                loading="eager"
+              />
             </div>
           </div>
         </section>
