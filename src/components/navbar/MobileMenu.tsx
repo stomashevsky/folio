@@ -198,7 +198,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     }}
                     aria-current={isActive('/wallet') ? 'page' : undefined}
                   >
-                    Wallet
+                    Folio app
                   </MobileMenuItem>
                   <MobileMenuItem
                     active={isActive('/platform')}
