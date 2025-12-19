@@ -18,7 +18,7 @@ export interface MobileMenuLinkProps {
  * 
  * Figma specs (node-id: 24626-76638):
  * - Width: full
- * - Padding: px-6 py-3 (24px horizontal, 12px vertical) for content
+ * - Padding: px-6 py-4 (24px horizontal, 16px vertical) for content
  * - Gap: gap-2 (8px between icon and text)
  * - NO border radius for mobile
  * - Icon size: 20x20px
@@ -39,7 +39,7 @@ export default function MobileMenuLink({
 }: MobileMenuLinkProps & Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'className'>) {
     void active
     // Base classes - highlight extends edge-to-edge with px-6 for content padding
-    const baseClasses = 'box-border flex gap-2 items-start w-full px-6 py-3 outline-none focus-visible:outline-none transition-all text-left'
+    const baseClasses = 'box-border flex gap-2 items-start w-full px-6 py-4 outline-none focus-visible:outline-none transition-all text-left'
 
     // State classes - hover only on devices that support hover (not touch devices)
     // Using @media(hover:hover) to prevent sticky hover on mobile after tap

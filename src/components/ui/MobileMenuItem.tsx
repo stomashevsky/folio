@@ -17,7 +17,7 @@ export interface MobileMenuItemProps {
  * 
  * Figma specs (node-id: 24634-85402, 24552-65532):
  * - Width: full (312px in design)
- * - Padding: px-6 py-3 (24px horizontal, 12px vertical)
+ * - Padding: px-6 py-4 (24px horizontal, 16px vertical)
  * - Font: 14px, medium weight (500)
  * - Text color: #0a0a0a (foreground)
  * - Hover: gradient overlay with 10% black (#f5f5f5)
@@ -34,7 +34,7 @@ export default function MobileMenuItem({
 }: MobileMenuItemProps & Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'className'>) {
     void active
     // Base classes matching Figma design
-    const baseClasses = 'box-border flex gap-2 items-center justify-between w-full px-6 py-3 outline-none focus-visible:outline-none transition-all text-left'
+    const baseClasses = 'box-border flex gap-2 items-center justify-between w-full px-6 py-4 outline-none focus-visible:outline-none transition-all text-left'
 
     // Text classes
     const textClasses = 'text-sm font-medium leading-5'
