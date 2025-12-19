@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
+import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
 import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
@@ -257,14 +258,13 @@ export default function DataSourceChecksPage() {
         <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           {/* Desktop Layout */}
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-            <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-              <img 
-                src={activeHowItWorksItem.desktopImage} 
-                alt={activeHowItWorksItem.title}
-                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-                loading="lazy"
-              />
-            </div>
+            <ImageWithPlaceholder
+              src={activeHowItWorksItem.desktopImage || ''}
+              alt={activeHowItWorksItem.title}
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
+              loading="lazy"
+            />
             <div className="flex flex-1 flex-col gap-6 items-start relative min-w-0">
               <SectionHeader
                 title="How it works"
