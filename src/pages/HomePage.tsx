@@ -160,7 +160,7 @@ function HomePage() {
               </div>
               <div className="flex flex-wrap gap-3 items-start relative shrink-0">
                 <Button variant="primary" href="mailto:contact@folio.id">
-                  Contact sales
+                  Get in touch
                 </Button>
               </div>
             </div>
@@ -189,7 +189,7 @@ function HomePage() {
             </div>
             <div className="flex flex-wrap gap-3 items-start relative shrink-0 w-full">
               <Button variant="primary" href="mailto:contact@folio.id">
-                Contact sales
+                Get in touch
               </Button>
             </div>
           </div>
