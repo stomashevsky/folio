@@ -7,24 +7,25 @@ const comparisonColumns: ArticleTableColumn[] = [
   { key: 'folio', header: 'Folio' },
   { key: 'onfido', header: 'Onfido' },
   { key: 'veriff', header: 'Veriff' },
+  { key: 'yoti', header: 'Yoti' },
   { key: 'jumio', header: 'Jumio' },
 ]
 
 const comparisonRows: ArticleTableRow[] = [
-  { feature: 'Document verification', folio: 'Yes', onfido: 'Yes', veriff: 'Yes', jumio: 'Yes' },
-  { feature: 'Liveness detection', folio: 'Yes', onfido: 'Yes', veriff: 'Yes', jumio: 'Yes' },
-  { feature: 'NFC chip reading', folio: 'Yes', onfido: 'Yes', veriff: 'Yes', jumio: 'Yes' },
-  { feature: 'EUDI compatible', folio: 'Yes', onfido: 'Planned', veriff: 'Planned', jumio: 'Planned' },
-  { feature: 'Consumer wallet app', folio: 'Yes', onfido: 'No', veriff: 'No', jumio: 'No' },
-  { feature: 'Transparent pricing', folio: 'Yes', onfido: 'Custom quote', veriff: 'Custom quote', jumio: 'Custom quote' },
-  { feature: 'Self-service setup', folio: 'Yes', onfido: 'Sales call', veriff: 'Yes', jumio: 'Sales call' },
+  { feature: 'Document verification', folio: 'Yes', onfido: 'Yes', veriff: 'Yes', yoti: 'Yes', jumio: 'Yes' },
+  { feature: 'Liveness detection', folio: 'Yes', onfido: 'Yes', veriff: 'Yes', yoti: 'Yes', jumio: 'Yes' },
+  { feature: 'NFC chip reading', folio: 'Yes', onfido: 'Yes', veriff: 'Yes', yoti: 'Limited', jumio: 'Yes' },
+  { feature: 'EUDI compatible', folio: 'Yes', onfido: 'Planned', veriff: 'Planned', yoti: 'Limited', jumio: 'Planned' },
+  { feature: 'Consumer wallet app', folio: 'Yes', onfido: 'No', veriff: 'No', yoti: 'Yes', jumio: 'No' },
+  { feature: 'Transparent pricing', folio: 'Yes', onfido: 'Custom quote', veriff: 'Custom quote', yoti: 'Custom quote', jumio: 'Custom quote' },
+  { feature: 'Self-service setup', folio: 'Yes', onfido: 'Sales call', veriff: 'Yes', yoti: 'No', jumio: 'Sales call' },
 ]
 
 export default function BestIdentityVerificationPlatformsArticlePage() {
   return (
     <BlogArticleLayout
       title="Best identity verification platforms in 2025"
-      description="A practical comparison of identity verification platforms for businesses. Learn which solution fits your needs: Folio, Onfido, Veriff, or Jumio."
+      description="A practical comparison of identity verification platforms for businesses. Learn which solution fits your needs: Folio, Onfido, Veriff, Yoti, or Jumio."
       date="Dec 19, 2025"
       category="Research"
       slug="best-identity-verification-platforms"
@@ -74,7 +75,7 @@ export default function BestIdentityVerificationPlatformsArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        The consumer wallet side means your users get something useful from verification. Instead of just checking a box, they get a secure place to store their passport, ID, and travel documents. This can improve conversion because users see value in completing verification.
+        The <Link to="/wallet" className="underline hover:text-[#737373] transition-colors">consumer wallet</Link> side means your users get something useful from verification. Instead of just checking a box, they get a secure place to store their passport, ID, and travel documents. This can improve conversion because users see value in completing verification.
       </ArticleParagraph>
 
       <ArticleH2>Onfido: the enterprise choice</ArticleH2>
@@ -97,10 +98,20 @@ export default function BestIdentityVerificationPlatformsArticlePage() {
         Pricing is volume-based, which works well if you have predictable verification needs. The platform covers biometric verification, document checks, and proof of address. For marketplaces and sharing economy businesses, Veriff is often a good fit.
       </ArticleParagraph>
 
+      <ArticleH2>Yoti: age verification specialist</ArticleH2>
+
+      <ArticleParagraph>
+        Yoti combines identity verification with a consumer identity app that has over 12 million downloads. The platform is particularly strong in age verification for regulated industries like alcohol, gambling, and adult content.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        The company has partnerships with government identity programs, especially in the UK. Yoti offers both reusable identity and one-time verification options. If your primary need is proving users are over 18 or 21, Yoti has specialized features for this. For broader identity verification needs, the platform is less comprehensive than alternatives.
+      </ArticleParagraph>
+
       <ArticleH2>Jumio: the legacy player</ArticleH2>
 
       <ArticleParagraph>
-        Jumio has been around the longest and has processed billions of verifications. The platform offers comprehensive features including AML screening and address verification. It supports 200+ countries with thousands of document types.
+        Jumio has been around the longest and has processed billions of verifications. The platform offers comprehensive features including <Link to="/platform/kyc" className="underline hover:text-[#737373] transition-colors">AML screening</Link> and address verification. It supports 200+ countries with thousands of document types.
       </ArticleParagraph>
 
       <ArticleParagraph>
@@ -117,6 +128,7 @@ export default function BestIdentityVerificationPlatformsArticlePage() {
         <li><strong>Moving fast with limited budget:</strong> Folio or Veriff. Both offer self-service and transparent pricing.</li>
         <li><strong>European market and EUDI compliance:</strong> Folio is already compatible. Others are still planning.</li>
         <li><strong>Enterprise with complex compliance:</strong> Onfido or Jumio. They have the certifications and enterprise support.</li>
+        <li><strong>Age verification focus:</strong> Yoti. Strong in regulated industries requiring age checks.</li>
         <li><strong>Want users to get ongoing value:</strong> Folio. The wallet means users benefit beyond verification.</li>
       </ArticleList>
 
@@ -128,6 +140,10 @@ export default function BestIdentityVerificationPlatformsArticlePage() {
 
       <ArticleParagraph>
         Identity verification is not something you want to switch frequently. Take time to test properly, but do not let the evaluation drag on. A platform that lets you start testing quickly is often a platform that lets you integrate quickly too.
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        If you want to see how Folio works from the user side, <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">download the free app</Link> and try storing your own documents. It takes two minutes and shows you what your users will experience.
       </ArticleParagraph>
     </BlogArticleLayout>
   )
