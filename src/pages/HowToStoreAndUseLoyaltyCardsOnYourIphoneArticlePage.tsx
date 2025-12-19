@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, HowToSchema } from '../components/ui'
 import loyaltyScreen from '../assets/images/blog-loyalty-cards-folio-screen.png'
 
 export default function HowToStoreAndUseLoyaltyCardsOnYourIphoneArticlePage() {
@@ -11,6 +11,18 @@ export default function HowToStoreAndUseLoyaltyCardsOnYourIphoneArticlePage() {
       category="Research"
       slug="how-to-store-and-use-loyalty-cards-on-your-iphone"
     >
+      <HowToSchema
+        name="How to store loyalty cards on an iPhone"
+        description="Step-by-step guide to digitizing and storing loyalty cards on your iPhone using a digital wallet app."
+        totalTime="PT5M"
+        steps={[
+          { name: "Choose a digital wallet app", text: "Select a wallet app that supports loyalty cards. Options include Apple Wallet (for supported retailers), Stocard, or Folio for any card type." },
+          { name: "Open the app and add a card", text: "Launch the app and tap the add or plus button to start adding a new loyalty card." },
+          { name: "Scan your physical card", text: "Use your phone camera to scan the barcode on your physical loyalty card. The app will capture and store the barcode." },
+          { name: "Verify the card details", text: "Check that the barcode was captured correctly. Some apps automatically recognize the retailer and add the logo." },
+          { name: "Use at checkout", text: "At the store, open the app, find your card, and show the barcode on screen for the cashier to scan." },
+        ]}
+      />
       <ArticleParagraph>
         The cashier asks if you have a rewards card. You know you do, somewhere. You signed up months ago. The physical card is probably in a drawer at home, or maybe it fell behind the couch. Meanwhile, there's a line forming behind you. This scene plays out millions of times daily, and the solution has been on your phone the whole time.
       </ArticleParagraph>

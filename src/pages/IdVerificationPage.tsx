@@ -5,6 +5,7 @@ import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
 import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
+import FAQSection, { FAQItem } from '../components/sections/FAQSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
 
@@ -119,6 +120,38 @@ const useCasesData = [
   },
 ]
 
+// FAQ data
+const ID_VERIFICATION_FAQ: FAQItem[] = [
+  {
+    q: 'What documents can be verified?',
+    a: 'Folio supports passports, national ID cards, driver licenses and residence permits from over 200 countries and regions.',
+  },
+  {
+    q: 'How long does verification take?',
+    a: 'Most verifications complete in under 10 seconds. Complex cases that require manual review may take longer.',
+  },
+  {
+    q: 'How does Folio detect fraudulent documents?',
+    a: 'Folio uses AI-powered checks to detect alterations, tampering, and forgeries. The system analyzes document structure, security features, fonts and metadata to spot inconsistencies.',
+  },
+  {
+    q: 'Can I customize the verification flow?',
+    a: 'Yes. You can define which documents to accept, set custom validation rules, configure automated decisions and add step-up verification when needed.',
+  },
+  {
+    q: 'Is the verification process compliant with regulations?',
+    a: 'Folio helps meet KYC and AML requirements across jurisdictions. The platform provides audit trails and detailed verification reports for compliance purposes.',
+  },
+  {
+    q: 'What happens if a document cannot be verified automatically?',
+    a: 'Cases that cannot be resolved automatically are flagged for manual review. Your team can examine the document and make a decision using the Review Workspace.',
+  },
+  {
+    q: 'Does Folio support NFC chip reading?',
+    a: 'Yes. For documents with NFC chips (like e-passports), Folio can read and verify the chip data for an extra layer of authenticity.',
+  },
+]
+
 export default function IdVerificationPage() {
   usePageTitle({
     title: 'ID Verification | Folio Wallet',
@@ -163,7 +196,7 @@ export default function IdVerificationPage() {
             <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-square">
               <img
                 src={idVerificationHero}
-                alt="ID verification preview"
+                alt="ID verification interface showing passport document capture with data extraction and verification status"
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 fetchPriority="high"
                 loading="eager"
@@ -192,7 +225,7 @@ export default function IdVerificationPage() {
             <div className="aspect-square relative rounded-2xl shrink-0 w-full">
               <img
                 src={idVerificationHero}
-                alt="ID verification preview"
+                alt="ID verification interface showing passport document capture with data extraction and verification status"
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 fetchPriority="high"
                 loading="eager"
@@ -371,6 +404,9 @@ export default function IdVerificationPage() {
             </div>
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <FAQSection faqData={ID_VERIFICATION_FAQ} />
       </main>
       <ExploreMoreSection currentPath="/platform/id-verification" />
       <FooterSection />

@@ -1,4 +1,4 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, HowToSchema } from '../components/ui'
 import { Link } from 'react-router-dom'
 import blogOrganizeTicketsBookingsHero from '../assets/images/blog-organize-tickets-bookings-hero.png'
 
@@ -11,6 +11,19 @@ export default function OrganizeTicketsBookingsArticlePage() {
       category="Research"
       slug="organize-tickets-bookings"
     >
+      <HowToSchema
+        name="How to organize all your tickets and bookings in one app"
+        description="Step-by-step guide to consolidating flights, trains, hotels, and event tickets in a single digital wallet app."
+        totalTime="PT10M"
+        steps={[
+          { name: "Download Folio Wallet", text: "Install Folio Wallet from the App Store or Google Play Store on your smartphone." },
+          { name: "Import PDF tickets", text: "Open PDF attachments from confirmation emails in Folio. The app extracts dates, times, and barcodes automatically." },
+          { name: "Add screenshots and images", text: "Import QR codes or booking confirmations from your photo library. Folio extracts the relevant booking details." },
+          { name: "Forward confirmation emails", text: "Forward booking confirmation emails to your Folio address. The app pulls out booking information automatically." },
+          { name: "Review your timeline", text: "All bookings appear organized by date. See your entire trip at a glance: flights, trains, hotels, and events in chronological order." },
+          { name: "Access tickets offline", text: "Your tickets work without internet. Open Folio at the airport, train station, or venue to show your QR codes even in airplane mode." },
+        ]}
+      />
       <ArticleParagraph>
         You're at the airport, scrolling through emails trying to find your boarding pass. You land, take a train to the city, and now you're searching for that train ticket PDF. At the hotel, the receptionist asks for your booking confirmation, and it's somewhere in another email thread. That evening you have concert tickets, but which app were those in again?
       </ArticleParagraph>

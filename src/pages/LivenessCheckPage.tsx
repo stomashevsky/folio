@@ -5,6 +5,7 @@ import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
 import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
+import FAQSection, { FAQItem } from '../components/sections/FAQSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
 
@@ -96,6 +97,38 @@ const keyFeatures: { id: string; title: string; description: string }[] = [
     id: 'user-guidance',
     title: 'User guidance',
     description: 'Clear gestures and instructions help users capture accurate selfies and generate stronger fraud signals.',
+  },
+]
+
+// FAQ data
+const LIVENESS_CHECK_FAQ: FAQItem[] = [
+  {
+    q: 'What is liveness detection?',
+    a: 'Liveness detection confirms that the person in front of the camera is real and physically present. It prevents spoofing attempts using photos, videos, masks or deepfakes.',
+  },
+  {
+    q: 'What types of attacks does liveness check prevent?',
+    a: 'Folio detects presentation attacks (printed photos, screens, masks), injection attacks (manipulated camera feeds), deepfakes, synthetic faces and other AI-generated fraud attempts.',
+  },
+  {
+    q: 'Is liveness detection certified?',
+    a: 'Yes. Folio liveness detection meets the ISO/IEC 30107-3 standard for presentation attack detection, validated by a NIST-accredited testing laboratory.',
+  },
+  {
+    q: 'How does passive liveness work?',
+    a: 'Passive liveness analyzes multiple frames and visual signals without requiring the user to perform specific actions. This creates a smoother experience while maintaining strong security.',
+  },
+  {
+    q: 'Does liveness detection work on all devices?',
+    a: 'Yes. Folio is designed to perform consistently across different smartphones, operating systems, camera qualities and lighting conditions.',
+  },
+  {
+    q: 'How fast is liveness verification?',
+    a: 'Most liveness checks complete in under two seconds. Auto-capture and real-time guidance help users complete the process quickly.',
+  },
+  {
+    q: 'Can liveness detection identify compromised devices?',
+    a: 'Yes. Folio detects emulators, rooted or jailbroken devices and other unsafe environments that attackers use to inject manipulated images or videos.',
   },
 ]
 
@@ -382,6 +415,9 @@ export default function LivenessCheckPage() {
             </div>
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <FAQSection faqData={LIVENESS_CHECK_FAQ} />
       </main>
       <ExploreMoreSection currentPath="/platform/liveness-check" />
       <FooterSection />

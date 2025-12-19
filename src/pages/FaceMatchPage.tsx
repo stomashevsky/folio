@@ -5,6 +5,7 @@ import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
 import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
+import FAQSection, { FAQItem } from '../components/sections/FAQSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
 
@@ -93,6 +94,38 @@ const keyFeatures = [
   },
 ]
 
+// FAQ data
+const FACE_MATCH_FAQ: FAQItem[] = [
+  {
+    q: 'How does face matching work?',
+    a: 'Folio compares a live selfie with the photo on an ID document. Advanced AI models analyze facial features to confirm that the person presenting the document is the same person pictured on it.',
+  },
+  {
+    q: 'How accurate is the face matching?',
+    a: 'Folio achieves high accuracy rates validated by independent testing labs. The system is designed to minimize both false acceptances and false rejections while performing consistently across demographics.',
+  },
+  {
+    q: 'Can face matching detect deepfakes and spoofing attempts?',
+    a: 'Yes. Folio includes liveness detection that identifies presentation attacks, deepfakes, synthetic faces and injection attempts. Multiple frames are analyzed to ensure the selfie comes from a real person.',
+  },
+  {
+    q: 'Is face matching biased toward certain demographics?',
+    a: 'Folio uses models trained on responsibly sourced data and tested to show no material bias across age, sex or skin tone. Third party evaluations confirm fair performance across demographic groups.',
+  },
+  {
+    q: 'How long does a face match check take?',
+    a: 'Most face match checks complete in under two seconds. Auto-capture and real-time guidance help users take quality selfies quickly, minimizing delays.',
+  },
+  {
+    q: 'What happens if the face match fails?',
+    a: 'If the initial match is inconclusive, users can retry with better lighting or positioning. Persistent failures can be routed to manual review where your team examines the images.',
+  },
+  {
+    q: 'Is selfie data stored securely?',
+    a: 'You control how selfie data is collected, processed and stored. Folio supports data redaction, retention policies and compliance configurations to meet regulatory requirements in your regions.',
+  },
+]
+
 export default function FaceMatchPage() {
   const [activeHowItWorksId, setActiveHowItWorksId] = useState<string | null>('compliance-rules')
   const [activeKeyFeatureId, setActiveKeyFeatureId] = useState<string | null>('flexible-controls')
@@ -139,7 +172,7 @@ export default function FaceMatchPage() {
             <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
               <img 
                 src={faceMatchHero} 
-                alt="Face match preview" 
+                alt="Face matching technology comparing live selfie with ID document photo for identity verification" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 fetchPriority="high"
                 loading="eager"
@@ -168,7 +201,7 @@ export default function FaceMatchPage() {
             <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
               <img 
                 src={faceMatchHero} 
-                alt="Face match preview" 
+                alt="Face matching technology comparing live selfie with ID document photo for identity verification" 
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
                 fetchPriority="high"
                 loading="eager"
@@ -403,6 +436,9 @@ export default function FaceMatchPage() {
             </div>
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <FAQSection faqData={FACE_MATCH_FAQ} />
       </main>
       <ExploreMoreSection currentPath="/platform/face-match" />
       <FooterSection />
