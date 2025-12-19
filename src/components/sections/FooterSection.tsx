@@ -40,6 +40,7 @@ export default function FooterSection() {
                 <FooterLink to="/wallet">Folio app</FooterLink>
                 <FooterLink to="/blog">Blog</FooterLink>
                 <FooterLink to="/government">Government</FooterLink>
+                <FooterLink to="/about">About</FooterLink>
               </div>
             </div>
             {/* Features section */}

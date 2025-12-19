@@ -5,7 +5,7 @@ import medicalScreen from '../assets/images/blog-medical-card-folio-screen.png'
 export default function HowToAddAndStoreYourMedicalCardArticlePage() {
   return (
     <BlogArticleLayout
-      title="How to add and store your medical card and health insurance in digital wallet"
+      title="How to store your medical card in a digital wallet"
       description="Learn how to store your medical card and health insurance in a digital wallet. Discover the benefits, security features, and how to manage family members' health documents."
       date="Jan 28, 2024"
       category="Product"

@@ -67,6 +67,8 @@ import IdWalletAppPage from './pages/IdWalletAppPage'
 import CardScannerAppPage from './pages/CardScannerAppPage'
 import LoyaltyCardAppPage from './pages/LoyaltyCardAppPage'
 import NotFoundPage from './pages/NotFoundPage'
+import AboutPage from './pages/AboutPage'
+import CookieConsent from './components/CookieConsent'
 
 // Fallback handler in case the script in index.html didn't run
 function RedirectHandler() {
@@ -156,6 +158,7 @@ function App() {
       <ScrollToTop />
       <RedirectHandler />
       <PrerenderReadyMarker />
+      <CookieConsent />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/wallet" element={<WalletPage />} />
@@ -223,6 +226,7 @@ function App() {
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/security" element={<SecurityPage />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>

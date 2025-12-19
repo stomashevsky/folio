@@ -63,7 +63,7 @@ export default function BusinessPage() {
               <Button
                 variant="primary"
               >
-                Contact Folio Team
+                Get in touch
               </Button>
               <Button
                 variant="secondary"
@@ -101,7 +101,7 @@ export default function BusinessPage() {
               <Button
                 variant="primary"
               >
-                Contact Folio Team
+                Get in touch
               </Button>
               <Button
                 variant="secondary"
@@ -356,7 +356,7 @@ export default function BusinessPage() {
               <Button
                 variant="primary"
               >
-                Contact Folio Team
+                Get in touch
               </Button>
             </div>
           </div>
@@ -376,7 +376,7 @@ export default function BusinessPage() {
             <Button
               variant="primary"
             >
-              Contact Folio Team
+              Get in touch
             </Button>
           </div>
         </div>

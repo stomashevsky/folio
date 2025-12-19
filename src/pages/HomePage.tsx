@@ -51,9 +51,9 @@ function HomePage() {
   const navigate = useNavigate()
 
   usePageTitle({
-    title: 'Folio | Identity infrastructure for everyone',
+    title: 'Folio | Your digital wallet for documents and identity',
     description: 'Secure document storage for individuals. Verification platform for businesses. Digital credentials for governments.',
-    ogTitle: 'Folio | Identity infrastructure for everyone',
+    ogTitle: 'Folio | Your digital wallet for documents and identity',
     ogDescription: 'Secure document storage for individuals. Verification platform for businesses. Digital credentials for governments.',
     ogImage: getOgImageUrl('folio-app-hero.png'),
     ogUrl: 'https://folio.id/'
@@ -72,7 +72,7 @@ function HomePage() {
         <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full">
           <div className="flex flex-col gap-6 items-center max-w-[768px] px-6 py-0 relative shrink-0 w-full text-center">
             <h1 className="font-bold leading-9 md:leading-[56px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px]">
-              Identity infrastructure for everyone
+              Your digital wallet for documents and identity
             </h1>
             <p className="font-normal leading-6 text-[#737373] text-lg w-full">
               Secure document storage for individuals. Verification platform for businesses. Digital credentials for governments.
@@ -103,7 +103,7 @@ function HomePage() {
             <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
               <img
                 src={folioAppHero}
-                alt="Folio Wallet app preview"
+                alt="Folio app showing passport, ID card and travel tickets organized in a digital wallet"
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               />
             </div>
@@ -128,7 +128,7 @@ function HomePage() {
             <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
               <img
                 src={folioAppHero}
-                alt="Folio Wallet app preview"
+                alt="Folio app showing passport, ID card and travel tickets organized in a digital wallet"
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               />
             </div>
@@ -263,7 +263,7 @@ function HomePage() {
             <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
               <img
                 src={governmentSolutionsHero}
-                alt="Digital credentials preview"
+                alt="Government digital credentials including voter card and national ID on mobile phone"
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               />
             </div>
@@ -291,7 +291,7 @@ function HomePage() {
             <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
               <img
                 src={governmentSolutionsHero}
-                alt="Digital credentials preview"
+                alt="Government digital credentials including voter card and national ID on mobile phone"
                 className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               />
             </div>

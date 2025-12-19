@@ -128,7 +128,7 @@ export default function BlogPage() {
     description: 'Case studies, product insights and practical guides on travel, documents and digital identity.',
     ogTitle: 'Blog | Folio Wallet',
     ogDescription: 'Case studies, product insights and practical guides on travel, documents and digital identity.',
-    ogImage: getOgImageUrl('folio-app-hero.png'),
+    ogImage: getOgImageUrl('blog-hero.png'),
     ogUrl: 'https://folio.id/blog',
     canonicalUrl: 'https://folio.id/blog',
     // Prevent filter variants from being indexed as separate pages.

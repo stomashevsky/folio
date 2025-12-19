@@ -27,7 +27,7 @@ function SecurityPage() {
     description: 'Learn how Folio protects your documents with end-to-end encryption, zero-knowledge architecture, and industry-leading security standards.',
     ogTitle: 'Security | Folio Wallet',
     ogDescription: 'Your data stays yours. Folio uses end-to-end encryption and zero-knowledge architecture to keep your documents private and secure.',
-    ogImage: getOgImageUrl('folio-app-hero.png'),
+    ogImage: getOgImageUrl('security-hero.png'),
     ogUrl: 'https://folio.id/security'
   })
 
