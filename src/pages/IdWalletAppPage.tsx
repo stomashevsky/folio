@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import { SectionHeader, ToolCard, Button, HeroTagline } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import FAQSection, { FAQItem } from '../components/sections/FAQSection'
+import GetTheAppSection from '../components/sections/GetTheAppSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
 import { scrollToSection } from '../utils/scrollToSection'
@@ -234,32 +235,8 @@ function IdWalletAppPage() {
           description="Common questions about using Folio as your ID card wallet app."
         />
 
-        {/* CTA Section */}
-        <section id="get-the-app" className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
-          <div className="flex flex-col gap-8 items-center max-w-[576px] px-6 py-0 relative shrink-0 w-full text-center">
-            <SectionHeader
-              title="Get the ID wallet app"
-              description="Download Folio and start organizing your ID cards, passports, and driver licenses today."
-              maxWidth="576px"
-            />
-            <div className="flex flex-wrap gap-3 items-center justify-center">
-              <Button
-                href="https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717"
-                target="_blank"
-                variant="primary"
-              >
-                Download for iOS
-              </Button>
-              <Button
-                href="https://play.google.com/store/apps/details?id=com.folioltd"
-                target="_blank"
-                variant="primary"
-              >
-                Download for Android
-              </Button>
-            </div>
-          </div>
-        </section>
+        {/* Get the App Section */}
+        <GetTheAppSection />
       </main>
       <FooterSection />
     </div>

@@ -1,11 +1,12 @@
 import { useState, useEffect, memo } from 'react'
 import { useLocation } from 'react-router-dom'
 import Navbar from '../components/Navbar'
-import { SectionHeader, ToolCard, HeroTagline, StoreBadge, StoreQrBadge, Button } from '../components/ui'
+import { SectionHeader, ToolCard, HeroTagline, Button } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import FAQSection, { FAQItem } from '../components/sections/FAQSection'
 import PasskeysSection from '../components/sections/PasskeysSection'
 import ReviewsSection from '../components/sections/ReviewsSection'
+import GetTheAppSection from '../components/sections/GetTheAppSection'
 import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
@@ -629,64 +630,6 @@ function StatItem({ value, description }: { value: string; description: string }
   )
 }
 
-
-function GetTheAppSection() {
-  return (
-    <section id="get-the-app" className="flex flex-col gap-6 items-center overflow-hidden px-0 py-0 md:pb-24 relative shrink-0 w-full bg-white">
-      {/* Desktop Layout */}
-      <div className="hidden lg:flex items-center max-w-[1280px] px-6 relative shrink-0 w-full">
-        <div className="flex gap-16 items-center p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
-          <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px] min-w-0">
-            <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-              Take Folio with you, wherever you go
-            </h2>
-            <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-              Your documents stay organized, synced and instantly accessible on iOS and Android.
-            </p>
-          </div>
-          <div className="flex shrink-0 gap-12 items-start justify-end relative">
-            <StoreQrBadge store="ios" />
-            <StoreQrBadge store="android" />
-          </div>
-        </div>
-      </div>
-
-      {/* Tablet Layout */}
-      <div className="hidden md:flex lg:hidden items-center max-w-[1280px] px-6 relative shrink-0 w-full">
-        <div className="flex flex-col gap-8 items-center p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
-          <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full min-w-0">
-            <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-              Take Folio with you, wherever you go
-            </h2>
-            <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-              Your documents stay organized, synced and instantly accessible on iOS and Android.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-12 items-center justify-center relative shrink-0 w-full">
-            <StoreQrBadge store="ios" />
-            <StoreQrBadge store="android" />
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Layout */}
-      <div className="flex md:hidden flex-col gap-8 items-center w-full px-6 py-16 relative shrink-0" style={BACKGROUND_STYLE}>
-        <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full">
-          <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
-            Take Folio with you, wherever you go
-          </h2>
-          <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-            Your documents stay organized, synced and instantly accessible on iOS and Android.
-          </p>
-        </div>
-        <div className="flex flex-wrap gap-3 items-start justify-center relative shrink-0 w-full">
-          <StoreBadge store="ios" />
-          <StoreBadge store="android" />
-        </div>
-      </div>
-    </section>
-  )
-}
 
 export default memo(FolioAppPage)
 
