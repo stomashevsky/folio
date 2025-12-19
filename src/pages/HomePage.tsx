@@ -203,8 +203,11 @@ function HomePage() {
             </div>
           </div>
 
-          {/* Products Grid */}
-          <div className="flex flex-col gap-10 md:gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full mt-8 md:mt-12">
+        </section>
+
+        {/* Products Grid Section */}
+        <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
+          <div className="flex flex-col gap-10 md:gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
               title="Everything you need to verify identity"
               description="Combine multiple verification methods for thorough identity checks and fraud prevention."
@@ -225,7 +228,7 @@ function HomePage() {
         </section>
 
         {/* Solutions Section */}
-        <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
+        <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           <div className="flex flex-col gap-10 md:gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-4 items-center w-full">
               <HeroTagline icon={lightbulbIcon}>Solutions</HeroTagline>
@@ -251,7 +254,7 @@ function HomePage() {
         </section>
 
         {/* Government Section */}
-        <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
+        <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
           {/* Desktop Layout */}
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
@@ -318,7 +321,7 @@ function HomePage() {
         </section>
 
         {/* Testimonial Section */}
-        <section className="flex flex-col items-center px-0 py-16 md:py-24 relative w-full" style={BACKGROUND_STYLE}>
+        <section className="bg-white flex flex-col items-center px-0 py-16 md:py-24 relative w-full">
           <div className="flex flex-col gap-8 items-center max-w-[672px] px-6 w-full">
             <p className="font-medium leading-7 md:leading-7 text-lg md:text-xl text-[#0a0a0a] text-center">
               "Working with Folio has been a transformative experience… they set a new standard of excellence for how digital identity solutions should be delivered."
