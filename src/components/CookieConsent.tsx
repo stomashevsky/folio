@@ -58,20 +58,18 @@ export default function CookieConsent() {
               Read our <a href="/privacy" className="underline hover:text-[#0a0a0a] transition-colors">Privacy Policy</a> for more information.
             </p>
           </div>
-          <div className="flex gap-3 items-center shrink-0 w-full md:w-auto">
+          <div className="flex gap-3 items-center shrink-0">
             <Button 
               variant="outline" 
-              size="sm" 
+              size="md" 
               onClick={handleDecline}
-              className="flex-1 md:flex-none"
             >
               Decline
             </Button>
             <Button 
               variant="primary" 
-              size="sm" 
+              size="md" 
               onClick={handleAccept}
-              className="flex-1 md:flex-none"
             >
               Accept all
             </Button>
