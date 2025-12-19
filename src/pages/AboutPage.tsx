@@ -95,7 +95,7 @@ function AboutPage() {
               <StatItem value="1M+" label="Documents stored" />
               <StatItem value="120+" label="Countries" />
               <StatItem value="4.7★" label="App rating" />
-              <StatItem value="365K+" label="Voters registered in Albania" />
+              <StatItem value="365K+" label="Profiles created in Albania" />
             </div>
           </div>
         </section>

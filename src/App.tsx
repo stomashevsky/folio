@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import ScrollToTop from './components/ScrollToTop'
 import HomePage from './pages/HomePage'
@@ -166,7 +166,6 @@ function App() {
         <Route path="/solutions/digital-ticketing" element={<DigitalTicketingPage />} />
         <Route path="/solutions/age-compliance" element={<AgeCompliancePage />} />
         <Route path="/solutions/client-onboarding" element={<ClientOnboardingPage />} />
-        <Route path="/business" element={<Navigate to="/solutions/digital-ticketing" replace />} />
         <Route path="/government" element={<GovernmentPage />} />
         <Route path="/platform/id-verification" element={<IdVerificationPage />} />
         <Route path="/platform/document-intelligence" element={<DocumentIntelligencePage />} />

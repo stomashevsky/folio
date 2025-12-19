@@ -80,7 +80,7 @@ function CardScannerAppPage() {
                 <Button variant="primary" onClick={() => scrollToSection('get-the-app')}>
                   Get the app
                 </Button>
-                <Button variant="secondary" onClick={() => navigate('/')}>
+                <Button variant="secondary" onClick={() => navigate('/wallet')}>
                   Learn more
                 </Button>
               </div>
@@ -112,7 +112,7 @@ function CardScannerAppPage() {
                 <Button variant="primary" onClick={() => scrollToSection('get-the-app')}>
                   Get the app
                 </Button>
-                <Button variant="secondary" onClick={() => navigate('/')}>
+                <Button variant="secondary" onClick={() => navigate('/wallet')}>
                   Learn more
                 </Button>
               </div>
