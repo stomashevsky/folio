@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, FeatureBlock, HeroTagline } from '../components/ui'
+import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
 import FooterSection from '../components/sections/FooterSection'
 import GlobalPartnersSection from '../components/sections/GlobalPartnersSection'
 import { usePageTitle } from '../hooks/usePageTitle'
@@ -70,15 +71,14 @@ export default function GovernmentPage() {
               </Button>
             </div>
           </div>
-          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-            <img 
-              src={governmentSolutionsHero} 
-              alt="Digital identity credentials preview" 
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              fetchPriority="high"
-              loading="eager"
-            />
-          </div>
+          <ImageWithPlaceholder
+            src={governmentSolutionsHero}
+            alt="Digital identity credentials preview"
+            className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+            containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
+            fetchPriority="high"
+            loading="eager"
+          />
         </div>
 
         {/* Mobile Layout */}
@@ -117,15 +117,14 @@ export default function GovernmentPage() {
               </Button>
             </div>
           </div>
-          <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
-            <img 
-              src={governmentSolutionsHero} 
-              alt="Digital identity credentials preview" 
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              fetchPriority="high"
-              loading="eager"
-            />
-          </div>
+          <ImageWithPlaceholder
+            src={governmentSolutionsHero}
+            alt="Digital identity credentials preview"
+            className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+            containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
+            fetchPriority="high"
+            loading="eager"
+          />
         </div>
       </section>
 
@@ -179,14 +178,13 @@ export default function GovernmentPage() {
       <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
         {/* Desktop Layout */}
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/426.67]">
-            <img
-              src={governmentAlbaniaCaseStudy}
-              alt="Albania case study map"
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              loading="lazy"
-            />
-          </div>
+          <ImageWithPlaceholder
+            src={governmentAlbaniaCaseStudy}
+            alt="Albania case study map"
+            className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+            containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/426.67]"
+            loading="lazy"
+          />
           <div className="flex flex-1 flex-col gap-12 items-start relative min-w-0">
             <SectionHeader
               title="Real results at national scale"
@@ -353,14 +351,13 @@ export default function GovernmentPage() {
               Read case study
             </Button>
           </div>
-          <div className="aspect-[240/426.67] relative rounded-2xl shrink-0 w-full">
-            <img
-              src={governmentAlbaniaCaseStudy}
-              alt="Albania case study map"
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              loading="lazy"
-            />
-          </div>
+          <ImageWithPlaceholder
+            src={governmentAlbaniaCaseStudy}
+            alt="Albania case study map"
+            className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+            containerClassName="aspect-[240/426.67] relative rounded-2xl shrink-0 w-full"
+            loading="lazy"
+          />
         </div>
       </section>
 

@@ -2,6 +2,7 @@ import { memo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import { SectionHeader, ToolCard, Button, HeroTagline } from '../components/ui'
+import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
 import FooterSection from '../components/sections/FooterSection'
 import GetTheAppSection from '../components/sections/GetTheAppSection'
 import { usePageTitle } from '../hooks/usePageTitle'
@@ -100,17 +101,14 @@ function HomePage() {
                 </Button>
               </div>
             </div>
-            <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-              <img
-                src={folioAppHero}
-                alt="Folio app showing passport, ID card and travel tickets organized in a digital wallet"
-                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-                loading="eager"
-                fetchPriority="high"
-                width={480}
-                height={480}
-              />
-            </div>
+            <ImageWithPlaceholder
+              src={folioAppHero}
+              alt="Folio app showing passport, ID card and travel tickets organized in a digital wallet"
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
+              loading="eager"
+              fetchPriority="high"
+            />
           </div>
 
           {/* Mobile Layout */}
@@ -129,17 +127,14 @@ function HomePage() {
                 Learn more
               </Button>
             </div>
-            <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
-              <img
-                src={folioAppHero}
-                alt="Folio app showing passport, ID card and travel tickets organized in a digital wallet"
-                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-                loading="eager"
-                fetchPriority="high"
-                width={480}
-                height={480}
-              />
-            </div>
+            <ImageWithPlaceholder
+              src={folioAppHero}
+              alt="Folio app showing passport, ID card and travel tickets organized in a digital wallet"
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
+              loading="eager"
+              fetchPriority="high"
+            />
           </div>
         </section>
 
@@ -276,16 +271,13 @@ function HomePage() {
                 </Button>
               </div>
             </div>
-            <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-              <img
-                src={governmentSolutionsHero}
-                alt="Government digital credentials including voter card and national ID on mobile phone"
-                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-                loading="lazy"
-                width={480}
-                height={480}
-              />
-            </div>
+            <ImageWithPlaceholder
+              src={governmentSolutionsHero}
+              alt="Government digital credentials including voter card and national ID on mobile phone"
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
+              loading="lazy"
+            />
           </div>
 
           {/* Mobile Layout */}
@@ -307,16 +299,13 @@ function HomePage() {
                 Learn more
               </Button>
             </div>
-            <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
-              <img
-                src={governmentSolutionsHero}
-                alt="Government digital credentials including voter card and national ID on mobile phone"
-                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-                loading="lazy"
-                width={480}
-                height={480}
-              />
-            </div>
+            <ImageWithPlaceholder
+              src={governmentSolutionsHero}
+              alt="Government digital credentials including voter card and national ID on mobile phone"
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
+              loading="lazy"
+            />
           </div>
         </section>
 

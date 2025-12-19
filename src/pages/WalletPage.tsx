@@ -184,15 +184,14 @@ function WalletPage() {
               </Button>
             </div>
           </div>
-          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-            <img 
-              src={folioAppHero} 
-              alt="Folio documents preview" 
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              fetchPriority="high"
-              loading="eager"
-            />
-          </div>
+          <ImageWithPlaceholder
+            src={folioAppHero}
+            alt="Folio documents preview"
+            className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+            containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
+            fetchPriority="high"
+            loading="eager"
+          />
         </div>
 
         {/* Mobile Layout */}
@@ -213,15 +212,14 @@ function WalletPage() {
               </Button>
             </div>
           </div>
-          <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
-            <img 
-              src={folioAppHero} 
-              alt="Folio documents preview" 
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              fetchPriority="high"
-              loading="eager"
-            />
-          </div>
+          <ImageWithPlaceholder
+            src={folioAppHero}
+            alt="Folio documents preview"
+            className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+            containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
+            fetchPriority="high"
+            loading="eager"
+          />
         </div>
       </section>
 
@@ -306,14 +304,13 @@ function WalletPage() {
       <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
         {/* Desktop Layout */}
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-            <img
-              src={folioDocumentViewer}
-              alt="Document viewer interface"
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              loading="lazy"
-            />
-          </div>
+          <ImageWithPlaceholder
+            src={folioDocumentViewer}
+            alt="Document viewer interface"
+            className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+            containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
+            loading="lazy"
+          />
           <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
             <SectionHeader
               title="A clear view of every document"
@@ -332,14 +329,13 @@ function WalletPage() {
               align="left"
             />
           </div>
-          <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
-            <img
-              src={folioDocumentViewer}
-              alt="Document viewer interface"
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              loading="lazy"
-            />
-          </div>
+          <ImageWithPlaceholder
+            src={folioDocumentViewer}
+            alt="Document viewer interface"
+            className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+            containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
+            loading="lazy"
+          />
         </div>
       </section>
 
@@ -389,14 +385,13 @@ function WalletPage() {
               align="left"
             />
           </div>
-          <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-            <img
-              src={folioStorageOrganized}
-              alt="Organized documents and cards"
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full pointer-events-none"
-              loading="lazy"
-            />
-          </div>
+          <ImageWithPlaceholder
+            src={folioStorageOrganized}
+            alt="Organized documents and cards"
+            className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full pointer-events-none"
+            containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
+            loading="lazy"
+          />
         </div>
 
         {/* Mobile Layout */}
@@ -408,14 +403,13 @@ function WalletPage() {
               align="left"
             />
           </div>
-          <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
-            <img
-              src={folioStorageOrganized}
-              alt="Organized documents and cards"
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full pointer-events-none"
-              loading="lazy"
-            />
-          </div>
+          <ImageWithPlaceholder
+            src={folioStorageOrganized}
+            alt="Organized documents and cards"
+            className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full pointer-events-none"
+            containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
+            loading="lazy"
+          />
         </div>
       </section>
 

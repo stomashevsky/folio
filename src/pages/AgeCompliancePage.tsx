@@ -153,15 +153,14 @@ export default function AgeCompliancePage() {
                 </Button>
               </div>
             </div>
-            <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-              <img 
-                src={ageVerificationHero} 
-                alt="Age verification preview" 
-                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-                fetchPriority="high"
-                loading="eager"
-              />
-            </div>
+            <ImageWithPlaceholder
+              src={ageVerificationHero}
+              alt="Age verification preview"
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
+              fetchPriority="high"
+              loading="eager"
+            />
           </div>
 
           {/* Mobile Layout */}
@@ -185,15 +184,14 @@ export default function AgeCompliancePage() {
                 </Button>
               </div>
             </div>
-            <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
-              <img 
-                src={ageVerificationHero} 
-                alt="Age verification preview" 
-                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-                fetchPriority="high"
-                loading="eager"
-              />
-            </div>
+            <ImageWithPlaceholder
+              src={ageVerificationHero}
+              alt="Age verification preview"
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
+              fetchPriority="high"
+              loading="eager"
+            />
           </div>
         </section>
 
@@ -264,14 +262,13 @@ export default function AgeCompliancePage() {
                 maxWidth="672px"
               />
             </div>
-            <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-              <img 
-                src={ageVerificationPrivacy} 
-                alt="Privacy features preview" 
-                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-                loading="lazy"
-              />
-            </div>
+            <ImageWithPlaceholder
+              src={ageVerificationPrivacy}
+              alt="Privacy features preview"
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
+              loading="lazy"
+            />
           </div>
 
           {/* Mobile Layout */}
@@ -282,14 +279,13 @@ export default function AgeCompliancePage() {
               align="left"
               maxWidth="672px"
             />
-            <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
-              <img 
-                src={ageVerificationPrivacy} 
-                alt="Privacy features preview" 
-                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-                loading="lazy"
-              />
-            </div>
+            <ImageWithPlaceholder
+              src={ageVerificationPrivacy}
+              alt="Privacy features preview"
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
+              loading="lazy"
+            />
           </div>
         </section>
 
@@ -297,14 +293,13 @@ export default function AgeCompliancePage() {
         <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           {/* Desktop Layout */}
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-            <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-              <img 
-                src={ageVerificationAgeAssurance} 
-                alt="Age assurance features preview" 
-                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-                loading="lazy"
-              />
-            </div>
+            <ImageWithPlaceholder
+              src={ageVerificationAgeAssurance}
+              alt="Age assurance features preview"
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
+              loading="lazy"
+            />
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <SectionHeader
                 title="All essential age assurance features"
@@ -323,14 +318,13 @@ export default function AgeCompliancePage() {
               align="left"
               maxWidth="672px"
             />
-            <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
-              <img 
-                src={ageVerificationAgeAssurance} 
-                alt="Age assurance features preview" 
-                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-                loading="lazy"
-              />
-            </div>
+            <ImageWithPlaceholder
+              src={ageVerificationAgeAssurance}
+              alt="Age assurance features preview"
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
+              loading="lazy"
+            />
           </div>
         </section>
 

@@ -2,6 +2,7 @@ import { memo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import { SectionHeader, ToolCard, Button, HeroTagline } from '../components/ui'
+import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
 import FooterSection from '../components/sections/FooterSection'
 import FAQSection, { FAQItem } from '../components/sections/FAQSection'
 import GetTheAppSection from '../components/sections/GetTheAppSection'
@@ -85,15 +86,14 @@ function LoyaltyCardAppPage() {
                 </Button>
               </div>
             </div>
-            <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-              <img
-                src={loyaltyCardAppHero}
-                alt="Loyalty card app preview"
-                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-                fetchPriority="high"
-                loading="eager"
-              />
-            </div>
+            <ImageWithPlaceholder
+              src={loyaltyCardAppHero}
+              alt="Loyalty card app preview"
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
+              fetchPriority="high"
+              loading="eager"
+            />
           </div>
 
           {/* Mobile Layout */}
@@ -117,15 +117,14 @@ function LoyaltyCardAppPage() {
                 </Button>
               </div>
             </div>
-            <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
-              <img
-                src={loyaltyCardAppHero}
-                alt="Loyalty card app preview"
-                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-                fetchPriority="high"
-                loading="eager"
-              />
-            </div>
+            <ImageWithPlaceholder
+              src={loyaltyCardAppHero}
+              alt="Loyalty card app preview"
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
+              fetchPriority="high"
+              loading="eager"
+            />
           </div>
         </section>
 

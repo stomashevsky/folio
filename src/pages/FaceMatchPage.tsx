@@ -169,15 +169,14 @@ export default function FaceMatchPage() {
                 </Button>
               </div>
             </div>
-            <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-              <img 
-                src={faceMatchHero} 
-                alt="Face matching technology comparing live selfie with ID document photo for identity verification" 
-                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-                fetchPriority="high"
-                loading="eager"
-              />
-            </div>
+            <ImageWithPlaceholder
+              src={faceMatchHero}
+              alt="Face matching technology comparing live selfie with ID document photo for identity verification"
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
+              fetchPriority="high"
+              loading="eager"
+            />
           </div>
 
           {/* Mobile Layout */}
@@ -198,15 +197,14 @@ export default function FaceMatchPage() {
                 </Button>
               </div>
             </div>
-            <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
-              <img 
-                src={faceMatchHero} 
-                alt="Face matching technology comparing live selfie with ID document photo for identity verification" 
-                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-                fetchPriority="high"
-                loading="eager"
-              />
-            </div>
+            <ImageWithPlaceholder
+              src={faceMatchHero}
+              alt="Face matching technology comparing live selfie with ID document photo for identity verification"
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
+              fetchPriority="high"
+              loading="eager"
+            />
           </div>
         </section>
 

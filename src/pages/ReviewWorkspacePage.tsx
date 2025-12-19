@@ -192,15 +192,14 @@ export default function ReviewWorkspacePage() {
                 </Button>
               </div>
             </div>
-            <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-square">
-              <img
-                src={reviewWorkspaceHero}
-                alt="Review workspace preview"
-                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-                fetchPriority="high"
-                loading="eager"
-              />
-            </div>
+            <ImageWithPlaceholder
+              src={reviewWorkspaceHero}
+              alt="Review workspace preview"
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-square"
+              fetchPriority="high"
+              loading="eager"
+            />
           </div>
 
           {/* Mobile Layout */}
@@ -221,15 +220,14 @@ export default function ReviewWorkspacePage() {
                 </Button>
               </div>
             </div>
-            <div className="aspect-square relative rounded-2xl shrink-0 w-full">
-              <img
-                src={reviewWorkspaceHero}
-                alt="Review workspace preview"
-                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-                fetchPriority="high"
-                loading="eager"
-              />
-            </div>
+            <ImageWithPlaceholder
+              src={reviewWorkspaceHero}
+              alt="Review workspace preview"
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="aspect-square relative rounded-2xl shrink-0 w-full"
+              fetchPriority="high"
+              loading="eager"
+            />
           </div>
         </section>
 
