@@ -29,15 +29,25 @@ export default function FooterSection() {
             </div>
           </div>
 
-          {/* Column 2: Products + Get the app */}
+          {/* Column 2: Folio + Features + Get the app */}
           <div className="flex flex-col gap-10 items-start min-w-[200px] flex-1">
-            {/* Products section */}
+            {/* Folio section */}
             <div className="flex flex-col gap-4 items-start w-full">
               <p className="font-normal leading-5 text-[#737373] text-sm w-full">
-                Products
+                Folio
               </p>
               <div className="flex flex-col gap-3 items-start w-full">
                 <FooterLink to="/wallet">Folio app</FooterLink>
+                <FooterLink to="/blog">Blog</FooterLink>
+                <FooterLink to="/government">Government</FooterLink>
+              </div>
+            </div>
+            {/* Features section */}
+            <div className="flex flex-col gap-4 items-start w-full">
+              <p className="font-normal leading-5 text-[#737373] text-sm w-full">
+                Features
+              </p>
+              <div className="flex flex-col gap-3 items-start w-full">
                 <FooterLink to="/id-wallet-app">ID wallet</FooterLink>
                 <FooterLink to="/card-scanner-app">Card scanner</FooterLink>
                 <FooterLink to="/loyalty-card-app">Loyalty cards</FooterLink>
@@ -86,7 +96,7 @@ export default function FooterSection() {
             </div>
           </div>
 
-          {/* Column 4: Solutions + Resources + Terms & Policies */}
+          {/* Column 4: Solutions + Terms & Policies */}
           <div className="flex flex-col gap-10 items-start min-w-[200px] flex-1">
             {/* Solutions section */}
             <div className="flex flex-col gap-4 items-start w-full">
@@ -97,16 +107,6 @@ export default function FooterSection() {
                 <FooterLink to="/solutions/age-compliance">Age compliance</FooterLink>
                 <FooterLink to="/solutions/client-onboarding">Client onboarding</FooterLink>
                 <FooterLink to="/solutions/digital-ticketing">Digital ticketing</FooterLink>
-              </div>
-            </div>
-            {/* Resources section */}
-            <div className="flex flex-col gap-4 items-start w-full">
-              <p className="font-normal leading-5 text-[#737373] text-sm w-full">
-                Resources
-              </p>
-              <div className="flex flex-col gap-3 items-start w-full">
-                <FooterLink to="/blog">Blog</FooterLink>
-                <FooterLink to="/government">Government</FooterLink>
               </div>
             </div>
             {/* Terms & Policies section */}
