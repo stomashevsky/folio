@@ -24,36 +24,36 @@ const FAQ_CATEGORIES: FAQCategory[] = [
     name: 'Product',
     items: [
       {
-        q: 'What is Folio?',
-        a: 'Folio is a digital identity wallet that securely stores your passports, IDs, tickets, and cards in one place. It uses end-to-end encryption and zero-knowledge architecture to protect your data. Available free on iOS and Android.',
+        q: 'How do I organize my travel documents?',
+        a: 'Folio automatically organizes your documents by type and date. You can create custom folders for specific trips, group documents by destination, and use the travel timeline to see all your upcoming and past trips in chronological order. Everything stays organized without manual sorting.',
       },
       {
-        q: 'What types of documents can I store in Folio?',
-        a: 'You can store passports, ID cards, driver\'s licenses, residence permits, travel tickets (flights, trains, hotels, events), payment cards, gift cards, loyalty cards, medical cards, insurance cards, and any other personal documents.',
+        q: 'Can I add boarding passes and event tickets?',
+        a: 'Yes. You can add boarding passes by scanning the barcode, importing a screenshot, forwarding the confirmation email to docs@folio.id, or importing .pkpass files directly. Event tickets work the same way. Folio extracts flight details, seat numbers, and gate information automatically.',
       },
       {
-        q: 'How do I add documents to Folio?',
-        a: 'You can add documents by: scanning with your camera, uploading photos from your library, importing PDFs, or forwarding booking confirmation emails to docs@folio.id. Folio automatically extracts key details from each document.',
+        q: 'How does the travel timeline work?',
+        a: 'The travel timeline automatically arranges your flights, hotel bookings, train tickets, and events in chronological order. It shows your complete itinerary for each trip, highlights upcoming departures, and keeps a history of past travels. No manual entry required.',
       },
       {
-        q: 'Is Folio free to use?',
-        a: 'Yes. Folio is completely free with unlimited document storage, travel timeline, expiry alerts, and all core features. There are no hidden fees or premium tiers.',
+        q: 'Can I scan multi-page documents?',
+        a: 'Yes. When scanning passports or visas, you can capture multiple pages in one session. Folio keeps all pages together as a single document while extracting data from each page. This works great for visas that span multiple pages or passports with stamps you want to preserve.',
       },
       {
-        q: 'What platforms is Folio available on?',
-        a: 'Folio is available on iOS (iPhone and iPad) and Android devices. You can download it from the App Store or Google Play Store.',
+        q: 'How do I quickly find a specific document?',
+        a: 'Use the search bar to find documents by name, number, or any extracted text. You can also filter by document type (passports, tickets, cards) or browse by category. Folio indexes all text from your documents, so searching for a flight number or hotel name works instantly.',
       },
       {
-        q: 'Can I access my documents offline?',
-        a: 'Yes. All your documents are stored locally on your device and available without an internet connection. Cloud sync keeps everything updated when you reconnect.',
+        q: 'Does Folio work with Apple Wallet passes?',
+        a: 'Yes. You can import .pkpass files from Apple Wallet directly into Folio. Unlike Apple Wallet, Folio extracts and organizes the data, adds it to your travel timeline, and keeps everything searchable. Your passes remain accessible even without the original .pkpass file.',
       },
       {
-        q: 'Can I share documents with family members?',
-        a: 'Yes. Folio allows you to create shared folders to safely share travel plans, tickets, or IDs with family and friends. Everyone with access sees the latest versions automatically.',
+        q: 'How do I import booking confirmations from email?',
+        a: 'Forward any booking confirmation email to docs@folio.id. Folio automatically extracts flight details, hotel reservations, train tickets, and event bookings from the email. The parsed information appears in your app within seconds, already organized in your timeline.',
       },
       {
-        q: 'Does Folio send expiry reminders?',
-        a: 'Yes. Folio sends gentle reminders before your passport, ID, or any other document expires so you\'re never caught off guard. You can customize notification timing in settings.',
+        q: 'Can I store loyalty and gift cards?',
+        a: 'Yes. Add loyalty cards by scanning the barcode or entering the number manually. Folio stores the barcode for easy scanning at checkout. Gift cards work the same way, and you can track remaining balances. All cards are searchable and organized in the Cards section.',
       },
     ],
   },
