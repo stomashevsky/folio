@@ -32,8 +32,10 @@ const BACKGROUND_STYLE = {
     'linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(90deg, rgba(229, 229, 229, 1) 0%, rgba(229, 229, 229, 1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%)',
 }
 
-// Show first 6 platform items on homepage
-const HOMEPAGE_PLATFORM_ITEMS = PLATFORM_ITEMS.slice(0, 6)
+// Selected 6 best platform items for homepage (excluding Phone/email validation)
+const HOMEPAGE_PLATFORM_ITEMS = PLATFORM_ITEMS.filter(item => 
+  ['ID verification', 'Document intelligence', 'Liveness check', 'Face match', 'NFC identity scan', 'Data source checks'].includes(item.label)
+)
 
 const SOLUTIONS = [
   { icon: ageIcon, title: 'Age compliance', description: 'Verify age for regulated industries', to: '/solutions/age-compliance' },

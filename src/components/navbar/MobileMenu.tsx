@@ -319,6 +319,19 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                       />
                     )
                   })}
+                  {/* View all products link */}
+                  <div className="w-full px-6 pt-4">
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault()
+                        e.stopPropagation()
+                        handleNavClick('/platform')
+                      }}
+                      className="text-sm font-medium text-[#737373] hover:text-[#0a0a0a] transition-colors"
+                    >
+                      View all products →
+                    </button>
+                  </div>
                 </div>
               </>
             )}

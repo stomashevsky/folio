@@ -1,8 +1,9 @@
 import { useState, useRef, useEffect } from 'react'
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate, useLocation, Link } from 'react-router-dom'
 import { MenuItem, DropdownMenuItem } from '../ui'
 import { scrollToTop } from '../../utils/scrollToTop'
 import chevronDownIcon from '../../assets/icons/ChevronDown.svg'
+import arrowRightIcon from '../../assets/icons/ArrowRight.svg'
 import { PLATFORM_ITEMS } from '../../constants/platformItems'
 
 export default function PlatformDropdown() {
@@ -50,13 +51,10 @@ export default function PlatformDropdown() {
     >
       <MenuItem
         active={isOpen}
-        className={`cursor-default ${isOpen ? '!bg-[#E5E5E5]' : ''}`}
+        className={`cursor-pointer ${isOpen ? '!bg-[#E5E5E5]' : ''}`}
         aria-haspopup="menu"
         aria-expanded={isOpen}
-        onClick={(e) => {
-          e.preventDefault()
-          // Platform button is not clickable, only dropdown items are
-        }}
+        onClick={() => handleItemClick('/platform')}
       >
         <span className="flex items-center gap-1.5">
           Platform
@@ -99,6 +97,20 @@ export default function PlatformDropdown() {
                   role="menuitem"
                 />
               ))}
+            </div>
+            {/* View all products link */}
+            <div className="border-t border-[#e5e5e5] mt-1.5 pt-1.5">
+              <Link
+                to="/platform"
+                onClick={() => {
+                  setIsOpen(false)
+                  setTimeout(() => scrollToTop(), 100)
+                }}
+                className="flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-medium text-[#737373] hover:text-[#0a0a0a] transition-colors"
+              >
+                <span>View all products</span>
+                <img src={arrowRightIcon} alt="" aria-hidden="true" className="w-4 h-4" />
+              </Link>
             </div>
           </div>
         </div>
