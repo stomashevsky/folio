@@ -7,7 +7,6 @@ import GetTheAppSection from '../components/sections/GetTheAppSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
 import { scrollToTop } from '../utils/scrollToTop'
-import { scrollToSection } from '../utils/scrollToSection'
 import { PLATFORM_ITEMS } from '../constants/platformItems'
 
 // Images
@@ -76,14 +75,6 @@ function HomePage() {
             <p className="font-normal leading-6 text-[#737373] text-lg w-full">
               Secure document storage for individuals. Verification platform for businesses. Digital credentials for governments.
             </p>
-            <div className="flex flex-wrap gap-3 items-center justify-center">
-              <Button variant="primary" onClick={() => handleNavigate('/wallet')}>
-                Get the app
-              </Button>
-              <Button variant="secondary" onClick={() => scrollToSection('platform')}>
-                For business
-              </Button>
-            </div>
           </div>
         </section>
 
