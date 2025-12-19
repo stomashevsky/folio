@@ -26,6 +26,7 @@ import fingerprintIcon from '../assets/icons/Fingerprint.svg'
 import ageIcon from '../assets/icons/Age.svg'
 import briefcaseIcon from '../assets/icons/Briefcase.svg'
 import ticketIcon from '../assets/icons/Ticket.svg'
+import lightbulbIcon from '../assets/icons/Lightbulb.svg'
 
 const BACKGROUND_STYLE = {
   backgroundImage:
@@ -212,11 +213,14 @@ function HomePage() {
         {/* Solutions Section */}
         <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
           <div className="flex flex-col gap-10 md:gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-            <SectionHeader
-              title="Built for your industry"
-              description="Tailored solutions for regulated industries and high-trust environments."
-              maxWidth="576px"
-            />
+            <div className="flex flex-col gap-4 items-center w-full">
+              <HeroTagline icon={lightbulbIcon}>Solutions</HeroTagline>
+              <SectionHeader
+                title="Built for your industry"
+                description="Tailored solutions for regulated industries and high-trust environments."
+                maxWidth="576px"
+              />
+            </div>
 
             <div className="flex flex-col sm:grid sm:grid-cols-3 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
               {SOLUTIONS.map((solution) => (

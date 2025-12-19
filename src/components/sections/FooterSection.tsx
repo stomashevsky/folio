@@ -41,7 +41,6 @@ export default function FooterSection() {
                 <FooterLink to="/id-wallet-app">ID wallet</FooterLink>
                 <FooterLink to="/card-scanner-app">Card scanner</FooterLink>
                 <FooterLink to="/loyalty-card-app">Loyalty cards</FooterLink>
-                <FooterLink to="/platform/id-verification">Platform</FooterLink>
               </div>
             </div>
             {/* Get the app section */}
