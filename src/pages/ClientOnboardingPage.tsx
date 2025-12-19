@@ -229,7 +229,7 @@ export default function ClientOnboardingPage() {
                 title="Client verification made simple"
                 maxWidth="576px"
               />
-              <div className="flex flex-col md:flex-row gap-6 items-start relative shrink-0 w-full">
+              <div className="flex flex-col md:flex-row gap-11 md:gap-6 items-start relative shrink-0 w-full">
                 <FeatureItem
                   icon={globeIcon}
                   title="Remote verification"

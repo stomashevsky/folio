@@ -183,7 +183,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         aria-modal="true"
         aria-label="Navigation menu"
       >
-        <div className="flex flex-col items-start overflow-hidden w-full">
+        <div className="flex flex-col items-start overflow-y-auto max-h-[calc(100dvh-64px)] w-full">
           <div className="flex flex-col items-start justify-start w-full py-4 relative shrink-0">
             {!showSolutionsSubmenu && !showPlatformSubmenu ? (
               /* Main Menu */

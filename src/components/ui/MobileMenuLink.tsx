@@ -43,7 +43,8 @@ export default function MobileMenuLink({
 
     // State classes - hover only on devices that support hover (not touch devices)
     // Using @media(hover:hover) to prevent sticky hover on mobile after tap
-    const stateClasses = 'bg-transparent [@media(hover:hover)]:hover:bg-[#f5f5f5]'
+    // active: provides pressed state feedback on touch devices
+    const stateClasses = 'bg-transparent [@media(hover:hover)]:hover:bg-[#f5f5f5] active:bg-[#f5f5f5]'
 
     const allClasses = `${baseClasses} ${stateClasses} ${FOCUS_RING_CLASSES} ${className}`
 

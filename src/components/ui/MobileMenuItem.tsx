@@ -41,7 +41,8 @@ export default function MobileMenuItem({
 
     // State classes - hover only on devices that support hover (not touch devices)
     // Using @media(hover:hover) to prevent sticky hover on mobile after tap
-    const stateClasses = 'bg-transparent text-[#0a0a0a] [@media(hover:hover)]:hover:bg-[#f5f5f5] [@media(hover:hover)]:hover:text-[#171717]'
+    // active: provides pressed state feedback on touch devices
+    const stateClasses = 'bg-transparent text-[#0a0a0a] [@media(hover:hover)]:hover:bg-[#f5f5f5] [@media(hover:hover)]:hover:text-[#171717] active:bg-[#f5f5f5] active:text-[#171717]'
 
     const allClasses = `${baseClasses} ${textClasses} ${stateClasses} ${FOCUS_RING_CLASSES} ${className}`
 

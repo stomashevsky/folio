@@ -32,8 +32,8 @@ export default function MobileMenuBackButton({
     // Text classes - muted color
     const textClasses = 'text-sm font-medium leading-5 text-[#737373]'
 
-    // State classes - hover background
-    const stateClasses = 'bg-transparent hover:bg-[#f5f5f5]'
+    // State classes - hover only on devices that support hover, active for touch
+    const stateClasses = 'bg-transparent [@media(hover:hover)]:hover:bg-[#f5f5f5] active:bg-[#f5f5f5]'
 
     const allClasses = `${baseClasses} ${stateClasses} ${FOCUS_RING_CLASSES} ${className}`
 

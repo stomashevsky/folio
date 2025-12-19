@@ -212,7 +212,7 @@ export default function LivenessCheckPage() {
                 />
               </div>
               {/* Mobile Layout */}
-              <div className="flex md:hidden flex-col gap-10 items-start relative shrink-0 w-full">
+              <div className="flex md:hidden flex-col gap-11 items-start relative shrink-0 w-full">
                 <FeatureHighlight
                   icon={shieldHalfIcon}
                   title="Spoof protection"
