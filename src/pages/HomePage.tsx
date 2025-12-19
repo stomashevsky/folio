@@ -1,12 +1,13 @@
 import { memo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
-import { SectionHeader, ToolCard, Button } from '../components/ui'
+import { SectionHeader, ToolCard, Button, HeroTagline } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import GetTheAppSection from '../components/sections/GetTheAppSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
 import { scrollToTop } from '../utils/scrollToTop'
+import { PLATFORM_ITEMS } from '../constants/platformItems'
 
 // Images
 import folioAppHero from '../assets/images/folio-app-hero.png'
@@ -19,12 +20,6 @@ import livenessCheckHero from '../assets/images/liveness-check-hero.mp4'
 import smartphoneIcon from '../assets/icons/Smartphone.svg'
 import shieldCheckIcon from '../assets/icons/ShieldCheck.svg'
 import landmarkIcon from '../assets/icons/Landmark.svg'
-import idCardIcon from '../assets/icons/IdCard.svg'
-import scanFaceIcon from '../assets/icons/ScanFace.svg'
-import fileSearchIcon from '../assets/icons/FileSearch.svg'
-import userCheckIcon from '../assets/icons/UserCheck.svg'
-import databaseIcon from '../assets/icons/Database.svg'
-import nfcIcon from '../assets/icons/Nfc.svg'
 import lockKeyholeIcon from '../assets/icons/LockKeyhole.svg'
 import keyRoundIcon from '../assets/icons/KeyRound.svg'
 import fingerprintIcon from '../assets/icons/Fingerprint.svg'
@@ -37,14 +32,8 @@ const BACKGROUND_STYLE = {
     'linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(90deg, rgba(229, 229, 229, 1) 0%, rgba(229, 229, 229, 1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%)',
 }
 
-const PLATFORM_PRODUCTS = [
-  { icon: idCardIcon, title: 'ID verification', description: 'Verify identity documents from 195+ countries', to: '/platform/id-verification' },
-  { icon: fileSearchIcon, title: 'Document intelligence', description: 'Extract and validate data from any document', to: '/platform/document-intelligence' },
-  { icon: scanFaceIcon, title: 'Liveness check', description: 'Detect spoofing and confirm real presence', to: '/platform/liveness-check' },
-  { icon: userCheckIcon, title: 'Face match', description: 'Compare selfies with document photos', to: '/platform/face-match' },
-  { icon: databaseIcon, title: 'Data source checks', description: 'Verify against authoritative databases', to: '/platform/data-source-checks' },
-  { icon: nfcIcon, title: 'NFC identity scan', description: 'Read chip data from electronic documents', to: '/platform/nfc-identity-scan' },
-]
+// Show first 6 platform items on homepage
+const HOMEPAGE_PLATFORM_ITEMS = PLATFORM_ITEMS.slice(0, 6)
 
 const SOLUTIONS = [
   { icon: ageIcon, title: 'Age compliance', description: 'Verify age for regulated industries', to: '/solutions/age-compliance' },
@@ -105,10 +94,7 @@ function HomePage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-2 items-start relative shrink-0 w-full">
-                <div className="flex gap-2 items-center">
-                  <img src={smartphoneIcon} alt="" className="w-5 h-5" />
-                  <span className="text-sm font-medium text-[#737373]">Folio Wallet</span>
-                </div>
+                <HeroTagline icon={smartphoneIcon}>Wallet</HeroTagline>
                 <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
                   Your documents, always with you
                 </h2>
@@ -118,9 +104,6 @@ function HomePage() {
               </div>
               <div className="flex flex-wrap gap-3 items-start relative shrink-0">
                 <Button variant="primary" onClick={() => handleNavigate('/wallet')}>
-                  Get the app
-                </Button>
-                <Button variant="outline" onClick={() => handleNavigate('/wallet')}>
                   Learn more
                 </Button>
               </div>
@@ -137,10 +120,7 @@ function HomePage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-8 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-              <div className="flex gap-2 items-center">
-                <img src={smartphoneIcon} alt="" className="w-5 h-5" />
-                <span className="text-sm font-medium text-[#737373]">Folio Wallet</span>
-              </div>
+              <HeroTagline icon={smartphoneIcon}>Wallet</HeroTagline>
               <h2 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
                 Your documents, always with you
               </h2>
@@ -150,9 +130,6 @@ function HomePage() {
             </div>
             <div className="flex flex-wrap gap-3 items-start relative shrink-0 w-full">
               <Button variant="primary" onClick={() => handleNavigate('/wallet')}>
-                Get the app
-              </Button>
-              <Button variant="outline" onClick={() => handleNavigate('/wallet')}>
                 Learn more
               </Button>
             </div>
@@ -182,10 +159,7 @@ function HomePage() {
             </div>
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-2 items-start relative shrink-0 w-full">
-                <div className="flex gap-2 items-center">
-                  <img src={shieldCheckIcon} alt="" className="w-5 h-5" />
-                  <span className="text-sm font-medium text-[#737373]">Platform</span>
-                </div>
+                <HeroTagline icon={shieldCheckIcon}>Platform</HeroTagline>
                 <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
                   Build trust at scale
                 </h2>
@@ -207,10 +181,7 @@ function HomePage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-8 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-              <div className="flex gap-2 items-center">
-                <img src={shieldCheckIcon} alt="" className="w-5 h-5" />
-                <span className="text-sm font-medium text-[#737373]">Platform</span>
-              </div>
+              <HeroTagline icon={shieldCheckIcon}>Platform</HeroTagline>
               <h2 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
                 Build trust at scale
               </h2>
@@ -241,14 +212,13 @@ function HomePage() {
           {/* Products Grid */}
           <div className="flex flex-col gap-10 md:gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full mt-8 md:mt-12">
             <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
-              {PLATFORM_PRODUCTS.map((product) => (
+              {HOMEPAGE_PLATFORM_ITEMS.map((item) => (
                 <ToolCard
-                  key={product.to}
-                  icon={product.icon}
-                  title={product.title}
-                  description={product.description}
-                  onClick={() => handleNavigate(product.to)}
-                  className="cursor-pointer hover:border-[#0a0a0a] transition-colors"
+                  key={item.path}
+                  icon={item.icon}
+                  title={item.label}
+                  description={item.description}
+                  to={item.path}
                 />
               ))}
             </div>
@@ -271,8 +241,7 @@ function HomePage() {
                   icon={solution.icon}
                   title={solution.title}
                   description={solution.description}
-                  onClick={() => handleNavigate(solution.to)}
-                  className="cursor-pointer hover:border-[#0a0a0a] transition-colors"
+                  to={solution.to}
                 />
               ))}
             </div>
@@ -285,10 +254,7 @@ function HomePage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-2 items-start relative shrink-0 w-full">
-                <div className="flex gap-2 items-center">
-                  <img src={landmarkIcon} alt="" className="w-5 h-5" />
-                  <span className="text-sm font-medium text-[#737373]">Government</span>
-                </div>
+                <HeroTagline icon={landmarkIcon}>Government</HeroTagline>
                 <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
                   Digital identity for governments
                 </h2>
@@ -317,10 +283,7 @@ function HomePage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-8 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-              <div className="flex gap-2 items-center">
-                <img src={landmarkIcon} alt="" className="w-5 h-5" />
-                <span className="text-sm font-medium text-[#737373]">Government</span>
-              </div>
+              <HeroTagline icon={landmarkIcon}>Government</HeroTagline>
               <h2 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
                 Digital identity for governments
               </h2>
@@ -347,7 +310,7 @@ function HomePage() {
         </section>
 
         {/* Security Section */}
-        <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
+        <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           <div className="flex flex-col gap-10 md:gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
               title="Security you can trust"
