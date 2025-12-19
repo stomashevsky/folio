@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
+import VideoWithPlaceholder from '../components/ui/VideoWithPlaceholder'
 import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
@@ -175,16 +176,15 @@ export default function LivenessCheckPage() {
                 </Button>
               </div>
             </div>
-            <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-              <video 
-                src={livenessCheckHero} 
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              />
-            </div>
+            <VideoWithPlaceholder
+              src={livenessCheckHero}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
+            />
           </div>
 
           {/* Mobile Layout */}
@@ -205,16 +205,15 @@ export default function LivenessCheckPage() {
                 </Button>
               </div>
             </div>
-            <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
-              <video 
-                src={livenessCheckHero} 
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              />
-            </div>
+            <VideoWithPlaceholder
+              src={livenessCheckHero}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
+            />
           </div>
         </section>
 

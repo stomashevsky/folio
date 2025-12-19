@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import { SectionHeader, ToolCard, Button, HeroTagline } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
+import VideoWithPlaceholder from '../components/ui/VideoWithPlaceholder'
 import FooterSection from '../components/sections/FooterSection'
 import GetTheAppSection from '../components/sections/GetTheAppSection'
 import { usePageTitle } from '../hooks/usePageTitle'
@@ -142,16 +143,15 @@ function HomePage() {
         <section id="platform" className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
           {/* Desktop Layout */}
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-            <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-              <video
-                src={livenessCheckHero}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              />
-            </div>
+            <VideoWithPlaceholder
+              src={livenessCheckHero}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
+            />
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-2 items-start relative shrink-0 w-full">
                 <HeroTagline icon={shieldCheckIcon}>Platform</HeroTagline>
@@ -181,16 +181,15 @@ function HomePage() {
                 Identity verification, document intelligence, liveness detection and more. Everything you need to verify customers and prevent fraud.
               </p>
             </div>
-            <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full">
-              <video
-                src={livenessCheckHero}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              />
-            </div>
+            <VideoWithPlaceholder
+              src={livenessCheckHero}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
+            />
             <div className="flex flex-wrap gap-3 items-start relative shrink-0 w-full">
               <Button variant="primary" href="mailto:contact@folio.id">
                 Get in touch

@@ -63,3 +63,5 @@ export type { ArticleImageProps } from './ArticleImage'
 // Image components
 export { default as ImageWithPlaceholder } from './ImageWithPlaceholder'
 export type { ImageWithPlaceholderProps } from './ImageWithPlaceholder'
+export { default as VideoWithPlaceholder } from './VideoWithPlaceholder'
+export type { VideoWithPlaceholderProps } from './VideoWithPlaceholder'
