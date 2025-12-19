@@ -69,7 +69,7 @@ function HomePage() {
       <Navbar />
       <main className="flex-1 w-full">
         {/* Hero Section */}
-        <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full">
+        <section className="flex flex-col gap-6 items-center overflow-hidden px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
           <div className="flex flex-col gap-6 items-center max-w-[768px] px-6 py-0 relative shrink-0 w-full text-center">
             <h1 className="font-bold leading-9 md:leading-[56px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px]">
               Your digital wallet for documents and identity
@@ -81,7 +81,7 @@ function HomePage() {
         </section>
 
         {/* Wallet Section (B2C) */}
-        <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
+        <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           {/* Desktop Layout */}
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
@@ -144,7 +144,7 @@ function HomePage() {
         </section>
 
         {/* Platform Section (B2B) */}
-        <section id="platform" className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
+        <section id="platform" className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
           {/* Desktop Layout */}
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
@@ -206,7 +206,7 @@ function HomePage() {
         </section>
 
         {/* Products Grid Section */}
-        <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
+        <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           <div className="flex flex-col gap-10 md:gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
               title="Everything you need to verify identity"
@@ -228,7 +228,7 @@ function HomePage() {
         </section>
 
         {/* Solutions Section */}
-        <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
+        <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
           <div className="flex flex-col gap-10 md:gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-4 items-center w-full">
               <HeroTagline icon={lightbulbIcon}>Solutions</HeroTagline>
@@ -254,7 +254,7 @@ function HomePage() {
         </section>
 
         {/* Government Section */}
-        <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
+        <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           {/* Desktop Layout */}
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
@@ -321,7 +321,7 @@ function HomePage() {
         </section>
 
         {/* Testimonial Section */}
-        <section className="bg-white flex flex-col items-center px-0 py-16 md:py-24 relative w-full">
+        <section className="flex flex-col items-center px-0 py-16 md:py-24 relative w-full" style={BACKGROUND_STYLE}>
           <div className="flex flex-col gap-8 items-center max-w-[672px] px-6 w-full">
             <p className="font-medium leading-7 md:leading-7 text-lg md:text-xl text-[#0a0a0a] text-center">
               "Working with Folio has been a transformative experience… they set a new standard of excellence for how digital identity solutions should be delivered."
