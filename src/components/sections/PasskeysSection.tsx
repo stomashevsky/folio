@@ -21,28 +21,22 @@ export default function PasskeysSection() {
             title="Secure access with Passkeys"
             description="Passkeys keep your documents encrypted and accessible only to you. Your data stays on your device, protected by your biometric credentials, and even Folio cannot unlock your files."
           />
-          <div className="flex flex-wrap gap-6 items-start justify-center relative shrink-0 w-full">
-            <div className="flex-[1_0_0] min-w-[280px] max-w-[400px] relative shrink-0">
-              <ToolCard
-                icon={shieldHalfIcon}
-                title="Private by design"
-                description="Every document is encrypted on your device and can be opened only with your Face ID, Touch ID or device passcode. We do not store passwords and cannot access your information."
-              />
-            </div>
-            <div className="flex-[1_0_0] min-w-[280px] max-w-[400px] relative shrink-0">
-              <ToolCard
-                icon={fingerprintIcon}
-                title="Simple to use"
-                description="Sign in instantly with your device biometrics. No passwords to create, remember or reset. Your access is always fast and effortless."
-              />
-            </div>
-            <div className="flex-[1_0_0] min-w-[280px] max-w-[400px] relative shrink-0">
-              <ToolCard
-                icon={globeIcon}
-                title="Works everywhere"
-                description="Use your passkey across iPhone, Android and modern browsers. Your secure access follows you on any device."
-              />
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+            <ToolCard
+              icon={shieldHalfIcon}
+              title="Private by design"
+              description="Every document is encrypted on your device and can be opened only with your Face ID, Touch ID or device passcode. We do not store passwords and cannot access your information."
+            />
+            <ToolCard
+              icon={fingerprintIcon}
+              title="Simple to use"
+              description="Sign in instantly with your device biometrics. No passwords to create, remember or reset. Your access is always fast and effortless."
+            />
+            <ToolCard
+              icon={globeIcon}
+              title="Works everywhere"
+              description="Use your passkey across iPhone, Android and modern browsers. Your secure access follows you on any device."
+            />
           </div>
         </div>
       </div>
