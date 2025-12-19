@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import AccordionItem from './AccordionItem'
+import ImageWithPlaceholder from './ImageWithPlaceholder'
 
 export interface AccordionItemData {
   id: string
@@ -62,14 +63,13 @@ export default function Accordion({
             onToggle={() => handleToggle(item.id)}
           >
             {showMobileImages && (item.desktopImage || item.image) && (
-              <div className="aspect-[240/240] relative rounded-2xl shrink-0 w-full mt-4">
-                <img
-                  src={item.desktopImage || item.image}
-                  alt={item.title}
-                  className="absolute inset-0 w-full h-full object-center object-cover rounded-2xl"
-                  loading="lazy"
-                />
-              </div>
+              <ImageWithPlaceholder
+                src={item.desktopImage || item.image || ''}
+                alt={item.title}
+                className="absolute inset-0 w-full h-full object-center object-cover rounded-2xl"
+                containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full mt-4"
+                loading="lazy"
+              />
             )}
           </AccordionItem>
         )

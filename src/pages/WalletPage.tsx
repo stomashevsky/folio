@@ -2,6 +2,7 @@ import { useState, useEffect, memo } from 'react'
 import { useLocation } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import { SectionHeader, ToolCard, HeroTagline, Button } from '../components/ui'
+import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
 import FooterSection from '../components/sections/FooterSection'
 import FAQSection, { FAQItem } from '../components/sections/FAQSection'
 import PasskeysSection from '../components/sections/PasskeysSection'
@@ -483,14 +484,13 @@ function EverythingInOnePlaceSection() {
     <section id="everything-in-one-place" className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
       {/* Desktop Layout */}
       <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-        <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-          <img 
-            src={activeItem.desktopImage} 
-            alt={activeItem.title}
-            className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-            loading="lazy"
-          />
-        </div>
+        <ImageWithPlaceholder
+          src={activeItem.desktopImage || ''}
+          alt={activeItem.title}
+          className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+          containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
+          loading="lazy"
+        />
         <div className="flex flex-1 flex-col gap-6 items-start relative min-w-0">
           <SectionHeader
             title="Everything in one secure place"
@@ -571,14 +571,13 @@ function TicketsAndBookingsSection() {
             showMobileImages={false}
           />
         </div>
-        <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]">
-          <img 
-            src={activeItem.image} 
-            alt={activeItem.title}
-            className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-            loading="lazy"
-          />
-        </div>
+        <ImageWithPlaceholder
+          src={activeItem.image || ''}
+          alt={activeItem.title}
+          className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+          containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
+          loading="lazy"
+        />
       </div>
 
       {/* Mobile Layout */}

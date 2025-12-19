@@ -54,3 +54,7 @@ export type { ArticleTableColumn, ArticleTableRow, ArticleTableProps } from './a
 // Article media components
 export { default as ArticleImage } from './ArticleImage'
 export type { ArticleImageProps } from './ArticleImage'
+
+// Image components
+export { default as ImageWithPlaceholder } from './ImageWithPlaceholder'
+export type { ImageWithPlaceholderProps } from './ImageWithPlaceholder'
