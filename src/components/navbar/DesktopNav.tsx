@@ -38,11 +38,11 @@ export default function DesktopNav() {
 
   const handleGetAppClick = (e: React.MouseEvent) => {
     e.preventDefault()
-    const isHomePage = location.pathname === '/'
-    if (isHomePage) {
+    const isWalletPage = location.pathname === '/wallet'
+    if (isWalletPage) {
       scrollToSection('get-the-app')
     } else {
-      navigate('/')
+      navigate('/wallet')
       setTimeout(() => {
         scrollToSection('get-the-app')
       }, 100)
@@ -61,8 +61,8 @@ export default function DesktopNav() {
         </div>
 
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-1 items-center">
-          <MenuItem onClick={() => handleNavClick('/')}>
-            Folio app
+          <MenuItem onClick={() => handleNavClick('/wallet')}>
+            Wallet
           </MenuItem>
           <PlatformDropdown />
           <SolutionsDropdown />

@@ -37,12 +37,12 @@ export default function FooterSection() {
                 Folio Wallet
               </p>
               <div className="flex flex-col gap-3 items-start w-full">
-                <FooterLink to="/">Folio app</FooterLink>
+                <FooterLink to="/wallet">Wallet</FooterLink>
                 <FooterLink to="/id-wallet-app">ID wallet</FooterLink>
                 <FooterLink to="/card-scanner-app">Card scanner</FooterLink>
                 <FooterLink to="/loyalty-card-app">Loyalty cards</FooterLink>
+                <FooterLink to="/platform">Platform</FooterLink>
                 <FooterLink to="/government">Government</FooterLink>
-                <FooterLink to="/government/playground">Playground</FooterLink>
                 <FooterLink to="/blog">Blog</FooterLink>
               </div>
             </div>

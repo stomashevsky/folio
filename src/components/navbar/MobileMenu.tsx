@@ -190,15 +190,15 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               <>
                 <div className="flex flex-col gap-0 items-start justify-start w-full">
                   <MobileMenuItem
-                    active={isActive('/') && location.pathname === '/'}
+                    active={isActive('/wallet')}
                     onClick={(e) => {
                       e.preventDefault()
                       e.stopPropagation()
-                      handleNavClick('/')
+                      handleNavClick('/wallet')
                     }}
-                    aria-current={isActive('/') && location.pathname === '/' ? 'page' : undefined}
+                    aria-current={isActive('/wallet') ? 'page' : undefined}
                   >
-                    Folio app
+                    Wallet
                   </MobileMenuItem>
                   <MobileMenuItem
                     active={isActive('/platform')}
@@ -246,11 +246,11 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     onClick={(e) => {
                       e.preventDefault()
                       handleClose()
-                      const isHomePage = location.pathname === '/'
-                      if (isHomePage) {
+                      const isWalletPage = location.pathname === '/wallet'
+                      if (isWalletPage) {
                         scrollToSection('get-the-app')
                       } else {
-                        navigate('/')
+                        navigate('/wallet')
                         setTimeout(() => {
                           scrollToSection('get-the-app')
                         }, 100)

@@ -1,7 +1,9 @@
 import { BrowserRouter, Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import ScrollToTop from './components/ScrollToTop'
-import FolioAppPage from './pages/FolioAppPage'
+import HomePage from './pages/HomePage'
+import WalletPage from './pages/WalletPage'
+import PlatformPage from './pages/PlatformPage'
 import PlaygroundPage from './pages/PlaygroundPage'
 import DigitalTicketingPage from './pages/DigitalTicketingPage'
 import AgeCompliancePage from './pages/AgeCompliancePage'
@@ -156,7 +158,9 @@ function App() {
       <RedirectHandler />
       <PrerenderReadyMarker />
       <Routes>
-        <Route path="/" element={<FolioAppPage />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/wallet" element={<WalletPage />} />
+        <Route path="/platform" element={<PlatformPage />} />
         <Route path="/government/playground" element={<PlaygroundPage />} />
         <Route path="/solutions/digital-ticketing" element={<DigitalTicketingPage />} />
         <Route path="/solutions/age-compliance" element={<AgeCompliancePage />} />

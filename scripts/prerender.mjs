@@ -16,8 +16,20 @@ const OG_IMAGE_BASE_URL = 'https://stomashevsky.github.io/folio/og-images'
 const STATIC_PAGES = [
   {
     path: '/',
-    title: 'Folio Wallet | Digital identity and global verification solutions',
-    description: 'Folio powers secure digital identity, seamless document storage and global verification solutions for individuals, businesses and governments.',
+    title: 'Folio | Identity infrastructure for everyone',
+    description: 'Secure document storage for individuals. Verification platform for businesses. Digital credentials for governments.',
+    ogImage: 'folio-app-hero.png',
+  },
+  {
+    path: '/wallet',
+    title: 'Folio Wallet | Digital document wallet app',
+    description: 'Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible.',
+    ogImage: 'folio-app-hero.png',
+  },
+  {
+    path: '/platform',
+    title: 'Verification Platform | Folio',
+    description: 'Identity verification, document intelligence, liveness detection and more. Build trust at scale with Folio verification platform.',
     ogImage: 'folio-app-hero.png',
   },
   {
