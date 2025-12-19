@@ -88,7 +88,7 @@ const FOLIO_APP_FAQ: FAQItem[] = [
   },
   {
     q: 'What happens if I lose my phone?',
-    a: 'If you have cloud sync enabled, your encrypted documents are backed up and can be restored on a new device. We recommend enabling cloud sync for backup.',
+    a: 'If you have a Folio account, your encrypted documents are backed up and can be restored on a new device. Just sign in and everything will be there.',
   },
 ]
 
