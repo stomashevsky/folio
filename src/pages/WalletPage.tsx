@@ -78,6 +78,18 @@ const FOLIO_APP_FAQ: FAQItem[] = [
     q: 'Is Folio free?',
     a: 'Yes. Folio is completely free with unlimited document storage, travel timeline, expiry alerts and all core features.',
   },
+  {
+    q: 'How does the travel timeline work?',
+    a: 'The travel timeline automatically arranges your flights, hotel bookings, train tickets, and events in chronological order. It shows your complete itinerary for each trip, highlights upcoming departures, and keeps a history of past travels. No manual entry required.',
+  },
+  {
+    q: 'Does Folio work with Apple Wallet passes?',
+    a: 'Yes. You can import .pkpass files from Apple Wallet directly into Folio. Unlike Apple Wallet, Folio extracts and organizes the data, adds it to your travel timeline, and keeps everything searchable.',
+  },
+  {
+    q: 'What happens if I lose my phone?',
+    a: 'If you have cloud sync enabled, your encrypted documents are backed up and can be restored on a new device. We recommend enabling cloud sync for backup.',
+  },
 ]
 
 const featuresItems: AccordionItemData[] = [

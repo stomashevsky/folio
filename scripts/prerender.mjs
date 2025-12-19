@@ -175,13 +175,6 @@ const STATIC_PAGES = [
     description: 'Learn about Folio, the digital identity wallet for secure document storage and verification.',
     ogImage: 'folio-app-hero.png',
   },
-  // FAQ page
-  {
-    path: '/faq',
-    title: 'Frequently Asked Questions | Folio',
-    description: 'Find answers to common questions about Folio Wallet, digital identity, security, and more.',
-    ogImage: 'folio-app-hero.png',
-  },
 ]
 
 // Blog OG image mapping (same as BLOG_OG_IMAGE_BY_SLUG in blogArticles.ts)
