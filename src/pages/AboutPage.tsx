@@ -1,4 +1,5 @@
 import { memo } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import { SectionHeader, ToolCard, Button } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
@@ -19,6 +20,9 @@ const BACKGROUND_STYLE = {
 }
 
 function AboutPage() {
+  const navigate = useNavigate()
+  const location = useLocation()
+
   usePageTitle({
     title: 'About | Folio',
     description: 'Folio is a digital identity company building secure document storage for individuals, verification solutions for businesses, and digital credentials for governments.',
@@ -27,6 +31,18 @@ function AboutPage() {
     ogImage: getOgImageUrl('folio-app-hero.png'),
     ogUrl: 'https://folio.id/about'
   })
+
+  const handleGetApp = () => {
+    const isWalletPage = location.pathname === '/wallet'
+    if (isWalletPage) {
+      scrollToSection('get-the-app')
+    } else {
+      navigate('/wallet')
+      setTimeout(() => {
+        scrollToSection('get-the-app')
+      }, 100)
+    }
+  }
 
   return (
     <div className="flex flex-col items-start min-h-screen relative w-full">
@@ -136,7 +152,7 @@ function AboutPage() {
                   <Button variant="primary" href="mailto:contact@folio.id">
                     Contact us
                   </Button>
-                  <Button variant="outline" onClick={() => scrollToSection('get-the-app')}>
+                  <Button variant="outline" onClick={handleGetApp}>
                     Get the app
                   </Button>
                 </div>
@@ -196,7 +212,7 @@ function AboutPage() {
                   <Button variant="primary" href="mailto:contact@folio.id">
                     Contact us
                   </Button>
-                  <Button variant="outline" onClick={() => scrollToSection('get-the-app')}>
+                  <Button variant="outline" onClick={handleGetApp}>
                     Get the app
                   </Button>
                 </div>

@@ -4,8 +4,8 @@ import { SectionHeader, ToolCard, Button, HeroTagline } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
-import { scrollToTop } from '../utils/scrollToTop'
-import { useNavigate } from 'react-router-dom'
+import { scrollToSection } from '../utils/scrollToSection'
+import { useNavigate, useLocation } from 'react-router-dom'
 import lockKeyholeIcon from '../assets/icons/LockKeyhole.svg'
 import keyRoundIcon from '../assets/icons/KeyRound.svg'
 import smartphoneIcon from '../assets/icons/Smartphone.svg'
@@ -21,6 +21,7 @@ const BACKGROUND_STYLE = {
 
 function SecurityPage() {
   const navigate = useNavigate()
+  const location = useLocation()
   
   usePageTitle({
     title: 'Security | Folio Wallet',
@@ -32,10 +33,15 @@ function SecurityPage() {
   })
 
   const handleGetApp = () => {
-    navigate('/')
-    setTimeout(() => {
-      scrollToTop()
-    }, 100)
+    const isWalletPage = location.pathname === '/wallet'
+    if (isWalletPage) {
+      scrollToSection('get-the-app')
+    } else {
+      navigate('/wallet')
+      setTimeout(() => {
+        scrollToSection('get-the-app')
+      }, 100)
+    }
   }
 
   return (
