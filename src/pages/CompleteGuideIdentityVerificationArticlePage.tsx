@@ -6,7 +6,7 @@ export default function CompleteGuideIdentityVerificationArticlePage() {
     <BlogArticleLayout
       title="The complete guide to digital identity verification"
       description="A practical guide to identity verification: how it works, why it matters, and how to implement it without losing users along the way."
-      date="Dec 18, 2025"
+      date="Dec 5, 2025"
       category="Guides"
       slug="complete-guide-identity-verification"
     >

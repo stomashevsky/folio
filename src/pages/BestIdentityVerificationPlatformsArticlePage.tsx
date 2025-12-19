@@ -25,7 +25,7 @@ export default function BestIdentityVerificationPlatformsArticlePage() {
     <BlogArticleLayout
       title="Best identity verification platforms in 2025"
       description="A practical comparison of identity verification platforms for businesses. Learn which solution fits your needs: Folio, Onfido, Veriff, or Jumio."
-      date="Dec 15, 2025"
+      date="Dec 19, 2025"
       category="Research"
       slug="best-identity-verification-platforms"
     >
