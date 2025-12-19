@@ -205,6 +205,11 @@ function HomePage() {
 
           {/* Products Grid */}
           <div className="flex flex-col gap-10 md:gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full mt-8 md:mt-12">
+            <SectionHeader
+              title="Everything you need to verify identity"
+              description="Combine multiple verification methods for thorough identity checks and fraud prevention."
+              maxWidth="576px"
+            />
             <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
               {PLATFORM_ITEMS.map((item) => (
                 <ToolCard
