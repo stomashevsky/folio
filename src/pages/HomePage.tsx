@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
-import { SectionHeader, ToolCard, Button, HeroTagline } from '../components/ui'
+import { SectionHeader, ToolCard, PhotoCard, Button, HeroTagline } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
 import VideoWithPlaceholder from '../components/ui/VideoWithPlaceholder'
 import FooterSection from '../components/sections/FooterSection'
@@ -239,11 +239,11 @@ function HomePage() {
               description="Combine multiple verification methods for thorough identity checks and fraud prevention."
               maxWidth="576px"
             />
-            <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
+            <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
               {PLATFORM_ITEMS.map((item) => (
-                <ToolCard
+                <PhotoCard
                   key={item.path}
-                  icon={item.icon}
+                  image={item.image}
                   title={item.label}
                   description={item.description}
                   to={item.path}

@@ -1,0 +1,62 @@
+import { Link } from 'react-router-dom'
+import { scrollToTop } from '../../utils/scrollToTop'
+import arrowRightIcon from '../../assets/icons/ArrowRight.svg'
+
+export interface PhotoCardProps {
+  image: string
+  title: string
+  description: string
+  to?: string
+  className?: string
+}
+
+export default function PhotoCard({ image, title, description, to, className = '' }: PhotoCardProps) {
+  const baseClasses = "bg-white border border-[#e5e5e5] border-solid w-full min-w-0 relative rounded-2xl overflow-hidden flex flex-col shadow-[0px_4px_6px_-1px_rgba(10,13,18,0.06),0px_2px_4px_-2px_rgba(10,13,18,0.06)]"
+  const combinedClasses = `${baseClasses} ${className}`.trim()
+
+  const handleClick = () => {
+    setTimeout(() => {
+      scrollToTop()
+    }, 0)
+  }
+  
+  return (
+    <div className={combinedClasses}>
+      {/* Image with 1:1 aspect ratio */}
+      <div className="aspect-square relative w-full shrink-0">
+        <img 
+          src={image} 
+          alt="" 
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          loading="lazy"
+        />
+      </div>
+      
+      {/* Content */}
+      <div className="flex flex-col gap-6 items-start p-6 w-full h-full min-w-0">
+        {/* Title and Description */}
+        <div className="flex flex-col gap-1.5 items-start w-full flex-1 min-w-0">
+          <p className="font-semibold leading-6 text-base text-[#0a0a0a] w-full break-words">
+            {title}
+          </p>
+          <p className="font-normal leading-5 text-[#737373] text-sm w-full break-words line-clamp-2">
+            {description}
+          </p>
+        </div>
+        
+        {/* Learn more button */}
+        {to && (
+          <Link
+            to={to}
+            onClick={handleClick}
+            className="bg-[#f5f5f5] flex items-center gap-2 h-8 px-3 py-2 rounded-full text-xs font-medium text-[#171717] hover:bg-[#e5e5e5] transition-colors shrink-0 mt-auto"
+          >
+            <span>Learn more</span>
+            <img src={arrowRightIcon} alt="" aria-hidden="true" className="w-4 h-4" />
+          </Link>
+        )}
+      </div>
+    </div>
+  )
+}
+
