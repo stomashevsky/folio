@@ -12,7 +12,6 @@ import { scrollToTop } from '../utils/scrollToTop'
 import { PLATFORM_ITEMS } from '../constants/platformItems'
 
 // Images
-import folioAppHero from '../assets/images/folio-app-hero.png'
 import folioHeroPhones from '../assets/images/folio-hero-phones.png'
 import governmentSolutionsHero from '../assets/images/government-solutions-hero.png'
 import governmentTestimonialAvatar from '../assets/images/government-testimonial-avatar.png'
