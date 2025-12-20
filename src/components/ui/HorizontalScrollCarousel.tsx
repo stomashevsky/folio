@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect, useCallback, ReactNode, useMemo } from 'react'
 import { SectionHeader } from './index'
+import Button from './Button'
 import chevronLeftIcon from '../../assets/icons/ChevronLeft.svg'
 import chevronRightIcon from '../../assets/icons/ChevronRight.svg'
 
@@ -83,30 +84,24 @@ export default function HorizontalScrollCarousel({
 
   const NavigationButtons = () => (
     <div className="flex gap-3 items-center">
-      <button
+      <Button
+        variant="secondary"
+        size="sm"
         onClick={() => scroll('left')}
         disabled={!canScrollLeft}
-        className={`flex items-center justify-center rounded-full size-9 transition-all ${
-          canScrollLeft 
-            ? 'bg-[#f5f5f5] hover:bg-[#e5e5e5] cursor-pointer' 
-            : 'bg-[#fafafa] opacity-40'
-        }`}
         aria-label="Scroll left"
       >
         <img src={chevronLeftIcon} alt="" aria-hidden="true" className="w-4 h-4" />
-      </button>
-      <button
+      </Button>
+      <Button
+        variant="secondary"
+        size="sm"
         onClick={() => scroll('right')}
         disabled={!canScrollRight}
-        className={`flex items-center justify-center rounded-full size-9 transition-all ${
-          canScrollRight 
-            ? 'bg-[#f5f5f5] hover:bg-[#e5e5e5] cursor-pointer' 
-            : 'bg-[#fafafa] opacity-40'
-        }`}
         aria-label="Scroll right"
       >
         <img src={chevronRightIcon} alt="" aria-hidden="true" className="w-4 h-4" />
-      </button>
+      </Button>
     </div>
   )
 
@@ -127,10 +122,10 @@ export default function HorizontalScrollCarousel({
       </div>
 
       {/* Scrollable container */}
-      <div className="w-full overflow-hidden">
+      <div className="w-full overflow-hidden py-4">
         <div
           ref={scrollContainerRef}
-          className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
+          className="flex gap-6 overflow-x-auto py-4 -my-4 scroll-smooth snap-x snap-mandatory scrollbar-hide"
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',

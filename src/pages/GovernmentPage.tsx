@@ -260,7 +260,7 @@ export default function GovernmentPage() {
             </div>
             {/* Case Study Button */}
             <Button
-              variant="outline"
+              variant="secondary"
               onClick={() => navigate('/blog/albanian-diaspora-voter-registration')}
             >
               Read case study
@@ -345,7 +345,7 @@ export default function GovernmentPage() {
             </div>
             {/* Case Study Button */}
             <Button
-              variant="outline"
+              variant="secondary"
               onClick={() => navigate('/blog/albanian-diaspora-voter-registration')}
             >
               Read case study
@@ -382,7 +382,7 @@ export default function GovernmentPage() {
                 onClick={() => {
                   window.location.href = 'mailto:contact@folio.id'
                 }}
-                variant="outline"
+                variant="secondary"
               >
                 Get in touch
               </Button>
@@ -416,7 +416,7 @@ export default function GovernmentPage() {
               onClick={() => {
                 window.location.href = 'mailto:contact@folio.id'
               }}
-              variant="outline"
+              variant="secondary"
               fullWidth
             >
               Get in touch

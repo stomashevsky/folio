@@ -1,4 +1,5 @@
 import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react'
+import { Link } from 'react-router-dom'
 import { FOCUS_RING_CLASSES } from './focusStyles'
 
 type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'subtle'
@@ -13,6 +14,7 @@ interface BaseButtonProps {
   icon?: ReactNode
   iconPosition?: 'left' | 'right'
   href?: string
+  to?: string // React Router Link path
   target?: string
   rel?: string
   loading?: boolean
@@ -25,13 +27,14 @@ type ButtonProps = BaseButtonProps &
   }
 
 /**
- * Button component that can render as either a button or anchor tag
+ * Button component that can render as button, anchor tag, or React Router Link
  * Automatically adds security attributes (rel="noopener noreferrer") for external links
  * 
  * @param variant - Visual style variant: 'primary', 'secondary', 'outline', 'ghost', or 'subtle'
  * @param size - Size of the button: 'sm', 'md', or 'lg'
  * @param fullWidth - Whether the button should take full width of container
- * @param href - If provided, renders as anchor tag instead of button
+ * @param href - If provided, renders as anchor tag (for external links)
+ * @param to - If provided, renders as React Router Link (for internal navigation)
  * @param target - Target for anchor tag (e.g., '_blank')
  * @param rel - Rel attribute for anchor tag (auto-added for external links)
  * @param disabled - Whether the button is disabled
@@ -48,13 +51,14 @@ export default function Button({
   icon,
   iconPosition = 'right',
   href,
+  to,
   target,
   rel,
   type = 'button',
   ...props 
 }: ButtonProps) {
   // Base classes for all buttons
-  const baseClasses = 'box-border flex gap-2 items-center justify-center rounded-full outline-none focus-visible:outline-none transition-all transform-gpu'
+  const baseClasses = 'box-border flex gap-2 items-center justify-center rounded-full outline-none focus-visible:outline-none transition-all transform-gpu cursor-pointer disabled:cursor-not-allowed'
   
   // Size classes
   const sizeClasses = {
@@ -66,7 +70,7 @@ export default function Button({
   // Variant classes with improved states
   const variantClasses: Record<ButtonVariant, string> = {
     primary: `bg-[#171717] text-[#fafafa] hover:bg-[linear-gradient(90deg,rgba(255,255,255,0.1)_0%,rgba(255,255,255,0.1)_100%),linear-gradient(90deg,#171717_0%,#171717_100%)] active:bg-[#171717]/75 ${FOCUS_RING_CLASSES} disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#171717] font-medium leading-5 transition-all duration-150`,
-    secondary: `bg-[#f5f5f5] text-[#171717] hover:bg-[linear-gradient(90deg,rgba(10,10,10,0.1)_0%,rgba(10,10,10,0.1)_100%),linear-gradient(90deg,#f5f5f5_0%,#f5f5f5_100%)] active:bg-[#e5e5e5] ${FOCUS_RING_CLASSES} disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#f5f5f5] font-medium leading-5 transition-all duration-150`,
+    secondary: `bg-[#7676801f] text-[#171717] hover:bg-[#76768033] active:bg-[#76768040] ${FOCUS_RING_CLASSES} disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#7676801f] font-medium leading-5 transition-all duration-150`,
     outline: `bg-white border border-[#e5e5e5] border-solid text-[#0a0a0a] hover:bg-[#f5f5f5] hover:shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] active:bg-[#e5e5e5] active:shadow-none ${FOCUS_RING_CLASSES} focus-visible:border-[#a3a3a3] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:shadow-none font-medium leading-5 transition-all duration-150`,
     ghost: `bg-transparent text-[#0a0a0a] hover:bg-[#f5f5f5] active:bg-[#e5e5e5] ${FOCUS_RING_CLASSES} disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent font-medium leading-5 transition-all duration-150`,
     subtle: `bg-transparent text-[#737373] hover:text-[#0a0a0a] hover:bg-[#fafafa] active:text-[#0a0a0a] active:bg-[#f5f5f5] ${FOCUS_RING_CLASSES} disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:text-[#737373] disabled:hover:bg-transparent font-normal leading-5 transition-all duration-150 cursor-pointer`
@@ -125,7 +129,31 @@ export default function Button({
   // Icon wrapper with color inversion for primary variant (dark background needs white icons)
   const iconClasses = variant === 'primary' ? 'shrink-0 brightness-0 invert' : 'shrink-0'
 
-  // If href is provided, render as anchor tag
+  // If to is provided, render as React Router Link (for SPA navigation)
+  if (to) {
+    const iconElement = icon ? <span className={iconClasses}>{icon}</span> : null
+    
+    return (
+      <Link to={to} className={allClasses}>
+        {loading && <LoadingSpinner />}
+        {loading ? (
+          <span className="opacity-0">
+            {iconPosition === 'left' && iconElement}
+            {children}
+            {iconPosition === 'right' && iconElement}
+          </span>
+        ) : (
+          <>
+            {iconPosition === 'left' && iconElement}
+            {children}
+            {iconPosition === 'right' && iconElement}
+          </>
+        )}
+      </Link>
+    )
+  }
+
+  // If href is provided, render as anchor tag (for external links)
   if (href) {
     const anchorProps = {
       href,

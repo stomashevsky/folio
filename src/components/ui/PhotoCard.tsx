@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
 import { scrollToTop } from '../../utils/scrollToTop'
+import Button from './Button'
 import arrowRightIcon from '../../assets/icons/ArrowRight.svg'
 
 export interface PhotoCardProps {
@@ -54,14 +54,15 @@ export default function PhotoCard({ image, title, description, to, className = '
         
         {/* Learn more button */}
         {to && (
-          <Link
+          <Button
+            variant="secondary"
             to={to}
             onClick={handleClick}
-            className="bg-[#f5f5f5] flex items-center gap-2 h-8 px-3 py-2 rounded-full text-xs font-medium text-[#171717] hover:bg-[#e5e5e5] transition-colors shrink-0 mt-auto"
+            icon={<img src={arrowRightIcon} alt="" aria-hidden="true" className="w-4 h-4" />}
+            className="!h-8 !text-xs mt-auto"
           >
-            <span>Learn more</span>
-            <img src={arrowRightIcon} alt="" aria-hidden="true" className="w-4 h-4" />
-          </Link>
+            Learn more
+          </Button>
         )}
       </div>
     </div>
