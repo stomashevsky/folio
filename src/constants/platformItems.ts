@@ -33,6 +33,7 @@ export interface PlatformItem {
 }
 
 export const PLATFORM_ITEMS: PlatformItem[] = [
+  // СБОР ДАННЫХ
   {
     label: 'ID verification',
     path: '/platform/id-verification',
@@ -48,6 +49,14 @@ export const PLATFORM_ITEMS: PlatformItem[] = [
     description: 'Read secure chip data from compatible IDs and passports.'
   },
   {
+    label: 'Document intelligence',
+    path: '/platform/document-intelligence',
+    icon: sparklesIcon,
+    image: documentIntelligenceHero,
+    description: 'Extract and analyze data from submitted documents.'
+  },
+  // БИОМЕТРИЯ
+  {
     label: 'Face match',
     path: '/platform/face-match',
     icon: circleUserIcon,
@@ -61,19 +70,13 @@ export const PLATFORM_ITEMS: PlatformItem[] = [
     image: livenessCheckCard,
     description: 'Confirm that the user is physically present.'
   },
+  // ПРОВЕРКА ДАННЫХ
   {
     label: 'Data source checks',
     path: '/platform/data-source-checks',
     icon: databaseIcon,
     image: dataSourceChecksHero,
     description: 'Validate user information against trusted databases.'
-  },
-  {
-    label: 'Document intelligence',
-    path: '/platform/document-intelligence',
-    icon: sparklesIcon,
-    image: documentIntelligenceHero,
-    description: 'Extract and analyze data from submitted documents.'
   },
   {
     label: 'Phone and email validation',
@@ -83,19 +86,21 @@ export const PLATFORM_ITEMS: PlatformItem[] = [
     description: 'Confirm ownership and detect risky contact details.'
   },
   {
-    label: 'Dynamic flow',
-    path: '/platform/dynamic-flow',
-    icon: gitForkIcon,
-    image: dynamicFlowHero,
-    description: 'Coordinate identity checks with flexible logic.'
-  },
-  {
     label: 'Behavior insights',
     path: '/platform/behavior-insights',
     icon: waypointsIcon,
     image: behaviorInsightsHero,
     description: 'Device and usage patterns for added context.'
   },
+  // ОРКЕСТРАЦИЯ
+  {
+    label: 'Dynamic flow',
+    path: '/platform/dynamic-flow',
+    icon: gitForkIcon,
+    image: dynamicFlowHero,
+    description: 'Coordinate identity checks with flexible logic.'
+  },
+  // РЕЗУЛЬТАТЫ
   {
     label: 'Review workspace',
     path: '/platform/review-workspace',

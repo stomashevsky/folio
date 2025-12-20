@@ -47,6 +47,7 @@ const SOLUTIONS_ITEMS = [
 ]
 
 const PLATFORM_ITEMS = [
+  // СБОР ДАННЫХ
   {
     label: 'ID verification',
     path: '/platform/id-verification',
@@ -60,6 +61,13 @@ const PLATFORM_ITEMS = [
     description: 'Read secure chip data from compatible IDs and passports.'
   },
   {
+    label: 'Document intelligence',
+    path: '/platform/document-intelligence',
+    icon: sparklesIcon,
+    description: 'Extract and analyze data from submitted documents.'
+  },
+  // БИОМЕТРИЯ
+  {
     label: 'Face match',
     path: '/platform/face-match',
     icon: circleUserIcon,
@@ -71,17 +79,12 @@ const PLATFORM_ITEMS = [
     icon: scanFaceIcon,
     description: 'Confirm that the user is physically present.'
   },
+  // ПРОВЕРКА ДАННЫХ
   {
     label: 'Data source checks',
     path: '/platform/data-source-checks',
     icon: databaseIcon,
     description: 'Validate user information against trusted databases.'
-  },
-  {
-    label: 'Document intelligence',
-    path: '/platform/document-intelligence',
-    icon: sparklesIcon,
-    description: 'Extract and analyze data from submitted documents.'
   },
   {
     label: 'Phone and email validation',
@@ -90,17 +93,19 @@ const PLATFORM_ITEMS = [
     description: 'Confirm ownership and detect risky contact details.'
   },
   {
-    label: 'Dynamic flow',
-    path: '/platform/dynamic-flow',
-    icon: gitForkIcon,
-    description: 'Coordinate identity checks with flexible logic.'
-  },
-  {
     label: 'Behavior insights',
     path: '/platform/behavior-insights',
     icon: waypointsIcon,
     description: 'Device and usage patterns for added context.'
   },
+  // ОРКЕСТРАЦИЯ
+  {
+    label: 'Dynamic flow',
+    path: '/platform/dynamic-flow',
+    icon: gitForkIcon,
+    description: 'Coordinate identity checks with flexible logic.'
+  },
+  // РЕЗУЛЬТАТЫ
   {
     label: 'Review workspace',
     path: '/platform/review-workspace',
