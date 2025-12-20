@@ -13,8 +13,12 @@ import { PLATFORM_ITEMS } from '../constants/platformItems'
 
 // Images
 import folioAppHero from '../assets/images/folio-app-hero.png'
+import folioHeroPhones from '../assets/images/folio-hero-phones.png'
 import governmentSolutionsHero from '../assets/images/government-solutions-hero.png'
 import governmentTestimonialAvatar from '../assets/images/government-testimonial-avatar.png'
+
+// Logo icon for hero tagline
+import logoIcon from '../assets/icons/LogoIcon.svg'
 
 // Video
 import livenessCheckHero from '../assets/images/liveness-check-hero.mp4'
@@ -72,13 +76,41 @@ function HomePage() {
       <main className="flex-1 w-full">
         {/* Hero Section */}
         <section className="flex flex-col gap-6 items-center overflow-hidden px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
-          <div className="flex flex-col gap-6 items-center max-w-[768px] px-6 py-0 relative shrink-0 w-full text-center">
-            <h1 className="font-bold leading-9 md:leading-[56px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px]">
-              Your digital wallet for documents and identity
-            </h1>
-            <p className="font-normal leading-6 text-[#737373] text-lg w-full">
-              Secure document storage for individuals. Verification platform for businesses. Digital credentials for governments.
-            </p>
+          <div className="flex flex-col gap-12 md:gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+            {/* Text Content */}
+            <div className="flex flex-col gap-4 md:gap-8 items-center max-w-[672px] w-full">
+              {/* Tagline */}
+              <div className="flex items-center gap-1.5">
+                <img 
+                  src={logoIcon} 
+                  alt="" 
+                  aria-hidden="true" 
+                  className="w-5 h-5"
+                />
+                <span className="font-medium leading-5 text-sm text-[#737373]">
+                  Folio Wallet
+                </span>
+              </div>
+              {/* Title & Description */}
+              <div className="flex flex-col gap-4 md:gap-6 items-center text-center w-full">
+                <h1 className="font-bold leading-9 md:leading-[48px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px]">
+                  Your digital wallet for documents and identity
+                </h1>
+                <p className="font-normal leading-7 text-[#737373] text-lg w-full">
+                  Secure document storage for individuals. Verification platform for businesses. Digital credentials for governments.
+                </p>
+              </div>
+            </div>
+            {/* Hero Image */}
+            <div className="relative w-full aspect-square">
+              <img 
+                src={folioHeroPhones} 
+                alt="Folio app showing digital identity, ID card details, and payment cards on three phone screens"
+                className="absolute inset-0 max-w-none object-center object-cover w-full h-full"
+                fetchPriority="high"
+                loading="eager"
+              />
+            </div>
           </div>
         </section>
 
