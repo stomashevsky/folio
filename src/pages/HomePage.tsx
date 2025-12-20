@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
-import { SectionHeader, ToolCard, PhotoCard, Button, HeroTagline } from '../components/ui'
+import { SectionHeader, ToolCard, PhotoCard, Button, HeroTagline, HorizontalScrollCarousel } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
 import VideoWithPlaceholder from '../components/ui/VideoWithPlaceholder'
 import FooterSection from '../components/sections/FooterSection'
@@ -16,6 +16,9 @@ import folioAppHero from '../assets/images/folio-app-hero.png'
 import folioHeroPhones from '../assets/images/folio-hero-phones.png'
 import governmentSolutionsHero from '../assets/images/government-solutions-hero.png'
 import governmentTestimonialAvatar from '../assets/images/government-testimonial-avatar.png'
+import ageVerificationHero from '../assets/images/age-verification-hero.png'
+import clientOnboardingHero from '../assets/images/client-onboarding-hero.png'
+import ticketIssuanceHero from '../assets/images/ticket-issuance-hero.png'
 
 // Logo icon for hero tagline
 import logoIcon from '../assets/icons/LogoIcon.svg'
@@ -30,9 +33,6 @@ import landmarkIcon from '../assets/icons/Landmark.svg'
 import lockKeyholeIcon from '../assets/icons/LockKeyhole.svg'
 import keyRoundIcon from '../assets/icons/KeyRound.svg'
 import fingerprintIcon from '../assets/icons/Fingerprint.svg'
-import ageIcon from '../assets/icons/Age.svg'
-import briefcaseIcon from '../assets/icons/Briefcase.svg'
-import ticketIcon from '../assets/icons/Ticket.svg'
 import lightbulbIcon from '../assets/icons/Lightbulb.svg'
 
 const BACKGROUND_STYLE = {
@@ -42,9 +42,9 @@ const BACKGROUND_STYLE = {
 
 
 const SOLUTIONS = [
-  { icon: ageIcon, title: 'Age compliance', description: 'Verify age for regulated industries', to: '/solutions/age-compliance' },
-  { icon: briefcaseIcon, title: 'Client onboarding', description: 'Streamline KYC and customer verification', to: '/solutions/client-onboarding' },
-  { icon: ticketIcon, title: 'Digital ticketing', description: 'Issue and verify secure digital tickets', to: '/solutions/digital-ticketing' },
+  { image: ageVerificationHero, title: 'Age compliance', description: 'Verify age for regulated industries', to: '/solutions/age-compliance' },
+  { image: clientOnboardingHero, title: 'Client onboarding', description: 'Streamline KYC and customer verification', to: '/solutions/client-onboarding' },
+  { image: ticketIssuanceHero, title: 'Digital ticketing', description: 'Issue and verify secure digital tickets', to: '/solutions/digital-ticketing' },
 ]
 
 const SECURITY_FEATURES = [
@@ -231,26 +231,22 @@ function HomePage() {
 
         </section>
 
-        {/* Products Grid Section */}
-        <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
-          <div className="flex flex-col gap-10 md:gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-            <SectionHeader
-              title="Everything you need to verify identity"
-              description="Combine multiple verification methods for thorough identity checks and fraud prevention."
-              maxWidth="576px"
-            />
-            <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
-              {PLATFORM_ITEMS.map((item) => (
-                <PhotoCard
-                  key={item.path}
-                  image={item.image}
-                  title={item.label}
-                  description={item.description}
-                  to={item.path}
-                />
-              ))}
-            </div>
-          </div>
+        {/* Products Carousel Section */}
+        <section className="bg-white flex flex-col items-center overflow-hidden py-16 md:py-24 relative shrink-0 w-full">
+          <HorizontalScrollCarousel
+            title="Everything you need to verify identity"
+          >
+            {PLATFORM_ITEMS.map((item) => (
+              <PhotoCard
+                key={item.path}
+                image={item.image}
+                title={item.label}
+                description={item.description}
+                to={item.path}
+                carouselMode
+              />
+            ))}
+          </HorizontalScrollCarousel>
         </section>
 
         {/* Solutions Section */}
@@ -267,9 +263,9 @@ function HomePage() {
 
             <div className="flex flex-col sm:grid sm:grid-cols-3 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
               {SOLUTIONS.map((solution) => (
-                <ToolCard
+                <PhotoCard
                   key={solution.to}
-                  icon={solution.icon}
+                  image={solution.image}
                   title={solution.title}
                   description={solution.description}
                   to={solution.to}

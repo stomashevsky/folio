@@ -8,11 +8,19 @@ export interface PhotoCardProps {
   description: string
   to?: string
   className?: string
+  carouselMode?: boolean
 }
 
-export default function PhotoCard({ image, title, description, to, className = '' }: PhotoCardProps) {
-  const baseClasses = "bg-white border border-[#e5e5e5] border-solid w-full min-w-0 relative rounded-2xl overflow-hidden flex flex-col shadow-[0px_4px_6px_-1px_rgba(10,13,18,0.06),0px_2px_4px_-2px_rgba(10,13,18,0.06)]"
-  const combinedClasses = `${baseClasses} ${className}`.trim()
+export default function PhotoCard({ image, title, description, to, className = '', carouselMode = false }: PhotoCardProps) {
+  const baseClasses = "bg-white border border-[#e5e5e5] border-solid relative rounded-2xl overflow-hidden flex flex-col shadow-[0px_4px_6px_-1px_rgba(10,13,18,0.06),0px_2px_4px_-2px_rgba(10,13,18,0.06)]"
+  
+  // Carousel mode: fixed width with responsive sizing (280px mobile, 320px desktop)
+  // Regular mode: full width
+  const widthClasses = carouselMode 
+    ? "w-[280px] min-w-[280px] max-w-[280px] md:w-[320px] md:min-w-[320px] md:max-w-[320px] shrink-0 snap-start"
+    : "w-full min-w-0"
+  
+  const combinedClasses = `${baseClasses} ${widthClasses} ${className}`.trim()
 
   const handleClick = () => {
     setTimeout(() => {
@@ -59,4 +67,3 @@ export default function PhotoCard({ image, title, description, to, className = '
     </div>
   )
 }
-
