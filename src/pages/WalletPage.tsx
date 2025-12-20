@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import { SectionHeader, ToolCard, HeroTagline, Button } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
+import VideoWithPlaceholder from '../components/ui/VideoWithPlaceholder'
 import FooterSection from '../components/sections/FooterSection'
 import FAQSection, { FAQItem } from '../components/sections/FAQSection'
 import PasskeysSection from '../components/sections/PasskeysSection'
@@ -13,6 +14,7 @@ import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
 import { scrollToSection } from '../utils/scrollToSection'
 import folioAppHero from '../assets/images/folio-app-hero.png'
+import folioAppHeroVideo from '../assets/images/folio-app-hero.mp4'
 import folioFeaturesTickets from '../assets/images/folio-features-tickets.png'
 import folioTicketsTrain from '../assets/images/folio-tickets-train.png'
 import folioTicketsBus from '../assets/images/folio-tickets-bus.png'
@@ -184,13 +186,14 @@ function WalletPage() {
               </Button>
             </div>
           </div>
-          <ImageWithPlaceholder
-            src={folioAppHero}
-            alt="Folio documents preview"
+          <VideoWithPlaceholder
+            src={folioAppHeroVideo}
+            autoPlay
+            muted
+            loop
+            playsInline
             className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
             containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
-            fetchPriority="high"
-            loading="eager"
           />
         </div>
 
@@ -212,13 +215,14 @@ function WalletPage() {
               </Button>
             </div>
           </div>
-          <ImageWithPlaceholder
-            src={folioAppHero}
-            alt="Folio documents preview"
+          <VideoWithPlaceholder
+            src={folioAppHeroVideo}
+            autoPlay
+            muted
+            loop
+            playsInline
             className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
             containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
-            fetchPriority="high"
-            loading="eager"
           />
         </div>
       </section>

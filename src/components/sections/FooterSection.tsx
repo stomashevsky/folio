@@ -85,12 +85,12 @@ export default function FooterSection() {
             </p>
             <div className="flex flex-col gap-3 items-start w-full">
               <FooterLink to="/platform/id-verification">ID verification</FooterLink>
-              <FooterLink to="/platform/document-intelligence">Document intelligence</FooterLink>
-              <FooterLink to="/platform/liveness-check">Liveness check</FooterLink>
-              <FooterLink to="/platform/face-match">Face match</FooterLink>
-              <FooterLink to="/platform/data-source-checks">Data source checks</FooterLink>
-              <FooterLink to="/platform/phone-and-email-validation">Phone and email validation</FooterLink>
               <FooterLink to="/platform/nfc-identity-scan">NFC identity scan</FooterLink>
+              <FooterLink to="/platform/face-match">Face match</FooterLink>
+              <FooterLink to="/platform/liveness-check">Liveness check</FooterLink>
+              <FooterLink to="/platform/data-source-checks">Data source checks</FooterLink>
+              <FooterLink to="/platform/document-intelligence">Document intelligence</FooterLink>
+              <FooterLink to="/platform/phone-and-email-validation">Phone and email validation</FooterLink>
               <FooterLink to="/platform/dynamic-flow">Dynamic flow</FooterLink>
               <FooterLink to="/platform/behavior-insights">Behavior insights</FooterLink>
               <FooterLink to="/platform/review-workspace">Review workspace</FooterLink>

@@ -45,7 +45,6 @@ const SOLUTIONS_ITEMS = [
   },
 ]
 
-// Order matches Figma design for mobile (single column, top to bottom)
 const PLATFORM_ITEMS = [
   {
     label: 'ID verification',
@@ -54,16 +53,10 @@ const PLATFORM_ITEMS = [
     description: 'Verify passports, ID cards, and other official documents.'
   },
   {
-    label: 'Document intelligence',
-    path: '/platform/document-intelligence',
-    icon: sparklesIcon,
-    description: 'Extract and analyze data from submitted documents.'
-  },
-  {
-    label: 'Liveness check',
-    path: '/platform/liveness-check',
-    icon: scanFaceIcon,
-    description: 'Confirm that the user is physically present.'
+    label: 'NFC identity scan',
+    path: '/platform/nfc-identity-scan',
+    icon: nfcIcon,
+    description: 'Read secure chip data from compatible IDs and passports.'
   },
   {
     label: 'Face match',
@@ -72,22 +65,28 @@ const PLATFORM_ITEMS = [
     description: 'Compare a selfie to an official photo to confirm identity.'
   },
   {
+    label: 'Liveness check',
+    path: '/platform/liveness-check',
+    icon: scanFaceIcon,
+    description: 'Confirm that the user is physically present.'
+  },
+  {
     label: 'Data source checks',
     path: '/platform/data-source-checks',
     icon: databaseIcon,
     description: 'Validate user information against trusted databases.'
   },
   {
+    label: 'Document intelligence',
+    path: '/platform/document-intelligence',
+    icon: sparklesIcon,
+    description: 'Extract and analyze data from submitted documents.'
+  },
+  {
     label: 'Phone and email validation',
     path: '/platform/phone-and-email-validation',
     icon: messageSquareMoreIcon,
     description: 'Confirm ownership and detect risky contact details.'
-  },
-  {
-    label: 'NFC identity scan',
-    path: '/platform/nfc-identity-scan',
-    icon: nfcIcon,
-    description: 'Read secure chip data from compatible IDs and passports.'
   },
   {
     label: 'Dynamic flow',

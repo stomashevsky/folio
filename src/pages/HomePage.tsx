@@ -25,6 +25,7 @@ import logoIcon from '../assets/icons/LogoIcon.svg'
 
 // Video
 import livenessCheckHero from '../assets/images/liveness-check-hero.mp4'
+import folioAppHeroVideo from '../assets/images/folio-app-hero.mp4'
 
 // Icons
 import smartphoneIcon from '../assets/icons/Smartphone.svg'
@@ -134,13 +135,14 @@ function HomePage() {
                 </Button>
               </div>
             </div>
-            <ImageWithPlaceholder
-              src={folioAppHero}
-              alt="Folio app showing passport, ID card and travel tickets organized in a digital wallet"
+            <VideoWithPlaceholder
+              src={folioAppHeroVideo}
+              autoPlay
+              muted
+              loop
+              playsInline
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
-              loading="eager"
-              fetchPriority="high"
             />
           </div>
 
@@ -160,13 +162,14 @@ function HomePage() {
                 Learn more
               </Button>
             </div>
-            <ImageWithPlaceholder
-              src={folioAppHero}
-              alt="Folio app showing passport, ID card and travel tickets organized in a digital wallet"
+            <VideoWithPlaceholder
+              src={folioAppHeroVideo}
+              autoPlay
+              muted
+              loop
+              playsInline
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
-              loading="eager"
-              fetchPriority="high"
             />
           </div>
         </section>
