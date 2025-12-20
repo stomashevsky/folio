@@ -82,8 +82,8 @@ export default function PlatformDropdown() {
               width: 'max-content',
             }}
           >
-            {/* Two column grid layout for Platform items - gaps are 0 */}
-            <div className="grid grid-cols-2 gap-0">
+            {/* Three column grid layout for Platform items - gaps are 0 */}
+            <div className="grid grid-cols-3 gap-0">
               {PLATFORM_ITEMS.map((item) => (
                 <DropdownMenuItem
                   key={item.path}
@@ -91,7 +91,7 @@ export default function PlatformDropdown() {
                   title={item.label}
                   description={item.description}
                   onClick={() => handleItemClick(item.path)}
-                  className="w-[300px]"
+                  className="w-[260px]"
                   role="menuitem"
                 />
               ))}

@@ -15,6 +15,7 @@ import nfcIcon from '../../assets/icons/Nfc.svg'
 import gitForkIcon from '../../assets/icons/GitFork.svg'
 import waypointsIcon from '../../assets/icons/Waypoints.svg'
 import searchCheckIcon from '../../assets/icons/SearchCheck.svg'
+import badgeCheckIcon from '../../assets/icons/BadgeCheck.svg'
 import ageIcon from '../../assets/icons/Age.svg'
 import ticketIcon from '../../assets/icons/Ticket.svg'
 import briefcaseIcon from '../../assets/icons/Briefcase.svg'
@@ -105,6 +106,12 @@ const PLATFORM_ITEMS = [
     path: '/platform/review-workspace',
     icon: searchCheckIcon,
     description: 'Organize and resolve verification cases.'
+  },
+  {
+    label: 'Credential issuance',
+    path: '/platform/credential-issuance',
+    icon: badgeCheckIcon,
+    description: 'Create and deliver verifiable credentials to wallets.'
   },
 ]
 

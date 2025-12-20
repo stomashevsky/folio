@@ -9,6 +9,7 @@ import nfcIcon from '../assets/icons/Nfc.svg'
 import gitForkIcon from '../assets/icons/GitFork.svg'
 import waypointsIcon from '../assets/icons/Waypoints.svg'
 import searchCheckIcon from '../assets/icons/SearchCheck.svg'
+import badgeCheckIcon from '../assets/icons/BadgeCheck.svg'
 
 // Hero images for photo cards
 import idVerificationHero from '../assets/images/id-verification-hero.png'
@@ -21,6 +22,7 @@ import nfcIdentityScanHero from '../assets/images/nfc-identity-scan-hero.png'
 import dynamicFlowHero from '../assets/images/dynamic-flow-hero.png'
 import behaviorInsightsHero from '../assets/images/behavior-insights-hero.png'
 import reviewWorkspaceHero from '../assets/images/review-workspace-hero.png'
+import credentialIssuanceHero from '../assets/images/credential-issuance-hero.png'
 
 export interface PlatformItem {
   label: string
@@ -100,5 +102,12 @@ export const PLATFORM_ITEMS: PlatformItem[] = [
     icon: searchCheckIcon,
     image: reviewWorkspaceHero,
     description: 'Organize and resolve verification cases.'
+  },
+  {
+    label: 'Credential issuance',
+    path: '/platform/credential-issuance',
+    icon: badgeCheckIcon,
+    image: credentialIssuanceHero,
+    description: 'Create and deliver verifiable credentials to wallets.'
   },
 ]

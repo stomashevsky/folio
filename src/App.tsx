@@ -18,6 +18,7 @@ import NfcIdentityScanPage from './pages/NfcIdentityScanPage'
 import DynamicFlowPage from './pages/DynamicFlowPage'
 import BehaviorInsightsPage from './pages/BehaviorInsightsPage'
 import ReviewWorkspacePage from './pages/ReviewWorkspacePage'
+import CredentialIssuancePage from './pages/CredentialIssuancePage'
 import BlogPage from './pages/BlogPage'
 import AlbanianDiasporaArticlePage from './pages/AlbanianDiasporaArticlePage'
 import TripCaseAlternativeArticlePage from './pages/TripCaseAlternativeArticlePage'
@@ -179,6 +180,7 @@ function App() {
         <Route path="/platform/dynamic-flow" element={<DynamicFlowPage />} />
         <Route path="/platform/behavior-insights" element={<BehaviorInsightsPage />} />
         <Route path="/platform/review-workspace" element={<ReviewWorkspacePage />} />
+        <Route path="/platform/credential-issuance" element={<CredentialIssuancePage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/albanian-diaspora-voter-registration" element={<AlbanianDiasporaArticlePage />} />
         <Route path="/blog/tripcase-alternative" element={<TripCaseAlternativeArticlePage />} />

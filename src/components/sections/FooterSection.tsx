@@ -94,6 +94,7 @@ export default function FooterSection() {
               <FooterLink to="/platform/dynamic-flow">Dynamic flow</FooterLink>
               <FooterLink to="/platform/behavior-insights">Behavior insights</FooterLink>
               <FooterLink to="/platform/review-workspace">Review workspace</FooterLink>
+              <FooterLink to="/platform/credential-issuance">Credential issuance</FooterLink>
             </div>
           </div>
 
