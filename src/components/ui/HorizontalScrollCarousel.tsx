@@ -1,8 +1,8 @@
 import { useRef, useState, useEffect, useCallback, ReactNode, useMemo } from 'react'
 import { SectionHeader } from './index'
 import Button from './Button'
-import chevronLeftIcon from '../../assets/icons/ChevronLeft.svg'
-import chevronRightIcon from '../../assets/icons/ChevronRight.svg'
+import arrowLeftLargeIcon from '../../assets/icons/ArrowLeftLarge.svg'
+import arrowRightLargeIcon from '../../assets/icons/ArrowRightLarge.svg'
 
 interface HorizontalScrollCarouselProps {
   title: string
@@ -91,7 +91,7 @@ export default function HorizontalScrollCarousel({
         disabled={!canScrollLeft}
         aria-label="Scroll left"
       >
-        <img src={chevronLeftIcon} alt="" aria-hidden="true" className="w-4 h-4" />
+        <img src={arrowLeftLargeIcon} alt="" aria-hidden="true" className="w-5 h-5" />
       </Button>
       <Button
         variant="secondary"
@@ -100,7 +100,7 @@ export default function HorizontalScrollCarousel({
         disabled={!canScrollRight}
         aria-label="Scroll right"
       >
-        <img src={chevronRightIcon} alt="" aria-hidden="true" className="w-4 h-4" />
+        <img src={arrowRightLargeIcon} alt="" aria-hidden="true" className="w-5 h-5" />
       </Button>
     </div>
   )

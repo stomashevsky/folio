@@ -58,7 +58,7 @@ export default function Button({
   ...props 
 }: ButtonProps) {
   // Base classes for all buttons
-  const baseClasses = 'box-border flex gap-2 items-center justify-center rounded-full outline-none focus-visible:outline-none transition-all transform-gpu cursor-pointer disabled:cursor-not-allowed'
+  const baseClasses = 'box-border flex gap-2 items-center justify-center rounded-full outline-none focus-visible:outline-none transition-all transform-gpu cursor-pointer'
   
   // Size classes
   const sizeClasses = {
