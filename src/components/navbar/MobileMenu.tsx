@@ -27,16 +27,16 @@ interface MobileMenuProps {
 
 const SOLUTIONS_ITEMS = [
   {
-    label: 'Age compliance',
-    path: '/solutions/age-compliance',
-    icon: ageIcon,
-    description: 'Ensure users meet age requirements for restricted products or services.'
-  },
-  {
     label: 'Client onboarding',
     path: '/solutions/client-onboarding',
     icon: briefcaseIcon,
     description: 'Streamlined KYC verification for regulated businesses.'
+  },
+  {
+    label: 'Age compliance',
+    path: '/solutions/age-compliance',
+    icon: ageIcon,
+    description: 'Ensure users meet age requirements for restricted products or services.'
   },
   {
     label: 'Digital ticketing',

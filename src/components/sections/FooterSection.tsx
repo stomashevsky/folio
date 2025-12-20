@@ -106,8 +106,8 @@ export default function FooterSection() {
                 Solutions
               </p>
               <div className="flex flex-col gap-3 items-start w-full">
-                <FooterLink to="/solutions/age-compliance">Age compliance</FooterLink>
                 <FooterLink to="/solutions/client-onboarding">Client onboarding</FooterLink>
+                <FooterLink to="/solutions/age-compliance">Age compliance</FooterLink>
                 <FooterLink to="/solutions/digital-ticketing">Digital ticketing</FooterLink>
               </div>
             </div>
