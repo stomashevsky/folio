@@ -385,7 +385,7 @@ function HomePage() {
             </div>
 
             <div className="flex justify-center w-full">
-              <Button variant="outline" onClick={() => handleNavigate('/security')}>
+              <Button variant="secondary" onClick={() => handleNavigate('/security')}>
                 Learn more
               </Button>
             </div>

@@ -52,10 +52,10 @@ export default function MenuItem({
   // Text classes
   const textClasses = 'text-sm font-medium leading-5 whitespace-nowrap'
   
-  // State classes - unified with DropdownMenuItem (#f5f5f5)
+  // State classes - unified with DropdownMenuItem (#e5e5e5)
   const stateClasses = active
-    ? 'bg-[#f5f5f5] text-[#171717]'
-    : 'bg-transparent text-[#0a0a0a] hover:bg-[#f5f5f5] hover:text-[#171717]'
+    ? 'bg-[#e5e5e5] text-[#171717]'
+    : 'bg-transparent text-[#0a0a0a] hover:bg-[#e5e5e5] hover:text-[#171717]'
   
   // Width classes
   const widthClasses = fullWidth ? 'w-full' : ''

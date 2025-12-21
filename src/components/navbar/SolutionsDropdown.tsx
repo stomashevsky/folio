@@ -82,7 +82,7 @@ export default function SolutionsDropdown() {
     >
       <MenuItem
         active={isOpen}
-        className={`cursor-default ${isOpen ? '!bg-[#E5E5E5]' : ''}`}
+        className="cursor-default"
         aria-haspopup="menu"
         aria-expanded={isOpen}
         onClick={(e) => {

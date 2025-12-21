@@ -42,10 +42,10 @@ export default function DropdownMenuItem({
   const baseClasses = 'box-border flex gap-3 items-center px-4 py-3 rounded-[18px] outline-none focus-visible:outline-none transition-colors duration-150 ease-out text-left'
 
   // State classes - subtle hover like Apple design
-  // Hover/Active background: #f5f5f5 (soft gray)
+  // Hover/Active background: #e5e5e5 (soft gray)
   const stateClasses = active
-    ? 'bg-[#f5f5f5]'
-    : 'bg-transparent hover:bg-[#f5f5f5]'
+    ? 'bg-[#e5e5e5]'
+    : 'bg-transparent hover:bg-[#e5e5e5]'
 
   const allClasses = `${baseClasses} ${stateClasses} ${FOCUS_RING_CLASSES} ${className}`
 
