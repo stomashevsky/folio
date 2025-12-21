@@ -17,9 +17,8 @@ export interface DropdownMenuItemProps {
  * Based on Figma design (node-id=24626-76638)
  * 
  * Structure:
- * - Feature icon on the left (if provided)
- * - Title (bold, dark text)
- * - Description (lighter, smaller text)
+ * - Icon + Title in one row (icon centered to title)
+ * - Description below with padding to align under title
  * 
  * States:
  * - Default: transparent background
@@ -36,10 +35,9 @@ export default function DropdownMenuItem({
   'aria-current': ariaCurrent,
   ...props
 }: DropdownMenuItemProps & Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'className'>) {
-  // Base classes matching Figma design
-  // Icon to text gap: 12px (gap-3), padding: 16px horizontal, 12px vertical, rounded-[18px]
-  // items-center: icon vertically centered relative to text block
-  const baseClasses = 'box-border flex gap-3 items-center px-4 py-3 rounded-[18px] outline-none focus-visible:outline-none transition-colors duration-150 ease-out text-left'
+  // Base classes - flex column layout, content aligned to top
+  // Padding: 16px horizontal, 12px vertical, rounded-[18px]
+  const baseClasses = 'box-border flex flex-col items-start px-4 py-3 rounded-[18px] outline-none focus-visible:outline-none transition-colors duration-150 ease-out text-left'
 
   // State classes - subtle hover like Apple design
   // Hover/Active background: #e5e5e5 (soft gray)
@@ -58,27 +56,26 @@ export default function DropdownMenuItem({
       aria-current={ariaCurrent}
       {...(props as ButtonHTMLAttributes<HTMLButtonElement>)}
     >
-      {/* Feature icon (if provided) - vertically centered */}
-      {icon && (
-        <img
-          src={icon}
-          alt=""
-          aria-hidden="true"
-          className="w-5 h-5 shrink-0"
-        />
-      )}
-
-      {/* Title and description */}
-      <div className="flex-1 flex flex-col min-w-0 gap-0.5">
+      {/* Icon + Title row - icon centered to title */}
+      <div className="flex gap-3 items-center w-full">
+        {icon && (
+          <img
+            src={icon}
+            alt=""
+            aria-hidden="true"
+            className="w-5 h-5 shrink-0"
+          />
+        )}
         {/* Title: medium (500), 14px (text-sm), dark text #0a0a0a */}
         <p className="font-medium text-sm leading-5 text-[#0a0a0a] whitespace-normal">
           {title}
         </p>
-        {/* Description: regular (400), 13px, muted text #737373 - slightly smaller for hierarchy */}
-        <p className="font-normal text-[13px] leading-5 text-[#737373] whitespace-normal">
-          {description}
-        </p>
       </div>
+
+      {/* Description below - with left padding to align under title (icon 20px + gap 12px = 32px = pl-8) */}
+      <p className={`font-normal text-[13px] leading-5 text-[#737373] whitespace-normal mt-0.5 ${icon ? 'pl-8' : ''}`}>
+        {description}
+      </p>
     </button>
   )
 }
