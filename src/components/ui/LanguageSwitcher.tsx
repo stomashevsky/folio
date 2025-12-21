@@ -3,6 +3,7 @@ import { useLanguage } from '../../i18n/LanguageProvider'
 import { LANGUAGE_NAMES, type SupportedLanguage } from '../../i18n'
 import globeIcon from '../../assets/icons/Globe.svg'
 import chevronDownIcon from '../../assets/icons/ChevronDown.svg'
+import checkIcon from '../../assets/icons/Check.svg'
 
 export default function LanguageSwitcher() {
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage()
@@ -80,13 +81,16 @@ export default function LanguageSwitcher() {
               role="option"
               aria-selected={lang === currentLanguage}
               onClick={() => handleLanguageSelect(lang)}
-              className={`w-full text-left px-4 py-2 text-sm transition-colors ${
+              className={`w-full flex items-center justify-between px-4 py-2 text-sm transition-colors ${
                 lang === currentLanguage
-                  ? 'bg-[#f5f5f5] text-[#0a0a0a] font-medium'
+                  ? 'text-[#0a0a0a] font-medium'
                   : 'text-[#525252] hover:bg-[#e5e5e5] hover:text-[#171717]'
               }`}
             >
-              {LANGUAGE_NAMES[lang]}
+              <span>{LANGUAGE_NAMES[lang]}</span>
+              {lang === currentLanguage && (
+                <img src={checkIcon} alt="" aria-hidden="true" className="w-4 h-4" />
+              )}
             </button>
           ))}
         </div>

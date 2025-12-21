@@ -2,6 +2,7 @@ import json
 import os
 
 files = [
+    'articles.json',
     'blog.json',
     'common.json',
     'government.json',
