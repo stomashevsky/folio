@@ -49,7 +49,7 @@ export default function BestEventTicketAppsArticlePage() {
       <ArticleH2>{t('articles:the-best-event-ticket-apps.h2_3')}</ArticleH2>
 
       <ArticleParagraph>
-        <Trans i18nKey="articles:the-best-event-ticket-apps.p8" components={[<LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</LocalizedLink>]} />
+        <Trans i18nKey="articles:the-best-event-ticket-apps.p8" components={[<LocalizedLink key="0" to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</LocalizedLink>]} />
       </ArticleParagraph>
 
       <ArticleImage

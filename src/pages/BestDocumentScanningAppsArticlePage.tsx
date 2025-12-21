@@ -38,7 +38,7 @@ export default function BestDocumentScanningAppsArticlePage() {
       />
 
       <ArticleParagraph>
-        <Trans i18nKey="articles:best-document-scanning-apps.p5" components={[<LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</LocalizedLink>]} />
+        <Trans i18nKey="articles:best-document-scanning-apps.p5" components={[<LocalizedLink key="0" to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</LocalizedLink>]} />
       </ArticleParagraph>
 
       <ArticleH2>{t('articles:best-document-scanning-apps.h2_2')}</ArticleH2>
