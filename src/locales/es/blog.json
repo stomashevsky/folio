@@ -31,6 +31,26 @@
         "identity-theft-protection": {
             "title": "Cómo protegerte del robo de identidad en línea",
             "description": "Estrategias prácticas para asegurar tu presencia digital. Aprende cómo la gestión de identidad moderna puede prevenir el fraude y el robo."
+        },
+        "best-apps-to-plan-travel": {
+            "title": "Las únicas aplicaciones de viaje que realmente necesitas (y cuáles omitir)",
+            "description": "La mayoría de las listas de aplicaciones de viaje incluyen 20 aplicaciones que nunca usarás. Aquí están las que resuelven problemas reales."
+        },
+        "best-digital-wallet-apps-in-canada": {
+            "title": "Las mejores aplicaciones de billetera digital en Canadá",
+            "description": "Descubre las mejores aplicaciones de billetera digital disponibles en Canadá. Compara características, seguridad y casos de uso para encontrar la billetera perfecta para tus necesidades."
+        },
+        "best-document-scanning-apps": {
+            "title": "Las mejores aplicaciones de escaneo de documentos para iPhone y Android",
+            "description": "Convierte tu teléfono en un potente escáner. Descubre las mejores aplicaciones para escanear, almacenar y organizar tus documentos de forma segura."
+        },
+        "the-best-event-ticket-apps": {
+            "title": "¿Dónde puse esa entrada? (El problema de la organización de entradas para eventos)",
+            "description": "Concierto en Ticketmaster, insignia de conferencia en correo electrónico, parque temático como captura de pantalla. Aquí te explicamos cómo dejar de perder entradas."
+        },
+        "best-gift-card-wallet-apps": {
+            "title": "Las mejores aplicaciones de billetera de tarjetas de regalo para una organización digital sin problemas",
+            "description": "Descubre las mejores aplicaciones de billetera de tarjetas de regalo para organizar y asegurar tus tarjetas digitalmente. Compara características y encuentra la solución perfecta para gestionar tarjetas de regalo."
         }
     },
     "hero": {

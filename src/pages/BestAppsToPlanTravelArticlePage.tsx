@@ -1,83 +1,86 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import { LocalizedLink } from '../components/ui'
 import folioScreensImage from '../assets/images/blog-best-apps-folio-screens.png'
+import { useTranslation, Trans } from 'react-i18next'
 
 export default function BestAppsToPlanTravelArticlePage() {
+  const { t } = useTranslation(['articles', 'blog'])
+
   return (
     <BlogArticleLayout
-      title="The only travel apps you actually need (and which to skip)"
-      description="Most travel app lists include 20 apps you'll never use. Here are the ones that solve real problems, organized by when you need them."
+      title={t('blog:best-apps-to-plan-travel.title')}
+      description={t('blog:best-apps-to-plan-travel.description')}
       date="Jul 29, 2025"
       category="Research"
       slug="best-apps-to-plan-travel"
     >
       <ArticleParagraph>
-        Search "best travel apps" and you'll find lists with 20+ recommendations. Download them all, use maybe two, delete the rest after your trip. The truth is you need 4-5 apps maximum, each solving one specific problem well. Here's what actually matters, organized by when you need it.
+        {t('articles:best-apps-to-plan-travel.p1')}
       </ArticleParagraph>
 
-      <ArticleH2>For planning what to do: Wanderlog</ArticleH2>
+      <ArticleH2>{t('articles:best-apps-to-plan-travel.h2_1')}</ArticleH2>
 
       <ArticleParagraph>
-        <strong>Wanderlog</strong> is the best free trip planner. Add destinations, restaurants, activities. See everything on a map to optimize your days. Share with travel companions who can add their own ideas. Track your budget as you plan.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        The limitation: Wanderlog is great for deciding what to do, but doesn't solve the "where's my boarding pass" problem. You still need somewhere to store the actual tickets once you book.
-      </ArticleParagraph>
-
-      <ArticleH2>For finding deals: Google Flights</ArticleH2>
-
-      <ArticleParagraph>
-        <strong>Google Flights</strong> is unbeatable for flight search. The flexible dates calendar shows you the cheapest days to fly at a glance. Price tracking alerts you when fares drop. The "explore" feature shows where you can go within your budget.
+        <Trans i18nKey="articles:best-apps-to-plan-travel.p2" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Skip the dedicated booking apps like Hopper or Kayak for actual booking. They rarely beat Google Flights on price, and their "price predictions" are marketing more than science. Use Google Flights to find the best option, then book directly with the airline.
+        {t('articles:best-apps-to-plan-travel.p3')}
       </ArticleParagraph>
 
-      <ArticleH2>For storing tickets and documents: Folio</ArticleH2>
+      <ArticleH2>{t('articles:best-apps-to-plan-travel.h2_2')}</ArticleH2>
 
       <ArticleParagraph>
-        <strong><LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</LocalizedLink></strong> solves the most common travel frustration: finding your tickets when you need them. Forward confirmation emails, import PDFs, photograph paper tickets. Folio extracts dates, times, locations and creates a timeline automatically.
+        <Trans i18nKey="articles:best-apps-to-plan-travel.p4" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        At the gate, your boarding pass is one tap away. At the hotel, the confirmation is right there. The bus ticket barcode, the concert QR code, everything works offline. For group trips, shared folders mean everyone has access to the same documents.
+        {t('articles:best-apps-to-plan-travel.p5')}
+      </ArticleParagraph>
+
+      <ArticleH2>{t('articles:best-apps-to-plan-travel.h2_3')}</ArticleH2>
+
+      <ArticleParagraph>
+        <Trans i18nKey="articles:best-apps-to-plan-travel.p6" components={[<LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</LocalizedLink>]} />
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        {t('articles:best-apps-to-plan-travel.p7')}
       </ArticleParagraph>
 
       <ArticleImage
         src={folioScreensImage}
-        alt="Folio app showing trip timeline, bus ticket with barcode, and event ticket with QR code"
+        alt={t('articles:best-apps-to-plan-travel.img_alt')}
       />
 
-      <ArticleH2>For flight tracking: Flighty (maybe)</ArticleH2>
+      <ArticleH2>{t('articles:best-apps-to-plan-travel.h2_4')}</ArticleH2>
 
       <ArticleParagraph>
-        <strong>Flighty</strong> is genuinely impressive. It shows where your inbound aircraft is, predicts delays before airlines announce them, tracks gate changes in real-time. The interface is beautiful and the data is faster than most airline apps.
+        <Trans i18nKey="articles:best-apps-to-plan-travel.p8" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        The honest assessment: it costs $50/year. If you fly 10+ times a year, the early delay warnings are worth it. If you fly twice a year, just use your airline's app. It's free and good enough for occasional travelers.
+        {t('articles:best-apps-to-plan-travel.p9')}
       </ArticleParagraph>
 
-      <ArticleH2>What to skip</ArticleH2>
+      <ArticleH2>{t('articles:best-apps-to-plan-travel.h2_5')}</ArticleH2>
 
       <ArticleParagraph>
-        <strong>TripAdvisor</strong> was essential a decade ago. Now Google Maps has reviews, photos, and ratings for almost everything. You don't need a separate app.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <strong>All-in-one travel apps</strong> that promise to handle planning, booking, documents, and tracking. They do everything adequately and nothing well. Better to use specialized apps that excel at one thing.
+        <Trans i18nKey="articles:best-apps-to-plan-travel.p10" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Most hotel booking apps.</strong> Booking.com and Hotels.com have apps, but their websites work fine. You'll book hotels maybe twice for a trip. The websites are better for comparing options anyway.
+        <Trans i18nKey="articles:best-apps-to-plan-travel.p11" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
-      <ArticleH2>The minimal setup</ArticleH2>
+      <ArticleParagraph>
+        <Trans i18nKey="articles:best-apps-to-plan-travel.p12" components={{ strong: <strong /> }} />
+      </ArticleParagraph>
+
+      <ArticleH2>{t('articles:best-apps-to-plan-travel.h2_6')}</ArticleH2>
 
       <ArticleParagraph>
-        For most trips: Wanderlog to plan, Google Flights to find deals, Folio to store your tickets, your airline's app for check-in. Four apps. That's it. Add Flighty if you're a frequent flyer, Google Maps for navigation. You don't need 20 apps. You need the right 4-5 that actually solve problems you have.
+        {t('articles:best-apps-to-plan-travel.p13')}
       </ArticleParagraph>
     </BlogArticleLayout>
   )

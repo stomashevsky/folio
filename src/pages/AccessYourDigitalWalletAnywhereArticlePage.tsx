@@ -1,69 +1,75 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import { LocalizedLink } from '../components/ui'
 import walletOverviewImage from '../assets/images/blog-wallet-overview-folio.png'
+import { useTranslation, Trans } from 'react-i18next'
 
 export default function AccessYourDigitalWalletAnywhereArticlePage() {
+  const { t } = useTranslation(['articles', 'blog'])
+
   return (
     <BlogArticleLayout
-      title="One app for your passport, tickets, and everything in between"
-      description="Your passport is a PDF. Your boarding pass is in email. Your hotel confirmation is a screenshot. Here's a better way."
+      title={t('blog:articles.access-your-digital-wallet-anywhere.title')}
+      description={t('blog:articles.access-your-digital-wallet-anywhere.description')}
       date="Jul 1, 2025"
       category="Product"
       slug="access-your-digital-wallet-anywhere"
     >
       <ArticleParagraph>
-        Your passport is a PDF somewhere in your Files app. Your boarding pass is an email attachment you'll need to find at the gate. The hotel confirmation is a screenshot buried in your camera roll. Your train ticket is in a different email, from a different booking site, in a different format.
+        {t('articles:access-your-digital-wallet-anywhere.p1')}
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Each document lives in a different place. When you need one, you search. Sometimes you find it quickly. Sometimes you're standing at the counter, scrolling frantically, while the queue grows behind you.
+        {t('articles:access-your-digital-wallet-anywhere.p2')}
       </ArticleParagraph>
 
-      <ArticleH2>One place for everything</ArticleH2>
+      <ArticleH2>{t('articles:access-your-digital-wallet-anywhere.h2_1')}</ArticleH2>
 
       <ArticleParagraph>
-        <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</LocalizedLink> puts all your documents in one app. IDs: passport, driver's license, residence permit, national ID. Tickets: flights, trains, buses, concerts, museums. Bookings: hotels, restaurants, car rentals. Cards: payment cards, insurance, membership cards, loyalty programs.
+        <Trans
+          i18nKey="articles:access-your-digital-wallet-anywhere.p3"
+          components={{ 0: <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
+        />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Import from anywhere. Forward a confirmation email, and Folio extracts the ticket details automatically. Upload a PDF, and it becomes a readable card with the important information visible. Take a photo of a paper document, and it gets scanned and structured.
+        {t('articles:access-your-digital-wallet-anywhere.p4')}
       </ArticleParagraph>
 
       <ArticleImage
         src={walletOverviewImage}
-        alt="Folio app showing passport with all details, bus ticket with barcode ready to scan, and trip timeline with hotels, flights, and activities"
+        alt={t('articles:access-your-digital-wallet-anywhere.img_alt')}
       />
 
-      <ArticleH2>Not PDFs you zoom into</ArticleH2>
+      <ArticleH2>{t('articles:access-your-digital-wallet-anywhere.h2_2')}</ArticleH2>
 
       <ArticleParagraph>
-        The problem with PDFs is finding the information you need. The barcode is on page 2. The confirmation number is in tiny text at the bottom. The departure time is buried in a paragraph. You zoom in, scroll around, try to find what matters.
+        {t('articles:access-your-digital-wallet-anywhere.p5')}
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Folio extracts the key details and displays them clearly. Your bus ticket shows the departure time, stations, seat number, and barcode prominently. Your passport shows your name, number, and expiry date without opening a file. Your hotel booking shows check-in time, address, and confirmation number at a glance.
+        {t('articles:access-your-digital-wallet-anywhere.p6')}
       </ArticleParagraph>
 
-      <ArticleH2>Timeline for travel</ArticleH2>
+      <ArticleH2>{t('articles:access-your-digital-wallet-anywhere.h2_3')}</ArticleH2>
 
       <ArticleParagraph>
-        When you're traveling, documents have dates. Flight on Tuesday, hotel check-in the same day, museum tickets for Wednesday, train on Thursday. The Timeline view organizes everything chronologically. Open it and see what's coming up next, what documents you'll need today, and what's scheduled for later in the trip.
+        {t('articles:access-your-digital-wallet-anywhere.p7')}
       </ArticleParagraph>
 
-      <ArticleH2>Shared folders for groups</ArticleH2>
+      <ArticleH2>{t('articles:access-your-digital-wallet-anywhere.h2_4')}</ArticleH2>
 
       <ArticleParagraph>
-        Traveling with family or friends? Create a shared folder. Everyone with access sees the same documents. Both parents have the hotel confirmation. All four friends have the concert tickets. When one person adds a new booking, everyone sees it immediately. No forwarding emails. No "can you send me that again?"
+        {t('articles:access-your-digital-wallet-anywhere.p8')}
       </ArticleParagraph>
 
-      <ArticleH2>Works offline</ArticleH2>
+      <ArticleH2>{t('articles:access-your-digital-wallet-anywhere.h2_5')}</ArticleH2>
 
       <ArticleParagraph>
-        Airport WiFi is unreliable. International data is expensive. The moment you need a document is often the moment you don't have connectivity. Everything in Folio works offline. Your passport, your boarding pass, your hotel confirmation, all accessible without internet.
+        {t('articles:access-your-digital-wallet-anywhere.p9')}
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Free on iOS and Android. Your documents sync across devices and stay encrypted. One app for everything you used to scatter across emails, screenshots, and downloads.
+        {t('articles:access-your-digital-wallet-anywhere.p10')}
       </ArticleParagraph>
     </BlogArticleLayout>
   )

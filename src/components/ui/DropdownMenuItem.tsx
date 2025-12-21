@@ -38,8 +38,8 @@ export default function DropdownMenuItem({
 }: DropdownMenuItemProps & Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'className'>) {
   // Base classes matching Figma design
   // Icon to text gap: 12px (gap-3), padding: 16px horizontal, 12px vertical, rounded-[18px]
-  // items-center: icon vertically centered relative to text block
-  const baseClasses = 'box-border flex gap-3 items-center px-4 py-3 rounded-[18px] outline-none focus-visible:outline-none transition-colors duration-150 ease-out text-left'
+  // items-start: content aligned to top when h-full is used
+  const baseClasses = 'box-border flex gap-3 items-start px-4 py-3 rounded-[18px] outline-none focus-visible:outline-none transition-colors duration-150 ease-out text-left'
 
   // State classes - subtle hover like Apple design
   // Hover/Active background: #e5e5e5 (soft gray)
@@ -58,13 +58,13 @@ export default function DropdownMenuItem({
       aria-current={ariaCurrent}
       {...(props as ButtonHTMLAttributes<HTMLButtonElement>)}
     >
-      {/* Feature icon (if provided) - vertically centered */}
+      {/* Feature icon (if provided) - centered relative to text block */}
       {icon && (
         <img
           src={icon}
           alt=""
           aria-hidden="true"
-          className="w-5 h-5 shrink-0"
+          className="w-5 h-5 shrink-0 self-center"
         />
       )}
 
