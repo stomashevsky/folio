@@ -6,8 +6,75 @@
     },
     "hero": {
       "tagline": "Digital ticketing",
-      "title": "Secure digital tickets at scale",
-      "description": "Create, manage, and validate digital tickets with built-in fraud controls."
+      "title": "Better tickets\nNo app to build",
+      "description": "Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone."
+    },
+    "trust": {
+      "title": "Built on a platform people trust",
+      "description": "Your tickets appear inside the same secure wallet people use daily for IDs, cards and travel documents. No extra apps, no onboarding friction.",
+      "rating": {
+        "value": "4.7★",
+        "description": "Users consistently rate Folio highly for its clarity, speed and reliability in daily use."
+      },
+      "documents": {
+        "value": "1M+",
+        "description": "Documents, cards and tickets already added by people who use Folio to stay organized."
+      },
+      "countries": {
+        "value": "120+",
+        "description": "Countries where Folio helps users keep their essential documents accessible anywhere."
+      }
+    },
+    "format": {
+      "title": "Issue tickets in a Folio ready format",
+      "description": "Send us simple JSON or an email you already generate and Folio turns it into a clean digital ticket. No pkpass files, no wallet certificates, no SDKs to integrate.",
+      "features": {
+        "noFormats": "No special pass formats or certificates",
+        "fastDelivery": "Tickets arrive in seconds on the customer phone",
+        "anySystem": "Works with any existing booking or ticketing system"
+      }
+    },
+    "whyFolio": {
+      "title": "Why Folio instead of Apple Wallet or Google Wallet",
+      "description": "A simpler and more universal way to deliver digital tickets without platform limits or complex formats.",
+      "noFormats": {
+        "title": "No special formats",
+        "description": "You do not need to create pass files or manage certificates. Folio works with simple data you already send."
+      },
+      "workflow": {
+        "title": "Fits your existing workflow",
+        "description": "If you can send a PDF or email, you can issue tickets for Folio. No new systems, no mobile team, no setup."
+      },
+      "onePlace": {
+        "title": "Everything in one place",
+        "description": "All tickets and bookings appear in a simple timeline that helps customers see their plans at a glance."
+      },
+      "everyone": {
+        "title": "Available to everyone",
+        "description": "Your tickets work the same on iOS and Android in any region, even for users who do not use wallet apps."
+      }
+    },
+    "operators": {
+      "title": "Made for real world operators",
+      "description": "Folio works for any service where customers receive tickets or confirmations by email.",
+      "events": {
+        "title": "Events and venues",
+        "description": "Concerts, festivals, theatres and local venues get modern event tickets that are easy to scan and easy to understand."
+      },
+      "transport": {
+        "title": "Transport operators",
+        "description": "Regional airlines, buses and rail services send simple travel cards with clear times, stops and seat details in one place."
+      },
+      "tours": {
+        "title": "Tours and activities",
+        "description": "Tours, excursions and attractions keep every booking in one simple view so guests always know where to be and when."
+      }
+    },
+    "cta": {
+      "title": "Turn every ticket into a great experience",
+      "description": "If you deliver tickets or bookings by email, Folio gives your customers a clearer and more reliable experience without changing how you work.",
+      "button": "Get in touch",
+      "tryButton": "Try Folio"
     }
   },
   "ageCompliance": {
@@ -17,19 +84,191 @@
     },
     "hero": {
       "tagline": "Age compliance",
-      "title": "Verify age with confidence",
-      "description": "Verify user age for restricted products and services with confidence."
+      "title": "Age verification service for global compliance",
+      "description": "Folio helps you confirm user age quickly and securely anywhere in the world. You choose verification methods that match your risk level, from private anonymous checks to full identity verification, while staying aligned with global standards including GDPR, COPPA, DSA and others."
+    },
+    "ageChecks": {
+      "title": "Age checks without friction",
+      "description": "Age verification with Folio is fast, intuitive and smooth. Users complete a selfie, age credential or a document scan in a few seconds, keeping onboarding simple and minimising drop offs."
+    },
+    "methods": {
+      "title": "Three ways to verify age",
+      "documentVerification": {
+        "title": "Document based verification",
+        "description": "When you need maximum assurance, users upload an ID document for full age verification. Folio validates authenticity, runs liveness checks and confirms legal age so you can meet strict regulatory requirements."
+      },
+      "faceEstimation": {
+        "title": "Face based age estimation",
+        "description": "Users take a quick selfie and our AI estimates age in seconds. No documents are required. Built in liveness checks help prevent fraud while keeping the flow light and mobile friendly."
+      },
+      "anonymousCredential": {
+        "title": "Anonymous age credential",
+        "description": "A one time verified age credential that can be reused without revealing identity. Users prove they are old enough with a privacy preserving token instead of personal data."
+      }
+    },
+    "privacy": {
+      "title": "Privacy that stays with the user",
+      "description": "Folio is designed around privacy from the first step. Anonymous and minimal data flows reduce what you need to store and process. Where biometrics are used, they stay protected and handled securely so you stay aligned with global privacy laws."
+    },
+    "assurance": {
+      "title": "All essential age assurance features",
+      "description": "Folio brings liveness checks, biometric precision, real time estimation and document backed verification into one platform. You can choose the right level of assurance for your users and your product without adding unnecessary friction."
+    },
+    "industries": {
+      "title": "Made for your industry",
+      "socialPlatforms": {
+        "title": "Social platforms and messaging",
+        "description": "Protect younger users and support child safety rules by confirming appropriate age before access, with the option to add parental consent where needed."
+      },
+      "gaming": {
+        "title": "Online gaming and gambling",
+        "description": "Confirm players meet legal age limits before they play. Strong age checks help prevent misuse, support licensing requirements and reduce fraud."
+      },
+      "ecommerce": {
+        "title": "E-commerce and delivery",
+        "description": "Verify age at checkout for alcohol, tobacco and other restricted products. Folio fits into your existing purchase or delivery flow without slowing it down."
+      },
+      "fintech": {
+        "title": "Fintech and financial services",
+        "description": "Ensure that customers meet minimum age requirements for accounts, wallets and financial products while keeping digital onboarding straightforward."
+      },
+      "streaming": {
+        "title": "Streaming and adult content",
+        "description": "Make sure age restricted content is shown only to eligible audiences with verification methods that match your viewing experience."
+      },
+      "telecom": {
+        "title": "Telecommunications",
+        "description": "Check customer age for plans, contracts and services that require legal age confirmation while keeping sign up quick and simple."
+      }
+    },
+    "integration": {
+      "title": "Easy to integrate",
+      "sdk": {
+        "title": "Web and mobile SDK",
+        "description": "Embed age checks directly into your product. Users complete verification in a native, branded flow that feels like part of your app."
+      },
+      "api": {
+        "title": "API",
+        "description": "Control every detail of the age verification journey with our API. Orchestrate methods, rules and outcomes from your own backend systems."
+      },
+      "staticUrl": {
+        "title": "Static URL",
+        "description": "Launch age verification instantly with a secure hosted link. Share it by email, SMS or chat to start checks without any development work."
+      }
+    },
+    "cta": {
+      "title": "Bring accurate age verification to your product",
+      "description": "Folio helps you protect users, satisfy regulators and maintain a smooth experience. Talk to our team to design an age assurance flow that fits your product.",
+      "button": "Get in touch"
     }
   },
   "clientOnboarding": {
     "meta": {
       "title": "Client Onboarding | Folio Wallet",
-      "description": "Streamlined KYC verification for regulated businesses."
+      "description": "Client verification that's fast, compliant, and audit-ready. Onboard clients remotely in minutes while meeting AML, KYC, and CDD requirements globally."
     },
     "hero": {
       "tagline": "Client onboarding",
       "title": "Streamlined KYC for regulated businesses",
-      "description": "Streamlined KYC verification for regulated businesses."
+      "description": "Client verification that's fast, compliant, and audit-ready. Onboard clients remotely in minutes while meeting AML, KYC, and CDD requirements globally. Stop chasing documents and stay audit-ready around the clock."
+    },
+    "features": {
+      "title": "Client verification made simple",
+      "remote": {
+        "title": "Remote verification",
+        "description": "Verify clients anywhere in the world without meeting in person. They complete checks from any modern device."
+      },
+      "compliance": {
+        "title": "Instant compliance reports",
+        "description": "Receive timestamped PDF reports with ID verification, address confirmation, and complete activity logs."
+      },
+      "audit": {
+        "title": "Secure audit trail",
+        "description": "All verification data is encrypted and stored securely with permission-based access for regulatory review."
+      }
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "send": {
+        "title": "Send",
+        "description": "Share a secure verification link with your client via email, SMS, or any messaging platform. No app download required."
+      },
+      "verify": {
+        "title": "Verify",
+        "description": "Your client completes ID verification and address confirmation in minutes using their smartphone or computer."
+      },
+      "review": {
+        "title": "Review",
+        "description": "Receive a timestamped compliance report instantly with ID match confirmation, address verification, and risk scoring."
+      }
+    },
+    "keyFeatures": {
+      "title": "Key features",
+      "description": "Everything you need to verify clients and meet compliance requirements",
+      "globalId": {
+        "title": "Global ID support",
+        "description": "Verify passports, driver licenses, and national IDs from over 200 countries and regions."
+      },
+      "amlKyc": {
+        "title": "AML and KYC compliance",
+        "description": "Meet regulatory requirements including UK MLR, EU AMLD, FINTRAC, IRS KYC, and other global frameworks."
+      },
+      "address": {
+        "title": "Address verification",
+        "description": "Confirm client addresses with utility bills, bank statements, and other proof of address documents."
+      },
+      "storage": {
+        "title": "Secure document storage",
+        "description": "All client data is encrypted at rest and in transit with secure, permission-based access."
+      },
+      "riskScoring": {
+        "title": "Risk scoring",
+        "description": "Automated risk assessment helps you identify potentially fraudulent or high-risk clients."
+      },
+      "auditReports": {
+        "title": "Audit-ready reports",
+        "description": "Generate timestamped PDF compliance reports with full activity logs for regulatory review."
+      },
+      "facial": {
+        "title": "Facial verification",
+        "description": "AI-powered face match compares live selfies with ID photos to confirm identity."
+      },
+      "liveness": {
+        "title": "Liveness detection",
+        "description": "Prevent fraud with advanced liveness checks that ensure the person is physically present."
+      }
+    },
+    "industries": {
+      "title": "Made for regulated industries",
+      "accountants": {
+        "title": "Accountants",
+        "description": "Streamline client onboarding for tax preparation, auditing, and financial advisory services while meeting AML requirements."
+      },
+      "lawyers": {
+        "title": "Lawyers and solicitors",
+        "description": "Verify client identity for legal matters, property transactions, and corporate services with full compliance records."
+      },
+      "estate": {
+        "title": "Estate agents",
+        "description": "Meet anti-money laundering obligations for property sales and lettings with fast remote verification."
+      },
+      "financial": {
+        "title": "Financial advisors",
+        "description": "Onboard investment and insurance clients securely while maintaining regulatory compliance."
+      },
+      "conveyancers": {
+        "title": "Conveyancers",
+        "description": "Verify buyers and sellers in property transactions with secure document collection and storage."
+      },
+      "professional": {
+        "title": "Professional services",
+        "description": "Any regulated business that needs to verify client identity can benefit from streamlined digital onboarding."
+      }
+    },
+    "cta": {
+      "title": "Simplify your client onboarding today",
+      "description": "Turn hours of manual compliance work into minutes. Talk to our team to see how Folio can streamline your client verification process.",
+      "button": "Get in touch"
     }
   },
   "ticketIssuance": {
@@ -39,8 +278,75 @@
     },
     "hero": {
       "tagline": "Ticket issuance",
-      "title": "Issue tickets directly to wallets",
-      "description": "Issue secure digital tickets directly to user wallets."
+      "title": "Better tickets\nNo app to build",
+      "description": "Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone."
+    },
+    "trust": {
+      "title": "Built on a platform people trust",
+      "description": "Your tickets appear inside the same secure wallet people use daily for IDs, cards and travel documents. No extra apps, no onboarding friction.",
+      "rating": {
+        "value": "4.7★",
+        "description": "Users consistently rate Folio highly for its clarity, speed and reliability in daily use."
+      },
+      "documents": {
+        "value": "1M+",
+        "description": "Documents, cards and tickets already added by people who use Folio to stay organized."
+      },
+      "countries": {
+        "value": "120+",
+        "description": "Countries where Folio helps users keep their essential documents accessible anywhere."
+      }
+    },
+    "format": {
+      "title": "Issue tickets in a Folio ready format",
+      "description": "Send us simple JSON or an email you already generate and Folio turns it into a clean digital ticket. No pkpass files, no wallet certificates, no SDKs to integrate.",
+      "features": {
+        "noFormats": "No special pass formats or certificates",
+        "fastDelivery": "Tickets arrive in seconds on the customer phone",
+        "anySystem": "Works with any existing booking or ticketing system"
+      }
+    },
+    "whyFolio": {
+      "title": "Why Folio instead of Apple Wallet or Google Wallet",
+      "description": "A simpler and more universal way to deliver digital tickets without platform limits or complex formats.",
+      "noFormats": {
+        "title": "No special formats",
+        "description": "You do not need to create pass files or manage certificates. Folio works with simple data you already send."
+      },
+      "workflow": {
+        "title": "Fits your existing workflow",
+        "description": "If you can send a PDF or email, you can issue tickets for Folio. No new systems, no mobile team, no setup."
+      },
+      "onePlace": {
+        "title": "Everything in one place",
+        "description": "All tickets and bookings appear in a simple timeline that helps customers see their plans at a glance."
+      },
+      "everyone": {
+        "title": "Available to everyone",
+        "description": "Your tickets work the same on iOS and Android in any region, even for users who do not use wallet apps."
+      }
+    },
+    "operators": {
+      "title": "Made for real world operators",
+      "description": "Folio works for any service where customers receive tickets or confirmations by email.",
+      "events": {
+        "title": "Events and venues",
+        "description": "Concerts, festivals, theatres and local venues get modern event tickets that are easy to scan and easy to understand."
+      },
+      "transport": {
+        "title": "Transport operators",
+        "description": "Regional airlines, buses and rail services send simple travel cards with clear times, stops and seat details in one place."
+      },
+      "tours": {
+        "title": "Tours and activities",
+        "description": "Tours, excursions and attractions keep every booking in one simple view so guests always know where to be and when."
+      }
+    },
+    "cta": {
+      "title": "Turn every ticket into a great experience",
+      "description": "If you deliver tickets or bookings by email, Folio gives your customers a clearer and more reliable experience without changing how you work.",
+      "button": "Get in touch",
+      "tryButton": "Try Folio"
     }
   },
   "business": {

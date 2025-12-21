@@ -34,105 +34,47 @@ const BACKGROUND_STYLE = {
     'linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(90deg, rgba(229, 229, 229, 1) 0%, rgba(229, 229, 229, 1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%)',
 }
 
-// How it works accordion items
-const howItWorksItems: AccordionItemData[] = [
-  {
-    id: 'send',
-    title: 'Send',
-    description: 'Share a secure verification link with your client via email, SMS, or any messaging platform. No app download required.',
-    desktopImage: clientOnboardingHowItWorks1,
-  },
-  {
-    id: 'verify',
-    title: 'Verify',
-    description: 'Your client completes ID verification and address confirmation in minutes using their smartphone or computer.',
-    desktopImage: clientOnboardingHowItWorks2,
-  },
-  {
-    id: 'review',
-    title: 'Review',
-    description: 'Receive a timestamped compliance report instantly with ID match confirmation, address verification, and risk scoring.',
-    desktopImage: clientOnboardingHowItWorks3,
-  },
-]
+// How it works image mapping
+const HOW_IT_WORKS_IMAGES: Record<string, string> = {
+  send: clientOnboardingHowItWorks1,
+  verify: clientOnboardingHowItWorks2,
+  review: clientOnboardingHowItWorks3,
+}
 
-// Key features accordion items
-const keyFeaturesItems: AccordionItemData[] = [
-  {
-    id: 'global-id',
-    title: 'Global ID support',
-    description: 'Verify passports, driver licenses, and national IDs from over 200 countries and regions.',
-  },
-  {
-    id: 'aml-kyc',
-    title: 'AML and KYC compliance',
-    description: 'Meet regulatory requirements including UK MLR, EU AMLD, FINTRAC, IRS KYC, and other global frameworks.',
-  },
-  {
-    id: 'address-verification',
-    title: 'Address verification',
-    description: 'Confirm client addresses with utility bills, bank statements, and other proof of address documents.',
-  },
-  {
-    id: 'secure-storage',
-    title: 'Secure document storage',
-    description: 'All client data is encrypted at rest and in transit with secure, permission-based access.',
-  },
-  {
-    id: 'risk-scoring',
-    title: 'Risk scoring',
-    description: 'Automated risk assessment helps you identify potentially fraudulent or high-risk clients.',
-  },
-  {
-    id: 'audit-reports',
-    title: 'Audit-ready reports',
-    description: 'Generate timestamped PDF compliance reports with full activity logs for regulatory review.',
-  },
-  {
-    id: 'facial-verification',
-    title: 'Facial verification',
-    description: 'AI-powered face match compares live selfies with ID photos to confirm identity.',
-  },
-  {
-    id: 'liveness-check',
-    title: 'Liveness detection',
-    description: 'Prevent fraud with advanced liveness checks that ensure the person is physically present.',
-  },
-]
+// How it works step IDs
+const HOW_IT_WORKS_IDS = ['send', 'verify', 'review'] as const
 
-// Industry cards data
-const industryCards = [
-  {
-    icon: building2Icon,
-    title: 'Accountants',
-    description: 'Streamline client onboarding for tax preparation, auditing, and financial advisory services while meeting AML requirements.',
-  },
-  {
-    icon: scaleIcon,
-    title: 'Lawyers and solicitors',
-    description: 'Verify client identity for legal matters, property transactions, and corporate services with full compliance records.',
-  },
-  {
-    icon: homeIcon,
-    title: 'Estate agents',
-    description: 'Meet anti-money laundering obligations for property sales and lettings with fast remote verification.',
-  },
-  {
-    icon: landmarkIcon,
-    title: 'Financial advisors',
-    description: 'Onboard investment and insurance clients securely while maintaining regulatory compliance.',
-  },
-  {
-    icon: heartHandshakeIcon,
-    title: 'Conveyancers',
-    description: 'Verify buyers and sellers in property transactions with secure document collection and storage.',
-  },
-  {
-    icon: userCheckIcon,
-    title: 'Professional services',
-    description: 'Any regulated business that needs to verify client identity can benefit from streamlined digital onboarding.',
-  },
-]
+// Key features IDs
+const KEY_FEATURES_IDS = [
+  'globalId',
+  'amlKyc',
+  'addressVerification',
+  'secureStorage',
+  'riskScoring',
+  'auditReports',
+  'facialVerification',
+  'livenessCheck',
+] as const
+
+// Industry cards icon mapping
+const INDUSTRY_ICONS: Record<string, string> = {
+  accountants: building2Icon,
+  lawyers: scaleIcon,
+  estateAgents: homeIcon,
+  financialAdvisors: landmarkIcon,
+  conveyancers: heartHandshakeIcon,
+  professionalServices: userCheckIcon,
+}
+
+// Industry IDs
+const INDUSTRY_IDS = [
+  'accountants',
+  'lawyers',
+  'estateAgents',
+  'financialAdvisors',
+  'conveyancers',
+  'professionalServices',
+] as const
 
 export default function ClientOnboardingPage() {
   const { t } = useTranslation('solutions')
@@ -146,6 +88,26 @@ export default function ClientOnboardingPage() {
   })
 
   const [activeMethodId, setActiveMethodId] = useState<string | null>('send')
+
+  // Dynamic accordion items from translations
+  const howItWorksItems: AccordionItemData[] = HOW_IT_WORKS_IDS.map(id => ({
+    id,
+    title: t(`clientOnboarding.howItWorks.${id}.title`),
+    description: t(`clientOnboarding.howItWorks.${id}.description`),
+    desktopImage: HOW_IT_WORKS_IMAGES[id],
+  }))
+
+  const keyFeaturesItems: AccordionItemData[] = KEY_FEATURES_IDS.map(id => ({
+    id,
+    title: t(`clientOnboarding.keyFeatures.${id}.title`),
+    description: t(`clientOnboarding.keyFeatures.${id}.description`),
+  }))
+
+  const industryCards = INDUSTRY_IDS.map(id => ({
+    icon: INDUSTRY_ICONS[id],
+    title: t(`clientOnboarding.industries.${id}.title`),
+    description: t(`clientOnboarding.industries.${id}.description`),
+  }))
   
   const activeMethod = howItWorksItems.find(item => item.id === activeMethodId) || howItWorksItems[0]
 
@@ -163,12 +125,12 @@ export default function ClientOnboardingPage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
-                <HeroTagline icon={briefcaseIcon}>Client onboarding</HeroTagline>
+                <HeroTagline icon={briefcaseIcon}>{t('clientOnboarding.hero.tagline')}</HeroTagline>
                 <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px]">
-                  Streamlined KYC for regulated businesses
+                  {t('clientOnboarding.hero.title')}
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                  Client verification that's fast, compliant, and audit-ready. Onboard clients remotely in minutes while meeting AML, KYC, and CDD requirements globally. Stop chasing documents and stay audit-ready around the clock.
+                  {t('clientOnboarding.hero.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative">
@@ -176,13 +138,13 @@ export default function ClientOnboardingPage() {
                   onClick={handleGetInTouch}
                   variant="primary"
                 >
-                  Get in touch
+                  {t('clientOnboarding.cta.button', 'Get in touch')}
                 </Button>
               </div>
             </div>
             <ImageWithPlaceholder
               src={clientOnboardingHero}
-              alt="Client onboarding preview"
+              alt={t('clientOnboarding.hero.tagline')}
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
               fetchPriority="high"
@@ -194,12 +156,12 @@ export default function ClientOnboardingPage() {
           <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-                <HeroTagline icon={briefcaseIcon}>Client onboarding</HeroTagline>
+                <HeroTagline icon={briefcaseIcon}>{t('clientOnboarding.hero.tagline')}</HeroTagline>
                 <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
-                  Streamlined KYC for regulated businesses
+                  {t('clientOnboarding.hero.title')}
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                  Client verification that's fast, compliant, and audit-ready. Onboard clients remotely in minutes while meeting AML, KYC, and CDD requirements globally. Stop chasing documents and stay audit-ready around the clock.
+                  {t('clientOnboarding.hero.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative shrink-0">
@@ -207,13 +169,13 @@ export default function ClientOnboardingPage() {
                   onClick={handleGetInTouch}
                   variant="primary"
                 >
-                  Get in touch
+                  {t('clientOnboarding.cta.button', 'Get in touch')}
                 </Button>
               </div>
             </div>
             <ImageWithPlaceholder
               src={clientOnboardingHero}
-              alt="Client onboarding preview"
+              alt={t('clientOnboarding.hero.tagline')}
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
               fetchPriority="high"
@@ -227,24 +189,24 @@ export default function ClientOnboardingPage() {
           <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-12 items-center relative shrink-0 w-full">
               <SectionHeader
-                title="Client verification made simple"
+                title={t('clientOnboarding.verification.title')}
                 maxWidth="576px"
               />
               <div className="flex flex-col md:flex-row gap-11 md:gap-6 items-start relative shrink-0 w-full">
                 <FeatureItem
                   icon={globeIcon}
-                  title="Remote verification"
-                  description="Verify clients anywhere in the world without meeting in person. They complete checks from any modern device."
+                  title={t('clientOnboarding.verification.remote.title')}
+                  description={t('clientOnboarding.verification.remote.description')}
                 />
                 <FeatureItem
                   icon={fileSearchIcon}
-                  title="Instant compliance reports"
-                  description="Receive timestamped PDF reports with ID verification, address confirmation, and complete activity logs."
+                  title={t('clientOnboarding.verification.reports.title')}
+                  description={t('clientOnboarding.verification.reports.description')}
                 />
                 <FeatureItem
                   icon={shieldCheckIcon}
-                  title="Secure audit trail"
-                  description="All verification data is encrypted and stored securely with permission-based access for regulatory review."
+                  title={t('clientOnboarding.verification.audit.title')}
+                  description={t('clientOnboarding.verification.audit.description')}
                 />
               </div>
             </div>
@@ -264,7 +226,7 @@ export default function ClientOnboardingPage() {
             />
             <div className="flex flex-1 flex-col gap-6 items-start relative min-w-0">
               <SectionHeader
-                title="How it works"
+                title={t('clientOnboarding.howItWorks.title')}
                 align="left"
                 maxWidth="100%"
               />
@@ -280,7 +242,7 @@ export default function ClientOnboardingPage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-6 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="How it works"
+              title={t('clientOnboarding.howItWorks.title')}
               align="left"
               maxWidth="100%"
             />
@@ -298,16 +260,16 @@ export default function ClientOnboardingPage() {
           <div className="hidden md:flex gap-16 items-start max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-5 items-start relative min-w-0 max-w-[512px]">
               <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-                Key features
+                {t('clientOnboarding.keyFeatures.title')}
               </h2>
               <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                Everything you need to verify clients and meet compliance requirements
+                {t('clientOnboarding.keyFeatures.description')}
               </p>
             </div>
             <div className="flex flex-1 flex-col items-start relative min-w-0">
               <Accordion
                 items={keyFeaturesItems}
-                defaultOpenId="global-id"
+                defaultOpenId="globalId"
                 showMobileImages={false}
               />
             </div>
@@ -317,15 +279,15 @@ export default function ClientOnboardingPage() {
           <div className="flex md:hidden flex-col gap-6 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-5 items-start relative shrink-0 w-full">
               <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
-                Key features
+                {t('clientOnboarding.keyFeatures.title')}
               </h2>
               <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                Everything you need to verify clients and meet compliance requirements
+                {t('clientOnboarding.keyFeatures.description')}
               </p>
             </div>
             <Accordion
               items={keyFeaturesItems}
-              defaultOpenId="global-id"
+              defaultOpenId="globalId"
               showMobileImages={false}
             />
           </div>
@@ -335,7 +297,7 @@ export default function ClientOnboardingPage() {
         <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           <div className="flex flex-col gap-10 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="Made for regulated industries"
+              title={t('clientOnboarding.industries.title')}
               align="center"
               maxWidth="576px"
             />
@@ -359,10 +321,10 @@ export default function ClientOnboardingPage() {
             <div className="flex gap-16 items-center p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
               <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px] min-w-0">
                 <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-                  Simplify your client onboarding today
+                  {t('clientOnboarding.cta.title')}
                 </h2>
                 <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-                  Turn hours of manual compliance work into minutes. Talk to our team to see how Folio can streamline your client verification process.
+                  {t('clientOnboarding.cta.description')}
                 </p>
               </div>
               <div className="flex flex-1 flex-wrap gap-3 items-start justify-end relative min-w-0">
@@ -370,7 +332,7 @@ export default function ClientOnboardingPage() {
                   onClick={handleGetInTouch}
                   variant="primary"
                 >
-                  Get in touch
+                  {t('clientOnboarding.cta.button', 'Get in touch')}
                 </Button>
               </div>
             </div>
@@ -380,10 +342,10 @@ export default function ClientOnboardingPage() {
           <div className="flex md:hidden flex-col gap-8 items-center w-full px-6 py-16 relative shrink-0" style={BACKGROUND_STYLE}>
             <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full">
               <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
-                Simplify your client onboarding today
+                {t('clientOnboarding.cta.title')}
               </h2>
               <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-                Turn hours of manual compliance work into minutes. Talk to our team to see how Folio can streamline your client verification process.
+                {t('clientOnboarding.cta.description')}
               </p>
             </div>
             <div className="flex flex-col gap-3 items-center relative shrink-0 w-full">
@@ -391,7 +353,7 @@ export default function ClientOnboardingPage() {
                 onClick={handleGetInTouch}
                 variant="primary"
               >
-                Get in touch
+                {t('clientOnboarding.cta.button', 'Get in touch')}
               </Button>
             </div>
           </div>

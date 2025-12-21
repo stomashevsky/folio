@@ -35,80 +35,38 @@ const BACKGROUND_STYLE = {
     'linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(90deg, rgba(229, 229, 229, 1) 0%, rgba(229, 229, 229, 1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%)',
 }
 
-// Age verification methods data (using AccordionItemData format)
-const ageVerificationMethods: AccordionItemData[] = [
-  {
-    id: 'document-verification',
-    title: 'Document based verification',
-    description: 'When you need maximum assurance, users upload an ID document for full age verification. Folio validates authenticity, runs liveness checks and confirms legal age so you can meet strict regulatory requirements.',
-    desktopImage: ageVerificationDocumentVerification,
-  },
-  {
-    id: 'face-estimation',
-    title: 'Face based age estimation',
-    description: 'Users take a quick selfie and our AI estimates age in seconds. No documents are required. Built in liveness checks help prevent fraud while keeping the flow light and mobile friendly.',
-    desktopImage: ageVerificationFaceEstimation,
-  },
-  {
-    id: 'anonymous-credential',
-    title: 'Anonymous age credential',
-    description: 'A one time verified age credential that can be reused without revealing identity. Users prove they are old enough with a privacy preserving token instead of personal data.',
-    desktopImage: ageVerificationAnonymousCredential,
-  },
-]
+// Age verification methods image mapping
+const METHODS_IMAGES: Record<string, string> = {
+  documentVerification: ageVerificationDocumentVerification,
+  faceEstimation: ageVerificationFaceEstimation,
+  anonymousCredential: ageVerificationAnonymousCredential,
+}
 
-// Industry cards data
-const industryCards = [
-  {
-    icon: messagesSquareIcon,
-    title: 'Social platforms and messaging',
-    description: 'Protect younger users and support child safety rules by confirming appropriate age before access, with the option to add parental consent where needed.',
-  },
-  {
-    icon: dicesIcon,
-    title: 'Online gaming and gambling',
-    description: 'Confirm players meet legal age limits before they play. Strong age checks help prevent misuse, support licensing requirements and reduce fraud.',
-  },
-  {
-    icon: shoppingCartIcon,
-    title: 'E-commerce and delivery',
-    description: 'Verify age at checkout for alcohol, tobacco and other restricted products. Folio fits into your existing purchase or delivery flow without slowing it down.',
-  },
-  {
-    icon: creditCardIcon,
-    title: 'Fintech and financial services',
-    description: 'Ensure that customers meet minimum age requirements for accounts, wallets and financial products while keeping digital onboarding straightforward.',
-  },
-  {
-    icon: clapperboardIcon,
-    title: 'Streaming and adult content',
-    description: 'Make sure age restricted content is shown only to eligible audiences with verification methods that match your viewing experience.',
-  },
-  {
-    icon: signalIcon,
-    title: 'Telecommunications',
-    description: 'Check customer age for plans, contracts and services that require legal age confirmation while keeping sign up quick and simple.',
-  },
-]
+// Method IDs
+const METHOD_IDS = ['documentVerification', 'faceEstimation', 'anonymousCredential'] as const
 
-// Integration methods data
-const integrationMethods = [
-  {
-    icon: puzzleIcon,
-    title: 'Web and mobile SDK',
-    description: 'Embed age checks directly into your product. Users complete verification in a native, branded flow that feels like part of your app.',
-  },
-  {
-    icon: bracesIcon,
-    title: 'API',
-    description: 'Control every detail of the age verification journey with our API. Orchestrate methods, rules and outcomes from your own backend systems.',
-  },
-  {
-    icon: linkIcon,
-    title: 'Static URL',
-    description: 'Launch age verification instantly with a secure hosted link. Share it by email, SMS or chat to start checks without any development work.',
-  },
-]
+// Industry icon mapping
+const INDUSTRY_ICONS: Record<string, string> = {
+  socialPlatforms: messagesSquareIcon,
+  gaming: dicesIcon,
+  ecommerce: shoppingCartIcon,
+  fintech: creditCardIcon,
+  streaming: clapperboardIcon,
+  telecom: signalIcon,
+}
+
+// Industry IDs
+const INDUSTRY_IDS = ['socialPlatforms', 'gaming', 'ecommerce', 'fintech', 'streaming', 'telecom'] as const
+
+// Integration icon mapping
+const INTEGRATION_ICONS: Record<string, string> = {
+  sdk: puzzleIcon,
+  api: bracesIcon,
+  staticUrl: linkIcon,
+}
+
+// Integration IDs
+const INTEGRATION_IDS = ['sdk', 'api', 'staticUrl'] as const
 
 export default function AgeCompliancePage() {
   const { t } = useTranslation('solutions')
@@ -121,7 +79,27 @@ export default function AgeCompliancePage() {
     ogUrl: 'https://folio.id/solutions/age-compliance'
   })
 
-  const [activeMethodId, setActiveMethodId] = useState<string | null>('document-verification')
+  const [activeMethodId, setActiveMethodId] = useState<string | null>('documentVerification')
+
+  // Dynamic data from translations
+  const ageVerificationMethods: AccordionItemData[] = METHOD_IDS.map(id => ({
+    id,
+    title: t(`ageCompliance.methods.${id}.title`),
+    description: t(`ageCompliance.methods.${id}.description`),
+    desktopImage: METHODS_IMAGES[id],
+  }))
+
+  const industryCards = INDUSTRY_IDS.map(id => ({
+    icon: INDUSTRY_ICONS[id],
+    title: t(`ageCompliance.industries.${id}.title`),
+    description: t(`ageCompliance.industries.${id}.description`),
+  }))
+
+  const integrationMethods = INTEGRATION_IDS.map(id => ({
+    icon: INTEGRATION_ICONS[id],
+    title: t(`ageCompliance.integration.${id}.title`),
+    description: t(`ageCompliance.integration.${id}.description`),
+  }))
   
   const activeMethod = ageVerificationMethods.find(item => item.id === activeMethodId) || ageVerificationMethods[0]
 
@@ -139,12 +117,12 @@ export default function AgeCompliancePage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
-                <HeroTagline icon={ageIcon}>Age compliance</HeroTagline>
+                <HeroTagline icon={ageIcon}>{t('ageCompliance.hero.tagline')}</HeroTagline>
                 <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px]">
-                  Age verification service for global compliance
+                  {t('ageCompliance.hero.title')}
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                  Folio helps you confirm user age quickly and securely anywhere in the world. You choose verification methods that match your risk level, from private anonymous checks to full identity verification, while staying aligned with global standards including GDPR, COPPA, DSA and others.
+                  {t('ageCompliance.hero.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative">
@@ -152,13 +130,13 @@ export default function AgeCompliancePage() {
                   onClick={handleGetInTouch}
                   variant="primary"
                 >
-                  Get in touch
+                  {t('ageCompliance.cta.button')}
                 </Button>
               </div>
             </div>
             <ImageWithPlaceholder
               src={ageVerificationHero}
-              alt="Age verification preview"
+              alt={t('ageCompliance.hero.tagline')}
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
               fetchPriority="high"
@@ -170,12 +148,12 @@ export default function AgeCompliancePage() {
           <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-                <HeroTagline icon={ageIcon}>Age compliance</HeroTagline>
+                <HeroTagline icon={ageIcon}>{t('ageCompliance.hero.tagline')}</HeroTagline>
                 <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
-                  Age verification service for global compliance
+                  {t('ageCompliance.hero.title')}
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                  Folio helps you confirm user age quickly and securely anywhere in the world. You choose verification methods that match your risk level, from private anonymous checks to full identity verification, while staying aligned with global standards including GDPR, COPPA, DSA and others.
+                  {t('ageCompliance.hero.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative shrink-0">
@@ -183,13 +161,13 @@ export default function AgeCompliancePage() {
                   onClick={handleGetInTouch}
                   variant="primary"
                 >
-                  Get in touch
+                  {t('ageCompliance.cta.button')}
                 </Button>
               </div>
             </div>
             <ImageWithPlaceholder
               src={ageVerificationHero}
-              alt="Age verification preview"
+              alt={t('ageCompliance.hero.tagline')}
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
               fetchPriority="high"
@@ -203,10 +181,10 @@ export default function AgeCompliancePage() {
           <div className="flex flex-col gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-4 md:gap-6 items-center text-center max-w-[576px] relative shrink-0 w-full">
               <h2 className="font-bold leading-[36px] md:leading-[48px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px]">
-                Age checks without friction
+                {t('ageCompliance.ageChecks.title')}
               </h2>
               <p className="font-normal leading-6 md:leading-7 text-[#737373] text-base md:text-lg w-full">
-                Age verification with Folio is fast, intuitive and smooth. Users complete a selfie, age credential or a document scan in a few seconds, keeping onboarding simple and minimising drop offs.
+                {t('ageCompliance.ageChecks.description')}
               </p>
             </div>
           </div>
@@ -225,13 +203,13 @@ export default function AgeCompliancePage() {
             />
             <div className="flex flex-1 flex-col gap-6 items-start relative min-w-0">
               <SectionHeader
-                title="Three ways to verify age"
+                title={t('ageCompliance.methods.title')}
                 align="left"
                 maxWidth="100%"
               />
               <Accordion
                 items={ageVerificationMethods}
-                defaultOpenId="document-verification"
+                defaultOpenId="documentVerification"
                 onItemChange={setActiveMethodId}
                 showMobileImages={false}
               />
@@ -241,13 +219,13 @@ export default function AgeCompliancePage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-6 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="Three ways to verify age"
+              title={t('ageCompliance.methods.title')}
               align="left"
               maxWidth="100%"
             />
             <Accordion
               items={ageVerificationMethods}
-              defaultOpenId="document-verification"
+              defaultOpenId="documentVerification"
               showMobileImages={true}
             />
           </div>
@@ -259,15 +237,15 @@ export default function AgeCompliancePage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <SectionHeader
-                title="Privacy that stays with the user"
-                description="Folio is designed around privacy from the first step. Anonymous and minimal data flows reduce what you need to store and process. Where biometrics are used, they stay protected and handled securely so you stay aligned with global privacy laws."
+                title={t('ageCompliance.privacy.title')}
+                description={t('ageCompliance.privacy.description')}
                 align="left"
                 maxWidth="672px"
               />
             </div>
             <ImageWithPlaceholder
               src={ageVerificationPrivacy}
-              alt="Privacy features preview"
+              alt={t('ageCompliance.privacy.title')}
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
               loading="lazy"
@@ -277,14 +255,14 @@ export default function AgeCompliancePage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[672px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="Privacy that stays with the user"
-              description="Folio is designed around privacy from the first step. Anonymous and minimal data flows reduce what you need to store and process. Where biometrics are used, they stay protected and handled securely so you stay aligned with global privacy laws."
+              title={t('ageCompliance.privacy.title')}
+              description={t('ageCompliance.privacy.description')}
               align="left"
               maxWidth="672px"
             />
             <ImageWithPlaceholder
               src={ageVerificationPrivacy}
-              alt="Privacy features preview"
+              alt={t('ageCompliance.privacy.title')}
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
               loading="lazy"
@@ -298,15 +276,15 @@ export default function AgeCompliancePage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <ImageWithPlaceholder
               src={ageVerificationAgeAssurance}
-              alt="Age assurance features preview"
+              alt={t('ageCompliance.assurance.title')}
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
               loading="lazy"
             />
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <SectionHeader
-                title="All essential age assurance features"
-                description="Folio brings liveness checks, biometric precision, real time estimation and document backed verification into one platform. You can choose the right level of assurance for your users and your product without adding unnecessary friction."
+                title={t('ageCompliance.assurance.title')}
+                description={t('ageCompliance.assurance.description')}
                 align="left"
                 maxWidth="672px"
               />
@@ -316,14 +294,14 @@ export default function AgeCompliancePage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[672px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="All essential age assurance features"
-              description="Folio brings liveness checks, biometric precision, real time estimation and document backed verification into one platform. You can choose the right level of assurance for your users and your product without adding unnecessary friction."
+              title={t('ageCompliance.assurance.title')}
+              description={t('ageCompliance.assurance.description')}
               align="left"
               maxWidth="672px"
             />
             <ImageWithPlaceholder
               src={ageVerificationAgeAssurance}
-              alt="Age assurance features preview"
+              alt={t('ageCompliance.assurance.title')}
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
               loading="lazy"
@@ -335,7 +313,7 @@ export default function AgeCompliancePage() {
         <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
           <div className="flex flex-col gap-10 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="Made for your industry"
+              title={t('ageCompliance.industries.title')}
               align="center"
               maxWidth="576px"
             />
@@ -356,7 +334,7 @@ export default function AgeCompliancePage() {
         <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           <div className="flex flex-col gap-10 md:gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="Easy to integrate"
+              title={t('ageCompliance.integration.title')}
               align="center"
               maxWidth="576px"
             />
@@ -387,10 +365,10 @@ export default function AgeCompliancePage() {
             <div className="flex gap-16 items-center p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
               <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px] min-w-0">
                 <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-                  Bring accurate age verification to your product
+                  {t('ageCompliance.cta.title')}
                 </h2>
                 <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-                  Folio helps you protect users, satisfy regulators and maintain a smooth experience. Talk to our team to design an age assurance flow that fits your product.
+                  {t('ageCompliance.cta.description')}
                 </p>
               </div>
               <div className="flex flex-1 flex-wrap gap-3 items-start justify-end relative min-w-0">
@@ -398,7 +376,7 @@ export default function AgeCompliancePage() {
                   onClick={handleGetInTouch}
                   variant="primary"
                 >
-                  Get in touch
+                  {t('ageCompliance.cta.button')}
                 </Button>
               </div>
             </div>
@@ -408,10 +386,10 @@ export default function AgeCompliancePage() {
           <div className="flex md:hidden flex-col gap-8 items-center w-full px-6 py-16 relative shrink-0" style={BACKGROUND_STYLE}>
             <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full">
               <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
-                Bring accurate age verification to your product
+                {t('ageCompliance.cta.title')}
               </h2>
               <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-                Folio helps you protect users, satisfy regulators and maintain a smooth experience. Talk to our team to design an age assurance flow that fits your product.
+                {t('ageCompliance.cta.description')}
               </p>
             </div>
             <div className="flex flex-col gap-3 items-center relative shrink-0 w-full">
@@ -419,7 +397,7 @@ export default function AgeCompliancePage() {
                 onClick={handleGetInTouch}
                 variant="primary"
               >
-                Get in touch
+                {t('ageCompliance.cta.button')}
               </Button>
             </div>
           </div>

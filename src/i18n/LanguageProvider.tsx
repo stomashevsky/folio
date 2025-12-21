@@ -2,6 +2,7 @@ import { useEffect, ReactNode } from 'react'
 import { useParams, useNavigate, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { SUPPORTED_LANGUAGES, DEFAULT_LANGUAGE, type SupportedLanguage } from './index'
+import { scrollToTop } from '../utils/scrollToTop'
 
 function isValidLanguage(lang: string | undefined): lang is SupportedLanguage {
   return SUPPORTED_LANGUAGES.includes(lang as SupportedLanguage)
@@ -90,6 +91,11 @@ export function useLanguage() {
     
     i18n.changeLanguage(newLang)
     navigate(newPath)
+    
+    // Instantly scroll to top after language change
+    setTimeout(() => {
+      scrollToTop()
+    }, 0)
   }
   
   return {
