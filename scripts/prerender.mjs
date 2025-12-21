@@ -13,7 +13,9 @@ const indexHtmlPath = path.join(distDir, 'index.html')
 
 // Preview server configuration
 const PREVIEW_PORT = 4173
-const PREVIEW_URL = `http://localhost:${PREVIEW_PORT}`
+const BASE_PATH = process.env.VITE_BASE_PATH || '/'
+// For page routing, we need base without trailing slash (routes already have leading /)
+const basePathForRouting = BASE_PATH === '/' ? '' : BASE_PATH.replace(/\/$/, '')
 
 // OG image base URL - same as in src/configs/ogImages.ts
 const OG_IMAGE_BASE_URL = 'https://stomashevsky.github.io/folio/og-images'
@@ -502,13 +504,14 @@ async function ensureDir(filePath) {
 }
 
 /**
- * Check if a port is available by trying to connect to it
+ * Check if the server is ready by trying to fetch the page
  */
 async function waitForServer(url, maxAttempts = 60, intervalMs = 1000) {
   for (let attempt = 1; attempt <= maxAttempts; attempt++) {
     try {
-      const response = await fetch(url, { method: 'HEAD' })
-      if (response.ok || response.status === 304) {
+      const response = await fetch(url, { method: 'GET' })
+      // Accept any successful response (2xx) or redirect (3xx)
+      if (response.status >= 200 && response.status < 400) {
         return true
       }
     } catch {
@@ -563,13 +566,15 @@ function startPreviewServer() {
       // Give Vite some time to output its port
       await new Promise(r => setTimeout(r, 2000))
       
-      const actualUrl = `http://localhost:${actualPort}`
-      const ready = await waitForServer(actualUrl, 60, 1000)
+      // Use trailing slash for health check (Vite redirects without it)
+      const healthCheckUrl = `http://localhost:${actualPort}${BASE_PATH}`
+      const ready = await waitForServer(healthCheckUrl, 60, 1000)
       
       if (ready && !resolved) {
         resolved = true
         console.log('[prerender] Preview server is responding')
-        resolve({ server, url: actualUrl })
+        // Return URL with base path for routing (without trailing slash, routes add their own /)
+        resolve({ server, url: `http://localhost:${actualPort}${basePathForRouting}` })
       } else if (!resolved) {
         resolved = true
         server.kill()
