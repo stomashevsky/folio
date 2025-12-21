@@ -235,30 +235,30 @@ export default function DigitalTicketingPage() {
         <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-col gap-10 items-center relative shrink-0 w-full">
             <SectionHeader
-              title="Why Folio instead of Apple Wallet or Google Wallet"
-              description="A simpler and more universal way to deliver digital tickets without platform limits or complex formats."
+              title={t('ticketIssuance.whyFolio.title')}
+              description={t('ticketIssuance.whyFolio.description')}
               maxWidth="576px"
             />
             <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
               <ToolCard
                 icon={codeXmlIcon}
-                title="No special formats"
-                description="You do not need to create pass files or manage certificates. Folio works with simple data you already send."
+                title={t('ticketIssuance.whyFolio.noFormats.title')}
+                description={t('ticketIssuance.whyFolio.noFormats.description')}
               />
               <ToolCard
                 icon={sendIcon}
-                title="Fits your existing workflow"
-                description="If you can send a PDF or email, you can issue tickets for Folio. No new systems, no mobile team, no setup."
+                title={t('ticketIssuance.whyFolio.workflow.title')}
+                description={t('ticketIssuance.whyFolio.workflow.description')}
               />
               <ToolCard
                 icon={calendarFoldIcon}
-                title="Everything in one place"
-                description="All tickets and bookings appear in a simple timeline that helps customers see their plans at a glance."
+                title={t('ticketIssuance.whyFolio.onePlace.title')}
+                description={t('ticketIssuance.whyFolio.onePlace.description')}
               />
               <ToolCard
                 icon={globeIcon}
-                title="Available to everyone"
-                description="Your tickets work the same on iOS and Android in any region, even for users who do not use wallet apps."
+                title={t('ticketIssuance.whyFolio.everyone.title')}
+                description={t('ticketIssuance.whyFolio.everyone.description')}
               />
             </div>
           </div>
@@ -271,31 +271,31 @@ export default function DigitalTicketingPage() {
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-1 flex-col gap-12 items-start relative min-w-0">
             <SectionHeader
-              title="Made for real world operators"
-              description="Folio works for any service where customers receive tickets or confirmations by email."
+              title={t('ticketIssuance.operators.title')}
+              description={t('ticketIssuance.operators.description')}
               align="left"
             />
             <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
               <OperatorListItem
                 icon={ticketIcon}
-                title="Events and venues"
-                description="Concerts, festivals, theatres and local venues get modern event tickets that are easy to scan and easy to understand."
+                title={t('ticketIssuance.operators.events.title')}
+                description={t('ticketIssuance.operators.events.description')}
               />
               <OperatorListItem
                 icon={routeIcon}
-                title="Transport operators"
-                description="Regional airlines, buses and rail services send simple travel cards with clear times, stops and seat details in one place."
+                title={t('ticketIssuance.operators.transport.title')}
+                description={t('ticketIssuance.operators.transport.description')}
               />
               <OperatorListItem
                 icon={cameraIcon}
-                title="Tours and activities"
-                description="Tours, excursions and attractions keep every booking in one simple view so guests always know where to be and when."
+                title={t('ticketIssuance.operators.tours.title')}
+                description={t('ticketIssuance.operators.tours.description')}
               />
             </div>
           </div>
           <ImageWithPlaceholder
             src={ticketIssuanceOperators}
-            alt="Ticket operators"
+            alt={t('ticketIssuance.operators.title')}
             className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
             containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
             loading="lazy"
@@ -306,31 +306,31 @@ export default function DigitalTicketingPage() {
         <div className="flex md:hidden flex-col gap-10 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-col gap-10 items-start relative shrink-0 w-full">
             <SectionHeader
-              title="Made for real world operators"
-              description="Folio works for any service where customers receive tickets or confirmations by email."
+              title={t('ticketIssuance.operators.title')}
+              description={t('ticketIssuance.operators.description')}
               align="left"
             />
             <div className="flex flex-col gap-11 items-start relative shrink-0 w-full">
               <OperatorListItem
                 icon={ticketIcon}
-                title="Events and venues"
-                description="Concerts, festivals, theatres and local venues get modern event tickets that are easy to scan and easy to understand."
+                title={t('ticketIssuance.operators.events.title')}
+                description={t('ticketIssuance.operators.events.description')}
               />
               <OperatorListItem
                 icon={routeIcon}
-                title="Transport operators"
-                description="Regional airlines, buses and rail services send simple travel cards with clear times, stops and seat details in one place."
+                title={t('ticketIssuance.operators.transport.title')}
+                description={t('ticketIssuance.operators.transport.description')}
               />
               <OperatorListItem
                 icon={cameraIcon}
-                title="Tours and activities"
-                description="Tours, excursions and attractions keep every booking in one simple view so guests always know where to be and when."
+                title={t('ticketIssuance.operators.tours.title')}
+                description={t('ticketIssuance.operators.tours.description')}
               />
             </div>
           </div>
           <ImageWithPlaceholder
             src={ticketIssuanceOperators}
-            alt="Ticket operators"
+            alt={t('ticketIssuance.operators.title')}
             className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
             containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
             loading="lazy"
@@ -345,10 +345,10 @@ export default function DigitalTicketingPage() {
           <div className="flex gap-16 items-center p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
             <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px] min-w-0">
               <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-                Turn every ticket into a great experience
+                {t('ticketIssuance.cta.title')}
               </h2>
               <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-                If you deliver tickets or bookings by email, Folio gives your customers a clearer and more reliable experience without changing how you work.
+                {t('ticketIssuance.cta.description')}
               </p>
             </div>
             <div className="flex flex-1 flex-wrap gap-3 items-start justify-end relative min-w-0">
@@ -356,7 +356,7 @@ export default function DigitalTicketingPage() {
                 onClick={handleGetInTouch}
                 variant="primary"
               >
-                Get in touch
+                {t('ticketIssuance.cta.button')}
               </Button>
             </div>
           </div>
@@ -366,10 +366,10 @@ export default function DigitalTicketingPage() {
         <div className="flex md:hidden flex-col gap-8 items-center w-full px-6 py-16 relative shrink-0" style={BACKGROUND_STYLE}>
           <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full">
             <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
-              Turn every ticket into a great experience
+              {t('ticketIssuance.cta.title')}
             </h2>
             <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-              If you deliver tickets or bookings by email, Folio gives your customers a clearer and more reliable experience without changing how you work.
+              {t('ticketIssuance.cta.description')}
             </p>
           </div>
           <div className="flex flex-col gap-3 items-center relative shrink-0">
@@ -377,7 +377,7 @@ export default function DigitalTicketingPage() {
               onClick={handleGetInTouch}
               variant="primary"
             >
-              Get in touch
+              {t('ticketIssuance.cta.button')}
             </Button>
           </div>
         </div>
