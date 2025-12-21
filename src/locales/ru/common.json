@@ -5,7 +5,7 @@
     "solutions": "Решения",
     "government": "Государство",
     "blog": "Блог",
-    "getInTouch": "Связаться",
+    "getInTouch": "Связаться с нами",
     "backToMainMenu": "Назад в главное меню",
     "clientOnboardingDesc": "Упрощённая KYC верификация.",
     "ageComplianceDesc": "Проверка возраста пользователей.",
@@ -62,7 +62,7 @@
   },
   "buttons": {
     "learnMore": "Подробнее",
-    "getInTouch": "Связаться",
+    "getInTouch": "Связаться с нами",
     "explorePlayground": "Попробовать Playground"
   },
   "exploreMore": "Другие продукты",

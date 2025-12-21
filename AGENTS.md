@@ -450,6 +450,7 @@ This file contains all rules and principles that must be followed for every chan
 - **Consider UI context** — dropdowns, buttons, and headings must be compact
 - **Maintain consistent terminology** — use the same terms for the same concepts across all pages
 - **Technical terms and product names must be consistent** — if a term is translated (e.g., "Digital Identity" → "Цифровая идентификация"), use the translation everywhere; if kept in English (e.g., "Playground", "EUDI Wallet"), keep it in English everywhere. Never mix translated and untranslated versions of the same term.
+- **Before adding a translation, search for existing translations** — use `grep` to find how the same term is translated elsewhere. Never create alternative translations (e.g., "Связаться" vs "Связаться с нами" for "Get in touch"). Check glossary in section 13.3 first.
 - **Read aloud test** — if a translation sounds awkward when spoken, rewrite it
 - **Page taglines must match menu item names** — the tagline on a page (e.g., hero section) must exactly match the corresponding menu item name for consistency
   - Check `common.json` footer/nav for menu item names
@@ -496,6 +497,7 @@ This file contains all rules and principles that must be followed for every chan
 | Digital Ticketing | Цифровые билеты | |
 | End-to-end encryption | Сквозное шифрование | |
 | Zero-knowledge architecture | Архитектура нулевого знания | |
+| Get in touch | Связаться с нами | Never "Связаться" alone |
 
 **Terms that are NOT translated (keep in English):**
 
