@@ -459,6 +459,13 @@ This file contains all rules and principles that must be followed for every chan
 - **Use imperative verbs for CTAs**: "Храните" (Store), "Верифицируйте" (Verify) instead of nouns "Хранение" (Storage), "Верификация" (Verification)
 - **Dropdown descriptions**: maximum 2 lines of text
 - **Keep descriptions short**: condense without losing meaning
+- **Page taglines must match menu item names** — the tagline on a page (e.g., hero section) must exactly match the corresponding menu item name for consistency
+  - Check `common.json` footer/nav for menu item names
+  - Check page namespace files (e.g., `platform.json`) for taglines
+  - Example: if footer has `"livenessCheck": "Проверка присутствия"`, the page tagline must be "Проверка присутствия", not "Проверка живости"
+- **Avoid literal English-to-Russian translations for technical terms**:
+  - Bad: "Проверка живости" (literal "Liveness Check")
+  - Good: "Проверка присутствия" (natural Russian term for verifying a real person is present)
 - Examples of good vs bad translations:
   - Bad: "Безопасное хранение документов для людей" (literal, awkward)
   - Good: "Храните документы в безопасности" (natural, action-oriented)
