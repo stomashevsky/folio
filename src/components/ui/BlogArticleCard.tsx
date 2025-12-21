@@ -40,12 +40,17 @@ interface BlogArticleCardProps {
 }
 
 export default function BlogArticleCard({ article, variant = 'desktop', priority = false }: BlogArticleCardProps) {
-  const { t } = useTranslation('common')
+  const { t } = useTranslation(['common', 'blog'])
   const { lang } = useParams<{ lang?: string }>()
   const location = useLocation()
   const currentLang = lang || DEFAULT_LANGUAGE
   
   const getLocalizedPath = (path: string) => `/${currentLang}${path}`
+  
+  // Get translated title if available, fallback to article.title
+  const translationKey = `blog:articles.${article.slug}.title`
+  const translatedTitle = t(translationKey, { defaultValue: '' })
+  const displayTitle = translatedTitle && translatedTitle !== translationKey ? translatedTitle : article.title
   
   const handleClick = () => {
     // Only save scroll position if navigating from Blog page
@@ -83,13 +88,13 @@ export default function BlogArticleCard({ article, variant = 'desktop', priority
         {/* Image - with zoom on hover */}
         <BlogImage 
           src={article.image || imagePlaceholder} 
-          alt={article.title}
+          alt={displayTitle}
           priority={priority}
         />
         
         {/* Title */}
         <p className="font-semibold leading-6 relative shrink-0 text-base w-full">
-          {article.title}
+          {displayTitle}
         </p>
       </>
     )
@@ -125,7 +130,7 @@ export default function BlogArticleCard({ article, variant = 'desktop', priority
       {/* Image - aspect ratio 3:2 with zoom on hover */}
       <BlogImage 
         src={article.image || imagePlaceholder} 
-        alt={article.title}
+        alt={displayTitle}
         priority={priority}
       />
       
@@ -133,7 +138,7 @@ export default function BlogArticleCard({ article, variant = 'desktop', priority
       <div className="flex flex-col gap-3 w-full">
         {/* Title */}
         <p className="font-semibold leading-6 text-base text-[#0a0a0a] w-full">
-          {article.title}
+          {displayTitle}
         </p>
       </div>
     </div>

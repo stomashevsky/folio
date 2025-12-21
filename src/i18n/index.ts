@@ -10,6 +10,7 @@ import enPlatform from '../locales/en/platform.json'
 import enSolutions from '../locales/en/solutions.json'
 import enGovernment from '../locales/en/government.json'
 import enPages from '../locales/en/pages.json'
+import enBlog from '../locales/en/blog.json'
 import ruCommon from '../locales/ru/common.json'
 import ruHome from '../locales/ru/home.json'
 import ruWallet from '../locales/ru/wallet.json'
@@ -17,6 +18,7 @@ import ruPlatform from '../locales/ru/platform.json'
 import ruSolutions from '../locales/ru/solutions.json'
 import ruGovernment from '../locales/ru/government.json'
 import ruPages from '../locales/ru/pages.json'
+import ruBlog from '../locales/ru/blog.json'
 
 export const SUPPORTED_LANGUAGES = ['en', 'ru'] as const
 export type SupportedLanguage = typeof SUPPORTED_LANGUAGES[number]
@@ -37,6 +39,7 @@ const resources = {
     solutions: enSolutions,
     government: enGovernment,
     pages: enPages,
+    blog: enBlog,
   },
   ru: {
     common: ruCommon,
@@ -46,6 +49,7 @@ const resources = {
     solutions: ruSolutions,
     government: ruGovernment,
     pages: ruPages,
+    blog: ruBlog,
   },
 }
 
@@ -59,7 +63,7 @@ i18n
     
     // Default namespace
     defaultNS: 'common',
-    ns: ['common', 'home', 'wallet', 'platform', 'solutions', 'government', 'pages'],
+    ns: ['common', 'home', 'wallet', 'platform', 'solutions', 'government', 'pages', 'blog'],
     
     interpolation: {
       escapeValue: false, // React already escapes values

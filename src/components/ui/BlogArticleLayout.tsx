@@ -62,12 +62,20 @@ export default function BlogArticleLayout({
   ogDescription,
   children,
 }: BlogArticleLayoutProps) {
-  const { t } = useTranslation('common')
+  const { t } = useTranslation(['common', 'blog'])
   const { lang } = useParams<{ lang?: string }>()
   const navigate = useNavigate()
   const currentLang = lang || DEFAULT_LANGUAGE
   
   const getLocalizedPath = (path: string) => `/${currentLang}${path}`
+  
+  // Get translated title and description if available, fallback to props
+  const titleKey = `blog:articles.${slug}.title`
+  const descriptionKey = `blog:articles.${slug}.description`
+  const translatedTitle = t(titleKey, { defaultValue: '' })
+  const translatedDescription = t(descriptionKey, { defaultValue: '' })
+  const displayTitle = translatedTitle && translatedTitle !== titleKey ? translatedTitle : title
+  const displayDescription = translatedDescription && translatedDescription !== descriptionKey ? translatedDescription : description
 
   useScrollToTop()
 
@@ -75,11 +83,11 @@ export default function BlogArticleLayout({
   const ogImage = getBlogOgImageUrl(slug) || getOgImageUrl('folio-app-hero.png')
 
   usePageTitle({
-    title: `${title} | Folio Blog`,
-    description: description,
+    title: `${displayTitle} | Folio Blog`,
+    description: displayDescription,
     ogType: 'article',
-    ogTitle: ogTitle || title,
-    ogDescription: ogDescription || description,
+    ogTitle: ogTitle || displayTitle,
+    ogDescription: ogDescription || displayDescription,
     ogImage,
     ogUrl: `https://folio.id/${currentLang}/blog/${slug}`,
     canonicalUrl: `https://folio.id/${currentLang}/blog/${slug}`,
@@ -95,8 +103,8 @@ export default function BlogArticleLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'BlogPosting',
-              headline: title,
-              description,
+              headline: displayTitle,
+              description: displayDescription,
               datePublished: date,
               image: ogImage,
               mainEntityOfPage: {
@@ -134,10 +142,10 @@ export default function BlogArticleLayout({
               {/* Title and subtitle */}
               <div className="flex flex-col gap-4 md:gap-6 items-center relative shrink-0 text-center w-full">
                 <h1 className="font-bold leading-[36px] md:leading-[48px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px] min-w-full relative shrink-0 w-[min-content]">
-                  {title}
+                  {displayTitle}
                 </h1>
                 <p className="font-normal leading-7 min-w-full relative shrink-0 text-[#737373] text-lg w-[min-content]">
-                  {description}
+                  {displayDescription}
                 </p>
               </div>
             </div>
