@@ -450,6 +450,11 @@ This file contains all rules and principles that must be followed for every chan
 - **Consider UI context** — dropdowns, buttons, and headings must be compact
 - **Maintain consistent terminology** — use the same terms for the same concepts across all pages
 - **Read aloud test** — if a translation sounds awkward when spoken, rewrite it
+- **Page taglines must match menu item names** — the tagline on a page (e.g., hero section) must exactly match the corresponding menu item name for consistency
+  - Check `common.json` footer/nav for menu item names
+  - Check page namespace files (e.g., `platform.json`) for taglines
+  - If menu says "Liveness Check", the page tagline must be the same translated term, not a different wording
+- **Avoid literal translations of technical terms** — use natural terms that native speakers would use for the concept, not word-for-word translations from English
 
 #### 13.2. Russian Language Rules
 
@@ -459,20 +464,13 @@ This file contains all rules and principles that must be followed for every chan
 - **Use imperative verbs for CTAs**: "Храните" (Store), "Верифицируйте" (Verify) instead of nouns "Хранение" (Storage), "Верификация" (Verification)
 - **Dropdown descriptions**: maximum 2 lines of text
 - **Keep descriptions short**: condense without losing meaning
-- **Page taglines must match menu item names** — the tagline on a page (e.g., hero section) must exactly match the corresponding menu item name for consistency
-  - Check `common.json` footer/nav for menu item names
-  - Check page namespace files (e.g., `platform.json`) for taglines
-  - Example: if footer has `"livenessCheck": "Проверка присутствия"`, the page tagline must be "Проверка присутствия", not "Проверка живости"
-- **Avoid literal English-to-Russian translations for technical terms**:
-  - Bad: "Проверка живости" (literal "Liveness Check")
-  - Good: "Проверка присутствия" (natural Russian term for verifying a real person is present)
 - Examples of good vs bad translations:
   - Bad: "Безопасное хранение документов для людей" (literal, awkward)
   - Good: "Храните документы в безопасности" (natural, action-oriented)
   - Bad: "Чёткий просмотр каждого документа" (literal "A clear view of every document")
   - Good: "Все детали на виду" (natural, idiomatic)
-  - Bad: "Исключительная точность с приватностью, прозрачностью и удобным пользовательским опытом"
-  - Good: "Высокая точность, приватность и простота использования"
+  - Bad: "Проверка живости" (literal "Liveness Check")
+  - Good: "Проверка присутствия" (natural Russian term)
 
 #### 13.3. File Structure
 
