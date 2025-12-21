@@ -41,8 +41,8 @@ const HOW_IT_WORKS_IMAGES = {
 // Use case icons config
 const USE_CASE_ICONS = {
   onboarding: playIcon,
-  verification: passportIcon,
-  documents: fileStackIcon,
+  identity: passportIcon,
+  document: fileStackIcon,
   reverification: refreshCcwIcon,
   accountSetup: circleUserIcon,
 }
@@ -80,7 +80,7 @@ export default function DynamicFlowPage() {
 
   // Generate use cases from translations
   const useCasesData = useMemo(() =>
-    (['onboarding', 'verification', 'documents', 'reverification', 'accountSetup'] as const).map(id => ({
+    (['onboarding', 'identity', 'document', 'reverification', 'accountSetup'] as const).map(id => ({
       icon: USE_CASE_ICONS[id],
       title: t(`dynamicFlow.useCases.${id}.title`),
       description: t(`dynamicFlow.useCases.${id}.description`),
