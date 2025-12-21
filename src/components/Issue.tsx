@@ -53,7 +53,7 @@ export default function Issue() {
         <FlowTabs activeTab={activeTab} onTabChange={setActiveTab} />
 
           {/* Cards Grid */}
-          <div className="flex flex-wrap gap-6 items-stretch justify-center w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full">
             {currentCardConfigs.map((card) => (
               <Card
                 key={card.documentType}
@@ -63,14 +63,6 @@ export default function Issue() {
                 title={t(`playground.documents.${card.documentKey}`)}
                 description={t(`playground.cards.${flowKey}.${card.documentKey}`)}
                 onClick={cardClickHandlers[card.documentType]}
-              />
-            ))}
-            {/* Invisible placeholder cards to align last row to the left */}
-            {[...Array(3)].map((_, i) => (
-              <div
-                key={`placeholder-${i}`}
-                className="flex-[1_0_0] min-w-[280px] max-w-[400px] h-0 opacity-0"
-                aria-hidden="true"
               />
             ))}
           </div>
