@@ -1,0 +1,97 @@
+{
+    "nav": {
+        "wallet": "Billetera",
+        "platform": "Plataforma",
+        "solutions": "Soluciones",
+        "government": "Gobierno",
+        "blog": "Blog",
+        "getInTouch": "Contáctanos",
+        "backToMainMenu": "Volver al menú principal",
+        "clientOnboardingDesc": "Verificación KYC simplificada para empresas reguladas.",
+        "ageComplianceDesc": "Asegure que los usuarios cumplan con los requisitos de edad.",
+        "digitalTicketingDesc": "Cree, administre y valide entradas digitales con control de fraude.",
+        "idVerificationDesc": "Verifique pasaportes, documentos de identidad y otros documentos oficiales.",
+        "nfcIdentityScanDesc": "Lea datos seguros de chip de identificaciones y pasaportes compatibles.",
+        "documentIntelligenceDesc": "Extraiga y analice datos de los documentos enviados.",
+        "faceMatchDesc": "Compare una selfie con una foto oficial para confirmar la identidad.",
+        "livenessCheckDesc": "Confirme que el usuario está físicamente presente.",
+        "dataSourceChecksDesc": "Valide la información del usuario contra bases de datos confiables.",
+        "phoneAndEmailValidationDesc": "Confirme la propiedad y detecte datos de contacto riesgosos.",
+        "behaviorInsightsDesc": "Patrones de dispositivo y uso para mayor contexto.",
+        "dynamicFlowDesc": "Coordine verificaciones de identidad con lógica flexible.",
+        "reviewWorkspaceDesc": "Organice y resuelva casos de verificación.",
+        "credentialIssuanceDesc": "Cree y entregue credenciales verificables a billeteras."
+    },
+    "footer": {
+        "address": "Dirección:",
+        "addressValue": "88 Baker St, London W1U 6TQ, United Kingdom",
+        "contact": "Contacto:",
+        "folio": "Folio",
+        "folioApp": "App Folio",
+        "blog": "Blog",
+        "government": "Gobierno",
+        "about": "Acerca de",
+        "features": "Características",
+        "idWallet": "Billetera de ID",
+        "cardScanner": "Escáner de tarjetas",
+        "loyaltyCards": "Tarjetas de fidelidad",
+        "getTheApp": "Descarga la app",
+        "downloadIOS": "Descargar para iOS",
+        "downloadAndroid": "Descargar para Android",
+        "platform": "Plataforma",
+        "idVerification": "Verificación de identidad",
+        "nfcIdentityScan": "Escaneo de identidad NFC",
+        "documentIntelligence": "Inteligencia documental",
+        "faceMatch": "Comparación facial",
+        "livenessCheck": "Prueba de vida",
+        "dataSourceChecks": "Verificación de fuentes de datos",
+        "phoneAndEmailValidation": "Validación de teléfono y email",
+        "behaviorInsights": "Análisis de comportamiento",
+        "dynamicFlow": "Flujo dinámico",
+        "reviewWorkspace": "Espacio de revisión",
+        "credentialIssuance": "Emisión de credenciales",
+        "solutions": "Soluciones",
+        "clientOnboarding": "Onboarding de clientes",
+        "ageCompliance": "Cumplimiento de edad",
+        "digitalTicketing": "Entradas digitales",
+        "termsAndPolicies": "Términos y Políticas",
+        "termsOfUse": "Términos de Uso",
+        "privacyPolicy": "Política de Privacidad",
+        "security": "Seguridad",
+        "copyright": "Folio Wallet © 2025"
+    },
+    "buttons": {
+        "learnMore": "Saber más",
+        "getInTouch": "Contáctanos",
+        "explorePlayground": "Explorar Playground"
+    },
+    "exploreMore": "Explorar más",
+    "language": {
+        "select": "Seleccionar idioma"
+    },
+    "getTheApp": {
+        "title": "Lleva Folio contigo a donde vayas",
+        "description": "Tus documentos organizados, sincronizados y accesibles al instante en iOS y Android."
+    },
+    "blog": {
+        "title": "Blog de Folio",
+        "description": "Casos de estudio, insights de producto y guías prácticas sobre viajes, documentos e identidad digital.",
+        "loadMore": "Cargar más",
+        "backToBlog": "Volver al Blog",
+        "keepReading": "Seguir leyendo",
+        "viewAll": "Ver todo",
+        "readingTime": "Lectura de {{minutes}} min",
+        "categories": {
+            "All": "Todos",
+            "Company": "Empresa",
+            "Product": "Producto",
+            "Guides": "Guías",
+            "Research": "Investigación",
+            "Safety": "Seguridad",
+            "Business": "Negocios"
+        }
+    },
+    "legal": {
+        "lastUpdated": "Última actualización"
+    }
+}

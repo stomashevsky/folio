@@ -1,0 +1,60 @@
+{
+    "meta": {
+        "title": "Gobierno | Folio Wallet",
+        "description": "Soluciones de identidad digital seguras y escalables para gobiernos nacionales y estatales."
+    },
+    "hero": {
+        "tagline": "Para gobiernos",
+        "title": "Identidad digital para la nación moderna",
+        "description": "Emite identificaciones digitales seguras, agiliza los servicios ciudadanos y reduce el fraude con una plataforma de identidad construida para escala nacional."
+    },
+    "overview": {
+        "title": "Infraestructura crítica, simplificada",
+        "security": {
+            "title": "Seguridad de grado nacional",
+            "description": "Protege los datos de los ciudadanos con cifrado de nivel bancario, almacenamiento descentralizado y cumplimiento con los más altos estándares de seguridad."
+        },
+        "adoption": {
+            "title": "Impulsa la adopción digital",
+            "description": "Ofrece a los ciudadanos una billetera que les encantará usar. El diseño intuitivo y la utilidad en el mundo real fomentan la adopción masiva."
+        },
+        "efficiency": {
+            "title": "Eficiencia operativa",
+            "description": "Reduce costos administrativos digitalizando la emisión de documentos y verificación, liberando recursos para otros servicios esenciales."
+        }
+    },
+    "features": {
+        "title": "Características para el sector público",
+        "issuance": {
+            "title": "Emisión de documentos segura",
+            "description": "Digitaliza licencias de conducir, identificaciones nacionales y permisos. Emite directamente a los smartphones de los ciudadanos."
+        },
+        "verification": {
+            "title": "Verificación instantánea",
+            "description": "Permite a las agencias y empresas confiar y verificar las identificaciones de los ciudadanos en tiempo real, en línea y en persona."
+        },
+        "portals": {
+            "title": "Acceso a portales ciudadanos",
+            "description": "Reemplaza contraseñas débiles con inicio de sesión seguro usando la identidad digital. Simplifica el acceso a impuestos, salud y beneficios."
+        }
+    },
+    "caseStudy": {
+        "title": "Caso de éxito: Albania",
+        "description": "Cómo Folio ayudó al gobierno albano a lanzar la primera identidad digital nacional de la región, logrando un 40% de adopción en el primer año.",
+        "stats": {
+            "users": "1.2M+ Ciudadanos",
+            "services": "200+ Servicios",
+            "time": "Lanzamiento en 6 meses"
+        }
+    },
+    "cta": {
+        "title": "Moderniza tu identidad nacional",
+        "description": "Asóciate con Folio para construir un ecosistema de identidad digital seguro y centrado en el ciudadano.",
+        "button": "Contactar a ventas gubernamentales"
+    },
+    "playground": {
+        "title": "Explora el Playground",
+        "description": "¿Quieres probar nuestra tecnología? Visita nuestro entorno de pruebas para experimentar con flujos de verificación y emisión.",
+        "link": "Ir al Playground"
+    }
+}

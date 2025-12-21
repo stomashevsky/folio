@@ -1,0 +1,51 @@
+{
+    "articles": {
+        "what-is-a-digital-wallet": {
+            "title": "¿Qué es una billetera digital?",
+            "description": "Aprende qué es una billetera digital, cómo funciona y cómo usarla. Descubre los beneficios, características de seguridad y tipos disponibles para Android y iPhone."
+        },
+        "best-apple-wallet-alternatives": {
+            "title": "Las 5 mejores alternativas a Apple Wallet en 2024",
+            "description": "¿Buscas una alternativa a Apple Wallet? Comparamos las mejores aplicaciones de billetera digital para organizar tus tarjetas de lealtad, identificaciones, tarjetas de embarque y más en iOS."
+        },
+        "digital-wallet-security": {
+            "title": "¿Son seguras las billeteras digitales? Una guía completa",
+            "description": "Tu guía para la seguridad de billeteras digitales. Entiende el cifrado, la tokenización y cómo las billeteras móviles como Folio protegen tus datos mejor que una billetera física."
+        },
+        "future-of-digital-identity": {
+            "title": "El futuro de la identidad digital",
+            "description": "Explora cómo la identidad digital está evolucionando más allá de simples contraseñas. Desde estándares W3C hasta identificaciones gubernamentales en tu teléfono."
+        },
+        "how-nfc-works": {
+            "title": "NFC explicado: Cómo funciona el pago sin contacto",
+            "description": "Sumérgete en la tecnología detrás de tocar para pagar. Cómo NFC (Near Field Communication) permite pagos seguros y escaneo de identidad."
+        },
+        "travel-with-digital-wallet": {
+            "title": "Viajando ligero: Tu guía para viajes sin papel",
+            "description": "Consejos para viajar solo con tu teléfono. Cómo gestionar pases de abordar, reservas de hotel e identificaciones de viaje en tu billetera digital."
+        },
+        "loyalty-programs-guide": {
+            "title": "Maximiza tus recompensas: La guía definitiva de programas de lealtad",
+            "description": "Deja de perder puntos. Aprende cómo organizar y rastrear todos tus programas de lealtad y recompensas en una sola aplicación conveniente."
+        },
+        "identity-theft-protection": {
+            "title": "Cómo protegerte del robo de identidad en línea",
+            "description": "Estrategias prácticas para asegurar tu presencia digital. Aprende cómo la gestión de identidad moderna puede prevenir el fraude y el robo."
+        }
+    },
+    "hero": {
+        "tagline": "El Blog de Folio",
+        "title": "Ideas sobre identidad, seguridad y el futuro de las billeteras.",
+        "description": "Mantente actualizado con las últimas noticias, guías y artículos profundos de nuestro equipo."
+    },
+    "categories": {
+        "all": "Todos",
+        "education": "Educación",
+        "security": "Seguridad",
+        "updates": "Actualizaciones",
+        "engineering": "Ingeniería"
+    },
+    "readMore": "Leer artículo",
+    "publishedOn": "Publicado el {{date}}",
+    "minRead": "{{count}} min de lectura"
+}

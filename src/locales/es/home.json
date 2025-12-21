@@ -1,0 +1,65 @@
+{
+    "meta": {
+        "title": "Folio | Tu billetera digital para documentos e identidad",
+        "description": "Almacenamiento seguro de documentos para individuos. Plataforma de verificación para empresas. Credenciales digitales para gobiernos."
+    },
+    "hero": {
+        "tagline": "Folio Wallet",
+        "title": "Tu billetera digital para documentos e identidad",
+        "description": "Almacenamiento seguro de documentos para individuos. Plataforma de verificación para empresas. Credenciales digitales para gobiernos."
+    },
+    "wallet": {
+        "tagline": "App Folio",
+        "title": "Tus documentos, siempre contigo",
+        "description": "Guarda pasaportes, identificaciones, boletos y tarjetas en un lugar seguro. Folio importa cualquier documento desde email, PDF o foto, extrae los detalles clave y mantiene todo organizado y accesible."
+    },
+    "platform": {
+        "tagline": "Plataforma",
+        "title": "Genera confianza a escala",
+        "description": "Verificación de identidad, inteligencia documental, prueba de vida y más. Todo lo que necesitas para verificar clientes y prevenir fraudes.",
+        "carouselTitle": "Todo lo que necesitas para verificar la identidad"
+    },
+    "solutions": {
+        "tagline": "Soluciones",
+        "title": "Creado para tu industria",
+        "description": "Soluciones a medida para industrias reguladas y entornos de alta confianza.",
+        "ageCompliance": {
+            "title": "Cumplimiento de edad",
+            "description": "Verifica la edad para industrias reguladas"
+        },
+        "clientOnboarding": {
+            "title": "Onboarding de clientes",
+            "description": "Simplifica el KYC y la verificación de clientes"
+        },
+        "digitalTicketing": {
+            "title": "Entradas digitales",
+            "description": "Emite y verifica entradas digitales seguras"
+        }
+    },
+    "government": {
+        "tagline": "Gobierno",
+        "title": "Identidad digital para gobiernos",
+        "description": "Herramientas para que los gobiernos diseñen, prueben y desplieguen credenciales digitales modernas alineadas con los estándares globales. Explora nuestro sandbox para ver los flujos de identificación digital europea en acción."
+    },
+    "testimonial": {
+        "quote": "\"Trabajar con Folio ha sido una experiencia transformadora... han establecido un nuevo estándar de excelencia sobre cómo deben entregarse las soluciones de identidad digital.\"",
+        "name": "Ilirjan Celibashi",
+        "role": "Comisionado Estatal de Elecciones, Albania"
+    },
+    "security": {
+        "title": "Seguridad en la que puedes confiar",
+        "description": "Tus datos están protegidos con medidas de seguridad líderes en la industria.",
+        "endToEndEncryption": {
+            "title": "Cifrado de extremo a extremo",
+            "description": "Tus datos se cifran con claves que solo tú controlas"
+        },
+        "zeroKnowledge": {
+            "title": "Arquitectura de conocimiento cero",
+            "description": "No podemos acceder a tus documentos, aunque quisiéramos"
+        },
+        "biometric": {
+            "title": "Protección biométrica",
+            "description": "Desbloqueo con Face ID y huella dactilar para mayor seguridad"
+        }
+    }
+}

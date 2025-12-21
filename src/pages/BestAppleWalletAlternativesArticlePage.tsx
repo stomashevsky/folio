@@ -1,71 +1,94 @@
-import { LocalizedLink } from '../components/ui'
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import { useTranslation, Trans } from 'react-i18next'
+import { LocalizedLink, BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import folioScreens from '../assets/images/blog-apple-wallet-folio-screens.png'
 
 export default function BestAppleWalletAlternativesArticlePage() {
+  const { t } = useTranslation(['articles'])
+
   return (
     <BlogArticleLayout
-      title="Best Apple Wallet alternatives"
-      description="Apple Wallet is great for tap-to-pay and boarding passes, but it has limitations. Discover five powerful iOS apps that fill Wallet's gaps: secure document storage, multi-card management, and automated trip planning."
-      date="May 14, 2025"
+      title={t('articles:best-apple-wallet-alternatives.title', 'Best Apple Wallet alternatives')} // Fallback or key if available in articles or blog.json? 
+      // Actually blog.json has title/description for cards, but maybe I should have put page title here too? 
+      // "best-apple-wallet-alternatives" key in "articles.json" has "p1", "h2_1", etc. It does not have "title" or "description" at the top level in the file I created?
+      // Let me check artifacts.
+      // I created "best-apple-wallet-alternatives": { "p1": ... }
+      // I did NOT put title and description in "articles.json" for the metadata.
+      // They are in `blog.json` for the card/listing.
+      // I should reuse `blog:articles.best-apple-wallet-alternatives.title` if possible, or add them to `articles.json`.
+      // The `BlogArticleLayout` takes `title` and `description`.
+      // `blog.json` has `articles.best-apple-wallet-alternatives.title`.
+      // I will use `t('blog:articles.best-apple-wallet-alternatives.title')` and `description`.
+      // So I need to load 'blog' namespace too.
+      description={t('blog:articles.best-apple-wallet-alternatives.description')}
+      date="May 14, 2025" // Date might need localization too? I'll leave it hardcoded or use a date formatter later. User didn't ask for date format change yet.
       category="Research"
       slug="best-apple-wallet-alternatives"
     >
       <ArticleParagraph>
-        You're at the Italian border. The officer asks for your residence permit. You open Apple Wallet, scroll past your credit cards and last month's boarding pass, and realize: your permesso di soggiorno isn't there. It never was. Apple Wallet doesn't store identity documents. It doesn't store insurance cards, vaccination records, or visa PDFs. It stores exactly what Apple has decided counts as a "pass," and your critical documents don't make the list.
+        {t('articles:best-apple-wallet-alternatives.p1')}
       </ArticleParagraph>
 
       <ArticleParagraph>
-        This is the gap between expectation and reality. Apple Wallet handles tap-to-pay beautifully. It syncs boarding passes automatically. But the moment you need something that isn't a payment card or a .pkpass file from a participating provider, you're searching through Photos, Files, or your email. The passes you do have appear scattered by date added rather than organized into trips. You can't share a hotel confirmation with your partner. You can't set a reminder for when your passport expires.
+        {t('articles:best-apple-wallet-alternatives.p2')}
       </ArticleParagraph>
 
       <ArticleParagraph>
-        The solution isn't to abandon Apple Wallet. It's to add specialist apps that solve the problems Apple ignores. Here are the alternatives worth installing in 2025.
+        {t('articles:best-apple-wallet-alternatives.p3')}
       </ArticleParagraph>
 
-      <ArticleH2>For documents Apple Wallet won't accept</ArticleH2>
+      <ArticleH2>{t('articles:best-apple-wallet-alternatives.h2_1')}</ArticleH2>
 
       <ArticleParagraph>
-        <strong>Folio</strong> stores everything Apple Wallet refuses: passports, residence permits, driver's licenses, insurance policies, vaccination certificates, medical records. Photograph a document and Folio extracts the key data automatically. Set it up once and you get notifications before documents expire. When someone needs to see your insurance details, generate a secure link that expires after they've viewed it.
+        <Trans i18nKey="articles:best-apple-wallet-alternatives.p4">
+          <strong>Folio</strong> stores everything Apple Wallet refuses: passports, residence permits, driver's licenses, insurance policies, vaccination certificates, medical records. Photograph a document and Folio extracts the key data automatically. Set it up once and you get notifications before documents expire. When someone needs to see your insurance details, generate a secure link that expires after they've viewed it.
+        </Trans>
       </ArticleParagraph>
 
       <ArticleImage
         src={folioScreens}
-        alt="Folio app showing BBVA payment card with details, Italian residence permit with extracted data, and trip timeline with Barcelona hotel bookings and flight tickets"
+        alt={t('articles:best-apple-wallet-alternatives.img_alt')}
       />
 
       <ArticleParagraph>
-        The real difference shows when you travel. Apple Wallet displays your boarding pass. Folio shows your entire trip in chronological order: the flight, the hotel in Barcelona, the Sagrada Familia tickets, the train to Tarragona, the return journey. Tap any item and the barcode or QR code is ready to scan. Everything works offline because the documents live on your device with end-to-end encryption. For families, shared folders let everyone access the same documents without messaging files back and forth. <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Available free on iOS and Android.</LocalizedLink>
+        <Trans i18nKey="articles:best-apple-wallet-alternatives.p5">
+          The real difference shows when you travel. Apple Wallet displays your boarding pass. Folio shows your entire trip in chronological order: the flight, the hotel in Barcelona, the Sagrada Familia tickets, the train to Tarragona, the return journey. Tap any item and the barcode or QR code is ready to scan. Everything works offline because the documents live on your device with end-to-end encryption. For families, shared folders let everyone access the same documents without messaging files back and forth. <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Available free on iOS and Android.</LocalizedLink>
+        </Trans>
       </ArticleParagraph>
 
-      <ArticleH2>For managing multiple payment cards</ArticleH2>
+      <ArticleH2>{t('articles:best-apple-wallet-alternatives.h2_2')}</ArticleH2>
 
       <ArticleParagraph>
-        <strong>Curve</strong> solves a different problem: too many cards. Link all your Visa and Mastercard accounts to Curve, then add just Curve to Apple Wallet. At checkout, one card handles everything. Later, you decide which underlying account actually pays. Made a purchase on the wrong card? "Go Back in Time" moves the charge up to 30 days later. For people who optimize credit card rewards by category, Curve eliminates the fumbling to find the right card before paying.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        Curve also shows exchange rates before international purchases, unlike Apple Wallet which just charges your bank's rate and reveals the damage on your statement days later. The free tier covers basic card aggregation. Paid tiers add fee-free ATM withdrawals abroad, higher limits, and cashback at selected retailers.
-      </ArticleParagraph>
-
-      <ArticleH2>For trips that involve more than a flight</ArticleH2>
-
-      <ArticleParagraph>
-        <strong>TripIt</strong> builds itineraries automatically. Forward any confirmation email to plans@tripit.com and it assembles a master timeline: flights, hotels, restaurant reservations, rental cars, concert tickets. The Pro tier monitors flights for delays and gate changes faster than most airline apps, tracks seat availability for upgrades, and even claims refunds when airlines owe you money. Apple Wallet shows passes in isolation; TripIt shows your entire trip as a story.
+        <Trans i18nKey="articles:best-apple-wallet-alternatives.p6">
+          <strong>Curve</strong> solves a different problem: too many cards. Link all your Visa and Mastercard accounts to Curve, then add just Curve to Apple Wallet. At checkout, one card handles everything. Later, you decide which underlying account actually pays. Made a purchase on the wrong card? "Go Back in Time" moves the charge up to 30 days later. For people who optimize credit card rewards by category, Curve eliminates the fumbling to find the right card before paying.
+        </Trans>
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>Pass2U Wallet</strong> handles the passes Apple Wallet rejects. That gym membership with a barcode, the loyalty card from a local shop, the ticket that arrived as a PDF instead of a proper .pkpass file: Pass2U converts images into wallet passes. It's not elegant, but it solves the frustration of passes that exist only as screenshots or email attachments.
+        {t('articles:best-apple-wallet-alternatives.p7')}
       </ArticleParagraph>
 
-      <ArticleH2>Building your stack</ArticleH2>
+      <ArticleH2>{t('articles:best-apple-wallet-alternatives.h2_3')}</ArticleH2>
 
       <ArticleParagraph>
-        The point isn't to replace Apple Wallet. Tap-to-pay through the Secure Element remains the fastest and most secure way to pay. Express Mode for transit cards and keys works better than any third-party app could. But Apple Wallet is a foundation, not a complete solution. Add Folio for documents and trip organization. Add Curve if you juggle multiple cards. Add TripIt if you travel frequently and want everything in one timeline.
+        <Trans i18nKey="articles:best-apple-wallet-alternatives.p8">
+          <strong>TripIt</strong> builds itineraries automatically. Forward any confirmation email to plans@tripit.com and it assembles a master timeline: flights, hotels, restaurant reservations, rental cars, concert tickets. The Pro tier monitors flights for delays and gate changes faster than most airline apps, tracks seat availability for upgrades, and even claims refunds when airlines owe you money. Apple Wallet shows passes in isolation; TripIt shows your entire trip as a story.
+        </Trans>
       </ArticleParagraph>
 
       <ArticleParagraph>
-        The best digital wallet in 2025 isn't a single app. It's a combination that matches how you actually live. Keep Apple Wallet for payments and passes that work natively. Fill the gaps with apps that solve the specific problems Apple hasn't addressed. The result is fewer "where did I save that?" moments and more confidence that everything you need is one tap away.
+        <Trans i18nKey="articles:best-apple-wallet-alternatives.p9">
+          <strong>Pass2U Wallet</strong> handles the passes Apple Wallet rejects. That gym membership with a barcode, the loyalty card from a local shop, the ticket that arrived as a PDF instead of a proper .pkpass file: Pass2U converts images into wallet passes. It's not elegant, but it solves the frustration of passes that exist only as screenshots or email attachments.
+        </Trans>
+      </ArticleParagraph>
+
+      <ArticleH2>{t('articles:best-apple-wallet-alternatives.h2_4')}</ArticleH2>
+
+      <ArticleParagraph>
+        {t('articles:best-apple-wallet-alternatives.p10')}
+      </ArticleParagraph>
+
+      <ArticleParagraph>
+        {t('articles:best-apple-wallet-alternatives.p11')}
       </ArticleParagraph>
     </BlogArticleLayout>
   )

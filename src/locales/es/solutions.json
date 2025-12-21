@@ -1,0 +1,256 @@
+{
+    "digitalTicketing": {
+        "meta": {
+            "title": "Boletos Digitales | Folio Wallet",
+            "description": "Protege tus ingresos y detén la reventa con boletos a prueba de manipulaciones."
+        },
+        "hero": {
+            "tagline": "Boletos digitales",
+            "title": "Pon fin al fraude de boletos para siempre",
+            "description": "Protege tus ingresos de eventos y detén la reventa con boletos a prueba de manipulaciones vinculados a la identidad real del asistente."
+        },
+        "impact": {
+            "title": "El impacto real del fraude de boletos",
+            "items": [
+                {
+                    "stat": "30%",
+                    "desc": "De los boletos vendidos en línea son falsos o duplicados, dañando tu marca."
+                },
+                {
+                    "stat": "£3B+",
+                    "desc": "Perdidos anualmente a nivel mundial debido a estafas de reventa y precios inflados."
+                },
+                {
+                    "stat": "100%",
+                    "desc": "De riesgo eliminado cuando vinculas cada boleto a una identidad verificada."
+                }
+            ]
+        },
+        "problems": {
+            "title": "Detén a los revendedores en la puerta",
+            "bots": {
+                "title": "Los bots compran tu inventario",
+                "description": "Los revendedores usan bots automatizados para acaparar boletos en segundos, dejando a los verdaderos fans con las manos vacías y obligándolos a recurrir al mercado negro."
+            },
+            "fake": {
+                "title": "Los boletos falsos arruinan eventos",
+                "description": "Los estafadores venden el mismo PDF varias veces. Cuando los fans llegan a la puerta, son rechazados, causando caos y dañando la reputación."
+            },
+            "prices": {
+                "title": "Tus fans pagan demasiado",
+                "description": "Los mercados secundarios inflan los precios salvajemente. Tú pierdes los ingresos extra y tus asistentes leales se ven excluidos."
+            }
+        },
+        "howItWorks": {
+            "title": "Cómo funciona",
+            "issue": {
+                "title": "Emite boletos inteligentes",
+                "description": "Envía boletos digitales seguros directamente al teléfono del asistente. No más archivos PDF o códigos de barras estáticos."
+            },
+            "link": {
+                "title": "Vincula a la identidad",
+                "description": "Requiere verificación de identidad para activar el boleto. Esto asegura que solo la persona que lo compró (o un invitado designado) pueda usarlo."
+            },
+            "scan": {
+                "title": "Escanea para verificar",
+                "description": "Tu personal escanea el boleto en la puerta. Usamos NFC o códigos QR dinámicos para confirmar que es válido y pertenece a la persona que está parada allí."
+            }
+        },
+        "benefits": {
+            "title": "Construido para eventos modernos",
+            "resale": {
+                "title": "Controla la reventa",
+                "description": "Tú decides si los boletos pueden revenderse y dónde. Establece límites de precios y asegura que las transferencias solo ocurran a través de tus canales aprobados."
+            },
+            "revenue": {
+                "title": "Recupera ingresos",
+                "description": "Corta a los revendedores del mercado gris. Captura tarifas de transferencias secundarias y mantén los precios justos para tus verdaderos fans."
+            },
+            "data": {
+                "title": "Conoce a tu audiencia",
+                "description": "Obtén datos reales sobre quién asiste, no solo quién compró. Usa estos insights para construir relaciones más fuertes y ofrecer beneficios personalizados."
+            }
+        },
+        "cta": {
+            "title": "Listo para asegurar tus eventos?",
+            "description": "Hablemos sobre cómo Folio puede ayudarte a emitir boletos más seguros e inteligentes."
+        }
+    },
+    "ageCompliance": {
+        "meta": {
+            "title": "Cumplimiento de Edad | Folio Wallet",
+            "description": "Verifica la edad sin fricción. Cumple con las regulaciones protegiendo la privacidad."
+        },
+        "hero": {
+            "tagline": "Cumplimiento de edad",
+            "title": "Verificación de edad simple y segura",
+            "description": "Protege a los menores y cumple con las leyes de contenido verificando la edad instantáneamente, sin almacenar datos personales."
+        },
+        "challenge": {
+            "title": "El desafío de la verificación de edad",
+            "regulatory": {
+                "title": "Presión regulatoria creciente",
+                "description": "Leyes como AVPA en Reino Unido y leyes estatales en EE. UU. requieren comprobaciones de edad estrictas para contenido para adultos, juegos y sitios sociales."
+            },
+            "privacy": {
+                "title": "Preocupaciones de privacidad",
+                "description": "Los usuarios dudan en compartir identificaciones completas solo para demostrar su edad. Los métodos tradicionales recopilan demasiados datos, creando riesgos de privacidad."
+            },
+            "friction": {
+                "title": "Fricción para el usuario",
+                "description": "Portales de edad torpes alejan a los usuarios. Necesitas una forma de verificar la edad que sea rápida, fácil y preserve la experiencia del usuario."
+            }
+        },
+        "solution": {
+            "title": "Una mejor manera de verificar la edad",
+            "zeroData": {
+                "title": "Prueba de Cero Datos",
+                "description": "Folio simplemente confirma \"Mayor de 18\" o \"Mayor de 21\" sin compartir el nombre, dirección o fecha de nacimiento exacta del usuario contigo."
+            },
+            "instant": {
+                "title": "Resultados instantáneos",
+                "description": "Verificación en tiempo real significa que los usuarios obtienen acceso en segundos. Sin esperas de revisiones manuales."
+            },
+            "reusable": {
+                "title": "ID digital reutilizable",
+                "description": "Una vez verificados, los usuarios pueden demostrar su edad en cualquier sitio asociado con un solo toque, eliminando cargas repetidas."
+            }
+        },
+        "howItWorks": {
+            "title": "Cómo funciona",
+            "verify": {
+                "title": "El usuario verifica una vez",
+                "description": "El usuario escanea su ID gubernamental y toma una selfie para crear su identidad digital segura."
+            },
+            "prove": {
+                "title": "Comparte solo la edad",
+                "description": "Al acceder a tu sitio, el usuario aprueba una solicitud para compartir su estado de edad (por ejemplo, \"Mayor de 18\")."
+            },
+            "access": {
+                "title": "Acceso concedido",
+                "description": "Recibes una confirmación firmada criptográficamente. El usuario entra. No se intercambian PII."
+            }
+        },
+        "useCases": {
+            "title": "Industrias que necesitan esto ahora",
+            "adult": {
+                "title": "Contenido para adultos",
+                "description": "Cumple con las estrictas nuevas leyes de verificación de edad mientras proteges el anonimato del usuario."
+            },
+            "gaming": {
+                "title": "Juegos y apuestas",
+                "description": "Previene el juego de menores sin agregar fricción de registro pesada."
+            },
+            "alcohol": {
+                "title": "Alcohol y tabaco",
+                "description": "Verifica la edad para ventas en línea y entregas sin almacenar datos de clientes sensibles."
+            },
+            "social": {
+                "title": "Redes sociales",
+                "description": "Crea espacios más seguros verificando edades de usuarios para restringir contenido o características dañinas."
+            }
+        },
+        "cta": {
+            "title": "Comienza a verificar la edad hoy",
+            "description": "Integra la verificación de edad centrada en la privacidad de Folio en minutos."
+        }
+    },
+    "clientOnboarding": {
+        "meta": {
+            "title": "Onboarding de Clientes | Folio Wallet",
+            "description": "Onboarding de alto valor y bajo riesgo. Convierte más usuarios reales con verificación de identidad fluida."
+        },
+        "hero": {
+            "tagline": "Onboarding de clientes",
+            "title": "Convierte más usuarios reales, más rápido",
+            "description": "Reemplaza formularios lentos y verificaciones manuales con un flujo de identidad automatizado que los usuarios aman."
+        },
+        "painPoints": {
+            "title": "El onboarding roto cuesta dinero",
+            "dropoff": {
+                "title": "Abandono alto",
+                "description": "El 40% de los usuarios abandonan el registro si tarda demasiado o pide demasiada información por adelantado."
+            },
+            "fraud": {
+                "title": "Ataques de fraude",
+                "description": "Identidades sintéticas y bots pasan fácilmente comprobaciones básicas, costándote en contracargos y limpiezas."
+            },
+            "manual": {
+                "title": "Costos manuales",
+                "description": "Tu equipo pierde horas revisando documentos borrosos y persiguiendo a los clientes por reenvíos."
+            }
+        },
+        "benefits": {
+            "title": "Una experiencia de bienvenida más suave",
+            "auto": {
+                "title": "Autocompletado desde ID",
+                "description": "Los usuarios escanean su ID y nosotros llenamos tu formulario automáticamente. Menos tipeo, menos errores."
+            },
+            "biometric": {
+                "title": "Seguridad biométrica",
+                "description": "La comparación facial asegura que la persona registrándose es realmente dueña de la ID, deteniendo el fraude de identidad en seco."
+            },
+            "multi": {
+                "title": "Verificaciones de múltiples fuentes",
+                "description": "Combinamos escaneo de documentos, comprobaciones de bases de datos y señales de dispositivos para darte una decisión de confianza instantánea."
+            }
+        },
+        "sectors": {
+            "title": "Perfecto para industrias reguladas",
+            "fintech": {
+                "title": "Fintech y Banca",
+                "description": "KYC completo en segundos. Abre cuentas más rápido mientras cumples con AML."
+            },
+            "crypto": {
+                "title": "Cripto y Web3",
+                "description": "Onboarding conforme que no mata la conversión. Verifica usuarios globales al instante."
+            },
+            "marketplaces": {
+                "title": "Marketplaces",
+                "description": "Verifica compradores y vendedores para construir confianza y seguridad en tu plataforma."
+            }
+        },
+        "cta": {
+            "title": "Mejora tu flujo de onboarding",
+            "description": "Ve cómo Folio puede ayudarte a adquirir más usuarios verificados con menos esfuerzo."
+        }
+    },
+    "ticketIssuance": {
+        "meta": {
+            "title": "Emisión de Boletos | Folio Wallet",
+            "description": "Crea y distribuye boletos digitales seguros con nuestra potente API."
+        },
+        "hero": {
+            "tagline": "Emisión de boletos",
+            "title": "Emite boletos en los que puedes confiar",
+            "description": "Una API potente para generar, distribuir y gestionar boletos de eventos seguros vinculados a identidad real."
+        },
+        "features": {
+            "title": "Motor de emisión completo",
+            "api": {
+                "title": "API simple",
+                "description": "Genera miles de boletos con una sola solicitud. Perfecto para eventos de alto volumen."
+            },
+            "flexible": {
+                "title": "Tipos de boletos flexibles",
+                "description": "Desde pases de un día hasta accesos VIP de temporada. Configura reglas, puertas y tiempos de validez."
+            },
+            "delivery": {
+                "title": "Entrega instantánea",
+                "description": "Envía boletos vía email, SMS o directamente a la app Folio Wallet del usuario."
+            },
+            "dynamic": {
+                "title": "Códigos QR dinámicos",
+                "description": "Los códigos de barras rotan cada pocos segundos, haciendo imposibles las capturas de pantalla y copias."
+            }
+        },
+        "integration": {
+            "title": "Se integra con tu pila",
+            "description": "Nuestra API está diseñada para desarrolladores. Webhooks, sandboxes y documentación clara hacen que la integración sea muy fácil."
+        },
+        "cta": {
+            "title": "Comienza a emitir hoy",
+            "description": "Obtén tus llaves API y comienza a construir boletos más seguros para tu próximo evento."
+        }
+    }
+}

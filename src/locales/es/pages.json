@@ -1,0 +1,201 @@
+{
+    "idWalletApp": {
+        "meta": {
+            "title": "App de Billetera de ID | Folio Wallet",
+            "description": "Tu identidad digital segura en tu bolsillo. Almacena, gestiona y comparte tus credenciales con privacidad primero."
+        },
+        "hero": {
+            "tagline": "Billetera de ID",
+            "title": "Tu identidad, bajo tu control",
+            "description": "Una billetera digital segura para todas tus identificaciones, documentos y credenciales. Comparte solo lo que necesitas, cuando lo necesitas."
+        },
+        "features": {
+            "title": "Todo lo que necesitas en una app",
+            "storage": {
+                "title": "Almacenamiento seguro",
+                "description": "Tus datos están cifrados en tu dispositivo. Solo tú tienes las llaves."
+            },
+            "sharing": {
+                "title": "Compartir selectivo",
+                "description": "Elige exactamente qué datos compartir. Prueba tu edad sin revelar tu dirección."
+            },
+            "backup": {
+                "title": "Respaldo y recuperación",
+                "description": "Nunca pierdas tus documentos. Respaldo cifrado en la nube para una fácil recuperación."
+            }
+        },
+        "howItWorks": {
+            "title": "Cómo funciona",
+            "add": {
+                "title": "Agrega documentos",
+                "description": "Escanea identificaciones, tarjetas de lealtad y más para digitalizar tu billetera."
+            },
+            "verify": {
+                "title": "Verifícate",
+                "description": "Completa una verificación única para activar tus identificaciones digitales."
+            },
+            "use": {
+                "title": "Úsalo en todas partes",
+                "description": "Presenta tu ID digital en línea y en persona con un escaneo rápido."
+            }
+        },
+        "cta": {
+            "title": "Descarga Folio Wallet hoy",
+            "description": "Únete a millones de personas que están tomando el control de su identidad digital.",
+            "appStore": "Consiguelo en el App Store",
+            "googlePlay": "Consiguelo en Google Play"
+        }
+    },
+    "cardScannerApp": {
+        "meta": {
+            "title": "App de Escáner de Tarjetas | Folio Wallet",
+            "description": "Digitaliza tu billetera física en segundos. Escanea y almacena cualquier tarjeta con precisión."
+        },
+        "hero": {
+            "tagline": "Escáner de tarjetas",
+            "title": "Digitaliza tu billetera en segundos",
+            "description": "Limpia tu billetera física. Escanea tarjetas de crédito, identificaciones y tarjetas de membresía en tu teléfono."
+        },
+        "features": {
+            "accuracy": {
+                "title": "Precisión extrema",
+                "description": "Nuestra tecnología de OCR lee detalles de tarjetas perfectamente, cada vez."
+            },
+            "organize": {
+                "title": "Organízate",
+                "description": "Categoriza y ordena tus tarjetas para un acceso rápido."
+            },
+            "offline": {
+                "title": "Funciona sin conexión",
+                "description": "Accede a tus tarjetas escaneadas en cualquier lugar, incluso sin servicio."
+            }
+        }
+    },
+    "loyaltyCardApp": {
+        "meta": {
+            "title": "App de Tarjetas de Lealtad | Folio Wallet",
+            "description": "Nunca pierdas una recompensa de nuevo. Mantén todos tus programas de lealtad en un solo lugar."
+        },
+        "hero": {
+            "tagline": "Tarjetas de lealtad",
+            "title": "Todas tus recompensas, siempre contigo",
+            "description": "Escanea y guarda códigos de barras de lealtad. Acumula puntos y canjea recompensas sin llevar plástico."
+        },
+        "benefits": {
+            "wallet": {
+                "title": "Aligera tu carga",
+                "description": "Deja las tarjetas de plástico en casa y lleva todo en tu teléfono."
+            },
+            "points": {
+                "title": "Nunca pierdas puntos",
+                "description": "Siempre ten tu tarjeta lista al pagar. No más recompensas perdidas."
+            },
+            "smart": {
+                "title": "Sugerencias inteligentes",
+                "description": "Folio sugiere la tarjeta correcta según tu ubicación."
+            }
+        }
+    },
+    "security": {
+        "meta": {
+            "title": "Seguridad | Folio Wallet",
+            "description": "Seguridad en la que puedes confiar. Cómo protegemos tus datos e identidad."
+        },
+        "hero": {
+            "tagline": "Seguridad",
+            "title": "Seguridad sin compromisos",
+            "description": "Tu privacidad y seguridad son el núcleo de todo lo que construimos. Aquí te explicamos cómo te mantenemos a salvo."
+        },
+        "principles": {
+            "encryption": {
+                "title": "Cifrado de extremo a extremo",
+                "description": "Tus datos se cifran antes de salir de tu dispositivo. Nosotros no podemos verlos."
+            },
+            "privacy": {
+                "title": "Privacidad por diseño",
+                "description": "Solo recopilamos lo que es absolutamente necesario. Tú eres dueño de tus datos."
+            },
+            "compliance": {
+                "title": "Cumplimiento global",
+                "description": "Cumplimos con GDPR, CCPA y los estándares de seguridad más estrictos."
+            }
+        },
+        "faq": {
+            "title": "Preguntas de seguridad frecuentes",
+            "items": [
+                {
+                    "q": "¿Dónde se almacenan mis datos?",
+                    "a": "Tus datos personales se almacenan cifrados en tu dispositivo móvil. Las copias de seguridad cifradas en la nube son opcionales."
+                },
+                {
+                    "q": "¿Puede Folio ver mis documentos?",
+                    "a": "No. Usamos cifrado de conocimiento cero. Solo tú tienes la llave para descifrar tus datos."
+                },
+                {
+                    "q": "¿Qué pasa si pierdo mi teléfono?",
+                    "a": "Si tienes habilitado el respaldo, puedes restaurar tu billetera en un nuevo dispositivo. Nadie puede acceder a tus datos sin tu contraseña o biometría."
+                }
+            ]
+        }
+    },
+    "about": {
+        "meta": {
+            "title": "Sobre Nosotros | Folio Wallet",
+            "description": "Nuestra misión es devolver la propiedad de la identidad a las personas."
+        },
+        "hero": {
+            "tagline": "Sobre nosotros",
+            "title": "Construyendo el futuro de la identidad",
+            "description": "Somos un equipo de ingenieros, diseñadores y expertos en seguridad dedicados a crear una capa de identidad digital para Internet."
+        },
+        "story": {
+            "title": "Nuestra historia",
+            "p1": "Folio comenzó con una idea simple: tu identidad digital debería pertenecerte a ti.",
+            "p2": "Hoy, ayudamos a millones de personas y miles de empresas a interactuar de forma segura y privada en línea."
+        },
+        "values": {
+            "title": "Nuestros valores",
+            "trust": "Confianza primero",
+            "transparency": "Transparencia radical",
+            "userCentric": "Obsesión por el usuario"
+        }
+    },
+    "notFound": {
+        "meta": {
+            "title": "Página no encontrada | Folio Wallet",
+            "description": "La página que buscas no existe."
+        },
+        "title": "Página no encontrada",
+        "description": "Lo sentimos, no pudimos encontrar la página que estás buscando.",
+        "homeButton": "Volver al inicio"
+    },
+    "ageVerification": {
+        "meta": {
+            "title": "Verificación de Edad | Folio Wallet",
+            "description": "Prueba tu edad sin revelar tu identidad completa."
+        },
+        "hero": {
+            "tagline": "Verificación de edad",
+            "title": "Prueba tu edad, mantén tu privacidad",
+            "description": "Accede a productos y servicios restringidos por edad demostrando que eres mayor de edad, sin compartir tu nombre o dirección."
+        }
+    },
+    "terms": {
+        "meta": {
+            "title": "Términos de Uso | Folio Wallet",
+            "description": "Nuestros términos de servicio y acuerdo de usuario."
+        },
+        "title": "Términos de Uso",
+        "description": "Nuestros términos de servicio y acuerdo de usuario.",
+        "lastUpdated": "Última actualización: {{date}}"
+    },
+    "privacy": {
+        "meta": {
+            "title": "Política de Privacidad | Folio Wallet",
+            "description": "Cómo recopilamos, usamos y protegemos tus datos."
+        },
+        "title": "Política de Privacidad",
+        "description": "Cómo recopilamos, usamos y protegemos tus datos.",
+        "lastUpdated": "Última actualización: {{date}}"
+    }
+}

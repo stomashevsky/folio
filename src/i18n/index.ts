@@ -11,6 +11,8 @@ import enSolutions from '../locales/en/solutions.json'
 import enGovernment from '../locales/en/government.json'
 import enPages from '../locales/en/pages.json'
 import enBlog from '../locales/en/blog.json'
+import enArticles from '../locales/en/articles.json'
+
 import ruCommon from '../locales/ru/common.json'
 import ruHome from '../locales/ru/home.json'
 import ruWallet from '../locales/ru/wallet.json'
@@ -19,13 +21,26 @@ import ruSolutions from '../locales/ru/solutions.json'
 import ruGovernment from '../locales/ru/government.json'
 import ruPages from '../locales/ru/pages.json'
 import ruBlog from '../locales/ru/blog.json'
+// Using English articles for Russian fallback for now
+const ruArticles = enArticles
 
-export const SUPPORTED_LANGUAGES = ['en', 'ru'] as const
+import esCommon from '../locales/es/common.json'
+import esHome from '../locales/es/home.json'
+import esWallet from '../locales/es/wallet.json'
+import esPlatform from '../locales/es/platform.json'
+import esSolutions from '../locales/es/solutions.json'
+import esGovernment from '../locales/es/government.json'
+import esPages from '../locales/es/pages.json'
+import esBlog from '../locales/es/blog.json'
+import esArticles from '../locales/es/articles.json'
+
+export const SUPPORTED_LANGUAGES = ['en', 'ru', 'es'] as const
 export type SupportedLanguage = typeof SUPPORTED_LANGUAGES[number]
 
 export const LANGUAGE_NAMES: Record<SupportedLanguage, string> = {
   en: 'English',
   ru: 'Русский',
+  es: 'Español',
 }
 
 export const DEFAULT_LANGUAGE: SupportedLanguage = 'en'
@@ -40,6 +55,7 @@ const resources = {
     government: enGovernment,
     pages: enPages,
     blog: enBlog,
+    articles: enArticles,
   },
   ru: {
     common: ruCommon,
@@ -50,6 +66,18 @@ const resources = {
     government: ruGovernment,
     pages: ruPages,
     blog: ruBlog,
+    articles: ruArticles,
+  },
+  es: {
+    common: esCommon,
+    home: esHome,
+    wallet: esWallet,
+    platform: esPlatform,
+    solutions: esSolutions,
+    government: esGovernment,
+    pages: esPages,
+    blog: esBlog,
+    articles: esArticles,
   },
 }
 
@@ -60,22 +88,22 @@ i18n
     resources,
     fallbackLng: DEFAULT_LANGUAGE,
     supportedLngs: SUPPORTED_LANGUAGES,
-    
+
     // Default namespace
     defaultNS: 'common',
-    ns: ['common', 'home', 'wallet', 'platform', 'solutions', 'government', 'pages', 'blog'],
-    
+    ns: ['common', 'home', 'wallet', 'platform', 'solutions', 'government', 'pages', 'blog', 'articles'],
+
     interpolation: {
       escapeValue: false, // React already escapes values
     },
-    
+
     detection: {
       // Detect language from URL path first (e.g., /ru/wallet)
       order: ['path', 'localStorage', 'navigator'],
       lookupFromPathIndex: 0,
       caches: ['localStorage'],
     },
-    
+
     react: {
       useSuspense: false,
     },

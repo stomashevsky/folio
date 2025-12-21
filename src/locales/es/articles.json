@@ -1,0 +1,208 @@
+{
+    "best-apple-wallet-alternatives": {
+        "p1": "Estás en la frontera italiana. El oficial te pide tu permiso de residencia. Abres Apple Wallet, pasas tus tarjetas de crédito y el pase de abordar del mes pasado, y te das cuenta: tu permiso de residencia no está allí. Nunca lo estuvo. Apple Wallet no almacena documentos de identidad. No almacena tarjetas de seguro, registros de vacunación ni archivos PDF de visas. Almacena exactamente lo que Apple ha decidido que cuenta como un \"pase\", y tus documentos críticos no están en la lista.",
+        "p2": "Esta es la brecha entre la expectativa y la realidad. Apple Wallet maneja el pago sin contacto maravillosamente. Sincroniza los pases de abordar automáticamente. Pero en el momento en que necesitas algo que no sea una tarjeta de pago o un archivo .pkpass de un proveedor participante, estás buscando en Fotos, Archivos o tu correo electrónico. Los pases que tienes aparecen dispersos por fecha de adición en lugar de organizados en viajes. No puedes compartir una confirmación de hotel con tu pareja. No puedes establecer un recordatorio para cuando caduque tu pasaporte.",
+        "p3": "La solución no es abandonar Apple Wallet. Es agregar aplicaciones especializadas que resuelvan los problemas que Apple ignora. Aquí están las alternativas que vale la pena instalar en 2025.",
+        "h2_1": "Para documentos que Apple Wallet no acepta",
+        "p4": "<strong>Folio</strong> almacena todo lo que Apple Wallet rechaza: pasaportes, permisos de residencia, licencias de conducir, pólizas de seguro, certificados de vacunación, registros médicos. Fotografía un documento y Folio extrae los datos clave automáticamente. Configúralo una vez y recibirás notificaciones antes de que caduquen los documentos. Cuando alguien necesite ver los detalles de tu seguro, genera un enlace seguro que expire después de que lo hayan visto.",
+        "img_alt": "Aplicación Folio mostrando tarjeta de pago BBVA con detalles, permiso de residencia italiano con datos extraídos y línea de tiempo de viaje con reservas de hotel en Barcelona y boletos de avión",
+        "p5": "La verdadera diferencia se nota cuando viajas. Apple Wallet muestra tu pase de abordar. Folio muestra tu viaje completo en orden cronológico: el vuelo, el hotel en Barcelona, las entradas para la Sagrada Familia, el tren a Tarragona, el viaje de regreso. Toca cualquier elemento y el código de barras o código QR estará listo para escanear. Todo funciona sin conexión porque los documentos viven en tu dispositivo con cifrado de extremo a extremo. Para las familias, las carpetas compartidas permiten que todos accedan a los mismos documentos sin enviar archivos de un lado a otro. <0>Disponible gratis en iOS y Android.</0>",
+        "h2_2": "Para gestionar múltiples tarjetas de pago",
+        "p6": "<strong>Curve</strong> resuelve un problema diferente: demasiadas tarjetas. Vincula todas tus cuentas Visa y Mastercard a Curve, luego agrega solo Curve a Apple Wallet. Al pagar, una tarjeta maneja todo. Más tarde, decides qué cuenta subyacente paga realmente. ¿Hiciste una compra con la tarjeta incorrecta? \"Go Back in Time\" mueve el cargo hasta 30 días después. Para las personas que optimizan las recompensas de tarjetas de crédito por categoría, Curve elimina la molestia de encontrar la tarjeta correcta antes de pagar.",
+        "p7": "Curve también muestra las tasas de cambio antes de las compras internacionales, a diferencia de Apple Wallet que simplemente cobra la tasa de tu banco y revela el daño en tu estado de cuenta días después. El nivel gratuito cubre la agregación básica de tarjetas. Los niveles de pago agregan retiros de cajeros automáticos sin comisiones en el extranjero, límites más altos y reembolso en efectivo en minoristas seleccionados.",
+        "h2_3": "Para viajes que implican más que un vuelo",
+        "p8": "<strong>TripIt</strong> crea itinerarios automáticamente. Reenvía cualquier correo de confirmación a plans@tripit.com y ensambla una línea de tiempo maestra: vuelos, hoteles, reservas de restaurantes, autos de alquiler, entradas para conciertos. El nivel Pro monitorea vuelos por retrasos y cambios de puerta más rápido que la mayoría de las aplicaciones de aerolíneas, rastrea la disponibilidad de asientos para mejoras e incluso reclama reembolsos cuando las aerolíneas te deben dinero. Apple Wallet muestra pases de forma aislada; TripIt muestra todo tu viaje como una historia.",
+        "p9": "<strong>Pass2U Wallet</strong> maneja los pases que Apple Wallet rechaza. Esa membresía de gimnasio con un código de barras, la tarjeta de fidelidad de una tienda local, el boleto que llegó como PDF en lugar de un archivo .pkpass adecuado: Pass2U convierte imágenes en pases de billetera. No es elegante, pero resuelve la frustración de los pases que existen solo como capturas de pantalla o archivos adjuntos de correo electrónico.",
+        "h2_4": "Construyendo tu pila",
+        "p10": "El punto no es reemplazar Apple Wallet. El pago sin contacto a través del Secure Element sigue siendo la forma más rápida y segura de pagar. El Modo Express para tarjetas de transporte y llaves funciona mejor que cualquier aplicación de terceros. Pero Apple Wallet es una base, no una solución completa. Agrega Folio para documentos y organización de viajes. Agrega Curve si haces malabares con múltiples tarjetas. Agrega TripIt si viajas con frecuencia y quieres todo en una línea de tiempo.",
+        "p11": "La mejor billetera digital en 2025 no es una sola aplicación. Es una combinación que coincide con cómo vives realmente. Mantén Apple Wallet para pagos y pases que funcionan de forma nativa. Llena los vacíos con aplicaciones que resuelven los problemas específicos que Apple no ha abordado. El resultado es menos momentos de \"¿dónde guardé eso?\" y más confianza en que todo lo que necesitas está a un toque de distancia."
+    },
+    "terms": {
+        "intro": "Gracias por usar Folio Wallet. Estos Términos de Uso rigen tu acceso y uso de la aplicación móvil Folio, los servicios en línea relacionados y cualquier documentación que proporcionemos (colectivamente, nuestros \"Servicios\"). Al acceder o utilizar nuestros Servicios, aceptas estar sujeto a estos términos. Si no estás de acuerdo, por favor no uses Folio.",
+        "intro_privacy_link": "Nuestra <0>Política de Privacidad</0> explica cómo recopilamos, usamos y protegemos tus datos personales. Por favor léela junto con estos términos.",
+        "who_we_are": {
+            "title": "Quiénes somos",
+            "content": "Folio Technologies Limited es una empresa registrada en Inglaterra y Gales (Número de Compañía 07236594). Nuestra oficina registrada está en 88 Baker Street, Londres W1U 6TQ, Reino Unido. Las referencias a \"Folio\", \"nosotros\", \"nos\" o \"nuestro\" significan Folio Technologies Limited."
+        },
+        "registration": {
+            "title": "Registro y acceso",
+            "p1": "Debes tener al menos 16 años para usar Folio. Al registrarte, confirmas que cumples con este requisito de edad. Eres responsable de mantener la confidencialidad de tus credenciales de cuenta y de todas las actividades que ocurran bajo tu cuenta.",
+            "p2": "Te otorgamos una licencia limitada, no exclusiva, intransferible y revocable para usar la aplicación Folio en tus dispositivos personales para fines no comerciales, sujeto a estos términos."
+        },
+        "services": {
+            "title": "Nuestros servicios",
+            "p1": "Folio es una plataforma de identidad digital que te ayuda a almacenar, gestionar y compartir tus documentos personales de forma segura. Admitimos la verificación y autenticación de documentos, pero no somos parte de ningún contrato o servicio que terceros puedan ofrecerte a través de la aplicación. Tienes el control total de qué información compartes y con quién. Antes de compartir datos con cualquier tercero, asegúrate de estar cómodo con sus prácticas de privacidad.",
+            "p2": "Usando Folio, puedes:",
+            "list": {
+                "item1": "Almacenar y gestionar tus documentos personales de forma segura",
+                "item2": "Compartir información verificada con terceros que elijas",
+                "item3": "Acceder a tus datos sin conexión una vez descargados",
+                "item4": "Usar nuestra documentación para apoyar tu uso de la aplicación"
+            }
+        },
+        "usage": {
+            "title": "Requisitos de uso",
+            "p1": "Aceptas usar nuestros Servicios solo para fines legales y de acuerdo con estos términos. Aceptas no:",
+            "list": {
+                "item1": "Usar los Servicios para cualquier propósito ilegal, fraudulento o engañoso",
+                "item2": "Realizar ingeniería inversa, descompilar, desensamblar o crear trabajos derivados de la aplicación",
+                "item3": "Compartir el acceso a tu cuenta o transferirla a otros sin nuestro consentimiento",
+                "item4": "Intentar comprometer nuestros sistemas, interrumpir nuestros Servicios o interferir con otros usuarios",
+                "item5": "Recopilar datos de nuestros sistemas sin autorización",
+                "item6": "Usar los Servicios en nombre de un tercero sin la debida autorización"
+            }
+        },
+        "security": {
+            "title": "Seguridad y recuperación de cuenta",
+            "p1": "Folio utiliza Passkeys para una autenticación segura. Las Passkeys te permiten iniciar sesión usando Face ID, Touch ID o el código de acceso de tu dispositivo, proporcionando una alternativa más segura a las contraseñas tradicionales. Durante el registro, se te pedirá que guardes un Código de Recuperación. Este código es esencial para recuperar el acceso a tu cuenta si pierdes tu dispositivo, olvidas tus credenciales o inicias sesión desde un nuevo dispositivo.",
+            "p2": "<strong>Importante:</strong> Debido a nuestra arquitectura de seguridad de conocimiento cero, no podemos acceder a tus datos cifrados. Si pierdes tu Código de Recuperación y no puedes autenticarte, no podremos ayudarte a recuperar tu cuenta o datos. Recomendamos encarecidamente guardar tu Código de Recuperación en un lugar seguro, como un administrador de contraseñas o una caja fuerte física."
+        },
+        "privacy": {
+            "title": "Privacidad y protección de datos",
+            "p1": "Tu privacidad es fundamental para el funcionamiento de Folio. Todos los datos en tránsito y en reposo están cifrados utilizando suites de cifrado modernas. Tus documentos personales se cifran y almacenan solo en tu billetera Folio, con solo referencias hash guardadas en nuestros servidores para detectar manipulaciones y proteger contra fraudes. No tenemos visibilidad de tu información privada y no podemos descifrarla sin tu autorización.",
+            "p2": "Nunca compartiremos tus datos personales con terceros sin tu consentimiento explícito. Podemos analizar tendencias anonimizadas y agregadas para mejorar nuestros Servicios, pero este análisis nunca incluye tu información privada."
+        },
+        "disclaimers": {
+            "title": "Descargos de responsabilidad",
+            "p1": "Utilizamos una habilidad y cuidado razonables al proporcionar servicios de verificación de documentos, pero no podemos garantizar que los resultados de la verificación sean siempre precisos o que los documentos sean genuinos. Eres responsable de la precisión de tu documentación y de mantenerla actualizada.",
+            "p2": "Nuestros Servicios se proporcionan \"tal cual\" y \"según disponibilidad\". En la medida máxima permitida por la ley, renunciamos a todas las garantías, expresas o implícitas, incluidas las garantías de comerciabilidad, idoneidad para un propósito particular y no infracción. No garantizamos que los Servicios sean ininterrumpidos, libres de errores o completamente seguros."
+        },
+        "liability": {
+            "title": "Limitación de responsabilidad",
+            "p1": "Somos responsables de pérdidas o daños previsibles causados por nuestro incumplimiento de estos términos o por no usar un cuidado y habilidad razonables. Sin embargo, no somos responsables de:",
+            "list": {
+                "item1": "Pérdida o daño que no sea razonablemente previsible",
+                "item2": "Pérdidas comerciales, ya que la aplicación está destinada para uso personal",
+                "item3": "Daños que podrías haber evitado siguiendo nuestros consejos o aplicando las actualizaciones disponibles",
+                "item4": "Problemas causados por eventos fuera de nuestro control razonable",
+                "item5": "Pérdida de datos debido a la falta de guardar tu Código de Recuperación"
+            },
+            "p2": "Nada en estos términos excluye o limita nuestra responsabilidad por muerte o lesiones personales causadas por nuestra negligencia, fraude o tergiversación fraudulenta, o cualquier otra responsabilidad que no pueda ser excluida legalmente."
+        },
+        "ip": {
+            "title": "Propiedad intelectual",
+            "p1": "Todos los derechos de propiedad intelectual en la aplicación, documentación y Servicios nos pertenecen a nosotros o a nuestros licenciantes. Tu derecho a usar la aplicación es bajo licencia, no venta. No tienes derechos de propiedad sobre nuestra propiedad intelectual más allá de lo que estos términos otorgan expresamente."
+        },
+        "changes": {
+            "title": "Cambios en nuestros servicios y términos",
+            "p1": "Podemos actualizar la aplicación y los Servicios de vez en cuando para mejorar la funcionalidad, agregar características o abordar problemas de seguridad. También podemos actualizar estos términos. Cuando realicemos cambios materiales, te notificaremos a través de la aplicación o por correo electrónico. Tu uso continuo de Folio después de dichos cambios constituye la aceptación de los términos actualizados."
+        },
+        "termination": {
+            "title": "Terminación",
+            "p1": "Puedes dejar de usar Folio en cualquier momento eliminando la aplicación. Podemos suspender o terminar tu acceso si incumples estos términos, aunque te daremos aviso y una oportunidad para remediar el incumplimiento donde sea razonablemente factible. Al terminar, debes cesar todo uso de los Servicios. Las disposiciones que por su naturaleza deberían sobrevivir a la terminación permanecerán vigentes."
+        },
+        "law": {
+            "title": "Ley aplicable y disputas",
+            "p1": "Estos términos se rigen por las leyes de Inglaterra y Gales. Cualquier disputa que surja de o se relacione con estos términos o tu uso de nuestros Servicios estará sujeta a la jurisdicción exclusiva de los tribunales de Inglaterra y Gales. Si alguna disposición de estos términos se considera inaplicable, las disposiciones restantes continuarán en pleno vigor y efecto. Podemos transferir nuestros derechos y obligaciones bajo estos términos a otra organización, pero esto no afectará tus derechos."
+        },
+        "contact": {
+            "title": "Contáctanos",
+            "p1": "Si tienes preguntas sobre estos términos o necesitas soporte, por favor envíanos un correo electrónico a <0>support@folio.id</0>. Para consultas relacionadas con la privacidad, contacta a <1>privacy@folio.id</1>."
+        }
+    },
+    "privacy_page": {
+        "intro": "Folio Technologies Limited (\"Folio\", \"nosotros\", \"nos\" o \"nuestro\") respeta tu privacidad y se compromete a proteger tus datos personales. Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y salvaguardamos tu información cuando usas la aplicación Folio Wallet y los servicios relacionados.",
+        "commitment": "<strong>Nuestro compromiso:</strong> Operamos con una arquitectura de conocimiento cero. Tus documentos personales están cifrados en tu billetera y no podemos acceder ni ver tu información privada. Nunca compartiremos tus datos personales con terceros sin tu consentimiento explícito.",
+        "who_we_are": {
+            "title": "Quiénes somos",
+            "p1": "Folio Technologies Limited es una empresa registrada en Inglaterra y Gales (Número de Compañía 07236594). Nuestra oficina registrada está en 88 Baker Street, Londres W1U 6TQ, Reino Unido. Somos el controlador de datos para la información personal recopilada a través de la aplicación Folio. Para preguntas de privacidad, contacta a nuestro gerente de privacidad de datos en <0>privacy@folio.id</0>."
+        },
+        "collect": {
+            "title": "Información personal que recopilamos",
+            "provide": {
+                "title": "Información que proporcionas",
+                "p1": "Cuando creas una cuenta, recopilamos información necesaria para verificar tu identidad y proporcionar nuestros servicios. Esto puede incluir una selfie para verificación biométrica. Procesamos estos datos de forma segura y solo con tu consentimiento explícito. Si contactas a nuestro equipo de soporte, podemos procesar temporalmente datos personales de documentos con los que necesitas ayuda. Estos datos se eliminan automáticamente dentro de tres días."
+            },
+            "auto": {
+                "title": "Información recopilada automáticamente",
+                "p1": "Cuando utilizas nuestros Servicios, recopilamos automáticamente cierta información técnica y de uso:",
+                "list": {
+                    "item1": "Información del dispositivo: tipo de dispositivo, sistema operativo, identificadores únicos del dispositivo",
+                    "item2": "Información de conexión: dirección IP, tipo y versión del navegador, zona horaria",
+                    "item3": "Patrones de uso: datos anonimizados sobre cómo interactúas con la aplicación, como la cantidad de documentos almacenados (pero nunca el contenido de esos documentos)"
+                }
+            }
+        },
+        "use": {
+            "title": "Cómo usamos la información personal",
+            "p1": "Usamos tu información personal para los siguientes propósitos:",
+            "list": {
+                "item1": "Para registrarte como usuario y proporcionar nuestros Servicios",
+                "item2": "Para verificar tu identidad y proteger contra el fraude",
+                "item3": "Para responder a tus solicitudes de soporte y comunicarnos contigo",
+                "item4": "Para mejorar, mantener y asegurar nuestra aplicación y Servicios",
+                "item5": "Para cumplir con obligaciones legales y proteger nuestros derechos"
+            },
+            "p2": "Dependemos de tu consentimiento para procesar datos biométricos como tu selfie. Para otras actividades de procesamiento, confiamos en nuestros intereses legítimos al proporcionar y mejorar nuestros Servicios, el cumplimiento de nuestro contrato contigo o el cumplimiento de obligaciones legales."
+        },
+        "security": {
+            "title": "Seguridad y protección de datos",
+            "p1": "La seguridad es fundamental para nuestro diseño. Implementamos medidas técnicas y organizativas robustas para proteger tu información personal:",
+            "list": {
+                "item1": "La arquitectura de conocimiento cero asegura que no podamos acceder a tus datos privados",
+                "item2": "El cifrado de extremo a extremo protege todos los datos en tránsito utilizando suites de cifrado modernas",
+                "item3": "Tus documentos personales se cifran y almacenan solo en tu billetera en tu dispositivo",
+                "item4": "Almacenamos solo hashes criptográficos en nuestros servidores para detectar manipulaciones y proteger contra el fraude",
+                "item5": "Mantenemos el cumplimiento con las normas de seguridad ISO 27001 y SOC 2",
+                "item6": "El acceso a cualquier dato personal está estrictamente limitado al personal autorizado según sea necesario"
+            },
+            "p2": "<strong>Recuperación de cuenta:</strong> Durante el registro, se te pedirá que guardes un Código de Recuperación. Debido a nuestra arquitectura de conocimiento cero, no podemos ayudarte a recuperar tu cuenta o datos si pierdes este código. Por favor, guárdalo de forma segura."
+        },
+        "disclosure": {
+            "title": "Divulgación de información personal",
+            "p1": "Solo compartimos tu información personal en las siguientes circunstancias:",
+            "list": {
+                "item1": "Con tu consentimiento explícito o bajo tu dirección",
+                "item2": "Con proveedores de servicios que nos ayudan a operar nuestros Servicios, bajo obligaciones contractuales estrictas",
+                "item3": "Para cumplir con las leyes, regulaciones o procesos legales aplicables",
+                "item4": "Para proteger los derechos, privacidad, seguridad o propiedad de Folio, nuestros usuarios o el público"
+            },
+            "p2": "Nunca vendemos tus datos personales. Si eliges compartir información con terceros a través de la aplicación, por favor revisa sus políticas de privacidad antes de hacerlo."
+        },
+        "transfers": {
+            "title": "Transferencias internacionales de datos",
+            "p1": "Almacenamos principalmente datos personales en ubicaciones seguras dentro del Espacio Económico Europeo. Si necesitamos transferir datos fuera del Reino Unido o el EEE, nos aseguramos de que existan las garantías adecuadas, como cláusulas contractuales estándar aprobadas por la Oficina del Comisionado de Información del Reino Unido o la Comisión Europea."
+        },
+        "retention": {
+            "title": "Retención de datos",
+            "p1": "Conservamos tus datos personales solo durante el tiempo necesario para cumplir con los fines descritos en esta política. Tus documentos e información permanecen en tu billetera cifrada hasta que los elimines o elimines tu cuenta. Los datos biométricos utilizados para la verificación se conservan durante un máximo de tres años desde tu última interacción con la plataforma, a menos que la ley exija una retención más larga o para resolver disputas."
+        },
+        "rights": {
+            "title": "Tus derechos",
+            "p1": "Según las leyes de protección de datos aplicables, incluido el RGPD del Reino Unido, tienes los siguientes derechos:",
+            "list": {
+                "item1": "Acceso: solicitar una copia de los datos personales que tenemos sobre ti",
+                "item2": "Rectificación: solicitar la corrección de datos inexactos o incompletos",
+                "item3": "Supresión: solicitar la eliminación de tus datos personales en ciertas circunstancias",
+                "item4": "Restricción: solicitar que limitemos cómo procesamos tus datos",
+                "item5": "Portabilidad: recibir tus datos en un formato estructurado y de uso común",
+                "item6": "Oposición: oponerte al procesamiento basado en intereses legítimos",
+                "item7": "Retirar consentimiento: retirar el consentimiento en cualquier momento cuando dependamos de él para el procesamiento"
+            },
+            "p2": "Para ejercer cualquiera de estos derechos, envíanos un correo electrónico a <0>privacy@folio.id</0>. Responderemos dentro de un mes. Generalmente no cobramos una tarifa, pero podemos cobrar una tarifa razonable por solicitudes manifiestamente infundadas o excesivas."
+        },
+        "cookies": {
+            "title": "Cookies y tecnologías similares",
+            "p1": "Nuestro sitio web utiliza cookies y tecnologías de seguimiento similares para mejorar tu experiencia, analizar patrones de uso y apoyar nuestros esfuerzos de marketing. Las cookies son pequeños archivos de texto almacenados en tu dispositivo que nos ayudan a reconocerte y recordar tus preferencias.",
+            "p2": "Utilizamos los siguientes tipos de cookies:",
+            "list": {
+                "item1": "Cookies esenciales: necesarias para que el sitio web funcione correctamente y no se pueden desactivar",
+                "item2": "Cookies de análisis: nos ayudan a comprender cómo interactúan los visitantes con nuestro sitio web",
+                "item3": "Cookies de preferencia: recuerdan tu configuración y preferencias"
+            },
+            "p3": "Puedes gestionar tus preferencias de cookies a través de la configuración de tu navegador. Ten en cuenta que desactivar ciertas cookies puede afectar la funcionalidad del sitio web."
+        },
+        "children": {
+            "title": "Privacidad de los niños",
+            "p1": "Folio no está destinado a niños menores de 16 años. No recopilamos a sabiendas información personal de niños. Si crees que hemos recopilado inadvertidamente datos de un niño, contáctanos de inmediato a <0>privacy@folio.id</0>, y tomaremos medidas para eliminar dicha información."
+        },
+        "changes": {
+            "title": "Cambios en esta política",
+            "p1": "Podemos actualizar esta Política de Privacidad de vez en cuando para reflejar cambios en nuestras prácticas o leyes aplicables. Cuando realicemos cambios materiales, te notificaremos a través de la aplicación o por correo electrónico y actualizaremos la fecha de \"Última actualización\" en la parte superior de esta página. Te recomendamos que revises esta política periódicamente."
+        },
+        "contact": {
+            "title": "Contáctanos",
+            "p1": "Si tienes preguntas sobre esta Política de Privacidad o cómo manejamos tus datos personales, contacta a nuestro gerente de privacidad de datos en <0>privacy@folio.id</0>. También tienes derecho a presentar una queja ante la Oficina del Comisionado de Información del Reino Unido (ICO) en <1>ico.org.uk</1> si no estás satisfecho con cómo hemos manejado tus datos personales."
+        }
+    }
+}
