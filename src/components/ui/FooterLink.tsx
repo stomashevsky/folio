@@ -26,7 +26,7 @@ export default function FooterLink({
   className = '',
   onClick,
 }: FooterLinkProps) {
-  const baseClasses = `text-sm font-normal leading-5 text-[#0a0a0a] no-underline transition-opacity duration-150 hover:opacity-60 cursor-pointer rounded-md ${FOCUS_STYLES}`
+  const baseClasses = `text-sm font-normal leading-5 text-[#0a0a0a] no-underline transition-colors duration-150 ease-out hover:text-[#737373] cursor-pointer rounded-md ${FOCUS_STYLES}`
   const combinedClasses = `${baseClasses} ${className}`
 
   // External link

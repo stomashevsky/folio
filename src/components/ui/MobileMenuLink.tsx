@@ -16,15 +16,13 @@ export interface MobileMenuLinkProps {
  * MobileMenuLink component for mobile navigation dropdowns
  * Full-width item with icon, title, and optional description
  * 
- * Figma specs (node-id: 24626-76638):
- * - Width: full
- * - Padding: px-6 py-4 (24px horizontal, 16px vertical) for content
- * - Gap: gap-2 (8px between icon and text)
- * - NO border radius for mobile
- * - Icon size: 20x20px
- * - Title: 14px, medium weight (500), #0a0a0a
- * - Description: 14px, normal weight (400), #737373
- * - Hover: background extends edge-to-edge (#f5f5f5)
+ * Figma specs (node-id: 24626-76638, 24634-86523):
+ * - Outer container: px-6 (24px), py-0, w-full
+ * - Inner flex: gap-3 (12px), items-center, py-4 (16px), border-b #e5e5e5
+ * - Icon: 20x20px, vertically centered
+ * - Title: 14px, medium (500), #0a0a0a, leading-5
+ * - Description: 14px, normal (400), #737373, leading-5
+ * - Hover: bg #f5f5f5, border transparent
  */
 export default function MobileMenuLink({
     icon,
@@ -38,44 +36,54 @@ export default function MobileMenuLink({
     ...props
 }: MobileMenuLinkProps & Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'className'>) {
     void active
-    // Base classes - highlight extends edge-to-edge with px-6 for content padding
-    const baseClasses = 'box-border flex gap-2 items-start w-full px-6 py-4 outline-none focus-visible:outline-none transition-all text-left'
-
-    // State classes - hover only on devices that support hover (not touch devices)
-    // Using @media(hover:hover) to prevent sticky hover on mobile after tap
-    // active: provides pressed state feedback on touch devices
-    const stateClasses = 'bg-transparent [@media(hover:hover)]:hover:bg-[#f5f5f5] active:bg-[#f5f5f5]'
-
-    const allClasses = `${baseClasses} ${stateClasses} ${FOCUS_RING_CLASSES} ${className}`
 
     return (
         <button
             type="button"
-            className={allClasses}
+            className={`
+                group
+                box-border w-full px-6 py-0
+                outline-none focus-visible:outline-none
+                transition-all text-left
+                bg-transparent
+                [@media(hover:hover)]:hover:bg-[#f5f5f5]
+                active:bg-[#f5f5f5]
+                ${FOCUS_RING_CLASSES}
+                ${className}
+            `}
             onClick={onClick}
             aria-current={ariaCurrent}
             role={role}
             {...(props as ButtonHTMLAttributes<HTMLButtonElement>)}
         >
-            {/* Icon */}
-            {icon && (
-                <img
-                    src={icon}
-                    alt=""
-                    className="w-5 h-5 shrink-0"
-                />
-            )}
-
-            {/* Text content */}
-            <div className="flex flex-col flex-1 min-w-0">
-                <span className="text-sm font-medium leading-5 text-[#0a0a0a]">
-                    {title}
-                </span>
-                {description && (
-                    <span className="text-sm font-normal leading-5 text-[#737373]">
-                        {description}
-                    </span>
+            {/* Inner flex container */}
+            <div className="
+                flex gap-3 items-center
+                w-full py-4
+                border-b border-[#e5e5e5]
+                [@media(hover:hover)]:group-hover:border-transparent
+                group-active:border-transparent
+            ">
+                {/* Icon - 20x20, vertically centered */}
+                {icon && (
+                    <img
+                        src={icon}
+                        alt=""
+                        className="w-5 h-5 shrink-0"
+                    />
                 )}
+
+                {/* Text content */}
+                <div className="flex flex-col flex-1 min-w-0 justify-center gap-0.5">
+                    <span className="text-sm font-medium leading-5 text-[#0a0a0a]">
+                        {title}
+                    </span>
+                    {description && (
+                        <span className="text-[13px] font-normal leading-5 text-[#737373]">
+                            {description}
+                        </span>
+                    )}
+                </div>
             </div>
         </button>
     )

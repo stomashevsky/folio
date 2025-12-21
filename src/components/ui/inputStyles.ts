@@ -21,6 +21,7 @@ export const INPUT_FOCUS_CLASSES = {
 /**
  * Base classes for focus states
  * Used for transition and outline
+ * Includes placeholder color and disabled state styles
  */
-export const INPUT_BASE_FOCUS_STYLES = 'outline-none focus-visible:outline-none transition-all duration-150'
+export const INPUT_BASE_FOCUS_STYLES = 'outline-none focus-visible:outline-none transition-all duration-150 placeholder:text-[#a3a3a3] disabled:opacity-50 disabled:cursor-default disabled:bg-[#fafafa]'
 
