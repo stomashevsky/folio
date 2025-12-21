@@ -473,14 +473,69 @@ This file contains all rules and principles that must be followed for every chan
   - Bad: "Проверка живости" (literal "Liveness Check")
   - Good: "Проверка присутствия" (natural Russian term)
 
-#### 13.3. File Structure
+#### 13.3. Official Terminology Glossary
+
+**Terms that ARE translated (use consistently everywhere):**
+
+| English | Russian | Notes |
+|---------|---------|-------|
+| Digital Identity | Цифровая идентификация | Never "Digital Identity" in Russian text |
+| Liveness Check | Проверка присутствия | Never "Проверка живости" |
+| Face Match | Сопоставление лиц | Never "Сравнение лиц" |
+| ID Verification | Верификация личности | |
+| NFC Identity Scan | NFC сканирование | |
+| Document Intelligence | Анализ документов | |
+| Data Source Checks | Проверка источников | |
+| Phone and Email Validation | Проверка телефона и email | |
+| Behavior Insights | Анализ поведения | |
+| Dynamic Flow | Динамические сценарии | |
+| Review Workspace | Рабочее пространство | |
+| Credential Issuance | Выдача удостоверений | |
+| Client Onboarding | Онбординг клиентов | |
+| Age Compliance | Проверка возраста | |
+| Digital Ticketing | Цифровые билеты | |
+| End-to-end encryption | Сквозное шифрование | |
+| Zero-knowledge architecture | Архитектура нулевого знания | |
+
+**Terms that are NOT translated (keep in English):**
+
+| Term | Reason |
+|------|--------|
+| Playground | Product name |
+| EUDI Wallet | Standard/specification name |
+| Folio Wallet | Product name |
+| Sandbox | Technical term in context of Playground |
+| QR-код | Standard term (QR is not translated) |
+| Face ID | Apple trademark |
+| Touch ID | Apple trademark |
+| Passkeys | Technical term |
+| KYC | Industry acronym |
+| AML | Industry acronym |
+| SDK | Technical acronym |
+| API | Technical acronym |
+| OCR | Technical acronym |
+| NFC | Technical acronym |
+
+#### 13.4. Navigation and Link Localization
+
+- **All internal navigation must preserve language context** — use `getLocalizedPath()` or `LocalizedLink` component
+- **Use `LocalizedLink` component** for links in article content: `import { LocalizedLink } from '../components/ui'`
+- **Use `getLocalizedPath()` hook** for programmatic navigation: 
+  ```tsx
+  const { getLocalizedPath } = useLocalizedPath()
+  navigate(getLocalizedPath('/government/playground'))
+  ```
+- **FooterLink already handles localization** — no additional changes needed for footer links
+- **Never use hardcoded paths** like `to="/platform/..."` — always wrap with localization
+
+#### 13.5. File Structure
 
 - **One namespace = one page group**: `wallet.json`, `platform.json`, `solutions.json`, `government.json`
 - **Common elements** (navbar, footer, buttons) go in `common.json`
 - **Page-specific content** goes in dedicated namespace files
 - **Location**: `src/locales/{lang}/{namespace}.json`
 
-#### 13.4. Translation Keys
+#### 13.6. Translation Keys
 
 - Use descriptive, hierarchical key names: `section_element_variant`
 - Examples:
@@ -489,14 +544,14 @@ This file contains all rules and principles that must be followed for every chan
   - `faq_question_1`, `faq_answer_1`
 - Keep keys in English regardless of content language
 
-#### 13.5. Using Translations in Components
+#### 13.7. Using Translations in Components
 
 - Import `useTranslation` hook from `react-i18next`
 - Specify namespace: `const { t } = useTranslation('wallet')` or `useTranslation(['wallet', 'common'])`
 - Use `t('key')` for simple strings, `t('key', { variable })` for interpolation
 - For SEO metadata in `usePageTitle`, use translated strings
 
-#### 13.6. Adding New Languages
+#### 13.8. Adding New Languages
 
 1. Create new language folder in `src/locales/{lang}/`
 2. Copy all JSON files from `en/` folder
