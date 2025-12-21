@@ -53,32 +53,30 @@ export default function BusinessPage() {
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
-              <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px]">
-                Better tickets
-                <br aria-hidden="true" />
-                No app to build
+              <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px] whitespace-pre-line">
+                {t('business.hero.title')}
               </h1>
               <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone.
+                {t('business.hero.description')}
               </p>
             </div>
             <div className="flex flex-wrap gap-3 items-start relative">
               <Button
                 variant="primary"
               >
-                Get in touch
+                {t('business.cta.button')}
               </Button>
               <Button
                 variant="secondary"
                 onClick={handleTryFolio}
               >
-                Try Folio
+                {t('business.cta.tryButton')}
               </Button>
             </div>
           </div>
           <ImageWithPlaceholder
             src={ticketIssuanceHero}
-            alt="Business tickets preview"
+            alt={t('business.hero.tagline')}
             className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
             containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
             fetchPriority="high"
@@ -90,32 +88,30 @@ export default function BusinessPage() {
         <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
             <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-              <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
-                Better tickets
-                <br aria-hidden="true" />
-                No app to build
+              <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px] whitespace-pre-line">
+                {t('business.hero.title')}
               </h1>
               <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone.
+                {t('business.hero.description')}
               </p>
             </div>
             <div className="flex flex-wrap gap-3 items-start relative shrink-0">
               <Button
                 variant="primary"
               >
-                Get in touch
+                {t('business.cta.button')}
               </Button>
               <Button
                 variant="secondary"
                 onClick={handleTryFolio}
               >
-                Try Folio
+                {t('business.cta.tryButton')}
               </Button>
             </div>
           </div>
           <ImageWithPlaceholder
             src={ticketIssuanceHero}
-            alt="Business tickets preview"
+            alt={t('business.hero.tagline')}
             className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
             containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
             fetchPriority="high"

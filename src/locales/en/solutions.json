@@ -356,8 +356,75 @@
     },
     "hero": {
       "tagline": "For business",
-      "title": "Enterprise identity solutions",
-      "description": "Enterprise identity verification and compliance solutions."
+      "title": "Better tickets\nNo app to build",
+      "description": "Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone."
+    },
+    "trust": {
+      "title": "Built on a platform people trust",
+      "description": "Your tickets appear inside the same secure wallet people use daily for IDs, cards and travel documents. No extra apps, no onboarding friction.",
+      "rating": {
+        "value": "4.7★",
+        "description": "Users consistently rate Folio highly for its clarity, speed and reliability in daily use."
+      },
+      "documents": {
+        "value": "1M+",
+        "description": "Documents, cards and tickets already added by people who use Folio to stay organized."
+      },
+      "countries": {
+        "value": "120+",
+        "description": "Countries where Folio helps users keep their essential documents accessible anywhere."
+      }
+    },
+    "format": {
+      "title": "Issue tickets in a Folio ready format",
+      "description": "Send us simple JSON or an email you already generate and Folio turns it into a clean digital ticket. No pkpass files, no wallet certificates, no SDKs to integrate.",
+      "features": {
+        "noFormats": "No special pass formats or certificates",
+        "fastDelivery": "Tickets arrive in seconds on the customer phone",
+        "anySystem": "Works with any existing booking or ticketing system"
+      }
+    },
+    "whyFolio": {
+      "title": "Why Folio instead of Apple Wallet or Google Wallet",
+      "description": "A simpler and more universal way to deliver digital tickets without platform limits or complex formats.",
+      "noFormats": {
+        "title": "No special formats",
+        "description": "You do not need to create pass files or manage certificates. Folio works with simple data you already send."
+      },
+      "workflow": {
+        "title": "Fits your existing workflow",
+        "description": "If you can send a PDF or email, you can issue tickets for Folio. No new systems, no mobile team, no setup."
+      },
+      "onePlace": {
+        "title": "Everything in one place",
+        "description": "All tickets and bookings appear in a simple timeline that helps customers see their plans at a glance."
+      },
+      "everyone": {
+        "title": "Available to everyone",
+        "description": "Your tickets work the same on iOS and Android in any region, even for users who do not use wallet apps."
+      }
+    },
+    "operators": {
+      "title": "Made for real world operators",
+      "description": "Folio works for any service where customers receive tickets or confirmations by email.",
+      "events": {
+        "title": "Events and venues",
+        "description": "Concerts, festivals, theatres and local venues get modern event tickets that are easy to scan and easy to understand."
+      },
+      "transport": {
+        "title": "Transport operators",
+        "description": "Regional airlines, buses and rail services send simple travel cards with clear times, stops and seat details in one place."
+      },
+      "tours": {
+        "title": "Tours and activities",
+        "description": "Tours, excursions and attractions keep every booking in one simple view so guests always know where to be and when."
+      }
+    },
+    "cta": {
+      "title": "Turn every ticket into a great experience",
+      "description": "If you deliver tickets or bookings by email, Folio gives your customers a clearer and more reliable experience without changing how you work.",
+      "button": "Get in touch",
+      "tryButton": "Try Folio"
     }
   }
 }
