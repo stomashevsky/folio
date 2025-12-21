@@ -23,9 +23,7 @@ export default function PhotoCard({ image, title, description, to, className = '
   const combinedClasses = `${baseClasses} ${widthClasses} ${className}`.trim()
 
   const handleClick = () => {
-    setTimeout(() => {
-      scrollToTop()
-    }, 0)
+    scrollToTop()
   }
   
   return (

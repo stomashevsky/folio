@@ -133,9 +133,10 @@ export default function Button({
   // If to is provided, render as React Router Link (for SPA navigation)
   if (to) {
     const iconElement = icon ? <span className={iconClasses}>{icon}</span> : null
+    const onClick = (props as ButtonHTMLAttributes<HTMLButtonElement>).onClick as React.MouseEventHandler<HTMLAnchorElement> | undefined
     
     return (
-      <Link to={to} className={allClasses}>
+      <Link to={to} className={allClasses} onClick={onClick}>
         {loading && <LoadingSpinner />}
         {loading ? (
           <span className="opacity-0">
