@@ -590,12 +590,12 @@ function startPreviewServer() {
 /**
  * Render a page using Puppeteer and return the HTML
  */
-async function renderPageWithPuppeteer(browser, route, metadata) {
+async function renderPageWithPuppeteer(browser, route, metadata, baseUrl) {
   const page = await browser.newPage()
   
   try {
     // Navigate to the page
-    const url = `${PREVIEW_URL}${route}`
+    const url = `${baseUrl}${route}`
     await page.goto(url, { 
       waitUntil: 'networkidle0',
       timeout: 30000 
@@ -664,6 +664,8 @@ async function renderPageWithPuppeteer(browser, route, metadata) {
 
 /**
  * Fix asset paths for nested routes
+ * Converts absolute paths (/) to relative paths (../) based on route depth
+ * This is needed for GitHub Pages deployment where the app may be at /folio/
  */
 function fixAssetPaths(html, route) {
   const depth = route.split('/').filter(Boolean).length
@@ -671,13 +673,19 @@ function fixAssetPaths(html, route) {
   
   const prefix = '../'.repeat(depth)
   
+  // Fix absolute paths starting with /
+  html = html.replace(/href="\/assets\//g, `href="${prefix}assets/`)
+  html = html.replace(/src="\/assets\//g, `src="${prefix}assets/`)
+  html = html.replace(/href="\/favicon\.svg"/g, `href="${prefix}favicon.svg"`)
+  html = html.replace(/href="\/site\.webmanifest"/g, `href="${prefix}site.webmanifest"`)
+  
   // Fix relative paths that start with ./
   html = html.replace(/href="\.\/assets\//g, `href="${prefix}assets/`)
   html = html.replace(/src="\.\/assets\//g, `src="${prefix}assets/`)
   html = html.replace(/href="\.\/favicon\.svg"/g, `href="${prefix}favicon.svg"`)
   html = html.replace(/href="\.\/site\.webmanifest"/g, `href="${prefix}site.webmanifest"`)
   
-  // Fix paths without ./
+  // Fix paths without prefix
   html = html.replace(/href="assets\//g, `href="${prefix}assets/`)
   html = html.replace(/src="assets\//g, `src="${prefix}assets/`)
   html = html.replace(/href="favicon\.svg"/g, `href="${prefix}favicon.svg"`)
@@ -701,9 +709,12 @@ async function main() {
   // Start preview server
   console.log('[prerender] Starting preview server...')
   let previewServer
+  let previewUrl
   try {
-    previewServer = await startPreviewServer()
-    console.log('[prerender] Preview server started')
+    const result = await startPreviewServer()
+    previewServer = result.server
+    previewUrl = result.url
+    console.log(`[prerender] Preview server started at ${previewUrl}`)
   } catch (error) {
     console.error('[prerender] Failed to start preview server:', error.message)
     process.exitCode = 1
@@ -728,7 +739,7 @@ async function main() {
         const outAbs = path.join(distDir, outRel)
         
         // Render the page
-        let html = await renderPageWithPuppeteer(browser, route, metadata)
+        let html = await renderPageWithPuppeteer(browser, route, metadata, previewUrl)
         
         // Fix asset paths for nested routes
         if (route !== '/' && route !== '/en' && route !== '/ru') {

@@ -69,8 +69,8 @@ export default function NfcIdentityScanPage() {
   const keyFeatures = useMemo(() =>
     (['strongerSecurity', 'fastVerification', 'smartDetection', 'worldwideSupport'] as const).map(id => ({
       id,
-      title: t(`nfcIdentityScan.keyFeatures.${id}.title`),
-      description: t(`nfcIdentityScan.keyFeatures.${id}.description`),
+      title: t(`nfcIdentityScan.keyFeatures.items.${id}.title`),
+      description: t(`nfcIdentityScan.keyFeatures.items.${id}.description`),
     })),
   [t])
 
@@ -160,43 +160,43 @@ export default function NfcIdentityScanPage() {
           <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-12 items-center relative shrink-0 w-full">
               <SectionHeader
-                title={t('nfcIdentityScan.why.title')}
+                title={t('nfcIdentityScan.verification.title')}
                 maxWidth="576px"
               />
               {/* Desktop Layout */}
               <div className="hidden md:flex gap-6 items-start relative shrink-0 w-full">
                 <FeatureHighlight
                   icon={triangleAlertIcon}
-                  title={t('nfcIdentityScan.why.detect.title')}
-                  description={t('nfcIdentityScan.why.detect.description')}
+                  title={t('nfcIdentityScan.verification.detectForged.title')}
+                  description={t('nfcIdentityScan.verification.detectForged.description')}
                 />
                 <FeatureHighlight
                   icon={nfcIcon}
-                  title={t('nfcIdentityScan.why.automate.title')}
-                  description={t('nfcIdentityScan.why.automate.description')}
+                  title={t('nfcIdentityScan.verification.automate.title')}
+                  description={t('nfcIdentityScan.verification.automate.description')}
                 />
                 <FeatureHighlight
                   icon={circleArrowUpIcon}
-                  title={t('nfcIdentityScan.why.boost.title')}
-                  description={t('nfcIdentityScan.why.boost.description')}
+                  title={t('nfcIdentityScan.verification.boostCompletion.title')}
+                  description={t('nfcIdentityScan.verification.boostCompletion.description')}
                 />
               </div>
               {/* Mobile Layout */}
               <div className="flex md:hidden flex-col gap-11 items-start relative shrink-0 w-full">
                 <FeatureHighlight
                   icon={triangleAlertIcon}
-                  title={t('nfcIdentityScan.why.detect.title')}
-                  description={t('nfcIdentityScan.why.detect.description')}
+                  title={t('nfcIdentityScan.verification.detectForged.title')}
+                  description={t('nfcIdentityScan.verification.detectForged.description')}
                 />
                 <FeatureHighlight
                   icon={nfcIcon}
-                  title={t('nfcIdentityScan.why.automate.title')}
-                  description={t('nfcIdentityScan.why.automate.description')}
+                  title={t('nfcIdentityScan.verification.automate.title')}
+                  description={t('nfcIdentityScan.verification.automate.description')}
                 />
                 <FeatureHighlight
                   icon={circleArrowUpIcon}
-                  title={t('nfcIdentityScan.why.boost.title')}
-                  description={t('nfcIdentityScan.why.boost.description')}
+                  title={t('nfcIdentityScan.verification.boostCompletion.title')}
+                  description={t('nfcIdentityScan.verification.boostCompletion.description')}
                 />
               </div>
             </div>
