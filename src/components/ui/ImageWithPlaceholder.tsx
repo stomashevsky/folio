@@ -11,6 +11,8 @@ interface ImageWithPlaceholderProps extends Omit<ImgHTMLAttributes<HTMLImageElem
   placeholderColor?: string
   /** Border radius class for placeholder (default: rounded-2xl) */
   placeholderRounded?: string
+  /** Enable fade-in animation on mount (for accordion image switching) */
+  animateOnMount?: boolean
 }
 
 /**
@@ -19,7 +21,8 @@ interface ImageWithPlaceholderProps extends Omit<ImgHTMLAttributes<HTMLImageElem
  * Features:
  * - Shows gray placeholder background until image loads
  * - Resets loading state when src changes (important for accordion image switching)
- * - Smooth opacity transition when image appears
+ * - Smooth fade-in animation when image appears
+ * - Optional animate-on-mount for accordion-style image switching (use with key prop)
  * 
  * Usage:
  * ```tsx
@@ -28,6 +31,8 @@ interface ImageWithPlaceholderProps extends Omit<ImgHTMLAttributes<HTMLImageElem
  *   alt="Description"
  *   className="w-full h-full object-cover rounded-2xl"
  *   containerClassName="aspect-square"
+ *   animateOnMount // Enable fade-in animation on mount
+ *   key={imageId} // Use key to trigger re-mount and animation
  * />
  * ```
  */
@@ -38,6 +43,7 @@ export default function ImageWithPlaceholder({
   containerClassName = '',
   placeholderColor = '#f5f5f5',
   placeholderRounded = 'rounded-2xl',
+  animateOnMount = false,
   ...props
 }: ImageWithPlaceholderProps) {
   const [isLoading, setIsLoading] = useState(true)
@@ -46,6 +52,11 @@ export default function ImageWithPlaceholder({
   useEffect(() => {
     setIsLoading(true)
   }, [src])
+
+  // Determine animation class based on loading state and animateOnMount prop
+  const animationClass = animateOnMount 
+    ? (isLoading ? 'opacity-0' : 'animate-fade-in')
+    : (isLoading ? 'opacity-0' : 'opacity-100 transition-opacity duration-200')
 
   return (
     <div className={`relative ${containerClassName}`}>
@@ -59,7 +70,7 @@ export default function ImageWithPlaceholder({
       <img
         src={src}
         alt={alt}
-        className={`${className} ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-200`}
+        className={`${className} ${animationClass}`}
         onLoad={() => setIsLoading(false)}
         onError={() => setIsLoading(false)}
         {...props}

@@ -112,6 +112,16 @@ section[id] {
   }
 }
 
+/* Pure fade-in animation for accordion images */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* Utility classes for animations */
 .animate-fade-in-scale {
   animation: fadeInScale 200ms var(--ease-out-cubic) forwards;
@@ -119,6 +129,10 @@ section[id] {
 
 .animate-card-enter {
   animation: cardEnter 200ms var(--ease-out-cubic) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 400ms var(--ease-out-cubic) forwards;
 }
 
 /* Performance optimizations */
