@@ -86,19 +86,50 @@ export default function PlatformDropdown() {
               width: 'max-content',
             }}
           >
-            {/* CSS Columns layout - items fill columns top-to-bottom, each with its own height */}
-            <div className="columns-3 gap-0">
-              {PLATFORM_ITEMS.map((item) => (
-                <DropdownMenuItem
-                  key={item.path}
-                  icon={item.icon}
-                  title={t(item.labelKey)}
-                  description={t(item.descriptionKey)}
-                  onClick={() => handleItemClick(item.path)}
-                  className="w-[290px] break-inside-avoid"
-                  role="menuitem"
-                />
-              ))}
+            {/* Manual 3-column layout (4-4-3 split) for consistent rendering across languages */}
+            <div className="flex gap-0">
+              {/* Column 1: items 1-4 */}
+              <div className="flex flex-col">
+                {PLATFORM_ITEMS.slice(0, 4).map((item) => (
+                  <DropdownMenuItem
+                    key={item.path}
+                    icon={item.icon}
+                    title={t(item.labelKey)}
+                    description={t(item.descriptionKey)}
+                    onClick={() => handleItemClick(item.path)}
+                    className="w-[290px]"
+                    role="menuitem"
+                  />
+                ))}
+              </div>
+              {/* Column 2: items 5-8 */}
+              <div className="flex flex-col">
+                {PLATFORM_ITEMS.slice(4, 8).map((item) => (
+                  <DropdownMenuItem
+                    key={item.path}
+                    icon={item.icon}
+                    title={t(item.labelKey)}
+                    description={t(item.descriptionKey)}
+                    onClick={() => handleItemClick(item.path)}
+                    className="w-[290px]"
+                    role="menuitem"
+                  />
+                ))}
+              </div>
+              {/* Column 3: items 9-11 */}
+              <div className="flex flex-col">
+                {PLATFORM_ITEMS.slice(8).map((item) => (
+                  <DropdownMenuItem
+                    key={item.path}
+                    icon={item.icon}
+                    title={t(item.labelKey)}
+                    description={t(item.descriptionKey)}
+                    onClick={() => handleItemClick(item.path)}
+                    className="w-[290px]"
+                    role="menuitem"
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
