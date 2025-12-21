@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, FeatureBlock, HeroTagline } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
@@ -20,13 +21,14 @@ const BACKGROUND_STYLE = {
 }
 
 export default function GovernmentPage() {
+  const { t } = useTranslation('government')
   const navigate = useNavigate()
   
   usePageTitle({
-    title: 'Government Solutions | Folio Wallet',
-    description: 'Tools for governments to design, test and deploy modern digital credentials. Digital identity aligned with global standards.',
-    ogTitle: 'Government Solutions | Folio Wallet',
-    ogDescription: 'Tools for governments to design, test and deploy modern digital credentials. Digital identity aligned with global standards.',
+    title: t('government.meta.title'),
+    description: t('government.meta.description'),
+    ogTitle: t('government.meta.title'),
+    ogDescription: t('government.meta.description'),
     ogImage: getOgImageUrl('government-solutions-hero.png'),
     ogUrl: 'https://folio.id/government'
   })

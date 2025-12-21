@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
@@ -122,11 +123,13 @@ const practicalUsesData = [
 ]
 
 export default function DocumentIntelligencePage() {
+  const { t } = useTranslation('platform')
+  
   usePageTitle({
-    title: 'Document Intelligence | Folio Wallet',
-    description: 'Automatically review submitted documents to confirm identity or validate proof of address, income, or health with minimal effort.',
-    ogTitle: 'Document Intelligence | Folio Wallet',
-    ogDescription: 'Automatically review submitted documents to confirm identity or validate proof of address, income, or health with minimal effort.',
+    title: t('documentIntelligence.meta.title'),
+    description: t('documentIntelligence.meta.description'),
+    ogTitle: t('documentIntelligence.meta.title'),
+    ogDescription: t('documentIntelligence.meta.description'),
     ogImage: getOgImageUrl('document-intelligence-hero.png'),
     ogUrl: 'https://folio.id/platform/document-intelligence'
   })
@@ -148,23 +151,23 @@ export default function DocumentIntelligencePage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
-                <HeroTagline icon={sparklesIcon}>Document intelligence</HeroTagline>
+                <HeroTagline icon={sparklesIcon}>{t('documentIntelligence.hero.tagline')}</HeroTagline>
                 <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px]">
-                  Smarter document verification with AI
+                  {t('documentIntelligence.hero.title')}
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                  Automatically review submitted documents to confirm identity or validate proof of address, income, or health with minimal effort.
+                  {t('documentIntelligence.hero.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>
             <ImageWithPlaceholder
               src={documentIntelligenceHero}
-              alt="Document intelligence preview"
+              alt={t('documentIntelligence.hero.title')}
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-square"
               fetchPriority="high"
@@ -176,17 +179,17 @@ export default function DocumentIntelligencePage() {
           <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-                <HeroTagline icon={sparklesIcon}>Document intelligence</HeroTagline>
+                <HeroTagline icon={sparklesIcon}>{t('documentIntelligence.hero.tagline')}</HeroTagline>
                 <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
-                  Smarter document verification with AI
+                  {t('documentIntelligence.hero.title')}
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                  Automatically review submitted documents to confirm identity or validate proof of address, income, or health with minimal effort.
+                  {t('documentIntelligence.hero.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative shrink-0">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>

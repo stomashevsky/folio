@@ -1,8 +1,11 @@
+import { useTranslation } from 'react-i18next'
 import FooterLink from '../ui/FooterLink'
 import SocialIcon from '../ui/SocialIcon'
-import { Logo } from '../ui'
+import { Logo, LanguageSwitcher } from '../ui'
 
 export default function FooterSection() {
+  const { t } = useTranslation('common')
+  
   return (
     <footer className="bg-white flex flex-col items-center relative shrink-0 w-full">
       {/* Top separator - edge to edge */}
@@ -17,14 +20,14 @@ export default function FooterSection() {
             <Logo size={28} />
             {/* Address */}
             <div className="flex flex-col gap-1 items-start leading-5 text-sm w-full">
-              <p className="font-normal text-[#737373]">Address:</p>
+              <p className="font-normal text-[#737373]">{t('footer.address')}</p>
               <p className="font-normal text-[#0a0a0a]">
-                88 Baker St, London W1U 6TQ, United Kingdom
+                {t('footer.addressValue')}
               </p>
             </div>
             {/* Contact */}
             <div className="flex flex-col gap-1 items-start leading-5 text-sm w-full">
-              <p className="font-normal text-[#737373]">Contact:</p>
+              <p className="font-normal text-[#737373]">{t('footer.contact')}</p>
               <FooterLink href="mailto:contact@folio.id">contact@folio.id</FooterLink>
             </div>
           </div>
@@ -34,30 +37,30 @@ export default function FooterSection() {
             {/* Folio section */}
             <div className="flex flex-col gap-4 items-start w-full">
               <p className="font-normal leading-5 text-[#737373] text-sm w-full">
-                Folio
+                {t('footer.folio')}
               </p>
               <div className="flex flex-col gap-3 items-start w-full">
-                <FooterLink to="/wallet">Folio app</FooterLink>
-                <FooterLink to="/blog">Blog</FooterLink>
-                <FooterLink to="/government">Government</FooterLink>
-                <FooterLink to="/about">About</FooterLink>
+                <FooterLink to="/wallet">{t('footer.folioApp')}</FooterLink>
+                <FooterLink to="/blog">{t('footer.blog')}</FooterLink>
+                <FooterLink to="/government">{t('footer.government')}</FooterLink>
+                <FooterLink to="/about">{t('footer.about')}</FooterLink>
               </div>
             </div>
             {/* Features section */}
             <div className="flex flex-col gap-4 items-start w-full">
               <p className="font-normal leading-5 text-[#737373] text-sm w-full">
-                Features
+                {t('footer.features')}
               </p>
               <div className="flex flex-col gap-3 items-start w-full">
-                <FooterLink to="/id-wallet-app">ID wallet</FooterLink>
-                <FooterLink to="/card-scanner-app">Card scanner</FooterLink>
-                <FooterLink to="/loyalty-card-app">Loyalty cards</FooterLink>
+                <FooterLink to="/id-wallet-app">{t('footer.idWallet')}</FooterLink>
+                <FooterLink to="/card-scanner-app">{t('footer.cardScanner')}</FooterLink>
+                <FooterLink to="/loyalty-card-app">{t('footer.loyaltyCards')}</FooterLink>
               </div>
             </div>
             {/* Get the app section */}
             <div className="flex flex-col gap-4 items-start w-full">
               <p className="font-normal leading-5 text-[#737373] text-sm w-full">
-                Get the app
+                {t('footer.getTheApp')}
               </p>
               <div className="flex flex-col gap-3 items-start w-full">
                 <FooterLink
@@ -65,14 +68,14 @@ export default function FooterSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Download for iOS
+                  {t('footer.downloadIOS')}
                 </FooterLink>
                 <FooterLink
                   href="https://play.google.com/store/apps/details?id=com.folioltd"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Download for Android
+                  {t('footer.downloadAndroid')}
                 </FooterLink>
               </div>
             </div>
@@ -81,20 +84,20 @@ export default function FooterSection() {
           {/* Column 3: Platform */}
           <div className="flex flex-col gap-4 items-start min-w-[200px] flex-1">
             <p className="font-normal leading-5 text-[#737373] text-sm w-full">
-              Platform
+              {t('footer.platform')}
             </p>
             <div className="flex flex-col gap-3 items-start w-full">
-              <FooterLink to="/platform/id-verification">ID verification</FooterLink>
-              <FooterLink to="/platform/nfc-identity-scan">NFC identity scan</FooterLink>
-              <FooterLink to="/platform/document-intelligence">Document intelligence</FooterLink>
-              <FooterLink to="/platform/face-match">Face match</FooterLink>
-              <FooterLink to="/platform/liveness-check">Liveness check</FooterLink>
-              <FooterLink to="/platform/data-source-checks">Data source checks</FooterLink>
-              <FooterLink to="/platform/phone-and-email-validation">Phone and email validation</FooterLink>
-              <FooterLink to="/platform/behavior-insights">Behavior insights</FooterLink>
-              <FooterLink to="/platform/dynamic-flow">Dynamic flow</FooterLink>
-              <FooterLink to="/platform/review-workspace">Review workspace</FooterLink>
-              <FooterLink to="/platform/credential-issuance">Credential issuance</FooterLink>
+              <FooterLink to="/platform/id-verification">{t('footer.idVerification')}</FooterLink>
+              <FooterLink to="/platform/nfc-identity-scan">{t('footer.nfcIdentityScan')}</FooterLink>
+              <FooterLink to="/platform/document-intelligence">{t('footer.documentIntelligence')}</FooterLink>
+              <FooterLink to="/platform/face-match">{t('footer.faceMatch')}</FooterLink>
+              <FooterLink to="/platform/liveness-check">{t('footer.livenessCheck')}</FooterLink>
+              <FooterLink to="/platform/data-source-checks">{t('footer.dataSourceChecks')}</FooterLink>
+              <FooterLink to="/platform/phone-and-email-validation">{t('footer.phoneAndEmailValidation')}</FooterLink>
+              <FooterLink to="/platform/behavior-insights">{t('footer.behaviorInsights')}</FooterLink>
+              <FooterLink to="/platform/dynamic-flow">{t('footer.dynamicFlow')}</FooterLink>
+              <FooterLink to="/platform/review-workspace">{t('footer.reviewWorkspace')}</FooterLink>
+              <FooterLink to="/platform/credential-issuance">{t('footer.credentialIssuance')}</FooterLink>
             </div>
           </div>
 
@@ -103,23 +106,23 @@ export default function FooterSection() {
             {/* Solutions section */}
             <div className="flex flex-col gap-4 items-start w-full">
               <p className="font-normal leading-5 text-[#737373] text-sm w-full">
-                Solutions
+                {t('footer.solutions')}
               </p>
               <div className="flex flex-col gap-3 items-start w-full">
-                <FooterLink to="/solutions/client-onboarding">Client onboarding</FooterLink>
-                <FooterLink to="/solutions/age-compliance">Age compliance</FooterLink>
-                <FooterLink to="/solutions/digital-ticketing">Digital ticketing</FooterLink>
+                <FooterLink to="/solutions/client-onboarding">{t('footer.clientOnboarding')}</FooterLink>
+                <FooterLink to="/solutions/age-compliance">{t('footer.ageCompliance')}</FooterLink>
+                <FooterLink to="/solutions/digital-ticketing">{t('footer.digitalTicketing')}</FooterLink>
               </div>
             </div>
             {/* Terms & Policies section */}
             <div className="flex flex-col gap-4 items-start w-full">
               <p className="font-normal leading-5 text-[#737373] text-sm w-full">
-                Terms & Policies
+                {t('footer.termsAndPolicies')}
               </p>
               <div className="flex flex-col gap-3 items-start w-full">
-                <FooterLink to="/terms">Terms of Use</FooterLink>
-                <FooterLink to="/privacy">Privacy Policy</FooterLink>
-                <FooterLink to="/security">Security</FooterLink>
+                <FooterLink to="/terms">{t('footer.termsOfUse')}</FooterLink>
+                <FooterLink to="/privacy">{t('footer.privacyPolicy')}</FooterLink>
+                <FooterLink to="/security">{t('footer.security')}</FooterLink>
               </div>
             </div>
           </div>
@@ -128,17 +131,23 @@ export default function FooterSection() {
         {/* Bottom separator */}
         <div className="w-full h-px bg-[#e5e5e5]" />
 
-        {/* Bottom section: Copyright and Social icons */}
-        <div className="flex flex-col-reverse md:flex-row md:items-center md:justify-between gap-6 px-6 py-6 w-full">
-          {/* Copyright */}
-          <p className="font-normal leading-5 text-[#0a0a0a] text-sm">
-            Folio Wallet © 2025
-          </p>
-          {/* Social icons */}
-          <div className="flex gap-4 items-center">
+        {/* Bottom section: Social icons (left), Copyright (center), Language (right) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 px-6 py-6 w-full items-center">
+          {/* Social icons - left on desktop, centered on mobile */}
+          <div className="flex gap-4 items-center justify-center md:justify-start order-2 md:order-1">
             <SocialIcon name="instagram" href="https://www.instagram.com/foliowalletapp" />
             <SocialIcon name="facebook" href="https://www.facebook.com/foliowalletapp" />
             <SocialIcon name="linkedin" href="https://www.linkedin.com/company/folioltd/" />
+          </div>
+          
+          {/* Copyright - center */}
+          <p className="font-normal leading-5 text-[#737373] text-sm text-center order-3 md:order-2">
+            {t('footer.copyright')}
+          </p>
+          
+          {/* Language switcher - right on desktop, centered on mobile */}
+          <div className="flex justify-center md:justify-end order-1 md:order-3">
+            <LanguageSwitcher />
           </div>
         </div>
       </div>

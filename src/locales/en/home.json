@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "title": "Folio | Your digital wallet for documents and identity",
+    "description": "Secure document storage for individuals. Verification platform for businesses. Digital credentials for governments."
+  },
+  "hero": {
+    "tagline": "Folio Wallet",
+    "title": "Your digital wallet for documents and identity",
+    "description": "Secure document storage for individuals. Verification platform for businesses. Digital credentials for governments."
+  },
+  "wallet": {
+    "tagline": "Folio app",
+    "title": "Your documents, always with you",
+    "description": "Keep passports, IDs, tickets and cards in one secure place. Folio imports any document from email, PDF or photo, extracts key details and keeps everything organized and accessible."
+  },
+  "platform": {
+    "tagline": "Platform",
+    "title": "Build trust at scale",
+    "description": "Identity verification, document intelligence, liveness detection and more. Everything you need to verify customers and prevent fraud.",
+    "carouselTitle": "Everything you need to verify identity"
+  },
+  "solutions": {
+    "tagline": "Solutions",
+    "title": "Built for your industry",
+    "description": "Tailored solutions for regulated industries and high-trust environments.",
+    "ageCompliance": {
+      "title": "Age compliance",
+      "description": "Verify age for regulated industries"
+    },
+    "clientOnboarding": {
+      "title": "Client onboarding",
+      "description": "Streamline KYC and customer verification"
+    },
+    "digitalTicketing": {
+      "title": "Digital ticketing",
+      "description": "Issue and verify secure digital tickets"
+    }
+  },
+  "government": {
+    "tagline": "Government",
+    "title": "Digital identity for governments",
+    "description": "Tools for governments to design, test and deploy modern digital credentials aligned with global standards. Explore our sandbox to see European digital ID flows in action."
+  },
+  "testimonial": {
+    "quote": "\"Working with Folio has been a transformative experience… they set a new standard of excellence for how digital identity solutions should be delivered.\"",
+    "name": "Ilirjan Celibashi",
+    "role": "State Election Commissioner, Albania"
+  },
+  "security": {
+    "title": "Security you can trust",
+    "description": "Your data is protected with industry-leading security measures.",
+    "endToEndEncryption": {
+      "title": "End-to-end encryption",
+      "description": "Your data is encrypted with keys only you control"
+    },
+    "zeroKnowledge": {
+      "title": "Zero-knowledge architecture",
+      "description": "We cannot access your documents, even if we wanted to"
+    },
+    "biometric": {
+      "title": "Biometric protection",
+      "description": "Face ID and fingerprint unlock for extra security"
+    }
+  }
+}
+

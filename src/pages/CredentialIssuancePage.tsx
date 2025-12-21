@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
@@ -153,11 +154,13 @@ const CREDENTIAL_ISSUANCE_FAQ: FAQItem[] = [
 ]
 
 export default function CredentialIssuancePage() {
+  const { t } = useTranslation('platform')
+  
   usePageTitle({
-    title: 'Credential Issuance | Folio Wallet',
-    description: 'Issue verifiable credentials at scale. Create tamper-proof digital credentials and deliver them to user wallets with full lifecycle control.',
-    ogTitle: 'Credential Issuance | Folio Wallet',
-    ogDescription: 'Issue verifiable credentials at scale. Create tamper-proof digital credentials and deliver them to user wallets with full lifecycle control.',
+    title: t('credentialIssuance.meta.title'),
+    description: t('credentialIssuance.meta.description'),
+    ogTitle: t('credentialIssuance.meta.title'),
+    ogDescription: t('credentialIssuance.meta.description'),
     ogImage: getOgImageUrl('credential-issuance-hero.png'),
     ogUrl: 'https://folio.id/platform/credential-issuance'
   })

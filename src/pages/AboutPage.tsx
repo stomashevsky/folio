@@ -1,11 +1,13 @@
 import { memo } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, ToolCard, Button } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
 import { scrollToSection } from '../utils/scrollToSection'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 import lockKeyholeIcon from '../assets/icons/LockKeyhole.svg'
 import globeIcon from '../assets/icons/Globe.svg'
 import usersIcon from '../assets/icons/SquareUser.svg'
@@ -20,29 +22,33 @@ const BACKGROUND_STYLE = {
 }
 
 function AboutPage() {
+  const { t } = useTranslation('pages')
   const navigate = useNavigate()
   const location = useLocation()
+  const { getLocalizedPath } = useLocalizedPath()
 
   usePageTitle({
-    title: 'About | Folio',
-    description: 'Folio is a digital identity company building secure document storage for individuals, verification solutions for businesses, and digital credentials for governments.',
-    ogTitle: 'About | Folio',
-    ogDescription: 'Folio is a digital identity company building secure document storage for individuals, verification solutions for businesses, and digital credentials for governments.',
+    title: t('about.meta.title'),
+    description: t('about.meta.description'),
+    ogTitle: t('about.meta.ogTitle'),
+    ogDescription: t('about.meta.ogDescription'),
     ogImage: getOgImageUrl('folio-app-hero.png'),
     ogUrl: 'https://folio.id/about'
   })
 
   const handleGetApp = () => {
-    const isWalletPage = location.pathname === '/wallet'
+    const isWalletPage = location.pathname.endsWith('/wallet')
     if (isWalletPage) {
       scrollToSection('get-the-app')
     } else {
-      navigate('/wallet')
+      navigate(getLocalizedPath('/wallet'))
       setTimeout(() => {
         scrollToSection('get-the-app')
       }, 100)
     }
   }
+
+  const storyParagraphs = t('about.story.paragraphs', { returnObjects: true }) as string[]
 
   return (
     <div className="flex flex-col items-start min-h-screen relative w-full">
@@ -52,10 +58,10 @@ function AboutPage() {
         <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full">
           <div className="flex flex-col gap-6 items-center max-w-[768px] px-6 py-0 relative shrink-0 w-full text-center">
             <h1 className="font-bold leading-9 md:leading-[48px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px]">
-              About Folio
+              {t('about.hero.title')}
             </h1>
             <p className="font-normal leading-6 text-[#737373] text-base w-full">
-              Folio is a digital identity company on a mission to give people control over their personal documents and identity. We build secure solutions that work for individuals, businesses, and governments.
+              {t('about.hero.description')}
             </p>
           </div>
         </section>
@@ -64,22 +70,13 @@ function AboutPage() {
         <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
           <div className="flex flex-col gap-8 items-center max-w-[768px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="Our story"
+              title={t('about.story.title')}
               maxWidth="768px"
             />
             <div className="flex flex-col gap-6 text-[#737373] text-base leading-6">
-              <p>
-                Founded in London, Folio started with a simple observation: people carry dozens of important documents but have no secure, organized way to access them digitally. Passports get lost, tickets expire in email threads, and important cards sit forgotten in drawers.
-              </p>
-              <p>
-                We built Folio Wallet to solve this. An app where you can store passports, IDs, tickets, cards, and any document you need, all encrypted with keys only you control. Over a million documents are now safely stored in Folio, used by people in more than 120 countries.
-              </p>
-              <p>
-                As we grew, businesses and governments approached us with similar challenges. How do you verify someone's identity online? How do you issue secure digital credentials? How do you protect sensitive data while making verification seamless?
-              </p>
-              <p>
-                Today, Folio offers a complete identity platform: secure storage for individuals, verification tools for businesses, and digital credential infrastructure for governments. Our work with Albania's election commission, where we helped register over 365,000 diaspora voters, shows what's possible when identity technology is built right.
-              </p>
+              {storyParagraphs.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
             </div>
           </div>
         </section>
@@ -88,14 +85,14 @@ function AboutPage() {
         <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           <div className="flex flex-col gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="Folio in numbers"
+              title={t('about.stats.title')}
               maxWidth="576px"
             />
             <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center justify-center w-full">
-              <StatItem value="1M+" label="Documents stored" />
-              <StatItem value="120+" label="Countries" />
-              <StatItem value="4.7★" label="App rating" />
-              <StatItem value="365K+" label="Profiles created in Albania" />
+              <StatItem value="1M+" label={t('about.stats.documents')} />
+              <StatItem value="120+" label={t('about.stats.countries')} />
+              <StatItem value="4.7★" label={t('about.stats.rating')} />
+              <StatItem value="365K+" label={t('about.stats.albania')} />
             </div>
           </div>
         </section>
@@ -104,30 +101,30 @@ function AboutPage() {
         <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
           <div className="flex flex-col gap-10 md:gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="What we believe"
+              title={t('about.values.title')}
               maxWidth="576px"
             />
             
             <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
               <ToolCard
                 icon={lockKeyholeIcon}
-                title="Privacy first"
-                description="Your data belongs to you. We use zero-knowledge architecture so even we cannot access your documents."
+                title={t('about.values.privacy.title')}
+                description={t('about.values.privacy.description')}
               />
               <ToolCard
                 icon={shieldCheckIcon}
-                title="Security by design"
-                description="End-to-end encryption, biometric protection, and rigorous security standards protect everything you store."
+                title={t('about.values.security.title')}
+                description={t('about.values.security.description')}
               />
               <ToolCard
                 icon={globeIcon}
-                title="Works everywhere"
-                description="Identity should be portable. Folio works across borders, platforms, and use cases."
+                title={t('about.values.global.title')}
+                description={t('about.values.global.description')}
               />
               <ToolCard
                 icon={usersIcon}
-                title="Built for everyone"
-                description="From travelers organizing trips to governments issuing credentials, we build tools that work for real people."
+                title={t('about.values.everyone.title')}
+                description={t('about.values.everyone.description')}
               />
             </div>
           </div>
@@ -142,18 +139,18 @@ function AboutPage() {
               <div className="flex flex-1 flex-col gap-8 items-start max-w-[576px]">
                 <div className="flex flex-col gap-5 items-start w-full">
                   <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-                    Get in touch
+                    {t('about.contact.title')}
                   </h2>
                   <p className="font-normal leading-6 text-[#737373] text-base">
-                    Have questions about Folio? We'd love to hear from you.
+                    {t('about.contact.description')}
                   </p>
                 </div>
                 <div className="flex gap-3 items-start">
                   <Button variant="primary" href="mailto:contact@folio.id">
-                    Contact us
+                    {t('about.contact.contactUs')}
                   </Button>
                   <Button variant="outline" onClick={handleGetApp}>
-                    Get the app
+                    {t('about.contact.getApp')}
                   </Button>
                 </div>
               </div>
@@ -162,14 +159,14 @@ function AboutPage() {
               <div className="flex flex-1 flex-col gap-12 items-start p-12 rounded-xl" style={BACKGROUND_STYLE}>
                 <ContactItem
                   icon={mailIcon}
-                  title="Write an email"
-                  value="contact@folio.id"
+                  title={t('about.contact.email.title')}
+                  value={t('about.contact.email.value')}
                   href="mailto:contact@folio.id"
                 />
                 <ContactItem
                   icon={mapPinIcon}
-                  title="Visit our office"
-                  value="88 Baker St, London W1U 6TQ, United Kingdom"
+                  title={t('about.contact.address.title')}
+                  value={t('about.contact.address.value')}
                   href="https://maps.google.com/?q=88+Baker+St,+London+W1U+6TQ,+United+Kingdom"
                 />
               </div>
@@ -181,15 +178,15 @@ function AboutPage() {
               <div className="flex flex-col gap-8 items-center w-full">
                 <ContactItem
                   icon={mailIcon}
-                  title="Write an email"
-                  value="contact@folio.id"
+                  title={t('about.contact.email.title')}
+                  value={t('about.contact.email.value')}
                   href="mailto:contact@folio.id"
                   centered
                 />
                 <ContactItem
                   icon={mapPinIcon}
-                  title="Visit our office"
-                  value="88 Baker St, London W1U 6TQ, United Kingdom"
+                  title={t('about.contact.address.title')}
+                  value={t('about.contact.address.value')}
                   href="https://maps.google.com/?q=88+Baker+St,+London+W1U+6TQ,+United+Kingdom"
                   centered
                 />
@@ -202,18 +199,18 @@ function AboutPage() {
               <div className="flex flex-col gap-8 items-center w-full text-center">
                 <div className="flex flex-col gap-4 items-center max-w-[576px]">
                   <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
-                    Get in touch
+                    {t('about.contact.title')}
                   </h2>
                   <p className="font-normal leading-6 text-[#737373] text-base">
-                    Have questions about Folio? We'd love to hear from you.
+                    {t('about.contact.description')}
                   </p>
                 </div>
                 <div className="flex gap-3 items-center">
                   <Button variant="primary" href="mailto:contact@folio.id">
-                    Contact us
+                    {t('about.contact.contactUs')}
                   </Button>
                   <Button variant="outline" onClick={handleGetApp}>
-                    Get the app
+                    {t('about.contact.getApp')}
                   </Button>
                 </div>
               </div>

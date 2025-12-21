@@ -1,250 +1,917 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://folio.id/</loc>
+    <loc>https://folio.id/en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en"/>
   </url>
   <url>
-    <loc>https://folio.id/about</loc>
+    <loc>https://folio.id/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/about"/>
   </url>
   <url>
-    <loc>https://folio.id/blog</loc>
+    <loc>https://folio.id/en/blog</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/10-travel-hacks-that-actually-work</loc>
+    <loc>https://folio.id/en/blog/10-travel-hacks-that-actually-work</loc>
     <lastmod>2025-08-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/10-travel-hacks-that-actually-work"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/10-travel-hacks-that-actually-work"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/10-travel-hacks-that-actually-work"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/access-your-digital-wallet-anywhere</loc>
+    <loc>https://folio.id/en/blog/access-your-digital-wallet-anywhere</loc>
     <lastmod>2025-07-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/access-your-digital-wallet-anywhere"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/access-your-digital-wallet-anywhere"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/access-your-digital-wallet-anywhere"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/age-verification-requirements</loc>
+    <loc>https://folio.id/en/blog/age-verification-requirements</loc>
     <lastmod>2025-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/age-verification-requirements"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/age-verification-requirements"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/age-verification-requirements"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/albanian-diaspora-voter-registration</loc>
+    <loc>https://folio.id/en/blog/albanian-diaspora-voter-registration</loc>
     <lastmod>2025-03-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/albanian-diaspora-voter-registration"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/albanian-diaspora-voter-registration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/albanian-diaspora-voter-registration"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/app-in-the-air-alternative</loc>
+    <loc>https://folio.id/en/blog/app-in-the-air-alternative</loc>
     <lastmod>2025-08-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/app-in-the-air-alternative"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/app-in-the-air-alternative"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/app-in-the-air-alternative"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/apple-gift-card-add-to-wallet</loc>
+    <loc>https://folio.id/en/blog/apple-gift-card-add-to-wallet</loc>
     <lastmod>2024-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/apple-gift-card-add-to-wallet"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/apple-gift-card-add-to-wallet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/apple-gift-card-add-to-wallet"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/best-apple-wallet-alternatives</loc>
+    <loc>https://folio.id/en/blog/best-apple-wallet-alternatives</loc>
     <lastmod>2025-05-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/best-apple-wallet-alternatives"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/best-apple-wallet-alternatives"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/best-apple-wallet-alternatives"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/best-apps-to-plan-travel</loc>
+    <loc>https://folio.id/en/blog/best-apps-to-plan-travel</loc>
     <lastmod>2025-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/best-apps-to-plan-travel"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/best-apps-to-plan-travel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/best-apps-to-plan-travel"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/best-digital-wallet-apps-in-canada</loc>
+    <loc>https://folio.id/en/blog/best-digital-wallet-apps-in-canada</loc>
     <lastmod>2024-12-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/best-digital-wallet-apps-in-canada"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/best-digital-wallet-apps-in-canada"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/best-digital-wallet-apps-in-canada"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/best-document-scanning-apps</loc>
+    <loc>https://folio.id/en/blog/best-document-scanning-apps</loc>
     <lastmod>2025-04-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/best-document-scanning-apps"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/best-document-scanning-apps"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/best-document-scanning-apps"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/best-gift-card-wallet-apps</loc>
+    <loc>https://folio.id/en/blog/best-gift-card-wallet-apps</loc>
     <lastmod>2024-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/best-gift-card-wallet-apps"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/best-gift-card-wallet-apps"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/best-gift-card-wallet-apps"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/best-google-wallet-alternatives</loc>
+    <loc>https://folio.id/en/blog/best-google-wallet-alternatives</loc>
     <lastmod>2025-05-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/best-google-wallet-alternatives"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/best-google-wallet-alternatives"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/best-google-wallet-alternatives"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/best-id-scanner-app</loc>
+    <loc>https://folio.id/en/blog/best-id-scanner-app</loc>
     <lastmod>2025-06-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/best-id-scanner-app"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/best-id-scanner-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/best-id-scanner-app"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/best-identity-verification-platforms</loc>
+    <loc>https://folio.id/en/blog/best-identity-verification-platforms</loc>
     <lastmod>2025-12-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/best-identity-verification-platforms"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/best-identity-verification-platforms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/best-identity-verification-platforms"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/biometric-data-privacy</loc>
+    <loc>https://folio.id/en/blog/biometric-data-privacy</loc>
     <lastmod>2025-08-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/biometric-data-privacy"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/biometric-data-privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/biometric-data-privacy"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/checkmytrip-alternative</loc>
+    <loc>https://folio.id/en/blog/checkmytrip-alternative</loc>
     <lastmod>2025-05-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/checkmytrip-alternative"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/checkmytrip-alternative"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/checkmytrip-alternative"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/client-onboarding-best-practices</loc>
+    <loc>https://folio.id/en/blog/client-onboarding-best-practices</loc>
     <lastmod>2025-06-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/client-onboarding-best-practices"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/client-onboarding-best-practices"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/client-onboarding-best-practices"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/complete-guide-identity-verification</loc>
+    <loc>https://folio.id/en/blog/complete-guide-identity-verification</loc>
     <lastmod>2025-08-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/complete-guide-identity-verification"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/complete-guide-identity-verification"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/complete-guide-identity-verification"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/digital-credentials-government</loc>
+    <loc>https://folio.id/en/blog/digital-credentials-government</loc>
     <lastmod>2025-07-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/digital-credentials-government"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/digital-credentials-government"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/digital-credentials-government"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/digital-passport-copies</loc>
+    <loc>https://folio.id/en/blog/digital-passport-copies</loc>
     <lastmod>2025-06-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/digital-passport-copies"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/digital-passport-copies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/digital-passport-copies"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/digital-wallet-apps-for-every-need</loc>
+    <loc>https://folio.id/en/blog/digital-wallet-apps-for-every-need</loc>
     <lastmod>2024-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/digital-wallet-apps-for-every-need"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/digital-wallet-apps-for-every-need"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/digital-wallet-apps-for-every-need"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/document-intelligence</loc>
+    <loc>https://folio.id/en/blog/document-intelligence</loc>
     <lastmod>2025-02-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/document-intelligence"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/document-intelligence"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/document-intelligence"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/end-to-end-encryption</loc>
+    <loc>https://folio.id/en/blog/end-to-end-encryption</loc>
     <lastmod>2025-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/end-to-end-encryption"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/end-to-end-encryption"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/end-to-end-encryption"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/eudi-wallet</loc>
+    <loc>https://folio.id/en/blog/eudi-wallet</loc>
     <lastmod>2025-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/eudi-wallet"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/eudi-wallet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/eudi-wallet"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/face-matching-technology</loc>
+    <loc>https://folio.id/en/blog/face-matching-technology</loc>
     <lastmod>2025-04-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/face-matching-technology"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/face-matching-technology"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/face-matching-technology"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/flight-tickets-on-iphone</loc>
+    <loc>https://folio.id/en/blog/flight-tickets-on-iphone</loc>
     <lastmod>2025-07-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/flight-tickets-on-iphone"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/flight-tickets-on-iphone"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/flight-tickets-on-iphone"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/how-to-add-and-store-your-medical-card</loc>
+    <loc>https://folio.id/en/blog/how-to-add-and-store-your-medical-card</loc>
     <lastmod>2024-06-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/how-to-add-and-store-your-medical-card"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/how-to-add-and-store-your-medical-card"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/how-to-add-and-store-your-medical-card"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app</loc>
+    <loc>https://folio.id/en/blog/how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app</loc>
     <lastmod>2025-07-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/how-to-store-and-use-loyalty-cards-on-your-iphone</loc>
+    <loc>https://folio.id/en/blog/how-to-store-and-use-loyalty-cards-on-your-iphone</loc>
     <lastmod>2024-03-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/how-to-store-and-use-loyalty-cards-on-your-iphone"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/how-to-store-and-use-loyalty-cards-on-your-iphone"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/how-to-store-and-use-loyalty-cards-on-your-iphone"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/kyc-aml-compliance</loc>
+    <loc>https://folio.id/en/blog/kyc-aml-compliance</loc>
     <lastmod>2025-03-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/kyc-aml-compliance"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/kyc-aml-compliance"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/kyc-aml-compliance"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/managing-family-travel-documents</loc>
+    <loc>https://folio.id/en/blog/managing-family-travel-documents</loc>
     <lastmod>2025-08-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/managing-family-travel-documents"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/managing-family-travel-documents"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/managing-family-travel-documents"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/mobile-drivers-license</loc>
+    <loc>https://folio.id/en/blog/mobile-drivers-license</loc>
     <lastmod>2025-08-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/mobile-drivers-license"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/mobile-drivers-license"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/mobile-drivers-license"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/nfc-identity-verification</loc>
+    <loc>https://folio.id/en/blog/nfc-identity-verification</loc>
     <lastmod>2025-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/nfc-identity-verification"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/nfc-identity-verification"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/nfc-identity-verification"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/organize-tickets-bookings</loc>
+    <loc>https://folio.id/en/blog/organize-tickets-bookings</loc>
     <lastmod>2025-07-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/organize-tickets-bookings"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/organize-tickets-bookings"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/organize-tickets-bookings"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/pass2u-alternative</loc>
+    <loc>https://folio.id/en/blog/pass2u-alternative</loc>
     <lastmod>2025-02-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/pass2u-alternative"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/pass2u-alternative"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/pass2u-alternative"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/regular-vs-digital-wallets</loc>
+    <loc>https://folio.id/en/blog/regular-vs-digital-wallets</loc>
     <lastmod>2024-04-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/regular-vs-digital-wallets"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/regular-vs-digital-wallets"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/regular-vs-digital-wallets"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/the-best-event-ticket-apps</loc>
+    <loc>https://folio.id/en/blog/the-best-event-ticket-apps</loc>
     <lastmod>2025-07-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/the-best-event-ticket-apps"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/the-best-event-ticket-apps"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/the-best-event-ticket-apps"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/tripcase-alternative</loc>
+    <loc>https://folio.id/en/blog/tripcase-alternative</loc>
     <lastmod>2025-01-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/tripcase-alternative"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/tripcase-alternative"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/tripcase-alternative"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/tripit-alternative</loc>
+    <loc>https://folio.id/en/blog/tripit-alternative</loc>
     <lastmod>2025-04-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/tripit-alternative"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/tripit-alternative"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/tripit-alternative"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/wanderlog-alternative</loc>
+    <loc>https://folio.id/en/blog/wanderlog-alternative</loc>
     <lastmod>2025-08-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/wanderlog-alternative"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/wanderlog-alternative"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/wanderlog-alternative"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/what-is-a-digital-wallet</loc>
+    <loc>https://folio.id/en/blog/what-is-a-digital-wallet</loc>
     <lastmod>2024-01-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/what-is-a-digital-wallet"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/what-is-liveness-detection</loc>
+    <loc>https://folio.id/en/blog/what-is-liveness-detection</loc>
     <lastmod>2025-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/what-is-liveness-detection"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/what-is-liveness-detection"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/what-is-liveness-detection"/>
   </url>
   <url>
-    <loc>https://folio.id/blog/you-can-now-store-tickets-in-folio-wallet</loc>
+    <loc>https://folio.id/en/blog/you-can-now-store-tickets-in-folio-wallet</loc>
     <lastmod>2025-06-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/you-can-now-store-tickets-in-folio-wallet"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/you-can-now-store-tickets-in-folio-wallet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/you-can-now-store-tickets-in-folio-wallet"/>
   </url>
   <url>
-    <loc>https://folio.id/card-scanner-app</loc>
+    <loc>https://folio.id/en/card-scanner-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/card-scanner-app"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/card-scanner-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/card-scanner-app"/>
   </url>
   <url>
-    <loc>https://folio.id/government</loc>
+    <loc>https://folio.id/en/government</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/government"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/government"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/government"/>
   </url>
   <url>
-    <loc>https://folio.id/government/playground</loc>
+    <loc>https://folio.id/en/government/playground</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/government/playground"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/government/playground"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/government/playground"/>
   </url>
   <url>
-    <loc>https://folio.id/id-wallet-app</loc>
+    <loc>https://folio.id/en/id-wallet-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/id-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/id-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/id-wallet-app"/>
   </url>
   <url>
-    <loc>https://folio.id/loyalty-card-app</loc>
+    <loc>https://folio.id/en/loyalty-card-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/loyalty-card-app"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/loyalty-card-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/loyalty-card-app"/>
   </url>
   <url>
-    <loc>https://folio.id/platform/behavior-insights</loc>
+    <loc>https://folio.id/en/platform/behavior-insights</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/platform/behavior-insights"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/platform/behavior-insights"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/platform/behavior-insights"/>
   </url>
   <url>
-    <loc>https://folio.id/platform/data-source-checks</loc>
+    <loc>https://folio.id/en/platform/credential-issuance</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/platform/credential-issuance"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/platform/credential-issuance"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/platform/credential-issuance"/>
   </url>
   <url>
-    <loc>https://folio.id/platform/document-intelligence</loc>
+    <loc>https://folio.id/en/platform/data-source-checks</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/platform/data-source-checks"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/platform/data-source-checks"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/platform/data-source-checks"/>
   </url>
   <url>
-    <loc>https://folio.id/platform/dynamic-flow</loc>
+    <loc>https://folio.id/en/platform/document-intelligence</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/platform/document-intelligence"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/platform/document-intelligence"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/platform/document-intelligence"/>
   </url>
   <url>
-    <loc>https://folio.id/platform/face-match</loc>
+    <loc>https://folio.id/en/platform/dynamic-flow</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/platform/dynamic-flow"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/platform/dynamic-flow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/platform/dynamic-flow"/>
   </url>
   <url>
-    <loc>https://folio.id/platform/id-verification</loc>
+    <loc>https://folio.id/en/platform/face-match</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/platform/face-match"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/platform/face-match"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/platform/face-match"/>
   </url>
   <url>
-    <loc>https://folio.id/platform/liveness-check</loc>
+    <loc>https://folio.id/en/platform/id-verification</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/platform/id-verification"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/platform/id-verification"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/platform/id-verification"/>
   </url>
   <url>
-    <loc>https://folio.id/platform/nfc-identity-scan</loc>
+    <loc>https://folio.id/en/platform/liveness-check</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/platform/liveness-check"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/platform/liveness-check"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/platform/liveness-check"/>
   </url>
   <url>
-    <loc>https://folio.id/platform/phone-and-email-validation</loc>
+    <loc>https://folio.id/en/platform/nfc-identity-scan</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/platform/nfc-identity-scan"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/platform/nfc-identity-scan"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/platform/nfc-identity-scan"/>
   </url>
   <url>
-    <loc>https://folio.id/platform/review-workspace</loc>
+    <loc>https://folio.id/en/platform/phone-and-email-validation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/platform/phone-and-email-validation"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/platform/phone-and-email-validation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/platform/phone-and-email-validation"/>
   </url>
   <url>
-    <loc>https://folio.id/privacy</loc>
+    <loc>https://folio.id/en/platform/review-workspace</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/platform/review-workspace"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/platform/review-workspace"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/platform/review-workspace"/>
   </url>
   <url>
-    <loc>https://folio.id/security</loc>
+    <loc>https://folio.id/en/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/privacy"/>
   </url>
   <url>
-    <loc>https://folio.id/solutions/age-compliance</loc>
+    <loc>https://folio.id/en/security</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/security"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/security"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/security"/>
   </url>
   <url>
-    <loc>https://folio.id/solutions/client-onboarding</loc>
+    <loc>https://folio.id/en/solutions/age-compliance</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/solutions/age-compliance"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/solutions/age-compliance"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/solutions/age-compliance"/>
   </url>
   <url>
-    <loc>https://folio.id/solutions/digital-ticketing</loc>
+    <loc>https://folio.id/en/solutions/client-onboarding</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/solutions/client-onboarding"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/solutions/client-onboarding"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/solutions/client-onboarding"/>
   </url>
   <url>
-    <loc>https://folio.id/terms</loc>
+    <loc>https://folio.id/en/solutions/digital-ticketing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/solutions/digital-ticketing"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/solutions/digital-ticketing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/solutions/digital-ticketing"/>
   </url>
   <url>
-    <loc>https://folio.id/wallet</loc>
+    <loc>https://folio.id/en/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/terms"/>
+  </url>
+  <url>
+    <loc>https://folio.id/en/wallet</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/wallet"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/wallet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/wallet"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/about"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/10-travel-hacks-that-actually-work</loc>
+    <lastmod>2025-08-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/10-travel-hacks-that-actually-work"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/10-travel-hacks-that-actually-work"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/10-travel-hacks-that-actually-work"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/access-your-digital-wallet-anywhere</loc>
+    <lastmod>2025-07-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/access-your-digital-wallet-anywhere"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/access-your-digital-wallet-anywhere"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/access-your-digital-wallet-anywhere"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/age-verification-requirements</loc>
+    <lastmod>2025-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/age-verification-requirements"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/age-verification-requirements"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/age-verification-requirements"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/albanian-diaspora-voter-registration</loc>
+    <lastmod>2025-03-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/albanian-diaspora-voter-registration"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/albanian-diaspora-voter-registration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/albanian-diaspora-voter-registration"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/app-in-the-air-alternative</loc>
+    <lastmod>2025-08-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/app-in-the-air-alternative"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/app-in-the-air-alternative"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/app-in-the-air-alternative"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/apple-gift-card-add-to-wallet</loc>
+    <lastmod>2024-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/apple-gift-card-add-to-wallet"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/apple-gift-card-add-to-wallet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/apple-gift-card-add-to-wallet"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/best-apple-wallet-alternatives</loc>
+    <lastmod>2025-05-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/best-apple-wallet-alternatives"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/best-apple-wallet-alternatives"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/best-apple-wallet-alternatives"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/best-apps-to-plan-travel</loc>
+    <lastmod>2025-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/best-apps-to-plan-travel"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/best-apps-to-plan-travel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/best-apps-to-plan-travel"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/best-digital-wallet-apps-in-canada</loc>
+    <lastmod>2024-12-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/best-digital-wallet-apps-in-canada"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/best-digital-wallet-apps-in-canada"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/best-digital-wallet-apps-in-canada"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/best-document-scanning-apps</loc>
+    <lastmod>2025-04-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/best-document-scanning-apps"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/best-document-scanning-apps"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/best-document-scanning-apps"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/best-gift-card-wallet-apps</loc>
+    <lastmod>2024-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/best-gift-card-wallet-apps"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/best-gift-card-wallet-apps"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/best-gift-card-wallet-apps"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/best-google-wallet-alternatives</loc>
+    <lastmod>2025-05-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/best-google-wallet-alternatives"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/best-google-wallet-alternatives"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/best-google-wallet-alternatives"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/best-id-scanner-app</loc>
+    <lastmod>2025-06-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/best-id-scanner-app"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/best-id-scanner-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/best-id-scanner-app"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/best-identity-verification-platforms</loc>
+    <lastmod>2025-12-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/best-identity-verification-platforms"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/best-identity-verification-platforms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/best-identity-verification-platforms"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/biometric-data-privacy</loc>
+    <lastmod>2025-08-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/biometric-data-privacy"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/biometric-data-privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/biometric-data-privacy"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/checkmytrip-alternative</loc>
+    <lastmod>2025-05-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/checkmytrip-alternative"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/checkmytrip-alternative"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/checkmytrip-alternative"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/client-onboarding-best-practices</loc>
+    <lastmod>2025-06-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/client-onboarding-best-practices"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/client-onboarding-best-practices"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/client-onboarding-best-practices"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/complete-guide-identity-verification</loc>
+    <lastmod>2025-08-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/complete-guide-identity-verification"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/complete-guide-identity-verification"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/complete-guide-identity-verification"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/digital-credentials-government</loc>
+    <lastmod>2025-07-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/digital-credentials-government"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/digital-credentials-government"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/digital-credentials-government"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/digital-passport-copies</loc>
+    <lastmod>2025-06-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/digital-passport-copies"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/digital-passport-copies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/digital-passport-copies"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/digital-wallet-apps-for-every-need</loc>
+    <lastmod>2024-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/digital-wallet-apps-for-every-need"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/digital-wallet-apps-for-every-need"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/digital-wallet-apps-for-every-need"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/document-intelligence</loc>
+    <lastmod>2025-02-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/document-intelligence"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/document-intelligence"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/document-intelligence"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/end-to-end-encryption</loc>
+    <lastmod>2025-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/end-to-end-encryption"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/end-to-end-encryption"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/end-to-end-encryption"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/eudi-wallet</loc>
+    <lastmod>2025-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/eudi-wallet"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/eudi-wallet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/eudi-wallet"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/face-matching-technology</loc>
+    <lastmod>2025-04-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/face-matching-technology"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/face-matching-technology"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/face-matching-technology"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/flight-tickets-on-iphone</loc>
+    <lastmod>2025-07-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/flight-tickets-on-iphone"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/flight-tickets-on-iphone"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/flight-tickets-on-iphone"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/how-to-add-and-store-your-medical-card</loc>
+    <lastmod>2024-06-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/how-to-add-and-store-your-medical-card"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/how-to-add-and-store-your-medical-card"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/how-to-add-and-store-your-medical-card"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app</loc>
+    <lastmod>2025-07-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/how-to-store-and-use-loyalty-cards-on-your-iphone</loc>
+    <lastmod>2024-03-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/how-to-store-and-use-loyalty-cards-on-your-iphone"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/how-to-store-and-use-loyalty-cards-on-your-iphone"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/how-to-store-and-use-loyalty-cards-on-your-iphone"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/kyc-aml-compliance</loc>
+    <lastmod>2025-03-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/kyc-aml-compliance"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/kyc-aml-compliance"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/kyc-aml-compliance"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/managing-family-travel-documents</loc>
+    <lastmod>2025-08-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/managing-family-travel-documents"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/managing-family-travel-documents"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/managing-family-travel-documents"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/mobile-drivers-license</loc>
+    <lastmod>2025-08-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/mobile-drivers-license"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/mobile-drivers-license"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/mobile-drivers-license"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/nfc-identity-verification</loc>
+    <lastmod>2025-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/nfc-identity-verification"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/nfc-identity-verification"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/nfc-identity-verification"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/organize-tickets-bookings</loc>
+    <lastmod>2025-07-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/organize-tickets-bookings"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/organize-tickets-bookings"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/organize-tickets-bookings"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/pass2u-alternative</loc>
+    <lastmod>2025-02-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/pass2u-alternative"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/pass2u-alternative"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/pass2u-alternative"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/regular-vs-digital-wallets</loc>
+    <lastmod>2024-04-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/regular-vs-digital-wallets"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/regular-vs-digital-wallets"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/regular-vs-digital-wallets"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/the-best-event-ticket-apps</loc>
+    <lastmod>2025-07-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/the-best-event-ticket-apps"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/the-best-event-ticket-apps"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/the-best-event-ticket-apps"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/tripcase-alternative</loc>
+    <lastmod>2025-01-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/tripcase-alternative"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/tripcase-alternative"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/tripcase-alternative"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/tripit-alternative</loc>
+    <lastmod>2025-04-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/tripit-alternative"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/tripit-alternative"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/tripit-alternative"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/wanderlog-alternative</loc>
+    <lastmod>2025-08-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/wanderlog-alternative"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/wanderlog-alternative"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/wanderlog-alternative"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/what-is-a-digital-wallet</loc>
+    <lastmod>2024-01-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/what-is-a-digital-wallet"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/what-is-liveness-detection</loc>
+    <lastmod>2025-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/what-is-liveness-detection"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/what-is-liveness-detection"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/what-is-liveness-detection"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/blog/you-can-now-store-tickets-in-folio-wallet</loc>
+    <lastmod>2025-06-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog/you-can-now-store-tickets-in-folio-wallet"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/blog/you-can-now-store-tickets-in-folio-wallet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/you-can-now-store-tickets-in-folio-wallet"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/card-scanner-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/card-scanner-app"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/card-scanner-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/card-scanner-app"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/government</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/government"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/government"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/government"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/government/playground</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/government/playground"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/government/playground"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/government/playground"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/id-wallet-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/id-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/id-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/id-wallet-app"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/loyalty-card-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/loyalty-card-app"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/loyalty-card-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/loyalty-card-app"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/platform/behavior-insights</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/platform/behavior-insights"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/platform/behavior-insights"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/platform/behavior-insights"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/platform/credential-issuance</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/platform/credential-issuance"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/platform/credential-issuance"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/platform/credential-issuance"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/platform/data-source-checks</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/platform/data-source-checks"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/platform/data-source-checks"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/platform/data-source-checks"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/platform/document-intelligence</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/platform/document-intelligence"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/platform/document-intelligence"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/platform/document-intelligence"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/platform/dynamic-flow</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/platform/dynamic-flow"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/platform/dynamic-flow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/platform/dynamic-flow"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/platform/face-match</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/platform/face-match"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/platform/face-match"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/platform/face-match"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/platform/id-verification</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/platform/id-verification"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/platform/id-verification"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/platform/id-verification"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/platform/liveness-check</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/platform/liveness-check"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/platform/liveness-check"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/platform/liveness-check"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/platform/nfc-identity-scan</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/platform/nfc-identity-scan"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/platform/nfc-identity-scan"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/platform/nfc-identity-scan"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/platform/phone-and-email-validation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/platform/phone-and-email-validation"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/platform/phone-and-email-validation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/platform/phone-and-email-validation"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/platform/review-workspace</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/platform/review-workspace"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/platform/review-workspace"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/platform/review-workspace"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/privacy"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/security</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/security"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/security"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/security"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/solutions/age-compliance</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/solutions/age-compliance"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/solutions/age-compliance"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/solutions/age-compliance"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/solutions/client-onboarding</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/solutions/client-onboarding"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/solutions/client-onboarding"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/solutions/client-onboarding"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/solutions/digital-ticketing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/solutions/digital-ticketing"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/solutions/digital-ticketing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/solutions/digital-ticketing"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/terms"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ru/wallet</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/wallet"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://folio.id/ru/wallet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/wallet"/>
   </url>
 </urlset>

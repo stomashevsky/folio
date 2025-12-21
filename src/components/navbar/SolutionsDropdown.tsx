@@ -1,7 +1,9 @@
 import { useState, useRef, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { MenuItem, DropdownMenuItem } from '../ui'
 import { scrollToTop } from '../../utils/scrollToTop'
+import { useLocalizedPath } from '../../i18n/useLocalizedPath'
 import chevronDownIcon from '../../assets/icons/ChevronDown.svg'
 
 // Icons
@@ -10,38 +12,40 @@ import ticketIcon from '../../assets/icons/Ticket.svg'
 import briefcaseIcon from '../../assets/icons/Briefcase.svg'
 
 interface SolutionItem {
-  label: string
+  labelKey: string
   path: string
   icon: string
-  description: string
+  descriptionKey: string
 }
 
 const SOLUTIONS_ITEMS: SolutionItem[] = [
   {
-    label: 'Client onboarding',
+    labelKey: 'footer.clientOnboarding',
     path: '/solutions/client-onboarding',
     icon: briefcaseIcon,
-    description: 'Streamlined KYC verification for regulated businesses.'
+    descriptionKey: 'nav.clientOnboardingDesc'
   },
   {
-    label: 'Age compliance',
+    labelKey: 'footer.ageCompliance',
     path: '/solutions/age-compliance',
     icon: ageIcon,
-    description: 'Ensure users meet age requirements for restricted products or services.'
+    descriptionKey: 'nav.ageComplianceDesc'
   },
   {
-    label: 'Digital ticketing',
+    labelKey: 'footer.digitalTicketing',
     path: '/solutions/digital-ticketing',
     icon: ticketIcon,
-    description: 'Create, manage, and validate digital tickets with built-in fraud controls.'
+    descriptionKey: 'nav.digitalTicketingDesc'
   },
 ]
 
 export default function SolutionsDropdown() {
+  const { t } = useTranslation('common')
   const [isOpen, setIsOpen] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
   const navigate = useNavigate()
   const location = useLocation()
+  const { getLocalizedPath } = useLocalizedPath()
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -66,7 +70,7 @@ export default function SolutionsDropdown() {
   }, [location.pathname])
 
   const handleItemClick = (path: string) => {
-    navigate(path)
+    navigate(getLocalizedPath(path))
     setTimeout(() => {
       scrollToTop()
     }, 100)
@@ -91,7 +95,7 @@ export default function SolutionsDropdown() {
         }}
       >
         <span className="flex items-center gap-1.5">
-          Solutions
+          {t('footer.solutions')}
           <img
             src={chevronDownIcon}
             alt=""
@@ -119,8 +123,8 @@ export default function SolutionsDropdown() {
                 <DropdownMenuItem
                   key={item.path}
                   icon={item.icon}
-                  title={item.label}
-                  description={item.description}
+                  title={t(item.labelKey)}
+                  description={t(item.descriptionKey)}
                   onClick={() => handleItemClick(item.path)}
                   className="w-[300px]"
                   role="menuitem"

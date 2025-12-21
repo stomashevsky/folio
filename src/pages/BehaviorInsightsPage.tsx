@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
@@ -128,11 +129,13 @@ const useCasesData = [
 ]
 
 export default function BehaviorInsightsPage() {
+  const { t } = useTranslation('platform')
+  
   usePageTitle({
-    title: 'Behavior Insights | Folio Wallet',
-    description: 'Analyze behavioral, device, and network signals to identify risk without interrupting the user experience.',
-    ogTitle: 'Behavior Insights | Folio Wallet',
-    ogDescription: 'Analyze behavioral, device, and network signals to identify risk without interrupting the user experience.',
+    title: t('behaviorInsights.meta.title'),
+    description: t('behaviorInsights.meta.description'),
+    ogTitle: t('behaviorInsights.meta.title'),
+    ogDescription: t('behaviorInsights.meta.description'),
     ogImage: getOgImageUrl('behavior-insights-hero.png'),
     ogUrl: 'https://folio.id/platform/behavior-insights'
   })

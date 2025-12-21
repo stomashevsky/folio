@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import Issue from '../components/Issue'
 import IssuanceTypesSection from '../components/sections/IssuanceTypesSection'
@@ -8,11 +9,13 @@ import { getOgImageUrl } from '../configs/ogImages'
 import { SkipToContentLink } from '../components/ui'
 
 export default function PlaygroundPage() {
+  const { t } = useTranslation('government')
+  
   usePageTitle({
-    title: 'Playground - Issue and Verify Digital IDs | Folio Wallet',
-    description: 'A safe sandbox for issuing demo documents and testing EUDI compatible verification flows. Try real issuance steps, scan QR codes, explore data sharing and see how digital identity behaves in practice.',
-    ogTitle: 'Playground - Issue and Verify Digital IDs | Folio Wallet',
-    ogDescription: 'A safe sandbox for issuing demo documents and testing EUDI compatible verification flows.',
+    title: t('playground.meta.title'),
+    description: t('playground.meta.description'),
+    ogTitle: t('playground.meta.title'),
+    ogDescription: t('playground.meta.description'),
     ogImage: getOgImageUrl('identity-lab-hero.png'),
     ogUrl: 'https://folio.id/government/playground'
   })

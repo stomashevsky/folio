@@ -1,0 +1,196 @@
+{
+  "idVerification": {
+    "meta": {
+      "title": "ID Verification | Folio Wallet",
+      "description": "Check official documents and confirm identity in more than 200 places around the world."
+    },
+    "hero": {
+      "tagline": "ID verification",
+      "title": "Verify government IDs with confidence",
+      "description": "Check official documents and confirm identity in more than 200 places around the world."
+    },
+    "advanced": {
+      "title": "Advanced identity verification",
+      "global": {
+        "title": "Global ID support",
+        "description": "Recognize and validate a wide range of government issued documents, including passports and driver licenses."
+      },
+      "fraud": {
+        "title": "Smart fraud protection",
+        "description": "Spot altered or tampered IDs with precise capture flows and intelligent authenticity checks."
+      },
+      "fast": {
+        "title": "Fast automated results",
+        "description": "Most verifications finish in a few seconds, giving users a smooth and quick experience."
+      }
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "setup": {
+        "title": "Customize the verification experience",
+        "description": "Define which documents users can submit and how verification is performed."
+      },
+      "capture": {
+        "title": "Capture identity documents",
+        "description": "Users scan their government ID. Folio reads the data and checks if the document is genuine."
+      },
+      "verify": {
+        "title": "Verify and make a decision",
+        "description": "Approve, decline or send the case for review based on your rules."
+      }
+    },
+    "keyFeatures": {
+      "title": "Key features",
+      "description": "Leverage best-in-class technology to verify government IDs globally",
+      "items": {
+        "global": { "title": "Works across the world", "description": "Support for hundreds of government IDs from more than 200 regions." },
+        "guidance": { "title": "Clear capture guidance", "description": "On screen instructions help users take clean and accurate document photos." },
+        "autoCapture": { "title": "Automatic photo capture", "description": "The system takes the photo at the perfect moment, reducing retries." },
+        "extraction": { "title": "Precise data extraction", "description": "Read and structure data directly from the ID, then verify it for consistency." },
+        "sensitive": { "title": "Sensitive data control", "description": "Hide personal fields when needed to protect user information." },
+        "custom": { "title": "Custom checks", "description": "Add your own rules for document validity, expiry and data accuracy." },
+        "faceMatch": { "title": "Face match", "description": "Compare a live selfie with the ID photo to confirm the person behind the document." },
+        "profile": { "title": "Profile matching", "description": "Check ID data against existing accounts to avoid duplicates." },
+        "automated": { "title": "Automated decisions", "description": "Let the system handle most verifications instantly, minimizing manual work." }
+      }
+    },
+    "useCases": {
+      "title": "Practical uses for government ID checks",
+      "kyc": { "title": "KYC compliance", "description": "Strengthen your KYC flow by confirming the authenticity of government issued IDs." },
+      "identity": { "title": "Identity assurance", "description": "Meet assurance needs with verified documents and a live face match." },
+      "friction": { "title": "Dynamic friction", "description": "Adjust verification steps based on the data extracted from the document." }
+    },
+    "cta": {
+      "title": "Let's build better identity verification",
+      "description": "Talk to our team to explore how Folio can enhance your onboarding and verification experience."
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        { "q": "What documents can be verified?", "a": "Folio supports passports, national ID cards, driver licenses and residence permits from over 200 countries and regions." },
+        { "q": "How long does verification take?", "a": "Most verifications complete in under 10 seconds. Complex cases that require manual review may take longer." },
+        { "q": "How does Folio detect fraudulent documents?", "a": "Folio uses AI-powered checks to detect alterations, tampering, and forgeries. The system analyzes document structure, security features, fonts and metadata to spot inconsistencies." },
+        { "q": "Can I customize the verification flow?", "a": "Yes. You can define which documents to accept, set custom validation rules, configure automated decisions and add step-up verification when needed." },
+        { "q": "Is the verification process compliant with regulations?", "a": "Folio helps meet KYC and AML requirements across jurisdictions. The platform provides audit trails and detailed verification reports for compliance purposes." },
+        { "q": "What happens if a document cannot be verified automatically?", "a": "Cases that cannot be resolved automatically are flagged for manual review. Your team can examine the document and make a decision using the Review Workspace." },
+        { "q": "Does Folio support NFC chip reading?", "a": "Yes. For documents with NFC chips (like e-passports), Folio can read and verify the chip data for an extra layer of authenticity." }
+      ]
+    }
+  },
+  "documentIntelligence": {
+    "meta": {
+      "title": "Document Intelligence | Folio Wallet",
+      "description": "Automatically review submitted documents to confirm identity or validate proof of address, income, or health with minimal effort."
+    },
+    "hero": {
+      "tagline": "Document intelligence",
+      "title": "Automate document review at scale",
+      "description": "Automatically review submitted documents to confirm identity or validate proof of address, income, or health with minimal effort."
+    }
+  },
+  "livenessCheck": {
+    "meta": {
+      "title": "Liveness Check | Folio Wallet",
+      "description": "Guard against the broadest range of face spoofs through a multi-layered solution."
+    },
+    "hero": {
+      "tagline": "Liveness check",
+      "title": "Confirm real presence, not photos",
+      "description": "Guard against the broadest range of face spoofs through a multi-layered solution."
+    }
+  },
+  "faceMatch": {
+    "meta": {
+      "title": "Face Match | Folio Wallet",
+      "description": "Exceptional accuracy delivered with privacy, transparency and a seamless user experience."
+    },
+    "hero": {
+      "tagline": "Face match",
+      "title": "Match faces with certainty",
+      "description": "Exceptional accuracy delivered with privacy, transparency and a seamless user experience."
+    }
+  },
+  "dataSourceChecks": {
+    "meta": {
+      "title": "Data Source Checks | Folio Wallet",
+      "description": "Verify users worldwide with trusted data sources. Instantly confirm the identity of users and meet regulatory requirements using Master Data matching."
+    },
+    "hero": {
+      "tagline": "Data source checks",
+      "title": "Validate identity against trusted sources",
+      "description": "Verify users worldwide with trusted data sources. Instantly confirm the identity of users and meet regulatory requirements using Master Data matching."
+    }
+  },
+  "phoneAndEmailValidation": {
+    "meta": {
+      "title": "Phone and Email Validation | Folio Wallet",
+      "description": "Confirm ownership and detect risky contact details with real-time validation."
+    },
+    "hero": {
+      "tagline": "Phone and email validation",
+      "title": "Verify contact details instantly",
+      "description": "Confirm ownership and detect risky contact details with real-time validation."
+    }
+  },
+  "nfcIdentityScan": {
+    "meta": {
+      "title": "NFC Identity Scan | Folio Wallet",
+      "description": "Read secure chip data from compatible IDs and passports for the highest level of document authenticity."
+    },
+    "hero": {
+      "tagline": "NFC identity scan",
+      "title": "Read passport chips for highest security",
+      "description": "Read secure chip data from compatible IDs and passports for the highest level of document authenticity."
+    }
+  },
+  "dynamicFlow": {
+    "meta": {
+      "title": "Dynamic Flow | Folio Wallet",
+      "description": "Coordinate identity checks with flexible logic to create adaptive verification journeys."
+    },
+    "hero": {
+      "tagline": "Dynamic flow",
+      "title": "Build adaptive verification journeys",
+      "description": "Coordinate identity checks with flexible logic to create adaptive verification journeys."
+    }
+  },
+  "behaviorInsights": {
+    "meta": {
+      "title": "Behavior Insights | Folio Wallet",
+      "description": "Device and usage patterns for added context in fraud prevention."
+    },
+    "hero": {
+      "tagline": "Behavior insights",
+      "title": "Understand device and user signals",
+      "description": "Device and usage patterns for added context in fraud prevention."
+    }
+  },
+  "reviewWorkspace": {
+    "meta": {
+      "title": "Review Workspace | Folio Wallet",
+      "description": "Organize and resolve verification cases efficiently with powerful review tools."
+    },
+    "hero": {
+      "tagline": "Review workspace",
+      "title": "Manage verification cases with ease",
+      "description": "Organize and resolve verification cases efficiently with powerful review tools."
+    }
+  },
+  "credentialIssuance": {
+    "meta": {
+      "title": "Credential Issuance | Folio Wallet",
+      "description": "Create and deliver verifiable credentials to digital wallets."
+    },
+    "hero": {
+      "tagline": "Credential issuance",
+      "title": "Issue verifiable credentials",
+      "description": "Create and deliver verifiable credentials to digital wallets."
+    }
+  },
+  "common": {
+    "howItWorks": "How it works",
+    "keyFeatures": "Key features",
+    "faq": "Frequently asked questions"
+  }
+}
+

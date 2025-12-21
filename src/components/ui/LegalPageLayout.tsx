@@ -12,6 +12,8 @@ interface LegalPageLayoutProps {
   description: string
   /** Last updated date (e.g., "December 17, 2025") */
   lastUpdated: string
+  /** Label for "Last updated" (for localization) */
+  lastUpdatedLabel?: string
   /** URL slug for canonical URL (e.g., "terms" or "privacy") */
   slug: string
   /** Page content */
@@ -39,6 +41,7 @@ export default function LegalPageLayout({
   title,
   description,
   lastUpdated,
+  lastUpdatedLabel = 'Last updated',
   slug,
   children,
 }: LegalPageLayoutProps) {
@@ -67,7 +70,7 @@ export default function LegalPageLayout({
             <div className="flex flex-col gap-4 md:gap-5 items-start relative shrink-0 w-full">
               {/* Last updated date */}
               <p className="text-sm text-[#737373] w-full text-center">
-                Last updated: {lastUpdated}
+                {lastUpdatedLabel}: {lastUpdated}
               </p>
 
               {/* Title */}

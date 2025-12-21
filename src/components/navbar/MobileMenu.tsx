@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { Button, MobileMenuItem, MobileMenuLink, MobileMenuBackButton } from '../ui'
 import { scrollToTop } from '../../utils/scrollToTop'
 import { scrollToSection } from '../../utils/scrollToSection'
+import { useLocalizedPath } from '../../i18n/useLocalizedPath'
 
 // Icons
 import idCardIcon from '../../assets/icons/IdCard.svg'
@@ -27,102 +29,104 @@ interface MobileMenuProps {
 
 const SOLUTIONS_ITEMS = [
   {
-    label: 'Client onboarding',
+    labelKey: 'footer.clientOnboarding',
     path: '/solutions/client-onboarding',
     icon: briefcaseIcon,
-    description: 'Streamlined KYC verification for regulated businesses.'
+    descriptionKey: 'nav.clientOnboardingDesc'
   },
   {
-    label: 'Age compliance',
+    labelKey: 'footer.ageCompliance',
     path: '/solutions/age-compliance',
     icon: ageIcon,
-    description: 'Ensure users meet age requirements for restricted products or services.'
+    descriptionKey: 'nav.ageComplianceDesc'
   },
   {
-    label: 'Digital ticketing',
+    labelKey: 'footer.digitalTicketing',
     path: '/solutions/digital-ticketing',
     icon: ticketIcon,
-    description: 'Create, manage, and validate digital tickets with built-in fraud controls.'
+    descriptionKey: 'nav.digitalTicketingDesc'
   },
 ]
 
 const PLATFORM_ITEMS = [
   // СБОР ДАННЫХ
   {
-    label: 'ID verification',
+    labelKey: 'footer.idVerification',
     path: '/platform/id-verification',
     icon: idCardIcon,
-    description: 'Verify passports, ID cards, and other official documents.'
+    descriptionKey: 'nav.idVerificationDesc'
   },
   {
-    label: 'NFC identity scan',
+    labelKey: 'footer.nfcIdentityScan',
     path: '/platform/nfc-identity-scan',
     icon: nfcIcon,
-    description: 'Read secure chip data from compatible IDs and passports.'
+    descriptionKey: 'nav.nfcIdentityScanDesc'
   },
   {
-    label: 'Document intelligence',
+    labelKey: 'footer.documentIntelligence',
     path: '/platform/document-intelligence',
     icon: sparklesIcon,
-    description: 'Extract and analyze data from submitted documents.'
+    descriptionKey: 'nav.documentIntelligenceDesc'
   },
   // БИОМЕТРИЯ
   {
-    label: 'Face match',
+    labelKey: 'footer.faceMatch',
     path: '/platform/face-match',
     icon: circleUserIcon,
-    description: 'Compare a selfie to an official photo to confirm identity.'
+    descriptionKey: 'nav.faceMatchDesc'
   },
   {
-    label: 'Liveness check',
+    labelKey: 'footer.livenessCheck',
     path: '/platform/liveness-check',
     icon: scanFaceIcon,
-    description: 'Confirm that the user is physically present.'
+    descriptionKey: 'nav.livenessCheckDesc'
   },
   // ПРОВЕРКА ДАННЫХ
   {
-    label: 'Data source checks',
+    labelKey: 'footer.dataSourceChecks',
     path: '/platform/data-source-checks',
     icon: databaseIcon,
-    description: 'Validate user information against trusted databases.'
+    descriptionKey: 'nav.dataSourceChecksDesc'
   },
   {
-    label: 'Phone and email validation',
+    labelKey: 'footer.phoneAndEmailValidation',
     path: '/platform/phone-and-email-validation',
     icon: messageSquareMoreIcon,
-    description: 'Confirm ownership and detect risky contact details.'
+    descriptionKey: 'nav.phoneAndEmailValidationDesc'
   },
   {
-    label: 'Behavior insights',
+    labelKey: 'footer.behaviorInsights',
     path: '/platform/behavior-insights',
     icon: waypointsIcon,
-    description: 'Device and usage patterns for added context.'
+    descriptionKey: 'nav.behaviorInsightsDesc'
   },
   // ОРКЕСТРАЦИЯ
   {
-    label: 'Dynamic flow',
+    labelKey: 'footer.dynamicFlow',
     path: '/platform/dynamic-flow',
     icon: gitForkIcon,
-    description: 'Coordinate identity checks with flexible logic.'
+    descriptionKey: 'nav.dynamicFlowDesc'
   },
   // РЕЗУЛЬТАТЫ
   {
-    label: 'Review workspace',
+    labelKey: 'footer.reviewWorkspace',
     path: '/platform/review-workspace',
     icon: searchCheckIcon,
-    description: 'Organize and resolve verification cases.'
+    descriptionKey: 'nav.reviewWorkspaceDesc'
   },
   {
-    label: 'Credential issuance',
+    labelKey: 'footer.credentialIssuance',
     path: '/platform/credential-issuance',
     icon: badgeCheckIcon,
-    description: 'Create and deliver verifiable credentials to wallets.'
+    descriptionKey: 'nav.credentialIssuanceDesc'
   },
 ]
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+  const { t } = useTranslation('common')
   const navigate = useNavigate()
   const location = useLocation()
+  const { getLocalizedPath, currentLang } = useLocalizedPath()
   const [showSolutionsSubmenu, setShowSolutionsSubmenu] = useState(false)
   const [showPlatformSubmenu, setShowPlatformSubmenu] = useState(false)
 
@@ -135,21 +139,23 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   }, [isOpen])
 
   const isActive = (path: string) => {
+    const localizedPath = getLocalizedPath(path)
     if (path === '/') {
-      return location.pathname === '/'
+      return location.pathname === `/${currentLang}` || location.pathname === `/${currentLang}/`
     }
-    return location.pathname.startsWith(path)
+    return location.pathname.startsWith(localizedPath)
   }
 
   const handleNavClick = (path: string) => {
     onClose()
     setShowSolutionsSubmenu(false)
     setShowPlatformSubmenu(false)
-    const isCurrentPage = isActive(path)
-    if (isCurrentPage && location.pathname === path) {
+    const localizedPath = getLocalizedPath(path)
+    const isCurrentPage = location.pathname === localizedPath
+    if (isCurrentPage) {
       scrollToTop()
     } else {
-      navigate(path)
+      navigate(localizedPath)
       setTimeout(() => {
         scrollToTop()
       }, 100)
@@ -209,7 +215,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     }}
                     aria-current={isActive('/wallet') ? 'page' : undefined}
                   >
-                    Folio app
+                    {t('footer.folioApp')}
                   </MobileMenuItem>
                   <MobileMenuItem
                     active={isActive('/platform')}
@@ -217,7 +223,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     onClick={handlePlatformClick}
                     aria-current={isActive('/platform') ? 'page' : undefined}
                   >
-                    Platform
+                    {t('footer.platform')}
                   </MobileMenuItem>
                   <MobileMenuItem
                     active={isActive('/solutions')}
@@ -225,7 +231,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     onClick={handleSolutionsClick}
                     aria-current={isActive('/solutions') ? 'page' : undefined}
                   >
-                    Solutions
+                    {t('footer.solutions')}
                   </MobileMenuItem>
                   <MobileMenuItem
                     active={isActive('/government')}
@@ -236,7 +242,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     }}
                     aria-current={isActive('/government') ? 'page' : undefined}
                   >
-                    Government
+                    {t('footer.government')}
                   </MobileMenuItem>
                   <MobileMenuItem
                     active={isActive('/blog')}
@@ -247,7 +253,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     }}
                     aria-current={isActive('/blog') ? 'page' : undefined}
                   >
-                    Blog
+                    {t('footer.blog')}
                   </MobileMenuItem>
                 </div>
 
@@ -257,18 +263,19 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     onClick={(e) => {
                       e.preventDefault()
                       handleClose()
-                      const isWalletPage = location.pathname === '/wallet'
+                      const walletPath = getLocalizedPath('/wallet')
+                      const isWalletPage = location.pathname === walletPath
                       if (isWalletPage) {
                         scrollToSection('get-the-app')
                       } else {
-                        navigate('/wallet')
+                        navigate(walletPath)
                         setTimeout(() => {
                           scrollToSection('get-the-app')
                         }, 100)
                       }
                     }}
                   >
-                    Get the app
+                    {t('footer.getTheApp')}
                   </Button>
                 </div>
               </>
@@ -276,19 +283,20 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               /* Solutions Submenu */
               <>
                 <MobileMenuBackButton onClick={handleBackClick}>
-                  Back to main menu
+                  {t('nav.backToMainMenu')}
                 </MobileMenuBackButton>
 
                 <div className="flex flex-col gap-0 items-start justify-start w-full pt-3">
-                  <h2 className="font-bold text-2xl leading-8 text-[#0a0a0a] px-6">Solutions</h2>
+                  <h2 className="font-bold text-2xl leading-8 text-[#0a0a0a] px-6">{t('footer.solutions')}</h2>
                   {SOLUTIONS_ITEMS.map((item) => {
-                    const active = location.pathname.startsWith(item.path)
+                    const localizedPath = getLocalizedPath(item.path)
+                    const active = location.pathname.startsWith(localizedPath)
                     return (
                       <MobileMenuLink
                         key={item.path}
                         icon={item.icon}
-                        title={item.label}
-                        description={item.description}
+                        title={t(item.labelKey)}
+                        description={t(item.descriptionKey)}
                         active={active}
                         onClick={(e) => {
                           e.preventDefault()
@@ -306,19 +314,20 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               /* Platform Submenu */
               <>
                 <MobileMenuBackButton onClick={handleBackClick}>
-                  Back to main menu
+                  {t('nav.backToMainMenu')}
                 </MobileMenuBackButton>
 
                 <div className="flex flex-col gap-0 items-start justify-start w-full pt-3">
-                  <h2 className="font-bold text-2xl leading-8 text-[#0a0a0a] px-6">Platform</h2>
+                  <h2 className="font-bold text-2xl leading-8 text-[#0a0a0a] px-6">{t('footer.platform')}</h2>
                   {PLATFORM_ITEMS.map((item) => {
-                    const active = location.pathname.startsWith(item.path)
+                    const localizedPath = getLocalizedPath(item.path)
+                    const active = location.pathname.startsWith(localizedPath)
                     return (
                       <MobileMenuLink
                         key={item.path}
                         icon={item.icon}
-                        title={item.label}
-                        description={item.description}
+                        title={t(item.labelKey)}
+                        description={t(item.descriptionKey)}
                         active={active}
                         onClick={(e) => {
                           e.preventDefault()

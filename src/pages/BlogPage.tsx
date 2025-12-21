@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
-import { useLocation, useSearchParams } from 'react-router-dom'
+import { useLocation, useSearchParams, useParams } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import FooterSection from '../components/sections/FooterSection'
 import { Button, BlogArticleCard } from '../components/ui'
@@ -11,6 +12,8 @@ import { getSavedBlogPageState, saveBlogPageState, isBlogScrollRestoring, clearB
 const categories: BlogCategory[] = ['All', 'Company', 'Product', 'Guides', 'Research', 'Safety', 'Business']
 
 export default function BlogPage() {
+  const { t } = useTranslation('common')
+  const { lang } = useParams<{ lang?: string }>()
   const location = useLocation()
   const [searchParams, setSearchParams] = useSearchParams()
   
@@ -123,14 +126,17 @@ export default function BlogPage() {
     saveBlogPageState(scrollY, displayedArticles, selectedCategory)
   }, [displayedArticles, selectedCategory])
 
+  const blogTitle = `${t('blog.title')} | Folio Wallet`
+  const blogDescription = t('blog.description')
+  
   usePageTitle({
-    title: 'Blog | Folio Wallet',
-    description: 'Case studies, product insights and practical guides on travel, documents and digital identity.',
-    ogTitle: 'Blog | Folio Wallet',
-    ogDescription: 'Case studies, product insights and practical guides on travel, documents and digital identity.',
+    title: blogTitle,
+    description: blogDescription,
+    ogTitle: blogTitle,
+    ogDescription: blogDescription,
     ogImage: getOgImageUrl('blog-hero.png'),
-    ogUrl: 'https://folio.id/blog',
-    canonicalUrl: 'https://folio.id/blog',
+    ogUrl: `https://folio.id/${lang || 'en'}/blog`,
+    canonicalUrl: `https://folio.id/${lang || 'en'}/blog`,
     // Prevent filter variants from being indexed as separate pages.
     robots: categoryParam ? 'noindex,follow' : undefined,
   })
@@ -200,9 +206,9 @@ export default function BlogPage() {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Blog',
-              name: 'Folio Blog',
-              url: 'https://folio.id/blog',
-              description: 'Case studies, product insights and practical guides on travel, documents and digital identity.',
+              name: t('blog.title'),
+              url: `https://folio.id/${lang || 'en'}/blog`,
+              description: t('blog.description'),
             }),
           }}
         />
@@ -211,10 +217,10 @@ export default function BlogPage() {
             {/* Header */}
             <div className="flex flex-col gap-4 md:gap-5 items-center text-center max-w-[576px] relative shrink-0 w-full">
               <h1 className="font-bold leading-[36px] md:leading-[40px] text-[30px] md:text-[36px] text-[#0a0a0a] tracking-[0px]">
-                Folio Blog
+                {t('blog.title')}
               </h1>
               <p className="font-normal leading-6 text-[#737373] text-base">
-                Case studies, product insights and practical guides on travel, documents and digital identity.
+                {t('blog.description')}
               </p>
             </div>
 
@@ -234,7 +240,7 @@ export default function BlogPage() {
                     }}
                     className="flex-shrink-0"
                   >
-                    {category}
+                    {t(`blog.categories.${category}`)}
                   </Button>
                 ))}
               </div>
@@ -275,7 +281,7 @@ export default function BlogPage() {
                   variant="secondary"
                   onClick={handleLoadMore}
                 >
-                  Load more
+                  {t('blog.loadMore')}
                 </Button>
               </div>
             )}

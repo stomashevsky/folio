@@ -1,0 +1,97 @@
+{
+  "nav": {
+    "wallet": "Кошелёк",
+    "platform": "Платформа",
+    "solutions": "Решения",
+    "government": "Для государств",
+    "blog": "Блог",
+    "getInTouch": "Связаться",
+    "backToMainMenu": "Назад в главное меню",
+    "clientOnboardingDesc": "Упрощённая KYC верификация.",
+    "ageComplianceDesc": "Проверка возраста пользователей.",
+    "digitalTicketingDesc": "Выпуск и валидация билетов.",
+    "idVerificationDesc": "Проверка паспортов и удостоверений личности.",
+    "nfcIdentityScanDesc": "Считывание данных с чипа паспорта или ID.",
+    "documentIntelligenceDesc": "Извлечение данных из документов.",
+    "faceMatchDesc": "Сравнение селфи с фото на документе.",
+    "livenessCheckDesc": "Подтверждение присутствия пользователя.",
+    "dataSourceChecksDesc": "Проверка данных по внешним базам.",
+    "phoneAndEmailValidationDesc": "Подтверждение владения контактами.",
+    "behaviorInsightsDesc": "Анализ устройства и поведения.",
+    "dynamicFlowDesc": "Гибкая настройка проверок.",
+    "reviewWorkspaceDesc": "Управление кейсами верификации.",
+    "credentialIssuanceDesc": "Выпуск цифровых удостоверений."
+  },
+  "footer": {
+    "address": "Адрес:",
+    "addressValue": "88 Baker St, London W1U 6TQ, United Kingdom",
+    "contact": "Контакты:",
+    "folio": "Folio",
+    "folioApp": "Приложение Folio",
+    "blog": "Блог",
+    "government": "Для государств",
+    "about": "О нас",
+    "features": "Возможности",
+    "idWallet": "ID кошелёк",
+    "cardScanner": "Сканер карт",
+    "loyaltyCards": "Карты лояльности",
+    "getTheApp": "Скачать приложение",
+    "downloadIOS": "Скачать для iOS",
+    "downloadAndroid": "Скачать для Android",
+    "platform": "Платформа",
+    "idVerification": "Верификация личности",
+    "nfcIdentityScan": "NFC сканирование",
+    "documentIntelligence": "Анализ документов",
+    "faceMatch": "Сопоставление лиц",
+    "livenessCheck": "Проверка живости",
+    "dataSourceChecks": "Проверка источников",
+    "phoneAndEmailValidation": "Проверка телефона и email",
+    "behaviorInsights": "Анализ поведения",
+    "dynamicFlow": "Динамические сценарии",
+    "reviewWorkspace": "Рабочее пространство",
+    "credentialIssuance": "Выдача удостоверений",
+    "solutions": "Решения",
+    "clientOnboarding": "Онбординг клиентов",
+    "ageCompliance": "Проверка возраста",
+    "digitalTicketing": "Цифровые билеты",
+    "termsAndPolicies": "Условия и политики",
+    "termsOfUse": "Условия использования",
+    "privacyPolicy": "Политика конфиденциальности",
+    "security": "Безопасность",
+    "copyright": "Folio Wallet © 2025"
+  },
+  "buttons": {
+    "learnMore": "Подробнее",
+    "getInTouch": "Связаться",
+    "explorePlayground": "Открыть песочницу"
+  },
+  "language": {
+    "select": "Выберите язык"
+  },
+  "getTheApp": {
+    "title": "Folio всегда с вами, где бы вы ни были",
+    "description": "Ваши документы организованы, синхронизированы и мгновенно доступны на iOS и Android."
+  },
+  "blog": {
+    "title": "Блог Folio",
+    "description": "Кейсы, продуктовые инсайты и практические руководства о путешествиях, документах и цифровой идентификации.",
+    "loadMore": "Загрузить ещё",
+    "backToBlog": "Назад в блог",
+    "keepReading": "Читайте также",
+    "viewAll": "Смотреть все",
+    "readingTime": "{{minutes}} мин чтения",
+    "categories": {
+      "All": "Все",
+      "Company": "Компания",
+      "Product": "Продукт",
+      "Guides": "Руководства",
+      "Research": "Исследования",
+      "Safety": "Безопасность",
+      "Business": "Бизнес"
+    }
+  },
+  "legal": {
+    "lastUpdated": "Обновлено"
+  }
+}
+

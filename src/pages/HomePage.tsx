@@ -1,5 +1,6 @@
 import { memo } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, ToolCard, PhotoCard, Button, HeroTagline, HorizontalScrollCarousel } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
@@ -10,6 +11,7 @@ import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
 import { scrollToTop } from '../utils/scrollToTop'
 import { PLATFORM_ITEMS } from '../constants/platformItems'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 
 // Images
 import folioHeroPhones from '../assets/images/folio-hero-phones.png'
@@ -40,33 +42,35 @@ const BACKGROUND_STYLE = {
     'linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(90deg, rgba(229, 229, 229, 1) 0%, rgba(229, 229, 229, 1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%)',
 }
 
-
-const SOLUTIONS = [
-  { image: ageVerificationHero, title: 'Age compliance', description: 'Verify age for regulated industries', to: '/solutions/age-compliance' },
-  { image: clientOnboardingHero, title: 'Client onboarding', description: 'Streamline KYC and customer verification', to: '/solutions/client-onboarding' },
-  { image: ticketIssuanceHero, title: 'Digital ticketing', description: 'Issue and verify secure digital tickets', to: '/solutions/digital-ticketing' },
+const SOLUTIONS_CONFIG = [
+  { image: ageVerificationHero, titleKey: 'solutions.ageCompliance.title', descriptionKey: 'solutions.ageCompliance.description', to: '/solutions/age-compliance' },
+  { image: clientOnboardingHero, titleKey: 'solutions.clientOnboarding.title', descriptionKey: 'solutions.clientOnboarding.description', to: '/solutions/client-onboarding' },
+  { image: ticketIssuanceHero, titleKey: 'solutions.digitalTicketing.title', descriptionKey: 'solutions.digitalTicketing.description', to: '/solutions/digital-ticketing' },
 ]
 
-const SECURITY_FEATURES = [
-  { icon: lockKeyholeIcon, title: 'End-to-end encryption', description: 'Your data is encrypted with keys only you control' },
-  { icon: keyRoundIcon, title: 'Zero-knowledge architecture', description: 'We cannot access your documents, even if we wanted to' },
-  { icon: fingerprintIcon, title: 'Biometric protection', description: 'Face ID and fingerprint unlock for extra security' },
+const SECURITY_CONFIG = [
+  { icon: lockKeyholeIcon, titleKey: 'security.endToEndEncryption.title', descriptionKey: 'security.endToEndEncryption.description' },
+  { icon: keyRoundIcon, titleKey: 'security.zeroKnowledge.title', descriptionKey: 'security.zeroKnowledge.description' },
+  { icon: fingerprintIcon, titleKey: 'security.biometric.title', descriptionKey: 'security.biometric.description' },
 ]
 
 function HomePage() {
+  const { t } = useTranslation('home')
+  const { t: tCommon } = useTranslation('common')
   const navigate = useNavigate()
+  const { getLocalizedPath } = useLocalizedPath()
 
   usePageTitle({
-    title: 'Folio | Your digital wallet for documents and identity',
-    description: 'Secure document storage for individuals. Verification platform for businesses. Digital credentials for governments.',
-    ogTitle: 'Folio | Your digital wallet for documents and identity',
-    ogDescription: 'Secure document storage for individuals. Verification platform for businesses. Digital credentials for governments.',
+    title: t('meta.title'),
+    description: t('meta.description'),
+    ogTitle: t('meta.title'),
+    ogDescription: t('meta.description'),
     ogImage: getOgImageUrl('folio-app-hero.png'),
     ogUrl: 'https://folio.id/'
   })
 
   const handleNavigate = (to: string) => {
-    navigate(to)
+    navigate(getLocalizedPath(to))
     setTimeout(() => scrollToTop(), 100)
   }
 
@@ -88,16 +92,16 @@ function HomePage() {
                   className="w-5 h-5"
                 />
                 <span className="font-medium leading-5 text-sm text-[#737373]">
-                  Folio Wallet
+                  {t('hero.tagline')}
                 </span>
               </div>
               {/* Title & Description */}
               <div className="flex flex-col gap-4 md:gap-6 items-center text-center w-full">
                 <h1 className="font-bold leading-9 md:leading-[48px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px]">
-                  Your digital wallet for documents and identity
+                  {t('hero.title')}
                 </h1>
                 <p className="font-normal leading-7 text-[#737373] text-lg w-full">
-                  Secure document storage for individuals. Verification platform for businesses. Digital credentials for governments.
+                  {t('hero.description')}
                 </p>
               </div>
             </div>
@@ -120,17 +124,17 @@ function HomePage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-2 items-start relative shrink-0 w-full">
-                <HeroTagline icon={smartphoneIcon}>Folio app</HeroTagline>
+                <HeroTagline icon={smartphoneIcon}>{t('wallet.tagline')}</HeroTagline>
                 <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-                  Your documents, always with you
+                  {t('wallet.title')}
                 </h2>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full mt-2">
-                  Keep passports, IDs, tickets and cards in one secure place. Folio imports any document from email, PDF or photo, extracts key details and keeps everything organized and accessible.
+                  {t('wallet.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative shrink-0">
                 <Button variant="primary" onClick={() => handleNavigate('/wallet')}>
-                  Learn more
+                  {tCommon('buttons.learnMore')}
                 </Button>
               </div>
             </div>
@@ -148,17 +152,17 @@ function HomePage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-8 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-              <HeroTagline icon={smartphoneIcon}>Folio app</HeroTagline>
+              <HeroTagline icon={smartphoneIcon}>{t('wallet.tagline')}</HeroTagline>
               <h2 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
-                Your documents, always with you
+                {t('wallet.title')}
               </h2>
               <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                Keep passports, IDs, tickets and cards in one secure place. Folio imports any document from email, PDF or photo, extracts key details and keeps everything organized and accessible.
+                {t('wallet.description')}
               </p>
             </div>
             <div className="flex flex-wrap gap-3 items-start relative shrink-0 w-full">
               <Button variant="primary" onClick={() => handleNavigate('/wallet')}>
-                Learn more
+                {tCommon('buttons.learnMore')}
               </Button>
             </div>
             <VideoWithPlaceholder
@@ -188,17 +192,17 @@ function HomePage() {
             />
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-2 items-start relative shrink-0 w-full">
-                <HeroTagline icon={shieldCheckIcon}>Platform</HeroTagline>
+                <HeroTagline icon={shieldCheckIcon}>{t('platform.tagline')}</HeroTagline>
                 <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-                  Build trust at scale
+                  {t('platform.title')}
                 </h2>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full mt-2">
-                  Identity verification, document intelligence, liveness detection and more. Everything you need to verify customers and prevent fraud.
+                  {t('platform.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative shrink-0">
                 <Button variant="primary" href="mailto:contact@folio.id">
-                  Get in touch
+                  {tCommon('buttons.getInTouch')}
                 </Button>
               </div>
             </div>
@@ -207,12 +211,12 @@ function HomePage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-8 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-              <HeroTagline icon={shieldCheckIcon}>Platform</HeroTagline>
+              <HeroTagline icon={shieldCheckIcon}>{t('platform.tagline')}</HeroTagline>
               <h2 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
-                Build trust at scale
+                {t('platform.title')}
               </h2>
               <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                Identity verification, document intelligence, liveness detection and more. Everything you need to verify customers and prevent fraud.
+                {t('platform.description')}
               </p>
             </div>
             <VideoWithPlaceholder
@@ -226,7 +230,7 @@ function HomePage() {
             />
             <div className="flex flex-wrap gap-3 items-start relative shrink-0 w-full">
               <Button variant="primary" href="mailto:contact@folio.id">
-                Get in touch
+                {tCommon('buttons.getInTouch')}
               </Button>
             </div>
           </div>
@@ -236,14 +240,14 @@ function HomePage() {
         {/* Products Carousel Section */}
         <section className="bg-white flex flex-col items-center overflow-hidden py-16 md:py-24 relative shrink-0 w-full">
           <HorizontalScrollCarousel
-            title="Everything you need to verify identity"
+            title={t('platform.carouselTitle')}
           >
             {PLATFORM_ITEMS.map((item) => (
               <PhotoCard
                 key={item.path}
                 image={item.image}
-                title={item.label}
-                description={item.description}
+                title={tCommon(item.labelKey)}
+                description={tCommon(item.descriptionKey)}
                 to={item.path}
                 carouselMode
               />
@@ -255,21 +259,21 @@ function HomePage() {
         <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
           <div className="flex flex-col gap-10 md:gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-4 items-center w-full">
-              <HeroTagline icon={lightbulbIcon}>Solutions</HeroTagline>
+              <HeroTagline icon={lightbulbIcon}>{t('solutions.tagline')}</HeroTagline>
               <SectionHeader
-                title="Built for your industry"
-                description="Tailored solutions for regulated industries and high-trust environments."
+                title={t('solutions.title')}
+                description={t('solutions.description')}
                 maxWidth="576px"
               />
             </div>
 
             <div className="flex flex-col sm:grid sm:grid-cols-3 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
-              {SOLUTIONS.map((solution) => (
+              {SOLUTIONS_CONFIG.map((solution) => (
                 <PhotoCard
                   key={solution.to}
                   image={solution.image}
-                  title={solution.title}
-                  description={solution.description}
+                  title={t(solution.titleKey)}
+                  description={t(solution.descriptionKey)}
                   to={solution.to}
                 />
               ))}
@@ -283,20 +287,20 @@ function HomePage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-2 items-start relative shrink-0 w-full">
-                <HeroTagline icon={landmarkIcon}>Government</HeroTagline>
+                <HeroTagline icon={landmarkIcon}>{t('government.tagline')}</HeroTagline>
                 <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-                  Digital identity for governments
+                  {t('government.title')}
                 </h2>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full mt-2">
-                  Tools for governments to design, test and deploy modern digital credentials aligned with global standards. Explore our sandbox to see European digital ID flows in action.
+                  {t('government.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative shrink-0">
                 <Button variant="primary" onClick={() => handleNavigate('/government/playground')}>
-                  Explore Playground
+                  {tCommon('buttons.explorePlayground')}
                 </Button>
                 <Button variant="outline" onClick={() => handleNavigate('/government')}>
-                  Learn more
+                  {tCommon('buttons.learnMore')}
                 </Button>
               </div>
             </div>
@@ -312,20 +316,20 @@ function HomePage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-8 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-              <HeroTagline icon={landmarkIcon}>Government</HeroTagline>
+              <HeroTagline icon={landmarkIcon}>{t('government.tagline')}</HeroTagline>
               <h2 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
-                Digital identity for governments
+                {t('government.title')}
               </h2>
               <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                Tools for governments to design, test and deploy modern digital credentials aligned with global standards. Explore our sandbox to see European digital ID flows in action.
+                {t('government.description')}
               </p>
             </div>
             <div className="flex flex-wrap gap-3 items-start relative shrink-0 w-full">
               <Button variant="primary" onClick={() => handleNavigate('/government/playground')}>
-                Explore Playground
+                {tCommon('buttons.explorePlayground')}
               </Button>
               <Button variant="outline" onClick={() => handleNavigate('/government')}>
-                Learn more
+                {tCommon('buttons.learnMore')}
               </Button>
             </div>
             <ImageWithPlaceholder
@@ -342,13 +346,13 @@ function HomePage() {
         <section className="flex flex-col items-center px-0 py-16 md:py-24 relative w-full" style={BACKGROUND_STYLE}>
           <div className="flex flex-col gap-8 items-center max-w-[672px] px-6 w-full">
             <p className="font-medium leading-7 md:leading-7 text-lg md:text-xl text-[#0a0a0a] text-center">
-              "Working with Folio has been a transformative experience… they set a new standard of excellence for how digital identity solutions should be delivered."
+              {t('testimonial.quote')}
             </p>
             <div className="flex flex-col gap-4 items-center">
               <div className="relative rounded-full shrink-0 w-12 h-12 md:w-14 md:h-14">
                 <img
                   src={governmentTestimonialAvatar}
-                  alt="Ilirjan Celibashi"
+                  alt={t('testimonial.name')}
                   className="absolute inset-0 object-cover rounded-full w-full h-full"
                   loading="lazy"
                   width={56}
@@ -356,9 +360,9 @@ function HomePage() {
                 />
               </div>
               <div className="flex flex-col md:flex-row gap-0.5 md:gap-2 items-center text-base text-center">
-                <span className="font-medium text-[#0a0a0a]">Ilirjan Celibashi</span>
+                <span className="font-medium text-[#0a0a0a]">{t('testimonial.name')}</span>
                 <span className="hidden md:inline text-[#737373]">·</span>
-                <span className="font-normal text-[#737373]">State Election Commissioner, Albania</span>
+                <span className="font-normal text-[#737373]">{t('testimonial.role')}</span>
               </div>
             </div>
           </div>
@@ -368,25 +372,25 @@ function HomePage() {
         <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           <div className="flex flex-col gap-10 md:gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="Security you can trust"
-              description="Your data is protected with industry-leading security measures."
+              title={t('security.title')}
+              description={t('security.description')}
               maxWidth="576px"
             />
 
             <div className="flex flex-col sm:grid sm:grid-cols-3 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
-              {SECURITY_FEATURES.map((feature) => (
+              {SECURITY_CONFIG.map((feature) => (
                 <ToolCard
-                  key={feature.title}
+                  key={feature.titleKey}
                   icon={feature.icon}
-                  title={feature.title}
-                  description={feature.description}
+                  title={t(feature.titleKey)}
+                  description={t(feature.descriptionKey)}
                 />
               ))}
             </div>
 
             <div className="flex justify-center w-full">
               <Button variant="secondary" onClick={() => handleNavigate('/security')}>
-                Learn more
+                {tCommon('buttons.learnMore')}
               </Button>
             </div>
           </div>

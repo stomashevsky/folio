@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
@@ -127,6 +128,7 @@ const FACE_MATCH_FAQ: FAQItem[] = [
 ]
 
 export default function FaceMatchPage() {
+  const { t } = useTranslation('platform')
   const [activeHowItWorksId, setActiveHowItWorksId] = useState<string | null>('compliance-rules')
   const [activeKeyFeatureId, setActiveKeyFeatureId] = useState<string | null>('flexible-controls')
   
@@ -137,10 +139,10 @@ export default function FaceMatchPage() {
   }
 
   usePageTitle({
-    title: 'Face Match | Folio Wallet',
-    description: 'Exceptional accuracy delivered with privacy, transparency and a seamless user experience.',
-    ogTitle: 'Face Match | Folio Wallet',
-    ogDescription: 'Exceptional accuracy delivered with privacy, transparency and a seamless user experience.',
+    title: t('faceMatch.meta.title'),
+    description: t('faceMatch.meta.description'),
+    ogTitle: t('faceMatch.meta.title'),
+    ogDescription: t('faceMatch.meta.description'),
     ogImage: getOgImageUrl('face-match-hero.png'),
     ogUrl: 'https://folio.id/platform/face-match'
   })
@@ -155,17 +157,17 @@ export default function FaceMatchPage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
-                <HeroTagline icon={circleUserIcon}>Face match</HeroTagline>
+                <HeroTagline icon={circleUserIcon}>{t('faceMatch.hero.tagline')}</HeroTagline>
                 <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px]">
-                  Powerful face recognition
+                  {t('faceMatch.hero.title')}
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                  Exceptional accuracy delivered with privacy, transparency and a seamless user experience.
+                  {t('faceMatch.hero.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>

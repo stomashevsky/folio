@@ -1,21 +1,26 @@
 import { useLocation, useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { LogoButton, Button, MenuItem } from '../ui'
 import { scrollToTop } from '../../utils/scrollToTop'
 import { scrollToSection } from '../../utils/scrollToSection'
+import { useLocalizedPath } from '../../i18n/useLocalizedPath'
 import SolutionsDropdown from './SolutionsDropdown'
 import PlatformDropdown from './PlatformDropdown'
 
 export default function DesktopNav() {
+  const { t } = useTranslation('common')
   const location = useLocation()
   const navigate = useNavigate()
+  const { getLocalizedPath, currentLang } = useLocalizedPath()
 
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault()
-    const isHomePage = location.pathname === '/'
+    const homePath = getLocalizedPath('/')
+    const isHomePage = location.pathname === homePath || location.pathname === `/${currentLang}`
     if (isHomePage) {
       scrollToTop()
     } else {
-      navigate('/')
+      navigate(homePath)
       // Scroll after a short delay to allow the page to load
       setTimeout(() => {
         scrollToTop()
@@ -24,11 +29,12 @@ export default function DesktopNav() {
   }
 
   const handleNavClick = (path: string) => {
-    if (location.pathname === path) {
+    const localizedPath = getLocalizedPath(path)
+    if (location.pathname === localizedPath) {
       // Only scroll if we're exactly on that page
       scrollToTop()
     } else {
-      navigate(path)
+      navigate(localizedPath)
       // Scroll after a short delay to allow the page to load
       setTimeout(() => {
         scrollToTop()
@@ -38,11 +44,12 @@ export default function DesktopNav() {
 
   const handleGetAppClick = (e: React.MouseEvent) => {
     e.preventDefault()
-    const isWalletPage = location.pathname === '/wallet'
+    const walletPath = getLocalizedPath('/wallet')
+    const isWalletPage = location.pathname === walletPath
     if (isWalletPage) {
       scrollToSection('get-the-app')
     } else {
-      navigate('/wallet')
+      navigate(walletPath)
       setTimeout(() => {
         scrollToSection('get-the-app')
       }, 100)
@@ -62,12 +69,12 @@ export default function DesktopNav() {
 
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-1 items-center">
           <MenuItem onClick={() => handleNavClick('/wallet')}>
-            Folio app
+            {t('footer.folioApp')}
           </MenuItem>
           <PlatformDropdown />
           <SolutionsDropdown />
           <MenuItem onClick={() => handleNavClick('/government')}>
-            Government
+            {t('footer.government')}
           </MenuItem>
           <MenuItem
             onClick={(e) => {
@@ -75,7 +82,7 @@ export default function DesktopNav() {
               handleNavClick('/blog')
             }}
           >
-            Blog
+            {t('footer.blog')}
           </MenuItem>
         </div>
 
@@ -84,7 +91,7 @@ export default function DesktopNav() {
             variant="primary"
             onClick={handleGetAppClick}
           >
-            Get the app
+            {t('footer.getTheApp')}
           </Button>
         </div>
       </div>

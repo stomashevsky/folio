@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
@@ -91,6 +92,7 @@ const useCases = [
 ]
 
 export default function NfcIdentityScanPage() {
+  const { t } = useTranslation('platform')
   const [activeHowItWorksId, setActiveHowItWorksId] = useState<string | null>('add-nfc')
   const [activeKeyFeatureId, setActiveKeyFeatureId] = useState<string | null>('stronger-security')
   
@@ -101,10 +103,10 @@ export default function NfcIdentityScanPage() {
   }
 
   usePageTitle({
-    title: 'NFC Identity Scan | Folio Wallet',
-    description: 'Spot passport and ID fraud instantly. Use NFC to read embedded passport and ID chip data, adding an extra security layer without adding user friction.',
-    ogTitle: 'NFC Identity Scan | Folio Wallet',
-    ogDescription: 'Spot passport and ID fraud instantly. Use NFC to read embedded passport and ID chip data, adding an extra security layer without adding user friction.',
+    title: t('nfcIdentityScan.meta.title'),
+    description: t('nfcIdentityScan.meta.description'),
+    ogTitle: t('nfcIdentityScan.meta.title'),
+    ogDescription: t('nfcIdentityScan.meta.description'),
     ogImage: getOgImageUrl('nfc-identity-scan-hero.png'),
     ogUrl: 'https://folio.id/platform/nfc-identity-scan'
   })

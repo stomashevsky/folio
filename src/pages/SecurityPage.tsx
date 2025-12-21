@@ -1,4 +1,5 @@
 import { memo } from 'react'
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, ToolCard, Button, HeroTagline, CertificationCard } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
@@ -6,6 +7,7 @@ import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
 import { scrollToSection } from '../utils/scrollToSection'
 import { useNavigate, useLocation } from 'react-router-dom'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 import lockKeyholeIcon from '../assets/icons/LockKeyhole.svg'
 import keyRoundIcon from '../assets/icons/KeyRound.svg'
 import smartphoneIcon from '../assets/icons/Smartphone.svg'
@@ -22,24 +24,26 @@ const BACKGROUND_STYLE = {
 }
 
 function SecurityPage() {
+  const { t } = useTranslation('pages')
   const navigate = useNavigate()
   const location = useLocation()
+  const { getLocalizedPath } = useLocalizedPath()
   
   usePageTitle({
-    title: 'Security | Folio Wallet',
-    description: 'Learn how Folio protects your documents with end-to-end encryption, zero-knowledge architecture, and industry-leading security standards.',
-    ogTitle: 'Security | Folio Wallet',
-    ogDescription: 'Your data stays yours. Folio uses end-to-end encryption and zero-knowledge architecture to keep your documents private and secure.',
+    title: t('security.meta.title'),
+    description: t('security.meta.description'),
+    ogTitle: t('security.meta.ogTitle'),
+    ogDescription: t('security.meta.ogDescription'),
     ogImage: getOgImageUrl('security-hero.png'),
     ogUrl: 'https://folio.id/security'
   })
 
   const handleGetApp = () => {
-    const isWalletPage = location.pathname === '/wallet'
+    const isWalletPage = location.pathname.endsWith('/wallet')
     if (isWalletPage) {
       scrollToSection('get-the-app')
     } else {
-      navigate('/wallet')
+      navigate(getLocalizedPath('/wallet'))
       setTimeout(() => {
         scrollToSection('get-the-app')
       }, 100)
@@ -53,12 +57,12 @@ function SecurityPage() {
         {/* Hero Section */}
         <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full">
           <div className="flex flex-col gap-6 items-center max-w-[768px] px-6 py-0 relative shrink-0 w-full text-center">
-            <HeroTagline icon={shieldCheckIcon}>Security</HeroTagline>
+            <HeroTagline icon={shieldCheckIcon}>{t('security.hero.tagline')}</HeroTagline>
             <h1 className="font-bold leading-9 md:leading-[48px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px]">
-              Your data stays yours
+              {t('security.hero.title')}
             </h1>
             <p className="font-normal leading-6 text-[#737373] text-base w-full">
-              Folio is built on the principle that your personal documents belong to you alone. We use end-to-end encryption and zero-knowledge architecture to ensure that only you can access your data. Not even Folio can read your documents.
+              {t('security.hero.description')}
             </p>
           </div>
         </section>
@@ -67,31 +71,31 @@ function SecurityPage() {
         <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
           <div className="flex flex-col gap-10 md:gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="How we protect your data"
-              description="Every layer of Folio is designed with security and privacy at its core."
+              title={t('security.keyFeatures.title')}
+              description={t('security.keyFeatures.description')}
               maxWidth="576px"
             />
             
             <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
               <ToolCard
                 icon={lockKeyholeIcon}
-                title="End-to-end encryption"
-                description="Your documents are encrypted before they leave your device. Only you hold the keys to decrypt them."
+                title={t('security.keyFeatures.e2e.title')}
+                description={t('security.keyFeatures.e2e.description')}
               />
               <ToolCard
                 icon={keyRoundIcon}
-                title="Zero-knowledge architecture"
-                description="We never see your data. Our servers store only encrypted information that we cannot read or access."
+                title={t('security.keyFeatures.zeroKnowledge.title')}
+                description={t('security.keyFeatures.zeroKnowledge.description')}
               />
               <ToolCard
                 icon={smartphoneIcon}
-                title="Local-first storage"
-                description="Your documents live on your device first. They're always available, even without internet."
+                title={t('security.keyFeatures.localFirst.title')}
+                description={t('security.keyFeatures.localFirst.description')}
               />
               <ToolCard
                 icon={shieldCheckIcon}
-                title="Secure cloud sync"
-                description="When you sync across devices, your data travels encrypted. We facilitate the transfer but cannot view the contents."
+                title={t('security.keyFeatures.secureSync.title')}
+                description={t('security.keyFeatures.secureSync.description')}
               />
             </div>
           </div>
@@ -102,23 +106,23 @@ function SecurityPage() {
           <div className="flex flex-col gap-12 md:gap-16 items-center max-w-[768px] px-6 py-0 relative shrink-0 w-full">
             <SecurityBlock
               icon={lockKeyholeIcon}
-              title="Encryption you can trust"
-              description="Every document, card, and piece of personal information you store in Folio is encrypted using modern cryptographic standards. Your encryption keys are derived from credentials only you know. This means your data remains private even if our servers were ever compromised."
+              title={t('security.detailed.encryption.title')}
+              description={t('security.detailed.encryption.description')}
             />
             <SecurityBlock
               icon={keyRoundIcon}
-              title="We cannot access your data"
-              description="Folio operates on a zero-knowledge model. We store only encrypted blobs and cryptographic hashes on our servers. Without your personal keys, this data is meaningless. We cannot decrypt it, read it, or share it with anyone. Your privacy is not a policy choice, it is a technical guarantee."
+              title={t('security.detailed.noAccess.title')}
+              description={t('security.detailed.noAccess.description')}
             />
             <SecurityBlock
               icon={smartphoneIcon}
-              title="Your device, your data"
-              description="Folio stores your documents locally on your device first. This means you always have access to your important information, whether you're online or offline. Cloud sync is optional and always encrypted. You stay in control of where your data lives."
+              title={t('security.detailed.yourDevice.title')}
+              description={t('security.detailed.yourDevice.description')}
             />
             <SecurityBlock
               icon={fingerprintIcon}
-              title="Biometric protection"
-              description="Add an extra layer of security with Face ID or fingerprint authentication. Even if someone has your phone, they cannot access your Folio without your biometric confirmation."
+              title={t('security.detailed.biometric.title')}
+              description={t('security.detailed.biometric.description')}
             />
           </div>
         </section>
@@ -127,26 +131,26 @@ function SecurityPage() {
         <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
           <div className="flex flex-col gap-10 md:gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="Compliance and certifications"
-              description="We maintain rigorous security standards and comply with international data protection regulations."
+              title={t('security.compliance.title')}
+              description={t('security.compliance.description')}
               maxWidth="576px"
             />
             
             <div className="flex flex-col sm:grid sm:grid-cols-3 gap-6 items-start sm:items-stretch justify-center w-full max-w-[900px] min-w-0">
               <CertificationCard
                 logo={iso27001Logo}
-                title="ISO 27001"
-                description="Certified information security management ensuring systematic protection of sensitive data."
+                title={t('security.compliance.iso27001.title')}
+                description={t('security.compliance.iso27001.description')}
               />
               <CertificationCard
                 logo={soc2Logo}
-                title="SOC 2 Type II"
-                description="Independent verification of our security controls, availability, and confidentiality practices."
+                title={t('security.compliance.soc2.title')}
+                description={t('security.compliance.soc2.description')}
               />
               <CertificationCard
                 logo={gdprLogo}
-                title="GDPR compliant"
-                description="Full compliance with European data protection regulations, giving you control over your personal data."
+                title={t('security.compliance.gdpr.title')}
+                description={t('security.compliance.gdpr.description')}
               />
             </div>
           </div>
@@ -156,8 +160,8 @@ function SecurityPage() {
         <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           <div className="flex flex-col gap-6 items-center max-w-[768px] px-6 py-0 relative shrink-0 w-full text-center">
             <SectionHeader
-              title="Your recovery code matters"
-              description="During setup, Folio generates a unique Recovery Code. This code is the only way to restore your account if you lose access to your devices. Because of our zero-knowledge design, we cannot help you recover your data without it. Store your Recovery Code somewhere safe, like a password manager or a secure physical location."
+              title={t('security.recoveryCode.title')}
+              description={t('security.recoveryCode.description')}
               maxWidth="768px"
             />
           </div>
@@ -167,12 +171,12 @@ function SecurityPage() {
         <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
           <div className="flex flex-col gap-8 items-center max-w-[576px] px-6 py-0 relative shrink-0 w-full text-center">
             <SectionHeader
-              title="Ready to secure your documents?"
-              description="Download Folio and experience document storage that puts your privacy first."
+              title={t('security.cta.title')}
+              description={t('security.cta.description')}
               maxWidth="576px"
             />
             <Button variant="primary" onClick={handleGetApp}>
-              Get the app
+              {t('security.cta.button')}
             </Button>
           </div>
         </section>

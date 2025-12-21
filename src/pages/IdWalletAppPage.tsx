@@ -1,14 +1,16 @@
 import { memo } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, ToolCard, Button, HeroTagline } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
 import FooterSection from '../components/sections/FooterSection'
-import FAQSection, { FAQItem } from '../components/sections/FAQSection'
+import FAQSection from '../components/sections/FAQSection'
 import GetTheAppSection from '../components/sections/GetTheAppSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
 import { scrollToSection } from '../utils/scrollToSection'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 import idWalletAppHero from '../assets/images/id-wallet-app-hero.png'
 import idCardIcon from '../assets/icons/IdCard.svg'
 import shieldCheckIcon from '../assets/icons/ShieldCheck.svg'
@@ -24,40 +26,21 @@ const BACKGROUND_STYLE = {
     'linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(90deg, rgba(229, 229, 229, 1) 0%, rgba(229, 229, 229, 1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%)',
 }
 
-const ID_WALLET_FAQ: FAQItem[] = [
-  {
-    q: 'What types of ID cards can I store in Folio?',
-    a: 'You can store passports, national ID cards, driver\'s licenses, residence permits, and any other government-issued identification documents.',
-  },
-  {
-    q: 'Is it safe to store my ID card in a digital wallet?',
-    a: 'Yes. Folio uses end-to-end encryption to protect your ID cards. Your documents are encrypted on your device with keys only you control. Not even Folio can access your data.',
-  },
-  {
-    q: 'Can I use Folio as a driver license wallet?',
-    a: 'Yes. Folio is perfect for storing your driver\'s license digitally. You can scan your license, and Folio will extract all important details like expiry date, license number, and categories.',
-  },
-  {
-    q: 'Will Folio remind me when my ID expires?',
-    a: 'Yes. Folio automatically detects expiry dates from your ID cards and sends you reminders before they expire, so you\'re never caught off guard.',
-  },
-  {
-    q: 'Can I share my ID with someone else?',
-    a: 'Yes. You can create shared folders to safely share your ID documents with family members or trusted contacts. They\'ll always see the latest version.',
-  },
-]
-
 function IdWalletAppPage() {
+  const { t } = useTranslation('pages')
   const navigate = useNavigate()
+  const { getLocalizedPath } = useLocalizedPath()
   
   usePageTitle({
-    title: 'ID card wallet app - Digital card holder for driver license | Folio',
-    description: 'Folio ID card wallet app allows you to easily manage ID cards and driver licenses. Keep everything safe with end-to-end encryption. Available on iOS and Android.',
-    ogTitle: 'ID card wallet app | Folio',
-    ogDescription: 'Store your passports, ID cards, and driver licenses securely in one digital wallet. End-to-end encrypted.',
+    title: t('idWalletApp.meta.title'),
+    description: t('idWalletApp.meta.description'),
+    ogTitle: t('idWalletApp.meta.ogTitle'),
+    ogDescription: t('idWalletApp.meta.ogDescription'),
     ogImage: getOgImageUrl('folio-app-hero.png'),
     ogUrl: 'https://folio.id/id-wallet-app/'
   })
+
+  const faqData = (t('idWalletApp.faq.items', { returnObjects: true }) as Array<{ q: string; a: string }>)
 
   return (
     <div className="flex flex-col items-start min-h-screen relative w-full">
@@ -69,26 +52,26 @@ function IdWalletAppPage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
-                <HeroTagline icon={idCardIcon}>ID wallet</HeroTagline>
+                <HeroTagline icon={idCardIcon}>{t('idWalletApp.hero.tagline')}</HeroTagline>
                 <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px]">
-                  ID card wallet app
+                  {t('idWalletApp.hero.title')}
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                  Keep your passports, ID cards, and driver licenses organized in one secure digital wallet. Folio extracts key details automatically, reminds you before documents expire, and keeps everything protected with end-to-end encryption.
+                  {t('idWalletApp.hero.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative shrink-0 w-full">
                 <Button variant="primary" onClick={() => scrollToSection('get-the-app')}>
-                  Get the app
+                  {t('idWalletApp.hero.getApp')}
                 </Button>
-                <Button variant="secondary" onClick={() => navigate('/wallet')}>
-                  Learn more
+                <Button variant="secondary" onClick={() => navigate(getLocalizedPath('/wallet'))}>
+                  {t('idWalletApp.hero.learnMore')}
                 </Button>
               </div>
             </div>
             <ImageWithPlaceholder
               src={idWalletAppHero}
-              alt="ID card wallet app preview"
+              alt={t('idWalletApp.hero.imageAlt')}
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
               fetchPriority="high"
@@ -100,26 +83,26 @@ function IdWalletAppPage() {
           <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-                <HeroTagline icon={idCardIcon}>ID wallet</HeroTagline>
+                <HeroTagline icon={idCardIcon}>{t('idWalletApp.hero.tagline')}</HeroTagline>
                 <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
-                  ID card wallet app
+                  {t('idWalletApp.hero.title')}
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                  Keep your passports, ID cards, and driver licenses organized in one secure digital wallet. Folio extracts key details automatically, reminds you before documents expire, and keeps everything protected with end-to-end encryption.
+                  {t('idWalletApp.hero.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative shrink-0 w-full">
                 <Button variant="primary" onClick={() => scrollToSection('get-the-app')}>
-                  Get the app
+                  {t('idWalletApp.hero.getApp')}
                 </Button>
-                <Button variant="secondary" onClick={() => navigate('/wallet')}>
-                  Learn more
+                <Button variant="secondary" onClick={() => navigate(getLocalizedPath('/wallet'))}>
+                  {t('idWalletApp.hero.learnMore')}
                 </Button>
               </div>
             </div>
             <ImageWithPlaceholder
               src={idWalletAppHero}
-              alt="ID card wallet app preview"
+              alt={t('idWalletApp.hero.imageAlt')}
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
               fetchPriority="high"
@@ -132,31 +115,31 @@ function IdWalletAppPage() {
         <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
           <div className="flex flex-col gap-10 md:gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="Everything you need in an ID wallet"
-              description="Folio is designed to store and manage your most important identification documents securely."
+              title={t('idWalletApp.features.title')}
+              description={t('idWalletApp.features.description')}
               maxWidth="576px"
             />
             
             <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
               <ToolCard
                 icon={idCardIcon}
-                title="All your IDs in one place"
-                description="Store passports, national IDs, driver licenses, and residence permits in a clean, organized format."
+                title={t('idWalletApp.features.allIds.title')}
+                description={t('idWalletApp.features.allIds.description')}
               />
               <ToolCard
                 icon={scanTextIcon}
-                title="Smart data extraction"
-                description="Scan your ID and Folio automatically extracts names, dates, document numbers, and other key details."
+                title={t('idWalletApp.features.smartExtraction.title')}
+                description={t('idWalletApp.features.smartExtraction.description')}
               />
               <ToolCard
                 icon={lockKeyholeIcon}
-                title="End-to-end encrypted"
-                description="Your ID documents are encrypted with keys only you control. Not even Folio can read your data."
+                title={t('idWalletApp.features.encrypted.title')}
+                description={t('idWalletApp.features.encrypted.description')}
               />
               <ToolCard
                 icon={refreshCwIcon}
-                title="Expiry reminders"
-                description="Get notified before your passport, ID, or driver license expires so you can renew on time."
+                title={t('idWalletApp.features.expiryReminders.title')}
+                description={t('idWalletApp.features.expiryReminders.description')}
               />
             </div>
           </div>
@@ -166,8 +149,8 @@ function IdWalletAppPage() {
         <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           <div className="flex flex-col gap-10 md:gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="How to add your ID cards"
-              description="Adding your identification documents to Folio takes just seconds."
+              title={t('idWalletApp.howItWorks.title')}
+              description={t('idWalletApp.howItWorks.description')}
               maxWidth="576px"
             />
             
@@ -175,20 +158,20 @@ function IdWalletAppPage() {
               <HowItWorksStep
                 number="1"
                 icon={scanTextIcon}
-                title="Scan or upload"
-                description="Use your camera to scan your ID card, or upload a photo from your library."
+                title={t('idWalletApp.howItWorks.step1.title')}
+                description={t('idWalletApp.howItWorks.step1.description')}
               />
               <HowItWorksStep
                 number="2"
                 icon={idCardIcon}
-                title="Review details"
-                description="Folio extracts all important information automatically. Verify and edit if needed."
+                title={t('idWalletApp.howItWorks.step2.title')}
+                description={t('idWalletApp.howItWorks.step2.description')}
               />
               <HowItWorksStep
                 number="3"
                 icon={smartphoneIcon}
-                title="Access anywhere"
-                description="Your ID is now securely stored and synced across all your devices."
+                title={t('idWalletApp.howItWorks.step3.title')}
+                description={t('idWalletApp.howItWorks.step3.description')}
               />
             </div>
           </div>
@@ -198,30 +181,30 @@ function IdWalletAppPage() {
         <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
           <div className="flex flex-col gap-10 md:gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="Why use Folio as your ID wallet"
+              title={t('idWalletApp.benefits.title')}
               maxWidth="576px"
             />
             
             <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
               <ToolCard
                 icon={shieldCheckIcon}
-                title="Bank-level security"
-                description="Zero-knowledge architecture means your ID documents remain private, even from us."
+                title={t('idWalletApp.benefits.bankSecurity.title')}
+                description={t('idWalletApp.benefits.bankSecurity.description')}
               />
               <ToolCard
                 icon={imagesIcon}
-                title="Original photos saved"
-                description="Keep the original scans attached to each document for reference when needed."
+                title={t('idWalletApp.benefits.originalPhotos.title')}
+                description={t('idWalletApp.benefits.originalPhotos.description')}
               />
               <ToolCard
                 icon={userRoundCheckIcon}
-                title="Family sharing"
-                description="Create shared folders to manage ID documents for your entire family in one place."
+                title={t('idWalletApp.benefits.familySharing.title')}
+                description={t('idWalletApp.benefits.familySharing.description')}
               />
               <ToolCard
                 icon={smartphoneIcon}
-                title="Works offline"
-                description="Access your ID cards anytime, even without internet connection."
+                title={t('idWalletApp.benefits.worksOffline.title')}
+                description={t('idWalletApp.benefits.worksOffline.description')}
               />
             </div>
           </div>
@@ -229,9 +212,9 @@ function IdWalletAppPage() {
 
         {/* FAQ Section */}
         <FAQSection 
-          faqData={ID_WALLET_FAQ}
-          title="Frequently asked questions"
-          description="Common questions about using Folio as your ID card wallet app."
+          faqData={faqData}
+          title={t('idWalletApp.faq.title')}
+          description={t('idWalletApp.faq.description')}
         />
 
         {/* Get the App Section */}

@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import type { BlogArticle } from '../../data/blogArticles'
 import imagePlaceholder from '../../assets/images/image-placeholder.png'
 import { saveBlogPageState, clearBlogPageState } from '../../utils/blogScrollPosition'
+import { DEFAULT_LANGUAGE } from '../../i18n'
 
 interface BlogImageProps {
   src: string
@@ -38,12 +40,18 @@ interface BlogArticleCardProps {
 }
 
 export default function BlogArticleCard({ article, variant = 'desktop', priority = false }: BlogArticleCardProps) {
+  const { t } = useTranslation('common')
+  const { lang } = useParams<{ lang?: string }>()
   const location = useLocation()
+  const currentLang = lang || DEFAULT_LANGUAGE
+  
+  const getLocalizedPath = (path: string) => `/${currentLang}${path}`
   
   const handleClick = () => {
     // Only save scroll position if navigating from Blog page
     // If navigating from article page (KeepReadingSection), clear saved position
-    if (location.pathname === '/blog') {
+    const blogPath = getLocalizedPath('/blog')
+    if (location.pathname === blogPath) {
       const scrollY = window.scrollY || document.documentElement.scrollTop
       const savedRaw = sessionStorage.getItem('blogPageState')
       let displayedArticles = 15
@@ -90,7 +98,7 @@ export default function BlogArticleCard({ article, variant = 'desktop', priority
       <div className="group flex flex-col gap-5 items-start px-0 relative shrink-0 w-full">
         {article.slug ? (
           <Link
-            to={`/blog/${article.slug}`}
+            to={getLocalizedPath(`/blog/${article.slug}`)}
             className="flex flex-col gap-5 w-full"
             onClick={handleClick}
           >
@@ -104,7 +112,7 @@ export default function BlogArticleCard({ article, variant = 'desktop', priority
 
         {/* Metadata */}
         <div className="flex flex-wrap gap-4 items-center leading-5 relative shrink-0 text-sm w-full">
-          <p className="relative shrink-0 text-[#0a0a0a]">{article.category}</p>
+          <p className="relative shrink-0 text-[#0a0a0a]">{t(`blog.categories.${article.category}`)}</p>
           <p className="relative shrink-0 text-[#737373]">{article.date}</p>
         </div>
       </div>
@@ -135,7 +143,7 @@ export default function BlogArticleCard({ article, variant = 'desktop', priority
     <div className="group flex flex-col gap-3 w-full">
       {article.slug ? (
         <Link
-          to={`/blog/${article.slug}`}
+          to={getLocalizedPath(`/blog/${article.slug}`)}
           className="flex flex-col w-full"
           onClick={handleClick}
         >
@@ -149,7 +157,7 @@ export default function BlogArticleCard({ article, variant = 'desktop', priority
 
       {/* Metadata */}
       <div className="flex flex-wrap gap-4 items-center text-sm">
-        <p className="text-[#0a0a0a]">{article.category}</p>
+        <p className="text-[#0a0a0a]">{t(`blog.categories.${article.category}`)}</p>
         <p className="text-[#737373]">{article.date}</p>
       </div>
     </div>

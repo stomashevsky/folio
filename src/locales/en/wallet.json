@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "title": "Folio Wallet | Digital document wallet app",
+    "description": "Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find."
+  },
+  "hero": {
+    "tagline": "Folio app",
+    "title": "Your documents, always with you",
+    "description": "Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible. It imports any document from email, PDF or photo, cleans it up, extracts key details and keeps everything easy to find. Your essential information is always at hand when you need it.",
+    "cta": "Get the app"
+  },
+  "features": {
+    "title": "Everything in one secure place",
+    "cards": {
+      "title": "Payment & Gift Cards",
+      "description": "Keep your debit, credit and gift cards with all essential details. Quickly access card numbers, expiry dates and other important information, fully synced and protected across your devices."
+    },
+    "ids": {
+      "title": "Personal IDs",
+      "description": "Store passports, ID cards and residence permits securely and in a clean, readable format. Folio extracts names, dates and numbers for quick access and reminds you before anything expires."
+    },
+    "tickets": {
+      "title": "Tickets and Bookings",
+      "description": "Import flights, trains, hotels and events from email, PDF or photo. Folio cleans each ticket, extracts times, locations and passenger information, and turns it into a clear and reliable card for your trips."
+    },
+    "timeline": {
+      "title": "Travel Timeline",
+      "description": "Your entire journey is organized automatically day by day. Tickets and bookings are sorted chronologically, grouped by date and displayed as a clean timeline so you always know what comes next."
+    },
+    "folders": {
+      "title": "Shared Folders",
+      "description": "Create shared document spaces for family and friends. Everyone sees the latest versions of tickets, IDs or travel plans and can add their own documents while original files stay safely with their owners."
+    }
+  },
+  "import": {
+    "title": "Add documents in seconds",
+    "description": "Choose the easiest way to bring your documents into Folio.",
+    "scan": {
+      "title": "Scan documents",
+      "description": "Capture with your camera and Folio extracts the details."
+    },
+    "photos": {
+      "title": "Upload photos",
+      "description": "Add documents saved in your photo library."
+    },
+    "pdf": {
+      "title": "Import PDFs",
+      "description": "Import digital tickets, cards or confirmations in one tap."
+    },
+    "email": {
+      "title": "Forward emails",
+      "description": "Send any ticket or booking email to docs@folio.id."
+    }
+  },
+  "trips": {
+    "title": "Your trips, neatly organized",
+    "titleMobile": "Travel plans, thoughtfully organized",
+    "unifiedFormat": {
+      "title": "Unified format",
+      "description": "Flights, trains, hotels and events are transformed into one clean and readable format."
+    },
+    "everyKind": {
+      "title": "Every kind of booking",
+      "description": "Works with flights, trains, buses, ferries, hotels and events."
+    },
+    "keyDetails": {
+      "title": "All key details extracted",
+      "description": "Times, dates, locations, passenger names and booking info captured automatically."
+    },
+    "originalFiles": {
+      "title": "Original files attached",
+      "description": "Your PDF or email is saved with the document for quick reference."
+    }
+  },
+  "viewer": {
+    "title": "A clear view of every document",
+    "description": "Folio displays your documents in clean, readable layouts with key fields extracted automatically. You can browse photos in fullscreen, view attached PDFs and copy or share any detail with ease."
+  },
+  "tools": {
+    "title": "Smart tools that truly help",
+    "description": "Folio includes thoughtful features that make everyday use easier and help you track trips, find documents instantly, share with confidence and stay ahead of important dates.",
+    "timeline": {
+      "title": "Travel Timeline",
+      "description": "Your trip is arranged into a clean scrollable timeline so you always know what comes next."
+    },
+    "labels": {
+      "title": "Labels and Organization",
+      "description": "Group documents by people, categories or trips to keep everything structured and easy to find."
+    },
+    "expiry": {
+      "title": "Expiry Alerts",
+      "description": "Get gentle reminders before any passport, ID or card expires so you are never caught off guard."
+    },
+    "privacy": {
+      "title": "Privacy and Security",
+      "description": "Your data is end to end encrypted with keys only you control. Even with cloud sync, no one at Folio can read your documents."
+    }
+  },
+  "organized": {
+    "title": "Keep your essential information organized",
+    "description": "Folio helps you store and manage the most important information in your life. Documents, cards and personal records stay securely organized in one place, easy to access at any moment and always available on any device. This gives you clarity and confidence that everything you rely on is protected and ready when you need it."
+  },
+  "stats": {
+    "title": "Folio Wallet in numbers",
+    "description": "A simple app that already keeps important documents safe for people all over the world.",
+    "rating": {
+      "value": "4.7★",
+      "description": "Users consistently rate Folio highly for its clarity, speed and reliability in daily use."
+    },
+    "documents": {
+      "value": "1M+",
+      "description": "Documents, cards and tickets already added by people who use Folio to stay organized."
+    },
+    "countries": {
+      "value": "120+",
+      "description": "Countries where Folio helps users keep their essential documents accessible anywhere."
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "q": "What is Folio?",
+        "a": "Folio is a digital wallet app that keeps your passports, IDs, tickets, bookings and cards organized in one secure place. It works on iPhone and Android."
+      },
+      {
+        "q": "What types of documents can I store?",
+        "a": "Passports, ID cards, residence permits, driver's licenses, travel tickets (flights, trains, hotels, events), payment cards, gift cards, loyalty cards and any other personal document."
+      },
+      {
+        "q": "How do I add documents?",
+        "a": "You can scan with your camera, upload photos from your library, import PDFs, or forward booking emails to docs@folio.id. Folio automatically extracts key details."
+      },
+      {
+        "q": "How does Folio protect my documents?",
+        "a": "Folio uses end-to-end encryption with AES-256. Your documents are encrypted on your device with keys only you control. Even Folio cannot access your data. Biometric protection (Face ID, fingerprint) adds an extra layer of security."
+      },
+      {
+        "q": "Can I access documents offline?",
+        "a": "Yes. Documents are stored locally on your device and available without internet. Cloud sync keeps everything updated when you're back online."
+      },
+      {
+        "q": "Will I get reminders before documents expire?",
+        "a": "Yes. Folio sends gentle reminders before your passport, ID or any other document expires so you're never caught off guard."
+      },
+      {
+        "q": "Can I share documents with family?",
+        "a": "Yes. Create shared folders to safely share travel plans, tickets or IDs with family and friends. Everyone sees the latest versions automatically."
+      },
+      {
+        "q": "What platforms is Folio available on?",
+        "a": "Folio is available on iOS (iPhone and iPad) and Android devices. You can download it for free from the App Store or Google Play Store."
+      },
+      {
+        "q": "Is Folio free?",
+        "a": "Yes. Folio is completely free with unlimited document storage, travel timeline, expiry alerts and all core features."
+      },
+      {
+        "q": "How does the travel timeline work?",
+        "a": "The travel timeline automatically arranges your flights, hotel bookings, train tickets, and events in chronological order. It shows your complete itinerary for each trip, highlights upcoming departures, and keeps a history of past travels. No manual entry required."
+      },
+      {
+        "q": "Does Folio work with Apple Wallet passes?",
+        "a": "Yes. You can import .pkpass files from Apple Wallet directly into Folio. Unlike Apple Wallet, Folio extracts and organizes the data, adds it to your travel timeline, and keeps everything searchable."
+      },
+      {
+        "q": "What happens if I lose my phone?",
+        "a": "If you have a Folio account, your encrypted documents are backed up and can be restored on a new device. Just sign in and everything will be there."
+      }
+    ]
+  }
+}
+

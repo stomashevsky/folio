@@ -68,3 +68,6 @@ export { default as ImageWithPlaceholder } from './ImageWithPlaceholder'
 export type { ImageWithPlaceholderProps } from './ImageWithPlaceholder'
 export { default as VideoWithPlaceholder } from './VideoWithPlaceholder'
 export type { VideoWithPlaceholderProps } from './VideoWithPlaceholder'
+
+// Language
+export { default as LanguageSwitcher } from './LanguageSwitcher'

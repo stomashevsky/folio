@@ -1,11 +1,15 @@
+import { useTranslation } from 'react-i18next'
 import { LegalPageLayout, ArticleH2, ArticleH3, ArticleParagraph, ArticleList } from '../components/ui'
 
 export default function PrivacyPage() {
+  const { t } = useTranslation(['pages', 'common'])
+
   return (
     <LegalPageLayout
-      title="Privacy policy"
-      description="How Folio collects, uses, and protects your personal data"
-      lastUpdated="December 17, 2025"
+      title={t('pages:privacy.title')}
+      description={t('pages:privacy.description')}
+      lastUpdated={t('pages:privacy.lastUpdated')}
+      lastUpdatedLabel={t('common:legal.lastUpdated')}
       slug="privacy"
     >
       <ArticleParagraph>

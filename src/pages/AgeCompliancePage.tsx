@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, Accordion, IconContainer, HeroTagline } from '../components/ui'
 import type { AccordionItemData } from '../components/ui'
@@ -110,11 +111,13 @@ const integrationMethods = [
 ]
 
 export default function AgeCompliancePage() {
+  const { t } = useTranslation('solutions')
+  
   usePageTitle({
-    title: 'Age Compliance | Folio Wallet',
-    description: 'Age verification service for global compliance. Confirm user age quickly and securely with verification methods that match your risk level.',
-    ogTitle: 'Age Compliance | Folio Wallet',
-    ogDescription: 'Age verification service for global compliance. Confirm user age quickly and securely with verification methods that match your risk level.',
+    title: t('ageCompliance.meta.title'),
+    description: t('ageCompliance.meta.description'),
+    ogTitle: t('ageCompliance.meta.title'),
+    ogDescription: t('ageCompliance.meta.description'),
     ogUrl: 'https://folio.id/solutions/age-compliance'
   })
 

@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
@@ -26,13 +27,14 @@ const BACKGROUND_STYLE = {
 }
 
 export default function BusinessPage() {
+  const { t } = useTranslation('solutions')
   const navigate = useNavigate()
   
   usePageTitle({
-    title: 'Business Solutions | Folio Wallet',
-    description: 'Better tickets. No app to build. Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone.',
-    ogTitle: 'Business Solutions | Folio Wallet',
-    ogDescription: 'Better tickets. No app to build. Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone.',
+    title: t('business.meta.title'),
+    description: t('business.meta.description'),
+    ogTitle: t('business.meta.title'),
+    ogDescription: t('business.meta.description'),
     ogImage: getOgImageUrl('ticket-issuance-hero.png'),
     ogUrl: 'https://folio.id/business'
   })

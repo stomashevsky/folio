@@ -1,0 +1,58 @@
+{
+  "digitalTicketing": {
+    "meta": {
+      "title": "Digital Ticketing | Folio Wallet",
+      "description": "Create, manage, and validate digital tickets with built-in fraud controls."
+    },
+    "hero": {
+      "tagline": "Digital ticketing",
+      "title": "Secure digital tickets at scale",
+      "description": "Create, manage, and validate digital tickets with built-in fraud controls."
+    }
+  },
+  "ageCompliance": {
+    "meta": {
+      "title": "Age Compliance | Folio Wallet",
+      "description": "Verify user age for restricted products and services with confidence."
+    },
+    "hero": {
+      "tagline": "Age compliance",
+      "title": "Verify age with confidence",
+      "description": "Verify user age for restricted products and services with confidence."
+    }
+  },
+  "clientOnboarding": {
+    "meta": {
+      "title": "Client Onboarding | Folio Wallet",
+      "description": "Streamlined KYC verification for regulated businesses."
+    },
+    "hero": {
+      "tagline": "Client onboarding",
+      "title": "Streamlined KYC for regulated businesses",
+      "description": "Streamlined KYC verification for regulated businesses."
+    }
+  },
+  "ticketIssuance": {
+    "meta": {
+      "title": "Ticket Issuance | Folio Wallet",
+      "description": "Issue secure digital tickets directly to user wallets."
+    },
+    "hero": {
+      "tagline": "Ticket issuance",
+      "title": "Issue tickets directly to wallets",
+      "description": "Issue secure digital tickets directly to user wallets."
+    }
+  },
+  "business": {
+    "meta": {
+      "title": "For Business | Folio Wallet",
+      "description": "Enterprise identity verification and compliance solutions."
+    },
+    "hero": {
+      "tagline": "For business",
+      "title": "Enterprise identity solutions",
+      "description": "Enterprise identity verification and compliance solutions."
+    }
+  }
+}
+

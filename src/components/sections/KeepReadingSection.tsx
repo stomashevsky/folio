@@ -1,13 +1,18 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { Button, BlogArticleCard } from '../ui'
 import { blogArticles } from '../../data/blogArticles'
+import { DEFAULT_LANGUAGE } from '../../i18n'
 
 interface KeepReadingSectionProps {
   currentArticleSlug?: string
 }
 
 export default function KeepReadingSection({ currentArticleSlug }: KeepReadingSectionProps) {
+  const { t } = useTranslation('common')
+  const { lang } = useParams<{ lang?: string }>()
   const navigate = useNavigate()
+  const currentLang = lang || DEFAULT_LANGUAGE
   
   // Filter out current article and get top 3 newest articles
   const filteredArticles = blogArticles
@@ -19,7 +24,7 @@ export default function KeepReadingSection({ currentArticleSlug }: KeepReadingSe
   }
 
   const handleViewAll = () => {
-    navigate('/blog')
+    navigate(`/${currentLang}/blog`)
     // Instant scroll to top
     window.scrollTo(0, 0)
   }
@@ -32,7 +37,7 @@ export default function KeepReadingSection({ currentArticleSlug }: KeepReadingSe
         <div className="hidden md:flex flex-col gap-12 items-start w-full">
           {/* Title */}
           <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-            Keep reading
+            {t('blog.keepReading')}
           </h2>
           
           {/* Cards Grid - 3 columns */}
@@ -47,7 +52,7 @@ export default function KeepReadingSection({ currentArticleSlug }: KeepReadingSe
         <div className="flex md:hidden flex-col items-start w-full">
           {/* Title first */}
           <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px] mb-12">
-            Keep reading
+            {t('blog.keepReading')}
           </h2>
           
           {/* Cards - single column with mobile variant */}
@@ -64,7 +69,7 @@ export default function KeepReadingSection({ currentArticleSlug }: KeepReadingSe
             variant="secondary"
             onClick={handleViewAll}
           >
-            View all
+            {t('blog.viewAll')}
           </Button>
         </div>
       </div>

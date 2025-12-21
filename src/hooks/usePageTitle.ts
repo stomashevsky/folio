@@ -1,4 +1,6 @@
 import { useEffect } from 'react'
+// useParams removed - not needed after localization refactor
+import { SUPPORTED_LANGUAGES, DEFAULT_LANGUAGE } from '../i18n'
 
 interface UsePageTitleOptions {
   title: string
@@ -123,6 +125,47 @@ export function usePageTitle({
       }
       robotsMeta.setAttribute('content', robots)
     }
+
+    // Hreflang tags for internationalization
+    const updateHreflangTags = () => {
+      // Remove existing hreflang tags
+      document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(el => {
+        createdElements.push(el as HTMLElement)
+      })
+      
+      // Get current path without language prefix
+      const currentPath = window.location.pathname
+      const pathParts = currentPath.split('/').filter(Boolean)
+      const firstPart = pathParts[0]
+      
+      // Check if first part is a language code
+      const hasLangPrefix = SUPPORTED_LANGUAGES.includes(firstPart as typeof SUPPORTED_LANGUAGES[number])
+      const pathWithoutLang = hasLangPrefix 
+        ? '/' + pathParts.slice(1).join('/')
+        : currentPath
+      
+      const baseUrl = ogUrl?.replace(/\/(en|ru)(\/.*)?$/, '') || 'https://folio.id'
+      
+      // Create hreflang tags for each supported language
+      SUPPORTED_LANGUAGES.forEach(lang => {
+        const hreflangLink = document.createElement('link')
+        hreflangLink.setAttribute('rel', 'alternate')
+        hreflangLink.setAttribute('hreflang', lang)
+        hreflangLink.setAttribute('href', `${baseUrl}/${lang}${pathWithoutLang === '/' ? '' : pathWithoutLang}`)
+        document.head.appendChild(hreflangLink)
+        createdElements.push(hreflangLink)
+      })
+      
+      // Add x-default hreflang (pointing to default language)
+      const xDefaultLink = document.createElement('link')
+      xDefaultLink.setAttribute('rel', 'alternate')
+      xDefaultLink.setAttribute('hreflang', 'x-default')
+      xDefaultLink.setAttribute('href', `${baseUrl}/${DEFAULT_LANGUAGE}${pathWithoutLang === '/' ? '' : pathWithoutLang}`)
+      document.head.appendChild(xDefaultLink)
+      createdElements.push(xDefaultLink)
+    }
+    
+    updateHreflangTags()
 
     // Twitter tags (use property if present, otherwise create property tags to match index.html)
     const updateTwitterTag = (key: string, content: string) => {

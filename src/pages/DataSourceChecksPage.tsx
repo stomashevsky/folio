@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
@@ -123,6 +124,7 @@ const useCases = [
 ]
 
 export default function DataSourceChecksPage() {
+  const { t } = useTranslation('platform')
   const [activeHowItWorksId, setActiveHowItWorksId] = useState<string | null>('gather-details')
   const [activeKeyFeatureId, setActiveKeyFeatureId] = useState<string | null>('global-reach')
   
@@ -133,10 +135,10 @@ export default function DataSourceChecksPage() {
   }
 
   usePageTitle({
-    title: 'Data Source Checks | Folio Wallet',
-    description: 'Verify users worldwide with trusted data sources. Instantly confirm the identity of users and meet regulatory requirements using Master Data matching.',
-    ogTitle: 'Data Source Checks | Folio Wallet',
-    ogDescription: 'Verify users worldwide with trusted data sources. Instantly confirm the identity of users and meet regulatory requirements using Master Data matching.',
+    title: t('dataSourceChecks.meta.title'),
+    description: t('dataSourceChecks.meta.description'),
+    ogTitle: t('dataSourceChecks.meta.title'),
+    ogDescription: t('dataSourceChecks.meta.description'),
     ogImage: getOgImageUrl('data-source-checks-hero.png'),
     ogUrl: 'https://folio.id/platform/data-source-checks'
   })

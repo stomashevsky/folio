@@ -1,11 +1,15 @@
+import { useTranslation } from 'react-i18next'
 import { LegalPageLayout, ArticleH2, ArticleParagraph, ArticleList } from '../components/ui'
 
 export default function TermsPage() {
+  const { t } = useTranslation(['pages', 'common'])
+
   return (
     <LegalPageLayout
-      title="Terms of use"
-      description="Terms and conditions for using Folio Wallet app and services"
-      lastUpdated="December 17, 2025"
+      title={t('pages:terms.title')}
+      description={t('pages:terms.description')}
+      lastUpdated={t('pages:terms.lastUpdated')}
+      lastUpdatedLabel={t('common:legal.lastUpdated')}
       slug="terms"
     >
       <ArticleParagraph>

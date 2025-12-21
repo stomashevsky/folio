@@ -439,6 +439,65 @@ This file contains all rules and principles that must be followed for every chan
   ```
 - **Always verify git tracks the correct case** using `git ls-files`
 
+### 13. Localization and Translations
+
+#### 13.1. Translation Principles
+
+- **NEVER translate literally** — always adapt text as a native speaker professional copywriter would write it
+- **Write like Apple, Google, Yandex** — translations must sound like they were originally written in the target language by a professional marketing team
+- **Focus on meaning, not words** — convey the intent and emotion, not word-for-word translation
+- **Keep translations concise** — translations should not be longer than the original (especially in UI elements)
+- **Consider UI context** — dropdowns, buttons, and headings must be compact
+- **Maintain consistent terminology** — use the same terms for the same concepts across all pages
+- **Read aloud test** — if a translation sounds awkward when spoken, rewrite it
+
+#### 13.2. Russian Language Rules
+
+- **Write naturally** — every phrase must sound like it was written by a native Russian copywriter, not translated
+- **Avoid literal translations** — phrases like "Сравнивайте лица с уверенностью" (literal "Match faces with certainty") are wrong; use natural alternatives like "Точная идентификация по фото"
+- **Avoid unnatural constructions** like "для людей" (for people), "для пользователей" (for users), "с уверенностью" (with certainty) where they sound awkward
+- **Use imperative verbs for CTAs**: "Храните" (Store), "Верифицируйте" (Verify) instead of nouns "Хранение" (Storage), "Верификация" (Verification)
+- **Dropdown descriptions**: maximum 2 lines of text
+- **Keep descriptions short**: condense without losing meaning
+- Examples of good vs bad translations:
+  - Bad: "Безопасное хранение документов для людей" (literal, awkward)
+  - Good: "Храните документы в безопасности" (natural, action-oriented)
+  - Bad: "Чёткий просмотр каждого документа" (literal "A clear view of every document")
+  - Good: "Все детали на виду" (natural, idiomatic)
+  - Bad: "Исключительная точность с приватностью, прозрачностью и удобным пользовательским опытом"
+  - Good: "Высокая точность, приватность и простота использования"
+
+#### 13.3. File Structure
+
+- **One namespace = one page group**: `wallet.json`, `platform.json`, `solutions.json`, `government.json`
+- **Common elements** (navbar, footer, buttons) go in `common.json`
+- **Page-specific content** goes in dedicated namespace files
+- **Location**: `src/locales/{lang}/{namespace}.json`
+
+#### 13.4. Translation Keys
+
+- Use descriptive, hierarchical key names: `section_element_variant`
+- Examples:
+  - `hero_title`, `hero_description`
+  - `feature_card_title_1`, `feature_card_description_1`
+  - `faq_question_1`, `faq_answer_1`
+- Keep keys in English regardless of content language
+
+#### 13.5. Using Translations in Components
+
+- Import `useTranslation` hook from `react-i18next`
+- Specify namespace: `const { t } = useTranslation('wallet')` or `useTranslation(['wallet', 'common'])`
+- Use `t('key')` for simple strings, `t('key', { variable })` for interpolation
+- For SEO metadata in `usePageTitle`, use translated strings
+
+#### 13.6. Adding New Languages
+
+1. Create new language folder in `src/locales/{lang}/`
+2. Copy all JSON files from `en/` folder
+3. Translate all values (keep keys unchanged)
+4. Add language to `SUPPORTED_LANGUAGES` in `src/i18n/index.ts`
+5. Add language option to `LanguageSwitcher` component
+
 ## Important Reminders
 
 - **Always check Figma** to understand component structure, states, and variants before implementation

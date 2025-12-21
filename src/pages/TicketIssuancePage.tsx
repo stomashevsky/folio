@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
@@ -26,15 +27,16 @@ const BACKGROUND_STYLE = {
 }
 
 export default function DigitalTicketingPage() {
+  const { t } = useTranslation('solutions')
   const navigate = useNavigate()
   
   usePageTitle({
-    title: 'Digital Ticketing | Folio Wallet',
-    description: 'Better tickets. No app to build. Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone.',
-    ogTitle: 'Digital Ticketing | Folio Wallet',
-    ogDescription: 'Better tickets. No app to build. Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone.',
+    title: t('ticketIssuance.meta.title'),
+    description: t('ticketIssuance.meta.description'),
+    ogTitle: t('ticketIssuance.meta.title'),
+    ogDescription: t('ticketIssuance.meta.description'),
     ogImage: getOgImageUrl('ticket-issuance-hero.png'),
-    ogUrl: 'https://folio.id/solutions/digital-ticketing'
+    ogUrl: 'https://folio.id/solutions/ticket-issuance'
   })
 
   const handleTryFolio = () => {

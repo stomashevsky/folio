@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
@@ -134,6 +135,7 @@ const LIVENESS_CHECK_FAQ: FAQItem[] = [
 ]
 
 export default function LivenessCheckPage() {
+  const { t } = useTranslation('platform')
   const [activeHowItWorksId, setActiveHowItWorksId] = useState<string | null>('collect-signals')
   const [activeKeyFeatureId, setActiveKeyFeatureId] = useState<string | null>('eu-aligned')
 
@@ -144,10 +146,10 @@ export default function LivenessCheckPage() {
   }
 
   usePageTitle({
-    title: 'Liveness Check | Folio Wallet',
-    description: 'Guard against the broadest range of face spoofs through a multi-layered solution.',
-    ogTitle: 'Liveness Check | Folio Wallet',
-    ogDescription: 'Guard against the broadest range of face spoofs through a multi-layered solution.',
+    title: t('livenessCheck.meta.title'),
+    description: t('livenessCheck.meta.description'),
+    ogTitle: t('livenessCheck.meta.title'),
+    ogDescription: t('livenessCheck.meta.description'),
     ogImage: getOgImageUrl('liveness-check-hero.png'),
     ogUrl: 'https://folio.id/platform/liveness-check'
   })
@@ -162,17 +164,17 @@ export default function LivenessCheckPage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
-                <HeroTagline icon={scanFaceIcon}>Liveness check</HeroTagline>
+                <HeroTagline icon={scanFaceIcon}>{t('livenessCheck.hero.tagline')}</HeroTagline>
                 <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px]">
-                  Trusted human transactions
+                  {t('livenessCheck.hero.title')}
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                  Guard against the broadest range of face spoofs through a multi-layered solution.
+                  {t('livenessCheck.hero.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>

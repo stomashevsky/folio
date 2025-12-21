@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate, Link, useParams } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import Navbar from '../Navbar'
 import FooterSection from '../sections/FooterSection'
 import KeepReadingSection from '../sections/KeepReadingSection'
@@ -9,6 +10,7 @@ import { Button } from './index'
 import arrowLeftIcon from '../../assets/icons/ArrowLeft.svg'
 import { getBlogOgImageUrl } from '../../data/blogArticles'
 import { getOgImageUrl } from '../../configs/ogImages'
+import { DEFAULT_LANGUAGE } from '../../i18n'
 import type { BlogCategory } from '../../data/blogArticles'
 
 interface BlogArticleLayoutProps {
@@ -60,7 +62,12 @@ export default function BlogArticleLayout({
   ogDescription,
   children,
 }: BlogArticleLayoutProps) {
+  const { t } = useTranslation('common')
+  const { lang } = useParams<{ lang?: string }>()
   const navigate = useNavigate()
+  const currentLang = lang || DEFAULT_LANGUAGE
+  
+  const getLocalizedPath = (path: string) => `/${currentLang}${path}`
 
   useScrollToTop()
 
@@ -74,8 +81,8 @@ export default function BlogArticleLayout({
     ogTitle: ogTitle || title,
     ogDescription: ogDescription || description,
     ogImage,
-    ogUrl: `https://folio.id/blog/${slug}`,
-    canonicalUrl: `https://folio.id/blog/${slug}`,
+    ogUrl: `https://folio.id/${currentLang}/blog/${slug}`,
+    canonicalUrl: `https://folio.id/${currentLang}/blog/${slug}`,
   })
 
   return (
@@ -94,7 +101,7 @@ export default function BlogArticleLayout({
               image: ogImage,
               mainEntityOfPage: {
                 '@type': 'WebPage',
-                '@id': `https://folio.id/blog/${slug}`,
+                '@id': `https://folio.id/${currentLang}/blog/${slug}`,
               },
               author: {
                 '@type': 'Organization',
@@ -117,10 +124,10 @@ export default function BlogArticleLayout({
               <div className="flex flex-wrap gap-4 items-start justify-center leading-5 relative shrink-0 text-sm w-full">
                 <p className="relative shrink-0 text-[#0a0a0a]">{date}</p>
                 <Link
-                  to={`/blog?category=${category}`}
+                  to={getLocalizedPath(`/blog?category=${category}`)}
                   className="relative shrink-0 text-[#737373] hover:text-[#0a0a0a] hover:underline transition-colors cursor-pointer"
                 >
-                  {category}
+                  {t(`blog.categories.${category}`)}
                 </Link>
               </div>
 
@@ -144,7 +151,7 @@ export default function BlogArticleLayout({
             <div className="pt-8">
               <Button
                 variant="secondary"
-                onClick={() => navigate('/blog', { state: { restoreScroll: true } })}
+                onClick={() => navigate(getLocalizedPath('/blog'), { state: { restoreScroll: true } })}
                 iconPosition="left"
                 icon={
                   <img
@@ -155,7 +162,7 @@ export default function BlogArticleLayout({
                   />
                 }
               >
-                Back to Blog
+                {t('blog.backToBlog')}
               </Button>
             </div>
           </div>

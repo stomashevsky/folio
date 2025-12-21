@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { FOCUS_STYLES } from './focusStyles'
 import { scrollToTop } from '../../utils/scrollToTop'
+import { useLocalizedPath } from '../../i18n/useLocalizedPath'
 
 interface FooterLinkProps {
   to?: string
@@ -16,6 +17,7 @@ interface FooterLinkProps {
  * FooterLink component for footer navigation links
  * Supports both internal routing (to) and external links (href)
  * Applies correct default and hover styles according to Figma design
+ * Automatically adds language prefix to internal routes
  */
 export default function FooterLink({
   to,
@@ -26,6 +28,7 @@ export default function FooterLink({
   className = '',
   onClick,
 }: FooterLinkProps) {
+  const { getLocalizedPath } = useLocalizedPath()
   const baseClasses = `text-sm font-normal leading-5 text-[#0a0a0a] no-underline transition-colors duration-150 ease-out hover:text-[#737373] cursor-pointer rounded-md ${FOCUS_STYLES}`
   const combinedClasses = `${baseClasses} ${className}`
 
@@ -58,7 +61,7 @@ export default function FooterLink({
 
     return (
       <Link
-        to={to}
+        to={getLocalizedPath(to)}
         className={combinedClasses}
         onClick={handleInternalClick}
       >

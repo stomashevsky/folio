@@ -1,4 +1,6 @@
+import { useTranslation } from 'react-i18next'
 import { scrollToTop } from '../../utils/scrollToTop'
+import { useLocalizedPath } from '../../i18n/useLocalizedPath'
 import Button from './Button'
 import arrowRightIcon from '../../assets/icons/ArrowRight.svg'
 
@@ -12,6 +14,9 @@ export interface PhotoCardProps {
 }
 
 export default function PhotoCard({ image, title, description, to, className = '', carouselMode = false }: PhotoCardProps) {
+  const { t } = useTranslation('common')
+  const { getLocalizedPath } = useLocalizedPath()
+  
   const baseClasses = "bg-white border border-[#e5e5e5] border-solid relative rounded-2xl overflow-hidden flex flex-col shadow-[0px_4px_6px_-1px_rgba(10,13,18,0.06),0px_2px_4px_-2px_rgba(10,13,18,0.06)]"
   
   // Carousel mode: fixed width with responsive sizing (280px mobile, 320px desktop)
@@ -54,12 +59,12 @@ export default function PhotoCard({ image, title, description, to, className = '
         {to && (
           <Button
             variant="secondary"
-            to={to}
+            to={getLocalizedPath(to)}
             onClick={handleClick}
             icon={<img src={arrowRightIcon} alt="" aria-hidden="true" className="w-4 h-4" />}
             className="!h-8 !text-xs mt-auto"
           >
-            Learn more
+            {t('buttons.learnMore')}
           </Button>
         )}
       </div>

@@ -1,0 +1,25 @@
+{
+  "government": {
+    "meta": {
+      "title": "For Government | Folio Wallet",
+      "description": "Digital identity tools for government agencies. Design, test, and deploy modern digital credentials according to global standards."
+    },
+    "hero": {
+      "tagline": "For government",
+      "title": "Digital identity for government",
+      "description": "Digital identity tools for government agencies. Design, test, and deploy modern digital credentials according to global standards."
+    }
+  },
+  "playground": {
+    "meta": {
+      "title": "Playground | Folio Wallet",
+      "description": "Explore European digital identity scenarios in action. Test credential issuance and verification flows."
+    },
+    "hero": {
+      "tagline": "Playground",
+      "title": "Explore digital identity scenarios",
+      "description": "Explore European digital identity scenarios in action. Test credential issuance and verification flows."
+    }
+  }
+}
+

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
@@ -152,11 +153,13 @@ const useCasesData = [
 ]
 
 export default function ReviewWorkspacePage() {
+  const { t } = useTranslation('platform')
+  
   usePageTitle({
-    title: 'Review Workspace | Folio Wallet',
-    description: 'Investigate users and businesses faster with flexible tools that adapt to your review process and reduce operational effort.',
-    ogTitle: 'Review Workspace | Folio Wallet',
-    ogDescription: 'Investigate users and businesses faster with flexible tools that adapt to your review process and reduce operational effort.',
+    title: t('reviewWorkspace.meta.title'),
+    description: t('reviewWorkspace.meta.description'),
+    ogTitle: t('reviewWorkspace.meta.title'),
+    ogDescription: t('reviewWorkspace.meta.description'),
     ogImage: getOgImageUrl('review-workspace-hero.png'),
     ogUrl: 'https://folio.id/platform/review-workspace'
   })

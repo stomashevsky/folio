@@ -1,0 +1,97 @@
+{
+  "nav": {
+    "wallet": "Wallet",
+    "platform": "Platform",
+    "solutions": "Solutions",
+    "government": "Government",
+    "blog": "Blog",
+    "getInTouch": "Get in touch",
+    "backToMainMenu": "Back to main menu",
+    "clientOnboardingDesc": "Streamlined KYC verification for regulated businesses.",
+    "ageComplianceDesc": "Ensure users meet age requirements for restricted products or services.",
+    "digitalTicketingDesc": "Create, manage, and validate digital tickets with built-in fraud controls.",
+    "idVerificationDesc": "Verify passports, ID cards, and other official documents.",
+    "nfcIdentityScanDesc": "Read secure chip data from compatible IDs and passports.",
+    "documentIntelligenceDesc": "Extract and analyze data from submitted documents.",
+    "faceMatchDesc": "Compare a selfie to an official photo to confirm identity.",
+    "livenessCheckDesc": "Confirm that the user is physically present.",
+    "dataSourceChecksDesc": "Validate user information against trusted databases.",
+    "phoneAndEmailValidationDesc": "Confirm ownership and detect risky contact details.",
+    "behaviorInsightsDesc": "Device and usage patterns for added context.",
+    "dynamicFlowDesc": "Coordinate identity checks with flexible logic.",
+    "reviewWorkspaceDesc": "Organize and resolve verification cases.",
+    "credentialIssuanceDesc": "Create and deliver verifiable credentials to wallets."
+  },
+  "footer": {
+    "address": "Address:",
+    "addressValue": "88 Baker St, London W1U 6TQ, United Kingdom",
+    "contact": "Contact:",
+    "folio": "Folio",
+    "folioApp": "Folio app",
+    "blog": "Blog",
+    "government": "Government",
+    "about": "About",
+    "features": "Features",
+    "idWallet": "ID wallet",
+    "cardScanner": "Card scanner",
+    "loyaltyCards": "Loyalty cards",
+    "getTheApp": "Get the app",
+    "downloadIOS": "Download for iOS",
+    "downloadAndroid": "Download for Android",
+    "platform": "Platform",
+    "idVerification": "ID verification",
+    "nfcIdentityScan": "NFC identity scan",
+    "documentIntelligence": "Document intelligence",
+    "faceMatch": "Face match",
+    "livenessCheck": "Liveness check",
+    "dataSourceChecks": "Data source checks",
+    "phoneAndEmailValidation": "Phone and email validation",
+    "behaviorInsights": "Behavior insights",
+    "dynamicFlow": "Dynamic flow",
+    "reviewWorkspace": "Review workspace",
+    "credentialIssuance": "Credential issuance",
+    "solutions": "Solutions",
+    "clientOnboarding": "Client onboarding",
+    "ageCompliance": "Age compliance",
+    "digitalTicketing": "Digital ticketing",
+    "termsAndPolicies": "Terms & Policies",
+    "termsOfUse": "Terms of Use",
+    "privacyPolicy": "Privacy Policy",
+    "security": "Security",
+    "copyright": "Folio Wallet © 2025"
+  },
+  "buttons": {
+    "learnMore": "Learn more",
+    "getInTouch": "Get in touch",
+    "explorePlayground": "Explore Playground"
+  },
+  "language": {
+    "select": "Select language"
+  },
+  "getTheApp": {
+    "title": "Take Folio with you, wherever you go",
+    "description": "Your documents stay organized, synced and instantly accessible on iOS and Android."
+  },
+  "blog": {
+    "title": "Folio Blog",
+    "description": "Case studies, product insights and practical guides on travel, documents and digital identity.",
+    "loadMore": "Load more",
+    "backToBlog": "Back to Blog",
+    "keepReading": "Keep reading",
+    "viewAll": "View all",
+    "readingTime": "{{minutes}} min read",
+    "categories": {
+      "All": "All",
+      "Company": "Company",
+      "Product": "Product",
+      "Guides": "Guides",
+      "Research": "Research",
+      "Safety": "Safety",
+      "Business": "Business"
+    }
+  },
+  "legal": {
+    "lastUpdated": "Last updated"
+  }
+}
+

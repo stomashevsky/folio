@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
@@ -96,6 +97,7 @@ const riskSignals = [
 ]
 
 export default function PhoneAndEmailValidationPage() {
+  const { t } = useTranslation('platform')
   const [activeHowItWorksId, setActiveHowItWorksId] = useState<string | null>('collect-details')
   
   const activeHowItWorksItem = howItWorksItems.find(item => item.id === activeHowItWorksId) || howItWorksItems[0]
@@ -105,10 +107,10 @@ export default function PhoneAndEmailValidationPage() {
   }
 
   usePageTitle({
-    title: 'Phone and Email Validation | Folio Wallet',
-    description: 'Fast phone and email validation. Check whether phone numbers and email addresses are real and truly belong to your users.',
-    ogTitle: 'Phone and Email Validation | Folio Wallet',
-    ogDescription: 'Fast phone and email validation. Check whether phone numbers and email addresses are real and truly belong to your users.',
+    title: t('phoneAndEmailValidation.meta.title'),
+    description: t('phoneAndEmailValidation.meta.description'),
+    ogTitle: t('phoneAndEmailValidation.meta.title'),
+    ogDescription: t('phoneAndEmailValidation.meta.description'),
     ogImage: getOgImageUrl('phone-email-validation-hero.png'),
     ogUrl: 'https://folio.id/platform/phone-and-email-validation'
   })

@@ -1,15 +1,19 @@
 import { useState, useRef, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { MenuItem, DropdownMenuItem } from '../ui'
 import { scrollToTop } from '../../utils/scrollToTop'
+import { useLocalizedPath } from '../../i18n/useLocalizedPath'
 import chevronDownIcon from '../../assets/icons/ChevronDown.svg'
 import { PLATFORM_ITEMS } from '../../constants/platformItems'
 
 export default function PlatformDropdown() {
+  const { t } = useTranslation('common')
   const [isOpen, setIsOpen] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
   const navigate = useNavigate()
   const location = useLocation()
+  const { getLocalizedPath } = useLocalizedPath()
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -34,7 +38,7 @@ export default function PlatformDropdown() {
   }, [location.pathname])
 
   const handleItemClick = (path: string) => {
-    navigate(path)
+    navigate(getLocalizedPath(path))
     setTimeout(() => {
       scrollToTop()
     }, 100)
@@ -55,7 +59,7 @@ export default function PlatformDropdown() {
         aria-expanded={isOpen}
       >
         <span className="flex items-center gap-1.5">
-          Platform
+          {t('footer.platform')}
           <img
             src={chevronDownIcon}
             alt=""
@@ -88,8 +92,8 @@ export default function PlatformDropdown() {
                 <DropdownMenuItem
                   key={item.path}
                   icon={item.icon}
-                  title={item.label}
-                  description={item.description}
+                  title={t(item.labelKey)}
+                  description={t(item.descriptionKey)}
                   onClick={() => handleItemClick(item.path)}
                   className="w-[260px]"
                   role="menuitem"

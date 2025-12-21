@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
@@ -126,11 +127,13 @@ const useCasesData = [
 ]
 
 export default function DynamicFlowPage() {
+  const { t } = useTranslation('platform')
+  
   usePageTitle({
-    title: 'Dynamic Flow | Folio Wallet',
-    description: 'Adapt verification in real time using risk signals to reduce fraud while keeping the experience smooth.',
-    ogTitle: 'Dynamic Flow | Folio Wallet',
-    ogDescription: 'Adapt verification in real time using risk signals to reduce fraud while keeping the experience smooth.',
+    title: t('dynamicFlow.meta.title'),
+    description: t('dynamicFlow.meta.description'),
+    ogTitle: t('dynamicFlow.meta.title'),
+    ogDescription: t('dynamicFlow.meta.description'),
     ogImage: getOgImageUrl('dynamic-flow-hero.png'),
     ogUrl: 'https://folio.id/platform/dynamic-flow'
   })

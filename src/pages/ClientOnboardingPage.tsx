@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, Accordion, HeroTagline } from '../components/ui'
 import type { AccordionItemData } from '../components/ui'
@@ -134,11 +135,13 @@ const industryCards = [
 ]
 
 export default function ClientOnboardingPage() {
+  const { t } = useTranslation('solutions')
+  
   usePageTitle({
-    title: 'Client Onboarding | Folio Wallet',
-    description: 'Streamlined KYC for regulated businesses. Client verification that is fast, compliant, and audit-ready.',
-    ogTitle: 'Client Onboarding | Folio Wallet',
-    ogDescription: 'Streamlined KYC for regulated businesses. Client verification that is fast, compliant, and audit-ready.',
+    title: t('clientOnboarding.meta.title'),
+    description: t('clientOnboarding.meta.description'),
+    ogTitle: t('clientOnboarding.meta.title'),
+    ogDescription: t('clientOnboarding.meta.description'),
     ogUrl: 'https://folio.id/solutions/client-onboarding'
   })
 
