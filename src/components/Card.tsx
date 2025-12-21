@@ -41,14 +41,14 @@ export default function Card({ icon, badge, badgeVariant = 'secondary', title, d
       tabIndex={onClick ? 0 : -1}
       role={onClick ? 'button' : undefined}
       aria-label={ariaLabel}
-      className={`bg-white border border-[#e5e5e5] border-solid flex-[1_0_0] min-w-[280px] max-w-[400px] rounded-2xl overflow-hidden shadow-[0px_4px_6px_-1px_rgba(10,13,18,0.06),0px_2px_4px_-2px_rgba(10,13,18,0.06)] ${FOCUS_STYLES} transition-all duration-200 ease-spring-out transform-gpu ${
+      className={`bg-white border border-[#e5e5e5] border-solid flex-[1_0_0] min-w-[280px] max-w-[400px] h-full rounded-2xl overflow-hidden shadow-[0px_4px_6px_-1px_rgba(10,13,18,0.06),0px_2px_4px_-2px_rgba(10,13,18,0.06)] ${FOCUS_STYLES} transition-all duration-200 ease-spring-out transform-gpu ${
         onClick 
           ? 'cursor-pointer hover:shadow-[0px_10px_15px_-3px_rgba(10,13,18,0.08),0px_4px_6px_-4px_rgba(10,13,18,0.06)]' 
           : ''
       }`}
       style={{ borderWidth: '1px' }}
     >
-      <div className="flex flex-col gap-6 items-start p-6 w-full">
+      <div className="flex flex-col gap-6 items-start p-6 w-full h-full">
         <div className="flex gap-2 items-start w-full">
           <IconContainer>
             <CardIcon name={icon} className="w-6 h-6" />
@@ -79,7 +79,7 @@ export default function Card({ icon, badge, badgeVariant = 'secondary', title, d
           <p className="font-semibold leading-6 text-base text-[#0a0a0a] w-full">
             {title}
           </p>
-          <p className="font-normal leading-5 min-h-[40px] text-sm text-[#737373] w-full">
+          <p className="font-normal leading-5 text-sm text-[#737373] w-full">
             {description}
           </p>
         </div>

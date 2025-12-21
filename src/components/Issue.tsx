@@ -53,7 +53,7 @@ export default function Issue() {
         <FlowTabs activeTab={activeTab} onTabChange={setActiveTab} />
 
           {/* Cards Grid */}
-          <div className="flex flex-wrap gap-6 items-start justify-center w-full">
+          <div className="flex flex-wrap gap-6 items-stretch justify-center w-full">
             {currentCardConfigs.map((card) => (
               <Card
                 key={card.documentType}
