@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
@@ -31,127 +31,26 @@ const BACKGROUND_STYLE = {
     'linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(90deg, rgba(229, 229, 229, 1) 0%, rgba(229, 229, 229, 1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%)',
 }
 
-// How it works accordion items
-const howItWorksItems: AccordionItemData[] = [
-  {
-    id: 'define',
-    title: 'Define your credential',
-    description: 'Set up the schema, claims and validity rules for your credential type. Choose which attributes to include and how long credentials remain valid.',
-    desktopImage: credentialIssuanceHowItWorks1,
-  },
-  {
-    id: 'issue',
-    title: 'Issue to users',
-    description: 'Generate credentials through a simple API call or batch process. Each credential is cryptographically signed and tamper-proof.',
-    desktopImage: credentialIssuanceHowItWorks2,
-  },
-  {
-    id: 'deliver',
-    title: 'Deliver securely',
-    description: 'Send credentials directly to user wallets via QR codes, deep links or push notifications. Users receive and store credentials instantly.',
-    desktopImage: credentialIssuanceHowItWorks3,
-  },
-]
+// How it works images config
+const HOW_IT_WORKS_IMAGES = {
+  define: credentialIssuanceHowItWorks1,
+  issue: credentialIssuanceHowItWorks2,
+  deliver: credentialIssuanceHowItWorks3,
+}
 
-// Key features accordion items
-const keyFeaturesItems: AccordionItemData[] = [
-  {
-    id: 'w3c',
-    title: 'W3C Verifiable Credentials',
-    description: 'Issue credentials that follow the W3C Verifiable Credentials standard for maximum interoperability across systems and providers.',
-  },
-  {
-    id: 'openid4vci',
-    title: 'OpenID4VCI protocol',
-    description: 'Use the OpenID for Verifiable Credential Issuance protocol to deliver credentials securely to any compatible wallet.',
-  },
-  {
-    id: 'selective-disclosure',
-    title: 'Selective disclosure',
-    description: 'Enable users to share only the specific claims they choose, protecting their privacy while still proving what they need to.',
-  },
-  {
-    id: 'revocation',
-    title: 'Revocation support',
-    description: 'Revoke credentials instantly when needed. Verifiers can check revocation status in real time to ensure credentials are still valid.',
-  },
-  {
-    id: 'expiration',
-    title: 'Automatic expiration',
-    description: 'Set expiration dates on credentials so they automatically become invalid after a specified period without manual intervention.',
-  },
-  {
-    id: 'batch',
-    title: 'Batch issuance',
-    description: 'Issue thousands of credentials at once through batch processing. Ideal for organizations issuing credentials to large groups.',
-  },
-  {
-    id: 'api-sdk',
-    title: 'REST API and SDK',
-    description: 'Integrate credential issuance into your existing systems using our developer-friendly REST API or native SDKs.',
-  },
-  {
-    id: 'audit',
-    title: 'Audit trail',
-    description: 'Track every credential issued, revoked or updated with detailed logs for compliance and reporting purposes.',
-  },
-  {
-    id: 'formats',
-    title: 'Multiple credential formats',
-    description: 'Support for JWT, SD-JWT, mDL and other credential formats to meet different use cases and regulatory requirements.',
-  },
-]
+// Overview icons config
+const OVERVIEW_ICONS = {
+  standards: shieldCheckIcon,
+  delivery: smartphoneIcon,
+  lifecycle: refreshCwIcon,
+}
 
-// Use cases data
-const useCasesData = [
-  {
-    icon: idCardIcon,
-    title: 'Digital identity',
-    description: 'Issue national IDs, employee badges and membership cards that users can store and present from their digital wallet.',
-  },
-  {
-    icon: awardIcon,
-    title: 'Certificates',
-    description: 'Create verifiable certificates for education, professional qualifications and health records that cannot be forged.',
-  },
-  {
-    icon: fileSpreadsheetIcon,
-    title: 'Permits and licenses',
-    description: 'Issue driver licenses, building permits and professional licenses with built-in expiration and revocation controls.',
-  },
-]
-
-// FAQ data
-const CREDENTIAL_ISSUANCE_FAQ: FAQItem[] = [
-  {
-    q: 'What credential formats are supported?',
-    a: 'Folio supports W3C Verifiable Credentials in JWT and JSON-LD formats, SD-JWT for selective disclosure, and ISO 18013-5 mDL format for mobile driver licenses. You can choose the format that best fits your use case and regulatory requirements.',
-  },
-  {
-    q: 'How do I issue credentials via API?',
-    a: 'Use our REST API to issue credentials programmatically. Define your credential schema, prepare the claims data, and make a POST request to the issuance endpoint. The API returns a signed credential that you can deliver to the user.',
-  },
-  {
-    q: 'Can credentials be revoked?',
-    a: 'Yes. You can revoke any credential at any time through the API or dashboard. Revocation takes effect immediately and verifiers can check revocation status in real time using standard protocols.',
-  },
-  {
-    q: 'How are credentials delivered to users?',
-    a: 'Credentials can be delivered via QR codes that users scan with their wallet app, deep links that open directly in the wallet, or push notifications for users who already have your app installed.',
-  },
-  {
-    q: 'What standards does Folio follow?',
-    a: 'Folio implements W3C Verifiable Credentials, W3C DID specifications, OpenID for Verifiable Credential Issuance (OpenID4VCI), and EUDI Wallet Architecture standards. This ensures interoperability with other compliant systems.',
-  },
-  {
-    q: 'Can I customize credential schemas?',
-    a: 'Yes. You can define custom schemas with the exact claims and data types your use case requires. You can also use standard schemas from schema.org or other registries for common credential types.',
-  },
-  {
-    q: 'Is there batch issuance support?',
-    a: 'Yes. The batch issuance API lets you issue thousands of credentials in a single request. This is useful for organizations issuing credentials to employees, students, or members at scale.',
-  },
-]
+// Use case icons config
+const USE_CASE_ICONS = {
+  identity: idCardIcon,
+  certificates: awardIcon,
+  permits: fileSpreadsheetIcon,
+}
 
 export default function CredentialIssuancePage() {
   const { t } = useTranslation('platform')
@@ -164,6 +63,43 @@ export default function CredentialIssuancePage() {
     ogImage: getOgImageUrl('credential-issuance-hero.png'),
     ogUrl: 'https://folio.id/platform/credential-issuance'
   })
+
+  // Generate overview items from translations
+  const overviewItems = useMemo(() =>
+    (['standards', 'delivery', 'lifecycle'] as const).map(id => ({
+      icon: OVERVIEW_ICONS[id],
+      title: t(`credentialIssuance.overview.${id}.title`),
+      description: t(`credentialIssuance.overview.${id}.description`),
+    })),
+  [t])
+
+  // Generate how it works items from translations
+  const howItWorksItems: AccordionItemData[] = useMemo(() =>
+    (['define', 'issue', 'deliver'] as const).map(id => ({
+      id,
+      title: t(`credentialIssuance.howItWorks.${id}.title`),
+      description: t(`credentialIssuance.howItWorks.${id}.description`),
+      desktopImage: HOW_IT_WORKS_IMAGES[id],
+    })),
+  [t])
+
+  // Generate key features items from translations
+  const keyFeaturesItems: AccordionItemData[] = useMemo(() =>
+    (['w3c', 'openid4vci', 'selectiveDisclosure', 'revocation', 'expiration', 'batch', 'apiSdk', 'audit', 'formats'] as const).map(id => ({
+      id,
+      title: t(`credentialIssuance.keyFeatures.${id}.title`),
+      description: t(`credentialIssuance.keyFeatures.${id}.description`),
+    })),
+  [t])
+
+  // Generate use cases from translations
+  const useCasesData = useMemo(() =>
+    (['identity', 'certificates', 'permits'] as const).map(id => ({
+      icon: USE_CASE_ICONS[id],
+      title: t(`credentialIssuance.useCases.${id}.title`),
+      description: t(`credentialIssuance.useCases.${id}.description`),
+    })),
+  [t])
 
   const [activeHowItWorksId, setActiveHowItWorksId] = useState<string | null>('define')
   const activeHowItWorksItem = howItWorksItems.find(item => item.id === activeHowItWorksId) || howItWorksItems[0]
@@ -182,17 +118,17 @@ export default function CredentialIssuancePage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
-                <HeroTagline icon={badgeCheckIcon}>Credential issuance</HeroTagline>
+                <HeroTagline icon={badgeCheckIcon}>{t('credentialIssuance.hero.tagline')}</HeroTagline>
                 <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px]">
-                  Issue verifiable credentials at scale
+                  {t('credentialIssuance.hero.title')}
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                  Create tamper-proof digital credentials for identities, certificates and permits. Deliver them to user wallets with full lifecycle control.
+                  {t('credentialIssuance.hero.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>
@@ -210,17 +146,17 @@ export default function CredentialIssuancePage() {
           <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-                <HeroTagline icon={badgeCheckIcon}>Credential issuance</HeroTagline>
+                <HeroTagline icon={badgeCheckIcon}>{t('credentialIssuance.hero.tagline')}</HeroTagline>
                 <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
-                  Issue verifiable credentials at scale
+                  {t('credentialIssuance.hero.title')}
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                  Create tamper-proof digital credentials for identities, certificates and permits. Deliver them to user wallets with full lifecycle control.
+                  {t('credentialIssuance.hero.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative shrink-0">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>
@@ -240,25 +176,18 @@ export default function CredentialIssuancePage() {
           <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-12 items-center relative shrink-0 w-full">
               <SectionHeader
-                title="Trusted credential infrastructure"
+                title={t('credentialIssuance.overview.title')}
                 maxWidth="576px"
               />
               <div className="flex flex-col md:flex-row gap-11 md:gap-6 items-start relative shrink-0 w-full">
-                <FeatureItem
-                  icon={shieldCheckIcon}
-                  title="Standards compliance"
-                  description="Issue credentials that follow W3C, EUDI and OpenID4VCI standards for maximum interoperability and future-proofing."
-                />
-                <FeatureItem
-                  icon={smartphoneIcon}
-                  title="Flexible delivery"
-                  description="Deliver credentials via QR codes, deep links or direct wallet integration. Users receive credentials instantly."
-                />
-                <FeatureItem
-                  icon={refreshCwIcon}
-                  title="Lifecycle control"
-                  description="Manage credential validity with expiration dates, revocation and real-time status updates."
-                />
+                {overviewItems.map((item, index) => (
+                  <FeatureItem
+                    key={index}
+                    icon={item.icon}
+                    title={item.title}
+                    description={item.description}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -277,7 +206,7 @@ export default function CredentialIssuancePage() {
             />
             <div className="flex flex-1 flex-col gap-6 items-start relative min-w-0">
               <SectionHeader
-                title="How it works"
+                title={t('credentialIssuance.howItWorks.title')}
                 align="left"
                 maxWidth="100%"
               />
@@ -293,7 +222,7 @@ export default function CredentialIssuancePage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-6 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="How it works"
+              title={t('credentialIssuance.howItWorks.title')}
               align="left"
               maxWidth="100%"
             />
@@ -312,10 +241,10 @@ export default function CredentialIssuancePage() {
           <div className="hidden md:flex gap-16 items-start max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-5 items-start relative min-w-0 max-w-[512px]">
               <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-                Key features
+                {t('credentialIssuance.keyFeatures.title')}
               </h2>
               <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                Everything you need to issue, manage and deliver verifiable credentials
+                {t('credentialIssuance.keyFeatures.description')}
               </p>
             </div>
             <div className="flex flex-1 flex-col items-start relative min-w-0">
@@ -331,10 +260,10 @@ export default function CredentialIssuancePage() {
           <div className="flex md:hidden flex-col gap-6 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-5 items-start relative shrink-0 w-full">
               <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
-                Key features
+                {t('credentialIssuance.keyFeatures.title')}
               </h2>
               <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                Everything you need to issue, manage and deliver verifiable credentials
+                {t('credentialIssuance.keyFeatures.description')}
               </p>
             </div>
             <Accordion
@@ -350,7 +279,7 @@ export default function CredentialIssuancePage() {
           <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-10 items-center relative shrink-0 w-full">
               <SectionHeader
-                title="Where credential issuance makes an impact"
+                title={t('credentialIssuance.useCases.title')}
                 maxWidth="576px"
               />
               <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
@@ -374,15 +303,15 @@ export default function CredentialIssuancePage() {
             <div className="flex gap-16 items-center p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
               <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px] min-w-0">
                 <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-                  Let's build your credential ecosystem
+                  {t('credentialIssuance.cta.title')}
                 </h2>
                 <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-                  Talk to our team to explore how Folio can help you issue and manage verifiable credentials.
+                  {t('credentialIssuance.cta.description')}
                 </p>
               </div>
               <div className="flex flex-1 flex-wrap gap-3 items-start justify-end relative min-w-0">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>
@@ -392,22 +321,22 @@ export default function CredentialIssuancePage() {
           <div className="flex md:hidden flex-col gap-8 items-center w-full px-6 py-16 relative shrink-0" style={BACKGROUND_STYLE}>
             <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full">
               <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
-                Let's build your credential ecosystem
+                {t('credentialIssuance.cta.title')}
               </h2>
               <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-                Talk to our team to explore how Folio can help you issue and manage verifiable credentials.
+                {t('credentialIssuance.cta.description')}
               </p>
             </div>
             <div className="flex flex-col gap-3 items-center relative shrink-0">
               <Button onClick={handleGetInTouch} variant="primary">
-                Get in touch
+                {t('common:buttons.getInTouch')}
               </Button>
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <FAQSection faqData={CREDENTIAL_ISSUANCE_FAQ} />
+        <FAQSection faqData={t('credentialIssuance.faq.items', { returnObjects: true }) as FAQItem[]} />
       </main>
       <ExploreMoreSection currentPath="/platform/credential-issuance" />
       <FooterSection />

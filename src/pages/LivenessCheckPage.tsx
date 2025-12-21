@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
@@ -7,7 +7,7 @@ import VideoWithPlaceholder from '../components/ui/VideoWithPlaceholder'
 import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
-import FAQSection, { FAQItem } from '../components/sections/FAQSection'
+import FAQSection from '../components/sections/FAQSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
 
@@ -33,117 +33,18 @@ const BACKGROUND_STYLE = {
     'linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(90deg, rgba(229, 229, 229, 1) 0%, rgba(229, 229, 229, 1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%)',
 }
 
-const howItWorksItems: AccordionItemData[] = [
-  {
-    id: 'collect-signals',
-    title: 'Collect signals',
-    description: 'Folio gathers signals from the selfie and the device to assess liveness and confirm a real human presence.',
-    desktopImage: livenessCheckHowItWorks1,
-  },
-  {
-    id: 'analyze-assess',
-    title: 'Analyze and assess',
-    description: 'Visual and device signals are analyzed to detect inconsistencies and prevent spoofing attempts.',
-    desktopImage: livenessCheckHowItWorks2,
-  },
-  {
-    id: 'make-decisions',
-    title: 'Make decisions',
-    description: 'Based on the results, Folio determines the next step, from additional checks to approval.',
-    desktopImage: livenessCheckHowItWorks3,
-  },
-]
+// How it works images config
+const HOW_IT_WORKS_IMAGES = {
+  collectSignals: livenessCheckHowItWorks1,
+  analyzeAssess: livenessCheckHowItWorks2,
+  makeDecisions: livenessCheckHowItWorks3,
+}
 
-const keyFeatures: { id: string; title: string; description: string }[] = [
-  {
-    id: 'eu-aligned',
-    title: 'EU aligned injection detection',
-    description: 'Folio follows the CEN TS 18099 2024 guidance for detecting and preventing injection based attacks.',
-  },
-  {
-    id: 'signal-library',
-    title: 'Extensive signal library',
-    description: 'Gather a broad set of proprietary signals to understand the context behind each document and selfie submission.',
-  },
-  {
-    id: 'updated-models',
-    title: 'Continuously updated models',
-    description: 'Benefit from models that improve over time and stay aligned with the latest fraud research.',
-  },
-  {
-    id: 'multi-frame',
-    title: 'Multi frame analysis',
-    description: 'Review several frames instead of a single capture to improve accuracy and reduce false positives.',
-  },
-  {
-    id: 'hardware-detection',
-    title: 'Compromised hardware detection',
-    description: 'Identify emulators, rooted devices and other unsafe environments that attackers rely on for injection attempts.',
-  },
-  {
-    id: 'scaled-attack',
-    title: 'Scaled attack protection',
-    description: 'Detect repeating patterns and link related attempts to block coordinated or scaled fraud activity.',
-  },
-  {
-    id: 'flexible-controls',
-    title: 'Flexible controls and checks',
-    description: 'Fine tune quality thresholds, obstruction detection and retry rules to match your compliance and business needs.',
-  },
-  {
-    id: 'fair-consistent',
-    title: 'Fair and consistent across devices',
-    description: 'Designed to work uniformly across different skin tones, lighting, operating systems and hardware.',
-  },
-  {
-    id: 'user-guidance',
-    title: 'User guidance',
-    description: 'Clear gestures and instructions help users capture accurate selfies and generate stronger fraud signals.',
-  },
-]
-
-// FAQ data
-const LIVENESS_CHECK_FAQ: FAQItem[] = [
-  {
-    q: 'What is liveness detection?',
-    a: 'Liveness detection confirms that the person in front of the camera is real and physically present. It prevents spoofing attempts using photos, videos, masks or deepfakes.',
-  },
-  {
-    q: 'What types of attacks does liveness check prevent?',
-    a: 'Folio detects presentation attacks (printed photos, screens, masks), injection attacks (manipulated camera feeds), deepfakes, synthetic faces and other AI-generated fraud attempts.',
-  },
-  {
-    q: 'Is liveness detection certified?',
-    a: 'Yes. Folio liveness detection meets the ISO/IEC 30107-3 standard for presentation attack detection, validated by a NIST-accredited testing laboratory.',
-  },
-  {
-    q: 'How does passive liveness work?',
-    a: 'Passive liveness analyzes multiple frames and visual signals without requiring the user to perform specific actions. This creates a smoother experience while maintaining strong security.',
-  },
-  {
-    q: 'Does liveness detection work on all devices?',
-    a: 'Yes. Folio is designed to perform consistently across different smartphones, operating systems, camera qualities and lighting conditions.',
-  },
-  {
-    q: 'How fast is liveness verification?',
-    a: 'Most liveness checks complete in under two seconds. Auto-capture and real-time guidance help users complete the process quickly.',
-  },
-  {
-    q: 'Can liveness detection identify compromised devices?',
-    a: 'Yes. Folio detects emulators, rooted or jailbroken devices and other unsafe environments that attackers use to inject manipulated images or videos.',
-  },
-]
+// Key features IDs
+const KEY_FEATURES_IDS = ['euAligned', 'signalLibrary', 'updatedModels', 'multiFrame', 'hardwareDetection', 'scaledAttack', 'flexibleControls', 'fairConsistent', 'userGuidance'] as const
 
 export default function LivenessCheckPage() {
   const { t } = useTranslation('platform')
-  const [activeHowItWorksId, setActiveHowItWorksId] = useState<string | null>('collect-signals')
-  const [activeKeyFeatureId, setActiveKeyFeatureId] = useState<string | null>('eu-aligned')
-
-  const activeHowItWorksItem = howItWorksItems.find(item => item.id === activeHowItWorksId) || howItWorksItems[0]
-
-  const handleGetInTouch = () => {
-    window.location.href = 'mailto:contact@folio.id'
-  }
 
   usePageTitle({
     title: t('livenessCheck.meta.title'),
@@ -153,6 +54,40 @@ export default function LivenessCheckPage() {
     ogImage: getOgImageUrl('liveness-check-hero.png'),
     ogUrl: 'https://folio.id/platform/liveness-check'
   })
+
+  // Generate how it works items from translations
+  const howItWorksItems: AccordionItemData[] = useMemo(() => 
+    (['collectSignals', 'analyzeAssess', 'makeDecisions'] as const).map(id => ({
+      id,
+      title: t(`livenessCheck.howItWorks.${id}.title`),
+      description: t(`livenessCheck.howItWorks.${id}.description`),
+      desktopImage: HOW_IT_WORKS_IMAGES[id],
+    })),
+  [t])
+
+  // Generate key features items from translations
+  const keyFeatures = useMemo(() =>
+    KEY_FEATURES_IDS.map(id => ({
+      id,
+      title: t(`livenessCheck.keyFeatures.items.${id}.title`),
+      description: t(`livenessCheck.keyFeatures.items.${id}.description`),
+    })),
+  [t])
+
+  // Generate FAQ data from translations
+  const faqData = useMemo(() => {
+    const items = t('livenessCheck.faq.items', { returnObjects: true }) as Array<{ q: string; a: string }>
+    return items.map(item => ({ q: item.q, a: item.a }))
+  }, [t])
+
+  const [activeHowItWorksId, setActiveHowItWorksId] = useState<string | null>('collectSignals')
+  const [activeKeyFeatureId, setActiveKeyFeatureId] = useState<string | null>('euAligned')
+
+  const activeHowItWorksItem = howItWorksItems.find(item => item.id === activeHowItWorksId) || howItWorksItems[0]
+
+  const handleGetInTouch = () => {
+    window.location.href = 'mailto:contact@folio.id'
+  }
 
   return (
     <div className="flex flex-col items-start min-h-screen relative w-full">
@@ -193,17 +128,17 @@ export default function LivenessCheckPage() {
           <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-                <HeroTagline icon={scanFaceIcon}>Liveness check</HeroTagline>
+                <HeroTagline icon={scanFaceIcon}>{t('livenessCheck.hero.tagline')}</HeroTagline>
                 <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
-                  Trusted human transactions
+                  {t('livenessCheck.hero.title')}
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                  Guard against the broadest range of face spoofs through a multi-layered solution.
+                  {t('livenessCheck.hero.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative shrink-0">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>
@@ -224,43 +159,43 @@ export default function LivenessCheckPage() {
           <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-12 items-center relative shrink-0 w-full">
               <SectionHeader
-                title="Advanced protection from spoofing and fraud"
+                title={t('livenessCheck.protection.title')}
                 maxWidth="576px"
               />
               {/* Desktop Layout */}
               <div className="hidden md:flex gap-6 items-start relative shrink-0 w-full">
                 <FeatureHighlight
                   icon={shieldHalfIcon}
-                  title="Spoof protection"
-                  description="Shield your system from deepfakes, synthetic faces, image manipulation and other spoof attempts."
+                  title={t('livenessCheck.protection.spoof.title')}
+                  description={t('livenessCheck.protection.spoof.description')}
                 />
                 <FeatureHighlight
                   icon={awardIcon}
-                  title="Tested and certified"
-                  description="Our liveness checks meet the ISO/IEC 30107 3 standard, validated by a NIST accredited lab."
+                  title={t('livenessCheck.protection.certified.title')}
+                  description={t('livenessCheck.protection.certified.description')}
                 />
                 <FeatureHighlight
                   icon={syringeIcon}
-                  title="Injection defense"
-                  description="Use a wide mix of visual, device, behavioral and network signals, along with ensemble models and adaptive step up methods."
+                  title={t('livenessCheck.protection.injection.title')}
+                  description={t('livenessCheck.protection.injection.description')}
                 />
               </div>
               {/* Mobile Layout */}
               <div className="flex md:hidden flex-col gap-11 items-start relative shrink-0 w-full">
                 <FeatureHighlight
                   icon={shieldHalfIcon}
-                  title="Spoof protection"
-                  description="Shield your system from deepfakes, synthetic faces, image manipulation and other spoof attempts."
+                  title={t('livenessCheck.protection.spoof.title')}
+                  description={t('livenessCheck.protection.spoof.description')}
                 />
                 <FeatureHighlight
                   icon={awardIcon}
-                  title="Tested and certified"
-                  description="Our liveness checks meet the ISO/IEC 30107 3 standard, validated by a NIST accredited lab."
+                  title={t('livenessCheck.protection.certified.title')}
+                  description={t('livenessCheck.protection.certified.description')}
                 />
                 <FeatureHighlight
                   icon={syringeIcon}
-                  title="Injection defense"
-                  description="Use a wide mix of visual, device, behavioral and network signals, along with ensemble models and adaptive step up methods."
+                  title={t('livenessCheck.protection.injection.title')}
+                  description={t('livenessCheck.protection.injection.description')}
                 />
               </div>
             </div>
@@ -280,13 +215,13 @@ export default function LivenessCheckPage() {
             />
             <div className="flex flex-1 flex-col gap-6 items-start relative min-w-0">
               <SectionHeader
-                title="How it works"
+                title={t('livenessCheck.howItWorks.title')}
                 align="left"
                 maxWidth="100%"
               />
               <Accordion
                 items={howItWorksItems}
-                defaultOpenId="collect-signals"
+                defaultOpenId="collectSignals"
                 onItemChange={setActiveHowItWorksId}
                 showMobileImages={false}
               />
@@ -296,13 +231,13 @@ export default function LivenessCheckPage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-6 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="How it works"
+              title={t('livenessCheck.howItWorks.title')}
               align="left"
               maxWidth="100%"
             />
             <Accordion
               items={howItWorksItems}
-              defaultOpenId="collect-signals"
+              defaultOpenId="collectSignals"
               onItemChange={setActiveHowItWorksId}
               showMobileImages={true}
             />
@@ -314,10 +249,10 @@ export default function LivenessCheckPage() {
           <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-5 items-start max-w-full md:max-w-[512px] relative shrink-0 w-full md:w-auto md:flex-1">
               <h2 className="font-bold leading-[36px] md:leading-[40px] text-[30px] md:text-[36px] text-[#0a0a0a] tracking-[0px] w-full">
-                Key features
+                {t('livenessCheck.keyFeatures.title')}
               </h2>
               <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                Power your verification flow with layered signals, modern models and adaptive controls.
+                {t('livenessCheck.keyFeatures.description')}
               </p>
             </div>
             <div className="flex flex-col gap-0 items-start relative shrink-0 w-full md:flex-1">
@@ -339,39 +274,39 @@ export default function LivenessCheckPage() {
           <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-10 items-center relative shrink-0 w-full">
               <SectionHeader
-                title="Smart liveness detection"
+                title={t('livenessCheck.smartDetection.title')}
                 maxWidth="576px"
               />
               <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
                 <ToolCard
                   icon={shieldHalfIcon}
-                  title="GenAI spoof detection"
-                  description="Spot visual inconsistencies linked to deepfakes and synthetic faces, even when they are not noticeable to the human eye."
+                  title={t('livenessCheck.smartDetection.genAi.title')}
+                  description={t('livenessCheck.smartDetection.genAi.description')}
                 />
                 <ToolCard
                   icon={circleCheckIcon}
-                  title="Presentation attack detection"
-                  description="Identify presentation attacks in line with ISO IEC 30107 3 standards using automated liveness checks."
+                  title={t('livenessCheck.smartDetection.presentation.title')}
+                  description={t('livenessCheck.smartDetection.presentation.description')}
                 />
                 <ToolCard
                   icon={syringeIcon}
-                  title="Injection attack detection"
-                  description="Detect advanced injection attempts, including cases where fraudsters use stolen selfies from real users."
+                  title={t('livenessCheck.smartDetection.injection.title')}
+                  description={t('livenessCheck.smartDetection.injection.description')}
                 />
                 <ToolCard
                   icon={repeatIcon}
-                  title="Pattern risk detection"
-                  description="Recognize repeating fraud behaviors early and stop coordinated attempts before they expand."
+                  title={t('livenessCheck.smartDetection.pattern.title')}
+                  description={t('livenessCheck.smartDetection.pattern.description')}
                 />
                 <ToolCard
                   icon={circleHelpIcon}
-                  title="Reviewer support"
-                  description="Give manual reviewers clear liveness signals and insights to help them make confident and accurate decisions."
+                  title={t('livenessCheck.smartDetection.reviewer.title')}
+                  description={t('livenessCheck.smartDetection.reviewer.description')}
                 />
                 <ToolCard
                   icon={settings2Icon}
-                  title="Dynamic assurance"
-                  description="Apply the right amount of friction based on real time liveness results, protecting against fraud while keeping trusted users moving forward."
+                  title={t('livenessCheck.smartDetection.dynamic.title')}
+                  description={t('livenessCheck.smartDetection.dynamic.description')}
                 />
               </div>
             </div>
@@ -385,15 +320,15 @@ export default function LivenessCheckPage() {
             <div className="flex gap-16 items-center p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
               <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px] min-w-0">
                 <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-                  Build a stronger identity layer
+                  {t('livenessCheck.cta.title')}
                 </h2>
                 <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-                  Talk with our team to see how Folio can elevate your verification flow and protect your users at every step.
+                  {t('livenessCheck.cta.description')}
                 </p>
               </div>
               <div className="flex flex-1 flex-wrap gap-3 items-start justify-end relative min-w-0">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>
@@ -403,22 +338,22 @@ export default function LivenessCheckPage() {
           <div className="flex md:hidden flex-col gap-8 items-center w-full px-6 py-16 relative shrink-0" style={BACKGROUND_STYLE}>
             <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full">
               <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
-                Build a stronger identity layer
+                {t('livenessCheck.cta.title')}
               </h2>
               <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-                Talk with our team to see how Folio can elevate your verification flow and protect your users at every step.
+                {t('livenessCheck.cta.description')}
               </p>
             </div>
             <div className="flex flex-col gap-3 items-center relative shrink-0">
               <Button onClick={handleGetInTouch} variant="primary">
-                Get in touch
+                {t('common:buttons.getInTouch')}
               </Button>
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <FAQSection faqData={LIVENESS_CHECK_FAQ} />
+        <FAQSection faqData={faqData} title={t('livenessCheck.faq.title')} />
       </main>
       <ExploreMoreSection currentPath="/platform/liveness-check" />
       <FooterSection />

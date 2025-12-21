@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
@@ -33,124 +33,29 @@ const BACKGROUND_STYLE = {
     'linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(90deg, rgba(229, 229, 229, 1) 0%, rgba(229, 229, 229, 1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%)',
 }
 
-// Feature highlights data
-const featureHighlights = [
-  {
-    icon: zapIcon,
-    title: 'Close cases faster',
-    description: 'Resolve straightforward cases automatically and investigate complex ones more efficiently with tools designed for collaboration and speed.',
-  },
-  {
-    icon: layersIcon,
-    title: 'One source of context',
-    description: 'Bring together active checks, passive signals, and behavioral data from internal and external sources in a single, consistent view.',
-  },
-  {
-    icon: shieldCheckIcon,
-    title: 'Compliance ready',
-    description: 'Support regulatory workflows with detailed audit trails, reviewer checklists, and structured comments built into every case.',
-  },
-]
+// How it works images config
+const HOW_IT_WORKS_IMAGES = {
+  setup: reviewWorkspaceHowItWorks1,
+  review: reviewWorkspaceHowItWorks2,
+  action: reviewWorkspaceHowItWorks3,
+}
 
-// How it works accordion items
-const howItWorksItems: AccordionItemData[] = [
-  {
-    id: 'setup',
-    title: 'Set up review workflows',
-    description: 'Create case templates for different scenarios and define assignment rules, statuses, and ownership to match your internal processes.',
-    desktopImage: reviewWorkspaceHowItWorks1,
-  },
-  {
-    id: 'review',
-    title: 'Review complex cases',
-    description: 'Examine high-risk or failed checks by reviewing user or business data, verification results, and supporting evidence in one place.',
-    desktopImage: reviewWorkspaceHowItWorks2,
-  },
-  {
-    id: 'action',
-    title: 'Take action with confidence',
-    description: 'Approve, deny, or mark for review cases and manage follow-ups directly from the workspace, without switching tools.',
-    desktopImage: reviewWorkspaceHowItWorks3,
-  },
-]
+// Feature icons config
+const FEATURE_ICONS = {
+  closeFaster: zapIcon,
+  oneSource: layersIcon,
+  compliance: shieldCheckIcon,
+}
 
-// Key features accordion items
-const keyFeaturesItems: AccordionItemData[] = [
-  {
-    id: 'layouts',
-    title: 'Flexible case layouts',
-    description: 'Configure case views and sections to match different review scenarios and investigation needs.',
-  },
-  {
-    id: 'tools',
-    title: 'Built in investigation tools',
-    description: 'Use ready to use tools like checklists, notes, and insights to review cases faster and more consistently.',
-  },
-  {
-    id: 'priority',
-    title: 'Priority handling and alerts',
-    description: 'Automatically highlight urgent cases and keep reviews moving within defined response times.',
-  },
-  {
-    id: 'routing',
-    title: 'Smart routing and escalation',
-    description: 'Route cases between teams or reviewers based on risk level, status, or review stage.',
-  },
-  {
-    id: 'access',
-    title: 'Role based data access',
-    description: 'Control who can view or edit sensitive personal data with role specific permissions.',
-  },
-  {
-    id: 'history',
-    title: 'Full activity history',
-    description: 'Keep a complete record of actions, decisions, and comments for every case.',
-  },
-  {
-    id: 'unified',
-    title: 'Unified data view',
-    description: 'Bring together all relevant case information in one workspace without switching systems.',
-  },
-  {
-    id: 'insights',
-    title: 'Performance insights',
-    description: 'Track review volume, turnaround time, and team efficiency to identify bottlenecks.',
-  },
-]
-
-// Use cases data
-const useCasesData = [
-  {
-    icon: circleCheckBigIcon,
-    title: 'Manual identity review',
-    description: 'Review users at any stage of the lifecycle, from onboarding and rechecks to account recovery and edge cases.',
-  },
-  {
-    icon: briefcaseIcon,
-    title: 'Business verification',
-    description: 'Manage business reviews in one place, covering ownership, documents, and risk signals for KYB workflows.',
-  },
-  {
-    icon: listTodoIcon,
-    title: 'AML investigations and reporting',
-    description: 'Handle AML cases, track investigation status, and prepare regulatory reports using structured case workflows.',
-  },
-  {
-    icon: triangleAlertIcon,
-    title: 'Fraud investigations',
-    description: 'Investigate high risk users, analyze linked accounts, and resolve complex fraud scenarios with manual review.',
-  },
-  {
-    icon: refreshCcwIcon,
-    title: 'Fast process updates',
-    description: 'Adapt review logic quickly by adjusting checks, rules, and thresholds as risks or regulations change.',
-  },
-  {
-    icon: mousePointerClickIcon,
-    title: 'Operational automation',
-    description: 'Reduce manual effort by automating routine decisions and supporting operational teams with clear case flows.',
-  },
-]
+// Use case icons config
+const USE_CASE_ICONS = {
+  identity: circleCheckBigIcon,
+  business: briefcaseIcon,
+  aml: listTodoIcon,
+  fraud: triangleAlertIcon,
+  process: refreshCcwIcon,
+  automation: mousePointerClickIcon,
+}
 
 export default function ReviewWorkspacePage() {
   const { t } = useTranslation('platform')
@@ -163,6 +68,43 @@ export default function ReviewWorkspacePage() {
     ogImage: getOgImageUrl('review-workspace-hero.png'),
     ogUrl: 'https://folio.id/platform/review-workspace'
   })
+
+  // Generate feature highlights from translations
+  const featureHighlights = useMemo(() =>
+    (['closeFaster', 'oneSource', 'compliance'] as const).map(id => ({
+      icon: FEATURE_ICONS[id],
+      title: t(`reviewWorkspace.features.${id}.title`),
+      description: t(`reviewWorkspace.features.${id}.description`),
+    })),
+  [t])
+
+  // Generate how it works items from translations
+  const howItWorksItems: AccordionItemData[] = useMemo(() =>
+    (['setup', 'review', 'action'] as const).map(id => ({
+      id,
+      title: t(`reviewWorkspace.howItWorks.${id}.title`),
+      description: t(`reviewWorkspace.howItWorks.${id}.description`),
+      desktopImage: HOW_IT_WORKS_IMAGES[id],
+    })),
+  [t])
+
+  // Generate key features items from translations
+  const keyFeaturesItems: AccordionItemData[] = useMemo(() =>
+    (['layouts', 'tools', 'priority', 'routing', 'access', 'history', 'unified', 'insights'] as const).map(id => ({
+      id,
+      title: t(`reviewWorkspace.keyFeatures.${id}.title`),
+      description: t(`reviewWorkspace.keyFeatures.${id}.description`),
+    })),
+  [t])
+
+  // Generate use cases from translations
+  const useCasesData = useMemo(() =>
+    (['identity', 'business', 'aml', 'fraud', 'process', 'automation'] as const).map(id => ({
+      icon: USE_CASE_ICONS[id],
+      title: t(`reviewWorkspace.useCases.${id}.title`),
+      description: t(`reviewWorkspace.useCases.${id}.description`),
+    })),
+  [t])
 
   const [activeHowItWorksId, setActiveHowItWorksId] = useState<string | null>('setup')
   const activeHowItWorksItem = howItWorksItems.find(item => item.id === activeHowItWorksId) || howItWorksItems[0]
@@ -181,17 +123,17 @@ export default function ReviewWorkspacePage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
-                <HeroTagline icon={searchCheckIcon}>Review workspace</HeroTagline>
+                <HeroTagline icon={searchCheckIcon}>{t('reviewWorkspace.hero.tagline')}</HeroTagline>
                 <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px]">
-                  A simpler way to manage cases
+                  {t('reviewWorkspace.hero.title')}
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                  Investigate users and businesses faster with flexible tools that adapt to your review process and reduce operational effort.
+                  {t('reviewWorkspace.hero.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>
@@ -209,17 +151,17 @@ export default function ReviewWorkspacePage() {
           <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[672px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-                <HeroTagline icon={searchCheckIcon}>Review workspace</HeroTagline>
+                <HeroTagline icon={searchCheckIcon}>{t('reviewWorkspace.hero.tagline')}</HeroTagline>
                 <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
-                  A simpler way to manage cases
+                  {t('reviewWorkspace.hero.title')}
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                  Investigate users and businesses faster with flexible tools that adapt to your review process and reduce operational effort.
+                  {t('reviewWorkspace.hero.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative shrink-0">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>
@@ -239,7 +181,7 @@ export default function ReviewWorkspacePage() {
           <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-12 items-center relative shrink-0 w-full">
               <SectionHeader
-                title="Review and investigate with confidence"
+                title={t('reviewWorkspace.features.title')}
                 maxWidth="576px"
               />
               <div className="flex flex-col md:flex-row gap-11 md:gap-6 items-start relative shrink-0 w-full">
@@ -269,7 +211,7 @@ export default function ReviewWorkspacePage() {
             />
             <div className="flex flex-1 flex-col gap-6 items-start relative min-w-0">
               <SectionHeader
-                title="How it works"
+                title={t('reviewWorkspace.howItWorks.title')}
                 align="left"
                 maxWidth="100%"
               />
@@ -285,7 +227,7 @@ export default function ReviewWorkspacePage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-6 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="How it works"
+              title={t('reviewWorkspace.howItWorks.title')}
               align="left"
               maxWidth="100%"
             />
@@ -304,10 +246,10 @@ export default function ReviewWorkspacePage() {
           <div className="hidden md:flex gap-16 items-start max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-5 items-start relative min-w-0 max-w-[512px]">
               <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-                Key features
+                {t('reviewWorkspace.keyFeatures.title')}
               </h2>
               <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                Design a clear and scalable case review process
+                {t('reviewWorkspace.keyFeatures.description')}
               </p>
             </div>
             <div className="flex flex-1 flex-col items-start relative min-w-0">
@@ -323,10 +265,10 @@ export default function ReviewWorkspacePage() {
           <div className="flex md:hidden flex-col gap-6 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-5 items-start relative shrink-0 w-full">
               <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
-                Key features
+                {t('reviewWorkspace.keyFeatures.title')}
               </h2>
               <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                Design a clear and scalable case review process
+                {t('reviewWorkspace.keyFeatures.description')}
               </p>
             </div>
             <Accordion
@@ -342,7 +284,7 @@ export default function ReviewWorkspacePage() {
           <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-10 items-center relative shrink-0 w-full">
               <SectionHeader
-                title="Case management workflows"
+                title={t('reviewWorkspace.useCases.title')}
                 maxWidth="576px"
               />
               <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
@@ -366,15 +308,15 @@ export default function ReviewWorkspacePage() {
             <div className="flex gap-16 items-center p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
               <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px] min-w-0">
                 <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-                  Let's build better identity verification
+                  {t('reviewWorkspace.cta.title')}
                 </h2>
                 <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-                  Talk to our team to explore how Folio can enhance your onboarding and verification experience.
+                  {t('reviewWorkspace.cta.description')}
                 </p>
               </div>
               <div className="flex flex-1 flex-wrap gap-3 items-start justify-end relative min-w-0">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>
@@ -384,15 +326,15 @@ export default function ReviewWorkspacePage() {
           <div className="flex md:hidden flex-col gap-8 items-center w-full px-6 py-16 relative shrink-0" style={BACKGROUND_STYLE}>
             <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full">
               <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
-                Let's build better identity verification
+                {t('reviewWorkspace.cta.title')}
               </h2>
               <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-                Talk to our team to explore how Folio can enhance your onboarding and verification experience.
+                {t('reviewWorkspace.cta.description')}
               </p>
             </div>
             <div className="flex flex-col gap-3 items-center relative shrink-0">
               <Button onClick={handleGetInTouch} variant="primary">
-                Get in touch
+                {t('common:buttons.getInTouch')}
               </Button>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
@@ -29,78 +29,22 @@ const BACKGROUND_STYLE = {
     'linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(90deg, rgba(229, 229, 229, 1) 0%, rgba(229, 229, 229, 1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%)',
 }
 
-const howItWorksItems: AccordionItemData[] = [
-  {
-    id: 'add-nfc',
-    title: 'Add NFC to your KYC flow',
-    description: 'Offer NFC scanning as an additional verification step for supported devices and documents, enhancing accuracy without adding friction.',
-    desktopImage: nfcHowItWorks1,
-  },
-  {
-    id: 'extract-data',
-    title: 'Extract data automatically',
-    description: 'Users photograph their passport or ID and tap their phone to read the NFC chip. The system pulls structured data instantly for quick review.',
-    desktopImage: nfcHowItWorks2,
-  },
-  {
-    id: 'confirm-identities',
-    title: 'Confirm identities seamlessly',
-    description: 'After a successful NFC scan, users continue through your verification flow. If issues arise, you can request more details, escalate, or route to manual review.',
-    desktopImage: nfcHowItWorks3,
-  },
-]
+// How it works images config
+const HOW_IT_WORKS_IMAGES = {
+  addNfc: nfcHowItWorks1,
+  extractData: nfcHowItWorks2,
+  confirmIdentities: nfcHowItWorks3,
+}
 
-const keyFeatures = [
-  {
-    id: 'stronger-security',
-    title: 'Stronger security',
-    description: 'NFC reads data directly from the encrypted RFID chip, allowing you to verify information at its source and reduce reliance on visual checks.',
-  },
-  {
-    id: 'fast-verification',
-    title: 'Fast, seamless verification',
-    description: 'Users tap their smartphone to the document and instantly confirm the extracted data, speeding up onboarding without added friction.',
-  },
-  {
-    id: 'smart-detection',
-    title: 'Smart device autodetection',
-    description: 'The system automatically detects when a device and document support NFC, enabling a smooth experience without extra user steps.',
-  },
-  {
-    id: 'worldwide-support',
-    title: 'Worldwide support',
-    description: 'NFC passport and ID reading works across more than 120 countries, all through the same lightweight mobile integration.',
-  },
-]
-
-const useCases = [
-  {
-    icon: smartphoneNfcIcon,
-    title: 'KYC enhancement',
-    description: 'Enable users in supported regions to verify their passports through NFC, strengthening your KYC process with secure, chip-based identity data.',
-  },
-  {
-    icon: shieldCheckIcon,
-    title: 'Fraud prevention',
-    description: 'Extract tamper-proof identity data from the RFID chip and verify the person through selfie matching, reducing the risk of forged or altered documents.',
-  },
-  {
-    icon: checkCheckIcon,
-    title: 'Step-up checks',
-    description: 'Use NFC as an additional verification layer during risky actions or high-value transactions, adding assurance without disrupting the user journey.',
-  },
-]
+// Use case icons config
+const USE_CASE_ICONS = {
+  kyc: smartphoneNfcIcon,
+  fraud: shieldCheckIcon,
+  stepUp: checkCheckIcon,
+}
 
 export default function NfcIdentityScanPage() {
   const { t } = useTranslation('platform')
-  const [activeHowItWorksId, setActiveHowItWorksId] = useState<string | null>('add-nfc')
-  const [activeKeyFeatureId, setActiveKeyFeatureId] = useState<string | null>('stronger-security')
-  
-  const activeHowItWorksItem = howItWorksItems.find(item => item.id === activeHowItWorksId) || howItWorksItems[0]
-
-  const handleGetInTouch = () => {
-    window.location.href = 'mailto:contact@folio.id'
-  }
 
   usePageTitle({
     title: t('nfcIdentityScan.meta.title'),
@@ -110,6 +54,43 @@ export default function NfcIdentityScanPage() {
     ogImage: getOgImageUrl('nfc-identity-scan-hero.png'),
     ogUrl: 'https://folio.id/platform/nfc-identity-scan'
   })
+
+  // Generate how it works items from translations
+  const howItWorksItems: AccordionItemData[] = useMemo(() =>
+    (['addNfc', 'extractData', 'confirmIdentities'] as const).map(id => ({
+      id,
+      title: t(`nfcIdentityScan.howItWorks.${id}.title`),
+      description: t(`nfcIdentityScan.howItWorks.${id}.description`),
+      desktopImage: HOW_IT_WORKS_IMAGES[id],
+    })),
+  [t])
+
+  // Generate key features from translations
+  const keyFeatures = useMemo(() =>
+    (['strongerSecurity', 'fastVerification', 'smartDetection', 'worldwideSupport'] as const).map(id => ({
+      id,
+      title: t(`nfcIdentityScan.keyFeatures.${id}.title`),
+      description: t(`nfcIdentityScan.keyFeatures.${id}.description`),
+    })),
+  [t])
+
+  // Generate use cases from translations
+  const useCases = useMemo(() =>
+    (['kyc', 'fraud', 'stepUp'] as const).map(id => ({
+      icon: USE_CASE_ICONS[id],
+      title: t(`nfcIdentityScan.useCases.${id}.title`),
+      description: t(`nfcIdentityScan.useCases.${id}.description`),
+    })),
+  [t])
+
+  const [activeHowItWorksId, setActiveHowItWorksId] = useState<string | null>('addNfc')
+  const [activeKeyFeatureId, setActiveKeyFeatureId] = useState<string | null>('strongerSecurity')
+  
+  const activeHowItWorksItem = howItWorksItems.find(item => item.id === activeHowItWorksId) || howItWorksItems[0]
+
+  const handleGetInTouch = () => {
+    window.location.href = 'mailto:contact@folio.id'
+  }
 
   return (
     <div className="flex flex-col items-start min-h-screen relative w-full">
@@ -121,17 +102,17 @@ export default function NfcIdentityScanPage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
-                <HeroTagline icon={nfcIcon}>NFC identity scan</HeroTagline>
+                <HeroTagline icon={nfcIcon}>{t('nfcIdentityScan.hero.tagline')}</HeroTagline>
                 <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px]">
-                  Spot passport and ID fraud instantly
+                  {t('nfcIdentityScan.hero.title')}
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                  Use NFC to read embedded passport and ID chip data, adding an extra security layer without adding user friction.
+                  {t('nfcIdentityScan.hero.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>
@@ -149,17 +130,17 @@ export default function NfcIdentityScanPage() {
           <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-                <HeroTagline icon={nfcIcon}>NFC identity scan</HeroTagline>
+                <HeroTagline icon={nfcIcon}>{t('nfcIdentityScan.hero.tagline')}</HeroTagline>
                 <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
-                  Spot passport and ID fraud instantly
+                  {t('nfcIdentityScan.hero.title')}
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                  Use NFC to read embedded passport and ID chip data, adding an extra security layer without adding user friction.
+                  {t('nfcIdentityScan.hero.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative shrink-0">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>
@@ -179,43 +160,43 @@ export default function NfcIdentityScanPage() {
           <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-12 items-center relative shrink-0 w-full">
               <SectionHeader
-                title="Stronger passport and ID verification with NFC"
+                title={t('nfcIdentityScan.why.title')}
                 maxWidth="576px"
               />
               {/* Desktop Layout */}
               <div className="hidden md:flex gap-6 items-start relative shrink-0 w-full">
                 <FeatureHighlight
                   icon={triangleAlertIcon}
-                  title="Detect forged documents"
-                  description="Go beyond visual checks by reading the secure RFID chip inside a passport or ID card, helping you reveal digitally altered or counterfeit documents quickly."
+                  title={t('nfcIdentityScan.why.detect.title')}
+                  description={t('nfcIdentityScan.why.detect.description')}
                 />
                 <FeatureHighlight
                   icon={nfcIcon}
-                  title="Automate passport checks"
-                  description="Use NFC to streamline passport verification, reduce manual review time, and focus human effort on spotting complex and high-risk fraud cases."
+                  title={t('nfcIdentityScan.why.automate.title')}
+                  description={t('nfcIdentityScan.why.automate.description')}
                 />
                 <FeatureHighlight
                   icon={circleArrowUpIcon}
-                  title="Boost user completion"
-                  description="Guide users through a simple, seamless NFC flow that increases successful scans and drives higher overall verification completion rates."
+                  title={t('nfcIdentityScan.why.boost.title')}
+                  description={t('nfcIdentityScan.why.boost.description')}
                 />
               </div>
               {/* Mobile Layout */}
               <div className="flex md:hidden flex-col gap-11 items-start relative shrink-0 w-full">
                 <FeatureHighlight
                   icon={triangleAlertIcon}
-                  title="Detect forged documents"
-                  description="Go beyond visual checks by reading the secure RFID chip inside a passport or ID card, helping you reveal digitally altered or counterfeit documents quickly."
+                  title={t('nfcIdentityScan.why.detect.title')}
+                  description={t('nfcIdentityScan.why.detect.description')}
                 />
                 <FeatureHighlight
                   icon={nfcIcon}
-                  title="Automate passport checks"
-                  description="Use NFC to streamline passport verification, reduce manual review time, and focus human effort on spotting complex and high-risk fraud cases."
+                  title={t('nfcIdentityScan.why.automate.title')}
+                  description={t('nfcIdentityScan.why.automate.description')}
                 />
                 <FeatureHighlight
                   icon={circleArrowUpIcon}
-                  title="Boost user completion"
-                  description="Guide users through a simple, seamless NFC flow that increases successful scans and drives higher overall verification completion rates."
+                  title={t('nfcIdentityScan.why.boost.title')}
+                  description={t('nfcIdentityScan.why.boost.description')}
                 />
               </div>
             </div>
@@ -235,13 +216,13 @@ export default function NfcIdentityScanPage() {
             />
             <div className="flex flex-1 flex-col gap-6 items-start relative min-w-0">
               <SectionHeader
-                title="How it works"
+                title={t('nfcIdentityScan.howItWorks.title')}
                 align="left"
                 maxWidth="100%"
               />
               <Accordion
                 items={howItWorksItems}
-                defaultOpenId="add-nfc"
+                defaultOpenId="addNfc"
                 onItemChange={setActiveHowItWorksId}
                 showMobileImages={false}
               />
@@ -251,13 +232,13 @@ export default function NfcIdentityScanPage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-6 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="How it works"
+              title={t('nfcIdentityScan.howItWorks.title')}
               align="left"
               maxWidth="100%"
             />
             <Accordion
               items={howItWorksItems}
-              defaultOpenId="add-nfc"
+              defaultOpenId="addNfc"
               onItemChange={setActiveHowItWorksId}
               showMobileImages={true}
             />
@@ -269,10 +250,10 @@ export default function NfcIdentityScanPage() {
           <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-5 items-start max-w-full md:max-w-[512px] relative shrink-0 w-full md:w-auto md:flex-1">
               <h2 className="font-bold leading-[36px] md:leading-[40px] text-[30px] md:text-[36px] text-[#0a0a0a] tracking-[0px] w-full">
-                Key features
+                {t('nfcIdentityScan.keyFeatures.title')}
               </h2>
               <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                Securely read identity data from NFC-enabled passports and IDs with a fast, intuitive flow.
+                {t('nfcIdentityScan.keyFeatures.description')}
               </p>
             </div>
             <div className="flex flex-col gap-0 items-start relative shrink-0 w-full md:flex-1">
@@ -294,7 +275,7 @@ export default function NfcIdentityScanPage() {
           <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-10 items-center relative shrink-0 w-full">
               <SectionHeader
-                title="Powerful uses of NFC verification"
+                title={t('nfcIdentityScan.useCases.title')}
                 maxWidth="576px"
               />
               <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
@@ -318,15 +299,15 @@ export default function NfcIdentityScanPage() {
             <div className="flex gap-16 items-center p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
               <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px] min-w-0">
                 <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-                  Build a stronger identity layer
+                  {t('nfcIdentityScan.cta.title')}
                 </h2>
                 <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-                  Talk with our team to see how Folio can elevate your verification flow and protect your users at every step.
+                  {t('nfcIdentityScan.cta.description')}
                 </p>
               </div>
               <div className="flex flex-1 flex-wrap gap-3 items-start justify-end relative min-w-0">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>
@@ -336,15 +317,15 @@ export default function NfcIdentityScanPage() {
           <div className="flex md:hidden flex-col gap-8 items-center w-full px-6 py-16 relative shrink-0" style={BACKGROUND_STYLE}>
             <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full">
               <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
-                Build a stronger identity layer
+                {t('nfcIdentityScan.cta.title')}
               </h2>
               <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-                Talk with our team to see how Folio can elevate your verification flow and protect your users at every step.
+                {t('nfcIdentityScan.cta.description')}
               </p>
             </div>
             <div className="flex flex-col gap-3 items-center relative shrink-0">
               <Button onClick={handleGetInTouch} variant="primary">
-                Get in touch
+                {t('common:buttons.getInTouch')}
               </Button>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
@@ -34,77 +34,30 @@ const BACKGROUND_STYLE = {
     'linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(90deg, rgba(229, 229, 229, 1) 0%, rgba(229, 229, 229, 1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%)',
 }
 
-const howItWorksItems: AccordionItemData[] = [
-  {
-    id: 'collect-details',
-    title: 'Collect contact details',
-    description: 'Users enter their phone number or email address.',
-    desktopImage: phoneEmailHowItWorks1,
-  },
-  {
-    id: 'send-code',
-    title: 'Send a verification code',
-    description: 'A code is automatically delivered via text or email.',
-    desktopImage: phoneEmailHowItWorks2,
-  },
-  {
-    id: 'confirm-ownership',
-    title: 'Confirm ownership',
-    description: 'Users enter the code to verify that the phone or email belongs to them.',
-    desktopImage: phoneEmailHowItWorks3,
-  },
-]
+// How it works images config
+const HOW_IT_WORKS_IMAGES = {
+  collectDetails: phoneEmailHowItWorks1,
+  sendCode: phoneEmailHowItWorks2,
+  confirmOwnership: phoneEmailHowItWorks3,
+}
 
-const verificationMethods = [
-  {
-    icon: smartphoneIcon,
-    title: 'Phone number verification (2FA)',
-    description: 'Verify the ownership of a phone number by sending a one-time code via call or text. This ensures the number is active, reachable, and truly belongs to the person attempting to authenticate.',
-  },
-  {
-    icon: globeIcon,
-    title: 'Phone ownership check',
-    description: "Confirm a user's legal name and associated phone number by cross-referencing global carrier databases. This adds an extra layer of trust by validating telecom-verified identity information.",
-  },
-  {
-    icon: mailCheckIcon,
-    title: 'Email verification (2FA)',
-    description: 'Authenticate the ownership of an email address by delivering a one-time code or secure link. This confirms that the user controls the inbox and can receive sensitive communications.',
-  },
-  {
-    icon: triangleAlertIcon,
-    title: 'Risk assessment',
-    description: 'Evaluate the trustworthiness of a phone number or email by analyzing activity patterns, abuse signals, and reputation insights to identify risky identities before they enter your system.',
-  },
-]
+// Method icons config
+const METHOD_ICONS = {
+  phone2fa: smartphoneIcon,
+  phoneOwnership: globeIcon,
+  email2fa: mailCheckIcon,
+  riskAssessment: triangleAlertIcon,
+}
 
-const riskSignals = [
-  {
-    icon: passcodeLockIcon,
-    title: 'Two-factor authentication',
-    description: "Strengthen account security by sending a one-time verification code to the user's phone number or email, ensuring only the rightful owner can proceed.",
-  },
-  {
-    icon: shieldCheckIcon,
-    title: 'Account takeover prevention',
-    description: 'Block unauthorized access attempts by layering multiple security checks, helping prevent attackers from gaining control of user accounts.',
-  },
-  {
-    icon: searchCheckIcon,
-    title: 'Risk assessment',
-    description: 'Evaluate the trustworthiness of a phone number or email by analyzing reputation, unusual patterns, and known risk indicators during onboarding.',
-  },
-]
+// Risk signal icons config
+const RISK_SIGNAL_ICONS = {
+  twoFactor: passcodeLockIcon,
+  accountTakeover: shieldCheckIcon,
+  riskAssessment: searchCheckIcon,
+}
 
 export default function PhoneAndEmailValidationPage() {
   const { t } = useTranslation('platform')
-  const [activeHowItWorksId, setActiveHowItWorksId] = useState<string | null>('collect-details')
-  
-  const activeHowItWorksItem = howItWorksItems.find(item => item.id === activeHowItWorksId) || howItWorksItems[0]
-
-  const handleGetInTouch = () => {
-    window.location.href = 'mailto:contact@folio.id'
-  }
 
   usePageTitle({
     title: t('phoneAndEmailValidation.meta.title'),
@@ -114,6 +67,42 @@ export default function PhoneAndEmailValidationPage() {
     ogImage: getOgImageUrl('phone-email-validation-hero.png'),
     ogUrl: 'https://folio.id/platform/phone-and-email-validation'
   })
+
+  // Generate how it works items from translations
+  const howItWorksItems: AccordionItemData[] = useMemo(() => 
+    (['collectDetails', 'sendCode', 'confirmOwnership'] as const).map(id => ({
+      id,
+      title: t(`phoneAndEmailValidation.howItWorks.${id}.title`),
+      description: t(`phoneAndEmailValidation.howItWorks.${id}.description`),
+      desktopImage: HOW_IT_WORKS_IMAGES[id],
+    })),
+  [t])
+
+  // Generate verification methods from translations
+  const verificationMethods = useMemo(() =>
+    (['phone2fa', 'phoneOwnership', 'email2fa', 'riskAssessment'] as const).map(id => ({
+      icon: METHOD_ICONS[id],
+      title: t(`phoneAndEmailValidation.methods.${id}.title`),
+      description: t(`phoneAndEmailValidation.methods.${id}.description`),
+    })),
+  [t])
+
+  // Generate risk signals from translations
+  const riskSignals = useMemo(() =>
+    (['twoFactor', 'accountTakeover', 'riskAssessment'] as const).map(id => ({
+      icon: RISK_SIGNAL_ICONS[id],
+      title: t(`phoneAndEmailValidation.riskSignals.${id}.title`),
+      description: t(`phoneAndEmailValidation.riskSignals.${id}.description`),
+    })),
+  [t])
+
+  const [activeHowItWorksId, setActiveHowItWorksId] = useState<string | null>('collectDetails')
+  
+  const activeHowItWorksItem = howItWorksItems.find(item => item.id === activeHowItWorksId) || howItWorksItems[0]
+
+  const handleGetInTouch = () => {
+    window.location.href = 'mailto:contact@folio.id'
+  }
 
   return (
     <div className="flex flex-col items-start min-h-screen relative w-full">
@@ -125,17 +114,17 @@ export default function PhoneAndEmailValidationPage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
-                <HeroTagline icon={messageSquareMoreIcon}>Phone and email validation</HeroTagline>
+                <HeroTagline icon={messageSquareMoreIcon}>{t('phoneAndEmailValidation.hero.tagline')}</HeroTagline>
                 <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px]">
-                  Fast phone and email validation
+                  {t('phoneAndEmailValidation.hero.title')}
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                  Check whether phone numbers and email addresses are real and truly belong to your users.
+                  {t('phoneAndEmailValidation.hero.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>
@@ -153,17 +142,17 @@ export default function PhoneAndEmailValidationPage() {
           <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-                <HeroTagline icon={messageSquareMoreIcon}>Phone and email validation</HeroTagline>
+                <HeroTagline icon={messageSquareMoreIcon}>{t('phoneAndEmailValidation.hero.tagline')}</HeroTagline>
                 <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
-                  Fast phone and email validation
+                  {t('phoneAndEmailValidation.hero.title')}
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                  Check whether phone numbers and email addresses are real and truly belong to your users.
+                  {t('phoneAndEmailValidation.hero.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative shrink-0">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>
@@ -183,43 +172,43 @@ export default function PhoneAndEmailValidationPage() {
           <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-12 items-center relative shrink-0 w-full">
               <SectionHeader
-                title="Why verify phone and email"
+                title={t('phoneAndEmailValidation.why.title')}
                 maxWidth="576px"
               />
               {/* Desktop Layout */}
               <div className="hidden md:flex gap-6 items-start relative shrink-0 w-full">
                 <FeatureHighlight
                   icon={shieldHalfIcon}
-                  title="Secure accounts"
-                  description="Prevent unauthorized access by confirming that phone numbers and emails truly belong to each user."
+                  title={t('phoneAndEmailValidation.why.secure.title')}
+                  description={t('phoneAndEmailValidation.why.secure.description')}
                 />
                 <FeatureHighlight
                   icon={circleCheckBigIcon}
-                  title="Easy for users"
-                  description="Reduce drop-offs with simple, low-friction flows that let users verify their details in seconds."
+                  title={t('phoneAndEmailValidation.why.easy.title')}
+                  description={t('phoneAndEmailValidation.why.easy.description')}
                 />
                 <FeatureHighlight
                   icon={circleArrowUpIcon}
-                  title="Higher completion rates"
-                  description="Help legitimate users pass verification by offering fallback methods when the first attempt fails."
+                  title={t('phoneAndEmailValidation.why.completion.title')}
+                  description={t('phoneAndEmailValidation.why.completion.description')}
                 />
               </div>
               {/* Mobile Layout */}
               <div className="flex md:hidden flex-col gap-11 items-start relative shrink-0 w-full">
                 <FeatureHighlight
                   icon={shieldHalfIcon}
-                  title="Secure accounts"
-                  description="Prevent unauthorized access by confirming that phone numbers and emails truly belong to each user."
+                  title={t('phoneAndEmailValidation.why.secure.title')}
+                  description={t('phoneAndEmailValidation.why.secure.description')}
                 />
                 <FeatureHighlight
                   icon={circleCheckBigIcon}
-                  title="Easy for users"
-                  description="Reduce drop-offs with simple, low-friction flows that let users verify their details in seconds."
+                  title={t('phoneAndEmailValidation.why.easy.title')}
+                  description={t('phoneAndEmailValidation.why.easy.description')}
                 />
                 <FeatureHighlight
                   icon={circleArrowUpIcon}
-                  title="Higher completion rates"
-                  description="Help legitimate users pass verification by offering fallback methods when the first attempt fails."
+                  title={t('phoneAndEmailValidation.why.completion.title')}
+                  description={t('phoneAndEmailValidation.why.completion.description')}
                 />
               </div>
             </div>
@@ -239,13 +228,13 @@ export default function PhoneAndEmailValidationPage() {
             />
             <div className="flex flex-1 flex-col gap-6 items-start relative min-w-0">
               <SectionHeader
-                title="How it works"
+                title={t('phoneAndEmailValidation.howItWorks.title')}
                 align="left"
                 maxWidth="100%"
               />
               <Accordion
                 items={howItWorksItems}
-                defaultOpenId="collect-details"
+                defaultOpenId="collectDetails"
                 onItemChange={setActiveHowItWorksId}
                 showMobileImages={false}
               />
@@ -255,13 +244,13 @@ export default function PhoneAndEmailValidationPage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-6 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="How it works"
+              title={t('phoneAndEmailValidation.howItWorks.title')}
               align="left"
               maxWidth="100%"
             />
             <Accordion
               items={howItWorksItems}
-              defaultOpenId="collect-details"
+              defaultOpenId="collectDetails"
               onItemChange={setActiveHowItWorksId}
               showMobileImages={true}
             />
@@ -273,7 +262,7 @@ export default function PhoneAndEmailValidationPage() {
           <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-10 items-center relative shrink-0 w-full">
               <SectionHeader
-                title="Explore verification methods"
+                title={t('phoneAndEmailValidation.methods.title')}
                 maxWidth="576px"
               />
               <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
@@ -295,7 +284,7 @@ export default function PhoneAndEmailValidationPage() {
           <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-10 items-center relative shrink-0 w-full">
               <SectionHeader
-                title="Prevent fraud with additional risk signals"
+                title={t('phoneAndEmailValidation.riskSignals.title')}
                 maxWidth="576px"
               />
               <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
@@ -319,15 +308,15 @@ export default function PhoneAndEmailValidationPage() {
             <div className="flex gap-16 items-center p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
               <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px] min-w-0">
                 <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-                  Build a stronger identity layer
+                  {t('phoneAndEmailValidation.cta.title')}
                 </h2>
                 <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-                  Talk with our team to see how Folio can elevate your verification flow and protect your users at every step.
+                  {t('phoneAndEmailValidation.cta.description')}
                 </p>
               </div>
               <div className="flex flex-1 flex-wrap gap-3 items-start justify-end relative min-w-0">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>
@@ -337,15 +326,15 @@ export default function PhoneAndEmailValidationPage() {
           <div className="flex md:hidden flex-col gap-8 items-center w-full px-6 py-16 relative shrink-0" style={BACKGROUND_STYLE}>
             <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full">
               <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
-                Build a stronger identity layer
+                {t('phoneAndEmailValidation.cta.title')}
               </h2>
               <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-                Talk with our team to see how Folio can elevate your verification flow and protect your users at every step.
+                {t('phoneAndEmailValidation.cta.description')}
               </p>
             </div>
             <div className="flex flex-col gap-3 items-center relative shrink-0">
               <Button onClick={handleGetInTouch} variant="primary">
-                Get in touch
+                {t('common:buttons.getInTouch')}
               </Button>
             </div>
           </div>

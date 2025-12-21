@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
@@ -32,95 +32,22 @@ const BACKGROUND_STYLE = {
     'linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(90deg, rgba(229, 229, 229, 1) 0%, rgba(229, 229, 229, 1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%)',
 }
 
-// How it works accordion items
-const howItWorksItems: AccordionItemData[] = [
-  {
-    id: 'submit',
-    title: 'Users submit documents securely',
-    description: 'Users upload documents through a secure interface with guidance for best capture quality.',
-    desktopImage: documentIntelligenceHowItWorks1,
-  },
-  {
-    id: 'extract',
-    title: 'Automatically extract information',
-    description: 'AI reads and extracts key data from documents, identifying document type and relevant fields.',
-    desktopImage: documentIntelligenceHowItWorks2,
-  },
-  {
-    id: 'review',
-    title: 'Review information efficiently',
-    description: 'Review extracted data with confidence scores and highlighted areas that need attention.',
-    desktopImage: documentIntelligenceHowItWorks3,
-  },
-]
+// How it works images config
+const HOW_IT_WORKS_IMAGES = {
+  submit: documentIntelligenceHowItWorks1,
+  extract: documentIntelligenceHowItWorks2,
+  review: documentIntelligenceHowItWorks3,
+}
 
-// Key features accordion items
-const keyFeaturesItems: AccordionItemData[] = [
-  {
-    id: 'supported-types',
-    title: 'Supported document types',
-    description: 'Collect and auto classify corporate records, tax forms, bank statements, utility bills, vehicle registrations, and more.',
-  },
-  {
-    id: 'country-coverage',
-    title: 'Country coverage',
-    description: 'Accept documents from more than 90 supported countries.',
-  },
-  {
-    id: 'customizable-flow',
-    title: 'Customizable collection flow',
-    description: 'Choose which document types to accept, how many submission attempts to allow, and which verification checks to apply.',
-  },
-  {
-    id: 'tamper-checks',
-    title: 'Configurable tamper checks',
-    description: 'Automatically detect signs of image or PDF tampering and inconsistencies that may signal fraud.',
-  },
-  {
-    id: 'user-guidance',
-    title: 'User guidance',
-    description: 'Reduce errors with in app tips that help users avoid glare, blur, and other issues when uploading documents.',
-  },
-  {
-    id: 'ai-insights',
-    title: 'AI insights',
-    description: 'Save time with AI powered classification, data extraction, and review ready insights.',
-  },
-]
-
-// Practical uses data
-const practicalUsesData = [
-  {
-    icon: idCardIcon,
-    title: 'Identity verification',
-    description: 'Verify identity documents like passports, driver licenses, and national IDs.',
-  },
-  {
-    icon: briefcaseIcon,
-    title: 'Business verification',
-    description: 'Validate business registration documents and corporate filings.',
-  },
-  {
-    icon: mapPinnedIcon,
-    title: 'Address confirmation',
-    description: 'Confirm address through utility bills, bank statements, and official correspondence.',
-  },
-  {
-    icon: heartHandshakeIcon,
-    title: 'Health coverage proof',
-    description: 'Verify health insurance cards and coverage documentation.',
-  },
-  {
-    icon: carFrontIcon,
-    title: 'Vehicle ownership verification',
-    description: 'Validate vehicle registration and ownership documents.',
-  },
-  {
-    icon: handCoinsIcon,
-    title: 'Wealth and income validation',
-    description: 'Verify income through pay stubs, tax returns, and financial statements.',
-  },
-]
+// Practical uses icons config
+const PRACTICAL_USES_ICONS = {
+  identity: idCardIcon,
+  business: briefcaseIcon,
+  address: mapPinnedIcon,
+  health: heartHandshakeIcon,
+  vehicle: carFrontIcon,
+  income: handCoinsIcon,
+}
 
 export default function DocumentIntelligencePage() {
   const { t } = useTranslation('platform')
@@ -133,6 +60,34 @@ export default function DocumentIntelligencePage() {
     ogImage: getOgImageUrl('document-intelligence-hero.png'),
     ogUrl: 'https://folio.id/platform/document-intelligence'
   })
+
+  // Generate how it works items from translations
+  const howItWorksItems: AccordionItemData[] = useMemo(() => 
+    (['submit', 'extract', 'review'] as const).map(id => ({
+      id,
+      title: t(`documentIntelligence.howItWorks.${id}.title`),
+      description: t(`documentIntelligence.howItWorks.${id}.description`),
+      desktopImage: HOW_IT_WORKS_IMAGES[id],
+    })),
+  [t])
+
+  // Generate key features items from translations
+  const keyFeaturesItems: AccordionItemData[] = useMemo(() =>
+    (['supportedTypes', 'countryCoverage', 'customizableFlow', 'tamperChecks', 'userGuidance', 'aiInsights'] as const).map(id => ({
+      id,
+      title: t(`documentIntelligence.keyFeatures.items.${id}.title`),
+      description: t(`documentIntelligence.keyFeatures.items.${id}.description`),
+    })),
+  [t])
+
+  // Generate practical uses data from translations
+  const practicalUsesData = useMemo(() =>
+    (['identity', 'business', 'address', 'health', 'vehicle', 'income'] as const).map(id => ({
+      icon: PRACTICAL_USES_ICONS[id],
+      title: t(`documentIntelligence.practicalUses.${id}.title`),
+      description: t(`documentIntelligence.practicalUses.${id}.description`),
+    })),
+  [t])
 
   const [activeHowItWorksId, setActiveHowItWorksId] = useState<string | null>('submit')
   const activeHowItWorksItem = howItWorksItems.find(item => item.id === activeHowItWorksId) || howItWorksItems[0]
@@ -209,24 +164,24 @@ export default function DocumentIntelligencePage() {
           <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-12 items-center relative shrink-0 w-full">
               <SectionHeader
-                title="Intelligent document processing"
+                title={t('documentIntelligence.processing.title')}
                 maxWidth="576px"
               />
               <div className="flex flex-col md:flex-row gap-11 md:gap-6 items-start relative shrink-0 w-full">
                 <FeatureItem
                   icon={checkCheckIcon}
-                  title="Approve users faster"
-                  description="Speed up verification with automated document analysis that processes submissions in seconds."
+                  title={t('documentIntelligence.processing.approve.title')}
+                  description={t('documentIntelligence.processing.approve.description')}
                 />
                 <FeatureItem
                   icon={sparklesIcon}
-                  title="Get clearer insights from documents"
-                  description="Extract structured data from unstructured documents with AI-powered analysis."
+                  title={t('documentIntelligence.processing.insights.title')}
+                  description={t('documentIntelligence.processing.insights.description')}
                 />
                 <FeatureItem
                   icon={fileStackIcon}
-                  title="Process more documents with ease"
-                  description="Scale your document verification without adding manual review overhead."
+                  title={t('documentIntelligence.processing.scale.title')}
+                  description={t('documentIntelligence.processing.scale.description')}
                 />
               </div>
             </div>
@@ -246,7 +201,7 @@ export default function DocumentIntelligencePage() {
             />
             <div className="flex flex-1 flex-col gap-6 items-start relative min-w-0">
               <SectionHeader
-                title="How it works"
+                title={t('documentIntelligence.howItWorks.title')}
                 align="left"
                 maxWidth="100%"
               />
@@ -262,7 +217,7 @@ export default function DocumentIntelligencePage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-6 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="How it works"
+              title={t('documentIntelligence.howItWorks.title')}
               align="left"
               maxWidth="100%"
             />
@@ -281,16 +236,16 @@ export default function DocumentIntelligencePage() {
           <div className="hidden md:flex gap-16 items-start max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-5 items-start relative min-w-0 max-w-[512px]">
               <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-                Key features
+                {t('documentIntelligence.keyFeatures.title')}
               </h2>
               <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                Handle more documents in less time
+                {t('documentIntelligence.keyFeatures.description')}
               </p>
             </div>
             <div className="flex flex-1 flex-col items-start relative min-w-0">
               <Accordion
                 items={keyFeaturesItems}
-                defaultOpenId="supported-types"
+                defaultOpenId="supportedTypes"
                 showMobileImages={false}
               />
             </div>
@@ -300,15 +255,15 @@ export default function DocumentIntelligencePage() {
           <div className="flex md:hidden flex-col gap-6 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-5 items-start relative shrink-0 w-full">
               <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
-                Key features
+                {t('documentIntelligence.keyFeatures.title')}
               </h2>
               <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                Handle more documents in less time
+                {t('documentIntelligence.keyFeatures.description')}
               </p>
             </div>
             <Accordion
               items={keyFeaturesItems}
-              defaultOpenId="supported-types"
+              defaultOpenId="supportedTypes"
               showMobileImages={false}
             />
           </div>
@@ -319,7 +274,7 @@ export default function DocumentIntelligencePage() {
           <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-10 items-center relative shrink-0 w-full">
               <SectionHeader
-                title="Practical uses of Document AI"
+                title={t('documentIntelligence.practicalUses.title')}
                 maxWidth="576px"
               />
               <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
@@ -343,15 +298,15 @@ export default function DocumentIntelligencePage() {
             <div className="flex gap-16 items-center p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
               <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px] min-w-0">
                 <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-                  Let's build better identity verification
+                  {t('documentIntelligence.cta.title')}
                 </h2>
                 <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-                  Talk to our team to explore how Folio can enhance your onboarding and verification experience.
+                  {t('documentIntelligence.cta.description')}
                 </p>
               </div>
               <div className="flex flex-1 flex-wrap gap-3 items-start justify-end relative min-w-0">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>
@@ -361,15 +316,15 @@ export default function DocumentIntelligencePage() {
           <div className="flex md:hidden flex-col gap-8 items-center w-full px-6 py-16 relative shrink-0" style={BACKGROUND_STYLE}>
             <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full">
               <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
-                Let's build better identity verification
+                {t('documentIntelligence.cta.title')}
               </h2>
               <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-                Talk to our team to explore how Folio can enhance your onboarding and verification experience.
+                {t('documentIntelligence.cta.description')}
               </p>
             </div>
             <div className="flex flex-col gap-3 items-center relative shrink-0">
               <Button onClick={handleGetInTouch} variant="primary">
-                Get in touch
+                {t('common:buttons.getInTouch')}
               </Button>
             </div>
           </div>

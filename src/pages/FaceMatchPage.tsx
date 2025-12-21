@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
@@ -6,7 +6,7 @@ import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
 import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
-import FAQSection, { FAQItem } from '../components/sections/FAQSection'
+import FAQSection from '../components/sections/FAQSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
 
@@ -36,107 +36,18 @@ const BACKGROUND_STYLE = {
     'linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(90deg, rgba(229, 229, 229, 1) 0%, rgba(229, 229, 229, 1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%)',
 }
 
-const howItWorksItems: AccordionItemData[] = [
-  {
-    id: 'compliance-rules',
-    title: 'Set your compliance rules',
-    description: 'Define what you collect, how you verify it and how you handle sensitive scenarios. Save your settings as templates for consistent use.',
-    desktopImage: faceMatchHowItWorks1,
-  },
-  {
-    id: 'user-experience',
-    title: 'Shape a better user experience',
-    description: 'Improve capture quality with real time guidance and auto-captured selfies. Refine your flow with A/B testing and easy adjustments.',
-    desktopImage: faceMatchHowItWorks2,
-  },
-  {
-    id: 'manage-data',
-    title: 'Manage selfie data on your terms',
-    description: 'Update workflows based on your analysis, automate key actions and apply redaction or step up checks where needed.',
-    desktopImage: faceMatchHowItWorks3,
-  },
-]
+// How it works images config
+const HOW_IT_WORKS_IMAGES = {
+  complianceRules: faceMatchHowItWorks1,
+  userExperience: faceMatchHowItWorks2,
+  manageData: faceMatchHowItWorks3,
+}
 
-const keyFeatures = [
-  {
-    id: 'flexible-controls',
-    title: 'Flexible controls and checks',
-    description: 'Set compliance rules, adjust fraud checks and tune retries to find the right balance of security and conversion.',
-  },
-  {
-    id: 'signal-library',
-    title: 'Rich signal library',
-    description: 'Use a wide range of proprietary signals to understand the context behind every selfie submission.',
-  },
-  {
-    id: 'improving-models',
-    title: 'Continuously improving models',
-    description: 'Benefit from models that evolve with new research and real world fraud patterns.',
-  },
-  {
-    id: 'multi-frame',
-    title: 'Multi frame analysis',
-    description: 'Review several frames to boost accuracy and reduce false positives.',
-  },
-  {
-    id: 'auto-capture',
-    title: 'Auto capture',
-    description: 'Capture the selfie automatically at the ideal moment for better quality and smoother user flow.',
-  },
-  {
-    id: 'user-guidance',
-    title: 'User guidance',
-    description: 'Provide real time prompts that help users take clear selfies and avoid common capture errors.',
-  },
-  {
-    id: 'cross-device',
-    title: 'Cross device compatibility',
-    description: 'Deliver a consistent experience across different devices, operating systems and environments.',
-  },
-]
-
-// FAQ data
-const FACE_MATCH_FAQ: FAQItem[] = [
-  {
-    q: 'How does face matching work?',
-    a: 'Folio compares a live selfie with the photo on an ID document. Advanced AI models analyze facial features to confirm that the person presenting the document is the same person pictured on it.',
-  },
-  {
-    q: 'How accurate is the face matching?',
-    a: 'Folio achieves high accuracy rates validated by independent testing labs. The system is designed to minimize both false acceptances and false rejections while performing consistently across demographics.',
-  },
-  {
-    q: 'Can face matching detect deepfakes and spoofing attempts?',
-    a: 'Yes. Folio includes liveness detection that identifies presentation attacks, deepfakes, synthetic faces and injection attempts. Multiple frames are analyzed to ensure the selfie comes from a real person.',
-  },
-  {
-    q: 'Is face matching biased toward certain demographics?',
-    a: 'Folio uses models trained on responsibly sourced data and tested to show no material bias across age, sex or skin tone. Third party evaluations confirm fair performance across demographic groups.',
-  },
-  {
-    q: 'How long does a face match check take?',
-    a: 'Most face match checks complete in under two seconds. Auto-capture and real-time guidance help users take quality selfies quickly, minimizing delays.',
-  },
-  {
-    q: 'What happens if the face match fails?',
-    a: 'If the initial match is inconclusive, users can retry with better lighting or positioning. Persistent failures can be routed to manual review where your team examines the images.',
-  },
-  {
-    q: 'Is selfie data stored securely?',
-    a: 'You control how selfie data is collected, processed and stored. Folio supports data redaction, retention policies and compliance configurations to meet regulatory requirements in your regions.',
-  },
-]
+// Key features IDs
+const KEY_FEATURES_IDS = ['flexibleControls', 'signalLibrary', 'improvingModels', 'multiFrame', 'autoCapture', 'userGuidance', 'crossDevice'] as const
 
 export default function FaceMatchPage() {
   const { t } = useTranslation('platform')
-  const [activeHowItWorksId, setActiveHowItWorksId] = useState<string | null>('compliance-rules')
-  const [activeKeyFeatureId, setActiveKeyFeatureId] = useState<string | null>('flexible-controls')
-  
-  const activeHowItWorksItem = howItWorksItems.find(item => item.id === activeHowItWorksId) || howItWorksItems[0]
-
-  const handleGetInTouch = () => {
-    window.location.href = 'mailto:contact@folio.id'
-  }
 
   usePageTitle({
     title: t('faceMatch.meta.title'),
@@ -146,6 +57,40 @@ export default function FaceMatchPage() {
     ogImage: getOgImageUrl('face-match-hero.png'),
     ogUrl: 'https://folio.id/platform/face-match'
   })
+
+  // Generate how it works items from translations
+  const howItWorksItems: AccordionItemData[] = useMemo(() => 
+    (['complianceRules', 'userExperience', 'manageData'] as const).map(id => ({
+      id,
+      title: t(`faceMatch.howItWorks.${id}.title`),
+      description: t(`faceMatch.howItWorks.${id}.description`),
+      desktopImage: HOW_IT_WORKS_IMAGES[id],
+    })),
+  [t])
+
+  // Generate key features items from translations
+  const keyFeatures = useMemo(() =>
+    KEY_FEATURES_IDS.map(id => ({
+      id,
+      title: t(`faceMatch.keyFeatures.items.${id}.title`),
+      description: t(`faceMatch.keyFeatures.items.${id}.description`),
+    })),
+  [t])
+
+  // Generate FAQ data from translations
+  const faqData = useMemo(() => {
+    const items = t('faceMatch.faq.items', { returnObjects: true }) as Array<{ q: string; a: string }>
+    return items.map(item => ({ q: item.q, a: item.a }))
+  }, [t])
+
+  const [activeHowItWorksId, setActiveHowItWorksId] = useState<string | null>('complianceRules')
+  const [activeKeyFeatureId, setActiveKeyFeatureId] = useState<string | null>('flexibleControls')
+  
+  const activeHowItWorksItem = howItWorksItems.find(item => item.id === activeHowItWorksId) || howItWorksItems[0]
+
+  const handleGetInTouch = () => {
+    window.location.href = 'mailto:contact@folio.id'
+  }
 
   return (
     <div className="flex flex-col items-start min-h-screen relative w-full">
@@ -185,17 +130,17 @@ export default function FaceMatchPage() {
           <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-                <HeroTagline icon={circleUserIcon}>Face match</HeroTagline>
+                <HeroTagline icon={circleUserIcon}>{t('faceMatch.hero.tagline')}</HeroTagline>
                 <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
-                  Powerful face recognition
+                  {t('faceMatch.hero.title')}
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                  Exceptional accuracy delivered with privacy, transparency and a seamless user experience.
+                  {t('faceMatch.hero.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative shrink-0">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>
@@ -215,43 +160,43 @@ export default function FaceMatchPage() {
           <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-12 items-center relative shrink-0 w-full">
               <SectionHeader
-                title="Next level face recognition protection"
+                title={t('faceMatch.protection.title')}
                 maxWidth="576px"
               />
               {/* Desktop Layout */}
               <div className="hidden md:flex gap-6 items-start relative shrink-0 w-full">
                 <FeatureHighlight
                   icon={scanFaceIcon}
-                  title="High precision face recognition"
-                  description="Folio combines advanced detection, liveness and matching models to deliver accurate and consistent face recognition performance."
+                  title={t('faceMatch.protection.precision.title')}
+                  description={t('faceMatch.protection.precision.description')}
                 />
                 <FeatureHighlight
                   icon={awardIcon}
-                  title="Independently tested and certified"
-                  description="Our face matching and liveness technologies are evaluated by accredited labs to confirm accuracy, reliability and fairness across demographics."
+                  title={t('faceMatch.protection.certified.title')}
+                  description={t('faceMatch.protection.certified.description')}
                 />
                 <FeatureHighlight
                   icon={shieldHalfIcon}
-                  title="Defense grade performance"
-                  description="Folio uses high performing core models optimized for different devices and user groups, ensuring strong protection in real world conditions."
+                  title={t('faceMatch.protection.defense.title')}
+                  description={t('faceMatch.protection.defense.description')}
                 />
               </div>
               {/* Mobile Layout */}
               <div className="flex md:hidden flex-col gap-11 items-start relative shrink-0 w-full">
                 <FeatureHighlight
                   icon={scanFaceIcon}
-                  title="High precision face recognition"
-                  description="Folio combines advanced detection, liveness and matching models to deliver accurate and consistent face recognition performance."
+                  title={t('faceMatch.protection.precision.title')}
+                  description={t('faceMatch.protection.precision.description')}
                 />
                 <FeatureHighlight
                   icon={awardIcon}
-                  title="Independently tested and certified"
-                  description="Our face matching and liveness technologies are evaluated by accredited labs to confirm accuracy, reliability and fairness across demographics."
+                  title={t('faceMatch.protection.certified.title')}
+                  description={t('faceMatch.protection.certified.description')}
                 />
                 <FeatureHighlight
                   icon={shieldHalfIcon}
-                  title="Defense grade performance"
-                  description="Folio uses high performing core models optimized for different devices and user groups, ensuring strong protection in real world conditions."
+                  title={t('faceMatch.protection.defense.title')}
+                  description={t('faceMatch.protection.defense.description')}
                 />
               </div>
             </div>
@@ -264,13 +209,13 @@ export default function FaceMatchPage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-6 items-start relative min-w-0">
               <SectionHeader
-                title="Control how selfies are captured, processed and stored"
+                title={t('faceMatch.howItWorks.title')}
                 align="left"
                 maxWidth="100%"
               />
               <Accordion
                 items={howItWorksItems}
-                defaultOpenId="compliance-rules"
+                defaultOpenId="complianceRules"
                 onItemChange={setActiveHowItWorksId}
                 showMobileImages={false}
               />
@@ -287,13 +232,13 @@ export default function FaceMatchPage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-6 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="Control how selfies are captured, processed and stored"
+              title={t('faceMatch.howItWorks.title')}
               align="left"
               maxWidth="100%"
             />
             <Accordion
               items={howItWorksItems}
-              defaultOpenId="compliance-rules"
+              defaultOpenId="complianceRules"
               onItemChange={setActiveHowItWorksId}
               showMobileImages={true}
             />
@@ -305,39 +250,39 @@ export default function FaceMatchPage() {
           <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-10 items-center relative shrink-0 w-full">
               <SectionHeader
-                title="Responsible face recognition, built for scale"
+                title={t('faceMatch.responsible.title')}
                 maxWidth="576px"
               />
               <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
                 <ToolCard
                   icon={scaleIcon}
-                  title="Ethical AI"
-                  description="Folio uses models built on responsibly sourced data that show no material bias across age, sex or skin tone, based on internal and third party evaluations."
+                  title={t('faceMatch.responsible.ethical.title')}
+                  description={t('faceMatch.responsible.ethical.description')}
                 />
                 <ToolCard
                   icon={globeIcon}
-                  title="Global compliance"
-                  description="Define how you collect, process and store selfie data to meet regulatory requirements in every region where you operate."
+                  title={t('faceMatch.responsible.compliance.title')}
+                  description={t('faceMatch.responsible.compliance.description')}
                 />
                 <ToolCard
                   icon={shieldHalfIcon}
-                  title="Strong attack resistance"
-                  description="Protect users from deepfakes, synthetic faces, presentation attacks and injection attempts with advanced liveness detection."
+                  title={t('faceMatch.responsible.resistance.title')}
+                  description={t('faceMatch.responsible.resistance.description')}
                 />
                 <ToolCard
                   icon={settings2Icon}
-                  title="Customizable recognition"
-                  description="Tune gestures, risk settings and behavior to match your workflow and adjust configurations as your needs evolve."
+                  title={t('faceMatch.responsible.customizable.title')}
+                  description={t('faceMatch.responsible.customizable.description')}
                 />
                 <ToolCard
                   icon={barChart4Icon}
-                  title="Optimized conversion"
-                  description="Create a smoother user journey with auto capture, refined error handling and flexible UI options."
+                  title={t('faceMatch.responsible.conversion.title')}
+                  description={t('faceMatch.responsible.conversion.description')}
                 />
                 <ToolCard
                   icon={zapIcon}
-                  title="Fast verification"
-                  description="Most selfie checks complete in under two seconds, helping users move through your flow without delays."
+                  title={t('faceMatch.responsible.fast.title')}
+                  description={t('faceMatch.responsible.fast.description')}
                 />
               </div>
             </div>
@@ -349,10 +294,10 @@ export default function FaceMatchPage() {
           <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-5 items-start max-w-full md:max-w-[512px] relative shrink-0 w-full md:w-auto md:flex-1">
               <h2 className="font-bold leading-[36px] md:leading-[40px] text-[30px] md:text-[36px] text-[#0a0a0a] tracking-[0px] w-full">
-                Key features
+                {t('faceMatch.keyFeatures.title')}
               </h2>
               <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                Advanced selfie recognition with smart controls and high performance.
+                {t('faceMatch.keyFeatures.description')}
               </p>
             </div>
             <div className="flex flex-col gap-0 items-start relative shrink-0 w-full md:flex-1">
@@ -374,24 +319,24 @@ export default function FaceMatchPage() {
           <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-10 items-center relative shrink-0 w-full">
               <SectionHeader
-                title="Ways to use selfie recognition"
+                title={t('faceMatch.useCases.title')}
                 maxWidth="576px"
               />
               <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
                 <ToolCard
                   icon={squareUserIcon}
-                  title="Verify physical ID ownership"
-                  description="Match selfies to ID portraits in real time to confirm that a physical document belongs to the person presenting it."
+                  title={t('faceMatch.useCases.verifyId.title')}
+                  description={t('faceMatch.useCases.verifyId.description')}
                 />
                 <ToolCard
                   icon={refreshCcwIcon}
-                  title="Seamless reverification"
-                  description="Compare new selfies with previously captured portraits to confirm identity and keep authorized access secure."
+                  title={t('faceMatch.useCases.reverification.title')}
+                  description={t('faceMatch.useCases.reverification.description')}
                 />
                 <ToolCard
                   icon={userCheckIcon}
-                  title="Workforce identity protection"
-                  description="Ensure employees are verified throughout onboarding, system access and other key points in their work lifecycle."
+                  title={t('faceMatch.useCases.workforce.title')}
+                  description={t('faceMatch.useCases.workforce.description')}
                 />
               </div>
             </div>
@@ -405,15 +350,15 @@ export default function FaceMatchPage() {
             <div className="flex gap-16 items-center p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
               <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px] min-w-0">
                 <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-                  Build a stronger identity layer
+                  {t('faceMatch.cta.title')}
                 </h2>
                 <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-                  Talk with our team to see how Folio can elevate your verification flow and protect your users at every step.
+                  {t('faceMatch.cta.description')}
                 </p>
               </div>
               <div className="flex flex-1 flex-wrap gap-3 items-start justify-end relative min-w-0">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>
@@ -423,22 +368,22 @@ export default function FaceMatchPage() {
           <div className="flex md:hidden flex-col gap-8 items-center w-full px-6 py-16 relative shrink-0" style={BACKGROUND_STYLE}>
             <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full">
               <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
-                Build a stronger identity layer
+                {t('faceMatch.cta.title')}
               </h2>
               <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-                Talk with our team to see how Folio can elevate your verification flow and protect your users at every step.
+                {t('faceMatch.cta.description')}
               </p>
             </div>
             <div className="flex flex-col gap-3 items-center relative shrink-0">
               <Button onClick={handleGetInTouch} variant="primary">
-                Get in touch
+                {t('common:buttons.getInTouch')}
               </Button>
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <FAQSection faqData={FACE_MATCH_FAQ} />
+        <FAQSection faqData={faqData} title={t('faceMatch.faq.title')} />
       </main>
       <ExploreMoreSection currentPath="/platform/face-match" />
       <FooterSection />

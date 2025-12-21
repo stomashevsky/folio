@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard, HeroTagline } from '../components/ui'
@@ -31,102 +31,27 @@ const BACKGROUND_STYLE = {
     'linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(90deg, rgba(229, 229, 229, 1) 0%, rgba(229, 229, 229, 1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%)',
 }
 
-// Feature highlights data
-const featureHighlights = [
-  {
-    icon: audioWaveformIcon,
-    title: 'Fraud detection in real time',
-    description: 'Quietly collect behavioral and device signals to identify risk in real time and respond instantly with the right level of friction.',
-  },
-  {
-    icon: monitorSmartphoneIcon,
-    title: 'Repeat fraud detection',
-    description: 'Link devices, IP addresses, and user behavior to surface repeat offenders and coordinated fraud patterns automatically.',
-  },
-  {
-    icon: userSearchIcon,
-    title: 'User risk enrichment',
-    description: 'Combine background signals into a single risk view to support confident decisions across the entire user lifecycle.',
-  },
-]
+// How it works images config
+const HOW_IT_WORKS_IMAGES = {
+  collect: behaviorInsightsHowItWorks1,
+  adapt: behaviorInsightsHowItWorks2,
+  decide: behaviorInsightsHowItWorks3,
+}
 
-// How it works accordion items
-const howItWorksItems: AccordionItemData[] = [
-  {
-    id: 'collect',
-    title: 'Collect signals automatically',
-    description: 'Passive signals are captured as users move through the flow. Add third party data to enrich context without extra steps.',
-    desktopImage: behaviorInsightsHowItWorks1,
-  },
-  {
-    id: 'adapt',
-    title: 'Adapt flows in real time',
-    description: 'Adjust verification steps dynamically based on live risk signals and user behavior.',
-    desktopImage: behaviorInsightsHowItWorks2,
-  },
-  {
-    id: 'decide',
-    title: 'Decide with confidence',
-    description: 'Use combined signals to approve, decline, or route users to review with greater accuracy.',
-    desktopImage: behaviorInsightsHowItWorks3,
-  },
-]
+// Feature icons config
+const FEATURE_ICONS = {
+  realtime: audioWaveformIcon,
+  repeat: monitorSmartphoneIcon,
+  enrichment: userSearchIcon,
+}
 
-// Key features accordion items
-const keyFeaturesItems: AccordionItemData[] = [
-  {
-    id: 'behavioral',
-    title: 'Behavioral patterns',
-    description: `Understand how users interact with your flow to identify potential risk early, without relying on manual analysis or data science teams.
-
-Signals include:
-• Session duration
-• Interaction interruptions
-• Unusual behavior patterns
-• Shortcut usage
-• And more`,
-  },
-  {
-    id: 'network',
-    title: 'Network and device context',
-    description: `Use background network and device attributes to surface hidden risk signals before fraud escalates.
-
-Signals include:
-• Network identifiers
-• Device characteristics
-• Approximate location
-• And more`,
-  },
-  {
-    id: 'relationships',
-    title: 'Account relationships',
-    description: 'Identify connections between users to stop repeat abuse and coordinated fraud across your platform. Detect shared attributes and overlapping signals to prevent known bad actors from returning.',
-  },
-]
-
-// Use cases data
-const useCasesData = [
-  {
-    icon: settings2Icon,
-    title: 'Real time adjustment',
-    description: 'Dynamically increase or reduce verification steps when risky behavior such as VPN usage or unusual access patterns is detected.',
-  },
-  {
-    icon: shieldHalfIcon,
-    title: 'Account takeover protection',
-    description: 'Identify suspicious logins by comparing location, device, and network signals against known user behavior.',
-  },
-  {
-    icon: waypointsIcon,
-    title: 'Linked account detection',
-    description: 'Reveal duplicate or connected accounts by analyzing shared devices, networks, and behavioral attributes.',
-  },
-  {
-    icon: folderSearchIcon,
-    title: 'Smart review routing',
-    description: 'Automatically send high risk sessions to manual review instead of forcing instant approve or deny decisions.',
-  },
-]
+// Use case icons config
+const USE_CASE_ICONS = {
+  realtime: settings2Icon,
+  takeover: shieldHalfIcon,
+  linked: waypointsIcon,
+  routing: folderSearchIcon,
+}
 
 export default function BehaviorInsightsPage() {
   const { t } = useTranslation('platform')
@@ -139,6 +64,43 @@ export default function BehaviorInsightsPage() {
     ogImage: getOgImageUrl('behavior-insights-hero.png'),
     ogUrl: 'https://folio.id/platform/behavior-insights'
   })
+
+  // Generate feature highlights from translations
+  const featureHighlights = useMemo(() =>
+    (['realtime', 'repeat', 'enrichment'] as const).map(id => ({
+      icon: FEATURE_ICONS[id],
+      title: t(`behaviorInsights.features.${id}.title`),
+      description: t(`behaviorInsights.features.${id}.description`),
+    })),
+  [t])
+
+  // Generate how it works items from translations
+  const howItWorksItems: AccordionItemData[] = useMemo(() =>
+    (['collect', 'adapt', 'decide'] as const).map(id => ({
+      id,
+      title: t(`behaviorInsights.howItWorks.${id}.title`),
+      description: t(`behaviorInsights.howItWorks.${id}.description`),
+      desktopImage: HOW_IT_WORKS_IMAGES[id],
+    })),
+  [t])
+
+  // Generate key features items from translations
+  const keyFeaturesItems: AccordionItemData[] = useMemo(() =>
+    (['behavioral', 'network', 'relationships'] as const).map(id => ({
+      id,
+      title: t(`behaviorInsights.keyFeatures.${id}.title`),
+      description: t(`behaviorInsights.keyFeatures.${id}.description`),
+    })),
+  [t])
+
+  // Generate use cases from translations
+  const useCasesData = useMemo(() =>
+    (['realtime', 'takeover', 'linked', 'routing'] as const).map(id => ({
+      icon: USE_CASE_ICONS[id],
+      title: t(`behaviorInsights.useCases.${id}.title`),
+      description: t(`behaviorInsights.useCases.${id}.description`),
+    })),
+  [t])
 
   const [activeHowItWorksId, setActiveHowItWorksId] = useState<string | null>('collect')
   const activeHowItWorksItem = howItWorksItems.find(item => item.id === activeHowItWorksId) || howItWorksItems[0]
@@ -157,17 +119,17 @@ export default function BehaviorInsightsPage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
               <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
-                <HeroTagline icon={waypointsIcon}>Behavior insights</HeroTagline>
+                <HeroTagline icon={waypointsIcon}>{t('behaviorInsights.hero.tagline')}</HeroTagline>
                 <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px]">
-                  Uncover fraud with passive signals
+                  {t('behaviorInsights.hero.title')}
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                  Analyze behavioral, device, and network signals to identify risk without interrupting the user experience.
+                  {t('behaviorInsights.hero.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>
@@ -185,17 +147,17 @@ export default function BehaviorInsightsPage() {
           <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[672px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-                <HeroTagline icon={waypointsIcon}>Behavior insights</HeroTagline>
+                <HeroTagline icon={waypointsIcon}>{t('behaviorInsights.hero.tagline')}</HeroTagline>
                 <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
-                  Uncover fraud with passive signals
+                  {t('behaviorInsights.hero.title')}
                 </h1>
                 <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                  Analyze behavioral, device, and network signals to identify risk without interrupting the user experience.
+                  {t('behaviorInsights.hero.description')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative shrink-0">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>
@@ -215,7 +177,7 @@ export default function BehaviorInsightsPage() {
           <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-12 items-center relative shrink-0 w-full">
               <SectionHeader
-                title="Passive signals for smarter fraud detection"
+                title={t('behaviorInsights.features.title')}
                 maxWidth="576px"
               />
               <div className="flex flex-col md:flex-row gap-11 md:gap-6 items-start relative shrink-0 w-full">
@@ -245,7 +207,7 @@ export default function BehaviorInsightsPage() {
             />
             <div className="flex flex-1 flex-col gap-6 items-start relative min-w-0">
               <SectionHeader
-                title="How it works"
+                title={t('behaviorInsights.howItWorks.title')}
                 align="left"
                 maxWidth="100%"
               />
@@ -261,7 +223,7 @@ export default function BehaviorInsightsPage() {
           {/* Mobile Layout */}
           <div className="flex md:hidden flex-col gap-6 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
-              title="How it works"
+              title={t('behaviorInsights.howItWorks.title')}
               align="left"
               maxWidth="100%"
             />
@@ -280,10 +242,10 @@ export default function BehaviorInsightsPage() {
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-5 items-start relative min-w-0">
               <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-                Built in risk intelligence
+                {t('behaviorInsights.riskIntelligence.title')}
               </h2>
               <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                Evaluate each session with an adaptive risk model trained on real world identity patterns across your user base.
+                {t('behaviorInsights.riskIntelligence.description')}
               </p>
             </div>
             <div className="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-square">
@@ -300,10 +262,10 @@ export default function BehaviorInsightsPage() {
           <div className="flex md:hidden flex-col gap-6 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-5 items-start relative shrink-0 w-full">
               <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
-                Built in risk intelligence
+                {t('behaviorInsights.riskIntelligence.title')}
               </h2>
               <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                Evaluate each session with an adaptive risk model trained on real world identity patterns across your user base.
+                {t('behaviorInsights.riskIntelligence.description')}
               </p>
             </div>
             <div className="aspect-square relative rounded-2xl shrink-0 w-full">
@@ -323,10 +285,10 @@ export default function BehaviorInsightsPage() {
           <div className="hidden md:flex gap-16 items-start max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-1 flex-col gap-5 items-start relative min-w-0 max-w-[512px]">
               <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-                Key features
+                {t('behaviorInsights.keyFeatures.title')}
               </h2>
               <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                Automatically gather passive signals that add context to every user session.
+                {t('behaviorInsights.keyFeatures.description')}
               </p>
             </div>
             <div className="flex flex-1 flex-col items-start relative min-w-0">
@@ -342,10 +304,10 @@ export default function BehaviorInsightsPage() {
           <div className="flex md:hidden flex-col gap-6 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-5 items-start relative shrink-0 w-full">
               <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
-                Key features
+                {t('behaviorInsights.keyFeatures.title')}
               </h2>
               <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                Automatically gather passive signals that add context to every user session.
+                {t('behaviorInsights.keyFeatures.description')}
               </p>
             </div>
             <Accordion
@@ -361,7 +323,7 @@ export default function BehaviorInsightsPage() {
           <div className="flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-10 items-center relative shrink-0 w-full">
               <SectionHeader
-                title="Practical uses of passive signals"
+                title={t('behaviorInsights.useCases.title')}
                 maxWidth="576px"
               />
               <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
@@ -385,15 +347,15 @@ export default function BehaviorInsightsPage() {
             <div className="flex gap-16 items-center p-16 relative shrink-0 w-full rounded-2xl bg-[#f5f5f5] min-w-0">
               <div className="flex flex-1 flex-col gap-4 items-start relative shrink-0 max-w-[576px] min-w-0">
                 <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-                  Let's build better identity verification
+                  {t('behaviorInsights.cta.title')}
                 </h2>
                 <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-                  Talk to our team to explore how Folio can enhance your onboarding and verification experience.
+                  {t('behaviorInsights.cta.description')}
                 </p>
               </div>
               <div className="flex flex-1 flex-wrap gap-3 items-start justify-end relative min-w-0">
                 <Button onClick={handleGetInTouch} variant="primary">
-                  Get in touch
+                  {t('common:buttons.getInTouch')}
                 </Button>
               </div>
             </div>
@@ -403,15 +365,15 @@ export default function BehaviorInsightsPage() {
           <div className="flex md:hidden flex-col gap-8 items-center w-full px-6 py-16 relative shrink-0" style={BACKGROUND_STYLE}>
             <div className="flex flex-col gap-4 items-center relative shrink-0 text-center w-full">
               <h2 className="font-bold leading-[36px] text-[30px] text-[#0a0a0a] tracking-[0px]">
-                Let's build better identity verification
+                {t('behaviorInsights.cta.title')}
               </h2>
               <p className="font-normal leading-6 text-base text-[#737373] opacity-80 w-full">
-                Talk to our team to explore how Folio can enhance your onboarding and verification experience.
+                {t('behaviorInsights.cta.description')}
               </p>
             </div>
             <div className="flex flex-col gap-3 items-center relative shrink-0">
               <Button onClick={handleGetInTouch} variant="primary">
-                Get in touch
+                {t('common:buttons.getInTouch')}
               </Button>
             </div>
           </div>
