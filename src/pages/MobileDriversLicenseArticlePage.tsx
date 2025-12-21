@@ -1,8 +1,10 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import { Link } from 'react-router-dom'
 import mdlScreenImage from '../assets/images/blog-mdl-folio-screen.png'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 
 export default function MobileDriversLicenseArticlePage() {
+  const { getLocalizedPath } = useLocalizedPath()
   return (
     <BlogArticleLayout
       title="Your driver's license is going digital. Here's what that actually means."
@@ -103,7 +105,7 @@ export default function MobileDriversLicenseArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        That world is arriving faster than most people realize. Whether you get your mDL through your state, Apple Wallet, or another app, the shift toward digital identity is underway. Folio supports mobile driver's licenses and other verifiable credentials. Try issuing and verifying credentials yourself in our <Link to="/government/playground" className="underline hover:text-[#737373] transition-colors">interactive playground</Link>.
+        That world is arriving faster than most people realize. Whether you get your mDL through your state, Apple Wallet, or another app, the shift toward digital identity is underway. Folio supports mobile driver's licenses and other verifiable credentials. Try issuing and verifying credentials yourself in our <Link to={getLocalizedPath('/government/playground')} className="underline hover:text-[#737373] transition-colors">interactive playground</Link>.
       </ArticleParagraph>
     </BlogArticleLayout>
   )

@@ -8,6 +8,7 @@ import GlobalPartnersSection from '../components/sections/GlobalPartnersSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
 import { scrollToTop } from '../utils/scrollToTop'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 import governmentSolutionsHero from '../assets/images/government-solutions-hero.png'
 import governmentAlbaniaCaseStudy from '../assets/images/government-albania-case-study.png'
 import governmentTestimonialAvatar from '../assets/images/government-testimonial-avatar.png'
@@ -23,6 +24,7 @@ const BACKGROUND_STYLE = {
 export default function GovernmentPage() {
   const { t } = useTranslation('government')
   const navigate = useNavigate()
+  const { getLocalizedPath } = useLocalizedPath()
   
   usePageTitle({
     title: t('government.meta.title'),
@@ -54,7 +56,7 @@ export default function GovernmentPage() {
             <div className="flex flex-wrap gap-3 items-start relative">
               <Button
                 onClick={() => {
-                  navigate('/government/playground')
+                  navigate(getLocalizedPath('/government/playground'))
                   setTimeout(() => {
                     scrollToTop()
                   }, 100)
@@ -98,7 +100,7 @@ export default function GovernmentPage() {
             <div className="flex flex-col gap-3 items-start relative shrink-0">
               <Button
                 onClick={() => {
-                  navigate('/government/playground')
+                  navigate(getLocalizedPath('/government/playground'))
                   setTimeout(() => {
                     scrollToTop()
                   }, 100)
@@ -390,7 +392,7 @@ export default function GovernmentPage() {
               </Button>
               <Button
                 onClick={() => {
-                  navigate('/government/playground')
+                  navigate(getLocalizedPath('/government/playground'))
                   setTimeout(() => {
                     scrollToTop()
                   }, 100)
@@ -425,7 +427,7 @@ export default function GovernmentPage() {
             </Button>
             <Button
               onClick={() => {
-                navigate('/government/playground')
+                navigate(getLocalizedPath('/government/playground'))
                 setTimeout(() => {
                   scrollToTop()
                 }, 100)
