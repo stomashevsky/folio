@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import folioScreens from '../assets/images/blog-digital-wallet-apps-folio-screens.png'
 
@@ -41,7 +41,7 @@ export default function DigitalWalletAppsForEveryNeedArticlePage() {
       />
 
       <ArticleParagraph>
-        Security is where Folio differs most from basic wallets. Everything is encrypted end-to-end and protected with passkeys and biometric authentication. Even Folio's servers can't read your documents. For travelers, the trip timeline feature organizes flights, hotels, and activities chronologically, so you're not hunting through a list of passes at the airport. Shared folders let family members access the same documents without texting photos back and forth. <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Available free on iOS and Android.</Link>
+        Security is where Folio differs most from basic wallets. Everything is encrypted end-to-end and protected with passkeys and biometric authentication. Even Folio's servers can't read your documents. For travelers, the trip timeline feature organizes flights, hotels, and activities chronologically, so you're not hunting through a list of passes at the airport. Shared folders let family members access the same documents without texting photos back and forth. <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Available free on iOS and Android.</LocalizedLink>
       </ArticleParagraph>
 
       <ArticleH2>For sending money to friends</ArticleH2>

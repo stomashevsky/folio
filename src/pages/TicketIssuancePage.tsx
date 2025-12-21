@@ -6,6 +6,7 @@ import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
 import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 import checkIcon from '../assets/icons/Check.svg'
 import calendarFoldIcon from '../assets/icons/CalendarFold.svg'
 import codeXmlIcon from '../assets/icons/CodeXml.svg'
@@ -29,6 +30,7 @@ const BACKGROUND_STYLE = {
 export default function DigitalTicketingPage() {
   const { t } = useTranslation('solutions')
   const navigate = useNavigate()
+  const { getLocalizedPath } = useLocalizedPath()
   
   usePageTitle({
     title: t('ticketIssuance.meta.title'),
@@ -40,7 +42,7 @@ export default function DigitalTicketingPage() {
   })
 
   const handleTryFolio = () => {
-    navigate('/', { state: { scrollTo: 'get-the-app' } })
+    navigate(getLocalizedPath('/'), { state: { scrollTo: 'get-the-app' } })
   }
 
   const handleGetInTouch = () => {

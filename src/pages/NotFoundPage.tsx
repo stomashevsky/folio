@@ -4,11 +4,13 @@ import Navbar from '../components/Navbar'
 import FooterSection from '../components/sections/FooterSection'
 import { Button } from '../components/ui'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 
 export default function NotFoundPage() {
   const { t } = useTranslation('pages')
   usePageTitle({ title: t('notFound.meta.title') })
   const navigate = useNavigate()
+  const { getLocalizedPath } = useLocalizedPath()
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
@@ -25,7 +27,7 @@ export default function NotFoundPage() {
               {t('notFound.description')}
             </p>
           </div>
-          <Button variant="primary" onClick={() => navigate('/')}>
+          <Button variant="primary" onClick={() => navigate(getLocalizedPath('/'))}>
             {t('notFound.backHome')}
           </Button>
         </div>

@@ -1,5 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleTable, ArticleImage } from '../components/ui'
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import blogTripCaseAlternativeScreens from '../assets/images/blog-tripcase-alternative-screens.png'
 
 export default function TripCaseAlternativeArticlePage() {
@@ -51,7 +51,7 @@ export default function TripCaseAlternativeArticlePage() {
       />
 
       <ArticleParagraph>
-        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio Wallet</Link> takes this approach. Add a flight, and you get the full ticket with scannable barcode, passenger details, seat assignment, baggage allowance, and booking reference. Add a hotel, and the confirmation with check-in instructions stays accessible offline. Add an event ticket, train pass, or museum reservation, and it joins your timeline with all the details you need when you arrive.
+        <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio Wallet</LocalizedLink> takes this approach. Add a flight, and you get the full ticket with scannable barcode, passenger details, seat assignment, baggage allowance, and booking reference. Add a hotel, and the confirmation with check-in instructions stays accessible offline. Add an event ticket, train pass, or museum reservation, and it joins your timeline with all the details you need when you arrive.
       </ArticleParagraph>
 
       <ArticleParagraph>

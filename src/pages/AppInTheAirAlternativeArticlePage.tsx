@@ -1,5 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import liveUpdatesImage from '../assets/images/blog-app-in-the-air-live-updates.png'
 
 export default function AppInTheAirAlternativeArticlePage() {
@@ -20,7 +20,7 @@ export default function AppInTheAirAlternativeArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Now it's gone, and most alternatives miss the point. They're either too simple (just a calendar with flights) or too complicated (full trip planning suites when you just want to know if your flight's on time). <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio Wallet</Link> takes a different approach: it starts with your documents.
+        Now it's gone, and most alternatives miss the point. They're either too simple (just a calendar with flights) or too complicated (full trip planning suites when you just want to know if your flight's on time). <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio Wallet</LocalizedLink> takes a different approach: it starts with your documents.
       </ArticleParagraph>
 
       <ArticleH2>What Folio does differently</ArticleH2>
@@ -77,7 +77,7 @@ export default function AppInTheAirAlternativeArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        App in the Air proved that travelers want their documents organized and accessible. Folio takes that further: not just flights, but everything. Not just organized, but secure. And soon, not just stored, but live-updating. If you miss what App in the Air gave you, <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link> is where frequent flyers are landing.
+        App in the Air proved that travelers want their documents organized and accessible. Folio takes that further: not just flights, but everything. Not just organized, but secure. And soon, not just stored, but live-updating. If you miss what App in the Air gave you, <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</LocalizedLink> is where frequent flyers are landing.
       </ArticleParagraph>
     </BlogArticleLayout>
   )

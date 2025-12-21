@@ -1,5 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import walletOverviewImage from '../assets/images/blog-wallet-overview-folio.png'
 
 export default function AccessYourDigitalWalletAnywhereArticlePage() {
@@ -22,7 +22,7 @@ export default function AccessYourDigitalWalletAnywhereArticlePage() {
       <ArticleH2>One place for everything</ArticleH2>
 
       <ArticleParagraph>
-        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link> puts all your documents in one app. IDs: passport, driver's license, residence permit, national ID. Tickets: flights, trains, buses, concerts, museums. Bookings: hotels, restaurants, car rentals. Cards: payment cards, insurance, membership cards, loyalty programs.
+        <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</LocalizedLink> puts all your documents in one app. IDs: passport, driver's license, residence permit, national ID. Tickets: flights, trains, buses, concerts, museums. Bookings: hotels, restaurants, car rentals. Cards: payment cards, insurance, membership cards, loyalty programs.
       </ArticleParagraph>
 
       <ArticleParagraph>

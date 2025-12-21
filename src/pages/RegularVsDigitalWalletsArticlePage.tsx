@@ -1,5 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import folioScreen from '../assets/images/blog-regular-vs-digital-folio-screen.png'
 
 export default function RegularVsDigitalWalletsArticlePage() {
@@ -18,7 +18,7 @@ export default function RegularVsDigitalWalletsArticlePage() {
       <ArticleImage src={folioScreen} alt="Folio digital wallet app showing stored cards and documents" />
 
       <ArticleParagraph>
-        A physical wallet is straightforward. It holds cash, cards, your driver's license, maybe a photo or two. No battery required, no learning curve. But it has limits: lose it, and you lose everything inside. Stuff it with loyalty cards and receipts, and it becomes a brick in your pocket. A digital wallet lives on your phone. Apps like Apple Wallet, Google Wallet, and <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio</Link> store your payment cards, IDs, boarding passes, loyalty cards, and documents in one place. You can access most of them offline, and if your phone is lost, you can remotely lock access or wipe the data.
+        A physical wallet is straightforward. It holds cash, cards, your driver's license, maybe a photo or two. No battery required, no learning curve. But it has limits: lose it, and you lose everything inside. Stuff it with loyalty cards and receipts, and it becomes a brick in your pocket. A digital wallet lives on your phone. Apps like Apple Wallet, Google Wallet, and <LocalizedLink to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio</LocalizedLink> store your payment cards, IDs, boarding passes, loyalty cards, and documents in one place. You can access most of them offline, and if your phone is lost, you can remotely lock access or wipe the data.
       </ArticleParagraph>
 
       <ArticleH2>How they compare</ArticleH2>

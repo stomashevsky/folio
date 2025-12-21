@@ -1,5 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleBlockquote } from '../components/ui'
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 
 export default function AlbanianDiasporaArticlePage() {
   return (
@@ -82,7 +82,7 @@ export default function AlbanianDiasporaArticlePage() {
       <ArticleH2>About Folio Technologies</ArticleH2>
 
       <ArticleParagraph>
-        Folio is a next-generation digital identity and credential platform enabling secure, user-controlled identity services across public and private sectors. <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio's digital wallet app</Link> is rated 4.6 stars on Google Play and 4.8 stars on the App Store and is used in over 120 countries worldwide.
+        Folio is a next-generation digital identity and credential platform enabling secure, user-controlled identity services across public and private sectors. <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio's digital wallet app</LocalizedLink> is rated 4.6 stars on Google Play and 4.8 stars on the App Store and is used in over 120 countries worldwide.
       </ArticleParagraph>
     </BlogArticleLayout>
   )

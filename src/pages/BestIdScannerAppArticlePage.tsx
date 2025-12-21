@@ -1,5 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import idScannerImage from '../assets/images/blog-id-scanner-folio.png'
 
 export default function BestIdScannerAppArticlePage() {
@@ -61,7 +61,7 @@ export default function BestIdScannerAppArticlePage() {
       <ArticleH2>A better approach</ArticleH2>
 
       <ArticleParagraph>
-        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link> is built for this. Point your camera at your passport or ID card, and it captures a clean scan with automatic edge detection. The app extracts key details: your name, document number, expiry date. Everything is encrypted on your device. Biometric lock means even if someone has your phone, they can't access your documents.
+        <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</LocalizedLink> is built for this. Point your camera at your passport or ID card, and it captures a clean scan with automatic edge detection. The app extracts key details: your name, document number, expiry date. Everything is encrypted on your device. Biometric lock means even if someone has your phone, they can't access your documents.
       </ArticleParagraph>
 
       <ArticleParagraph>

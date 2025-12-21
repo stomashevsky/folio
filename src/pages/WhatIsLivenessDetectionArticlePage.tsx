@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import livenessDetectionFace from '../assets/images/blog-liveness-detection-face.png'
 
@@ -131,7 +131,7 @@ export default function WhatIsLivenessDetectionArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        As deepfake technology improves, liveness detection evolves in response. The models update continuously, learning from new attack patterns. What worked for fraudsters last month gets detected this month. It's an ongoing arms race, but one where defense consistently stays ahead. Learn more about <Link to="/platform/liveness-check" className="underline hover:text-[#737373] transition-colors">Folio's liveness check</Link>.
+        As deepfake technology improves, liveness detection evolves in response. The models update continuously, learning from new attack patterns. What worked for fraudsters last month gets detected this month. It's an ongoing arms race, but one where defense consistently stays ahead. Learn more about <LocalizedLink to="/platform/liveness-check" className="underline hover:text-[#737373] transition-colors">Folio's liveness check</LocalizedLink>.
       </ArticleParagraph>
     </BlogArticleLayout>
   )

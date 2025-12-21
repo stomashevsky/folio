@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import folioGiftCard from '../assets/images/blog-apple-gift-card-folio-screen.png'
 
@@ -63,7 +63,7 @@ export default function AppleGiftCardAddToWalletArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Security is where Folio differs from storing cards as photos. Everything is encrypted end-to-end and protected with passkeys and biometric authentication. Your gift card PINs stay hidden until you need them. If you lose your phone, your cards remain protected. <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Available free on iOS and Android.</Link>
+        Security is where Folio differs from storing cards as photos. Everything is encrypted end-to-end and protected with passkeys and biometric authentication. Your gift card PINs stay hidden until you need them. If you lose your phone, your cards remain protected. <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Available free on iOS and Android.</LocalizedLink>
       </ArticleParagraph>
 
       <ArticleH2>Troubleshooting Apple gift card issues</ArticleH2>

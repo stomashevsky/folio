@@ -1,5 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import folioScreensImage from '../assets/images/blog-family-travel-folio-screens.png'
 
 export default function ManagingFamilyTravelDocumentsArticlePage() {
@@ -81,7 +81,7 @@ export default function ManagingFamilyTravelDocumentsArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link> is built for exactly this. Store passports, tickets, hotel bookings, insurance cards. Create shared folders for family trips. Everything syncs, works offline, and stays encrypted. The next time you're at that airline counter with the kids, the passports are three taps away. The stroller escape attempt becomes the only problem you need to solve.
+        <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</LocalizedLink> is built for exactly this. Store passports, tickets, hotel bookings, insurance cards. Create shared folders for family trips. Everything syncs, works offline, and stays encrypted. The next time you're at that airline counter with the kids, the passports are three taps away. The stroller escape attempt becomes the only problem you need to solve.
       </ArticleParagraph>
     </BlogArticleLayout>
   )

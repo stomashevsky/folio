@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleList } from '../components/ui'
 
 export default function CompleteGuideIdentityVerificationArticlePage() {
@@ -105,7 +105,7 @@ export default function CompleteGuideIdentityVerificationArticlePage() {
       <ArticleH2>The compliance landscape</ArticleH2>
 
       <ArticleParagraph>
-        <strong><Link to="/platform/kyc" className="underline hover:text-[#737373] transition-colors">KYC (Know Your Customer)</Link>:</strong> Financial services must verify customer identities before providing services. The specifics vary by country, but the principle is universal: know who you are dealing with.
+        <strong><LocalizedLink to="/platform/kyc" className="underline hover:text-[#737373] transition-colors">KYC (Know Your Customer)</LocalizedLink>:</strong> Financial services must verify customer identities before providing services. The specifics vary by country, but the principle is universal: know who you are dealing with.
       </ArticleParagraph>
 
       <ArticleParagraph>
@@ -123,7 +123,7 @@ export default function CompleteGuideIdentityVerificationArticlePage() {
       <ArticleH2>What is coming next</ArticleH2>
 
       <ArticleParagraph>
-        <strong>EUDI (European Digital Identity):</strong> The EU is building a framework for <Link to="/wallet" className="underline hover:text-[#737373] transition-colors">digital identity wallets</Link>. Citizens will store verified credentials on their phones and share them with services. Instead of re-verifying every time, users prove their identity from a trusted wallet. <Link to="/platform/id-verification" className="underline hover:text-[#737373] transition-colors">Folio is already EUDI compatible</Link>, positioning businesses for this shift.
+        <strong>EUDI (European Digital Identity):</strong> The EU is building a framework for <LocalizedLink to="/wallet" className="underline hover:text-[#737373] transition-colors">digital identity wallets</LocalizedLink>. Citizens will store verified credentials on their phones and share them with services. Instead of re-verifying every time, users prove their identity from a trusted wallet. <LocalizedLink to="/platform/id-verification" className="underline hover:text-[#737373] transition-colors">Folio is already EUDI compatible</LocalizedLink>, positioning businesses for this shift.
       </ArticleParagraph>
 
       <ArticleParagraph>
@@ -157,7 +157,7 @@ export default function CompleteGuideIdentityVerificationArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Want to see what good verification feels like from the user side? <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Try Folio</Link> and store your own documents. It shows you what a smooth verification experience looks like.
+        Want to see what good verification feels like from the user side? <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Try Folio</LocalizedLink> and store your own documents. It shows you what a smooth verification experience looks like.
       </ArticleParagraph>
     </BlogArticleLayout>
   )

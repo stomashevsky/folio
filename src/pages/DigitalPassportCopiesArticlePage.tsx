@@ -1,5 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import blogDigitalPassportCopiesHero from '../assets/images/blog-digital-passport-copies-hero.png'
 
 export default function DigitalPassportCopiesArticlePage() {
@@ -145,7 +145,7 @@ export default function DigitalPassportCopiesArticlePage() {
       <ArticleH2>Storing passport data in Folio</ArticleH2>
 
       <ArticleParagraph>
-        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio Wallet</Link> addresses every challenge of storing passport copies. When you add your passport, Folio automatically extracts key information and stores it with end-to-end encryption. Your data syncs across all your devices while remaining encrypted, so only you can access it.
+        <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio Wallet</LocalizedLink> addresses every challenge of storing passport copies. When you add your passport, Folio automatically extracts key information and stores it with end-to-end encryption. Your data syncs across all your devices while remaining encrypted, so only you can access it.
       </ArticleParagraph>
 
       <ArticleParagraph>

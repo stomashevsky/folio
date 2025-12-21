@@ -1,5 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import blogOrganizeEventTicketsHero from '../assets/images/blog-organize-event-tickets-hero.png'
 
 export default function OrganizeEventTicketsArticlePage() {
@@ -101,7 +101,7 @@ export default function OrganizeEventTicketsArticlePage() {
       <ArticleH2>Keeping everything in Folio</ArticleH2>
 
       <ArticleParagraph>
-        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio Wallet</Link> works as a universal home for all your tickets and bookings, regardless of where they came from. Here's how to get everything into one place:
+        <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio Wallet</LocalizedLink> works as a universal home for all your tickets and bookings, regardless of where they came from. Here's how to get everything into one place:
       </ArticleParagraph>
 
       <ArticleParagraph>

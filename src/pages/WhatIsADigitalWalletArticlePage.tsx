@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import folioScreens from '../assets/images/blog-what-is-digital-wallet-folio-screens.png'
 
@@ -49,7 +49,7 @@ export default function WhatIsADigitalWalletArticlePage() {
       />
 
       <ArticleParagraph>
-        <strong>Folio</strong> falls into this last category but goes further than most. It stores any document you can photograph or import: IDs, passports, insurance policies, tickets, loyalty cards, even handwritten notes. Everything is encrypted end-to-end and protected with passkeys, meaning only you can access your documents. Folio can't read them, and neither can anyone who might breach their servers. The app also extracts text from documents automatically, so you can copy passport numbers or policy details without typing them. Expiration reminders keep you from being caught with an outdated ID. Shared folders let family members access travel documents without texting screenshots. <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Available free on iOS and Android.</Link>
+        <strong>Folio</strong> falls into this last category but goes further than most. It stores any document you can photograph or import: IDs, passports, insurance policies, tickets, loyalty cards, even handwritten notes. Everything is encrypted end-to-end and protected with passkeys, meaning only you can access your documents. Folio can't read them, and neither can anyone who might breach their servers. The app also extracts text from documents automatically, so you can copy passport numbers or policy details without typing them. Expiration reminders keep you from being caught with an outdated ID. Shared folders let family members access travel documents without texting screenshots. <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Available free on iOS and Android.</LocalizedLink>
       </ArticleParagraph>
 
       <ArticleH2>Why use a digital wallet</ArticleH2>

@@ -1,5 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleTable, ArticleImage } from '../components/ui'
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import blogPass2uAlternativeScreens from '../assets/images/blog-pass2u-alternative-screens.png'
 
 export default function Pass2UAlternativeArticlePage() {
@@ -55,7 +55,7 @@ export default function Pass2UAlternativeArticlePage() {
       />
 
       <ArticleParagraph>
-        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio Wallet</Link> takes this approach. Add an event ticket, and you get the QR code plus the venue, seat, date, and price. Add a flight, and you see the route, times, passenger info, and booking reference alongside the boarding barcode. Add a train ticket, and the wagon, seat, and class information are all visible. The original PDF stays attached if you need to reference it.
+        <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio Wallet</LocalizedLink> takes this approach. Add an event ticket, and you get the QR code plus the venue, seat, date, and price. Add a flight, and you see the route, times, passenger info, and booking reference alongside the boarding barcode. Add a train ticket, and the wagon, seat, and class information are all visible. The original PDF stays attached if you need to reference it.
       </ArticleParagraph>
 
       <ArticleParagraph>

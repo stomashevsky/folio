@@ -71,3 +71,6 @@ export type { VideoWithPlaceholderProps } from './VideoWithPlaceholder'
 
 // Language
 export { default as LanguageSwitcher } from './LanguageSwitcher'
+
+// Localized navigation
+export { default as LocalizedLink } from './LocalizedLink'

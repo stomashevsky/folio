@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import digitalCredentialsCards from '../assets/images/blog-digital-credentials-cards.png'
 
@@ -16,7 +16,7 @@ export default function DigitalCredentialsGovernmentArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        The result? A 525% increase in diaspora participation. Over 245,000 citizens registered to vote from wherever they lived, completing identity verification on their phones and receiving a digital voter card they could present at consulates worldwide. No flights required. No paperwork lost in the mail. Read the full story: <Link to="/blog/albanian-diaspora-voter-registration" className="underline hover:text-[#737373] transition-colors">Albanian diaspora voter registration surges 525% with Folio Wallet</Link>
+        The result? A 525% increase in diaspora participation. Over 245,000 citizens registered to vote from wherever they lived, completing identity verification on their phones and receiving a digital voter card they could present at consulates worldwide. No flights required. No paperwork lost in the mail. Read the full story: <LocalizedLink to="/blog/albanian-diaspora-voter-registration" className="underline hover:text-[#737373] transition-colors">Albanian diaspora voter registration surges 525% with Folio Wallet</LocalizedLink>
       </ArticleParagraph>
 
       <ArticleParagraph>
@@ -119,7 +119,7 @@ export default function DigitalCredentialsGovernmentArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        The transformation won't happen overnight, but it's happening. Paper documents served us for centuries. Digital credentials will serve us better. Learn more about <Link to="/government" className="underline hover:text-[#737373] transition-colors">Folio's solutions for government</Link>.
+        The transformation won't happen overnight, but it's happening. Paper documents served us for centuries. Digital credentials will serve us better. Learn more about <LocalizedLink to="/government" className="underline hover:text-[#737373] transition-colors">Folio's solutions for government</LocalizedLink>.
       </ArticleParagraph>
     </BlogArticleLayout>
   )

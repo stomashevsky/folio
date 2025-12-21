@@ -1,5 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, HowToSchema } from '../components/ui'
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import medicalScreen from '../assets/images/blog-medical-card-folio-screen.png'
 
 export default function HowToAddAndStoreYourMedicalCardArticlePage() {
@@ -37,7 +37,7 @@ export default function HowToAddAndStoreYourMedicalCardArticlePage() {
       <ArticleH2>How to store your medical card</ArticleH2>
 
       <ArticleParagraph>
-        The simplest approach is taking a photo of your card and saving it to your camera roll. It works, but photos get buried among hundreds of other images. A better solution is using a dedicated wallet app. <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio</Link> lets you scan your insurance card directly, then automatically extracts the text so you can copy your member ID, group number, or policy details without squinting at a tiny image.
+        The simplest approach is taking a photo of your card and saving it to your camera roll. It works, but photos get buried among hundreds of other images. A better solution is using a dedicated wallet app. <LocalizedLink to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Folio</LocalizedLink> lets you scan your insurance card directly, then automatically extracts the text so you can copy your member ID, group number, or policy details without squinting at a tiny image.
       </ArticleParagraph>
 
       <ArticleParagraph>

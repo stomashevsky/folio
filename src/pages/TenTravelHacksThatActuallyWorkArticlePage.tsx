@@ -1,5 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import folioScreensImage from '../assets/images/blog-10-hacks-folio-screens.png'
 
 export default function TenTravelHacksThatActuallyWorkArticlePage() {
@@ -38,7 +38,7 @@ export default function TenTravelHacksThatActuallyWorkArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <strong>5. Backup your documents digitally before you leave.</strong> Lost passport abroad means embassy visits, emergency documents, and potentially missed flights. A friend spent two days in Madrid sorting out a stolen passport because he had no copies. The fix: store passport scans, visa copies, hotel confirmations, and insurance documents in <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link> before you leave. Everything's encrypted, works offline, and accessible even if your phone dies (sync to a new device with your recovery code).
+        <strong>5. Backup your documents digitally before you leave.</strong> Lost passport abroad means embassy visits, emergency documents, and potentially missed flights. A friend spent two days in Madrid sorting out a stolen passport because he had no copies. The fix: store passport scans, visa copies, hotel confirmations, and insurance documents in <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</LocalizedLink> before you leave. Everything's encrypted, works offline, and accessible even if your phone dies (sync to a new device with your recovery code).
       </ArticleParagraph>
 
       <ArticleImage 

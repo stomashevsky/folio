@@ -1,5 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import folioScreensImage from '../assets/images/blog-best-apps-folio-screens.png'
 
 export default function BestAppsToPlanTravelArticlePage() {
@@ -38,7 +38,7 @@ export default function BestAppsToPlanTravelArticlePage() {
       <ArticleH2>For storing tickets and documents: Folio</ArticleH2>
 
       <ArticleParagraph>
-        <strong><Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link></strong> solves the most common travel frustration: finding your tickets when you need them. Forward confirmation emails, import PDFs, photograph paper tickets. Folio extracts dates, times, locations and creates a timeline automatically.
+        <strong><LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</LocalizedLink></strong> solves the most common travel frustration: finding your tickets when you need them. Forward confirmation emails, import PDFs, photograph paper tickets. Folio extracts dates, times, locations and creates a timeline automatically.
       </ArticleParagraph>
 
       <ArticleParagraph>

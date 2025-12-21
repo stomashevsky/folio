@@ -1,5 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import eventTicketsImage from '../assets/images/blog-event-tickets-folio.png'
 
 export default function BestEventTicketAppsArticlePage() {
@@ -46,7 +46,7 @@ export default function BestEventTicketAppsArticlePage() {
       <ArticleH2>One place for everything</ArticleH2>
 
       <ArticleParagraph>
-        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link> takes tickets from anywhere. Forward the email, upload the PDF, photograph the paper ticket. It extracts the event name, date, venue, seat information, and barcode. Everything appears in a timeline sorted by date.
+        <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</LocalizedLink> takes tickets from anywhere. Forward the email, upload the PDF, photograph the paper ticket. It extracts the event name, date, venue, seat information, and barcode. Everything appears in a timeline sorted by date.
       </ArticleParagraph>
 
       <ArticleImage

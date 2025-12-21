@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import folioScreens from '../assets/images/blog-google-wallet-folio-screens.png'
 
@@ -35,7 +35,7 @@ export default function BestGoogleWalletAlternativesArticlePage() {
       />
 
       <ArticleParagraph>
-        The difference becomes obvious when you travel. Google Wallet shows your boarding pass. Folio shows your entire trip: the flight, the hotel confirmation, the Sagrada Familia tickets, the train to your next destination, all in chronological order. Tap any item and the barcode or QR code is ready to scan. Everything works offline because the documents live on your device, not in a cloud that requires signal. <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Available free on iOS and Android.</Link>
+        The difference becomes obvious when you travel. Google Wallet shows your boarding pass. Folio shows your entire trip: the flight, the hotel confirmation, the Sagrada Familia tickets, the train to your next destination, all in chronological order. Tap any item and the barcode or QR code is ready to scan. Everything works offline because the documents live on your device, not in a cloud that requires signal. <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Available free on iOS and Android.</LocalizedLink>
       </ArticleParagraph>
 
       <ArticleH2>For money that crosses borders</ArticleH2>

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import eudiWalletHowItWorks from '../assets/images/blog-eudi-wallet-how-it-works.png'
 import { useLocalizedPath } from '../i18n/useLocalizedPath'
@@ -101,7 +101,7 @@ export default function EudiWalletArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Folio is building for this future. Our platform works with the credential formats and verification protocols that EUDI Wallet uses, so businesses can accept these credentials alongside traditional verification methods. You can see how verifiable credentials work in our <Link to={getLocalizedPath('/government/playground')} className="underline hover:text-[#737373] transition-colors">interactive playground</Link>, which lets you issue and verify credentials yourself.
+        Folio is building for this future. Our platform works with the credential formats and verification protocols that EUDI Wallet uses, so businesses can accept these credentials alongside traditional verification methods. You can see how verifiable credentials work in our <LocalizedLink to={getLocalizedPath('/government/playground')} className="underline hover:text-[#737373] transition-colors">interactive playground</LocalizedLink>, which lets you issue and verify credentials yourself.
       </ArticleParagraph>
 
       <ArticleParagraph>

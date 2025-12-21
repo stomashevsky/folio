@@ -1,5 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleTable, ArticleImage } from '../components/ui'
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import blogTripitAlternativeScreens from '../assets/images/blog-tripit-alternative-screens.png'
 
 export default function TripItAlternativeArticlePage() {
@@ -51,7 +51,7 @@ export default function TripItAlternativeArticlePage() {
       <ArticleH2>How Folio Wallet handles travel differently</ArticleH2>
 
       <ArticleParagraph>
-        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio Wallet</Link> approaches travel organization from a different angle. Instead of parsing emails into an itinerary, it stores the actual documents and tickets you need, then automatically organizes them into a timeline.
+        <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio Wallet</LocalizedLink> approaches travel organization from a different angle. Instead of parsing emails into an itinerary, it stores the actual documents and tickets you need, then automatically organizes them into a timeline.
       </ArticleParagraph>
 
       <ArticleParagraph>

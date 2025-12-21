@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleList, ArticleTable } from '../components/ui'
 import type { ArticleTableColumn, ArticleTableRow } from '../components/ui'
 
@@ -63,7 +63,7 @@ export default function BestIdentityVerificationPlatformsArticlePage() {
       <ArticleH2>Folio: verification plus a wallet your users keep</ArticleH2>
 
       <ArticleParagraph>
-        <Link to="/platform/id-verification" className="underline hover:text-[#737373] transition-colors">Folio</Link> does something different. Instead of just verifying users once and forgetting about them, Folio gives verified users a digital wallet where they store their documents. This creates ongoing value for both sides.
+        <LocalizedLink to="/platform/id-verification" className="underline hover:text-[#737373] transition-colors">Folio</LocalizedLink> does something different. Instead of just verifying users once and forgetting about them, Folio gives verified users a digital wallet where they store their documents. This creates ongoing value for both sides.
       </ArticleParagraph>
 
       <ArticleParagraph>
@@ -75,7 +75,7 @@ export default function BestIdentityVerificationPlatformsArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        The <Link to="/wallet" className="underline hover:text-[#737373] transition-colors">consumer wallet</Link> side means your users get something useful from verification. Instead of just checking a box, they get a secure place to store their passport, ID, and travel documents. This can improve conversion because users see value in completing verification.
+        The <LocalizedLink to="/wallet" className="underline hover:text-[#737373] transition-colors">consumer wallet</LocalizedLink> side means your users get something useful from verification. Instead of just checking a box, they get a secure place to store their passport, ID, and travel documents. This can improve conversion because users see value in completing verification.
       </ArticleParagraph>
 
       <ArticleH2>Onfido: the enterprise choice</ArticleH2>
@@ -111,7 +111,7 @@ export default function BestIdentityVerificationPlatformsArticlePage() {
       <ArticleH2>Jumio: the legacy player</ArticleH2>
 
       <ArticleParagraph>
-        Jumio has been around the longest and has processed billions of verifications. The platform offers comprehensive features including <Link to="/platform/kyc" className="underline hover:text-[#737373] transition-colors">AML screening</Link> and address verification. It supports 200+ countries with thousands of document types.
+        Jumio has been around the longest and has processed billions of verifications. The platform offers comprehensive features including <LocalizedLink to="/platform/kyc" className="underline hover:text-[#737373] transition-colors">AML screening</LocalizedLink> and address verification. It supports 200+ countries with thousands of document types.
       </ArticleParagraph>
 
       <ArticleParagraph>
@@ -143,7 +143,7 @@ export default function BestIdentityVerificationPlatformsArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        If you want to see how Folio works from the user side, <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">download the free app</Link> and try storing your own documents. It takes two minutes and shows you what your users will experience.
+        If you want to see how Folio works from the user side, <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">download the free app</LocalizedLink> and try storing your own documents. It takes two minutes and shows you what your users will experience.
       </ArticleParagraph>
     </BlogArticleLayout>
   )

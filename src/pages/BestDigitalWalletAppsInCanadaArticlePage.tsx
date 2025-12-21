@@ -1,5 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 
 export default function BestDigitalWalletAppsInCanadaArticlePage() {
   return (
@@ -35,7 +35,7 @@ export default function BestDigitalWalletAppsInCanadaArticlePage() {
       <ArticleH2>Document storage with Folio</ArticleH2>
 
       <ArticleParagraph>
-        <strong>Folio</strong> handles a different kind of digital wallet need: storing important documents securely. Canadians can keep digital copies of their health cards, driver's licenses, passports, and insurance policies organized in one place. The app uses end-to-end encryption, so your documents remain private. Shared folders let you securely share travel documents or insurance cards with family members when needed. For anyone who wants quick access to essential documents without carrying paper copies, Folio provides a secure solution. <Link to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</Link>
+        <strong>Folio</strong> handles a different kind of digital wallet need: storing important documents securely. Canadians can keep digital copies of their health cards, driver's licenses, passports, and insurance policies organized in one place. The app uses end-to-end encryption, so your documents remain private. Shared folders let you securely share travel documents or insurance cards with family members when needed. For anyone who wants quick access to essential documents without carrying paper copies, Folio provides a secure solution. <LocalizedLink to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors">Available on iOS and Android.</LocalizedLink>
       </ArticleParagraph>
 
       <ArticleH2>Apple Wallet and Google Wallet</ArticleH2>

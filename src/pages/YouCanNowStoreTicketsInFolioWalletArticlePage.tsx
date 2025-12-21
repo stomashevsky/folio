@@ -1,5 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import storeTicketsImage from '../assets/images/blog-store-tickets-folio.png'
 
 export default function YouCanNowStoreTicketsInFolioWalletArticlePage() {
@@ -22,7 +22,7 @@ export default function YouCanNowStoreTicketsInFolioWalletArticlePage() {
       <ArticleH2>One app, all your tickets</ArticleH2>
 
       <ArticleParagraph>
-        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link> keeps all your tickets in one place. Bus, train, flight, concert, museum, theme park. Forward the confirmation email, upload the PDF, or take a photo. The app extracts the details: departure time, seat number, booking reference. The barcode or QR code is displayed prominently, ready to scan.
+        <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</LocalizedLink> keeps all your tickets in one place. Bus, train, flight, concert, museum, theme park. Forward the confirmation email, upload the PDF, or take a photo. The app extracts the details: departure time, seat number, booking reference. The barcode or QR code is displayed prominently, ready to scan.
       </ArticleParagraph>
 
       <ArticleImage

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import faceScanImage from '../assets/images/blog-biometric-face-scan.png'
 
@@ -109,7 +109,7 @@ export default function BiometricDataPrivacyArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        We're transparent about this because we think everyone should be. If a service asks for your face and can't clearly explain what happens to it, consider whether you really need to use that service. Your biometric data is uniquely yours. It deserves to be treated with care. Learn more about how we handle identity verification in our <Link to="/platform/liveness-check" className="underline hover:text-[#737373] transition-colors">liveness check</Link> and <Link to="/platform/face-match" className="underline hover:text-[#737373] transition-colors">face match</Link> documentation.
+        We're transparent about this because we think everyone should be. If a service asks for your face and can't clearly explain what happens to it, consider whether you really need to use that service. Your biometric data is uniquely yours. It deserves to be treated with care. Learn more about how we handle identity verification in our <LocalizedLink to="/platform/liveness-check" className="underline hover:text-[#737373] transition-colors">liveness check</LocalizedLink> and <LocalizedLink to="/platform/face-match" className="underline hover:text-[#737373] transition-colors">face match</LocalizedLink> documentation.
       </ArticleParagraph>
     </BlogArticleLayout>
   )

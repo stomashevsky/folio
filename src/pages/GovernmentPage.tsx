@@ -265,7 +265,7 @@ export default function GovernmentPage() {
             {/* Case Study Button */}
             <Button
               variant="secondary"
-              onClick={() => navigate('/blog/albanian-diaspora-voter-registration')}
+              onClick={() => navigate(getLocalizedPath('/blog/albanian-diaspora-voter-registration'))}
             >
               {t('government.caseStudy.button')}
             </Button>
@@ -350,7 +350,7 @@ export default function GovernmentPage() {
             {/* Case Study Button */}
             <Button
               variant="secondary"
-              onClick={() => navigate('/blog/albanian-diaspora-voter-registration')}
+              onClick={() => navigate(getLocalizedPath('/blog/albanian-diaspora-voter-registration'))}
             >
               {t('government.caseStudy.button')}
             </Button>

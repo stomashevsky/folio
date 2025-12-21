@@ -1,5 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import flightTicketsImage from '../assets/images/blog-flight-tickets-folio.png'
 
 export default function FlightTicketsOnIphoneArticlePage() {
@@ -40,7 +40,7 @@ export default function FlightTicketsOnIphoneArticlePage() {
       <ArticleH2>What actually works</ArticleH2>
 
       <ArticleParagraph>
-        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link> takes boarding passes from anywhere. Forward the confirmation email. Upload the PDF. Photograph a printout. It extracts the flight details, the barcode, the seat, the gate, the baggage allowance. Everything appears on a timeline sorted by date.
+        <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</LocalizedLink> takes boarding passes from anywhere. Forward the confirmation email. Upload the PDF. Photograph a printout. It extracts the flight details, the barcode, the seat, the gate, the baggage allowance. Everything appears on a timeline sorted by date.
       </ArticleParagraph>
 
       <ArticleImage

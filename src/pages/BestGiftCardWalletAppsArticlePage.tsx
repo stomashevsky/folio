@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import giftCardScreen from '../assets/images/blog-gift-card-folio-screen.png'
 
@@ -41,7 +41,7 @@ export default function BestGiftCardWalletAppsArticlePage() {
       />
 
       <ArticleParagraph>
-        What sets Folio apart is organization. Gift cards sit alongside your other important items: payment cards, IDs, insurance documents, event tickets. You can create folders to group cards by store or occasion. When you're at Target, you see your Target gift card immediately, not buried under Starbucks and Amazon cards you won't use today. Shared folders let you give family members access to household gift cards without texting screenshots back and forth. <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Available free on iOS and Android.</Link>
+        What sets Folio apart is organization. Gift cards sit alongside your other important items: payment cards, IDs, insurance documents, event tickets. You can create folders to group cards by store or occasion. When you're at Target, you see your Target gift card immediately, not buried under Starbucks and Amazon cards you won't use today. Shared folders let you give family members access to household gift cards without texting screenshots back and forth. <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Available free on iOS and Android.</LocalizedLink>
       </ArticleParagraph>
 
       <ArticleParagraph>

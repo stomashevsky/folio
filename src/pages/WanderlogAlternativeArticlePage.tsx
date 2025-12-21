@@ -1,5 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import timelineImage from '../assets/images/blog-wanderlog-timeline.png'
 
 export default function WanderlogAlternativeArticlePage() {
@@ -67,7 +67,7 @@ export default function WanderlogAlternativeArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        Use <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link> once you start booking. Forward your flight confirmation. Import your hotel PDF. Add your Sagrada Familia tickets. Create a shared folder so everyone in your group has access to every document. Now when you're in line at security, you tap one app and your boarding pass is there. When your friend needs the hotel address, it's already in their Folio too.
+        Use <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</LocalizedLink> once you start booking. Forward your flight confirmation. Import your hotel PDF. Add your Sagrada Familia tickets. Create a shared folder so everyone in your group has access to every document. Now when you're in line at security, you tap one app and your boarding pass is there. When your friend needs the hotel address, it's already in their Folio too.
       </ArticleParagraph>
 
       <ArticleParagraph>

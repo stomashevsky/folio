@@ -1,5 +1,5 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, HowToSchema } from '../components/ui'
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import shareTravelImage from '../assets/images/blog-share-travel-folio.png'
 
 export default function HowToShareTravelPlansArticlePage() {
@@ -49,7 +49,7 @@ export default function HowToShareTravelPlansArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link> works this way. Create a folder for your trip. Import your bookings: forward the confirmation email, upload the PDF, photograph the printout. Invite your travel companions. Now everyone sees the same timeline with the same documents.
+        <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</LocalizedLink> works this way. Create a folder for your trip. Import your bookings: forward the confirmation email, upload the PDF, photograph the printout. Invite your travel companions. Now everyone sees the same timeline with the same documents.
       </ArticleParagraph>
 
       <ArticleImage

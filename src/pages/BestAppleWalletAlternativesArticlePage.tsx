@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import folioScreens from '../assets/images/blog-apple-wallet-folio-screens.png'
 
@@ -35,7 +35,7 @@ export default function BestAppleWalletAlternativesArticlePage() {
       />
 
       <ArticleParagraph>
-        The real difference shows when you travel. Apple Wallet displays your boarding pass. Folio shows your entire trip in chronological order: the flight, the hotel in Barcelona, the Sagrada Familia tickets, the train to Tarragona, the return journey. Tap any item and the barcode or QR code is ready to scan. Everything works offline because the documents live on your device with end-to-end encryption. For families, shared folders let everyone access the same documents without messaging files back and forth. <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Available free on iOS and Android.</Link>
+        The real difference shows when you travel. Apple Wallet displays your boarding pass. Folio shows your entire trip in chronological order: the flight, the hotel in Barcelona, the Sagrada Familia tickets, the train to Tarragona, the return journey. Tap any item and the barcode or QR code is ready to scan. Everything works offline because the documents live on your device with end-to-end encryption. For families, shared folders let everyone access the same documents without messaging files back and forth. <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Available free on iOS and Android.</LocalizedLink>
       </ArticleParagraph>
 
       <ArticleH2>For managing multiple payment cards</ArticleH2>

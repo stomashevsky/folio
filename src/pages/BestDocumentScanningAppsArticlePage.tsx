@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import passportScanning from '../assets/images/blog-document-scanning-passport.png'
 
@@ -35,7 +35,7 @@ export default function BestDocumentScanningAppsArticlePage() {
       />
 
       <ArticleParagraph>
-        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link> is built specifically for identity documents. Scan your passport and the app automatically recognizes the document type, extracts your name, nationality, document number, and expiry date, and stores everything with AES-256 encryption. When your passport expires in six months, you get a reminder. When you need to share a copy with a hotel, you generate a secure link that expires after viewing. The same applies to driver's licenses, national IDs, visas, and insurance cards. Everything stays organized by category and accessible offline when you're abroad without data.
+        <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</LocalizedLink> is built specifically for identity documents. Scan your passport and the app automatically recognizes the document type, extracts your name, nationality, document number, and expiry date, and stores everything with AES-256 encryption. When your passport expires in six months, you get a reminder. When you need to share a copy with a hotel, you generate a secure link that expires after viewing. The same applies to driver's licenses, national IDs, visas, and insurance cards. Everything stays organized by category and accessible offline when you're abroad without data.
       </ArticleParagraph>
 
       <ArticleH2>For work and business documents</ArticleH2>

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import folioScreens from '../assets/images/blog-checkmytrip-folio-screens.png'
 
@@ -35,7 +35,7 @@ export default function CheckMyTripAlternativeArticlePage() {
       />
 
       <ArticleParagraph>
-        <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</Link> handles all of it. Forward the confirmation email, upload the PDF, or photograph the ticket. Folio extracts the details automatically and organizes everything into a chronological timeline. The Renfe train appears alongside your flight. The Sagrada Familia tickets show up on the day you're visiting. Your passport and insurance live in the same app, encrypted and accessible offline.
+        <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</LocalizedLink> handles all of it. Forward the confirmation email, upload the PDF, or photograph the ticket. Folio extracts the details automatically and organizes everything into a chronological timeline. The Renfe train appears alongside your flight. The Sagrada Familia tickets show up on the day you're visiting. Your passport and insurance live in the same app, encrypted and accessible offline.
       </ArticleParagraph>
 
       <ArticleH2>Where CheckMyTrip struggles</ArticleH2>

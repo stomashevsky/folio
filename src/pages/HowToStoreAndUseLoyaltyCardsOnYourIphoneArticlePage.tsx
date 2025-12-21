@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { LocalizedLink } from '../components/ui'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, HowToSchema } from '../components/ui'
 import loyaltyScreen from '../assets/images/blog-loyalty-cards-folio-screen.png'
 
@@ -63,7 +63,7 @@ export default function HowToStoreAndUseLoyaltyCardsOnYourIphoneArticlePage() {
       />
 
       <ArticleParagraph>
-        Adding a card works like Stocard: open the app, tap +, scan the barcode or take a photo. Folio extracts any text automatically, so you can copy account numbers without typing. Set expiration dates for cards that have them, and get reminders before they lapse. Everything is encrypted end-to-end and protected with passkeys, so even Folio can't see your card data. <Link to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Available free on iOS and Android.</Link>
+        Adding a card works like Stocard: open the app, tap +, scan the barcode or take a photo. Folio extracts any text automatically, so you can copy account numbers without typing. Set expiration dates for cards that have them, and get reminders before they lapse. Everything is encrypted end-to-end and protected with passkeys, so even Folio can't see your card data. <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Available free on iOS and Android.</LocalizedLink>
       </ArticleParagraph>
 
       <ArticleParagraph>
