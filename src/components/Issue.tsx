@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import Card from './Card'
 import { issueCardConfigs as cardData, verifyCardConfigs as verifyCardData } from '../configs/cards'
@@ -10,6 +11,7 @@ import { useModalState } from '../hooks/useModalState'
 import { DOCUMENT_TYPE_VALUES, FLOW_MODES } from '../constants'
 
 export default function Issue() {
+  const { t } = useTranslation('government')
   const [activeTab, setActiveTab] = useState<ModalMode>(FLOW_MODES.ISSUE)
 
   const documentTypes: DocumentType[] = DOCUMENT_TYPE_VALUES
@@ -43,8 +45,8 @@ export default function Issue() {
     <>
       <div className="flex flex-col gap-10 items-center w-full">
         <SectionHeader
-          title="Playground"
-          description="A safe sandbox for issuing demo documents and testing EUDI compatible verification flows. Try real issuance steps, scan QR codes, explore data sharing and see how digital identity behaves in practice."
+          title={t('playground.issue.title')}
+          description={t('playground.issue.description')}
         />
 
         <FlowTabs activeTab={activeTab} onTabChange={setActiveTab} />

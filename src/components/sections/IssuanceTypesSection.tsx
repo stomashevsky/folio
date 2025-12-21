@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { SectionHeader, FeatureBlock } from '../ui'
 
 const BACKGROUND_STYLE = {
@@ -6,6 +7,8 @@ const BACKGROUND_STYLE = {
 }
 
 export default function IssuanceTypesSection() {
+  const { t } = useTranslation('government')
+  
   return (
     <section
       id="issuance-types"
@@ -15,32 +18,32 @@ export default function IssuanceTypesSection() {
       <div className="flex flex-col gap-12 md:gap-16 items-center justify-center max-w-[672px] md:max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
         <div className="flex flex-col gap-10 md:gap-12 items-center relative shrink-0 w-full">
           <SectionHeader
-            title="How documents are issued in Identity Lab"
-            description="Each document follows a specific issuance type. Color labels on the cards show which flow is used."
+            title={t('playground.issuanceTypes.title')}
+            description={t('playground.issuanceTypes.description')}
           />
           <div className="flex flex-col md:flex-row gap-11 md:gap-6 items-center md:items-start relative shrink-0 w-full">
             <FeatureBlock
               icon="key-round"
-              title="Authorization"
-              description="The issuer confirms your account. You sign in on their website, then approve the request in your wallet."
+              title={t('playground.issuanceTypes.authorization.title')}
+              description={t('playground.issuanceTypes.authorization.description')}
               align="center"
             />
             <FeatureBlock
               icon="check"
-              title="Pre-authorized"
-              description="Issued automatically using your Digital Identity. You only confirm with biometrics."
+              title={t('playground.issuanceTypes.preAuthorized.title')}
+              description={t('playground.issuanceTypes.preAuthorized.description')}
               align="center"
             />
             <FeatureBlock
               icon="message-square-more"
-              title="Transaction Code"
-              description="Requires a one time code provided by the organization."
+              title={t('playground.issuanceTypes.transactionCode.title')}
+              description={t('playground.issuanceTypes.transactionCode.description')}
               align="center"
             />
             <FeatureBlock
               icon="file-question"
-              title="Presentation"
-              description="Issued by presenting another document and sharing only what is needed."
+              title={t('playground.issuanceTypes.presentation.title')}
+              description={t('playground.issuanceTypes.presentation.description')}
               align="center"
             />
           </div>

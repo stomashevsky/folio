@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import AccordionItem from '../ui/AccordionItem'
 
 export interface FAQItem {
@@ -13,39 +14,21 @@ interface FAQSectionProps {
   defaultOpenIndex?: number | null
 }
 
-const DEFAULT_PLAYGROUND_FAQ: FAQItem[] = [
-  {
-    q: 'What is Playground?',
-    a: 'Playground is a sandbox that lets you try EUDI compatible issuance and verification flows without real user data.',
-  },
-  {
-    q: 'Are these real documents?',
-    a: 'No. All documents here are demo samples for testing only. They have no legal effect and cannot be used in production.',
-  },
-  {
-    q: 'Do I need a real EUDI Wallet?',
-    a: 'You need Folio Wallet on your phone to scan QR codes and see the documents in action. You do not need an officially certified national wallet to use this sandbox.',
-  },
-  {
-    q: 'Which standards does Playground follow?',
-    a: 'Flows are based on the European Digital Identity Wallet Architecture and Reference Framework and use OpenID for Verifiable Credential Issuance and Verifiable Presentations under the hood.',
-  },
-  {
-    q: 'Why do I start with Digital Identity?',
-    a: 'Digital Identity is the core document that other credentials can rely on. By issuing it once, you can reuse it in many verification scenarios.',
-  },
-  {
-    q: 'Can I test verification without another device?',
-    a: 'Yes. You can open Folio Wallet and Playground on the same device or on two devices. QR codes work in both same device and cross device scenarios.',
-  },
-]
-
 export default function FAQSection({ 
-  faqData = DEFAULT_PLAYGROUND_FAQ,
-  title = 'Frequently asked questions',
+  faqData,
+  title,
   description,
   defaultOpenIndex,
 }: FAQSectionProps) {
+  const { t } = useTranslation('government')
+  
+  // Get FAQ items from translations if not provided
+  const faqItems = faqData || (t('playground.faq.items', { returnObjects: true }) as Array<{ question: string; answer: string }>).map(item => ({
+    q: item.question,
+    a: item.answer,
+  }))
+  
+  const faqTitle = title || t('playground.faq.title')
   const [isFaqOpen, setIsFaqOpen] = useState<number | null>(
     defaultOpenIndex !== undefined && defaultOpenIndex !== null ? defaultOpenIndex : 0
   )
@@ -64,7 +47,7 @@ export default function FAQSection({
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: faqData.map((faq) => ({
+    mainEntity: faqItems.map((faq) => ({
       '@type': 'Question',
       name: faq.q,
       acceptedAnswer: {
@@ -86,7 +69,7 @@ export default function FAQSection({
           {/* Title Section */}
           <div className="flex flex-col gap-4 md:gap-5 items-center relative shrink-0 w-full">
             <p className="font-bold leading-[36px] md:leading-[40px] min-w-full relative shrink-0 text-[#0a0a0a] text-[30px] md:text-[36px] text-center tracking-[0px] w-[min-content]">
-              {title}
+              {faqTitle}
             </p>
             {description && (
               <p className="font-normal leading-6 min-w-full relative shrink-0 text-[#737373] text-base text-center w-[min-content]">
@@ -97,7 +80,7 @@ export default function FAQSection({
           
           {/* Accordion */}
           <div className="flex flex-col items-start relative shrink-0 w-full">
-            {faqData.map((faq, index) => (
+            {faqItems.map((faq, index) => (
               <AccordionItem
                 key={faq.q}
                 title={faq.q}

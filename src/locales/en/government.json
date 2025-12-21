@@ -32,6 +32,7 @@
     "caseStudy": {
       "title": "Real results at national scale",
       "description": "How Albania enabled secure remote voter registration for its diaspora with Folio's digital identity wallet.",
+      "imageAlt": "Albania case study map",
       "challenge": {
         "title": "Challenge",
         "description": "Albania needed a secure way for more than 1.6M citizens living abroad to register to vote remotely, while meeting strict security and transparency requirements."
@@ -42,27 +43,31 @@
       },
       "results": {
         "title": "Results",
-        "participation": {
+        "stat1": {
           "value": "525%",
           "description": "increase in diaspora participation vs previous election"
         },
-        "profiles": {
+        "stat2": {
           "value": "365,000+",
           "description": "profiles created across mobile and web channels"
         }
       },
       "testimonial": {
         "quote": "\"Working with Folio has been a transformative experience… they set a new standard of excellence for how digital identity solutions should be delivered.\"",
-        "author": "Ilirjan Celibashi",
-        "position": "State Election Commissioner, Albania"
+        "name": "Ilirjan Celibashi",
+        "title": "State Election Commissioner, Albania"
       },
-      "readCaseStudy": "Read case study"
+      "button": "Read case study"
     },
     "cta": {
       "title": "Supporting national-scale programs",
       "description": "Work with us on pilots, integrations and modernization efforts.",
       "button": "Get in touch",
       "playgroundButton": "Explore Playground"
+    },
+    "globalPartners": {
+      "title": "Global Partners",
+      "description": "Folio supports governments worldwide with secure, scalable identity solutions."
     }
   },
   "playground": {
@@ -70,10 +75,58 @@
       "title": "Playground | Folio Wallet",
       "description": "Explore European digital identity scenarios in action. Test credential issuance and verification flows."
     },
-    "hero": {
-      "tagline": "Playground",
-      "title": "Explore digital identity scenarios",
-      "description": "Explore European digital identity scenarios in action. Test credential issuance and verification flows."
+    "issue": {
+      "title": "Playground",
+      "description": "A safe sandbox for issuing demo documents and testing EUDI compatible verification flows. Try real issuance steps, scan QR codes, explore data sharing and see how digital identity behaves in practice."
+    },
+    "issuanceTypes": {
+      "title": "How documents are issued in Identity Lab",
+      "description": "Each document follows a specific issuance type. Color labels on the cards show which flow is used.",
+      "authorization": {
+        "title": "Authorization",
+        "description": "The issuer confirms your account. You sign in on their website, then approve the request in your wallet."
+      },
+      "preAuthorized": {
+        "title": "Pre-authorized",
+        "description": "Issued automatically using your Digital Identity. You only confirm with biometrics."
+      },
+      "transactionCode": {
+        "title": "Transaction Code",
+        "description": "Requires a one time code provided by the organization."
+      },
+      "presentation": {
+        "title": "Presentation",
+        "description": "Issued by presenting another document and sharing only what is needed."
+      }
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What is Playground?",
+          "answer": "Playground is a sandbox that lets you try EUDI compatible issuance and verification flows without real user data."
+        },
+        {
+          "question": "Are these real documents?",
+          "answer": "No. All documents here are demo samples for testing only. They have no legal effect and cannot be used in production."
+        },
+        {
+          "question": "Do I need a real EUDI Wallet?",
+          "answer": "You need Folio Wallet on your phone to scan QR codes and see the documents in action. You do not need an officially certified national wallet to use this sandbox."
+        },
+        {
+          "question": "Which standards does Playground follow?",
+          "answer": "Flows are based on the European Digital Identity Wallet Architecture and Reference Framework and use OpenID for Verifiable Credential Issuance and Verifiable Presentations under the hood."
+        },
+        {
+          "question": "Why do I start with Digital Identity?",
+          "answer": "Digital Identity is the core document that other credentials can rely on. By issuing it once, you can reuse it in many verification scenarios."
+        },
+        {
+          "question": "Can I test verification without another device?",
+          "answer": "Yes. You can open Folio Wallet and Playground on the same device or on two devices. QR codes work in both same device and cross device scenarios."
+        }
+      ]
     }
   }
 }
