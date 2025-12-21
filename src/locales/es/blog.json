@@ -2,70 +2,175 @@
     "articles": {
         "what-is-a-digital-wallet": {
             "title": "¿Qué es una billetera digital?",
-            "description": "Aprende qué es una billetera digital, cómo funciona y cómo usarla. Descubre los beneficios, características de seguridad y tipos disponibles para Android y iPhone."
+            "description": "Aprende qué es una billetera digital, cómo funciona y cómo usar una. Descubre los beneficios, características de seguridad y tipos de billeteras digitales disponibles para Android y iPhone."
         },
-        "best-apple-wallet-alternatives": {
-            "title": "Las 5 mejores alternativas a Apple Wallet en 2024",
-            "description": "¿Buscas una alternativa a Apple Wallet? Comparamos las mejores aplicaciones de billetera digital para organizar tus tarjetas de lealtad, identificaciones, tarjetas de embarque y más en iOS."
+        "how-to-store-and-use-loyalty-cards-on-your-iphone": {
+            "title": "Cómo almacenar y usar tarjetas de fidelidad en un iPhone",
+            "description": "Aprende cómo almacenar y usar tarjetas de fidelidad en tu iPhone con billeteras digitales. Compara Apple Wallet, Stocard y Folio Wallet para encontrar la mejor solución para administrar tus tarjetas de fidelidad."
         },
-        "digital-wallet-security": {
-            "title": "¿Son seguras las billeteras digitales? Una guía completa",
-            "description": "Tu guía para la seguridad de billeteras digitales. Entiende el cifrado, la tokenización y cómo las billeteras móviles como Folio protegen tus datos mejor que una billetera física."
+        "regular-vs-digital-wallets": {
+            "title": "Billeteras regulares vs digitales: ¿cuál es la adecuada para ti?",
+            "description": "Explora las diferencias entre billeteras regulares y digitales. Compara ventajas, desventajas y características para elegir la solución de billetera adecuada para tu estilo de vida."
         },
-        "future-of-digital-identity": {
-            "title": "El futuro de la identidad digital",
-            "description": "Explora cómo la identidad digital está evolucionando más allá de simples contraseñas. Desde estándares W3C hasta identificaciones gubernamentales en tu teléfono."
+        "how-to-add-and-store-your-medical-card": {
+            "title": "Cómo almacenar tu tarjeta médica en una billetera digital",
+            "description": "Aprende cómo almacenar tu tarjeta médica y seguro de salud en una billetera digital. Descubre los beneficios, características de seguridad y cómo administrar los documentos de salud de los miembros de la familia."
         },
-        "how-nfc-works": {
-            "title": "NFC explicado: Cómo funciona el pago sin contacto",
-            "description": "Sumérgete en la tecnología detrás de tocar para pagar. Cómo NFC (Near Field Communication) permite pagos seguros y escaneo de identidad."
+        "apple-gift-card-add-to-wallet": {
+            "title": "Agregar tarjeta de regalo de Apple a la billetera: una guía paso a paso",
+            "description": "Aprende cómo agregar tu tarjeta de regalo de Apple a la aplicación Wallet. Sigue pasos simples para agilizar los pagos y rastrear saldos en tu iPhone."
         },
-        "travel-with-digital-wallet": {
-            "title": "Viajando ligero: Tu guía para viajes sin papel",
-            "description": "Consejos para viajar solo con tu teléfono. Cómo gestionar pases de abordar, reservas de hotel e identificaciones de viaje en tu billetera digital."
+        "digital-wallet-apps-for-every-need": {
+            "title": "Aplicaciones de billetera digital para cada necesidad",
+            "description": "Descubre las mejores aplicaciones de billetera digital para pagos, almacenamiento de documentos y viajes. Encuentra la aplicación perfecta para tus necesidades específicas."
         },
-        "loyalty-programs-guide": {
-            "title": "Maximiza tus recompensas: La guía definitiva de programas de lealtad",
-            "description": "Deja de perder puntos. Aprende cómo organizar y rastrear todos tus programas de lealtad y recompensas en una sola aplicación conveniente."
-        },
-        "identity-theft-protection": {
-            "title": "Cómo protegerte del robo de identidad en línea",
-            "description": "Estrategias prácticas para asegurar tu presencia digital. Aprende cómo la gestión de identidad moderna puede prevenir el fraude y el robo."
-        },
-        "best-apps-to-plan-travel": {
-            "title": "Las únicas aplicaciones de viaje que realmente necesitas (y cuáles omitir)",
-            "description": "La mayoría de las listas de aplicaciones de viaje incluyen 20 aplicaciones que nunca usarás. Aquí están las que resuelven problemas reales."
+        "best-gift-card-wallet-apps": {
+            "title": "Las mejores aplicaciones de billetera de tarjetas de regalo para una organización digital sin problemas",
+            "description": "Descubre las mejores aplicaciones de billetera de tarjetas de regalo para organizar y asegurar tus tarjetas digitalmente. Compara características y encuentra la solución perfecta para administrar tarjetas de regalo."
         },
         "best-digital-wallet-apps-in-canada": {
             "title": "Las mejores aplicaciones de billetera digital en Canadá",
             "description": "Descubre las mejores aplicaciones de billetera digital disponibles en Canadá. Compara características, seguridad y casos de uso para encontrar la billetera perfecta para tus necesidades."
         },
+        "tripcase-alternative": {
+            "title": "Alternativa a TripCase: El organizador de viajes que te encantará",
+            "description": "TripCase se ha ido. Tu próximo viaje no tiene que ser un caos. Conoce la aplicación que mantiene cada vuelo, hotel y documento en un hermoso lugar."
+        },
+        "document-intelligence": {
+            "title": "Inteligencia documental: procesamiento de documentos impulsado por IA explicado",
+            "description": "La inteligencia documental utiliza IA para clasificar, extraer y verificar información de documentos automáticamente. Aprende cómo esta tecnología agiliza los procesos comerciales y mejora el cumplimiento."
+        },
+        "pass2u-alternative": {
+            "title": "Alternativa a Pass2U: Una forma más inteligente de organizar tus pases",
+            "description": "Pass2U extiende Apple Wallet con tarjetas personalizadas. ¿Pero qué pasa si necesitas más? Descubre una aplicación que organiza todos tus documentos con seguridad real."
+        },
+        "kyc-aml-compliance": {
+            "title": "Cumplimiento de KYC y AML: una guía completa para empresas",
+            "description": "Los requisitos de KYC (Conozca a su Cliente) y AML (Anti-Lavado de Dinero) afectan a empresas en todas las industrias. Aprende qué requieren estas regulaciones y cómo construir procesos de verificación compatibles."
+        },
+        "albanian-diaspora-voter-registration": {
+            "title": "El registro de votantes de la diáspora albanesa aumenta un 525% con Folio Wallet",
+            "description": "Albania logró habilitar a su diáspora para registrarse para votar utilizando una solución segura de billetera digital, con más de 245,000 albaneses en el extranjero aprobados para votar en las próximas elecciones parlamentarias."
+        },
+        "tripit-alternative": {
+            "title": "Alternativa a TripIt: Una forma más inteligente de organizar tus viajes",
+            "description": "TripIt mantiene tu itinerario en orden. ¿Pero qué pasa si necesitas más? Descubre una aplicación que almacena tus reservas, documentos y boletos en un lugar seguro."
+        },
+        "face-matching-technology": {
+            "title": "Tecnología de coincidencia facial: cómo las empresas verifican la identidad en línea",
+            "description": "La coincidencia facial compara una selfie en vivo con una foto de identificación para confirmar la identidad. Aprende cómo funciona esta tecnología, dónde se usa y qué la hace diferente del reconocimiento facial."
+        },
+        "checkmytrip-alternative": {
+            "title": "Alternativa a CheckMyTrip: Una forma más inteligente de gestionar tu viaje",
+            "description": "CheckMyTrip organiza tus reservas. ¿Pero qué pasa con tu pasaporte, seguro y entradas para eventos? Descubre una aplicación que almacena todo en un lugar seguro."
+        },
+        "best-apple-wallet-alternatives": {
+            "title": "Las mejores alternativas a Apple Wallet",
+            "description": "Apple Wallet es genial para pagar con un toque y tarjetas de embarque, pero tiene limitaciones. Descubre cinco potentes aplicaciones para iOS que llenan los vacíos de Wallet: almacenamiento seguro de documentos, gestión de múltiples tarjetas y planificación automatizada de viajes."
+        },
+        "best-google-wallet-alternatives": {
+            "title": "Las mejores alternativas a Google Wallet que puedes instalar en 2025",
+            "description": "Google Wallet es genial, pero no es suficiente. Descubre siete potentes alternativas que llenan los vacíos de Wallet: almacenamiento seguro de documentos, pagos en múltiples monedas y planificación automatizada de viajes."
+        },
+        "client-onboarding-best-practices": {
+            "title": "Mejores prácticas de incorporación de clientes: digital vs tradicional",
+            "description": "La incorporación digital de clientes transforma cómo las empresas verifican y activan nuevos clientes. Aprende las diferencias clave con los métodos tradicionales y las mejores prácticas para implementar flujos de trabajo de incorporación efectivos."
+        },
+        "you-can-now-store-tickets-in-folio-wallet": {
+            "title": "Autobús, tren, concierto. Tres boletos de tres aplicaciones. ¿Dónde está el código de barras?",
+            "description": "Los viajes reales tienen boletos esparcidos por todas partes. Aquí te mostramos cómo dejar de buscar en cada puerta."
+        },
+        "access-your-digital-wallet-anywhere": {
+            "title": "Una aplicación para tu pasaporte, boletos y todo lo demás",
+            "description": "Tu pasaporte es un PDF. Tu tarjeta de embarque está en el correo electrónico. Tu confirmación de hotel es una captura de pantalla. Aquí hay una mejor manera."
+        },
+        "eudi-wallet": {
+            "title": "La UE está dando a todos una billetera de ID digital. Esto es lo que significa.",
+            "description": "Para 2026, todos los países de la UE deben ofrecer a los ciudadanos una billetera de identidad digital gratuita. Prueba tu edad sin mostrar tu fecha de nacimiento, abre cuentas bancarias sin fotocopiar tu pasaporte."
+        },
+        "how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app": {
+            "title": "Tu amigo reservó el hotel. Ahora está atrapado en el tráfico. ¿Tienes la confirmación?",
+            "description": "Los viajes en grupo se desmoronan cuando una persona tiene todas las reservas. Aquí te mostramos cómo asegurarte de que todos tengan acceso a todo."
+        },
+        "flight-tickets-on-iphone": {
+            "title": "Tienes 30 segundos para encontrar tu tarjeta de embarque. ¿Dónde está?",
+            "description": "La puerta se está cerrando, tu teléfono tiene 47 PDF y el código de barras está en algún lugar. Aquí te mostramos cómo nunca volver a perder una tarjeta de embarque."
+        },
+        "the-best-event-ticket-apps": {
+            "title": "¿Dónde puse esa entrada? (El problema de la organización de entradas para eventos)",
+            "description": "Concierto en Ticketmaster, credencial de conferencia en correo electrónico, parque temático como captura de pantalla. Aquí te mostramos cómo dejar de perder entradas."
+        },
+        "best-apps-to-plan-travel": {
+            "title": "Las únicas aplicaciones de viaje que realmente necesitas (y cuáles omitir)",
+            "description": "La mayoría de las listas de aplicaciones de viaje incluyen 20 aplicaciones que nunca usarás. Aquí están las que resuelven problemas reales."
+        },
+        "mobile-drivers-license": {
+            "title": "Tu licencia de conducir se está volviendo digital. Esto es lo que eso significa realmente.",
+            "description": "Las licencias de conducir móviles se están implementando en los EE. UU. Pero esto no es solo una foto en tu teléfono. En realidad, es más privado y seguro que la tarjeta de plástico en tu billetera."
+        },
+        "10-travel-hacks-that-actually-work": {
+            "title": "10 trucos de viaje que realmente funcionan (y 3 que no)",
+            "description": "La mayoría de los consejos de viaje son inútiles. Estos diez realmente ahorran tiempo y dinero. Además, tres trucos populares que suenan bien pero rara vez funcionan."
+        },
+        "age-verification-requirements": {
+            "title": "Cómo funciona realmente la verificación de edad en línea",
+            "description": "Desde comprar vino en línea hasta registrarse en aplicaciones, las comprobaciones de edad están en todas partes. Aprende cómo funcionan los diferentes métodos de verificación, por qué algunos son más privados que otros y qué sucede con tus datos."
+        },
+        "organize-tickets-bookings": {
+            "title": "Cómo mantener todas tus entradas y reservas en una sola aplicación",
+            "description": "Vuelos, trenes, hoteles, conciertos: deja de buscar en correos electrónicos. Mantén todos tus boletos de viaje y reservas organizados en una aplicación segura."
+        },
+        "app-in-the-air-alternative": {
+            "title": "App in the Air cerró. Aquí es a donde van los viajeros frecuentes en su lugar.",
+            "description": "Después de años de rastrear vuelos para millones de viajeros, App in the Air se ha ido. Si buscas un reemplazo que haga aún más, Folio Wallet es la respuesta."
+        },
+        "wanderlog-alternative": {
+            "title": "Wanderlog planea tu viaje. ¿Pero dónde guardas los boletos reales?",
+            "description": "Wanderlog es genial para decidir qué hacer. Pero una vez que has reservado vuelos, hoteles y actividades, necesitas un lugar donde guardarlos."
+        },
+        "what-is-liveness-detection": {
+            "title": "Cómo la detección de vida evita que los estafadores usen tu foto",
+            "description": "Alguien tiene tu foto. ¿Pueden usarla para pasar la verificación de identidad? Con la detección de vida, la respuesta es no. Aprende cómo esta tecnología distingue entre tú y una foto tuya."
+        },
+        "end-to-end-encryption": {
+            "title": "¿Por qué ni siquiera Folio puede ver tus documentos?",
+            "description": "Tus documentos en Folio están protegidos por un secreto que solo tú conoces. Sin tu Clave de Acceso o Código de Recuperación, nadie puede acceder a tus datos, ni siquiera nosotros."
+        },
+        "biometric-data-privacy": {
+            "title": "Qué sucede con tus datos faciales después de la verificación de identidad",
+            "description": "Cuando tomas una selfie para la verificación de identidad, ¿a dónde va esa imagen? ¿Quién la ve? ¿Cuánto tiempo se guarda? Aquí está lo que debes saber sobre los datos biométricos."
+        },
+        "digital-credentials-government": {
+            "title": "Cómo los gobiernos están reemplazando documentos en papel con credenciales digitales",
+            "description": "¿Qué pasaría si pudieras votar desde el extranjero, demostrar tu edad sin mostrar tu identificación o acceder a servicios gubernamentales sin hacer fila? Las credenciales digitales están haciendo que esto suceda."
+        },
+        "nfc-identity-verification": {
+            "title": "Cómo el escaneo de chip NFC verifica tu pasaporte en segundos",
+            "description": "Tu pasaporte tiene un chip que prueba que es genuino. Aprende cómo funciona el escaneo NFC, qué verifica y por qué es la forma más segura de confirmar la autenticidad del documento."
+        },
+        "digital-passport-copies": {
+            "title": "¿Por qué necesitas una copia digital de tu pasaporte?",
+            "description": "Descubre los beneficios de mantener una copia digital del pasaporte: acceso instantáneo, respaldo de emergencia, check-ins más rápidos y almacenamiento seguro. Esencial para todo viajero."
+        },
         "best-document-scanning-apps": {
             "title": "Las mejores aplicaciones de escaneo de documentos para iPhone y Android",
             "description": "Convierte tu teléfono en un potente escáner. Descubre las mejores aplicaciones para escanear, almacenar y organizar tus documentos de forma segura."
         },
-        "the-best-event-ticket-apps": {
-            "title": "¿Dónde puse esa entrada? (El problema de la organización de entradas para eventos)",
-            "description": "Concierto en Ticketmaster, insignia de conferencia en correo electrónico, parque temático como captura de pantalla. Aquí te explicamos cómo dejar de perder entradas."
+        "managing-family-travel-documents": {
+            "title": "La pesadilla del aeropuerto que todo padre conoce (y cómo evitarla)",
+            "description": "Estás en seguridad con dos niños, un cochecito y cuatro pasaportes en algún lugar de tu bolso. Hay una mejor manera de viajar con la familia."
         },
-        "best-gift-card-wallet-apps": {
-            "title": "Las mejores aplicaciones de billetera de tarjetas de regalo para una organización digital sin problemas",
-            "description": "Descubre las mejores aplicaciones de billetera de tarjetas de regalo para organizar y asegurar tus tarjetas digitalmente. Compara características y encuentra la solución perfecta para gestionar tarjetas de regalo."
+        "best-id-scanner-app": {
+            "title": "Te robaron la billetera en el extranjero. ¿Tienes una copia de tu licencia?",
+            "description": "Nadie piensa en copias de identificación digital hasta que necesita una. Aquí están las situaciones en las que te agradecerás por tenerlas."
+        },
+        "best-identity-verification-platforms": {
+            "title": "Las mejores plataformas de verificación de identidad en 2025",
+            "description": "Una comparación práctica de plataformas de verificación de identidad para empresas. Aprende qué solución se adapta a tus necesidades: Folio, Onfido, Veriff, Yoti o Jumio."
+        },
+        "complete-guide-identity-verification": {
+            "title": "La guía completa para la verificación de identidad digital",
+            "description": "Una guía práctica para la verificación de identidad: cómo funciona, por qué importa y cómo implementarla sin perder usuarios en el camino."
         }
-    },
-    "hero": {
-        "tagline": "El Blog de Folio",
-        "title": "Ideas sobre identidad, seguridad y el futuro de las billeteras.",
-        "description": "Mantente actualizado con las últimas noticias, guías y artículos profundos de nuestro equipo."
-    },
-    "categories": {
-        "all": "Todos",
-        "education": "Educación",
-        "security": "Seguridad",
-        "updates": "Actualizaciones",
-        "engineering": "Ingeniería"
-    },
-    "readMore": "Leer artículo",
-    "publishedOn": "Publicado el {{date}}",
-    "minRead": "{{count}} min de lectura"
+    }
 }

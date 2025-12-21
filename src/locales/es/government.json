@@ -1,60 +1,321 @@
 {
-    "meta": {
-        "title": "Gobierno | Folio Wallet",
-        "description": "Soluciones de identidad digital seguras y escalables para gobiernos nacionales y estatales."
-    },
-    "hero": {
-        "tagline": "Para gobiernos",
-        "title": "Identidad digital para la nación moderna",
-        "description": "Emite identificaciones digitales seguras, agiliza los servicios ciudadanos y reduce el fraude con una plataforma de identidad construida para escala nacional."
-    },
-    "overview": {
-        "title": "Infraestructura crítica, simplificada",
-        "security": {
-            "title": "Seguridad de grado nacional",
-            "description": "Protege los datos de los ciudadanos con cifrado de nivel bancario, almacenamiento descentralizado y cumplimiento con los más altos estándares de seguridad."
+    "government": {
+        "meta": {
+            "title": "Para Gobierno | Folio Wallet",
+            "description": "Herramientas de identidad digital para agencias gubernamentales. Diseña, prueba e implementa credenciales digitales modernas de acuerdo con estándares globales."
         },
-        "adoption": {
-            "title": "Impulsa la adopción digital",
-            "description": "Ofrece a los ciudadanos una billetera que les encantará usar. El diseño intuitivo y la utilidad en el mundo real fomentan la adopción masiva."
+        "hero": {
+            "tagline": "Gobierno",
+            "title": "Identidad digital alineada con estándares globales",
+            "description": "Herramientas para que los gobiernos diseñen, prueben e implementen credenciales digitales modernas, con un entorno de pruebas seguro que refleja los flujos reales de identidad digital europea y te permite explorar documentos de demostración, verificar códigos QR y ver exactamente qué información se comparte."
         },
-        "efficiency": {
-            "title": "Eficiencia operativa",
-            "description": "Reduce costos administrativos digitalizando la emisión de documentos y verificación, liberando recursos para otros servicios esenciales."
+        "overview": {
+            "title": "Infraestructura moderna para identidad digital nacional",
+            "description": "Soporte para autenticación segura y credenciales móviles para servicios públicos."
+        },
+        "features": {
+            "title": "Construido sobre cimientos de identidad digital confiables",
+            "description": "Proporciona a los ciudadanos credenciales digitales seguras, modernas e interoperables que siguen estándares globales y funcionan en todos los sistemas de identidad. Diseñado para programas a escala nacional con un enfoque en seguridad, privacidad y usabilidad en el mundo real.",
+            "standards": {
+                "title": "Estándares y cumplimiento",
+                "description": "Alineado con EUDI Wallet, licencia de conducir móvil ISO y especificaciones de Credenciales Verificables para asegurar compatibilidad, interoperabilidad y fiabilidad a largo plazo en servicios públicos."
+            },
+            "issuance": {
+                "title": "Emisión y verificación",
+                "description": "Soporte para emisión segura de identificaciones, permisos y certificados con validación criptográfica, escaneo de QR y códigos de barras, y verificación lista para funcionar sin conexión para entornos del mundo real."
+            },
+            "presentation": {
+                "title": "Presentación",
+                "description": "Habilita el intercambio de identidad centrado en la privacidad con divulgación mínima, consentimiento claro del usuario y canales seguros que aseguran que los ciudadanos controlen sus datos en cada paso."
+            }
+        },
+        "caseStudy": {
+            "title": "Resultados reales a escala nacional",
+            "description": "Cómo Albania habilitó el registro de votantes remoto seguro para su diáspora con la billetera de identidad digital de Folio.",
+            "imageAlt": "Mapa del caso de estudio de Albania",
+            "challenge": {
+                "title": "Desafío",
+                "description": "Albania necesitaba una forma segura para que más de 1.6 millones de ciudadanos que viven en el extranjero se registraran para votar de forma remota, cumpliendo con estrictos requisitos de seguridad y transparencia."
+            },
+            "solution": {
+                "title": "Solución",
+                "description": "La Comisión Electoral Central lanzó una plataforma de registro remoto impulsada por Folio: canales móviles y web con verificación de identidad segura y una tarjeta de votante digital que muestra el estado de la solicitud."
+            },
+            "results": {
+                "title": "Resultados",
+                "stat1": {
+                    "value": "525%",
+                    "description": "aumento en la participación de la diáspora frente a la elección anterior"
+                },
+                "stat2": {
+                    "value": "365,000+",
+                    "description": "perfiles creados a través de canales móviles y web"
+                }
+            },
+            "testimonial": {
+                "quote": "\"Trabajar con Folio ha sido una experiencia transformadora... establecieron un nuevo estándar de excelencia sobre cómo deben entregarse las soluciones de identidad digital.\"",
+                "name": "Ilirjan Celibashi",
+                "title": "Comisionado Estatal de Elecciones, Albania"
+            },
+            "button": "Leer caso de estudio"
+        },
+        "cta": {
+            "title": "Apoyando programas a escala nacional",
+            "description": "Trabaja con nosotros en pilotos, integraciones y esfuerzos de modernización.",
+            "button": "Ponte en contacto",
+            "playgroundButton": "Explorar Playground"
+        },
+        "globalPartners": {
+            "title": "Socios Globales",
+            "description": "Folio apoya a gobiernos de todo el mundo con soluciones de identidad seguras y escalables."
         }
-    },
-    "features": {
-        "title": "Características para el sector público",
-        "issuance": {
-            "title": "Emisión de documentos segura",
-            "description": "Digitaliza licencias de conducir, identificaciones nacionales y permisos. Emite directamente a los smartphones de los ciudadanos."
-        },
-        "verification": {
-            "title": "Verificación instantánea",
-            "description": "Permite a las agencias y empresas confiar y verificar las identificaciones de los ciudadanos en tiempo real, en línea y en persona."
-        },
-        "portals": {
-            "title": "Acceso a portales ciudadanos",
-            "description": "Reemplaza contraseñas débiles con inicio de sesión seguro usando la identidad digital. Simplifica el acceso a impuestos, salud y beneficios."
-        }
-    },
-    "caseStudy": {
-        "title": "Caso de éxito: Albania",
-        "description": "Cómo Folio ayudó al gobierno albano a lanzar la primera identidad digital nacional de la región, logrando un 40% de adopción en el primer año.",
-        "stats": {
-            "users": "1.2M+ Ciudadanos",
-            "services": "200+ Servicios",
-            "time": "Lanzamiento en 6 meses"
-        }
-    },
-    "cta": {
-        "title": "Moderniza tu identidad nacional",
-        "description": "Asóciate con Folio para construir un ecosistema de identidad digital seguro y centrado en el ciudadano.",
-        "button": "Contactar a ventas gubernamentales"
     },
     "playground": {
-        "title": "Explora el Playground",
-        "description": "¿Quieres probar nuestra tecnología? Visita nuestro entorno de pruebas para experimentar con flujos de verificación y emisión.",
-        "link": "Ir al Playground"
+        "meta": {
+            "title": "Playground | Folio Wallet",
+            "description": "Explora escenarios de identidad digital europea en acción. Prueba flujos de emisión y verificación de credenciales."
+        },
+        "issue": {
+            "title": "Playground",
+            "description": "Un entorno seguro para emitir documentos de demostración y probar flujos de verificación compatibles con EUDI. Pruebe pasos de emisión reales, escanee códigos QR, explore el intercambio de datos y vea cómo se comporta la identidad digital en la práctica."
+        },
+        "howItWorks": {
+            "title": "Cómo funcionan los flujos EUDI",
+            "description": "Playground te permite emitir documentos de demostración, ejecutar flujos de verificación y entender los estándares de Identidad Digital Europea (EUDI) detrás de ellos.",
+            "issuance": {
+                "title": "Emisión",
+                "description": "Revisas datos de muestra en un modal y confirmas el documento. Se muestra un código QR. Escanearlo con Folio Wallet agrega el documento a la billetera."
+            },
+            "presentation": {
+                "title": "Presentación",
+                "description": "Un verificador configura una solicitud en un modal, eligiendo exactamente qué atributos se necesitan. Se genera un código QR para que el usuario escanee y consienta compartir."
+            },
+            "lifecycle": {
+                "title": "Ciclo de vida",
+                "description": "Puedes repetir la emisión y verificación con diferentes configuraciones para ver cómo funcionan en la práctica las actualizaciones, la divulgación selectiva y la reutilización del mismo documento."
+            }
+        },
+        "issuanceTypes": {
+            "title": "Cómo se emiten los documentos en Playground",
+            "description": "Cada documento sigue un tipo de emisión específico. Las etiquetas de color en las tarjetas muestran qué flujo se utiliza.",
+            "authorization": {
+                "title": "Autorización",
+                "description": "El emisor confirma tu cuenta. Inicias sesión en su sitio web, luego apruebas la solicitud en tu billetera."
+            },
+            "preAuthorized": {
+                "title": "Pre-autorizado",
+                "description": "Emitido automáticamente usando tu Identidad Digital. Solo confirmas con biometría."
+            },
+            "transactionCode": {
+                "title": "Código de Transacción",
+                "description": "Requiere un código de un solo uso proporcionado por la organización."
+            },
+            "presentation": {
+                "title": "Presentación",
+                "description": "Emitido al presentar otro documento y compartir solo lo necesario."
+            }
+        },
+        "faq": {
+            "title": "Preguntas frecuentes",
+            "items": [
+                {
+                    "question": "¿Qué es Playground?",
+                    "answer": "Playground es un entorno de pruebas que te permite probar flujos de emisión y verificación compatibles con EUDI sin datos de usuarios reales."
+                },
+                {
+                    "question": "¿Son estos documentos reales?",
+                    "answer": "No. Todos los documentos aquí son muestras de demostración solo para pruebas. No tienen efecto legal y no pueden usarse en producción."
+                },
+                {
+                    "question": "¿Necesito una billetera EUDI real?",
+                    "answer": "Necesitas Folio Wallet en tu teléfono para escanear códigos QR y ver los documentos en acción. No necesitas una billetera nacional certificada oficialmente para usar este entorno de pruebas."
+                },
+                {
+                    "question": "¿Qué estándares sigue Playground?",
+                    "answer": "Los flujos se basan en la Arquitectura y Marco de Referencia de la Billetera de Identidad Digital Europea y utilizan OpenID para Emisión de Credenciales Verificables y Presentaciones Verificables bajo el capó."
+                },
+                {
+                    "question": "¿Por qué empiezo con Identidad Digital?",
+                    "answer": "La Identidad Digital es el documento central en el que pueden confiar otras credenciales. Al emitirlo una vez, puedes reutilizarlo en muchos escenarios de verificación."
+                },
+                {
+                    "question": "¿Puedo probar la verificación sin otro dispositivo?",
+                    "answer": "Sí. Puedes abrir Folio Wallet y Playground en el mismo dispositivo o en dos dispositivos. Los códigos QR funcionan tanto en escenarios del mismo dispositivo como entre dispositivos."
+                }
+            ]
+        },
+        "tabs": {
+            "issue": "Emitir",
+            "verify": "Verificar"
+        },
+        "documents": {
+            "digitalIdentity": "Identidad Digital",
+            "studentId": "Carné de Estudiante",
+            "driversLicense": "Licencia de Conducir",
+            "age18": "Edad 18+",
+            "healthInsurance": "Tarjeta Sanitaria",
+            "proofOfAddress": "Prueba de Dirección",
+            "membershipCard": "Tarjeta de Membresía",
+            "libraryCard": "Carné de Biblioteca"
+        },
+        "badges": {
+            "coreIdentification": "Identificación Principal",
+            "authorization": "Autorización",
+            "preAuthorized": "Pre-autorizado",
+            "transactionCode": "Código de Transacción",
+            "presentation": "Presentación"
+        },
+        "cards": {
+            "issue": {
+                "digitalIdentity": "Configura esto primero para que otros documentos usen los datos correctos.",
+                "studentId": "Emitido después de iniciar sesión en tu cuenta universitaria.",
+                "driversLicense": "Emitido después de iniciar sesión en tu cuenta de autoridad de transporte.",
+                "age18": "Emitido automáticamente a partir de tu fecha de nacimiento verificada.",
+                "healthInsurance": "Emitido automáticamente usando tus datos de identificación.",
+                "proofOfAddress": "Tu dirección registrada de tu identificación.",
+                "membershipCard": "Ingresa un código de un solo uso para obtener tu tarjeta.",
+                "libraryCard": "Muestra tu Carné de Estudiante para obtener tu carné de biblioteca."
+            },
+            "verify": {
+                "digitalIdentity": "Simula un banco o servicio público que necesita una verificación de identidad completa.",
+                "studentId": "Verifica el estado de inscripción para un servicio universitario o del campus.",
+                "driversLicense": "Verifica la validez de la licencia y campos clave para alquiler de autos o movilidad.",
+                "age18": "Confirma la edad legal para compras restringidas por edad con datos mínimos.",
+                "healthInsurance": "Verifica el estado de cobertura para un proveedor de atención médica.",
+                "proofOfAddress": "Confirma detalles de dirección para KYC o incorporación de servicios.",
+                "membershipCard": "Verifica si un usuario tiene una membresía activa.",
+                "libraryCard": "Verifica derechos de acceso para una biblioteca o servicio similar."
+            }
+        },
+        "modals": {
+            "common": {
+                "cancel": "Cancelar",
+                "continue": "Continuar",
+                "back": "Atrás",
+                "done": "Hecho"
+            },
+            "fields": {
+                "firstName": "Nombre",
+                "lastName": "Apellido",
+                "dateOfBirth": "Fecha de Nacimiento",
+                "placeOfBirth": "Lugar de Nacimiento",
+                "nationality": "Nacionalidad",
+                "residentialAddress": "Dirección Residencial",
+                "cardNumber": "Número de Tarjeta",
+                "issuingAuthority": "Autoridad Emisora",
+                "issuingCountry": "País Emisor",
+                "documentType": "Tipo de Documento",
+                "issuedOn": "Emitido El",
+                "expiryDate": "Fecha de Caducidad",
+                "universityName": "Nombre de la Universidad",
+                "faculty": "Facultad",
+                "enrollmentYear": "Año de Inscripción",
+                "studentNumber": "Número de Estudiante",
+                "licenseNumber": "Número de Licencia",
+                "categories": "Categorías",
+                "restrictions": "Restricciones",
+                "insuranceProvider": "Proveedor de Seguros",
+                "policyNumber": "Número de Póliza",
+                "coverageType": "Tipo de Cobertura",
+                "memberSince": "Miembro Desde",
+                "street": "Calle",
+                "city": "Ciudad",
+                "postalCode": "Código Postal",
+                "country": "País",
+                "verifiedOn": "Verificado El",
+                "membershipType": "Tipo de Membresía",
+                "membershipNumber": "Número de Membresía",
+                "membershipStatus": "Estado de Membresía",
+                "libraryName": "Nombre de la Biblioteca",
+                "libraryNumber": "Número de Biblioteca",
+                "borrowingPrivileges": "Privilegios de Préstamo",
+                "idPhoto": "Foto de ID",
+                "fullName": "Nombre Completo",
+                "requesterName": "Nombre del Solicitante",
+                "age18Confirmed": "Edad 18+ Confirmada"
+            },
+            "issue": {
+                "digitalIdentity": {
+                    "title": "Identidad Digital",
+                    "description": "Revisa y edita los detalles antes de emitir el documento."
+                },
+                "studentId": {
+                    "title": "Carné de Estudiante",
+                    "description": "Revisa y edita los detalles antes de emitir el documento."
+                },
+                "driversLicense": {
+                    "title": "Licencia de Conducir",
+                    "description": "Revisa y edita los detalles antes de emitir el documento."
+                },
+                "age18": {
+                    "title": "Edad 18+",
+                    "description": "Revisa y edita los detalles antes de emitir el documento."
+                },
+                "healthInsurance": {
+                    "title": "Tarjeta Sanitaria",
+                    "description": "Revisa y edita los detalles antes de emitir el documento."
+                },
+                "proofOfAddress": {
+                    "title": "Prueba de Dirección",
+                    "description": "Revisa y edita los detalles antes de emitir el documento."
+                },
+                "membershipCard": {
+                    "title": "Tarjeta de Membresía",
+                    "description": "Ingresa el código de transacción para emitir el documento."
+                },
+                "libraryCard": {
+                    "title": "Carné de Biblioteca",
+                    "description": "Revisa y edita los detalles antes de emitir el documento."
+                }
+            },
+            "verify": {
+                "digitalIdentity": {
+                    "title": "Identidad Digital",
+                    "description": "Configura la solicitud de verificación."
+                },
+                "studentId": {
+                    "title": "Carné de Estudiante",
+                    "description": "Configura la solicitud de verificación."
+                },
+                "driversLicense": {
+                    "title": "Licencia de Conducir",
+                    "description": "Configura la solicitud de verificación."
+                },
+                "age18": {
+                    "title": "Edad 18+",
+                    "description": "Configura la solicitud de verificación."
+                },
+                "healthInsurance": {
+                    "title": "Tarjeta Sanitaria",
+                    "description": "Configura la solicitud de verificación."
+                },
+                "proofOfAddress": {
+                    "title": "Prueba de Dirección",
+                    "description": "Configura la solicitud de verificación."
+                },
+                "membershipCard": {
+                    "title": "Tarjeta de Membresía",
+                    "description": "Configura la solicitud de verificación."
+                },
+                "libraryCard": {
+                    "title": "Carné de Biblioteca",
+                    "description": "Configura la solicitud de verificación."
+                }
+            },
+            "confirmation": {
+                "issue": {
+                    "title": "Emitir {{documentType}}",
+                    "description": "Escanea el código QR a continuación para agregar el documento."
+                },
+                "verify": {
+                    "title": "Verificar {{documentType}}",
+                    "description": "Escanea el código QR a continuación para verificar este documento."
+                }
+            },
+            "verified": {
+                "title": "{{title}} verificado",
+                "description": "A continuación se muestran los detalles recibidos durante la verificación."
+            }
+        }
     }
 }

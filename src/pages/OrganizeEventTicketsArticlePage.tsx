@@ -1,6 +1,6 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import { LocalizedLink } from '../components/ui'
-import blogOrganizeEventTicketsHero from '../assets/images/blog-organize-event-tickets-hero.png'
+import blogOrganizeEventTicketsHero from '../assets/images/blog-organize-tickets-bookings-hero.png'
 
 export default function OrganizeEventTicketsArticlePage() {
   return (
@@ -19,8 +19,8 @@ export default function OrganizeEventTicketsArticlePage() {
         Every trip involves dozens of tickets and confirmations from different sources. Flights from airlines, trains from rail companies, hotels from booking platforms, events from ticketing services. Each one arrives in a different format, lives in a different app or email folder, and needs to be found at exactly the right moment. This scattered approach makes travel more stressful than it needs to be.
       </ArticleParagraph>
 
-      <ArticleImage 
-        src={blogOrganizeEventTicketsHero} 
+      <ArticleImage
+        src={blogOrganizeEventTicketsHero}
         alt="Digital tickets in Folio Wallet: train ticket, bus ticket, and event ticket with QR codes"
       />
 

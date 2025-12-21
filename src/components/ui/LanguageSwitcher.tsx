@@ -52,7 +52,7 @@ export default function LanguageSwitcher() {
       <button
         ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 rounded-lg border border-[#e5e5e5] hover:border-[#d4d4d4] hover:bg-[#fafafa] transition-colors text-sm font-medium text-[#0a0a0a]"
+        className="flex items-center gap-2 px-3 py-2 rounded-lg border border-[#e5e5e5] hover:border-[#d4d4d4] hover:bg-[#e5e5e5] transition-colors text-sm font-medium text-[#0a0a0a]"
         aria-expanded={isOpen}
         aria-haspopup="listbox"
         aria-label="Select language"
@@ -83,7 +83,7 @@ export default function LanguageSwitcher() {
               className={`w-full text-left px-4 py-2 text-sm transition-colors ${
                 lang === currentLanguage
                   ? 'bg-[#f5f5f5] text-[#0a0a0a] font-medium'
-                  : 'text-[#525252] hover:bg-[#fafafa] hover:text-[#0a0a0a]'
+                  : 'text-[#525252] hover:bg-[#e5e5e5] hover:text-[#171717]'
               }`}
             >
               {LANGUAGE_NAMES[lang]}
