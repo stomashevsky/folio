@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import ConfirmationModal from './ConfirmationModal'
 import ModalShell from './modals/ModalShell'
 import { MODAL_TWO_COLUMN_LAYOUT } from './modals/modalConfig'
@@ -12,6 +13,7 @@ interface DriversLicenseModalProps {
 }
 
 export default function DriversLicenseModal({ isOpen, onClose }: DriversLicenseModalProps) {
+  const { t } = useTranslation('government')
   const [isConfirmationOpen, setIsConfirmationOpen] = useState(false)
   const handleCardNumberBlur = useInputDefaultValue('D7654321')
 
@@ -33,32 +35,32 @@ export default function DriversLicenseModal({ isOpen, onClose }: DriversLicenseM
       <ModalShell
         isOpen={isOpen}
         onClose={onClose}
-        title="Driver's License"
-        description="Review and edit the details before issuing the document."
+        title={t('playground.modals.issue.driversLicense.title')}
+        description={t('playground.modals.issue.driversLicense.description')}
         size="large"
         disableFocusTrap={isConfirmationOpen}
         footer={{
-          secondary: { label: 'Cancel', onClick: onClose },
-          primary: { label: 'Continue', onClick: handleContinue },
+          secondary: { label: t('playground.modals.common.cancel'), onClick: onClose },
+          primary: { label: t('playground.modals.common.continue'), onClick: handleContinue },
         }}
       >
         <div className={MODAL_TWO_COLUMN_LAYOUT}>
           <div className="flex flex-1 flex-col gap-4 items-start w-full">
-            <FormField label="First Name">
+            <FormField label={t('playground.modals.fields.firstName')}>
               <TextInput
                 defaultValue="Carmen"
-                placeholder="First Name"
+                placeholder={t('playground.modals.fields.firstName')}
                 className={INPUT_BASE_CLASSES}
               />
             </FormField>
-            <FormField label="Last Name">
+            <FormField label={t('playground.modals.fields.lastName')}>
               <TextInput
                 defaultValue="Muestra"
-                placeholder="Last Name"
+                placeholder={t('playground.modals.fields.lastName')}
                 className={INPUT_BASE_CLASSES}
               />
             </FormField>
-            <FormField label="Date of Birth">
+            <FormField label={t('playground.modals.fields.dateOfBirth')}>
               <DateInput
                 defaultValue="01/01/1980"
                 className={INPUT_BASE_CLASSES}
@@ -67,10 +69,10 @@ export default function DriversLicenseModal({ isOpen, onClose }: DriversLicenseM
           </div>
 
           <div className="flex flex-1 flex-col gap-4 items-start w-full">
-            <FormField label="Card Number">
+            <FormField label={t('playground.modals.fields.cardNumber')}>
               <TextInput
                 defaultValue="D7654321"
-                placeholder="Card Number"
+                placeholder={t('playground.modals.fields.cardNumber')}
                 autoComplete="one-time-code"
                 name="drivers-license-number"
                 inputMode="text"
@@ -80,43 +82,43 @@ export default function DriversLicenseModal({ isOpen, onClose }: DriversLicenseM
                 onBlur={handleCardNumberBlur}
               />
             </FormField>
-            <FormField label="Issuing Authority">
+            <FormField label={t('playground.modals.fields.issuingAuthority')}>
               <TextInput
                 defaultValue="Transport Authority"
-                placeholder="Issuing Authority"
+                placeholder={t('playground.modals.fields.issuingAuthority')}
                 className={INPUT_BASE_CLASSES}
               />
             </FormField>
-            <FormField label="Issuing Country">
+            <FormField label={t('playground.modals.fields.issuingCountry')}>
               <TextInput
                 defaultValue="Country"
-                placeholder="Issuing Country"
+                placeholder={t('playground.modals.fields.issuingCountry')}
                 className={INPUT_BASE_CLASSES}
               />
             </FormField>
-            <FormField label="Issued On">
+            <FormField label={t('playground.modals.fields.issuedOn')}>
               <DateInput
                 defaultValue="15/12/2025"
                 className={INPUT_BASE_CLASSES}
               />
             </FormField>
-            <FormField label="Expiry Date">
+            <FormField label={t('playground.modals.fields.expiryDate')}>
               <DateInput
                 defaultValue="15/12/2035"
                 className={INPUT_BASE_CLASSES}
               />
             </FormField>
-            <FormField label="Categories">
+            <FormField label={t('playground.modals.fields.categories')}>
               <TextInput
                 defaultValue="B"
-                placeholder="Categories"
+                placeholder={t('playground.modals.fields.categories')}
                 className={INPUT_BASE_CLASSES}
               />
             </FormField>
-            <FormField label="Restrictions">
+            <FormField label={t('playground.modals.fields.restrictions')}>
               <TextInput
                 defaultValue="None"
-                placeholder="Restrictions"
+                placeholder={t('playground.modals.fields.restrictions')}
                 className={INPUT_BASE_CLASSES}
               />
             </FormField>

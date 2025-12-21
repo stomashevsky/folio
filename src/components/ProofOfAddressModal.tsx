@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import ConfirmationModal from './ConfirmationModal'
 import ModalShell from './modals/ModalShell'
 import { MODAL_TWO_COLUMN_LAYOUT } from './modals/modalConfig'
@@ -12,6 +13,7 @@ interface ProofOfAddressModalProps {
 }
 
 export default function ProofOfAddressModal({ isOpen, onClose }: ProofOfAddressModalProps) {
+  const { t } = useTranslation('government')
   const [isConfirmationOpen, setIsConfirmationOpen] = useState(false)
   const handleCardNumberBlur = useInputDefaultValue('P7654321')
 
@@ -33,45 +35,45 @@ export default function ProofOfAddressModal({ isOpen, onClose }: ProofOfAddressM
       <ModalShell
         isOpen={isOpen}
         onClose={onClose}
-        title="Proof of Address"
-        description="Review and edit the details before issuing the document."
+        title={t('playground.modals.issue.proofOfAddress.title')}
+        description={t('playground.modals.issue.proofOfAddress.description')}
         size="large"
         disableFocusTrap={isConfirmationOpen}
         footer={{
-          secondary: { label: 'Cancel', onClick: onClose },
-          primary: { label: 'Continue', onClick: handleContinue },
+          secondary: { label: t('playground.modals.common.cancel'), onClick: onClose },
+          primary: { label: t('playground.modals.common.continue'), onClick: handleContinue },
         }}
       >
         <div className={MODAL_TWO_COLUMN_LAYOUT}>
           <div className="flex flex-1 flex-col gap-4 items-start w-full">
-            <FormField label="First Name">
+            <FormField label={t('playground.modals.fields.firstName')}>
               <TextInput
                 defaultValue="Carmen"
-                placeholder="First Name"
+                placeholder={t('playground.modals.fields.firstName')}
                 className={INPUT_BASE_CLASSES}
               />
             </FormField>
-            <FormField label="Last Name">
+            <FormField label={t('playground.modals.fields.lastName')}>
               <TextInput
                 defaultValue="Muestra"
-                placeholder="Last Name"
+                placeholder={t('playground.modals.fields.lastName')}
                 className={INPUT_BASE_CLASSES}
               />
             </FormField>
-            <FormField label="Residential Address">
+            <FormField label={t('playground.modals.fields.residentialAddress')}>
               <TextInput
                 defaultValue="123 Main Street, City, Country"
-                placeholder="Residential Address"
+                placeholder={t('playground.modals.fields.residentialAddress')}
                 className={INPUT_BASE_CLASSES}
               />
             </FormField>
           </div>
 
           <div className="flex flex-1 flex-col gap-4 items-start w-full">
-            <FormField label="Card Number">
+            <FormField label={t('playground.modals.fields.cardNumber')}>
               <TextInput
                 defaultValue="P7654321"
-                placeholder="Card Number"
+                placeholder={t('playground.modals.fields.cardNumber')}
                 autoComplete="one-time-code"
                 name="proof-of-address-number"
                 inputMode="text"
@@ -81,20 +83,20 @@ export default function ProofOfAddressModal({ isOpen, onClose }: ProofOfAddressM
                 onBlur={handleCardNumberBlur}
               />
             </FormField>
-            <FormField label="Issuing Authority">
+            <FormField label={t('playground.modals.fields.issuingAuthority')}>
               <TextInput
                 defaultValue="ID Authority"
-                placeholder="Issuing Authority"
+                placeholder={t('playground.modals.fields.issuingAuthority')}
                 className={INPUT_BASE_CLASSES}
               />
             </FormField>
-            <FormField label="Issued On">
+            <FormField label={t('playground.modals.fields.issuedOn')}>
               <DateInput
                 defaultValue="15/12/2025"
                 className={INPUT_BASE_CLASSES}
               />
             </FormField>
-            <FormField label="Expiry Date">
+            <FormField label={t('playground.modals.fields.expiryDate')}>
               <DateInput
                 defaultValue="15/12/2035"
                 className={INPUT_BASE_CLASSES}

@@ -143,6 +143,179 @@
           "answer": "Yes. You can open Folio Wallet and Playground on the same device or on two devices. QR codes work in both same device and cross device scenarios."
         }
       ]
+    },
+    "tabs": {
+      "issue": "Issue",
+      "verify": "Verify"
+    },
+    "documents": {
+      "digitalIdentity": "Digital Identity",
+      "studentId": "Student ID",
+      "driversLicense": "Driver's License",
+      "age18": "Age 18+",
+      "healthInsurance": "Health Insurance Card",
+      "proofOfAddress": "Proof of Address",
+      "membershipCard": "Membership Card",
+      "libraryCard": "Library Card"
+    },
+    "badges": {
+      "coreIdentification": "Core Identification",
+      "authorization": "Authorization",
+      "preAuthorized": "Pre-authorized",
+      "transactionCode": "Transaction Code",
+      "presentation": "Presentation"
+    },
+    "cards": {
+      "issue": {
+        "digitalIdentity": "Set this up first so other documents use the right data.",
+        "studentId": "Issued after signing in to your university account.",
+        "driversLicense": "Issued after signing in to your transport authority account.",
+        "age18": "Issued automatically from your verified birth date.",
+        "healthInsurance": "Issued automatically using your ID data.",
+        "proofOfAddress": "Your registered address from your ID.",
+        "membershipCard": "Enter a one-time code to get your card.",
+        "libraryCard": "Show your Student ID to get your library card."
+      },
+      "verify": {
+        "digitalIdentity": "Simulate a bank or public service that needs a full identity check.",
+        "studentId": "Verify enrolment status for a university or campus service.",
+        "driversLicense": "Check licence validity and key fields for car rental or mobility.",
+        "age18": "Confirm legal age for age restricted purchases with minimum data.",
+        "healthInsurance": "Verify coverage status for a healthcare provider.",
+        "proofOfAddress": "Confirm address details for KYC or utility onboarding.",
+        "membershipCard": "Check whether a user has an active membership.",
+        "libraryCard": "Verify access rights for a library or similar service."
+      }
+    },
+    "modals": {
+      "common": {
+        "cancel": "Cancel",
+        "continue": "Continue",
+        "back": "Back",
+        "done": "Done"
+      },
+      "fields": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "dateOfBirth": "Date of Birth",
+        "placeOfBirth": "Place of Birth",
+        "nationality": "Nationality",
+        "residentialAddress": "Residential Address",
+        "cardNumber": "Card Number",
+        "issuingAuthority": "Issuing Authority",
+        "issuingCountry": "Issuing Country",
+        "documentType": "Document Type",
+        "issuedOn": "Issued On",
+        "expiryDate": "Expiry Date",
+        "universityName": "University Name",
+        "faculty": "Faculty",
+        "enrollmentYear": "Enrollment Year",
+        "studentNumber": "Student Number",
+        "licenseNumber": "License Number",
+        "categories": "Categories",
+        "restrictions": "Restrictions",
+        "insuranceProvider": "Insurance Provider",
+        "policyNumber": "Policy Number",
+        "coverageType": "Coverage Type",
+        "memberSince": "Member Since",
+        "street": "Street",
+        "city": "City",
+        "postalCode": "Postal Code",
+        "country": "Country",
+        "verifiedOn": "Verified On",
+        "membershipType": "Membership Type",
+        "membershipNumber": "Membership Number",
+        "membershipStatus": "Membership Status",
+        "libraryName": "Library Name",
+        "libraryNumber": "Library Number",
+        "borrowingPrivileges": "Borrowing Privileges",
+        "idPhoto": "ID Photo",
+        "fullName": "Full Name",
+        "requesterName": "Requester Name",
+        "age18Confirmed": "Age 18+ Confirmed"
+      },
+      "issue": {
+        "digitalIdentity": {
+          "title": "Digital Identity",
+          "description": "Review and edit the details before issuing the document."
+        },
+        "studentId": {
+          "title": "Student ID",
+          "description": "Review and edit the details before issuing the document."
+        },
+        "driversLicense": {
+          "title": "Driver's License",
+          "description": "Review and edit the details before issuing the document."
+        },
+        "age18": {
+          "title": "Age 18+",
+          "description": "Review and edit the details before issuing the document."
+        },
+        "healthInsurance": {
+          "title": "Health Insurance Card",
+          "description": "Review and edit the details before issuing the document."
+        },
+        "proofOfAddress": {
+          "title": "Proof of Address",
+          "description": "Review and edit the details before issuing the document."
+        },
+        "membershipCard": {
+          "title": "Membership Card",
+          "description": "Enter the transaction code to issue the document."
+        },
+        "libraryCard": {
+          "title": "Library Card",
+          "description": "Review and edit the details before issuing the document."
+        }
+      },
+      "verify": {
+        "digitalIdentity": {
+          "title": "Digital Identity",
+          "description": "Configure the verification request."
+        },
+        "studentId": {
+          "title": "Student ID",
+          "description": "Configure the verification request."
+        },
+        "driversLicense": {
+          "title": "Driver's License",
+          "description": "Configure the verification request."
+        },
+        "age18": {
+          "title": "Age 18+",
+          "description": "Configure the verification request."
+        },
+        "healthInsurance": {
+          "title": "Health Insurance Card",
+          "description": "Configure the verification request."
+        },
+        "proofOfAddress": {
+          "title": "Proof of Address",
+          "description": "Configure the verification request."
+        },
+        "membershipCard": {
+          "title": "Membership Card",
+          "description": "Configure the verification request."
+        },
+        "libraryCard": {
+          "title": "Library Card",
+          "description": "Configure the verification request."
+        }
+      },
+      "confirmation": {
+        "issue": {
+          "title": "Issue {{documentType}}",
+          "description": "Scan the QR code below to add the document."
+        },
+        "verify": {
+          "title": "Verify {{documentType}}",
+          "description": "Scan the QR code below to verify this document."
+        }
+      },
+      "verified": {
+        "title": "{{title}} verified",
+        "description": "Below are the details received during verification."
+      }
     }
   }
 }

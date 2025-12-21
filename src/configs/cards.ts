@@ -3,15 +3,47 @@
  * Uses constants instead of magic strings
  */
 
-import { CardProps } from '../components/Card'
-import { DOCUMENT_TYPES } from '../constants/documents'
-import { ICON_NAMES } from '../constants/icons'
-import { BADGE_LABELS } from '../constants/badges'
+import { BadgeColorVariant } from '../components/ui/BadgeColor'
+import { DOCUMENT_TYPES, DocumentType } from '../constants/documents'
+import { ICON_NAMES, IconName } from '../constants/icons'
+
+/**
+ * Badge keys for translation lookup
+ */
+export const BADGE_KEYS = {
+  CORE_IDENTIFICATION: 'coreIdentification',
+  AUTHORIZATION: 'authorization',
+  PRE_AUTHORIZED: 'preAuthorized',
+  TRANSACTION_CODE: 'transactionCode',
+  PRESENTATION: 'presentation',
+} as const
+
+export type BadgeKey = typeof BADGE_KEYS[keyof typeof BADGE_KEYS]
+
+/**
+ * Document keys for translation lookup
+ */
+export const DOCUMENT_KEYS: Record<DocumentType, string> = {
+  [DOCUMENT_TYPES.DIGITAL_IDENTITY]: 'digitalIdentity',
+  [DOCUMENT_TYPES.STUDENT_ID]: 'studentId',
+  [DOCUMENT_TYPES.DRIVERS_LICENSE]: 'driversLicense',
+  [DOCUMENT_TYPES.AGE_18]: 'age18',
+  [DOCUMENT_TYPES.HEALTH_INSURANCE]: 'healthInsurance',
+  [DOCUMENT_TYPES.PROOF_OF_ADDRESS]: 'proofOfAddress',
+  [DOCUMENT_TYPES.MEMBERSHIP_CARD]: 'membershipCard',
+  [DOCUMENT_TYPES.LIBRARY_CARD]: 'libraryCard',
+}
 
 /**
  * Type for card configuration
  */
-export type CardConfig = CardProps
+export interface CardConfig {
+  icon: IconName
+  badgeKey?: BadgeKey
+  badgeVariant?: 'primary' | 'secondary' | BadgeColorVariant
+  documentType: DocumentType
+  documentKey: string
+}
 
 /**
  * Card configurations for Issue flow
@@ -19,59 +51,59 @@ export type CardConfig = CardProps
 export const issueCardConfigs: CardConfig[] = [
   {
     icon: ICON_NAMES.FINGERPRINT,
-    badge: BADGE_LABELS.CORE_IDENTIFICATION,
+    badgeKey: BADGE_KEYS.CORE_IDENTIFICATION,
     badgeVariant: 'primary',
-    title: DOCUMENT_TYPES.DIGITAL_IDENTITY,
-    description: 'Set this up first so other documents use the right data.',
+    documentType: DOCUMENT_TYPES.DIGITAL_IDENTITY,
+    documentKey: 'digitalIdentity',
   },
   {
     icon: ICON_NAMES.BOOK,
-    badge: BADGE_LABELS.AUTHORIZATION,
+    badgeKey: BADGE_KEYS.AUTHORIZATION,
     badgeVariant: 'Blue',
-    title: DOCUMENT_TYPES.STUDENT_ID,
-    description: 'Issued after signing in to your university account.',
+    documentType: DOCUMENT_TYPES.STUDENT_ID,
+    documentKey: 'studentId',
   },
   {
     icon: ICON_NAMES.CAR,
-    badge: BADGE_LABELS.AUTHORIZATION,
+    badgeKey: BADGE_KEYS.AUTHORIZATION,
     badgeVariant: 'Blue',
-    title: DOCUMENT_TYPES.DRIVERS_LICENSE,
-    description: 'Issued after signing in to your transport authority account.',
+    documentType: DOCUMENT_TYPES.DRIVERS_LICENSE,
+    documentKey: 'driversLicense',
   },
   {
     icon: ICON_NAMES.CALENDAR,
-    badge: BADGE_LABELS.PRE_AUTHORIZED,
+    badgeKey: BADGE_KEYS.PRE_AUTHORIZED,
     badgeVariant: 'Emerald',
-    title: DOCUMENT_TYPES.AGE_18,
-    description: 'Issued automatically from your verified birth date.',
+    documentType: DOCUMENT_TYPES.AGE_18,
+    documentKey: 'age18',
   },
   {
     icon: ICON_NAMES.SHIELD,
-    badge: BADGE_LABELS.PRE_AUTHORIZED,
+    badgeKey: BADGE_KEYS.PRE_AUTHORIZED,
     badgeVariant: 'Emerald',
-    title: DOCUMENT_TYPES.HEALTH_INSURANCE,
-    description: 'Issued automatically using your ID data.',
+    documentType: DOCUMENT_TYPES.HEALTH_INSURANCE,
+    documentKey: 'healthInsurance',
   },
   {
     icon: ICON_NAMES.HOME,
-    badge: BADGE_LABELS.PRE_AUTHORIZED,
+    badgeKey: BADGE_KEYS.PRE_AUTHORIZED,
     badgeVariant: 'Emerald',
-    title: DOCUMENT_TYPES.PROOF_OF_ADDRESS,
-    description: 'Your registered address from your ID.',
+    documentType: DOCUMENT_TYPES.PROOF_OF_ADDRESS,
+    documentKey: 'proofOfAddress',
   },
   {
     icon: ICON_NAMES.STAR,
-    badge: BADGE_LABELS.TRANSACTION_CODE,
+    badgeKey: BADGE_KEYS.TRANSACTION_CODE,
     badgeVariant: 'Fuchsia',
-    title: DOCUMENT_TYPES.MEMBERSHIP_CARD,
-    description: 'Enter a one-time code to get your card.',
+    documentType: DOCUMENT_TYPES.MEMBERSHIP_CARD,
+    documentKey: 'membershipCard',
   },
   {
     icon: ICON_NAMES.LIBRARY,
-    badge: BADGE_LABELS.PRESENTATION,
+    badgeKey: BADGE_KEYS.PRESENTATION,
     badgeVariant: 'Amber',
-    title: DOCUMENT_TYPES.LIBRARY_CARD,
-    description: 'Show your Student ID to get your library card.',
+    documentType: DOCUMENT_TYPES.LIBRARY_CARD,
+    documentKey: 'libraryCard',
   },
 ]
 
@@ -81,43 +113,43 @@ export const issueCardConfigs: CardConfig[] = [
 export const verifyCardConfigs: CardConfig[] = [
   {
     icon: ICON_NAMES.FINGERPRINT,
-    title: DOCUMENT_TYPES.DIGITAL_IDENTITY,
-    description: 'Simulate a bank or public service that needs a full identity check.',
+    documentType: DOCUMENT_TYPES.DIGITAL_IDENTITY,
+    documentKey: 'digitalIdentity',
   },
   {
     icon: ICON_NAMES.BOOK,
-    title: DOCUMENT_TYPES.STUDENT_ID,
-    description: 'Verify enrolment status for a university or campus service.',
+    documentType: DOCUMENT_TYPES.STUDENT_ID,
+    documentKey: 'studentId',
   },
   {
     icon: ICON_NAMES.CAR,
-    title: DOCUMENT_TYPES.DRIVERS_LICENSE,
-    description: 'Check licence validity and key fields for car rental or mobility.',
+    documentType: DOCUMENT_TYPES.DRIVERS_LICENSE,
+    documentKey: 'driversLicense',
   },
   {
     icon: ICON_NAMES.CALENDAR,
-    title: DOCUMENT_TYPES.AGE_18,
-    description: 'Confirm legal age for age restricted purchases with minimum data.',
+    documentType: DOCUMENT_TYPES.AGE_18,
+    documentKey: 'age18',
   },
   {
     icon: ICON_NAMES.SHIELD,
-    title: DOCUMENT_TYPES.HEALTH_INSURANCE,
-    description: 'Verify coverage status for a healthcare provider.',
+    documentType: DOCUMENT_TYPES.HEALTH_INSURANCE,
+    documentKey: 'healthInsurance',
   },
   {
     icon: ICON_NAMES.HOME,
-    title: DOCUMENT_TYPES.PROOF_OF_ADDRESS,
-    description: 'Confirm address details for KYC or utility onboarding.',
+    documentType: DOCUMENT_TYPES.PROOF_OF_ADDRESS,
+    documentKey: 'proofOfAddress',
   },
   {
     icon: ICON_NAMES.STAR,
-    title: DOCUMENT_TYPES.MEMBERSHIP_CARD,
-    description: 'Check whether a user has an active membership.',
+    documentType: DOCUMENT_TYPES.MEMBERSHIP_CARD,
+    documentKey: 'membershipCard',
   },
   {
     icon: ICON_NAMES.LIBRARY,
-    title: DOCUMENT_TYPES.LIBRARY_CARD,
-    description: 'Verify access rights for a library or similar service.',
+    documentType: DOCUMENT_TYPES.LIBRARY_CARD,
+    documentKey: 'libraryCard',
   },
 ]
 

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import ConfirmationModal from './ConfirmationModal'
 import ModalShell from './modals/ModalShell'
 import { TextInput, FormField, INPUT_BASE_CLASSES } from './ui'
@@ -11,6 +12,7 @@ interface Age18ModalProps {
 }
 
 export default function Age18Modal({ isOpen, onClose }: Age18ModalProps) {
+  const { t } = useTranslation('government')
   const [isConfirmationOpen, setIsConfirmationOpen] = useState(false)
   const handleCardNumberBlur = useInputDefaultValue('A7654321')
 
@@ -32,20 +34,20 @@ export default function Age18Modal({ isOpen, onClose }: Age18ModalProps) {
       <ModalShell
         isOpen={isOpen}
         onClose={onClose}
-        title="Age 18+"
-        description="Review and edit the details before issuing the document."
+        title={t('playground.modals.issue.age18.title')}
+        description={t('playground.modals.issue.age18.description')}
         size="small"
         disableFocusTrap={isConfirmationOpen}
         footer={{
-          secondary: { label: 'Cancel', onClick: onClose },
-          primary: { label: 'Continue', onClick: handleContinue },
+          secondary: { label: t('playground.modals.common.cancel'), onClick: onClose },
+          primary: { label: t('playground.modals.common.continue'), onClick: handleContinue },
         }}
       >
         <div className="flex flex-col gap-4 items-start w-full">
-          <FormField label="Card Number">
+          <FormField label={t('playground.modals.fields.cardNumber')}>
             <TextInput
               defaultValue="A7654321"
-              placeholder="Card Number"
+              placeholder={t('playground.modals.fields.cardNumber')}
               autoComplete="one-time-code"
               name="age-18-number"
               inputMode="text"
@@ -55,10 +57,10 @@ export default function Age18Modal({ isOpen, onClose }: Age18ModalProps) {
               onBlur={handleCardNumberBlur}
             />
           </FormField>
-          <FormField label="Issuing Authority">
+          <FormField label={t('playground.modals.fields.issuingAuthority')}>
             <TextInput
               defaultValue="ID Authority"
-              placeholder="Issuing Authority"
+              placeholder={t('playground.modals.fields.issuingAuthority')}
               className={INPUT_BASE_CLASSES}
             />
           </FormField>

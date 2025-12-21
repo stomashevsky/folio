@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import ModalShell from './ModalShell'
 import VerificationTable from './VerificationTable'
 import checkmarkIcon from '../../assets/icons/CircleCheck.svg'
@@ -22,6 +23,8 @@ export default function VerifiedModalBase<T extends Record<string, boolean | und
   allVerificationData,
   enabledFields,
 }: VerifiedModalBaseProps<T>) {
+  const { t } = useTranslation('government')
+  
   // Filter data by enabled fields
   let filteredData = allVerificationData.filter((item) => {
     if (item.enabledKey === 'fullName') {
@@ -68,7 +71,7 @@ export default function VerifiedModalBase<T extends Record<string, boolean | und
       size="large"
       isNested={true}
       footer={{
-        primary: { label: 'Done', onClick: onClose },
+        primary: { label: t('playground.modals.common.done'), onClick: onClose },
       }}
     >
       <div className="flex flex-col gap-4 items-start w-full">
@@ -79,10 +82,10 @@ export default function VerifiedModalBase<T extends Record<string, boolean | und
         </div>
         <div className="flex flex-col gap-1.5 items-start w-full">
           <h2 className="font-bold leading-tight text-lg text-[#0a0a0a] w-full">
-            {title} verified
+            {t('playground.modals.verified.title', { title })}
           </h2>
           <p className="font-normal leading-5 text-sm text-[#737373] w-full">
-            Below are the details received during verification.
+            {t('playground.modals.verified.description')}
           </p>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import VerifiedModalBase from './modals/VerifiedModalBase'
 import { VerificationData } from '../types/verification'
 import { HealthInsuranceEnabledFields } from '../types/documents'
@@ -9,16 +10,18 @@ interface HealthInsuranceVerifiedModalProps {
 }
 
 export default function HealthInsuranceVerifiedModal({ isOpen, onClose, enabledFields }: HealthInsuranceVerifiedModalProps) {
+  const { t } = useTranslation('government')
+  
   // All available data
   const allVerificationData: VerificationData = [
-    { key: 'firstName', label: 'First Name', value: 'Carmen', enabledKey: 'fullName', isPhoto: false },
-    { key: 'lastName', label: 'Last Name', value: 'Muestra', enabledKey: 'fullName', isPhoto: false },
-    { key: 'dateOfBirth', label: 'Date of Birth', value: '01/01/1980', enabledKey: 'dateOfBirth', isPhoto: false },
-    { key: 'cardNumber', label: 'Card Number', value: 'H7654321', enabledKey: 'cardNumber', isPhoto: false },
-    { key: 'issuingAuthority', label: 'Issuing Authority', value: 'Insurance Fund', enabledKey: 'issuingAuthority', isPhoto: false },
-    { key: 'issuedOn', label: 'Issued On', value: '15/12/2025', enabledKey: 'issuedOn', isPhoto: false },
-    { key: 'expiryDate', label: 'Expiry Date', value: '15/12/2035', enabledKey: 'expiryDate', isPhoto: false },
-    { key: 'coverageType', label: 'Coverage Type', value: 'Full', enabledKey: 'coverageType', isPhoto: false },
+    { key: 'firstName', label: t('playground.modals.fields.firstName'), value: 'Carmen', enabledKey: 'fullName', isPhoto: false },
+    { key: 'lastName', label: t('playground.modals.fields.lastName'), value: 'Muestra', enabledKey: 'fullName', isPhoto: false },
+    { key: 'dateOfBirth', label: t('playground.modals.fields.dateOfBirth'), value: '01/01/1980', enabledKey: 'dateOfBirth', isPhoto: false },
+    { key: 'cardNumber', label: t('playground.modals.fields.cardNumber'), value: 'H7654321', enabledKey: 'cardNumber', isPhoto: false },
+    { key: 'issuingAuthority', label: t('playground.modals.fields.issuingAuthority'), value: 'Insurance Fund', enabledKey: 'issuingAuthority', isPhoto: false },
+    { key: 'issuedOn', label: t('playground.modals.fields.issuedOn'), value: '15/12/2025', enabledKey: 'issuedOn', isPhoto: false },
+    { key: 'expiryDate', label: t('playground.modals.fields.expiryDate'), value: '15/12/2035', enabledKey: 'expiryDate', isPhoto: false },
+    { key: 'coverageType', label: t('playground.modals.fields.coverageType'), value: 'Full', enabledKey: 'coverageType', isPhoto: false },
     { key: 'status', label: 'Status', value: 'Active', enabledKey: 'status', isPhoto: false },
   ]
 
@@ -26,7 +29,7 @@ export default function HealthInsuranceVerifiedModal({ isOpen, onClose, enabledF
     <VerifiedModalBase
       isOpen={isOpen}
       onClose={onClose}
-      title="Health Insurance Card"
+      title={t('playground.documents.healthInsurance')}
       allVerificationData={allVerificationData}
       enabledFields={enabledFields}
     />

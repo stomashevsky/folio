@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import VerifyConfirmationModal from './VerifyConfirmationModal'
 import LibraryCardVerifiedModal from './LibraryCardVerifiedModal'
 import ModalShell from './modals/ModalShell'
@@ -11,6 +12,7 @@ interface VerifyLibraryCardModalProps {
 }
 
 export default function VerifyLibraryCardModal({ isOpen, onClose }: VerifyLibraryCardModalProps) {
+  const { t } = useTranslation('government')
   const [isConfirmationOpen, setIsConfirmationOpen] = useState(false)
   const [isVerifiedModalOpen, setIsVerifiedModalOpen] = useState(false)
   const [switches, setSwitches] = useState({
@@ -55,25 +57,25 @@ export default function VerifyLibraryCardModal({ isOpen, onClose }: VerifyLibrar
         <ModalShell
           isOpen={isOpen}
           onClose={onClose}
-          title="Library Card"
-          description="Configure the verification request."
+          title={t('playground.modals.verify.libraryCard.title')}
+          description={t('playground.modals.verify.libraryCard.description')}
           size="small"
           disableFocusTrap={isConfirmationOpen || isVerifiedModalOpen}
           footer={{
-            secondary: { label: 'Cancel', onClick: onClose },
-            primary: { label: 'Continue', onClick: handleContinue, disabled: !hasAtLeastOneEnabled },
+            secondary: { label: t('playground.modals.common.cancel'), onClick: onClose },
+            primary: { label: t('playground.modals.common.continue'), onClick: handleContinue, disabled: !hasAtLeastOneEnabled },
           }}
         >
           <div className="flex flex-col gap-10 items-start w-full">
             <div className="flex flex-col gap-4 items-start w-full">
               <div className="flex flex-col gap-2 items-start w-full">
                 <label htmlFor="requester-name-library-card" className="font-medium leading-5 text-sm text-[#0a0a0a]">
-                  Requester Name
+                  {t('playground.modals.fields.requesterName')}
                 </label>
                 <TextInput
                   id="requester-name-library-card"
                   defaultValue="Library"
-                  placeholder="Requester Name"
+                  placeholder={t('playground.modals.fields.requesterName')}
                   className="bg-white border border-[#e5e5e5] border-solid box-border flex gap-1 h-9 items-center px-3 py-1 rounded-md w-full text-sm leading-5 text-[#0a0a0a] outline-none focus:border-[#0a0a0a]"
                 />
               </div>
@@ -81,37 +83,37 @@ export default function VerifyLibraryCardModal({ isOpen, onClose }: VerifyLibrar
 
             <div className="flex flex-col gap-4 items-start w-full">
               <Switch
-                label="Full Name"
+                label={t('playground.modals.fields.fullName')}
                 checked={switches.fullName}
                 onChange={(checked) => handleSwitchChange('fullName', checked)}
               />
               <Switch
-                label="Date of Birth"
+                label={t('playground.modals.fields.dateOfBirth')}
                 checked={switches.dateOfBirth}
                 onChange={(checked) => handleSwitchChange('dateOfBirth', checked)}
               />
               <Switch
-                label="Card Number"
+                label={t('playground.modals.fields.cardNumber')}
                 checked={switches.cardNumber}
                 onChange={(checked) => handleSwitchChange('cardNumber', checked)}
               />
               <Switch
-                label="Issuing Authority"
+                label={t('playground.modals.fields.issuingAuthority')}
                 checked={switches.issuingAuthority}
                 onChange={(checked) => handleSwitchChange('issuingAuthority', checked)}
               />
               <Switch
-                label="Issued On"
+                label={t('playground.modals.fields.issuedOn')}
                 checked={switches.issuedOn}
                 onChange={(checked) => handleSwitchChange('issuedOn', checked)}
               />
               <Switch
-                label="Expiry Date"
+                label={t('playground.modals.fields.expiryDate')}
                 checked={switches.expiryDate}
                 onChange={(checked) => handleSwitchChange('expiryDate', checked)}
               />
               <Switch
-                label="Membership Type"
+                label={t('playground.modals.fields.membershipType')}
                 checked={switches.membershipType}
                 onChange={(checked) => handleSwitchChange('membershipType', checked)}
               />

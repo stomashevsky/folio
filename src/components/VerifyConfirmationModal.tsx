@@ -1,8 +1,9 @@
 import { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import ModalShell from './modals/ModalShell'
 import QRCodeDisplay from './modals/QRCodeDisplay'
-import { DocumentType } from '../constants/documents'
+import { DocumentType, DOCUMENT_TYPES } from '../constants/documents'
 import qrCodeImage from '../assets/images/qr-code-verify.png'
 
 interface VerifyConfirmationModalProps {
@@ -12,7 +13,23 @@ interface VerifyConfirmationModalProps {
   documentType: DocumentType
 }
 
+// Map document types to translation keys
+const DOCUMENT_KEY_MAP: Record<DocumentType, string> = {
+  [DOCUMENT_TYPES.DIGITAL_IDENTITY]: 'digitalIdentity',
+  [DOCUMENT_TYPES.STUDENT_ID]: 'studentId',
+  [DOCUMENT_TYPES.DRIVERS_LICENSE]: 'driversLicense',
+  [DOCUMENT_TYPES.AGE_18]: 'age18',
+  [DOCUMENT_TYPES.HEALTH_INSURANCE]: 'healthInsurance',
+  [DOCUMENT_TYPES.PROOF_OF_ADDRESS]: 'proofOfAddress',
+  [DOCUMENT_TYPES.MEMBERSHIP_CARD]: 'membershipCard',
+  [DOCUMENT_TYPES.LIBRARY_CARD]: 'libraryCard',
+}
+
 export default function VerifyConfirmationModal({ isOpen, onClose, onAutoClose, documentType }: VerifyConfirmationModalProps) {
+  const { t } = useTranslation('government')
+  const documentKey = DOCUMENT_KEY_MAP[documentType]
+  const translatedDocumentType = t(`playground.documents.${documentKey}`)
+
   useEffect(() => {
     if (isOpen && onAutoClose) {
       // Auto-close after 3 seconds
@@ -30,13 +47,13 @@ export default function VerifyConfirmationModal({ isOpen, onClose, onAutoClose, 
     <ModalShell
       isOpen={isOpen}
       onClose={onClose}
-      title={`Verify ${documentType}`}
-      description="Scan the QR code below to verify this document."
+      title={t('playground.modals.confirmation.verify.title', { documentType: translatedDocumentType })}
+      description={t('playground.modals.confirmation.verify.description')}
       size="small"
       isNested={true}
       disableEscapeClose={false}
       footer={{
-        secondary: { label: 'Cancel', onClick: onClose },
+        secondary: { label: t('playground.modals.common.cancel'), onClick: onClose },
       }}
     >
       <QRCodeDisplay src={qrCodeImage} />

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import ConfirmationModal from './ConfirmationModal'
 import ModalShell from './modals/ModalShell'
@@ -13,6 +14,7 @@ interface DigitalIdentityModalProps {
 }
 
 export default function DigitalIdentityModal({ isOpen, onClose }: DigitalIdentityModalProps) {
+  const { t } = useTranslation('government')
   const [isConfirmationOpen, setIsConfirmationOpen] = useState(false)
   const handleCardNumberBlur = useInputDefaultValue('ID7654321')
 
@@ -34,56 +36,56 @@ export default function DigitalIdentityModal({ isOpen, onClose }: DigitalIdentit
       <ModalShell
         isOpen={isOpen}
         onClose={onClose}
-        title="Digital Identity"
-        description="Review and edit the details before issuing the document."
+        title={t('playground.modals.issue.digitalIdentity.title')}
+        description={t('playground.modals.issue.digitalIdentity.description')}
         size="large"
         disableFocusTrap={isConfirmationOpen}
         footer={{
-          secondary: { label: 'Cancel', onClick: onClose },
-          primary: { label: 'Continue', onClick: handleContinue },
+          secondary: { label: t('playground.modals.common.cancel'), onClick: onClose },
+          primary: { label: t('playground.modals.common.continue'), onClick: handleContinue },
         }}
       >
         <div className={MODAL_TWO_COLUMN_LAYOUT}>
           {/* Left Column */}
           <div className="flex flex-1 flex-col gap-4 items-start w-full">
-            <FormField label="First Name">
+            <FormField label={t('playground.modals.fields.firstName')}>
               <TextInput
                 defaultValue="Carmen"
-                placeholder="First Name"
+                placeholder={t('playground.modals.fields.firstName')}
                 className={INPUT_BASE_CLASSES}
               />
             </FormField>
-            <FormField label="Last Name">
+            <FormField label={t('playground.modals.fields.lastName')}>
               <TextInput
                 defaultValue="Muestra"
-                placeholder="Last Name"
+                placeholder={t('playground.modals.fields.lastName')}
                 className={INPUT_BASE_CLASSES}
               />
             </FormField>
-            <FormField label="Date of Birth">
+            <FormField label={t('playground.modals.fields.dateOfBirth')}>
               <DateInput
                 defaultValue="01/01/1980"
                 className={INPUT_BASE_CLASSES}
               />
             </FormField>
-            <FormField label="Place of Birth">
+            <FormField label={t('playground.modals.fields.placeOfBirth')}>
               <TextInput
                 defaultValue="City, Country"
-                placeholder="Place of Birth"
+                placeholder={t('playground.modals.fields.placeOfBirth')}
                 className={INPUT_BASE_CLASSES}
               />
             </FormField>
-            <FormField label="Nationality">
+            <FormField label={t('playground.modals.fields.nationality')}>
               <TextInput
                 defaultValue="Not specified"
-                placeholder="Nationality"
+                placeholder={t('playground.modals.fields.nationality')}
                 className={INPUT_BASE_CLASSES}
               />
             </FormField>
-            <FormField label="Residential Address">
+            <FormField label={t('playground.modals.fields.residentialAddress')}>
               <TextInput
                 defaultValue="123 Main Street, City, Country"
-                placeholder="Residential Address"
+                placeholder={t('playground.modals.fields.residentialAddress')}
                 className={INPUT_BASE_CLASSES}
               />
             </FormField>
@@ -91,10 +93,10 @@ export default function DigitalIdentityModal({ isOpen, onClose }: DigitalIdentit
 
           {/* Right Column */}
           <div className="flex flex-1 flex-col gap-4 items-start w-full">
-            <FormField label="Card Number">
+            <FormField label={t('playground.modals.fields.cardNumber')}>
               <TextInput
                 defaultValue="ID7654321"
-                placeholder="Card Number"
+                placeholder={t('playground.modals.fields.cardNumber')}
                 autoComplete="one-time-code"
                 name="document-number"
                 inputMode="text"
@@ -104,34 +106,34 @@ export default function DigitalIdentityModal({ isOpen, onClose }: DigitalIdentit
                 onBlur={handleCardNumberBlur}
               />
             </FormField>
-            <FormField label="Issuing Authority">
+            <FormField label={t('playground.modals.fields.issuingAuthority')}>
               <TextInput
                 defaultValue="ID Authority"
-                placeholder="Issuing Authority"
+                placeholder={t('playground.modals.fields.issuingAuthority')}
                 className={INPUT_BASE_CLASSES}
               />
             </FormField>
-            <FormField label="Issuing Country">
+            <FormField label={t('playground.modals.fields.issuingCountry')}>
               <TextInput
                 defaultValue="Country"
-                placeholder="Issuing Country"
+                placeholder={t('playground.modals.fields.issuingCountry')}
                 className={INPUT_BASE_CLASSES}
               />
             </FormField>
-            <FormField label="Document Type">
+            <FormField label={t('playground.modals.fields.documentType')}>
               <TextInput
                 defaultValue="ID card"
-                placeholder="Document Type"
+                placeholder={t('playground.modals.fields.documentType')}
                 className={INPUT_BASE_CLASSES}
               />
             </FormField>
-            <FormField label="Issued On">
+            <FormField label={t('playground.modals.fields.issuedOn')}>
               <DateInput
                 defaultValue="15/12/2025"
                 className={INPUT_BASE_CLASSES}
               />
             </FormField>
-            <FormField label="Expiry Date">
+            <FormField label={t('playground.modals.fields.expiryDate')}>
               <DateInput
                 defaultValue="15/12/2035"
                 className={INPUT_BASE_CLASSES}

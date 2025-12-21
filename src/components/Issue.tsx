@@ -2,7 +2,7 @@ import { useState, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import Card from './Card'
-import { issueCardConfigs as cardData, verifyCardConfigs as verifyCardData } from '../configs/cards'
+import { issueCardConfigs, verifyCardConfigs } from '../configs/cards'
 import FlowTabs from './Issue/FlowTabs'
 import { getModalComponent, type DocumentType } from '../configs/modals'
 import type { FlowMode as ModalMode } from '../constants/flows'
@@ -17,19 +17,20 @@ export default function Issue() {
   const documentTypes: DocumentType[] = DOCUMENT_TYPE_VALUES
   const { openModal, closeModal, isOpen } = useModalState<DocumentType>()
   
-  const currentCardData = useMemo(
-    () => (activeTab === FLOW_MODES.ISSUE ? cardData : verifyCardData),
+  const currentCardConfigs = useMemo(
+    () => (activeTab === FLOW_MODES.ISSUE ? issueCardConfigs : verifyCardConfigs),
     [activeTab]
   )
 
+  const flowKey = activeTab === FLOW_MODES.ISSUE ? 'issue' : 'verify'
+
   const cardClickHandlers = useMemo(() => {
     const handlers: Partial<Record<DocumentType, () => void>> = {}
-    currentCardData.forEach((card) => {
-      const documentType = card.title as DocumentType
-      handlers[documentType] = () => openModal(documentType)
+    currentCardConfigs.forEach((card) => {
+      handlers[card.documentType] = () => openModal(card.documentType)
     })
     return handlers
-  }, [currentCardData, openModal])
+  }, [currentCardConfigs, openModal])
 
   const openModalsList = useMemo(() => {
     return documentTypes
@@ -53,11 +54,15 @@ export default function Issue() {
 
           {/* Cards Grid */}
           <div className="flex flex-wrap gap-6 items-start justify-center w-full">
-            {currentCardData.map((card) => (
+            {currentCardConfigs.map((card) => (
               <Card
-                key={card.title}
-                {...card}
-                onClick={cardClickHandlers[card.title as DocumentType]}
+                key={card.documentType}
+                icon={card.icon}
+                badge={card.badgeKey ? t(`playground.badges.${card.badgeKey}`) : undefined}
+                badgeVariant={card.badgeVariant}
+                title={t(`playground.documents.${card.documentKey}`)}
+                description={t(`playground.cards.${flowKey}.${card.documentKey}`)}
+                onClick={cardClickHandlers[card.documentType]}
               />
             ))}
             {/* Invisible placeholder cards to align last row to the left */}

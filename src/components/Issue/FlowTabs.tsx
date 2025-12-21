@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { FLOW_MODES } from '../../constants'
 import type { FlowMode } from '../../constants/flows'
 import { FOCUS_STYLES } from '../ui/focusStyles'
@@ -8,6 +9,8 @@ interface FlowTabsProps {
 }
 
 export default function FlowTabs({ activeTab, onTabChange }: FlowTabsProps) {
+  const { t } = useTranslation('government')
+  
   return (
     <div className="bg-[#e5e5e5] flex items-center w-full max-w-[400px] overflow-hidden p-[3px] rounded-full gap-[4px]">
       <button
@@ -23,7 +26,7 @@ export default function FlowTabs({ activeTab, onTabChange }: FlowTabsProps) {
             activeTab !== FLOW_MODES.ISSUE ? 'opacity-75' : ''
           }`}
         >
-          {FLOW_MODES.ISSUE}
+          {t('playground.tabs.issue')}
         </p>
       </button>
       <button
@@ -39,7 +42,7 @@ export default function FlowTabs({ activeTab, onTabChange }: FlowTabsProps) {
             activeTab !== FLOW_MODES.VERIFY ? 'opacity-75' : ''
           }`}
         >
-          {FLOW_MODES.VERIFY}
+          {t('playground.tabs.verify')}
         </p>
       </button>
     </div>
