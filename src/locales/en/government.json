@@ -81,7 +81,7 @@
     },
     "howItWorks": {
       "title": "How EUDI flows work",
-      "description": "Identity Lab lets you issue demo documents, run verification flows and understand the European Digital Identity (EUDI) standards behind them.",
+      "description": "Playground lets you issue demo documents, run verification flows and understand the European Digital Identity (EUDI) standards behind them.",
       "issuance": {
         "title": "Issuance",
         "description": "You review sample data in a modal and confirm the document. A QR code is shown. Scanning it with Folio Wallet adds the document to the wallet."
@@ -96,7 +96,7 @@
       }
     },
     "issuanceTypes": {
-      "title": "How documents are issued in Identity Lab",
+      "title": "How documents are issued in Playground",
       "description": "Each document follows a specific issuance type. Color labels on the cards show which flow is used.",
       "authorization": {
         "title": "Authorization",
