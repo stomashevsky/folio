@@ -43,12 +43,12 @@ export default function GovernmentPage() {
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
-              <HeroTagline icon={landmarkIcon}>Government</HeroTagline>
+              <HeroTagline icon={landmarkIcon}>{t('government.hero.tagline')}</HeroTagline>
               <h1 className="font-bold leading-[48px] text-[48px] text-[#0a0a0a] tracking-[0px]">
-                Digital identity aligned with global standards
+                {t('government.hero.title')}
               </h1>
               <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                Tools for governments to design, test and deploy modern digital credentials, with a secure sandbox that mirrors real European digital ID flows and lets you explore demo documents, verify QR codes and see exactly what information is shared.
+                {t('government.hero.description')}
               </p>
             </div>
             <div className="flex flex-wrap gap-3 items-start relative">
@@ -61,7 +61,7 @@ export default function GovernmentPage() {
                 }}
                 variant="primary"
               >
-                Explore Playground
+                {t('government.cta.playgroundButton')}
               </Button>
               <Button
                 onClick={() => {
@@ -69,13 +69,13 @@ export default function GovernmentPage() {
                 }}
                 variant="outline"
               >
-                Get in touch
+                {t('government.cta.button')}
               </Button>
             </div>
           </div>
           <ImageWithPlaceholder
             src={governmentSolutionsHero}
-            alt="Digital identity credentials preview"
+            alt={t('government.hero.tagline')}
             className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
             containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
             fetchPriority="high"
@@ -87,12 +87,12 @@ export default function GovernmentPage() {
         <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
             <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-              <HeroTagline icon={landmarkIcon}>Government</HeroTagline>
+              <HeroTagline icon={landmarkIcon}>{t('government.hero.tagline')}</HeroTagline>
               <h1 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
-                Digital identity aligned with global standards
+                {t('government.hero.title')}
               </h1>
               <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                Tools for governments to design, test and deploy modern digital credentials, with a secure sandbox that mirrors real European digital ID flows and lets you explore demo documents, verify QR codes and see exactly what information is shared.
+                {t('government.hero.description')}
               </p>
             </div>
             <div className="flex flex-col gap-3 items-start relative shrink-0">
@@ -106,7 +106,7 @@ export default function GovernmentPage() {
                 variant="primary"
                 fullWidth
               >
-                Explore Playground
+                {t('government.cta.playgroundButton')}
               </Button>
               <Button
                 onClick={() => {
@@ -115,13 +115,13 @@ export default function GovernmentPage() {
                 variant="outline"
                 fullWidth
               >
-                Get in touch
+                {t('government.cta.button')}
               </Button>
             </div>
           </div>
           <ImageWithPlaceholder
             src={governmentSolutionsHero}
-            alt="Digital identity credentials preview"
+            alt={t('government.hero.tagline')}
             className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
             containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
             fetchPriority="high"
@@ -134,8 +134,8 @@ export default function GovernmentPage() {
       <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
         <div className="flex flex-col gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <SectionHeader
-            title="Modern infrastructure for national digital identity"
-            description="Support secure authentication and mobile credentials for public services."
+            title={t('government.overview.title')}
+            description={t('government.overview.description')}
             align="center"
             maxWidth="576px"
           />
@@ -147,28 +147,28 @@ export default function GovernmentPage() {
         <div className="flex flex-col gap-12 md:gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-col gap-10 md:gap-12 items-center relative shrink-0 w-full">
             <SectionHeader
-              title="Built on trusted digital identity foundations"
-              description="Provide citizens with secure, modern and interoperable digital credentials that follow global standards and work across identity systems. Designed for national-scale programs with a focus on security, privacy and real-world usability."
+              title={t('government.features.title')}
+              description={t('government.features.description')}
               align="center"
               maxWidth="576px"
             />
             <div className="flex flex-col md:flex-row gap-11 md:gap-6 items-start relative shrink-0 w-full">
               <FeatureBlock
                 icon="shield-check"
-                title="Standards & compliance"
-                description="Aligned with EUDI Wallet, ISO mobile driving licence and Verifiable Credentials specifications to ensure compatibility, interoperability and long-term reliability across public services."
+                title={t('government.features.standards.title')}
+                description={t('government.features.standards.description')}
                 align="left"
               />
               <FeatureBlock
                 icon="qr-code"
-                title="Issuing & verification"
-                description="Support secure issuance of IDs, permits and certificates with cryptographic validation, QR and barcode scanning, and offline-ready verification for real-world environments."
+                title={t('government.features.issuance.title')}
+                description={t('government.features.issuance.description')}
                 align="left"
               />
               <FeatureBlock
                 icon="lock-keyhole"
-                title="Presentation"
-                description="Enable privacy-focused identity sharing with minimal disclosure, clear user consent and secure channels that ensure citizens control their data at every step."
+                title={t('government.features.presentation.title')}
+                description={t('government.features.presentation.description')}
                 align="left"
               />
             </div>

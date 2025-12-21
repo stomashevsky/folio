@@ -5,9 +5,64 @@
       "description": "Digital identity tools for government agencies. Design, test, and deploy modern digital credentials according to global standards."
     },
     "hero": {
-      "tagline": "For government",
-      "title": "Digital identity for government",
-      "description": "Digital identity tools for government agencies. Design, test, and deploy modern digital credentials according to global standards."
+      "tagline": "Government",
+      "title": "Digital identity aligned with global standards",
+      "description": "Tools for governments to design, test and deploy modern digital credentials, with a secure sandbox that mirrors real European digital ID flows and lets you explore demo documents, verify QR codes and see exactly what information is shared."
+    },
+    "overview": {
+      "title": "Modern infrastructure for national digital identity",
+      "description": "Support secure authentication and mobile credentials for public services."
+    },
+    "features": {
+      "title": "Built on trusted digital identity foundations",
+      "description": "Provide citizens with secure, modern and interoperable digital credentials that follow global standards and work across identity systems. Designed for national-scale programs with a focus on security, privacy and real-world usability.",
+      "standards": {
+        "title": "Standards & compliance",
+        "description": "Aligned with EUDI Wallet, ISO mobile driving licence and Verifiable Credentials specifications to ensure compatibility, interoperability and long-term reliability across public services."
+      },
+      "issuance": {
+        "title": "Issuing & verification",
+        "description": "Support secure issuance of IDs, permits and certificates with cryptographic validation, QR and barcode scanning, and offline-ready verification for real-world environments."
+      },
+      "presentation": {
+        "title": "Presentation",
+        "description": "Enable privacy-focused identity sharing with minimal disclosure, clear user consent and secure channels that ensure citizens control their data at every step."
+      }
+    },
+    "caseStudy": {
+      "title": "Real results at national scale",
+      "description": "How Albania enabled secure remote voter registration for its diaspora with Folio's digital identity wallet.",
+      "challenge": {
+        "title": "Challenge",
+        "description": "Albania needed a secure way for more than 1.6M citizens living abroad to register to vote remotely, while meeting strict security and transparency requirements."
+      },
+      "solution": {
+        "title": "Solution",
+        "description": "The Central Election Commission launched a remote registration platform powered by Folio: mobile and web channels with secure identity verification and a digital voter card that shows application status."
+      },
+      "results": {
+        "title": "Results",
+        "participation": {
+          "value": "525%",
+          "description": "increase in diaspora participation vs previous election"
+        },
+        "profiles": {
+          "value": "365,000+",
+          "description": "profiles created across mobile and web channels"
+        }
+      },
+      "testimonial": {
+        "quote": "\"Working with Folio has been a transformative experience… they set a new standard of excellence for how digital identity solutions should be delivered.\"",
+        "author": "Ilirjan Celibashi",
+        "position": "State Election Commissioner, Albania"
+      },
+      "readCaseStudy": "Read case study"
+    },
+    "cta": {
+      "title": "Supporting national-scale programs",
+      "description": "Work with us on pilots, integrations and modernization efforts.",
+      "button": "Get in touch",
+      "playgroundButton": "Explore Playground"
     }
   },
   "playground": {
@@ -22,4 +77,3 @@
     }
   }
 }
-
