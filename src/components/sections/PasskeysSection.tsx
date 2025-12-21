@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { SectionHeader, ToolCard } from '../ui'
 import shieldHalfIcon from '../../assets/icons/ShieldHalf.svg'
 import fingerprintIcon from '../../assets/icons/Fingerprint.svg'
@@ -9,6 +10,8 @@ const BACKGROUND_STYLE = {
 }
 
 export default function PasskeysSection() {
+  const { t } = useTranslation('wallet')
+
   return (
     <section
       id="passkeys"
@@ -18,24 +21,24 @@ export default function PasskeysSection() {
       <div className="flex flex-col gap-12 md:gap-16 items-center justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
         <div className="flex flex-col gap-10 md:gap-12 items-center relative shrink-0 w-full">
           <SectionHeader
-            title="Secure access with Passkeys"
-            description="Passkeys keep your documents encrypted and accessible only to you. Your data stays on your device, protected by your biometric credentials, and even Folio cannot unlock your files."
+            title={t('passkeys.title')}
+            description={t('passkeys.description')}
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
             <ToolCard
               icon={shieldHalfIcon}
-              title="Private by design"
-              description="Every document is encrypted on your device and can be opened only with your Face ID, Touch ID or device passcode. We do not store passwords and cannot access your information."
+              title={t('passkeys.privateByDesign.title')}
+              description={t('passkeys.privateByDesign.description')}
             />
             <ToolCard
               icon={fingerprintIcon}
-              title="Simple to use"
-              description="Sign in instantly with your device biometrics. No passwords to create, remember or reset. Your access is always fast and effortless."
+              title={t('passkeys.simpleToUse.title')}
+              description={t('passkeys.simpleToUse.description')}
             />
             <ToolCard
               icon={globeIcon}
-              title="Works everywhere"
-              description="Use your passkey across iPhone, Android and modern browsers. Your secure access follows you on any device."
+              title={t('passkeys.worksEverywhere.title')}
+              description={t('passkeys.worksEverywhere.description')}
             />
           </div>
         </div>
@@ -43,4 +46,3 @@ export default function PasskeysSection() {
     </section>
   )
 }
-

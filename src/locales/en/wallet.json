@@ -168,6 +168,26 @@
         "a": "If you have a Folio account, your encrypted documents are backed up and can be restored on a new device. Just sign in and everything will be there."
       }
     ]
+  },
+  "passkeys": {
+    "title": "Secure access with Passkeys",
+    "description": "Passkeys keep your documents encrypted and accessible only to you. Your data stays on your device, protected by your biometric credentials, and even Folio cannot unlock your files.",
+    "privateByDesign": {
+      "title": "Private by design",
+      "description": "Every document is encrypted on your device and can be opened only with your Face ID, Touch ID or device passcode. We do not store passwords and cannot access your information."
+    },
+    "simpleToUse": {
+      "title": "Simple to use",
+      "description": "Sign in instantly with your device biometrics. No passwords to create, remember or reset. Your access is always fast and effortless."
+    },
+    "worksEverywhere": {
+      "title": "Works everywhere",
+      "description": "Use your passkey across iPhone, Android and modern browsers. Your secure access follows you on any device."
+    }
+  },
+  "reviews": {
+    "title": "What our users say",
+    "description": "Real reviews from people who use Folio to organize their documents and travel."
   }
 }
 

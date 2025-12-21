@@ -79,6 +79,22 @@
       "title": "Playground",
       "description": "A safe sandbox for issuing demo documents and testing EUDI compatible verification flows. Try real issuance steps, scan QR codes, explore data sharing and see how digital identity behaves in practice."
     },
+    "howItWorks": {
+      "title": "How EUDI flows work",
+      "description": "Identity Lab lets you issue demo documents, run verification flows and understand the European Digital Identity (EUDI) standards behind them.",
+      "issuance": {
+        "title": "Issuance",
+        "description": "You review sample data in a modal and confirm the document. A QR code is shown. Scanning it with Folio Wallet adds the document to the wallet."
+      },
+      "presentation": {
+        "title": "Presentation",
+        "description": "A verifier configures a request in a modal, choosing exactly which attributes are needed. A QR code is generated for the user to scan and consent to sharing."
+      },
+      "lifecycle": {
+        "title": "Lifecycle",
+        "description": "You can repeat issuance and verification with different settings to see how updates, selective disclosure and reuse of the same document work in practice."
+      }
+    },
     "issuanceTypes": {
       "title": "How documents are issued in Identity Lab",
       "description": "Each document follows a specific issuance type. Color labels on the cards show which flow is used.",

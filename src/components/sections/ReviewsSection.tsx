@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { SectionHeader } from '../ui'
 
 interface Review {
@@ -71,12 +72,14 @@ function ReviewCard({ review }: { review: Review }) {
 }
 
 export default function ReviewsSection() {
+  const { t } = useTranslation('wallet')
+
   return (
     <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
       <div className="flex flex-col gap-10 md:gap-12 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
         <SectionHeader
-          title="What our users say"
-          description="Real reviews from people who use Folio to organize their documents and travel."
+          title={t('reviews.title')}
+          description={t('reviews.description')}
           maxWidth="576px"
         />
         
