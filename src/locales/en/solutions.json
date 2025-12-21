@@ -172,13 +172,13 @@
       "title": "Streamlined KYC for regulated businesses",
       "description": "Client verification that's fast, compliant, and audit-ready. Onboard clients remotely in minutes while meeting AML, KYC, and CDD requirements globally. Stop chasing documents and stay audit-ready around the clock."
     },
-    "features": {
+    "verification": {
       "title": "Client verification made simple",
       "remote": {
         "title": "Remote verification",
         "description": "Verify clients anywhere in the world without meeting in person. They complete checks from any modern device."
       },
-      "compliance": {
+      "reports": {
         "title": "Instant compliance reports",
         "description": "Receive timestamped PDF reports with ID verification, address confirmation, and complete activity logs."
       },
@@ -213,11 +213,11 @@
         "title": "AML and KYC compliance",
         "description": "Meet regulatory requirements including UK MLR, EU AMLD, FINTRAC, IRS KYC, and other global frameworks."
       },
-      "address": {
+      "addressVerification": {
         "title": "Address verification",
         "description": "Confirm client addresses with utility bills, bank statements, and other proof of address documents."
       },
-      "storage": {
+      "secureStorage": {
         "title": "Secure document storage",
         "description": "All client data is encrypted at rest and in transit with secure, permission-based access."
       },
@@ -229,11 +229,11 @@
         "title": "Audit-ready reports",
         "description": "Generate timestamped PDF compliance reports with full activity logs for regulatory review."
       },
-      "facial": {
+      "facialVerification": {
         "title": "Facial verification",
         "description": "AI-powered face match compares live selfies with ID photos to confirm identity."
       },
-      "liveness": {
+      "livenessCheck": {
         "title": "Liveness detection",
         "description": "Prevent fraud with advanced liveness checks that ensure the person is physically present."
       }
@@ -248,11 +248,11 @@
         "title": "Lawyers and solicitors",
         "description": "Verify client identity for legal matters, property transactions, and corporate services with full compliance records."
       },
-      "estate": {
+      "estateAgents": {
         "title": "Estate agents",
         "description": "Meet anti-money laundering obligations for property sales and lettings with fast remote verification."
       },
-      "financial": {
+      "financialAdvisors": {
         "title": "Financial advisors",
         "description": "Onboard investment and insurance clients securely while maintaining regulatory compliance."
       },
@@ -260,7 +260,7 @@
         "title": "Conveyancers",
         "description": "Verify buyers and sellers in property transactions with secure document collection and storage."
       },
-      "professional": {
+      "professionalServices": {
         "title": "Professional services",
         "description": "Any regulated business that needs to verify client identity can benefit from streamlined digital onboarding."
       }

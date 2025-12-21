@@ -523,43 +523,67 @@ async function waitForServer(url, maxAttempts = 60, intervalMs = 1000) {
 
 /**
  * Start the Vite preview server
+ * Returns an object with the server process and the actual URL it's running on
  */
 function startPreviewServer() {
   return new Promise((resolve, reject) => {
     // Use direct path to vite to avoid npx overhead in CI
     const vitePath = path.join(repoRoot, 'node_modules', '.bin', 'vite')
     
+    // Use --strictPort to fail if port is in use, or we need to detect the actual port
     const server = spawn(vitePath, ['preview', '--port', PREVIEW_PORT.toString()], {
       cwd: repoRoot,
       stdio: ['ignore', 'pipe', 'pipe'],
     })
     
-    // Log output for debugging
-    server.stdout.on('data', (data) => {
-      console.log('[preview]', data.toString().trim())
-    })
+    let actualPort = PREVIEW_PORT
+    let resolved = false
     
+    // Parse output to detect actual port if Vite switches ports
+    const parsePort = (data) => {
+      const output = data.toString()
+      // Match "Local:   http://localhost:XXXX/" pattern
+      const portMatch = output.match(/Local:\s+http:\/\/localhost:(\d+)/)
+      if (portMatch) {
+        actualPort = parseInt(portMatch[1], 10)
+        console.log(`[prerender] Detected Vite preview on port ${actualPort}`)
+      }
+      console.log('[preview]', output.trim())
+    }
+    
+    server.stdout.on('data', parsePort)
     server.stderr.on('data', (data) => {
       console.error('[preview]', data.toString().trim())
     })
     
     server.on('error', reject)
     
-    // Wait for server to be ready using HTTP check instead of output parsing
-    waitForServer(PREVIEW_URL, 60, 1000)
-      .then((ready) => {
-        if (ready) {
-          console.log('[prerender] Preview server is responding')
-          resolve(server)
-        } else {
-          server.kill()
-          reject(new Error('Preview server failed to start within 60 seconds'))
-        }
-      })
-      .catch((error) => {
+    // Wait a bit for Vite to output its port, then start checking
+    const startChecking = async () => {
+      // Give Vite some time to output its port
+      await new Promise(r => setTimeout(r, 2000))
+      
+      const actualUrl = `http://localhost:${actualPort}`
+      const ready = await waitForServer(actualUrl, 60, 1000)
+      
+      if (ready && !resolved) {
+        resolved = true
+        console.log('[prerender] Preview server is responding')
+        resolve({ server, url: actualUrl })
+      } else if (!resolved) {
+        resolved = true
+        server.kill()
+        reject(new Error('Preview server failed to start within 60 seconds'))
+      }
+    }
+    
+    startChecking().catch((error) => {
+      if (!resolved) {
+        resolved = true
         server.kill()
         reject(error)
-      })
+      }
+    })
   })
 }
 
