@@ -182,56 +182,56 @@ export default function GovernmentPage() {
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <ImageWithPlaceholder
             src={governmentAlbaniaCaseStudy}
-            alt="Albania case study map"
+            alt={t('government.caseStudy.imageAlt')}
             className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
             containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/426.67]"
             loading="lazy"
           />
           <div className="flex flex-1 flex-col gap-12 items-start relative min-w-0">
             <SectionHeader
-              title="Real results at national scale"
-              description="How Albania enabled secure remote voter registration for its diaspora with Folio's digital identity wallet."
+              title={t('government.caseStudy.title')}
+              description={t('government.caseStudy.description')}
               align="left"
             />
             <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
               {/* Challenge */}
               <div className="flex flex-col gap-1 items-start leading-6 relative shrink-0 text-base w-full">
                 <p className="font-semibold relative shrink-0 text-[#0a0a0a] w-full">
-                  Challenge
+                  {t('government.caseStudy.challenge.title')}
                 </p>
                 <p className="font-normal relative shrink-0 text-[#737373] w-full">
-                  Albania needed a secure way for more than 1.6M citizens living abroad to register to vote remotely, while meeting strict security and transparency requirements.
+                  {t('government.caseStudy.challenge.description')}
                 </p>
               </div>
               {/* Solution */}
               <div className="flex flex-col gap-1 items-start leading-6 relative shrink-0 text-base w-full">
                 <p className="font-semibold relative shrink-0 text-[#0a0a0a] w-full">
-                  Solution
+                  {t('government.caseStudy.solution.title')}
                 </p>
                 <p className="font-normal relative shrink-0 text-[#737373] w-full">
-                  The Central Election Commission launched a remote registration platform powered by Folio: mobile and web channels with secure identity verification and a digital voter card that shows application status.
+                  {t('government.caseStudy.solution.description')}
                 </p>
               </div>
               {/* Results */}
               <div className="flex flex-col gap-2 items-start relative shrink-0 w-full">
                 <p className="font-semibold leading-6 relative shrink-0 text-[#0a0a0a] text-base w-full">
-                  Results
+                  {t('government.caseStudy.results.title')}
                 </p>
                 <div className="flex gap-8 items-start relative shrink-0 w-full">
                   <div className="flex flex-1 flex-col gap-2 items-start relative self-stretch shrink-0">
                     <p className="font-bold leading-[36px] relative shrink-0 text-[#0a0a0a] text-[30px] w-full">
-                      525%
+                      {t('government.caseStudy.results.stat1.value')}
                     </p>
                     <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full">
-                      increase in diaspora participation vs previous election
+                      {t('government.caseStudy.results.stat1.description')}
                     </p>
                   </div>
                   <div className="flex flex-1 flex-col gap-2 items-start relative self-stretch shrink-0">
                     <p className="font-bold leading-[36px] relative shrink-0 text-[#0a0a0a] text-[30px] w-full">
-                      365,000+
+                      {t('government.caseStudy.results.stat2.value')}
                     </p>
                     <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full">
-                      profiles created across mobile and web channels
+                      {t('government.caseStudy.results.stat2.description')}
                     </p>
                   </div>
                 </div>
@@ -240,22 +240,22 @@ export default function GovernmentPage() {
             {/* Testimonial */}
             <div className="border-l border-[#737373] border-r-0 border-t-0 border-b-0 box-border flex flex-col gap-3 items-start px-6 py-4 relative shrink-0 w-full">
               <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full">
-                "Working with Folio has been a transformative experience… they set a new standard of excellence for how digital identity solutions should be delivered."
+                {t('government.caseStudy.testimonial.quote')}
               </p>
               <div className="flex gap-4 items-start relative shrink-0 w-full">
                 <div className="box-border flex gap-2 items-center px-0 py-3 relative shrink-0">
                   <div className="relative rounded-full shrink-0 w-8 h-8">
                     <img
                       src={governmentTestimonialAvatar}
-                      alt="Ilirjan Celibashi"
+                      alt={t('government.caseStudy.testimonial.name')}
                       className="absolute inset-0 max-w-none object-center object-cover rounded-full w-full h-full"
                     />
                   </div>
                 </div>
                 <div className="box-border flex flex-1 gap-2 items-center min-h-[56px] min-w-0 px-0 py-1 relative shrink-0">
                   <p className="flex-1 font-medium leading-6 min-h-0 min-w-0 relative shrink-0 text-[#0a0a0a] text-base">
-                    <span className="leading-6">Ilirjan Celibashi</span>
-                    <span className="font-normal leading-6 text-[#737373]"> - State Election Commissioner, Albania</span>
+                    <span className="leading-6">{t('government.caseStudy.testimonial.name')}</span>
+                    <span className="font-normal leading-6 text-[#737373]"> - {t('government.caseStudy.testimonial.title')}</span>
                   </p>
                 </div>
               </div>
@@ -265,7 +265,7 @@ export default function GovernmentPage() {
               variant="secondary"
               onClick={() => navigate('/blog/albanian-diaspora-voter-registration')}
             >
-              Read case study
+              {t('government.caseStudy.button')}
             </Button>
           </div>
         </div>
