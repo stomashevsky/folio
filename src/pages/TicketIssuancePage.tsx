@@ -132,23 +132,23 @@ export default function DigitalTicketingPage() {
         <div className="hidden md:flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-col gap-12 items-start relative shrink-0 w-full">
             <SectionHeader
-              title="Built on a platform people trust"
-              description="Your tickets appear inside the same secure wallet people use daily for IDs, cards and travel documents. No extra apps, no onboarding friction."
+              title={t('ticketIssuance.trust.title')}
+              description={t('ticketIssuance.trust.description')}
               align="left"
               maxWidth="576px"
             />
             <div className="flex gap-8 items-start relative shrink-0 w-full">
               <StatItem
-                value="4.7★"
-                description="Users consistently rate Folio highly for its clarity, speed and reliability in daily use."
+                value={t('ticketIssuance.trust.rating.value')}
+                description={t('ticketIssuance.trust.rating.description')}
               />
               <StatItem
-                value="1M+"
-                description="Documents, cards and tickets already added by people who use Folio to stay organized."
+                value={t('ticketIssuance.trust.documents.value')}
+                description={t('ticketIssuance.trust.documents.description')}
               />
               <StatItem
-                value="120+"
-                description="Countries where Folio helps users keep their essential documents accessible anywhere."
+                value={t('ticketIssuance.trust.countries.value')}
+                description={t('ticketIssuance.trust.countries.description')}
               />
             </div>
           </div>
@@ -158,22 +158,22 @@ export default function DigitalTicketingPage() {
         <div className="flex md:hidden flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-col gap-10 items-start relative shrink-0 w-full">
             <SectionHeader
-              title="Built on a platform people trust"
-              description="Your tickets appear inside the same secure wallet people use daily for IDs, cards and travel documents. No extra apps, no onboarding friction."
+              title={t('ticketIssuance.trust.title')}
+              description={t('ticketIssuance.trust.description')}
               align="left"
             />
             <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
               <StatItem
-                value="4.7★"
-                description="Users consistently rate Folio highly for its clarity, speed and reliability in daily use."
+                value={t('ticketIssuance.trust.rating.value')}
+                description={t('ticketIssuance.trust.rating.description')}
               />
               <StatItem
-                value="1M+"
-                description="Documents, cards and tickets already added by people who use Folio to stay organized."
+                value={t('ticketIssuance.trust.documents.value')}
+                description={t('ticketIssuance.trust.documents.description')}
               />
               <StatItem
-                value="120+"
-                description="Countries where Folio helps users keep their essential documents accessible anywhere."
+                value={t('ticketIssuance.trust.countries.value')}
+                description={t('ticketIssuance.trust.countries.description')}
               />
             </div>
           </div>
@@ -186,22 +186,22 @@ export default function DigitalTicketingPage() {
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <ImageWithPlaceholder
             src={ticketIssuanceFeatures}
-            alt="Ticket issuance format"
+            alt={t('ticketIssuance.format.title')}
             className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
             containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
             loading="lazy"
           />
           <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
             <SectionHeader
-              title="Issue tickets in a Folio ready format"
-              description="Send us simple JSON or an email you already generate and Folio turns it into a clean digital ticket. No pkpass files, no wallet certificates, no SDKs to integrate."
+              title={t('ticketIssuance.format.title')}
+              description={t('ticketIssuance.format.description')}
               align="left"
               maxWidth="100%"
             />
             <div className="flex flex-col gap-3 items-start relative shrink-0 w-full">
-              <FeatureListItem text="No special pass formats or certificates" />
-              <FeatureListItem text="Tickets arrive in seconds on the customer phone" />
-              <FeatureListItem text="Works with any existing booking or ticketing system" />
+              <FeatureListItem text={t('ticketIssuance.format.features.noFormats')} />
+              <FeatureListItem text={t('ticketIssuance.format.features.fastDelivery')} />
+              <FeatureListItem text={t('ticketIssuance.format.features.anySystem')} />
             </div>
           </div>
         </div>
@@ -210,19 +210,19 @@ export default function DigitalTicketingPage() {
         <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
             <SectionHeader
-              title="Issue tickets in a Folio ready format"
-              description="Send us simple JSON or an email you already generate and Folio turns it into a clean digital ticket. No pkpass files, no wallet certificates, no SDKs to integrate."
+              title={t('ticketIssuance.format.title')}
+              description={t('ticketIssuance.format.description')}
               align="left"
             />
             <div className="flex flex-col gap-3 items-start relative shrink-0 w-full">
-              <FeatureListItem text="No special pass formats or certificates" />
-              <FeatureListItem text="Tickets arrive in seconds on the customer phone" />
-              <FeatureListItem text="Works with any existing booking or ticketing system" />
+              <FeatureListItem text={t('ticketIssuance.format.features.noFormats')} />
+              <FeatureListItem text={t('ticketIssuance.format.features.fastDelivery')} />
+              <FeatureListItem text={t('ticketIssuance.format.features.anySystem')} />
             </div>
           </div>
           <ImageWithPlaceholder
             src={ticketIssuanceFeatures}
-            alt="Ticket issuance format"
+            alt={t('ticketIssuance.format.title')}
             className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
             containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
             loading="lazy"
