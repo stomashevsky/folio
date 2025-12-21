@@ -20,8 +20,8 @@ const basePathForRouting = BASE_PATH === '/' ? '' : BASE_PATH.replace(/\/$/, '')
 // OG image base URL - same as in src/configs/ogImages.ts
 const OG_IMAGE_BASE_URL = 'https://stomashevsky.github.io/folio/og-images'
 
-// Supported languages for i18n
-const SUPPORTED_LANGUAGES = ['en', 'ru']
+// Supported languages for i18n (must match src/i18n/index.ts)
+const SUPPORTED_LANGUAGES = ['en', 'ru', 'es']
 const DEFAULT_LANGUAGE = 'en'
 
 // Static page metadata (non-blog pages)
