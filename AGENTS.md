@@ -449,6 +449,7 @@ This file contains all rules and principles that must be followed for every chan
 - **Keep translations concise** — translations should not be longer than the original (especially in UI elements)
 - **Consider UI context** — dropdowns, buttons, and headings must be compact
 - **Maintain consistent terminology** — use the same terms for the same concepts across all pages
+- **Technical terms and product names must be consistent** — if a term is translated (e.g., "Digital Identity" → "Цифровая идентификация"), use the translation everywhere; if kept in English (e.g., "Playground", "EUDI Wallet"), keep it in English everywhere. Never mix translated and untranslated versions of the same term.
 - **Read aloud test** — if a translation sounds awkward when spoken, rewrite it
 - **Page taglines must match menu item names** — the tagline on a page (e.g., hero section) must exactly match the corresponding menu item name for consistency
   - Check `common.json` footer/nav for menu item names
