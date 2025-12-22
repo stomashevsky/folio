@@ -1,6 +1,5 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleBlockquote, ArticleImage } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleBlockquote } from '../components/ui'
 import { LocalizedLink } from '../components/ui'
-import albaniaVoterRegistration from '../assets/images/blog-albanian-diaspora-voter-registration.png'
 import { useTranslation, Trans } from 'react-i18next'
 
 export default function AlbanianDiasporaArticlePage() {
@@ -21,11 +20,6 @@ export default function AlbanianDiasporaArticlePage() {
       <ArticleParagraph>
         <Trans i18nKey="articles:albanian-diaspora-voter-registration.p2" />
       </ArticleParagraph>
-
-      <ArticleImage
-        src={albaniaVoterRegistration}
-        alt={t('articles:albanian-diaspora-voter-registration.img_alt')}
-      />
 
       <ArticleH2>{t('articles:albanian-diaspora-voter-registration.h2_1')}</ArticleH2>
 
