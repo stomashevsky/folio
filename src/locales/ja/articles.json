@@ -18,191 +18,191 @@
         "p11": "The best digital wallet in 2025 isn't a single app. It's a combination that matches how you actually live. Keep Apple Wallet for payments and passes that work natively. Fill the gaps with apps that solve the specific problems Apple hasn't addressed. The result is fewer \"where did I save that?\" moments and more confidence that everything you need is one tap away."
     },
     "terms": {
-        "intro": "Thank you for using Folio Wallet. These Terms of Use govern your access to and use of the Folio mobile application, related online services, and any documentation we provide (collectively, our \"Services\"). By accessing or using our Services, you agree to be bound by these terms. If you do not agree, please do not use Folio.",
-        "intro_privacy_link": "Our <0>Privacy Policy</0> explains how we collect, use, and protect your personal data. Please read it alongside these terms.",
+        "intro": "Folio Walletをご利用いただきありがとうございます。本利用規約は、Folioモバイルアプリケーション、関連オンラインサービス、および当社が提供するすべてのドキュメント（総称して「サービス」）へのアクセスおよび利用を規定します。サービスにアクセスまたは利用することにより、本規約に拘束されることに同意したものとみなされます。同意されない場合は、Folioを使用しないでください。",
+        "intro_privacy_link": "当社の<0>プライバシーポリシー</0>では、個人データの収集、使用、保護方法について説明しています。本規約と併せてお読みください。",
         "who_we_are": {
-            "title": "Who we are",
-            "content": "Folio Technologies Limited is a company registered in England and Wales (Company Number 07236594). Our registered office is at 88 Baker Street, London W1U 6TQ, United Kingdom. References to \"Folio,\" \"we,\" \"us,\" or \"our\" mean Folio Technologies Limited."
+            "title": "会社概要",
+            "content": "Folio Technologies Limitedは、イングランドおよびウェールズで登録された会社です（会社番号07236594）。登記上の住所は、88 Baker Street, London W1U 6TQ, United Kingdomです。「Folio」「当社」「私たち」への言及は、Folio Technologies Limitedを意味します。"
         },
         "registration": {
-            "title": "Registration and access",
-            "p1": "You must be at least 16 years old to use Folio. By registering, you confirm that you meet this age requirement. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.",
-            "p2": "We grant you a limited, non-exclusive, non-transferable, revocable license to use the Folio app on your personal devices for non-commercial purposes, subject to these terms."
+            "title": "登録とアクセス",
+            "p1": "Folioを利用するには16歳以上である必要があります。登録することにより、この年齢要件を満たしていることを確認したものとみなされます。アカウント認証情報の機密性を維持し、アカウントで発生するすべての活動について責任を負います。",
+            "p2": "当社は、本規約に従い、個人デバイスでFolioアプリを非商業目的で使用するための限定的、非独占的、譲渡不可、取消可能なライセンスを付与します。"
         },
         "services": {
-            "title": "Our services",
-            "p1": "Folio is a digital identity platform that helps you securely store, manage, and share your personal documents. We support document verification and authentication, but we are not a party to any contracts or services that third parties may offer you through the app. You are in complete control of what information you share and with whom. Before sharing data with any third party, make sure you are comfortable with their privacy practices.",
-            "p2": "Using Folio, you can:",
+            "title": "サービス内容",
+            "p1": "Folioは、個人書類を安全に保存、管理、共有するためのデジタルIDプラットフォームです。書類の検証と認証をサポートしていますが、アプリを通じて第三者が提供する契約やサービスの当事者ではありません。共有する情報とその相手を完全に管理できます。第三者とデータを共有する前に、その第三者のプライバシー慣行に問題がないことを確認してください。",
+            "p2": "Folioでは以下のことができます：",
             "list": {
-                "item1": "Store and manage your personal documents securely",
-                "item2": "Share verified information with third parties you choose",
-                "item3": "Access your data offline once downloaded",
-                "item4": "Use our documentation to support your use of the app"
+                "item1": "個人書類を安全に保存・管理",
+                "item2": "選択した第三者と検証済み情報を共有",
+                "item3": "ダウンロード後はオフラインでデータにアクセス",
+                "item4": "アプリの利用をサポートするドキュメントを使用"
             }
         },
         "usage": {
-            "title": "Usage requirements",
-            "p1": "You agree to use our Services only for lawful purposes and in accordance with these terms. You agree not to:",
+            "title": "利用要件",
+            "p1": "本規約に従い、合法的な目的でのみサービスを利用することに同意します。以下の行為を行わないことに同意します：",
             "list": {
-                "item1": "Use the Services for any unlawful, fraudulent, or deceptive purpose",
-                "item2": "Reverse engineer, decompile, disassemble, or create derivative works from the app",
-                "item3": "Share access to your account or transfer it to others without our consent",
-                "item4": "Attempt to compromise our systems, disrupt our Services, or interfere with other users",
-                "item5": "Collect data from our systems without authorization",
-                "item6": "Use the Services on behalf of a third party without proper authorization"
+                "item1": "違法、詐欺的、または欺瞞的な目的でのサービス利用",
+                "item2": "アプリのリバースエンジニアリング、逆コンパイル、逆アセンブル、または派生物の作成",
+                "item3": "当社の同意なくアカウントへのアクセスを共有または第三者に譲渡",
+                "item4": "当社システムの侵害、サービスの妨害、または他のユーザーへの干渉",
+                "item5": "許可なく当社システムからデータを収集",
+                "item6": "適切な許可なく第三者のためにサービスを利用"
             }
         },
         "security": {
-            "title": "Security and account recovery",
-            "p1": "Folio uses Passkeys for secure authentication. Passkeys allow you to sign in using Face ID, Touch ID, or your device passcode, providing a more secure alternative to traditional passwords. During registration, you will be prompted to save a Recovery Code. This code is essential for regaining access to your account if you lose your device, forget your credentials, or sign in from a new device.",
-            "p2": "<strong>Important:</strong> Due to our zero-knowledge security architecture, we cannot access your encrypted data. If you lose your Recovery Code and cannot authenticate, we will be unable to help you recover your account or data. We strongly recommend storing your Recovery Code in a secure location, such as a password manager or a physical safe."
+            "title": "セキュリティとアカウント復元",
+            "p1": "Folioは安全な認証のためにPasskeysを使用しています。Passkeysを使用すると、Face ID、Touch ID、またはデバイスのパスコードでサインインでき、従来のパスワードよりも安全な代替手段を提供します。登録時に、リカバリーコードの保存を求められます。このコードは、デバイスを紛失した場合、認証情報を忘れた場合、または新しいデバイスからサインインする場合に、アカウントへのアクセスを回復するために不可欠です。",
+            "p2": "<strong>重要：</strong>ゼロ知識アーキテクチャにより、当社は暗号化されたデータにアクセスできません。リカバリーコードを紛失し、認証できない場合、アカウントやデータの復元をお手伝いすることはできません。リカバリーコードは、パスワードマネージャーや物理的な金庫など、安全な場所に保管することを強くお勧めします。"
         },
         "privacy": {
-            "title": "Privacy and data protection",
-            "p1": "Your privacy is fundamental to how Folio works. All data in transit and at rest is encrypted using modern cipher suites. Your personal documents are encrypted and stored only in your Folio wallet, with only hashed references kept on our servers to detect tampering and protect against fraud. We have no visibility into your private information and cannot decrypt it without your authorization.",
-            "p2": "We will never share your personal data with third parties without your explicit consent. We may analyze anonymized, aggregated trends to improve our Services, but this analysis never includes your private information."
+            "title": "プライバシーとデータ保護",
+            "p1": "プライバシーはFolioの動作の基本です。転送中および保存中のすべてのデータは、最新の暗号スイートを使用して暗号化されています。個人書類は暗号化され、Folioウォレットにのみ保存されます。改ざんを検出し詐欺から保護するため、ハッシュ参照のみがサーバーに保存されます。当社はプライベート情報を閲覧できず、許可なく復号することもできません。",
+            "p2": "明示的な同意なく、個人データを第三者と共有することはありません。サービス改善のために匿名化・集計されたトレンドを分析することがありますが、この分析にプライベート情報が含まれることはありません。"
         },
         "disclaimers": {
-            "title": "Disclaimers",
-            "p1": "We use reasonable skill and care in providing document verification services, but we cannot guarantee that verification results are always accurate or that documents are genuine. You are responsible for the accuracy of your documentation and keeping it up to date.",
-            "p2": "Our Services are provided on an \"as is\" and \"as available\" basis. To the fullest extent permitted by law, we disclaim all warranties, express or implied, including warranties of merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the Services will be uninterrupted, error-free, or completely secure."
+            "title": "免責事項",
+            "p1": "書類検証サービスの提供において合理的なスキルと注意を払っていますが、検証結果が常に正確であること、または書類が本物であることを保証することはできません。書類の正確性と最新状態の維持はお客様の責任となります。",
+            "p2": "サービスは「現状有姿」および「利用可能な限り」の状態で提供されます。法律で許可される最大限の範囲で、商品性、特定目的への適合性、非侵害を含む、明示的または黙示的なすべての保証を否認します。サービスが中断なく、エラーなく、または完全に安全であることを保証しません。"
         },
         "liability": {
-            "title": "Limitation of liability",
-            "p1": "We are responsible for foreseeable loss or damage caused by our failure to comply with these terms or use reasonable care and skill. However, we are not liable for:",
+            "title": "責任の制限",
+            "p1": "当社は、本規約の不履行または合理的な注意とスキルの不使用により生じた予見可能な損失または損害について責任を負います。ただし、以下については責任を負いません：",
             "list": {
-                "item1": "Loss or damage that is not reasonably foreseeable",
-                "item2": "Business losses, as the app is intended for personal use",
-                "item3": "Damage you could have avoided by following our advice or applying available updates",
-                "item4": "Issues caused by events outside our reasonable control",
-                "item5": "Loss of data due to failure to save your Recovery Code"
+                "item1": "合理的に予見できない損失または損害",
+                "item2": "アプリは個人使用を目的としているため、事業上の損失",
+                "item3": "当社のアドバイスに従うか、利用可能な更新を適用することで回避できた損害",
+                "item4": "当社の合理的な管理外の事象により生じた問題",
+                "item5": "リカバリーコードを保存しなかったことによるデータ損失"
             },
-            "p2": "Nothing in these terms excludes or limits our liability for death or personal injury caused by our negligence, fraud or fraudulent misrepresentation, or any other liability that cannot be legally excluded."
+            "p2": "本規約のいかなる条項も、当社の過失による死亡または人身傷害、詐欺または詐欺的な不実表示、または法的に除外できないその他の責任についての当社の責任を除外または制限するものではありません。"
         },
         "ip": {
-            "title": "Intellectual property",
-            "p1": "All intellectual property rights in the app, documentation, and Services belong to us or our licensors. Your right to use the app is licensed, not sold. You have no ownership rights in our intellectual property beyond what these terms expressly grant."
+            "title": "知的財産権",
+            "p1": "アプリ、ドキュメント、およびサービスにおけるすべての知的財産権は、当社またはライセンサーに帰属します。アプリを使用する権利は、売却ではなくライセンスされています。本規約が明示的に付与する以上の知的財産権を所有することはありません。"
         },
         "changes": {
-            "title": "Changes to our services and terms",
-            "p1": "We may update the app and Services from time to time to improve functionality, add features, or address security issues. We may also update these terms. When we make material changes, we will notify you through the app or by email. Your continued use of Folio after such changes constitutes acceptance of the updated terms."
+            "title": "サービスと規約の変更",
+            "p1": "機能向上、機能追加、またはセキュリティ問題への対応のため、アプリとサービスを随時更新することがあります。本規約も更新することがあります。重要な変更を行う場合は、アプリまたはメールでお知らせします。そのような変更後も引き続きFolioを使用することは、更新された規約への同意を構成します。"
         },
         "termination": {
-            "title": "Termination",
-            "p1": "You may stop using Folio at any time by deleting the app. We may suspend or terminate your access if you breach these terms, though we will give you notice and an opportunity to remedy the breach where reasonably practicable. Upon termination, you must cease all use of the Services. Provisions that by their nature should survive termination will remain in effect."
+            "title": "終了",
+            "p1": "アプリを削除することで、いつでもFolioの使用を停止できます。本規約に違反した場合、アクセスを停止または終了することがありますが、合理的に実行可能な場合は通知と違反を是正する機会を提供します。終了後は、サービスのすべての使用を中止する必要があります。その性質上、終了後も存続すべき条項は引き続き有効です。"
         },
         "law": {
-            "title": "Governing law and disputes",
-            "p1": "These terms are governed by the laws of England and Wales. Any disputes arising from or relating to these terms or your use of our Services shall be subject to the exclusive jurisdiction of the courts of England and Wales. If any provision of these terms is found to be unenforceable, the remaining provisions will continue in full force and effect. We may transfer our rights and obligations under these terms to another organization, but this will not affect your rights."
+            "title": "準拠法と紛争",
+            "p1": "本規約は、イングランドおよびウェールズの法律に準拠します。本規約またはサービスの利用から生じる、またはそれに関連する紛争は、イングランドおよびウェールズの裁判所の専属管轄権に服するものとします。本規約のいずれかの条項が執行不能と判断された場合、残りの条項は完全な効力を維持します。当社は本規約に基づく権利と義務を他の組織に譲渡することがありますが、お客様の権利には影響しません。"
         },
         "contact": {
-            "title": "Contact us",
-            "p1": "If you have questions about these terms or need support, please email us at <0>support@folio.id</0>. For privacy-related inquiries, contact <1>privacy@folio.id</1>."
+            "title": "お問い合わせ",
+            "p1": "本規約についてご質問がある場合、またはサポートが必要な場合は、<0>support@folio.id</0>までメールでお問い合わせください。プライバシーに関するお問い合わせは、<1>privacy@folio.id</1>までご連絡ください。"
         }
     },
     "privacy_page": {
-        "intro": "Folio Technologies Limited (\"Folio,\" \"we,\" \"us,\" or \"our\") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use the Folio Wallet app and related services.",
-        "commitment": "<strong>Our commitment:</strong> We operate on a zero-knowledge architecture. Your personal documents are encrypted in your wallet, and we cannot access or view your private information. We will never share your personal data with third parties without your explicit consent.",
+        "intro": "Folio Technologies Limited（「Folio」「当社」「私たち」）は、お客様のプライバシーを尊重し、個人データの保護に努めています。本プライバシーポリシーは、Folio Walletアプリおよび関連サービスを利用する際の情報の収集、使用、開示、保護方法について説明します。",
+        "commitment": "<strong>当社のコミットメント：</strong>当社はゼロ知識アーキテクチャで運営しています。お客様の個人書類はウォレット内で暗号化されており、当社はプライベート情報にアクセスしたり閲覧したりすることはできません。明示的な同意なく、個人データを第三者と共有することはありません。",
         "who_we_are": {
-            "title": "Who we are",
-            "p1": "Folio Technologies Limited is a company registered in England and Wales (Company Number 07236594). Our registered office is at 88 Baker Street, London W1U 6TQ, United Kingdom. We are the data controller for personal information collected through the Folio app. For privacy questions, contact our data privacy manager at <0>privacy@folio.id</0>."
+            "title": "会社概要",
+            "p1": "Folio Technologies Limitedは、イングランドおよびウェールズで登録された会社です（会社番号07236594）。登記上の住所は、88 Baker Street, London W1U 6TQ, United Kingdomです。当社は、Folioアプリを通じて収集される個人情報の管理者です。プライバシーに関するご質問は、データプライバシー担当者（<0>privacy@folio.id</0>）までお問い合わせください。"
         },
         "collect": {
-            "title": "Personal information we collect",
+            "title": "収集する個人情報",
             "provide": {
-                "title": "Information you provide",
-                "p1": "When you create an account, we collect information necessary to verify your identity and provide our services. This may include a selfie for biometric verification. We process this data securely and only with your explicit consent. If you contact our support team, we may temporarily process personal data from documents you need help with. This data is automatically deleted within three days."
+                "title": "お客様が提供する情報",
+                "p1": "アカウントを作成する際、本人確認とサービス提供に必要な情報を収集します。これには生体認証用の自撮り写真が含まれる場合があります。このデータは安全に処理され、お客様の明示的な同意がある場合にのみ処理されます。サポートチームにお問い合わせいただいた場合、お困りの書類から個人データを一時的に処理することがあります。このデータは3日以内に自動的に削除されます。"
             },
             "auto": {
-                "title": "Information collected automatically",
-                "p1": "When you use our Services, we automatically collect certain technical and usage information:",
+                "title": "自動的に収集される情報",
+                "p1": "サービスを利用する際、特定の技術情報と利用情報を自動的に収集します：",
                 "list": {
-                    "item1": "Device information: device type, operating system, unique device identifiers",
-                    "item2": "Connection information: IP address, browser type and version, time zone",
-                    "item3": "Usage patterns: anonymized data about how you interact with the app, such as the number of documents stored (but never the content of those documents)"
+                    "item1": "デバイス情報：デバイスタイプ、オペレーティングシステム、一意のデバイス識別子",
+                    "item2": "接続情報：IPアドレス、ブラウザの種類とバージョン、タイムゾーン",
+                    "item3": "利用パターン：アプリとの対話方法に関する匿名化データ（保存された書類数など、書類の内容は含まれません）"
                 }
             }
         },
         "use": {
-            "title": "How we use personal information",
-            "p1": "We use your personal information for the following purposes:",
+            "title": "個人情報の利用方法",
+            "p1": "以下の目的で個人情報を使用します：",
             "list": {
-                "item1": "To register you as a user and provide our Services",
-                "item2": "To verify your identity and protect against fraud",
-                "item3": "To respond to your support requests and communicate with you",
-                "item4": "To improve, maintain, and secure our app and Services",
-                "item5": "To comply with legal obligations and protect our rights"
+                "item1": "ユーザーとしての登録とサービスの提供",
+                "item2": "本人確認と詐欺からの保護",
+                "item3": "サポートリクエストへの対応とコミュニケーション",
+                "item4": "アプリとサービスの改善、維持、セキュリティ確保",
+                "item5": "法的義務の遵守と当社の権利の保護"
             },
-            "p2": "We rely on your consent for processing biometric data such as your selfie. For other processing activities, we rely on our legitimate interests in providing and improving our Services, the performance of our contract with you, or compliance with legal obligations."
+            "p2": "自撮り写真などの生体データの処理については、お客様の同意に基づいています。その他の処理活動については、サービスの提供と改善における正当な利益、お客様との契約の履行、または法的義務の遵守に基づいています。"
         },
         "security": {
-            "title": "Security and data protection",
-            "p1": "Security is fundamental to our design. We implement robust technical and organizational measures to protect your personal information:",
+            "title": "セキュリティとデータ保護",
+            "p1": "セキュリティは当社の設計の基本です。個人情報を保護するための堅牢な技術的・組織的対策を実施しています：",
             "list": {
-                "item1": "Zero-knowledge architecture ensures we cannot access your private data",
-                "item2": "End-to-end encryption protects all data in transit using modern cipher suites",
-                "item3": "Your personal documents are encrypted and stored only in your wallet on your device",
-                "item4": "We store only cryptographic hashes on our servers to detect tampering and protect against fraud",
-                "item5": "We maintain compliance with ISO 27001 and SOC 2 security standards",
-                "item6": "Access to any personal data is strictly limited to authorized personnel on a need-to-know basis"
+                "item1": "ゼロ知識アーキテクチャにより、プライベートデータにアクセスできません",
+                "item2": "エンドツーエンド暗号化により、最新の暗号スイートを使用してすべての転送中データを保護",
+                "item3": "個人書類はデバイス上のウォレットにのみ暗号化して保存",
+                "item4": "改ざん検出と詐欺防止のため、サーバーには暗号ハッシュのみを保存",
+                "item5": "ISO 27001およびSOC 2セキュリティ基準への準拠を維持",
+                "item6": "個人データへのアクセスは、知る必要のある権限を持つ担当者に厳しく制限"
             },
-            "p2": "<strong>Account recovery:</strong> During registration, you will be prompted to save a Recovery Code. Due to our zero-knowledge architecture, we cannot help you recover your account or data if you lose this code. Please store it securely."
+            "p2": "<strong>アカウント復元：</strong>登録時にリカバリーコードの保存を求められます。ゼロ知識アーキテクチャのため、このコードを紛失した場合、アカウントやデータの復元をお手伝いすることはできません。安全な場所に保管してください。"
         },
         "disclosure": {
-            "title": "Disclosure of personal information",
-            "p1": "We only share your personal information in the following circumstances:",
+            "title": "個人情報の開示",
+            "p1": "以下の状況でのみ個人情報を共有します：",
             "list": {
-                "item1": "With your explicit consent or at your direction",
-                "item2": "With service providers who assist us in operating our Services, under strict contractual obligations",
-                "item3": "To comply with applicable laws, regulations, or legal processes",
-                "item4": "To protect the rights, privacy, safety, or property of Folio, our users, or the public"
+                "item1": "お客様の明示的な同意または指示がある場合",
+                "item2": "厳格な契約上の義務の下でサービスの運営を支援するサービスプロバイダーとの間",
+                "item3": "適用される法律、規制、または法的手続きに従う場合",
+                "item4": "Folio、ユーザー、または公衆の権利、プライバシー、安全、または財産を保護する場合"
             },
-            "p2": "We never sell your personal data. If you choose to share information with third parties through the app, please review their privacy policies before doing so."
+            "p2": "個人データを販売することはありません。アプリを通じて第三者と情報を共有する場合は、事前にそのプライバシーポリシーをご確認ください。"
         },
         "transfers": {
-            "title": "International data transfers",
-            "p1": "We primarily store personal data in secure locations within the European Economic Area. If we need to transfer data outside the UK or EEA, we ensure appropriate safeguards are in place, such as standard contractual clauses approved by the UK Information Commissioner's Office or European Commission."
+            "title": "国際データ転送",
+            "p1": "主に欧州経済領域内の安全な場所に個人データを保存しています。英国またはEEA外にデータを転送する必要がある場合は、英国情報コミッショナー事務局または欧州委員会が承認した標準契約条項などの適切な保護措置を講じます。"
         },
         "retention": {
-            "title": "Data retention",
-            "p1": "We retain your personal data only for as long as necessary to fulfil the purposes described in this policy. Your documents and information remain in your encrypted wallet until you delete them or your account. Biometric data used for verification is retained for a maximum of three years from your last interaction with the platform, unless longer retention is required by law or to resolve disputes."
+            "title": "データ保持",
+            "p1": "本ポリシーに記載された目的を達成するために必要な期間のみ個人データを保持します。書類と情報は、削除するかアカウントを削除するまで、暗号化されたウォレットに残ります。検証に使用された生体データは、法律で長期保持が要求される場合または紛争解決のために必要な場合を除き、プラットフォームとの最後の対話から最大3年間保持されます。"
         },
         "rights": {
-            "title": "Your rights",
-            "p1": "Under applicable data protection laws, including the UK GDPR, you have the following rights:",
+            "title": "お客様の権利",
+            "p1": "英国GDPRを含む適用されるデータ保護法の下で、以下の権利があります：",
             "list": {
-                "item1": "Access: request a copy of the personal data we hold about you",
-                "item2": "Rectification: request correction of inaccurate or incomplete data",
-                "item3": "Erasure: request deletion of your personal data in certain circumstances",
-                "item4": "Restriction: request that we limit how we process your data",
-                "item5": "Portability: receive your data in a structured, commonly used format",
-                "item6": "Objection: object to processing based on legitimate interests",
-                "item7": "Withdraw consent: withdraw consent at any time where we rely on it for processing"
+                "item1": "アクセス：当社が保有する個人データのコピーを要求",
+                "item2": "訂正：不正確または不完全なデータの修正を要求",
+                "item3": "消去：特定の状況で個人データの削除を要求",
+                "item4": "制限：データの処理方法の制限を要求",
+                "item5": "ポータビリティ：構造化された一般的に使用される形式でデータを受領",
+                "item6": "異議：正当な利益に基づく処理に異議を申し立て",
+                "item7": "同意の撤回：処理に同意が必要な場合、いつでも同意を撤回"
             },
-            "p2": "To exercise any of these rights, email us at <0>privacy@folio.id</0>. We will respond within one month. We generally do not charge a fee, but we may charge a reasonable fee for manifestly unfounded or excessive requests."
+            "p2": "これらの権利を行使するには、<0>privacy@folio.id</0>までメールでお問い合わせください。1ヶ月以内に対応いたします。通常、料金は発生しませんが、明らかに根拠のない、または過度な要求には合理的な料金を請求する場合があります。"
         },
         "cookies": {
-            "title": "Cookies and similar technologies",
-            "p1": "Our website uses cookies and similar tracking technologies to enhance your experience, analyze usage patterns, and support our marketing efforts. Cookies are small text files stored on your device that help us recognize you and remember your preferences.",
-            "p2": "We use the following types of cookies:",
+            "title": "Cookieと類似技術",
+            "p1": "当社のウェブサイトでは、体験の向上、利用パターンの分析、マーケティング活動のサポートのために、Cookieおよび類似の追跡技術を使用しています。Cookieは、お客様を認識し、設定を記憶するためにデバイスに保存される小さなテキストファイルです。",
+            "p2": "以下の種類のCookieを使用しています：",
             "list": {
-                "item1": "Essential cookies: required for the website to function properly and cannot be disabled",
-                "item2": "Analytics cookies: help us understand how visitors interact with our website",
-                "item3": "Preference cookies: remember your settings and preferences"
+                "item1": "必須Cookie：ウェブサイトが正常に機能するために必要で、無効にできません",
+                "item2": "分析Cookie：訪問者がウェブサイトとどのように対話するかを理解するのに役立ちます",
+                "item3": "設定Cookie：設定と好みを記憶します"
             },
-            "p3": "You can manage your cookie preferences through your browser settings. Please note that disabling certain cookies may affect website functionality."
+            "p3": "ブラウザの設定からCookieの設定を管理できます。一部のCookieを無効にすると、ウェブサイトの機能に影響を与える場合があります。"
         },
         "children": {
-            "title": "Children's privacy",
-            "p1": "Folio is not intended for children under 16 years of age. We do not knowingly collect personal information from children. If you believe we have inadvertently collected data from a child, please contact us immediately at <0>privacy@folio.id</0>, and we will take steps to delete such information."
+            "title": "未成年者のプライバシー",
+            "p1": "Folioは16歳未満のお子様を対象としていません。お子様から故意に個人情報を収集することはありません。お子様のデータを誤って収集したと思われる場合は、直ちに<0>privacy@folio.id</0>までご連絡ください。当該情報の削除措置を講じます。"
         },
         "changes": {
-            "title": "Changes to this policy",
-            "p1": "We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. When we make material changes, we will notify you through the app or by email and update the \"Last updated\" date at the top of this page. We encourage you to review this policy periodically."
+            "title": "本ポリシーの変更",
+            "p1": "当社の慣行または適用法の変更を反映するため、本プライバシーポリシーを随時更新することがあります。重要な変更を行う場合は、アプリまたはメールでお知らせし、このページ上部の「最終更新日」を更新します。本ポリシーを定期的にご確認いただくことをお勧めします。"
         },
         "contact": {
-            "title": "Contact us",
-            "p1": "If you have questions about this Privacy Policy or how we handle your personal data, please contact our data privacy manager at <0>privacy@folio.id</0>. You also have the right to lodge a complaint with the UK Information Commissioner's Office (ICO) at <1>ico.org.uk</1> if you are dissatisfied with how we have handled your personal data."
+            "title": "お問い合わせ",
+            "p1": "本プライバシーポリシーまたは個人データの取り扱いについてご質問がある場合は、データプライバシー担当者（<0>privacy@folio.id</0>）までお問い合わせください。また、個人データの取り扱いにご不満がある場合は、英国情報コミッショナー事務局（ICO）（<1>ico.org.uk</1>）に苦情を申し立てる権利があります。"
         }
     },
     "access-your-digital-wallet-anywhere": {

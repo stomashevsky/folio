@@ -18,191 +18,191 @@
         "p11": "The best digital wallet in 2025 isn't a single app. It's a combination that matches how you actually live. Keep Apple Wallet for payments and passes that work natively. Fill the gaps with apps that solve the specific problems Apple hasn't addressed. The result is fewer \"where did I save that?\" moments and more confidence that everything you need is one tap away."
     },
     "terms": {
-        "intro": "Thank you for using Folio Wallet. These Terms of Use govern your access to and use of the Folio mobile application, related online services, and any documentation we provide (collectively, our \"Services\"). By accessing or using our Services, you agree to be bound by these terms. If you do not agree, please do not use Folio.",
-        "intro_privacy_link": "Our <0>Privacy Policy</0> explains how we collect, use, and protect your personal data. Please read it alongside these terms.",
+        "intro": "Grazie per aver scelto Folio Wallet. Le presenti Condizioni d'uso regolano l'accesso e l'utilizzo dell'applicazione mobile Folio, dei servizi online correlati e di qualsiasi documentazione da noi fornita (collettivamente, i nostri \"Servizi\"). Accedendo o utilizzando i nostri Servizi, accetti di essere vincolato da queste condizioni. Se non sei d'accordo, ti preghiamo di non utilizzare Folio.",
+        "intro_privacy_link": "La nostra <0>Informativa sulla privacy</0> spiega come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali. Ti invitiamo a leggerla insieme a queste condizioni.",
         "who_we_are": {
-            "title": "Who we are",
-            "content": "Folio Technologies Limited is a company registered in England and Wales (Company Number 07236594). Our registered office is at 88 Baker Street, London W1U 6TQ, United Kingdom. References to \"Folio,\" \"we,\" \"us,\" or \"our\" mean Folio Technologies Limited."
+            "title": "Chi siamo",
+            "content": "Folio Technologies Limited è una società registrata in Inghilterra e Galles (Numero di registrazione 07236594). La nostra sede legale è in 88 Baker Street, Londra W1U 6TQ, Regno Unito. I riferimenti a \"Folio\", \"noi\", \"nostro\" o \"ci\" indicano Folio Technologies Limited."
         },
         "registration": {
-            "title": "Registration and access",
-            "p1": "You must be at least 16 years old to use Folio. By registering, you confirm that you meet this age requirement. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.",
-            "p2": "We grant you a limited, non-exclusive, non-transferable, revocable license to use the Folio app on your personal devices for non-commercial purposes, subject to these terms."
+            "title": "Registrazione e accesso",
+            "p1": "Per utilizzare Folio devi avere almeno 16 anni. Registrandoti, confermi di soddisfare questo requisito di età. Sei responsabile della riservatezza delle tue credenziali di accesso e di tutte le attività svolte con il tuo account.",
+            "p2": "Ti concediamo una licenza limitata, non esclusiva, non trasferibile e revocabile per utilizzare l'app Folio sui tuoi dispositivi personali per scopi non commerciali, nel rispetto di queste condizioni."
         },
         "services": {
-            "title": "Our services",
-            "p1": "Folio is a digital identity platform that helps you securely store, manage, and share your personal documents. We support document verification and authentication, but we are not a party to any contracts or services that third parties may offer you through the app. You are in complete control of what information you share and with whom. Before sharing data with any third party, make sure you are comfortable with their privacy practices.",
-            "p2": "Using Folio, you can:",
+            "title": "I nostri servizi",
+            "p1": "Folio è una piattaforma di identità digitale che ti aiuta a conservare, gestire e condividere i tuoi documenti personali in modo sicuro. Supportiamo la verifica e l'autenticazione dei documenti, ma non siamo parte di contratti o servizi che terze parti potrebbero offrirti tramite l'app. Hai il pieno controllo su quali informazioni condividi e con chi. Prima di condividere dati con terze parti, assicurati di essere a tuo agio con le loro pratiche sulla privacy.",
+            "p2": "Con Folio puoi:",
             "list": {
-                "item1": "Store and manage your personal documents securely",
-                "item2": "Share verified information with third parties you choose",
-                "item3": "Access your data offline once downloaded",
-                "item4": "Use our documentation to support your use of the app"
+                "item1": "Conservare e gestire i tuoi documenti personali in modo sicuro",
+                "item2": "Condividere informazioni verificate con terze parti di tua scelta",
+                "item3": "Accedere ai tuoi dati offline una volta scaricati",
+                "item4": "Utilizzare la nostra documentazione a supporto dell'uso dell'app"
             }
         },
         "usage": {
-            "title": "Usage requirements",
-            "p1": "You agree to use our Services only for lawful purposes and in accordance with these terms. You agree not to:",
+            "title": "Requisiti di utilizzo",
+            "p1": "Accetti di utilizzare i nostri Servizi solo per scopi leciti e in conformità con queste condizioni. Ti impegni a non:",
             "list": {
-                "item1": "Use the Services for any unlawful, fraudulent, or deceptive purpose",
-                "item2": "Reverse engineer, decompile, disassemble, or create derivative works from the app",
-                "item3": "Share access to your account or transfer it to others without our consent",
-                "item4": "Attempt to compromise our systems, disrupt our Services, or interfere with other users",
-                "item5": "Collect data from our systems without authorization",
-                "item6": "Use the Services on behalf of a third party without proper authorization"
+                "item1": "Utilizzare i Servizi per scopi illegali, fraudolenti o ingannevoli",
+                "item2": "Effettuare reverse engineering, decompilare, disassemblare o creare opere derivate dall'app",
+                "item3": "Condividere l'accesso al tuo account o trasferirlo ad altri senza il nostro consenso",
+                "item4": "Tentare di compromettere i nostri sistemi, interrompere i nostri Servizi o interferire con altri utenti",
+                "item5": "Raccogliere dati dai nostri sistemi senza autorizzazione",
+                "item6": "Utilizzare i Servizi per conto di terzi senza la dovuta autorizzazione"
             }
         },
         "security": {
-            "title": "Security and account recovery",
-            "p1": "Folio uses Passkeys for secure authentication. Passkeys allow you to sign in using Face ID, Touch ID, or your device passcode, providing a more secure alternative to traditional passwords. During registration, you will be prompted to save a Recovery Code. This code is essential for regaining access to your account if you lose your device, forget your credentials, or sign in from a new device.",
-            "p2": "<strong>Important:</strong> Due to our zero-knowledge security architecture, we cannot access your encrypted data. If you lose your Recovery Code and cannot authenticate, we will be unable to help you recover your account or data. We strongly recommend storing your Recovery Code in a secure location, such as a password manager or a physical safe."
+            "title": "Sicurezza e recupero dell'account",
+            "p1": "Folio utilizza le Passkeys per un'autenticazione sicura. Le Passkeys ti permettono di accedere usando Face ID, Touch ID o il codice del tuo dispositivo, offrendo un'alternativa più sicura alle password tradizionali. Durante la registrazione, ti verrà chiesto di salvare un Codice di Recupero. Questo codice è essenziale per recuperare l'accesso al tuo account se perdi il dispositivo, dimentichi le credenziali o accedi da un nuovo dispositivo.",
+            "p2": "<strong>Importante:</strong> A causa della nostra architettura di sicurezza zero-knowledge, non possiamo accedere ai tuoi dati crittografati. Se perdi il tuo Codice di Recupero e non riesci ad autenticarti, non potremo aiutarti a recuperare il tuo account o i tuoi dati. Ti consigliamo vivamente di conservare il Codice di Recupero in un luogo sicuro, come un password manager o una cassaforte fisica."
         },
         "privacy": {
-            "title": "Privacy and data protection",
-            "p1": "Your privacy is fundamental to how Folio works. All data in transit and at rest is encrypted using modern cipher suites. Your personal documents are encrypted and stored only in your Folio wallet, with only hashed references kept on our servers to detect tampering and protect against fraud. We have no visibility into your private information and cannot decrypt it without your authorization.",
-            "p2": "We will never share your personal data with third parties without your explicit consent. We may analyze anonymized, aggregated trends to improve our Services, but this analysis never includes your private information."
+            "title": "Privacy e protezione dei dati",
+            "p1": "La tua privacy è fondamentale per il funzionamento di Folio. Tutti i dati in transito e a riposo sono crittografati utilizzando suite crittografiche moderne. I tuoi documenti personali sono crittografati e conservati solo nel tuo portafoglio Folio, con solo riferimenti hash conservati sui nostri server per rilevare manomissioni e proteggere dalle frodi. Non abbiamo visibilità sulle tue informazioni private e non possiamo decifrarle senza la tua autorizzazione.",
+            "p2": "Non condivideremo mai i tuoi dati personali con terze parti senza il tuo esplicito consenso. Possiamo analizzare tendenze anonimizzate e aggregate per migliorare i nostri Servizi, ma questa analisi non include mai le tue informazioni private."
         },
         "disclaimers": {
-            "title": "Disclaimers",
-            "p1": "We use reasonable skill and care in providing document verification services, but we cannot guarantee that verification results are always accurate or that documents are genuine. You are responsible for the accuracy of your documentation and keeping it up to date.",
-            "p2": "Our Services are provided on an \"as is\" and \"as available\" basis. To the fullest extent permitted by law, we disclaim all warranties, express or implied, including warranties of merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the Services will be uninterrupted, error-free, or completely secure."
+            "title": "Esclusioni di responsabilità",
+            "p1": "Utilizziamo competenze e cura ragionevoli nel fornire servizi di verifica documenti, ma non possiamo garantire che i risultati delle verifiche siano sempre accurati o che i documenti siano autentici. Sei responsabile dell'accuratezza della tua documentazione e del suo aggiornamento.",
+            "p2": "I nostri Servizi sono forniti \"così come sono\" e \"secondo disponibilità\". Nella misura massima consentita dalla legge, decliniamo ogni garanzia, esplicita o implicita, incluse le garanzie di commerciabilità, idoneità per uno scopo particolare e non violazione. Non garantiamo che i Servizi saranno ininterrotti, privi di errori o completamente sicuri."
         },
         "liability": {
-            "title": "Limitation of liability",
-            "p1": "We are responsible for foreseeable loss or damage caused by our failure to comply with these terms or use reasonable care and skill. However, we are not liable for:",
+            "title": "Limitazione di responsabilità",
+            "p1": "Siamo responsabili per perdite o danni prevedibili causati dal nostro mancato rispetto di queste condizioni o dall'uso di competenze e cura ragionevoli. Tuttavia, non siamo responsabili per:",
             "list": {
-                "item1": "Loss or damage that is not reasonably foreseeable",
-                "item2": "Business losses, as the app is intended for personal use",
-                "item3": "Damage you could have avoided by following our advice or applying available updates",
-                "item4": "Issues caused by events outside our reasonable control",
-                "item5": "Loss of data due to failure to save your Recovery Code"
+                "item1": "Perdite o danni che non sono ragionevolmente prevedibili",
+                "item2": "Perdite commerciali, poiché l'app è destinata all'uso personale",
+                "item3": "Danni che avresti potuto evitare seguendo i nostri consigli o applicando gli aggiornamenti disponibili",
+                "item4": "Problemi causati da eventi al di fuori del nostro ragionevole controllo",
+                "item5": "Perdita di dati dovuta al mancato salvataggio del Codice di Recupero"
             },
-            "p2": "Nothing in these terms excludes or limits our liability for death or personal injury caused by our negligence, fraud or fraudulent misrepresentation, or any other liability that cannot be legally excluded."
+            "p2": "Nulla in queste condizioni esclude o limita la nostra responsabilità per morte o lesioni personali causate dalla nostra negligenza, frode o dichiarazioni fraudolente, o qualsiasi altra responsabilità che non può essere legalmente esclusa."
         },
         "ip": {
-            "title": "Intellectual property",
-            "p1": "All intellectual property rights in the app, documentation, and Services belong to us or our licensors. Your right to use the app is licensed, not sold. You have no ownership rights in our intellectual property beyond what these terms expressly grant."
+            "title": "Proprietà intellettuale",
+            "p1": "Tutti i diritti di proprietà intellettuale sull'app, la documentazione e i Servizi appartengono a noi o ai nostri licenzianti. Il tuo diritto di utilizzare l'app è concesso in licenza, non venduto. Non hai diritti di proprietà sulla nostra proprietà intellettuale oltre a quanto espressamente concesso da queste condizioni."
         },
         "changes": {
-            "title": "Changes to our services and terms",
-            "p1": "We may update the app and Services from time to time to improve functionality, add features, or address security issues. We may also update these terms. When we make material changes, we will notify you through the app or by email. Your continued use of Folio after such changes constitutes acceptance of the updated terms."
+            "title": "Modifiche ai nostri servizi e condizioni",
+            "p1": "Possiamo aggiornare l'app e i Servizi di tanto in tanto per migliorare le funzionalità, aggiungere caratteristiche o risolvere problemi di sicurezza. Possiamo anche aggiornare queste condizioni. Quando apportiamo modifiche sostanziali, ti avviseremo tramite l'app o via email. Il tuo uso continuato di Folio dopo tali modifiche costituisce accettazione delle condizioni aggiornate."
         },
         "termination": {
-            "title": "Termination",
-            "p1": "You may stop using Folio at any time by deleting the app. We may suspend or terminate your access if you breach these terms, though we will give you notice and an opportunity to remedy the breach where reasonably practicable. Upon termination, you must cease all use of the Services. Provisions that by their nature should survive termination will remain in effect."
+            "title": "Risoluzione",
+            "p1": "Puoi smettere di usare Folio in qualsiasi momento eliminando l'app. Possiamo sospendere o terminare il tuo accesso se violi queste condizioni, anche se ti daremo un preavviso e un'opportunità di rimediare alla violazione ove ragionevolmente possibile. Alla risoluzione, devi cessare ogni uso dei Servizi. Le disposizioni che per loro natura dovrebbero sopravvivere alla risoluzione rimarranno in vigore."
         },
         "law": {
-            "title": "Governing law and disputes",
-            "p1": "These terms are governed by the laws of England and Wales. Any disputes arising from or relating to these terms or your use of our Services shall be subject to the exclusive jurisdiction of the courts of England and Wales. If any provision of these terms is found to be unenforceable, the remaining provisions will continue in full force and effect. We may transfer our rights and obligations under these terms to another organization, but this will not affect your rights."
+            "title": "Legge applicabile e controversie",
+            "p1": "Queste condizioni sono regolate dalle leggi di Inghilterra e Galles. Qualsiasi controversia derivante da o relativa a queste condizioni o al tuo utilizzo dei nostri Servizi sarà soggetta alla giurisdizione esclusiva dei tribunali di Inghilterra e Galles. Se una disposizione di queste condizioni risulta inapplicabile, le restanti disposizioni continueranno ad avere pieno effetto. Possiamo trasferire i nostri diritti e obblighi ai sensi di queste condizioni a un'altra organizzazione, ma ciò non pregiudicherà i tuoi diritti."
         },
         "contact": {
-            "title": "Contact us",
-            "p1": "If you have questions about these terms or need support, please email us at <0>support@folio.id</0>. For privacy-related inquiries, contact <1>privacy@folio.id</1>."
+            "title": "Contattaci",
+            "p1": "Se hai domande su queste condizioni o hai bisogno di assistenza, scrivici a <0>support@folio.id</0>. Per richieste relative alla privacy, contatta <1>privacy@folio.id</1>."
         }
     },
     "privacy_page": {
-        "intro": "Folio Technologies Limited (\"Folio,\" \"we,\" \"us,\" or \"our\") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use the Folio Wallet app and related services.",
-        "commitment": "<strong>Our commitment:</strong> We operate on a zero-knowledge architecture. Your personal documents are encrypted in your wallet, and we cannot access or view your private information. We will never share your personal data with third parties without your explicit consent.",
+        "intro": "Folio Technologies Limited (\"Folio\", \"noi\", \"nostro\" o \"ci\") rispetta la tua privacy e si impegna a proteggere i tuoi dati personali. Questa Informativa sulla privacy spiega come raccogliamo, utilizziamo, divulghiamo e proteggiamo le tue informazioni quando utilizzi l'app Folio Wallet e i servizi correlati.",
+        "commitment": "<strong>Il nostro impegno:</strong> Operiamo con un'architettura zero-knowledge. I tuoi documenti personali sono crittografati nel tuo portafoglio e non possiamo accedere né visualizzare le tue informazioni private. Non condivideremo mai i tuoi dati personali con terze parti senza il tuo esplicito consenso.",
         "who_we_are": {
-            "title": "Who we are",
-            "p1": "Folio Technologies Limited is a company registered in England and Wales (Company Number 07236594). Our registered office is at 88 Baker Street, London W1U 6TQ, United Kingdom. We are the data controller for personal information collected through the Folio app. For privacy questions, contact our data privacy manager at <0>privacy@folio.id</0>."
+            "title": "Chi siamo",
+            "p1": "Folio Technologies Limited è una società registrata in Inghilterra e Galles (Numero di registrazione 07236594). La nostra sede legale è in 88 Baker Street, Londra W1U 6TQ, Regno Unito. Siamo il titolare del trattamento dei dati personali raccolti tramite l'app Folio. Per domande sulla privacy, contatta il nostro responsabile della protezione dei dati a <0>privacy@folio.id</0>."
         },
         "collect": {
-            "title": "Personal information we collect",
+            "title": "Dati personali che raccogliamo",
             "provide": {
-                "title": "Information you provide",
-                "p1": "When you create an account, we collect information necessary to verify your identity and provide our services. This may include a selfie for biometric verification. We process this data securely and only with your explicit consent. If you contact our support team, we may temporarily process personal data from documents you need help with. This data is automatically deleted within three days."
+                "title": "Informazioni che fornisci",
+                "p1": "Quando crei un account, raccogliamo le informazioni necessarie per verificare la tua identità e fornire i nostri servizi. Questo può includere un selfie per la verifica biometrica. Trattiamo questi dati in modo sicuro e solo con il tuo esplicito consenso. Se contatti il nostro team di supporto, potremmo trattare temporaneamente dati personali da documenti per i quali hai bisogno di aiuto. Questi dati vengono automaticamente eliminati entro tre giorni."
             },
             "auto": {
-                "title": "Information collected automatically",
-                "p1": "When you use our Services, we automatically collect certain technical and usage information:",
+                "title": "Informazioni raccolte automaticamente",
+                "p1": "Quando utilizzi i nostri Servizi, raccogliamo automaticamente alcune informazioni tecniche e di utilizzo:",
                 "list": {
-                    "item1": "Device information: device type, operating system, unique device identifiers",
-                    "item2": "Connection information: IP address, browser type and version, time zone",
-                    "item3": "Usage patterns: anonymized data about how you interact with the app, such as the number of documents stored (but never the content of those documents)"
+                    "item1": "Informazioni sul dispositivo: tipo di dispositivo, sistema operativo, identificatori univoci del dispositivo",
+                    "item2": "Informazioni di connessione: indirizzo IP, tipo e versione del browser, fuso orario",
+                    "item3": "Modelli di utilizzo: dati anonimizzati su come interagisci con l'app, come il numero di documenti archiviati (ma mai il contenuto di tali documenti)"
                 }
             }
         },
         "use": {
-            "title": "How we use personal information",
-            "p1": "We use your personal information for the following purposes:",
+            "title": "Come utilizziamo i dati personali",
+            "p1": "Utilizziamo i tuoi dati personali per i seguenti scopi:",
             "list": {
-                "item1": "To register you as a user and provide our Services",
-                "item2": "To verify your identity and protect against fraud",
-                "item3": "To respond to your support requests and communicate with you",
-                "item4": "To improve, maintain, and secure our app and Services",
-                "item5": "To comply with legal obligations and protect our rights"
+                "item1": "Per registrarti come utente e fornire i nostri Servizi",
+                "item2": "Per verificare la tua identità e proteggerti dalle frodi",
+                "item3": "Per rispondere alle tue richieste di supporto e comunicare con te",
+                "item4": "Per migliorare, mantenere e proteggere la nostra app e i nostri Servizi",
+                "item5": "Per rispettare gli obblighi legali e proteggere i nostri diritti"
             },
-            "p2": "We rely on your consent for processing biometric data such as your selfie. For other processing activities, we rely on our legitimate interests in providing and improving our Services, the performance of our contract with you, or compliance with legal obligations."
+            "p2": "Ci basiamo sul tuo consenso per il trattamento di dati biometrici come il tuo selfie. Per altre attività di trattamento, ci basiamo sui nostri legittimi interessi nel fornire e migliorare i nostri Servizi, sull'esecuzione del nostro contratto con te o sul rispetto degli obblighi legali."
         },
         "security": {
-            "title": "Security and data protection",
-            "p1": "Security is fundamental to our design. We implement robust technical and organizational measures to protect your personal information:",
+            "title": "Sicurezza e protezione dei dati",
+            "p1": "La sicurezza è fondamentale per la nostra progettazione. Implementiamo robuste misure tecniche e organizzative per proteggere i tuoi dati personali:",
             "list": {
-                "item1": "Zero-knowledge architecture ensures we cannot access your private data",
-                "item2": "End-to-end encryption protects all data in transit using modern cipher suites",
-                "item3": "Your personal documents are encrypted and stored only in your wallet on your device",
-                "item4": "We store only cryptographic hashes on our servers to detect tampering and protect against fraud",
-                "item5": "We maintain compliance with ISO 27001 and SOC 2 security standards",
-                "item6": "Access to any personal data is strictly limited to authorized personnel on a need-to-know basis"
+                "item1": "L'architettura zero-knowledge garantisce che non possiamo accedere ai tuoi dati privati",
+                "item2": "La crittografia end-to-end protegge tutti i dati in transito utilizzando suite crittografiche moderne",
+                "item3": "I tuoi documenti personali sono crittografati e conservati solo nel tuo portafoglio sul tuo dispositivo",
+                "item4": "Conserviamo solo hash crittografici sui nostri server per rilevare manomissioni e proteggere dalle frodi",
+                "item5": "Manteniamo la conformità agli standard di sicurezza ISO 27001 e SOC 2",
+                "item6": "L'accesso a qualsiasi dato personale è strettamente limitato al personale autorizzato secondo il principio della necessità di conoscere"
             },
-            "p2": "<strong>Account recovery:</strong> During registration, you will be prompted to save a Recovery Code. Due to our zero-knowledge architecture, we cannot help you recover your account or data if you lose this code. Please store it securely."
+            "p2": "<strong>Recupero dell'account:</strong> Durante la registrazione, ti verrà chiesto di salvare un Codice di Recupero. A causa della nostra architettura zero-knowledge, non possiamo aiutarti a recuperare il tuo account o i tuoi dati se perdi questo codice. Conservalo in modo sicuro."
         },
         "disclosure": {
-            "title": "Disclosure of personal information",
-            "p1": "We only share your personal information in the following circumstances:",
+            "title": "Divulgazione dei dati personali",
+            "p1": "Condividiamo i tuoi dati personali solo nelle seguenti circostanze:",
             "list": {
-                "item1": "With your explicit consent or at your direction",
-                "item2": "With service providers who assist us in operating our Services, under strict contractual obligations",
-                "item3": "To comply with applicable laws, regulations, or legal processes",
-                "item4": "To protect the rights, privacy, safety, or property of Folio, our users, or the public"
+                "item1": "Con il tuo esplicito consenso o su tua indicazione",
+                "item2": "Con fornitori di servizi che ci assistono nell'operatività dei nostri Servizi, sotto rigorosi obblighi contrattuali",
+                "item3": "Per rispettare leggi, regolamenti o procedimenti legali applicabili",
+                "item4": "Per proteggere i diritti, la privacy, la sicurezza o la proprietà di Folio, dei nostri utenti o del pubblico"
             },
-            "p2": "We never sell your personal data. If you choose to share information with third parties through the app, please review their privacy policies before doing so."
+            "p2": "Non vendiamo mai i tuoi dati personali. Se scegli di condividere informazioni con terze parti tramite l'app, ti invitiamo a consultare le loro informative sulla privacy prima di farlo."
         },
         "transfers": {
-            "title": "International data transfers",
-            "p1": "We primarily store personal data in secure locations within the European Economic Area. If we need to transfer data outside the UK or EEA, we ensure appropriate safeguards are in place, such as standard contractual clauses approved by the UK Information Commissioner's Office or European Commission."
+            "title": "Trasferimenti internazionali di dati",
+            "p1": "Conserviamo principalmente i dati personali in località sicure all'interno dello Spazio Economico Europeo. Se dobbiamo trasferire dati al di fuori del Regno Unito o dello SEE, ci assicuriamo che siano in atto le opportune garanzie, come le clausole contrattuali standard approvate dall'Ufficio del Commissario per l'Informazione del Regno Unito o dalla Commissione Europea."
         },
         "retention": {
-            "title": "Data retention",
-            "p1": "We retain your personal data only for as long as necessary to fulfil the purposes described in this policy. Your documents and information remain in your encrypted wallet until you delete them or your account. Biometric data used for verification is retained for a maximum of three years from your last interaction with the platform, unless longer retention is required by law or to resolve disputes."
+            "title": "Conservazione dei dati",
+            "p1": "Conserviamo i tuoi dati personali solo per il tempo necessario a raggiungere gli scopi descritti in questa informativa. I tuoi documenti e le tue informazioni rimangono nel tuo portafoglio crittografato fino a quando non li elimini o elimini il tuo account. I dati biometrici utilizzati per la verifica sono conservati per un massimo di tre anni dalla tua ultima interazione con la piattaforma, salvo che una conservazione più lunga sia richiesta dalla legge o per risolvere controversie."
         },
         "rights": {
-            "title": "Your rights",
-            "p1": "Under applicable data protection laws, including the UK GDPR, you have the following rights:",
+            "title": "I tuoi diritti",
+            "p1": "Ai sensi delle leggi applicabili sulla protezione dei dati, incluso il GDPR del Regno Unito, hai i seguenti diritti:",
             "list": {
-                "item1": "Access: request a copy of the personal data we hold about you",
-                "item2": "Rectification: request correction of inaccurate or incomplete data",
-                "item3": "Erasure: request deletion of your personal data in certain circumstances",
-                "item4": "Restriction: request that we limit how we process your data",
-                "item5": "Portability: receive your data in a structured, commonly used format",
-                "item6": "Objection: object to processing based on legitimate interests",
-                "item7": "Withdraw consent: withdraw consent at any time where we rely on it for processing"
+                "item1": "Accesso: richiedere una copia dei dati personali che deteniamo su di te",
+                "item2": "Rettifica: richiedere la correzione di dati inesatti o incompleti",
+                "item3": "Cancellazione: richiedere l'eliminazione dei tuoi dati personali in determinate circostanze",
+                "item4": "Limitazione: richiedere che limitiamo il modo in cui trattiamo i tuoi dati",
+                "item5": "Portabilità: ricevere i tuoi dati in un formato strutturato e di uso comune",
+                "item6": "Opposizione: opporti al trattamento basato su interessi legittimi",
+                "item7": "Revoca del consenso: revocare il consenso in qualsiasi momento quando ci basiamo su di esso per il trattamento"
             },
-            "p2": "To exercise any of these rights, email us at <0>privacy@folio.id</0>. We will respond within one month. We generally do not charge a fee, but we may charge a reasonable fee for manifestly unfounded or excessive requests."
+            "p2": "Per esercitare uno di questi diritti, scrivici a <0>privacy@folio.id</0>. Risponderemo entro un mese. Generalmente non addebitiamo costi, ma potremmo addebitare un costo ragionevole per richieste manifestamente infondate o eccessive."
         },
         "cookies": {
-            "title": "Cookies and similar technologies",
-            "p1": "Our website uses cookies and similar tracking technologies to enhance your experience, analyze usage patterns, and support our marketing efforts. Cookies are small text files stored on your device that help us recognize you and remember your preferences.",
-            "p2": "We use the following types of cookies:",
+            "title": "Cookie e tecnologie simili",
+            "p1": "Il nostro sito web utilizza cookie e tecnologie di tracciamento simili per migliorare la tua esperienza, analizzare i modelli di utilizzo e supportare le nostre attività di marketing. I cookie sono piccoli file di testo memorizzati sul tuo dispositivo che ci aiutano a riconoscerti e ricordare le tue preferenze.",
+            "p2": "Utilizziamo i seguenti tipi di cookie:",
             "list": {
-                "item1": "Essential cookies: required for the website to function properly and cannot be disabled",
-                "item2": "Analytics cookies: help us understand how visitors interact with our website",
-                "item3": "Preference cookies: remember your settings and preferences"
+                "item1": "Cookie essenziali: necessari per il corretto funzionamento del sito web e non possono essere disabilitati",
+                "item2": "Cookie analitici: ci aiutano a capire come i visitatori interagiscono con il nostro sito web",
+                "item3": "Cookie di preferenza: ricordano le tue impostazioni e preferenze"
             },
-            "p3": "You can manage your cookie preferences through your browser settings. Please note that disabling certain cookies may affect website functionality."
+            "p3": "Puoi gestire le tue preferenze sui cookie attraverso le impostazioni del tuo browser. Tieni presente che la disabilitazione di alcuni cookie potrebbe influire sulla funzionalità del sito web."
         },
         "children": {
-            "title": "Children's privacy",
-            "p1": "Folio is not intended for children under 16 years of age. We do not knowingly collect personal information from children. If you believe we have inadvertently collected data from a child, please contact us immediately at <0>privacy@folio.id</0>, and we will take steps to delete such information."
+            "title": "Privacy dei minori",
+            "p1": "Folio non è destinato a minori di 16 anni. Non raccogliamo consapevolmente dati personali da minori. Se ritieni che abbiamo inavvertitamente raccolto dati da un minore, contattaci immediatamente a <0>privacy@folio.id</0>, e prenderemo provvedimenti per eliminare tali informazioni."
         },
         "changes": {
-            "title": "Changes to this policy",
-            "p1": "We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. When we make material changes, we will notify you through the app or by email and update the \"Last updated\" date at the top of this page. We encourage you to review this policy periodically."
+            "title": "Modifiche a questa informativa",
+            "p1": "Potremmo aggiornare questa Informativa sulla privacy di tanto in tanto per riflettere cambiamenti nelle nostre pratiche o nelle leggi applicabili. Quando apportiamo modifiche sostanziali, ti avviseremo tramite l'app o via email e aggiorneremo la data di \"Ultimo aggiornamento\" in cima a questa pagina. Ti invitiamo a consultare periodicamente questa informativa."
         },
         "contact": {
-            "title": "Contact us",
-            "p1": "If you have questions about this Privacy Policy or how we handle your personal data, please contact our data privacy manager at <0>privacy@folio.id</0>. You also have the right to lodge a complaint with the UK Information Commissioner's Office (ICO) at <1>ico.org.uk</1> if you are dissatisfied with how we have handled your personal data."
+            "title": "Contattaci",
+            "p1": "Se hai domande su questa Informativa sulla privacy o su come trattiamo i tuoi dati personali, contatta il nostro responsabile della protezione dei dati a <0>privacy@folio.id</0>. Hai anche il diritto di presentare un reclamo all'Ufficio del Commissario per l'Informazione del Regno Unito (ICO) su <1>ico.org.uk</1> se non sei soddisfatto di come abbiamo trattato i tuoi dati personali."
         }
     },
     "access-your-digital-wallet-anywhere": {
