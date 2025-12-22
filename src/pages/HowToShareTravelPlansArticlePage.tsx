@@ -1,19 +1,23 @@
+import { useTranslation, Trans } from 'react-i18next'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, HowToSchema } from '../components/ui'
 import { LocalizedLink } from '../components/ui'
 import shareTravelImage from '../assets/images/blog-share-travel-folio.png'
 
 export default function HowToShareTravelPlansArticlePage() {
+  const { t } = useTranslation('articles')
+  const slug = 'how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app'
+
   return (
     <BlogArticleLayout
-      title="Your friend booked the hotel. Now they're stuck in traffic. Do you have the confirmation?"
-      description="Group trips fall apart when one person has all the bookings. Here's how to make sure everyone has access to everything."
+      title={t(`${slug}.title`)}
+      description={t(`${slug}.description`)}
       date="Jul 18, 2025"
       category="Product"
-      slug="how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app"
+      slug={slug}
     >
       <HowToSchema
-        name="How to share travel plans with friends using Folio"
-        description="Step-by-step guide to sharing trip bookings and travel documents with friends and family using shared folders in Folio."
+        name={t(`${slug}.title`)}
+        description={t(`${slug}.description`)}
         totalTime="PT10M"
         steps={[
           { name: "Download Folio app", text: "Install Folio Wallet from the App Store or Google Play Store on your phone." },
@@ -24,60 +28,37 @@ export default function HowToShareTravelPlansArticlePage() {
           { name: "Access documents during the trip", text: "During your trip, anyone can show any document at check-in, train stations, or venues. No need to wait for the person who booked." },
         ]}
       />
+      <ArticleParagraph>{t(`${slug}.p1`)}</ArticleParagraph>
+      <ArticleParagraph>{t(`${slug}.p2`)}</ArticleParagraph>
+
+      <ArticleH2>{t(`${slug}.h2_1`)}</ArticleH2>
+      <ArticleParagraph>{t(`${slug}.p3`)}</ArticleParagraph>
+      <ArticleParagraph>{t(`${slug}.p4`)}</ArticleParagraph>
+
+      <ArticleH2>{t(`${slug}.h2_2`)}</ArticleH2>
+      <ArticleParagraph>{t(`${slug}.p5`)}</ArticleParagraph>
       <ArticleParagraph>
-        You're standing at the hotel front desk. Your friend booked the room, but their flight was delayed. The receptionist is asking for the confirmation number. You check your messages: nothing. You search your email: nothing. The booking is in your friend's inbox, on a phone that's currently somewhere over the Atlantic.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        This is the single point of failure problem. Group trips spread information across multiple people's inboxes. When the person with the booking isn't there, everyone else is stuck.
-      </ArticleParagraph>
-
-      <ArticleH2>Why forwarding doesn't work</ArticleH2>
-
-      <ArticleParagraph>
-        The obvious solution is forwarding emails. Someone books the hotel, forwards the confirmation to everyone. Someone else books train tickets, forwards those too. In theory, everyone has everything.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        In practice, it falls apart. The forwarded email gets buried under 50 other messages. Someone's phone is on airplane mode and the attachment won't load. The person who needs the confirmation is scrolling through a group chat trying to find a screenshot from three weeks ago. Updates don't sync. Someone changed the reservation but forgot to forward the new confirmation.
-      </ArticleParagraph>
-
-      <ArticleH2>Shared folders: everyone has everything</ArticleH2>
-
-      <ArticleParagraph>
-        The real solution is shared access to documents, not copies of documents. When you add a hotel booking to a shared folder, everyone with access sees it immediately. Not a forwarded copy that might be outdated, but the actual document you're looking at.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</LocalizedLink> works this way. Create a folder for your trip. Import your bookings: forward the confirmation email, upload the PDF, photograph the printout. Invite your travel companions. Now everyone sees the same timeline with the same documents.
+        <Trans
+          i18nKey={`${slug}.p6`}
+          ns="articles"
+          components={{
+            LocalizedLink: <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors" />
+          }}
+        />
       </ArticleParagraph>
 
       <ArticleImage
         src={shareTravelImage}
-        alt="Folio app showing import options, shared trip timeline with hotel, flights, and activities, and train ticket details for two passengers"
+        alt={t(`${slug}.img_alt`)}
       />
 
-      <ArticleParagraph>
-        The flight shows both travelers tagged. The train ticket shows seats for two people. The hotel confirmation is visible to everyone in the folder. When you're at the front desk and your friend is delayed, you pull up the same confirmation they would show. No searching. No "can you screenshot that?"
-      </ArticleParagraph>
+      <ArticleParagraph>{t(`${slug}.p7`)}</ArticleParagraph>
 
-      <ArticleH2>How it works in practice</ArticleH2>
-
-      <ArticleParagraph>
-        Before your trip: one person creates a shared folder and invites the others. As bookings come in, anyone can add them. Forward the confirmation email to your Folio address, or upload the PDF directly. The app extracts dates, times, confirmation numbers, and builds a timeline.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        During your trip: anyone can show any document. At the train station, either person can pull up the tickets with the QR code. At the museum, anyone has the entrance tickets. If plans change and someone adds a new restaurant reservation, it appears for everyone immediately.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        The practical difference: the person who booked doesn't need to be present. If one friend is running late, the others check in to the hotel. If someone's phone dies, the other person has the train tickets. No one is the single point of failure anymore.
-      </ArticleParagraph>
-
-      <ArticleParagraph>
-        Group trips work better when everyone has access to everything. Not screenshots that get lost, not forwarded emails that get buried, but shared documents that stay current. Less "can you send me that again?" More actually enjoying the trip together.
-      </ArticleParagraph>
+      <ArticleH2>{t(`${slug}.h2_3`)}</ArticleH2>
+      <ArticleParagraph>{t(`${slug}.p8`)}</ArticleParagraph>
+      <ArticleParagraph>{t(`${slug}.p9`)}</ArticleParagraph>
+      <ArticleParagraph>{t(`${slug}.p10`)}</ArticleParagraph>
+      <ArticleParagraph>{t(`${slug}.p11`)}</ArticleParagraph>
     </BlogArticleLayout>
   )
 }

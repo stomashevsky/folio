@@ -1,4 +1,4 @@
-import { useState, useEffect, ImgHTMLAttributes } from 'react'
+import { useState, useEffect, useRef, ImgHTMLAttributes } from 'react'
 
 interface ImageWithPlaceholderProps extends Omit<ImgHTMLAttributes<HTMLImageElement>, 'onLoad' | 'onError'> {
   /** Image source URL */
@@ -47,6 +47,17 @@ export default function ImageWithPlaceholder({
   ...props
 }: ImageWithPlaceholderProps) {
   const [isLoading, setIsLoading] = useState(true)
+  const imgRef = useRef<HTMLImageElement>(null)
+
+  // Check if image is already loaded on mount (hydration case)
+  // When React hydrates prerendered HTML, the image may already be loaded
+  // but onLoad won't fire again, leaving the image invisible
+  useEffect(() => {
+    const img = imgRef.current
+    if (img && img.complete && img.naturalWidth > 0) {
+      setIsLoading(false)
+    }
+  }, [])
 
   // Reset loading state when src changes - critical for accordion image switching
   useEffect(() => {
@@ -68,6 +79,7 @@ export default function ImageWithPlaceholder({
         />
       )}
       <img
+        ref={imgRef}
         src={src}
         alt={alt}
         className={`${className} ${animationClass}`}
