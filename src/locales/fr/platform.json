@@ -1,0 +1,1107 @@
+{
+  "idVerification": {
+    "meta": {
+      "title": "Vérification d'identité | Folio Wallet",
+      "description": "Vérifiez les documents officiels et confirmez l'identité dans plus de 200 pays et régions."
+    },
+    "hero": {
+      "tagline": "Vérification d'identité",
+      "title": "Vérifiez les pièces d'identité gouvernementales en toute confiance",
+      "description": "Vérifiez les documents officiels et confirmez l'identité dans plus de 200 pays et régions."
+    },
+    "advanced": {
+      "title": "Vérification d'identité avancée",
+      "global": {
+        "title": "Support mondial des ID",
+        "description": "Reconnaissez et validez une large gamme de documents officiels, incluant passeports et permis de conduire."
+      },
+      "fraud": {
+        "title": "Protection anti-fraude intelligente",
+        "description": "Détectez les pièces d'identité altérées ou falsifiées avec des flux de capture précis et des contrôles d'authenticité intelligents."
+      },
+      "fast": {
+        "title": "Résultats automatisés rapides",
+        "description": "La plupart des vérifications se terminent en quelques secondes, offrant aux utilisateurs une expérience fluide et rapide."
+      }
+    },
+    "howItWorks": {
+      "title": "Comment ça fonctionne",
+      "setup": {
+        "title": "Personnalisez l'expérience de vérification",
+        "description": "Définissez quels documents les utilisateurs peuvent soumettre et comment la vérification est effectuée."
+      },
+      "capture": {
+        "title": "Capturez les documents d'identité",
+        "description": "Les utilisateurs scannent leur pièce d'identité gouvernementale. Folio lit les données et vérifie si le document est authentique."
+      },
+      "verify": {
+        "title": "Vérifiez et prenez une décision",
+        "description": "Approuvez, refusez ou envoyez le dossier en révision selon vos règles."
+      }
+    },
+    "keyFeatures": {
+      "title": "Fonctionnalités clés",
+      "description": "Utilisez la technologie de pointe pour vérifier les pièces d'identité gouvernementales dans le monde entier",
+      "items": {
+        "global": { "title": "Fonctionne dans le monde entier", "description": "Support pour des centaines de pièces d'identité gouvernementales de plus de 200 régions." },
+        "guidance": { "title": "Guidage de capture clair", "description": "Les instructions à l'écran aident les utilisateurs à prendre des photos de documents claires et précises." },
+        "autoCapture": { "title": "Capture photo automatique", "description": "Le système prend la photo au moment parfait, réduisant les nouvelles tentatives." },
+        "extraction": { "title": "Extraction de données précise", "description": "Lisez et structurez les données directement depuis la pièce d'identité, puis vérifiez la cohérence." },
+        "sensitive": { "title": "Contrôle des données sensibles", "description": "Masquez les champs personnels si nécessaire pour protéger les informations utilisateur." },
+        "custom": { "title": "Contrôles personnalisés", "description": "Ajoutez vos propres règles de validité de document, d'expiration et de précision des données." },
+        "faceMatch": { "title": "Reconnaissance faciale", "description": "Comparez un selfie en direct avec la photo d'identité pour confirmer la personne derrière le document." },
+        "profile": { "title": "Correspondance de profil", "description": "Vérifiez les données d'identité par rapport aux comptes existants pour éviter les doublons." },
+        "automated": { "title": "Décisions automatisées", "description": "Laissez le système traiter la plupart des vérifications instantanément, minimisant le travail manuel." }
+      }
+    },
+    "useCases": {
+      "title": "Utilisations pratiques des contrôles d'identité gouvernementaux",
+      "kyc": { "title": "Conformité KYC", "description": "Renforcez votre flux KYC en confirmant l'authenticité des pièces d'identité gouvernementales." },
+      "identity": { "title": "Assurance d'identité", "description": "Répondez aux besoins d'assurance avec des documents vérifiés et une correspondance faciale en direct." },
+      "friction": { "title": "Friction dynamique", "description": "Ajustez les étapes de vérification en fonction des données extraites du document." }
+    },
+    "cta": {
+      "title": "Construisons une meilleure vérification d'identité",
+      "description": "Parlez à notre équipe pour découvrir comment Folio peut améliorer votre expérience d'onboarding et de vérification."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        { "q": "Quels documents peuvent être vérifiés ?", "a": "Folio prend en charge les passeports, cartes d'identité nationales, permis de conduire et titres de séjour de plus de 200 pays et régions." },
+        { "q": "Combien de temps prend la vérification ?", "a": "La plupart des vérifications se terminent en moins de 10 secondes. Les cas complexes nécessitant une révision manuelle peuvent prendre plus longtemps." },
+        { "q": "Comment Folio détecte-t-il les documents frauduleux ?", "a": "Folio utilise des contrôles alimentés par l'IA pour détecter les altérations, falsifications et contrefaçons. Le système analyse la structure du document, les éléments de sécurité, les polices et les métadonnées pour repérer les incohérences." },
+        { "q": "Puis-je personnaliser le flux de vérification ?", "a": "Oui. Vous pouvez définir quels documents accepter, configurer des règles de validation personnalisées, paramétrer les décisions automatisées et ajouter une vérification renforcée si nécessaire." },
+        { "q": "Le processus de vérification est-il conforme aux réglementations ?", "a": "Folio aide à répondre aux exigences KYC et AML dans toutes les juridictions. La plateforme fournit des pistes d'audit et des rapports de vérification détaillés à des fins de conformité." },
+        { "q": "Que se passe-t-il si un document ne peut pas être vérifié automatiquement ?", "a": "Les cas qui ne peuvent pas être résolus automatiquement sont signalés pour révision manuelle. Votre équipe peut examiner le document et prendre une décision via l'Espace de révision." },
+        { "q": "Folio prend-il en charge la lecture de puce NFC ?", "a": "Oui. Pour les documents avec puces NFC (comme les e-passeports), Folio peut lire et vérifier les données de la puce pour une couche supplémentaire d'authenticité." }
+      ]
+    }
+  },
+  "documentIntelligence": {
+    "meta": {
+      "title": "Analyse documentaire | Folio Wallet",
+      "description": "Examinez automatiquement les documents soumis pour confirmer l'identité ou valider un justificatif de domicile, de revenus ou de santé avec un effort minimal."
+    },
+    "hero": {
+      "tagline": "Analyse documentaire",
+      "title": "Automatisez la révision de documents à grande échelle",
+      "description": "Examinez automatiquement les documents soumis pour confirmer l'identité ou valider un justificatif de domicile, de revenus ou de santé avec un effort minimal."
+    },
+    "processing": {
+      "title": "Traitement intelligent des documents",
+      "approve": {
+        "title": "Approuvez les utilisateurs plus rapidement",
+        "description": "Accélérez la vérification avec une analyse documentaire automatisée qui traite les soumissions en quelques secondes."
+      },
+      "insights": {
+        "title": "Obtenez des insights plus clairs des documents",
+        "description": "Extrayez des données structurées de documents non structurés avec une analyse alimentée par l'IA."
+      },
+      "scale": {
+        "title": "Traitez plus de documents facilement",
+        "description": "Faites évoluer votre vérification de documents sans ajouter de charge de révision manuelle."
+      }
+    },
+    "howItWorks": {
+      "title": "Comment ça fonctionne",
+      "submit": {
+        "title": "Les utilisateurs soumettent des documents en sécurité",
+        "description": "Les utilisateurs téléchargent des documents via une interface sécurisée avec des conseils pour une meilleure qualité de capture."
+      },
+      "extract": {
+        "title": "Extraction automatique des informations",
+        "description": "L'IA lit et extrait les données clés des documents, identifiant le type de document et les champs pertinents."
+      },
+      "review": {
+        "title": "Révisez les informations efficacement",
+        "description": "Examinez les données extraites avec des scores de confiance et des zones surlignées nécessitant attention."
+      }
+    },
+    "keyFeatures": {
+      "title": "Fonctionnalités clés",
+      "description": "Traitez plus de documents en moins de temps",
+      "items": {
+        "supportedTypes": {
+          "title": "Types de documents supportés",
+          "description": "Collectez et classifiez automatiquement les registres d'entreprise, formulaires fiscaux, relevés bancaires, factures de services publics, immatriculations de véhicules et plus."
+        },
+        "countryCoverage": {
+          "title": "Couverture par pays",
+          "description": "Acceptez des documents de plus de 90 pays supportés."
+        },
+        "customizableFlow": {
+          "title": "Flux de collecte personnalisable",
+          "description": "Choisissez quels types de documents accepter, combien de tentatives de soumission autoriser et quelles vérifications appliquer."
+        },
+        "tamperChecks": {
+          "title": "Contrôles de falsification configurables",
+          "description": "Détectez automatiquement les signes de falsification d'image ou PDF et les incohérences pouvant signaler une fraude."
+        },
+        "userGuidance": {
+          "title": "Guidage utilisateur",
+          "description": "Réduisez les erreurs avec des conseils intégrés à l'app qui aident les utilisateurs à éviter reflets, flous et autres problèmes lors du téléchargement de documents."
+        },
+        "aiInsights": {
+          "title": "Insights IA",
+          "description": "Gagnez du temps avec la classification alimentée par IA, l'extraction de données et les insights prêts pour la révision."
+        }
+      }
+    },
+    "practicalUses": {
+      "title": "Utilisations pratiques de l'IA documentaire",
+      "identity": {
+        "title": "Vérification d'identité",
+        "description": "Vérifiez les documents d'identité comme les passeports, permis de conduire et cartes d'identité nationales."
+      },
+      "business": {
+        "title": "Vérification d'entreprise",
+        "description": "Validez les documents d'enregistrement d'entreprise et les dépôts de société."
+      },
+      "address": {
+        "title": "Confirmation d'adresse",
+        "description": "Confirmez l'adresse via les factures de services publics, relevés bancaires et correspondances officielles."
+      },
+      "health": {
+        "title": "Preuve de couverture santé",
+        "description": "Vérifiez les cartes d'assurance maladie et les documents de couverture."
+      },
+      "vehicle": {
+        "title": "Vérification de propriété de véhicule",
+        "description": "Validez les documents d'immatriculation et de propriété de véhicule."
+      },
+      "income": {
+        "title": "Validation de patrimoine et revenus",
+        "description": "Vérifiez les revenus via les bulletins de paie, déclarations fiscales et relevés financiers."
+      }
+    },
+    "cta": {
+      "title": "Construisons une meilleure vérification d'identité",
+      "description": "Parlez à notre équipe pour découvrir comment Folio peut améliorer votre expérience d'onboarding et de vérification."
+    }
+  },
+  "livenessCheck": {
+    "meta": {
+      "title": "Vérification de présence | Folio Wallet",
+      "description": "Protégez-vous contre la plus large gamme d'usurpations faciales grâce à une solution multicouche."
+    },
+    "hero": {
+      "tagline": "Vérification de présence",
+      "title": "Confirmez une présence réelle, pas des photos",
+      "description": "Protégez-vous contre la plus large gamme d'usurpations faciales grâce à une solution multicouche."
+    },
+    "protection": {
+      "title": "Protection avancée contre l'usurpation et la fraude",
+      "spoof": {
+        "title": "Protection contre l'usurpation",
+        "description": "Protégez votre système des deepfakes, visages synthétiques, manipulation d'images et autres tentatives d'usurpation."
+      },
+      "certified": {
+        "title": "Testé et certifié",
+        "description": "Nos contrôles de présence répondent à la norme ISO/IEC 30107-3, validée par un laboratoire accrédité NIST."
+      },
+      "injection": {
+        "title": "Défense contre l'injection",
+        "description": "Utilisez un large éventail de signaux visuels, d'appareil, comportementaux et réseau, ainsi que des modèles d'ensemble et des méthodes adaptatives de renforcement."
+      }
+    },
+    "howItWorks": {
+      "title": "Comment ça fonctionne",
+      "collectSignals": {
+        "title": "Collecter les signaux",
+        "description": "Folio collecte les signaux du selfie et de l'appareil pour évaluer la présence et confirmer une présence humaine réelle."
+      },
+      "analyzeAssess": {
+        "title": "Analyser et évaluer",
+        "description": "Les signaux visuels et d'appareil sont analysés pour détecter les incohérences et prévenir les tentatives d'usurpation."
+      },
+      "makeDecisions": {
+        "title": "Prendre des décisions",
+        "description": "Selon les résultats, Folio détermine l'étape suivante, des vérifications supplémentaires à l'approbation."
+      }
+    },
+    "keyFeatures": {
+      "title": "Fonctionnalités clés",
+      "description": "Alimentez votre flux de vérification avec des signaux multicouches, des modèles modernes et des contrôles adaptatifs.",
+      "items": {
+        "euAligned": {
+          "title": "Détection d'injection alignée UE",
+          "description": "Folio suit les directives CEN TS 18099 2024 pour détecter et prévenir les attaques par injection."
+        },
+        "signalLibrary": {
+          "title": "Bibliothèque de signaux étendue",
+          "description": "Collectez un large ensemble de signaux propriétaires pour comprendre le contexte derrière chaque soumission de document et selfie."
+        },
+        "updatedModels": {
+          "title": "Modèles continuellement mis à jour",
+          "description": "Bénéficiez de modèles qui s'améliorent avec le temps et restent alignés avec les dernières recherches sur la fraude."
+        },
+        "multiFrame": {
+          "title": "Analyse multi-images",
+          "description": "Examinez plusieurs images au lieu d'une seule capture pour améliorer la précision et réduire les faux positifs."
+        },
+        "hardwareDetection": {
+          "title": "Détection de matériel compromis",
+          "description": "Identifiez les émulateurs, appareils rootés et autres environnements non sécurisés sur lesquels les attaquants s'appuient pour les tentatives d'injection."
+        },
+        "scaledAttack": {
+          "title": "Protection contre les attaques à grande échelle",
+          "description": "Détectez les schémas répétitifs et liez les tentatives connexes pour bloquer les activités de fraude coordonnées."
+        },
+        "flexibleControls": {
+          "title": "Contrôles et vérifications flexibles",
+          "description": "Ajustez finement les seuils de qualité, la détection d'obstruction et les règles de nouvelle tentative pour répondre à vos besoins de conformité et commerciaux."
+        },
+        "fairConsistent": {
+          "title": "Équitable et cohérent sur tous les appareils",
+          "description": "Conçu pour fonctionner uniformément sur différentes carnations, éclairages, systèmes d'exploitation et matériels."
+        },
+        "userGuidance": {
+          "title": "Guidage utilisateur",
+          "description": "Des gestes et instructions clairs aident les utilisateurs à capturer des selfies précis et à générer des signaux de fraude plus forts."
+        }
+      }
+    },
+    "smartDetection": {
+      "title": "Détection de présence intelligente",
+      "genAi": {
+        "title": "Détection d'usurpation GenAI",
+        "description": "Repérez les incohérences visuelles liées aux deepfakes et visages synthétiques, même quand elles ne sont pas visibles à l'œil humain."
+      },
+      "presentation": {
+        "title": "Détection d'attaque de présentation",
+        "description": "Identifiez les attaques de présentation conformément aux normes ISO IEC 30107-3 avec des contrôles de présence automatisés."
+      },
+      "injection": {
+        "title": "Détection d'attaque par injection",
+        "description": "Détectez les tentatives d'injection avancées, y compris les cas où les fraudeurs utilisent des selfies volés d'utilisateurs réels."
+      },
+      "pattern": {
+        "title": "Détection de risque de schéma",
+        "description": "Reconnaissez tôt les comportements de fraude répétitifs et stoppez les tentatives coordonnées avant qu'elles ne s'étendent."
+      },
+      "reviewer": {
+        "title": "Support pour les réviseurs",
+        "description": "Donnez aux réviseurs manuels des signaux et insights de présence clairs pour les aider à prendre des décisions confiantes et précises."
+      },
+      "dynamic": {
+        "title": "Assurance dynamique",
+        "description": "Appliquez le bon niveau de friction basé sur les résultats de présence en temps réel, protégeant contre la fraude tout en laissant les utilisateurs de confiance avancer."
+      }
+    },
+    "cta": {
+      "title": "Construisez une couche d'identité plus forte",
+      "description": "Parlez avec notre équipe pour voir comment Folio peut élever votre flux de vérification et protéger vos utilisateurs à chaque étape."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        { "q": "Qu'est-ce que la détection de présence ?", "a": "La détection de présence confirme que la personne devant la caméra est réelle et physiquement présente. Elle prévient les tentatives d'usurpation utilisant photos, vidéos, masques ou deepfakes." },
+        { "q": "Quels types d'attaques la vérification de présence prévient-elle ?", "a": "Folio détecte les attaques de présentation (photos imprimées, écrans, masques), les attaques par injection (flux de caméra manipulés), les deepfakes, les visages synthétiques et autres tentatives de fraude générées par IA." },
+        { "q": "La détection de présence est-elle certifiée ?", "a": "Oui. La détection de présence Folio répond à la norme ISO/IEC 30107-3 pour la détection d'attaque de présentation, validée par un laboratoire de test accrédité NIST." },
+        { "q": "Comment fonctionne la présence passive ?", "a": "La présence passive analyse plusieurs images et signaux visuels sans demander à l'utilisateur d'effectuer des actions spécifiques. Cela crée une expérience plus fluide tout en maintenant une sécurité forte." },
+        { "q": "La détection de présence fonctionne-t-elle sur tous les appareils ?", "a": "Oui. Folio est conçu pour fonctionner de manière cohérente sur différents smartphones, systèmes d'exploitation, qualités de caméra et conditions d'éclairage." },
+        { "q": "Quelle est la rapidité de la vérification de présence ?", "a": "La plupart des contrôles de présence se terminent en moins de deux secondes. La capture automatique et le guidage en temps réel aident les utilisateurs à compléter le processus rapidement." },
+        { "q": "La détection de présence peut-elle identifier les appareils compromis ?", "a": "Oui. Folio détecte les émulateurs, appareils rootés ou jailbreakés et autres environnements non sécurisés que les attaquants utilisent pour injecter des images ou vidéos manipulées." }
+      ]
+    }
+  },
+  "faceMatch": {
+    "meta": {
+      "title": "Reconnaissance faciale | Folio Wallet",
+      "description": "Précision exceptionnelle fournie avec respect de la vie privée, transparence et expérience utilisateur fluide."
+    },
+    "hero": {
+      "tagline": "Reconnaissance faciale",
+      "title": "Correspondance faciale avec certitude",
+      "description": "Précision exceptionnelle fournie avec respect de la vie privée, transparence et expérience utilisateur fluide."
+    },
+    "protection": {
+      "title": "Protection de reconnaissance faciale de niveau supérieur",
+      "precision": {
+        "title": "Reconnaissance faciale haute précision",
+        "description": "Folio combine des modèles avancés de détection, présence et correspondance pour offrir une performance de reconnaissance faciale précise et cohérente."
+      },
+      "certified": {
+        "title": "Testé et certifié de manière indépendante",
+        "description": "Nos technologies de correspondance faciale et de présence sont évaluées par des laboratoires accrédités pour confirmer la précision, la fiabilité et l'équité entre les démographies."
+      },
+      "defense": {
+        "title": "Performance de niveau défense",
+        "description": "Folio utilise des modèles de base hautes performances optimisés pour différents appareils et groupes d'utilisateurs, garantissant une protection solide dans les conditions réelles."
+      }
+    },
+    "howItWorks": {
+      "title": "Contrôlez comment les selfies sont capturés, traités et stockés",
+      "complianceRules": {
+        "title": "Définissez vos règles de conformité",
+        "description": "Définissez ce que vous collectez, comment vous le vérifiez et comment vous gérez les scénarios sensibles. Enregistrez vos paramètres comme modèles pour une utilisation cohérente."
+      },
+      "userExperience": {
+        "title": "Façonnez une meilleure expérience utilisateur",
+        "description": "Améliorez la qualité de capture avec un guidage en temps réel et des selfies capturés automatiquement. Affinez votre flux avec des tests A/B et des ajustements faciles."
+      },
+      "manageData": {
+        "title": "Gérez les données de selfie selon vos termes",
+        "description": "Mettez à jour les workflows basés sur votre analyse, automatisez les actions clés et appliquez l'anonymisation ou les contrôles renforcés si nécessaire."
+      }
+    },
+    "responsible": {
+      "title": "Reconnaissance faciale responsable, construite pour l'échelle",
+      "ethical": {
+        "title": "IA éthique",
+        "description": "Folio utilise des modèles construits sur des données sourcées de manière responsable qui ne montrent aucun biais matériel selon l'âge, le sexe ou la carnation, selon des évaluations internes et tierces."
+      },
+      "compliance": {
+        "title": "Conformité mondiale",
+        "description": "Définissez comment vous collectez, traitez et stockez les données de selfie pour répondre aux exigences réglementaires dans chaque région où vous opérez."
+      },
+      "resistance": {
+        "title": "Résistance aux attaques forte",
+        "description": "Protégez les utilisateurs des deepfakes, visages synthétiques, attaques de présentation et tentatives d'injection avec une détection de présence avancée."
+      },
+      "customizable": {
+        "title": "Reconnaissance personnalisable",
+        "description": "Ajustez les gestes, paramètres de risque et comportements pour correspondre à votre workflow et adaptez les configurations selon l'évolution de vos besoins."
+      },
+      "conversion": {
+        "title": "Conversion optimisée",
+        "description": "Créez un parcours utilisateur plus fluide avec la capture automatique, une gestion des erreurs affinée et des options d'interface flexibles."
+      },
+      "fast": {
+        "title": "Vérification rapide",
+        "description": "La plupart des vérifications de selfie se terminent en moins de deux secondes, aidant les utilisateurs à avancer dans votre flux sans délais."
+      }
+    },
+    "keyFeatures": {
+      "title": "Fonctionnalités clés",
+      "description": "Reconnaissance de selfie avancée avec contrôles intelligents et haute performance.",
+      "items": {
+        "flexibleControls": {
+          "title": "Contrôles et vérifications flexibles",
+          "description": "Définissez les règles de conformité, ajustez les contrôles de fraude et calibrez les nouvelles tentatives pour trouver le bon équilibre entre sécurité et conversion."
+        },
+        "signalLibrary": {
+          "title": "Riche bibliothèque de signaux",
+          "description": "Utilisez une large gamme de signaux propriétaires pour comprendre le contexte derrière chaque soumission de selfie."
+        },
+        "improvingModels": {
+          "title": "Modèles en amélioration continue",
+          "description": "Bénéficiez de modèles qui évoluent avec les nouvelles recherches et les schémas de fraude réels."
+        },
+        "multiFrame": {
+          "title": "Analyse multi-images",
+          "description": "Examinez plusieurs images pour améliorer la précision et réduire les faux positifs."
+        },
+        "autoCapture": {
+          "title": "Capture automatique",
+          "description": "Capturez le selfie automatiquement au moment idéal pour une meilleure qualité et un flux utilisateur plus fluide."
+        },
+        "userGuidance": {
+          "title": "Guidage utilisateur",
+          "description": "Fournissez des indications en temps réel qui aident les utilisateurs à prendre des selfies clairs et éviter les erreurs de capture courantes."
+        },
+        "crossDevice": {
+          "title": "Compatibilité multi-appareils",
+          "description": "Offrez une expérience cohérente sur différents appareils, systèmes d'exploitation et environnements."
+        }
+      }
+    },
+    "useCases": {
+      "title": "Façons d'utiliser la reconnaissance de selfie",
+      "verifyId": {
+        "title": "Vérifier la propriété d'une pièce d'identité physique",
+        "description": "Faites correspondre les selfies aux portraits de pièces d'identité en temps réel pour confirmer qu'un document physique appartient à la personne qui le présente."
+      },
+      "reverification": {
+        "title": "Re-vérification fluide",
+        "description": "Comparez les nouveaux selfies avec les portraits précédemment capturés pour confirmer l'identité et maintenir un accès autorisé sécurisé."
+      },
+      "workforce": {
+        "title": "Protection de l'identité des employés",
+        "description": "Assurez-vous que les employés sont vérifiés tout au long de l'onboarding, l'accès aux systèmes et d'autres points clés de leur cycle de travail."
+      }
+    },
+    "cta": {
+      "title": "Construisez une couche d'identité plus forte",
+      "description": "Parlez avec notre équipe pour voir comment Folio peut élever votre flux de vérification et protéger vos utilisateurs à chaque étape."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        { "q": "Comment fonctionne la correspondance faciale ?", "a": "Folio compare un selfie en direct avec la photo sur un document d'identité. Des modèles IA avancés analysent les traits du visage pour confirmer que la personne présentant le document est la même que celle photographiée dessus." },
+        { "q": "Quelle est la précision de la correspondance faciale ?", "a": "Folio atteint des taux de précision élevés validés par des laboratoires de test indépendants. Le système est conçu pour minimiser les fausses acceptations et les faux rejets tout en fonctionnant de manière cohérente entre les démographies." },
+        { "q": "La correspondance faciale peut-elle détecter les deepfakes et tentatives d'usurpation ?", "a": "Oui. Folio inclut une détection de présence qui identifie les attaques de présentation, deepfakes, visages synthétiques et tentatives d'injection. Plusieurs images sont analysées pour s'assurer que le selfie provient d'une personne réelle." },
+        { "q": "La correspondance faciale est-elle biaisée envers certaines démographies ?", "a": "Folio utilise des modèles entraînés sur des données sourcées de manière responsable et testés pour ne montrer aucun biais matériel selon l'âge, le sexe ou la carnation. Des évaluations tierces confirment une performance équitable entre les groupes démographiques." },
+        { "q": "Combien de temps prend une vérification de correspondance faciale ?", "a": "La plupart des vérifications de correspondance faciale se terminent en moins de deux secondes. La capture automatique et le guidage en temps réel aident les utilisateurs à prendre des selfies de qualité rapidement, minimisant les délais." },
+        { "q": "Que se passe-t-il si la correspondance faciale échoue ?", "a": "Si la correspondance initiale est non concluante, les utilisateurs peuvent réessayer avec un meilleur éclairage ou positionnement. Les échecs persistants peuvent être dirigés vers une révision manuelle où votre équipe examine les images." },
+        { "q": "Les données de selfie sont-elles stockées en sécurité ?", "a": "Vous contrôlez comment les données de selfie sont collectées, traitées et stockées. Folio prend en charge l'anonymisation des données, les politiques de rétention et les configurations de conformité pour répondre aux exigences réglementaires dans vos régions." }
+      ]
+    }
+  },
+  "dataSourceChecks": {
+    "meta": {
+      "title": "Vérification des sources | Folio Wallet",
+      "description": "Vérifiez les utilisateurs dans le monde entier avec des sources de données fiables. Confirmez instantanément l'identité des utilisateurs et répondez aux exigences réglementaires avec la correspondance Master Data."
+    },
+    "hero": {
+      "tagline": "Vérification des sources",
+      "title": "Vérifiez les utilisateurs dans le monde avec des sources fiables",
+      "description": "Confirmez instantanément l'identité des utilisateurs et répondez aux exigences réglementaires avec la correspondance Master Data."
+    },
+    "verification": {
+      "title": "Vérification mondiale plus intelligente",
+      "coverage": {
+        "title": "Couverture mondiale",
+        "description": "Faites correspondre les données utilisateur avec les sources autoritaires et émettrices dans plus de quarante pays pour garantir des résultats fiables et cohérents."
+      },
+      "matching": {
+        "title": "Logique de correspondance adaptative",
+        "description": "Ajustez les règles de correspondance pour atteindre le bon équilibre entre prévention de la fraude et expérience utilisateur fluide."
+      },
+      "unified": {
+        "title": "Accès unifié aux données",
+        "description": "Connectez-vous aux bases de données et sources émettrices via une seule plateforme pour que votre équipe évite d'assembler des données dispersées."
+      }
+    },
+    "howItWorks": {
+      "title": "Comment ça fonctionne",
+      "gatherDetails": {
+        "title": "Collecter les détails utilisateur",
+        "description": "Extrayez les données des documents d'identité ou demandez aux utilisateurs de les fournir directement."
+      },
+      "applyRules": {
+        "title": "Appliquer vos règles de correspondance",
+        "description": "Vérifiez les données collectées par rapport aux sources émettrices et bases de données autoritaires selon vos règles de correspondance."
+      },
+      "deliverDecision": {
+        "title": "Livrer une décision claire",
+        "description": "Les utilisateurs sont acceptés, refusés ou dirigés vers une révision manuelle selon votre logique de décision."
+      }
+    },
+    "databases": {
+      "title": "Explorez les bases de données fiables et sources émettrices",
+      "authoritative": {
+        "title": "Bases de données autoritaires",
+        "description": "Vérifiez les informations utilisateur par rapport aux bases de données autoritaires et sources émettrices dans plus de 40 pays pour garantir précision et conformité."
+      },
+      "ecbsv": {
+        "title": "eCBSV",
+        "description": "Faites correspondre noms, numéros de sécurité sociale et dates de naissance avec les registres de la Social Security Administration pour identifier les signaux de risque comme les identités synthétiques ou les utilisateurs avec peu d'historique."
+      },
+      "dmv": {
+        "title": "Registres DMV (AAMVA)",
+        "description": "Confirmez l'authenticité des permis de conduire et pièces d'identité américains en vérifiant les détails utilisateur par rapport aux bases de données DMV des états participants pour détecter les documents frauduleux."
+      },
+      "tin": {
+        "title": "Vérification TIN",
+        "description": "Validez le nom et le numéro d'identification fiscale d'un utilisateur en comparant les données soumises avec les registres IRS pour garantir la précision de l'identité."
+      },
+      "additional": {
+        "title": "Sources supplémentaires",
+        "description": "Si vous avez besoin d'une source de données spécifique non listée, contactez-nous pour explorer les intégrations personnalisées et options disponibles."
+      }
+    },
+    "keyFeatures": {
+      "title": "Fonctionnalités clés",
+      "description": "Élargissez votre portée, adaptez votre workflow et créez une expérience plus fluide pour vos utilisateurs",
+      "items": {
+        "globalReach": {
+          "title": "Portée mondiale évolutive",
+          "description": "Validez les données personnelles et les pièces d'identité nationales par rapport aux sources émettrices dans plus de 40 pays sans gérer plusieurs fournisseurs."
+        },
+        "flexibleMatch": {
+          "title": "Règles de correspondance flexibles",
+          "description": "Ajustez les seuils pour ce qui qualifie une correspondance complète, partielle ou aucune correspondance pour s'adapter à votre workflow."
+        },
+        "smartAddress": {
+          "title": "Complétion d'adresse intelligente",
+          "description": "Accélérez la saisie utilisateur, réduisez les erreurs et créez une expérience d'onboarding plus fluide en complétant automatiquement les détails d'adresse."
+        },
+        "adaptiveRouting": {
+          "title": "Routage adaptatif",
+          "description": "Déclenchez des étapes de renforcement ou des chemins de repli en temps réel basés sur les signaux et indicateurs de risque collectés pendant la vérification."
+        }
+      }
+    },
+    "useCases": {
+      "title": "Où les vérifications de base de données font le plus grand impact",
+      "screening": {
+        "title": "Screening réglementaire",
+        "description": "Confirmez que les utilisateurs répondent aux exigences de conformité en faisant correspondre leurs informations avec des bases de données fiables et sources émettrices."
+      },
+      "matching": {
+        "title": "Correspondance d'identité",
+        "description": "Validez l'identité d'un utilisateur en comparant ses détails soumis avec des registres autoritaires pour plus de confiance."
+      },
+      "adaptive": {
+        "title": "Vérification adaptative",
+        "description": "Ajustez finement la friction en temps réel basée sur les résultats de correspondance, aidant à fluidifier les utilisateurs de confiance et signaler les cas à risque plus élevé."
+      }
+    },
+    "cta": {
+      "title": "Construisons une meilleure vérification d'identité",
+      "description": "Parlez à notre équipe pour découvrir comment Folio peut améliorer votre expérience d'onboarding et de vérification."
+    }
+  },
+  "phoneAndEmailValidation": {
+    "meta": {
+      "title": "Validation téléphone et email | Folio Wallet",
+      "description": "Confirmez la propriété et détectez les coordonnées à risque avec une validation en temps réel."
+    },
+    "hero": {
+      "tagline": "Validation téléphone et email",
+      "title": "Validation rapide de téléphone et email",
+      "description": "Vérifiez si les numéros de téléphone et adresses email sont réels et appartiennent vraiment à vos utilisateurs."
+    },
+    "why": {
+      "title": "Pourquoi vérifier téléphone et email",
+      "secure": {
+        "title": "Comptes sécurisés",
+        "description": "Prévenez les accès non autorisés en confirmant que les numéros de téléphone et emails appartiennent vraiment à chaque utilisateur."
+      },
+      "easy": {
+        "title": "Facile pour les utilisateurs",
+        "description": "Réduisez les abandons avec des flux simples et peu intrusifs qui permettent aux utilisateurs de vérifier leurs coordonnées en secondes."
+      },
+      "completion": {
+        "title": "Taux de complétion plus élevés",
+        "description": "Aidez les utilisateurs légitimes à passer la vérification en offrant des méthodes de repli quand la première tentative échoue."
+      }
+    },
+    "howItWorks": {
+      "title": "Comment ça fonctionne",
+      "collectDetails": {
+        "title": "Collecter les coordonnées",
+        "description": "Les utilisateurs entrent leur numéro de téléphone ou adresse email."
+      },
+      "sendCode": {
+        "title": "Envoyer un code de vérification",
+        "description": "Un code est automatiquement envoyé par SMS ou email."
+      },
+      "confirmOwnership": {
+        "title": "Confirmer la propriété",
+        "description": "Les utilisateurs entrent le code pour vérifier que le téléphone ou email leur appartient."
+      }
+    },
+    "methods": {
+      "title": "Explorez les méthodes de vérification",
+      "phone2fa": {
+        "title": "Vérification de numéro de téléphone (2FA)",
+        "description": "Vérifiez la propriété d'un numéro de téléphone en envoyant un code unique par appel ou SMS. Cela garantit que le numéro est actif, joignable et appartient vraiment à la personne qui tente de s'authentifier."
+      },
+      "phoneOwnership": {
+        "title": "Vérification de propriété de téléphone",
+        "description": "Confirmez le nom légal d'un utilisateur et le numéro de téléphone associé en croisant les bases de données mondiales des opérateurs. Cela ajoute une couche de confiance supplémentaire en validant les informations d'identité vérifiées par les télécoms."
+      },
+      "email2fa": {
+        "title": "Vérification d'email (2FA)",
+        "description": "Authentifiez la propriété d'une adresse email en envoyant un code unique ou un lien sécurisé. Cela confirme que l'utilisateur contrôle la boîte de réception et peut recevoir des communications sensibles."
+      },
+      "riskAssessment": {
+        "title": "Évaluation des risques",
+        "description": "Évaluez la fiabilité d'un numéro de téléphone ou email en analysant les schémas d'activité, signaux d'abus et insights de réputation pour identifier les identités à risque avant qu'elles n'entrent dans votre système."
+      }
+    },
+    "riskSignals": {
+      "title": "Prévenez la fraude avec des signaux de risque supplémentaires",
+      "twoFactor": {
+        "title": "Authentification à deux facteurs",
+        "description": "Renforcez la sécurité des comptes en envoyant un code de vérification unique au numéro de téléphone ou email de l'utilisateur, garantissant que seul le propriétaire légitime peut continuer."
+      },
+      "accountTakeover": {
+        "title": "Prévention de prise de contrôle de compte",
+        "description": "Bloquez les tentatives d'accès non autorisé en superposant plusieurs contrôles de sécurité, aidant à empêcher les attaquants de prendre le contrôle des comptes utilisateur."
+      },
+      "riskAssessment": {
+        "title": "Évaluation des risques",
+        "description": "Évaluez la fiabilité d'un numéro de téléphone ou email en analysant la réputation, les schémas inhabituels et les indicateurs de risque connus pendant l'onboarding."
+      }
+    },
+    "cta": {
+      "title": "Construisez une couche d'identité plus forte",
+      "description": "Parlez avec notre équipe pour voir comment Folio peut élever votre flux de vérification et protéger vos utilisateurs à chaque étape."
+    }
+  },
+  "nfcIdentityScan": {
+    "meta": {
+      "title": "Scan NFC d'identité | Folio Wallet",
+      "description": "Lisez les données sécurisées des puces des pièces d'identité et passeports compatibles pour le plus haut niveau d'authenticité de document."
+    },
+    "hero": {
+      "tagline": "Scan NFC d'identité",
+      "title": "Détectez instantanément la fraude aux passeports et pièces d'identité",
+      "description": "Utilisez le NFC pour lire les données des puces intégrées aux passeports et pièces d'identité, ajoutant une couche de sécurité supplémentaire sans friction utilisateur."
+    },
+    "verification": {
+      "title": "Vérification renforcée de passeports et pièces d'identité avec NFC",
+      "detectForged": {
+        "title": "Détectez les documents falsifiés",
+        "description": "Allez au-delà des vérifications visuelles en lisant la puce RFID sécurisée à l'intérieur d'un passeport ou d'une carte d'identité, aidant à révéler rapidement les documents altérés numériquement ou contrefaits."
+      },
+      "automate": {
+        "title": "Automatisez les vérifications de passeport",
+        "description": "Utilisez le NFC pour rationaliser la vérification de passeport, réduire le temps de révision manuelle et concentrer l'effort humain sur les cas de fraude complexes et à haut risque."
+      },
+      "boostCompletion": {
+        "title": "Améliorez le taux de complétion",
+        "description": "Guidez les utilisateurs à travers un flux NFC simple et fluide qui augmente les scans réussis et améliore le taux de complétion global de vérification."
+      }
+    },
+    "howItWorks": {
+      "title": "Comment ça fonctionne",
+      "addNfc": {
+        "title": "Ajoutez le NFC à votre flux KYC",
+        "description": "Offrez le scan NFC comme étape de vérification supplémentaire pour les appareils et documents supportés, améliorant la précision sans ajouter de friction."
+      },
+      "extractData": {
+        "title": "Extraction automatique des données",
+        "description": "Les utilisateurs photographient leur passeport ou pièce d'identité et posent leur téléphone pour lire la puce NFC. Le système extrait instantanément les données structurées pour révision rapide."
+      },
+      "confirmIdentities": {
+        "title": "Confirmez les identités de manière fluide",
+        "description": "Après un scan NFC réussi, les utilisateurs continuent dans votre flux de vérification. Si des problèmes surviennent, vous pouvez demander plus de détails, escalader ou diriger vers une révision manuelle."
+      }
+    },
+    "keyFeatures": {
+      "title": "Fonctionnalités clés",
+      "description": "Lisez en sécurité les données d'identité des passeports et pièces d'identité compatibles NFC avec un flux rapide et intuitif.",
+      "items": {
+        "strongerSecurity": {
+          "title": "Sécurité renforcée",
+          "description": "Le NFC lit les données directement depuis la puce RFID chiffrée, vous permettant de vérifier les informations à la source et de réduire la dépendance aux contrôles visuels."
+        },
+        "fastVerification": {
+          "title": "Vérification rapide et fluide",
+          "description": "Les utilisateurs posent leur smartphone sur le document et confirment instantanément les données extraites, accélérant l'onboarding sans friction ajoutée."
+        },
+        "smartDetection": {
+          "title": "Autodétection intelligente de l'appareil",
+          "description": "Le système détecte automatiquement quand un appareil et un document supportent le NFC, permettant une expérience fluide sans étapes utilisateur supplémentaires."
+        },
+        "worldwideSupport": {
+          "title": "Support mondial",
+          "description": "La lecture NFC de passeports et pièces d'identité fonctionne dans plus de 120 pays, le tout via la même intégration mobile légère."
+        }
+      }
+    },
+    "useCases": {
+      "title": "Utilisations puissantes de la vérification NFC",
+      "kyc": {
+        "title": "Amélioration KYC",
+        "description": "Permettez aux utilisateurs des régions supportées de vérifier leurs passeports via NFC, renforçant votre processus KYC avec des données d'identité sécurisées basées sur la puce."
+      },
+      "fraud": {
+        "title": "Prévention de la fraude",
+        "description": "Extrayez des données d'identité inviolables de la puce RFID et vérifiez la personne par correspondance de selfie, réduisant le risque de documents falsifiés ou altérés."
+      },
+      "stepUp": {
+        "title": "Contrôles de renforcement",
+        "description": "Utilisez le NFC comme couche de vérification supplémentaire lors d'actions risquées ou de transactions de haute valeur, ajoutant de l'assurance sans perturber le parcours utilisateur."
+      }
+    },
+    "cta": {
+      "title": "Construisez une couche d'identité plus forte",
+      "description": "Parlez avec notre équipe pour voir comment Folio peut élever votre flux de vérification et protéger vos utilisateurs à chaque étape."
+    }
+  },
+  "dynamicFlow": {
+    "meta": {
+      "title": "Flux dynamique | Folio Wallet",
+      "description": "Orchestrez les vérifications d'identité avec une logique flexible pour créer des parcours de vérification adaptatifs."
+    },
+    "hero": {
+      "tagline": "Flux dynamique",
+      "title": "Vérification d'identité qui trouve le bon équilibre",
+      "description": "Adaptez la vérification en temps réel en utilisant les signaux de risque pour réduire la fraude tout en gardant l'expérience fluide."
+    },
+    "howItWorks": {
+      "title": "Comment ça fonctionne",
+      "branded": {
+        "title": "Créez des expériences brandées",
+        "description": "Créez des flux d'identité fluides qui semblent natifs à votre produit."
+      },
+      "risk": {
+        "title": "Adaptez-vous au risque instantanément",
+        "description": "Augmentez ou réduisez les étapes de vérification basées sur les signaux en temps réel."
+      },
+      "decide": {
+        "title": "Décidez avec confiance",
+        "description": "Combinez les signaux de risque et les données fiables pour alimenter de meilleures décisions."
+      },
+      "optimize": {
+        "title": "Optimisez au fil du temps",
+        "description": "Affinez les flux en utilisant les insights de performance du monde réel."
+      }
+    },
+    "keyFeatures": {
+      "title": "Fonctionnalités clés",
+      "description": "Tout ce dont vous avez besoin pour concevoir des parcours d'identité fiables",
+      "items": {
+        "flexible": {
+          "title": "Méthodes de vérification flexibles",
+          "description": "Supportez plusieurs options de vérification, incluant pièces d'identité gouvernementales, scans de documents, selfies, NFC et vérifications de contact, et adaptez les flux à vos règles de risque et commerciales."
+        },
+        "branding": {
+          "title": "Branding personnalisé",
+          "description": "Offrez une expérience de vérification cohérente et brandée qui correspond visuellement à votre produit sur tous les points de contact utilisateur."
+        },
+        "passive": {
+          "title": "Signaux de risque passifs",
+          "description": "Collectez les signaux comportementaux et d'appareil en arrière-plan pour mieux comprendre le risque sans interrompre l'expérience utilisateur."
+        },
+        "detection": {
+          "title": "Détection du type de document",
+          "description": "Les utilisateurs peuvent soumettre des documents sans sélectionner les types ou formats, réduisant la friction et prévenant les erreurs de saisie."
+        },
+        "prefill": {
+          "title": "Pré-remplissage intelligent des données",
+          "description": "Réutilisez les données extraites des documents et pièces d'identité pour remplir automatiquement d'autres étapes et réduire la saisie manuelle."
+        },
+        "configurable": {
+          "title": "Contrôles configurables",
+          "description": "Activez uniquement les contrôles dont vous avez besoin, comme la validité du document, les exigences d'âge, la capture de code-barres ou les lectures NFC, selon vos politiques."
+        },
+        "device": {
+          "title": "Fonctionne sur tout appareil",
+          "description": "Fournissez une expérience de vérification fluide sur mobile et desktop, quel que soit l'appareil ou la configuration d'intégration."
+        }
+      }
+    },
+    "useCases": {
+      "title": "Cas d'utilisation du flux dynamique",
+      "onboarding": {
+        "title": "Onboarding utilisateur",
+        "description": "Créez une première expérience fluide avec des flux brandés qui s'adaptent au risque en temps réel."
+      },
+      "identity": {
+        "title": "Vérification d'identité",
+        "description": "Confirmez instantanément l'identité utilisateur en utilisant des pièces d'identité gouvernementales et des contrôles en temps réel."
+      },
+      "document": {
+        "title": "Collecte de documents",
+        "description": "Demandez et collectez les documents requis dans un seul flux guidé."
+      },
+      "reverification": {
+        "title": "Re-vérification utilisateur",
+        "description": "Reconfirmez les utilisateurs de retour lors d'actions sensibles avec une friction minimale."
+      },
+      "accountSetup": {
+        "title": "Configuration de compte automatisée",
+        "description": "Créez automatiquement les comptes utilisateur une fois les exigences de vérification remplies."
+      }
+    },
+    "cta": {
+      "title": "Construisons une meilleure vérification d'identité",
+      "description": "Parlez à notre équipe pour découvrir comment Folio peut améliorer votre expérience d'onboarding et de vérification."
+    }
+  },
+  "behaviorInsights": {
+    "meta": {
+      "title": "Analyse comportementale | Folio Wallet",
+      "description": "Analysez les signaux comportementaux, d'appareil et de réseau pour identifier les risques sans interrompre l'expérience utilisateur."
+    },
+    "hero": {
+      "tagline": "Analyse comportementale",
+      "title": "Découvrez la fraude avec des signaux passifs",
+      "description": "Analysez les signaux comportementaux, d'appareil et de réseau pour identifier les risques sans interrompre l'expérience utilisateur."
+    },
+    "features": {
+      "title": "Signaux passifs pour une détection de fraude plus intelligente",
+      "realtime": {
+        "title": "Détection de fraude en temps réel",
+        "description": "Collectez discrètement les signaux comportementaux et d'appareil pour identifier les risques en temps réel et répondre instantanément avec le bon niveau de friction."
+      },
+      "repeat": {
+        "title": "Détection de fraude répétée",
+        "description": "Liez les appareils, adresses IP et comportements utilisateur pour faire ressortir les récidivistes et les schémas de fraude coordonnée automatiquement."
+      },
+      "enrichment": {
+        "title": "Enrichissement du risque utilisateur",
+        "description": "Combinez les signaux de fond en une vue de risque unique pour soutenir des décisions confiantes tout au long du cycle de vie utilisateur."
+      }
+    },
+    "howItWorks": {
+      "title": "Comment ça fonctionne",
+      "collect": {
+        "title": "Collectez les signaux automatiquement",
+        "description": "Les signaux passifs sont capturés pendant que les utilisateurs avancent dans le flux. Ajoutez des données tierces pour enrichir le contexte sans étapes supplémentaires."
+      },
+      "adapt": {
+        "title": "Adaptez les flux en temps réel",
+        "description": "Ajustez les étapes de vérification dynamiquement basées sur les signaux de risque en direct et le comportement utilisateur."
+      },
+      "decide": {
+        "title": "Décidez avec confiance",
+        "description": "Utilisez les signaux combinés pour approuver, refuser ou diriger les utilisateurs vers une révision avec plus de précision."
+      }
+    },
+    "riskIntelligence": {
+      "title": "Intelligence de risque intégrée",
+      "description": "Évaluez chaque session avec un modèle de risque adaptatif entraîné sur les schémas d'identité du monde réel dans votre base utilisateur."
+    },
+    "keyFeatures": {
+      "title": "Fonctionnalités clés",
+      "description": "Collectez automatiquement des signaux passifs qui ajoutent du contexte à chaque session utilisateur.",
+      "behavioral": {
+        "title": "Schémas comportementaux",
+        "description": "Comprenez comment les utilisateurs interagissent avec votre flux pour identifier les risques potentiels tôt, sans dépendre de l'analyse manuelle ou des équipes data science.\n\nLes signaux incluent :\n• Durée de session\n• Interruptions d'interaction\n• Schémas de comportement inhabituels\n• Utilisation de raccourcis\n• Et plus"
+      },
+      "network": {
+        "title": "Contexte réseau et appareil",
+        "description": "Utilisez les attributs réseau et appareil en arrière-plan pour faire ressortir les signaux de risque cachés avant que la fraude ne s'aggrave.\n\nLes signaux incluent :\n• Identifiants réseau\n• Caractéristiques d'appareil\n• Localisation approximative\n• Et plus"
+      },
+      "relationships": {
+        "title": "Relations entre comptes",
+        "description": "Identifiez les connexions entre utilisateurs pour stopper les abus répétés et la fraude coordonnée sur votre plateforme. Détectez les attributs partagés et les signaux qui se chevauchent pour empêcher les mauvais acteurs connus de revenir."
+      }
+    },
+    "useCases": {
+      "title": "Utilisations pratiques des signaux passifs",
+      "realtime": {
+        "title": "Ajustement en temps réel",
+        "description": "Augmentez ou réduisez dynamiquement les étapes de vérification quand un comportement risqué comme l'utilisation de VPN ou des schémas d'accès inhabituels est détecté."
+      },
+      "takeover": {
+        "title": "Protection contre la prise de contrôle de compte",
+        "description": "Identifiez les connexions suspectes en comparant les signaux de localisation, d'appareil et de réseau au comportement utilisateur connu."
+      },
+      "linked": {
+        "title": "Détection de comptes liés",
+        "description": "Révélez les comptes dupliqués ou connectés en analysant les appareils, réseaux et attributs comportementaux partagés."
+      },
+      "routing": {
+        "title": "Routage intelligent de révision",
+        "description": "Envoyez automatiquement les sessions à haut risque en révision manuelle au lieu de forcer des décisions d'approbation ou de refus instantanées."
+      }
+    },
+    "cta": {
+      "title": "Construisons une meilleure vérification d'identité",
+      "description": "Parlez à notre équipe pour découvrir comment Folio peut améliorer votre expérience d'onboarding et de vérification."
+    }
+  },
+  "reviewWorkspace": {
+    "meta": {
+      "title": "Espace de révision | Folio Wallet",
+      "description": "Enquêtez sur les utilisateurs et entreprises plus rapidement avec des outils flexibles qui s'adaptent à votre processus de révision et réduisent l'effort opérationnel."
+    },
+    "hero": {
+      "tagline": "Espace de révision",
+      "title": "Une façon plus simple de gérer les dossiers",
+      "description": "Enquêtez sur les utilisateurs et entreprises plus rapidement avec des outils flexibles qui s'adaptent à votre processus de révision et réduisent l'effort opérationnel."
+    },
+    "features": {
+      "title": "Révisez et enquêtez avec confiance",
+      "closeFaster": {
+        "title": "Clôturez les dossiers plus vite",
+        "description": "Résolvez automatiquement les cas simples et enquêtez plus efficacement sur les cas complexes avec des outils conçus pour la collaboration et la rapidité."
+      },
+      "oneSource": {
+        "title": "Une source de contexte unique",
+        "description": "Rassemblez les contrôles actifs, signaux passifs et données comportementales de sources internes et externes dans une vue unique et cohérente."
+      },
+      "compliance": {
+        "title": "Prêt pour la conformité",
+        "description": "Supportez les workflows réglementaires avec des pistes d'audit détaillées, des checklists de réviseur et des commentaires structurés intégrés à chaque dossier."
+      }
+    },
+    "howItWorks": {
+      "title": "Comment ça fonctionne",
+      "setup": {
+        "title": "Configurez les workflows de révision",
+        "description": "Créez des modèles de dossier pour différents scénarios et définissez les règles d'affectation, statuts et propriété pour correspondre à vos processus internes."
+      },
+      "review": {
+        "title": "Révisez les cas complexes",
+        "description": "Examinez les contrôles à haut risque ou échoués en révisant les données utilisateur ou entreprise, les résultats de vérification et les preuves à l'appui au même endroit."
+      },
+      "action": {
+        "title": "Agissez avec confiance",
+        "description": "Approuvez, refusez ou marquez les dossiers pour révision et gérez les suivis directement depuis l'espace de travail, sans changer d'outil."
+      }
+    },
+    "keyFeatures": {
+      "title": "Fonctionnalités clés",
+      "description": "Concevez un processus de révision de dossier clair et évolutif",
+      "layouts": {
+        "title": "Mises en page de dossier flexibles",
+        "description": "Configurez les vues et sections de dossier pour correspondre aux différents scénarios de révision et besoins d'enquête."
+      },
+      "tools": {
+        "title": "Outils d'enquête intégrés",
+        "description": "Utilisez des outils prêts à l'emploi comme les checklists, notes et insights pour réviser les dossiers plus rapidement et de manière plus cohérente."
+      },
+      "priority": {
+        "title": "Gestion des priorités et alertes",
+        "description": "Mettez automatiquement en avant les dossiers urgents et maintenez les révisions dans les délais de réponse définis."
+      },
+      "routing": {
+        "title": "Routage intelligent et escalade",
+        "description": "Routez les dossiers entre équipes ou réviseurs selon le niveau de risque, le statut ou l'étape de révision."
+      },
+      "access": {
+        "title": "Accès aux données basé sur les rôles",
+        "description": "Contrôlez qui peut voir ou modifier les données personnelles sensibles avec des permissions spécifiques aux rôles."
+      },
+      "history": {
+        "title": "Historique complet des activités",
+        "description": "Gardez un enregistrement complet des actions, décisions et commentaires pour chaque dossier."
+      },
+      "unified": {
+        "title": "Vue des données unifiée",
+        "description": "Rassemblez toutes les informations pertinentes du dossier dans un espace de travail sans changer de système."
+      },
+      "insights": {
+        "title": "Insights de performance",
+        "description": "Suivez le volume de révision, le temps de traitement et l'efficacité de l'équipe pour identifier les goulots d'étranglement."
+      }
+    },
+    "useCases": {
+      "title": "Workflows de gestion de dossiers",
+      "identity": {
+        "title": "Révision d'identité manuelle",
+        "description": "Révisez les utilisateurs à n'importe quelle étape du cycle de vie, de l'onboarding et recontrôles à la récupération de compte et cas limites."
+      },
+      "business": {
+        "title": "Vérification d'entreprise",
+        "description": "Gérez les révisions d'entreprise en un seul endroit, couvrant la propriété, les documents et les signaux de risque pour les workflows KYB."
+      },
+      "aml": {
+        "title": "Enquêtes et rapports AML",
+        "description": "Gérez les dossiers AML, suivez le statut d'enquête et préparez les rapports réglementaires avec des workflows de dossiers structurés."
+      },
+      "fraud": {
+        "title": "Enquêtes fraude",
+        "description": "Enquêtez sur les utilisateurs à haut risque, analysez les comptes liés et résolvez les scénarios de fraude complexes avec une révision manuelle."
+      },
+      "process": {
+        "title": "Mises à jour de processus rapides",
+        "description": "Adaptez rapidement la logique de révision en ajustant les contrôles, règles et seuils selon l'évolution des risques ou réglementations."
+      },
+      "automation": {
+        "title": "Automatisation opérationnelle",
+        "description": "Réduisez l'effort manuel en automatisant les décisions routinières et en soutenant les équipes opérationnelles avec des flux de dossiers clairs."
+      }
+    },
+    "cta": {
+      "title": "Construisons une meilleure vérification d'identité",
+      "description": "Parlez à notre équipe pour découvrir comment Folio peut améliorer votre expérience d'onboarding et de vérification."
+    }
+  },
+  "credentialIssuance": {
+    "meta": {
+      "title": "Émission de credentials | Folio Wallet",
+      "description": "Créez des credentials numériques inviolables pour les identités, certificats et permis. Délivrez-les aux portefeuilles utilisateurs avec un contrôle complet du cycle de vie."
+    },
+    "hero": {
+      "tagline": "Émission de credentials",
+      "title": "Émettez des credentials vérifiables à grande échelle",
+      "description": "Créez des credentials numériques inviolables pour les identités, certificats et permis. Délivrez-les aux portefeuilles utilisateurs avec un contrôle complet du cycle de vie."
+    },
+    "overview": {
+      "title": "Infrastructure de credentials de confiance",
+      "standards": {
+        "title": "Conformité aux standards",
+        "description": "Émettez des credentials qui suivent les standards W3C, EUDI et OpenID4VCI pour une interopérabilité maximale et une pérennité assurée."
+      },
+      "delivery": {
+        "title": "Livraison flexible",
+        "description": "Livrez des credentials via QR codes, liens profonds ou intégration directe au portefeuille. Les utilisateurs reçoivent les credentials instantanément."
+      },
+      "lifecycle": {
+        "title": "Contrôle du cycle de vie",
+        "description": "Gérez la validité des credentials avec des dates d'expiration, la révocation et des mises à jour de statut en temps réel."
+      }
+    },
+    "howItWorks": {
+      "title": "Comment ça fonctionne",
+      "define": {
+        "title": "Définissez votre credential",
+        "description": "Configurez le schéma, les claims et les règles de validité pour votre type de credential. Choisissez quels attributs inclure et combien de temps les credentials restent valides."
+      },
+      "issue": {
+        "title": "Émettez aux utilisateurs",
+        "description": "Générez des credentials via un simple appel API ou un processus par lot. Chaque credential est signé cryptographiquement et inviolable."
+      },
+      "deliver": {
+        "title": "Livrez en sécurité",
+        "description": "Envoyez les credentials directement aux portefeuilles utilisateurs via QR codes, liens profonds ou notifications push. Les utilisateurs reçoivent et stockent les credentials instantanément."
+      }
+    },
+    "keyFeatures": {
+      "title": "Fonctionnalités clés",
+      "description": "Tout ce dont vous avez besoin pour émettre, gérer et livrer des credentials vérifiables",
+      "w3c": {
+        "title": "Verifiable Credentials W3C",
+        "description": "Émettez des credentials qui suivent le standard W3C Verifiable Credentials pour une interopérabilité maximale entre systèmes et fournisseurs."
+      },
+      "openid4vci": {
+        "title": "Protocole OpenID4VCI",
+        "description": "Utilisez le protocole OpenID for Verifiable Credential Issuance pour livrer des credentials en sécurité à n'importe quel portefeuille compatible."
+      },
+      "selectiveDisclosure": {
+        "title": "Divulgation sélective",
+        "description": "Permettez aux utilisateurs de partager uniquement les claims spécifiques qu'ils choisissent, protégeant leur vie privée tout en prouvant ce qu'ils doivent prouver."
+      },
+      "revocation": {
+        "title": "Support de révocation",
+        "description": "Révoquez les credentials instantanément si nécessaire. Les vérificateurs peuvent vérifier le statut de révocation en temps réel pour s'assurer que les credentials sont toujours valides."
+      },
+      "expiration": {
+        "title": "Expiration automatique",
+        "description": "Définissez des dates d'expiration sur les credentials pour qu'ils deviennent automatiquement invalides après une période spécifiée sans intervention manuelle."
+      },
+      "batch": {
+        "title": "Émission par lot",
+        "description": "Émettez des milliers de credentials à la fois via le traitement par lot. Idéal pour les organisations émettant des credentials à de grands groupes."
+      },
+      "apiSdk": {
+        "title": "API REST et SDK",
+        "description": "Intégrez l'émission de credentials dans vos systèmes existants en utilisant notre API REST conviviale pour les développeurs ou nos SDK natifs."
+      },
+      "audit": {
+        "title": "Piste d'audit",
+        "description": "Suivez chaque credential émis, révoqué ou mis à jour avec des journaux détaillés à des fins de conformité et de reporting."
+      },
+      "formats": {
+        "title": "Formats de credentials multiples",
+        "description": "Support pour JWT, SD-JWT, mDL et autres formats de credentials pour répondre aux différents cas d'utilisation et exigences réglementaires."
+      }
+    },
+    "useCases": {
+      "title": "Où l'émission de credentials a un impact",
+      "identity": {
+        "title": "Identité numérique",
+        "description": "Émettez des pièces d'identité nationales, badges d'employés et cartes de membre que les utilisateurs peuvent stocker et présenter depuis leur portefeuille numérique."
+      },
+      "certificates": {
+        "title": "Certificats",
+        "description": "Créez des certificats vérifiables pour l'éducation, les qualifications professionnelles et les dossiers médicaux qui ne peuvent pas être falsifiés."
+      },
+      "permits": {
+        "title": "Permis et licences",
+        "description": "Émettez des permis de conduire, permis de construire et licences professionnelles avec des contrôles d'expiration et de révocation intégrés."
+      }
+    },
+    "cta": {
+      "title": "Construisons votre écosystème de credentials",
+      "description": "Parlez à notre équipe pour découvrir comment Folio peut vous aider à émettre et gérer des credentials vérifiables."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        { "q": "Quels formats de credentials sont supportés ?", "a": "Folio supporte les Verifiable Credentials W3C aux formats JWT et JSON-LD, SD-JWT pour la divulgation sélective et le format ISO 18013-5 mDL pour les permis de conduire mobiles. Vous pouvez choisir le format qui convient le mieux à votre cas d'utilisation et exigences réglementaires." },
+        { "q": "Comment émettre des credentials via API ?", "a": "Utilisez notre API REST pour émettre des credentials programmatiquement. Définissez votre schéma de credential, préparez les données de claims et faites une requête POST vers l'endpoint d'émission. L'API retourne un credential signé que vous pouvez livrer à l'utilisateur." },
+        { "q": "Les credentials peuvent-ils être révoqués ?", "a": "Oui. Vous pouvez révoquer n'importe quel credential à tout moment via l'API ou le tableau de bord. La révocation prend effet immédiatement et les vérificateurs peuvent vérifier le statut de révocation en temps réel en utilisant les protocoles standard." },
+        { "q": "Comment les credentials sont-ils livrés aux utilisateurs ?", "a": "Les credentials peuvent être livrés via des QR codes que les utilisateurs scannent avec leur application de portefeuille, des liens profonds qui s'ouvrent directement dans le portefeuille, ou des notifications push pour les utilisateurs qui ont déjà installé votre application." },
+        { "q": "Quels standards Folio suit-il ?", "a": "Folio implémente les Verifiable Credentials W3C, les spécifications W3C DID, OpenID for Verifiable Credential Issuance (OpenID4VCI) et les standards de l'Architecture EUDI Wallet. Cela garantit l'interopérabilité avec d'autres systèmes conformes." },
+        { "q": "Puis-je personnaliser les schémas de credentials ?", "a": "Oui. Vous pouvez définir des schémas personnalisés avec les claims et types de données exacts que votre cas d'utilisation requiert. Vous pouvez également utiliser des schémas standard de schema.org ou d'autres registres pour les types de credentials courants." },
+        { "q": "Y a-t-il un support d'émission par lot ?", "a": "Oui. L'API d'émission par lot vous permet d'émettre des milliers de credentials en une seule requête. C'est utile pour les organisations émettant des credentials à des employés, étudiants ou membres à grande échelle." }
+      ]
+    }
+  },
+  "common": {
+    "howItWorks": "Comment ça fonctionne",
+    "keyFeatures": "Fonctionnalités clés",
+    "faq": "Questions fréquentes"
+  }
+}

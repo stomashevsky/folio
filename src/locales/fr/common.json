@@ -1,0 +1,104 @@
+{
+  "nav": {
+    "wallet": "Wallet",
+    "platform": "Plateforme",
+    "solutions": "Solutions",
+    "government": "Secteur public",
+    "blog": "Blog",
+    "getInTouch": "Nous contacter",
+    "backToMainMenu": "Retour au menu principal",
+    "clientOnboardingDesc": "Vérification KYC simplifiée pour les entreprises réglementées.",
+    "ageComplianceDesc": "Vérifiez que vos utilisateurs respectent les conditions d'âge requises.",
+    "digitalTicketingDesc": "Créez, gérez et validez des billets numériques avec contrôle anti-fraude.",
+    "idVerificationDesc": "Vérifiez les passeports, cartes d'identité et autres documents officiels.",
+    "nfcIdentityScanDesc": "Lisez les données sécurisées des puces NFC des pièces d'identité et passeports.",
+    "documentIntelligenceDesc": "Extrayez et analysez les données des documents soumis.",
+    "faceMatchDesc": "Comparez un selfie à une photo officielle pour confirmer l'identité.",
+    "livenessCheckDesc": "Confirmez que l'utilisateur est physiquement présent.",
+    "dataSourceChecksDesc": "Validez les informations utilisateur auprès de bases de données fiables.",
+    "phoneAndEmailValidationDesc": "Confirmez la propriété et détectez les coordonnées à risque.",
+    "behaviorInsightsDesc": "Analyse des appareils et comportements pour plus de contexte.",
+    "dynamicFlowDesc": "Orchestrez les vérifications d'identité avec une logique flexible.",
+    "reviewWorkspaceDesc": "Organisez et traitez les dossiers de vérification.",
+    "credentialIssuanceDesc": "Créez et délivrez des credentials vérifiables vers les wallets."
+  },
+  "footer": {
+    "address": "Adresse :",
+    "addressValue": "88 Baker St, London W1U 6TQ, Royaume-Uni",
+    "contact": "Contact :",
+    "folio": "Folio",
+    "folioApp": "Application Folio",
+    "blog": "Blog",
+    "government": "Secteur public",
+    "about": "À propos",
+    "features": "Fonctionnalités",
+    "idWallet": "Portefeuille d'identité",
+    "cardScanner": "Scanner de cartes",
+    "loyaltyCards": "Cartes de fidélité",
+    "getTheApp": "Télécharger l'app",
+    "downloadIOS": "Télécharger pour iOS",
+    "downloadAndroid": "Télécharger pour Android",
+    "platform": "Plateforme",
+    "idVerification": "Vérification d'identité",
+    "nfcIdentityScan": "Scan NFC d'identité",
+    "documentIntelligence": "Analyse documentaire",
+    "faceMatch": "Reconnaissance faciale",
+    "livenessCheck": "Vérification de présence",
+    "dataSourceChecks": "Vérification des sources",
+    "phoneAndEmailValidation": "Validation téléphone et email",
+    "behaviorInsights": "Analyse comportementale",
+    "dynamicFlow": "Flux dynamique",
+    "reviewWorkspace": "Espace de révision",
+    "credentialIssuance": "Émission de credentials",
+    "solutions": "Solutions",
+    "clientOnboarding": "Onboarding client",
+    "ageCompliance": "Vérification de l'âge",
+    "digitalTicketing": "Billetterie numérique",
+    "termsAndPolicies": "Conditions et politiques",
+    "termsOfUse": "Conditions d'utilisation",
+    "privacyPolicy": "Politique de confidentialité",
+    "security": "Sécurité",
+    "copyright": "Folio Wallet © 2025"
+  },
+  "buttons": {
+    "learnMore": "En savoir plus",
+    "getInTouch": "Nous contacter",
+    "explorePlayground": "Explorer le Playground"
+  },
+  "exploreMore": "En savoir plus",
+  "language": {
+    "select": "Choisir la langue"
+  },
+  "getTheApp": {
+    "title": "Emportez Folio partout avec vous",
+    "description": "Vos documents restent organisés, synchronisés et accessibles instantanément sur iOS et Android."
+  },
+  "blog": {
+    "title": "Blog Folio",
+    "description": "Études de cas, analyses produit et guides pratiques sur le voyage, les documents et l'identité numérique.",
+    "loadMore": "Charger plus",
+    "backToBlog": "Retour au blog",
+    "keepReading": "À lire aussi",
+    "viewAll": "Voir tout",
+    "readingTime": "{{minutes}} min de lecture",
+    "categories": {
+      "All": "Tous",
+      "Company": "Entreprise",
+      "Product": "Produit",
+      "Guides": "Guides",
+      "Research": "Recherche",
+      "Safety": "Sécurité",
+      "Business": "Business"
+    }
+  },
+  "legal": {
+    "lastUpdated": "Dernière mise à jour"
+  },
+  "language_banner": {
+    "message": "Souhaitez-vous voir cette page en {{language}} ?",
+    "switch_to": "Passer en {{language}}",
+    "keep_current": "Garder {{language}}",
+    "close": "Fermer",
+    "aria_label": "Suggestion de langue"
+  }
+}

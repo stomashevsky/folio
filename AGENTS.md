@@ -635,6 +635,56 @@ This file contains all rules and principles that must be followed for every chan
 | Government | Pubblica Amministrazione | |
 | Wallet | Portafoglio digitale | |
 
+#### 13.12. French Language Rules
+
+**Key translation principles:**
+1. **NEVER translate literally** — adapt text naturally as a native French copywriter would write it
+2. **Read aloud test** — if it sounds unnatural when spoken, rewrite it
+3. **Remove English calques** — avoid word-for-word translations that sound foreign
+4. **Keep it concise** — French can be longer than English, so abbreviate where possible
+5. **Maintain term consistency** — identical terms must be translated the same way everywhere
+
+**Style and tone:**
+- Use formal "vous" form for marketing copy, not informal "tu"
+- Use active voice where possible
+- Write like professional French marketing teams (Apple France, Google France style)
+- Before adding a translation, search for existing translations with `grep` to ensure consistency
+
+**Terms that are NOT translated (keep in English):**
+- Product names: Folio, Folio Wallet, Playground, EUDI Wallet
+- Technical terms: KYC, AML, API, SDK, NFC, QR
+- Trademarks: Face ID, Touch ID, Passkeys
+
+**Official glossary for French:**
+
+| English | French | Notes |
+|---------|--------|-------|
+| Digital Identity | Identité numérique | |
+| Liveness Check | Vérification de présence | |
+| Face Match | Reconnaissance faciale | |
+| ID Verification | Vérification d'identité | |
+| NFC Identity Scan | Scan NFC d'identité | |
+| Document Intelligence | Analyse documentaire | |
+| Data Source Checks | Vérification des sources | |
+| Phone and Email Validation | Validation téléphone et email | |
+| Behavior Insights | Analyse comportementale | |
+| Dynamic Flow | Flux dynamique | |
+| Review Workspace | Espace de révision | |
+| Credential Issuance | Émission de credentials | |
+| Client Onboarding | Onboarding client | |
+| Age Compliance | Vérification de l'âge | |
+| Digital Ticketing | Billetterie numérique | |
+| End-to-end encryption | Chiffrement de bout en bout | |
+| Zero-knowledge architecture | Architecture zéro connaissance | |
+| Get in touch | Nous contacter | |
+| Sign up | S'inscrire | |
+| Learn more | En savoir plus | |
+| Download | Télécharger | |
+| Privacy | Confidentialité | |
+| Security | Sécurité | |
+| Government | Secteur public | |
+| Wallet | Portefeuille numérique | |
+
 ## Important Reminders
 
 - **Always check Figma** to understand component structure, states, and variants before implementation

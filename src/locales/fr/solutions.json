@@ -1,0 +1,430 @@
+{
+  "digitalTicketing": {
+    "meta": {
+      "title": "Billetterie numérique | Folio Wallet",
+      "description": "Créez, gérez et validez des billets numériques avec des contrôles anti-fraude intégrés."
+    },
+    "hero": {
+      "tagline": "Billetterie numérique",
+      "title": "De meilleurs billets\nSans application à développer",
+      "description": "Offrez à vos clients des billets numériques clairs, faciles à trouver, faciles à scanner et qui fonctionnent sur n'importe quel téléphone moderne."
+    },
+    "trust": {
+      "title": "Construit sur une plateforme de confiance",
+      "description": "Vos billets apparaissent dans le même portefeuille sécurisé que les gens utilisent quotidiennement pour leurs pièces d'identité, cartes et documents de voyage. Pas d'applications supplémentaires, pas de friction d'onboarding.",
+      "rating": {
+        "value": "4.7★",
+        "description": "Les utilisateurs apprécient constamment Folio pour sa clarté, sa rapidité et sa fiabilité au quotidien."
+      },
+      "documents": {
+        "value": "1M+",
+        "description": "Documents, cartes et billets déjà ajoutés par des personnes qui utilisent Folio pour rester organisées."
+      },
+      "countries": {
+        "value": "120+",
+        "description": "Pays où Folio aide les utilisateurs à garder leurs documents essentiels accessibles partout."
+      }
+    },
+    "format": {
+      "title": "Émettez des billets au format Folio",
+      "description": "Envoyez-nous un simple JSON ou un email que vous générez déjà et Folio le transforme en un billet numérique propre. Pas de fichiers pkpass, pas de certificats de portefeuille, pas de SDK à intégrer.",
+      "features": {
+        "noFormats": "Pas de formats de pass spéciaux ni de certificats",
+        "fastDelivery": "Les billets arrivent en quelques secondes sur le téléphone du client",
+        "anySystem": "Fonctionne avec tout système de réservation ou billetterie existant"
+      }
+    },
+    "whyFolio": {
+      "title": "Pourquoi Folio plutôt qu'Apple Wallet ou Google Wallet",
+      "description": "Un moyen plus simple et plus universel de livrer des billets numériques sans limites de plateforme ni formats complexes.",
+      "noFormats": {
+        "title": "Pas de formats spéciaux",
+        "description": "Vous n'avez pas besoin de créer des fichiers pass ou de gérer des certificats. Folio fonctionne avec les données simples que vous envoyez déjà."
+      },
+      "workflow": {
+        "title": "S'intègre à votre workflow existant",
+        "description": "Si vous pouvez envoyer un PDF ou email, vous pouvez émettre des billets pour Folio. Pas de nouveaux systèmes, pas d'équipe mobile, pas de configuration."
+      },
+      "onePlace": {
+        "title": "Tout au même endroit",
+        "description": "Tous les billets et réservations apparaissent dans une chronologie simple qui aide les clients à voir leurs plans d'un coup d'œil."
+      },
+      "everyone": {
+        "title": "Disponible pour tous",
+        "description": "Vos billets fonctionnent de la même façon sur iOS et Android dans n'importe quelle région, même pour les utilisateurs qui n'utilisent pas d'applications de portefeuille."
+      }
+    },
+    "operators": {
+      "title": "Conçu pour les opérateurs du monde réel",
+      "description": "Folio fonctionne pour tout service où les clients reçoivent des billets ou confirmations par email.",
+      "events": {
+        "title": "Événements et lieux",
+        "description": "Concerts, festivals, théâtres et lieux locaux obtiennent des billets d'événement modernes faciles à scanner et à comprendre."
+      },
+      "transport": {
+        "title": "Opérateurs de transport",
+        "description": "Compagnies aériennes régionales, bus et services ferroviaires envoient des cartes de voyage simples avec horaires, arrêts et détails de siège clairs au même endroit."
+      },
+      "tours": {
+        "title": "Tours et activités",
+        "description": "Tours, excursions et attractions gardent chaque réservation dans une vue simple pour que les invités sachent toujours où être et quand."
+      }
+    },
+    "cta": {
+      "title": "Transformez chaque billet en une expérience exceptionnelle",
+      "description": "Si vous livrez des billets ou réservations par email, Folio offre à vos clients une expérience plus claire et plus fiable sans changer votre façon de travailler.",
+      "button": "Nous contacter",
+      "tryButton": "Essayer Folio"
+    }
+  },
+  "ageCompliance": {
+    "meta": {
+      "title": "Vérification de l'âge | Folio Wallet",
+      "description": "Vérifiez l'âge des utilisateurs pour les produits et services restreints en toute confiance."
+    },
+    "hero": {
+      "tagline": "Vérification de l'âge",
+      "title": "Service de vérification de l'âge pour la conformité mondiale",
+      "description": "Folio vous aide à confirmer l'âge des utilisateurs rapidement et en toute sécurité partout dans le monde. Vous choisissez des méthodes de vérification adaptées à votre niveau de risque, des vérifications anonymes privées à la vérification d'identité complète, tout en restant conforme aux standards mondiaux incluant RGPD, COPPA, DSA et autres."
+    },
+    "ageChecks": {
+      "title": "Vérifications d'âge sans friction",
+      "description": "La vérification de l'âge avec Folio est rapide, intuitive et fluide. Les utilisateurs complètent un selfie, un credential d'âge ou un scan de document en quelques secondes, gardant l'onboarding simple et minimisant les abandons."
+    },
+    "methods": {
+      "title": "Trois façons de vérifier l'âge",
+      "documentVerification": {
+        "title": "Vérification par document",
+        "description": "Quand vous avez besoin d'une assurance maximale, les utilisateurs téléchargent un document d'identité pour une vérification d'âge complète. Folio valide l'authenticité, effectue des contrôles de présence et confirme l'âge légal pour répondre aux exigences réglementaires strictes."
+      },
+      "faceEstimation": {
+        "title": "Estimation d'âge par le visage",
+        "description": "Les utilisateurs prennent un selfie rapide et notre IA estime l'âge en quelques secondes. Aucun document requis. Les contrôles de présence intégrés aident à prévenir la fraude tout en gardant le flux léger et adapté au mobile."
+      },
+      "anonymousCredential": {
+        "title": "Credential d'âge anonyme",
+        "description": "Un credential d'âge vérifié une fois qui peut être réutilisé sans révéler l'identité. Les utilisateurs prouvent qu'ils ont l'âge requis avec un token préservant la vie privée au lieu de données personnelles."
+      }
+    },
+    "privacy": {
+      "title": "La vie privée reste avec l'utilisateur",
+      "description": "Folio est conçu autour de la vie privée dès la première étape. Les flux de données anonymes et minimaux réduisent ce que vous devez stocker et traiter. Là où la biométrie est utilisée, elle reste protégée et gérée de manière sécurisée pour rester conforme aux lois mondiales sur la vie privée."
+    },
+    "assurance": {
+      "title": "Toutes les fonctionnalités essentielles d'assurance d'âge",
+      "description": "Folio réunit contrôles de présence, précision biométrique, estimation en temps réel et vérification par document dans une seule plateforme. Vous pouvez choisir le bon niveau d'assurance pour vos utilisateurs et votre produit sans ajouter de friction inutile."
+    },
+    "industries": {
+      "title": "Conçu pour votre secteur",
+      "socialPlatforms": {
+        "title": "Plateformes sociales et messagerie",
+        "description": "Protégez les utilisateurs plus jeunes et respectez les règles de sécurité des enfants en confirmant l'âge approprié avant l'accès, avec l'option d'ajouter le consentement parental si nécessaire."
+      },
+      "gaming": {
+        "title": "Jeux en ligne et paris",
+        "description": "Confirmez que les joueurs respectent les limites d'âge légales avant de jouer. Des contrôles d'âge solides aident à prévenir les abus, soutiennent les exigences de licence et réduisent la fraude."
+      },
+      "ecommerce": {
+        "title": "E-commerce et livraison",
+        "description": "Vérifiez l'âge au paiement pour l'alcool, le tabac et autres produits réglementés. Folio s'intègre dans votre flux d'achat ou de livraison existant sans le ralentir."
+      },
+      "fintech": {
+        "title": "Fintech et services financiers",
+        "description": "Assurez-vous que les clients respectent les exigences d'âge minimum pour les comptes, portefeuilles et produits financiers tout en gardant l'onboarding numérique simple."
+      },
+      "streaming": {
+        "title": "Streaming et contenu adulte",
+        "description": "Assurez-vous que le contenu soumis à des restrictions d'âge n'est montré qu'aux audiences éligibles avec des méthodes de vérification adaptées à votre expérience de visionnage."
+      },
+      "telecom": {
+        "title": "Télécommunications",
+        "description": "Vérifiez l'âge des clients pour les forfaits, contrats et services nécessitant une confirmation d'âge légal tout en gardant l'inscription rapide et simple."
+      }
+    },
+    "integration": {
+      "title": "Facile à intégrer",
+      "sdk": {
+        "title": "SDK Web et mobile",
+        "description": "Intégrez les contrôles d'âge directement dans votre produit. Les utilisateurs complètent la vérification dans un flux natif et brandé qui fait partie de votre application."
+      },
+      "api": {
+        "title": "API",
+        "description": "Contrôlez chaque détail du parcours de vérification d'âge avec notre API. Orchestrez méthodes, règles et résultats depuis vos propres systèmes backend."
+      },
+      "staticUrl": {
+        "title": "URL statique",
+        "description": "Lancez la vérification d'âge instantanément avec un lien hébergé sécurisé. Partagez-le par email, SMS ou chat pour démarrer les contrôles sans travail de développement."
+      }
+    },
+    "cta": {
+      "title": "Apportez une vérification d'âge précise à votre produit",
+      "description": "Folio vous aide à protéger les utilisateurs, satisfaire les régulateurs et maintenir une expérience fluide. Parlez à notre équipe pour concevoir un flux d'assurance d'âge adapté à votre produit.",
+      "button": "Nous contacter"
+    }
+  },
+  "clientOnboarding": {
+    "meta": {
+      "title": "Onboarding client | Folio Wallet",
+      "description": "Vérification client rapide, conforme et prête pour l'audit. Onboardez des clients à distance en minutes tout en répondant aux exigences AML, KYC et CDD mondiales."
+    },
+    "hero": {
+      "tagline": "Onboarding client",
+      "title": "KYC simplifié pour les entreprises réglementées",
+      "description": "Vérification client rapide, conforme et prête pour l'audit. Onboardez des clients à distance en minutes tout en répondant aux exigences AML, KYC et CDD mondiales. Arrêtez de courir après les documents et restez prêt pour l'audit en permanence."
+    },
+    "verification": {
+      "title": "Vérification client simplifiée",
+      "remote": {
+        "title": "Vérification à distance",
+        "description": "Vérifiez des clients partout dans le monde sans rencontre en personne. Ils complètent les contrôles depuis n'importe quel appareil moderne."
+      },
+      "reports": {
+        "title": "Rapports de conformité instantanés",
+        "description": "Recevez des rapports PDF horodatés avec vérification d'identité, confirmation d'adresse et journaux d'activité complets."
+      },
+      "audit": {
+        "title": "Piste d'audit sécurisée",
+        "description": "Toutes les données de vérification sont chiffrées et stockées en sécurité avec accès basé sur les permissions pour examen réglementaire."
+      }
+    },
+    "howItWorks": {
+      "title": "Comment ça fonctionne",
+      "send": {
+        "title": "Envoyer",
+        "description": "Partagez un lien de vérification sécurisé avec votre client par email, SMS ou n'importe quelle plateforme de messagerie. Aucun téléchargement d'application requis."
+      },
+      "verify": {
+        "title": "Vérifier",
+        "description": "Votre client complète la vérification d'identité et la confirmation d'adresse en minutes avec son smartphone ou ordinateur."
+      },
+      "review": {
+        "title": "Examiner",
+        "description": "Recevez instantanément un rapport de conformité horodaté avec confirmation de correspondance d'identité, vérification d'adresse et scoring de risque."
+      }
+    },
+    "keyFeatures": {
+      "title": "Fonctionnalités clés",
+      "description": "Tout ce dont vous avez besoin pour vérifier des clients et répondre aux exigences de conformité",
+      "globalId": {
+        "title": "Support mondial des ID",
+        "description": "Vérifiez passeports, permis de conduire et cartes d'identité nationales de plus de 200 pays et régions."
+      },
+      "amlKyc": {
+        "title": "Conformité AML et KYC",
+        "description": "Répondez aux exigences réglementaires incluant UK MLR, EU AMLD, FINTRAC, IRS KYC et autres cadres mondiaux."
+      },
+      "addressVerification": {
+        "title": "Vérification d'adresse",
+        "description": "Confirmez les adresses clients avec factures de services publics, relevés bancaires et autres justificatifs de domicile."
+      },
+      "secureStorage": {
+        "title": "Stockage sécurisé des documents",
+        "description": "Toutes les données client sont chiffrées au repos et en transit avec accès sécurisé basé sur les permissions."
+      },
+      "riskScoring": {
+        "title": "Scoring de risque",
+        "description": "L'évaluation automatique des risques vous aide à identifier les clients potentiellement frauduleux ou à haut risque."
+      },
+      "auditReports": {
+        "title": "Rapports prêts pour l'audit",
+        "description": "Générez des rapports de conformité PDF horodatés avec journaux d'activité complets pour examen réglementaire."
+      },
+      "facialVerification": {
+        "title": "Vérification faciale",
+        "description": "La reconnaissance faciale par IA compare les selfies en direct aux photos d'identité pour confirmer l'identité."
+      },
+      "livenessCheck": {
+        "title": "Détection de présence",
+        "description": "Prévenez la fraude avec des contrôles de présence avancés garantissant que la personne est physiquement présente."
+      }
+    },
+    "industries": {
+      "title": "Conçu pour les secteurs réglementés",
+      "accountants": {
+        "title": "Comptables",
+        "description": "Simplifiez l'onboarding client pour la préparation fiscale, l'audit et les services de conseil financier tout en répondant aux exigences AML."
+      },
+      "lawyers": {
+        "title": "Avocats et notaires",
+        "description": "Vérifiez l'identité client pour les affaires juridiques, transactions immobilières et services aux entreprises avec des dossiers de conformité complets."
+      },
+      "estateAgents": {
+        "title": "Agents immobiliers",
+        "description": "Répondez aux obligations anti-blanchiment pour les ventes et locations immobilières avec une vérification à distance rapide."
+      },
+      "financialAdvisors": {
+        "title": "Conseillers financiers",
+        "description": "Onboardez les clients en investissement et assurance en toute sécurité tout en maintenant la conformité réglementaire."
+      },
+      "conveyancers": {
+        "title": "Notaires immobiliers",
+        "description": "Vérifiez acheteurs et vendeurs dans les transactions immobilières avec collecte et stockage sécurisés des documents."
+      },
+      "professionalServices": {
+        "title": "Services professionnels",
+        "description": "Toute entreprise réglementée nécessitant de vérifier l'identité des clients peut bénéficier d'un onboarding numérique simplifié."
+      }
+    },
+    "cta": {
+      "title": "Simplifiez votre onboarding client dès aujourd'hui",
+      "description": "Transformez des heures de travail de conformité manuel en minutes. Parlez à notre équipe pour voir comment Folio peut simplifier votre processus de vérification client.",
+      "button": "Nous contacter"
+    }
+  },
+  "ticketIssuance": {
+    "meta": {
+      "title": "Émission de billets | Folio Wallet",
+      "description": "Émettez des billets numériques sécurisés directement vers les portefeuilles utilisateurs."
+    },
+    "hero": {
+      "tagline": "Émission de billets",
+      "title": "De meilleurs billets\nSans application à développer",
+      "description": "Offrez à vos clients des billets numériques clairs, faciles à trouver, faciles à scanner et qui fonctionnent sur n'importe quel téléphone moderne."
+    },
+    "trust": {
+      "title": "Construit sur une plateforme de confiance",
+      "description": "Vos billets apparaissent dans le même portefeuille sécurisé que les gens utilisent quotidiennement pour leurs pièces d'identité, cartes et documents de voyage. Pas d'applications supplémentaires, pas de friction d'onboarding.",
+      "rating": {
+        "value": "4.7★",
+        "description": "Les utilisateurs apprécient constamment Folio pour sa clarté, sa rapidité et sa fiabilité au quotidien."
+      },
+      "documents": {
+        "value": "1M+",
+        "description": "Documents, cartes et billets déjà ajoutés par des personnes qui utilisent Folio pour rester organisées."
+      },
+      "countries": {
+        "value": "120+",
+        "description": "Pays où Folio aide les utilisateurs à garder leurs documents essentiels accessibles partout."
+      }
+    },
+    "format": {
+      "title": "Émettez des billets au format Folio",
+      "description": "Envoyez-nous un simple JSON ou un email que vous générez déjà et Folio le transforme en un billet numérique propre. Pas de fichiers pkpass, pas de certificats de portefeuille, pas de SDK à intégrer.",
+      "features": {
+        "noFormats": "Pas de formats de pass spéciaux ni de certificats",
+        "fastDelivery": "Les billets arrivent en quelques secondes sur le téléphone du client",
+        "anySystem": "Fonctionne avec tout système de réservation ou billetterie existant"
+      }
+    },
+    "whyFolio": {
+      "title": "Pourquoi Folio plutôt qu'Apple Wallet ou Google Wallet",
+      "description": "Un moyen plus simple et plus universel de livrer des billets numériques sans limites de plateforme ni formats complexes.",
+      "noFormats": {
+        "title": "Pas de formats spéciaux",
+        "description": "Vous n'avez pas besoin de créer des fichiers pass ou de gérer des certificats. Folio fonctionne avec les données simples que vous envoyez déjà."
+      },
+      "workflow": {
+        "title": "S'intègre à votre workflow existant",
+        "description": "Si vous pouvez envoyer un PDF ou email, vous pouvez émettre des billets pour Folio. Pas de nouveaux systèmes, pas d'équipe mobile, pas de configuration."
+      },
+      "onePlace": {
+        "title": "Tout au même endroit",
+        "description": "Tous les billets et réservations apparaissent dans une chronologie simple qui aide les clients à voir leurs plans d'un coup d'œil."
+      },
+      "everyone": {
+        "title": "Disponible pour tous",
+        "description": "Vos billets fonctionnent de la même façon sur iOS et Android dans n'importe quelle région, même pour les utilisateurs qui n'utilisent pas d'applications de portefeuille."
+      }
+    },
+    "operators": {
+      "title": "Conçu pour les opérateurs du monde réel",
+      "description": "Folio fonctionne pour tout service où les clients reçoivent des billets ou confirmations par email.",
+      "events": {
+        "title": "Événements et lieux",
+        "description": "Concerts, festivals, théâtres et lieux locaux obtiennent des billets d'événement modernes faciles à scanner et à comprendre."
+      },
+      "transport": {
+        "title": "Opérateurs de transport",
+        "description": "Compagnies aériennes régionales, bus et services ferroviaires envoient des cartes de voyage simples avec horaires, arrêts et détails de siège clairs au même endroit."
+      },
+      "tours": {
+        "title": "Tours et activités",
+        "description": "Tours, excursions et attractions gardent chaque réservation dans une vue simple pour que les invités sachent toujours où être et quand."
+      }
+    },
+    "cta": {
+      "title": "Transformez chaque billet en une expérience exceptionnelle",
+      "description": "Si vous livrez des billets ou réservations par email, Folio offre à vos clients une expérience plus claire et plus fiable sans changer votre façon de travailler.",
+      "button": "Nous contacter",
+      "tryButton": "Essayer Folio"
+    }
+  },
+  "business": {
+    "meta": {
+      "title": "Pour les entreprises | Folio Wallet",
+      "description": "Solutions de vérification d'identité et de conformité pour entreprises."
+    },
+    "hero": {
+      "tagline": "Pour les entreprises",
+      "title": "De meilleurs billets\nSans application à développer",
+      "description": "Offrez à vos clients des billets numériques clairs, faciles à trouver, faciles à scanner et qui fonctionnent sur n'importe quel téléphone moderne."
+    },
+    "trust": {
+      "title": "Construit sur une plateforme de confiance",
+      "description": "Vos billets apparaissent dans le même portefeuille sécurisé que les gens utilisent quotidiennement pour leurs pièces d'identité, cartes et documents de voyage. Pas d'applications supplémentaires, pas de friction d'onboarding.",
+      "rating": {
+        "value": "4.7★",
+        "description": "Les utilisateurs apprécient constamment Folio pour sa clarté, sa rapidité et sa fiabilité au quotidien."
+      },
+      "documents": {
+        "value": "1M+",
+        "description": "Documents, cartes et billets déjà ajoutés par des personnes qui utilisent Folio pour rester organisées."
+      },
+      "countries": {
+        "value": "120+",
+        "description": "Pays où Folio aide les utilisateurs à garder leurs documents essentiels accessibles partout."
+      }
+    },
+    "format": {
+      "title": "Émettez des billets au format Folio",
+      "description": "Envoyez-nous un simple JSON ou un email que vous générez déjà et Folio le transforme en un billet numérique propre. Pas de fichiers pkpass, pas de certificats de portefeuille, pas de SDK à intégrer.",
+      "features": {
+        "noFormats": "Pas de formats de pass spéciaux ni de certificats",
+        "fastDelivery": "Les billets arrivent en quelques secondes sur le téléphone du client",
+        "anySystem": "Fonctionne avec tout système de réservation ou billetterie existant"
+      }
+    },
+    "whyFolio": {
+      "title": "Pourquoi Folio plutôt qu'Apple Wallet ou Google Wallet",
+      "description": "Un moyen plus simple et plus universel de livrer des billets numériques sans limites de plateforme ni formats complexes.",
+      "noFormats": {
+        "title": "Pas de formats spéciaux",
+        "description": "Vous n'avez pas besoin de créer des fichiers pass ou de gérer des certificats. Folio fonctionne avec les données simples que vous envoyez déjà."
+      },
+      "workflow": {
+        "title": "S'intègre à votre workflow existant",
+        "description": "Si vous pouvez envoyer un PDF ou email, vous pouvez émettre des billets pour Folio. Pas de nouveaux systèmes, pas d'équipe mobile, pas de configuration."
+      },
+      "onePlace": {
+        "title": "Tout au même endroit",
+        "description": "Tous les billets et réservations apparaissent dans une chronologie simple qui aide les clients à voir leurs plans d'un coup d'œil."
+      },
+      "everyone": {
+        "title": "Disponible pour tous",
+        "description": "Vos billets fonctionnent de la même façon sur iOS et Android dans n'importe quelle région, même pour les utilisateurs qui n'utilisent pas d'applications de portefeuille."
+      }
+    },
+    "operators": {
+      "title": "Conçu pour les opérateurs du monde réel",
+      "description": "Folio fonctionne pour tout service où les clients reçoivent des billets ou confirmations par email.",
+      "events": {
+        "title": "Événements et lieux",
+        "description": "Concerts, festivals, théâtres et lieux locaux obtiennent des billets d'événement modernes faciles à scanner et à comprendre."
+      },
+      "transport": {
+        "title": "Opérateurs de transport",
+        "description": "Compagnies aériennes régionales, bus et services ferroviaires envoient des cartes de voyage simples avec horaires, arrêts et détails de siège clairs au même endroit."
+      },
+      "tours": {
+        "title": "Tours et activités",
+        "description": "Tours, excursions et attractions gardent chaque réservation dans une vue simple pour que les invités sachent toujours où être et quand."
+      }
+    },
+    "cta": {
+      "title": "Transformez chaque billet en une expérience exceptionnelle",
+      "description": "Si vous livrez des billets ou réservations par email, Folio offre à vos clients une expérience plus claire et plus fiable sans changer votre façon de travailler.",
+      "button": "Nous contacter",
+      "tryButton": "Essayer Folio"
+    }
+  }
+}

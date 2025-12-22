@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "title": "Folio | Votre portefeuille numérique pour documents et identité",
+    "description": "Stockage sécurisé de documents pour les particuliers. Plateforme de vérification pour les entreprises. Credentials numériques pour les gouvernements."
+  },
+  "hero": {
+    "tagline": "Folio Wallet",
+    "title": "Votre portefeuille numérique pour documents et identité",
+    "description": "Stockage sécurisé de documents pour les particuliers. Plateforme de vérification pour les entreprises. Credentials numériques pour les gouvernements."
+  },
+  "wallet": {
+    "tagline": "Application Folio",
+    "title": "Vos documents, toujours avec vous",
+    "description": "Gardez vos passeports, pièces d'identité, billets et cartes dans un seul endroit sécurisé. Folio importe n'importe quel document depuis un email, PDF ou photo, extrait les détails clés et garde tout organisé et accessible."
+  },
+  "platform": {
+    "tagline": "Plateforme",
+    "title": "Instaurez la confiance à grande échelle",
+    "description": "Vérification d'identité, analyse documentaire, détection de présence et plus encore. Tout ce dont vous avez besoin pour vérifier vos clients et prévenir la fraude.",
+    "carouselTitle": "Tout ce qu'il faut pour vérifier l'identité"
+  },
+  "solutions": {
+    "tagline": "Solutions",
+    "title": "Conçu pour votre secteur",
+    "description": "Solutions adaptées aux secteurs réglementés et aux environnements à haute confiance.",
+    "ageCompliance": {
+      "title": "Vérification de l'âge",
+      "description": "Vérifiez l'âge pour les secteurs réglementés"
+    },
+    "clientOnboarding": {
+      "title": "Onboarding client",
+      "description": "Simplifiez le KYC et la vérification client"
+    },
+    "digitalTicketing": {
+      "title": "Billetterie numérique",
+      "description": "Émettez et vérifiez des billets numériques sécurisés"
+    }
+  },
+  "government": {
+    "tagline": "Secteur public",
+    "title": "Identité numérique pour les gouvernements",
+    "description": "Des outils pour concevoir, tester et déployer des credentials numériques modernes conformes aux standards internationaux. Explorez notre sandbox pour voir les flux d'identité européens en action."
+  },
+  "testimonial": {
+    "quote": "\"Travailler avec Folio a été une expérience transformatrice… ils ont établi une nouvelle référence d'excellence pour la fourniture de solutions d'identité numérique.\"",
+    "name": "Ilirjan Celibashi",
+    "role": "Commissaire électoral, Albanie"
+  },
+  "security": {
+    "title": "Une sécurité de confiance",
+    "description": "Vos données sont protégées par des mesures de sécurité de pointe.",
+    "endToEndEncryption": {
+      "title": "Chiffrement de bout en bout",
+      "description": "Vos données sont chiffrées avec des clés que vous seul contrôlez"
+    },
+    "zeroKnowledge": {
+      "title": "Architecture zéro connaissance",
+      "description": "Nous ne pouvons pas accéder à vos documents, même si nous le voulions"
+    },
+    "biometric": {
+      "title": "Protection biométrique",
+      "description": "Face ID et empreinte digitale pour une sécurité renforcée"
+    }
+  }
+}

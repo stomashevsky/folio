@@ -21,7 +21,7 @@ const basePathForRouting = BASE_PATH === '/' ? '' : BASE_PATH.replace(/\/$/, '')
 const OG_IMAGE_BASE_URL = 'https://stomashevsky.github.io/folio/og-images'
 
 // Supported languages for i18n (must match src/i18n/index.ts)
-const SUPPORTED_LANGUAGES = ['en', 'es', 'ja', 'it']
+const SUPPORTED_LANGUAGES = ['en', 'es', 'ja', 'it', 'fr']
 const DEFAULT_LANGUAGE = 'en'
 
 // Static page metadata (non-blog pages)
@@ -693,7 +693,7 @@ async function main() {
         let html = await renderPageWithPuppeteer(browser, route, metadata, previewUrl)
         
         // Fix asset paths for nested routes
-        if (route !== '/' && route !== '/en' && route !== '/es' && route !== '/ja' && route !== '/it') {
+        if (route !== '/' && route !== '/en' && route !== '/es' && route !== '/ja' && route !== '/it' && route !== '/fr') {
           html = fixAssetPaths(html, route)
         }
         

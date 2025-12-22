@@ -79,7 +79,7 @@ export default function LanguageSuggestionBanner() {
       role="dialog"
       aria-label={t('language_banner.aria_label', 'Language suggestion')}
     >
-      <div className="mx-auto max-w-[1280px] px-4 py-3">
+      <div className="mx-auto max-w-[1280px] px-4 py-2">
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-between">
           <p className="text-sm text-center sm:text-left">
             {t('language_banner.message', {

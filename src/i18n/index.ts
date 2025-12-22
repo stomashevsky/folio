@@ -43,7 +43,17 @@ import itPages from '../locales/it/pages.json'
 import itBlog from '../locales/it/blog.json'
 import itArticles from '../locales/it/articles.json'
 
-export const SUPPORTED_LANGUAGES = ['en', 'es', 'ja', 'it'] as const
+import frCommon from '../locales/fr/common.json'
+import frHome from '../locales/fr/home.json'
+import frWallet from '../locales/fr/wallet.json'
+import frPlatform from '../locales/fr/platform.json'
+import frSolutions from '../locales/fr/solutions.json'
+import frGovernment from '../locales/fr/government.json'
+import frPages from '../locales/fr/pages.json'
+import frBlog from '../locales/fr/blog.json'
+import frArticles from '../locales/fr/articles.json'
+
+export const SUPPORTED_LANGUAGES = ['en', 'es', 'ja', 'it', 'fr'] as const
 export type SupportedLanguage = typeof SUPPORTED_LANGUAGES[number]
 
 export const LANGUAGE_NAMES: Record<SupportedLanguage, string> = {
@@ -51,6 +61,7 @@ export const LANGUAGE_NAMES: Record<SupportedLanguage, string> = {
   es: 'Español',
   ja: '日本語',
   it: 'Italiano',
+  fr: 'Français',
 }
 
 export const DEFAULT_LANGUAGE: SupportedLanguage = 'en'
@@ -99,6 +110,17 @@ const resources = {
     pages: itPages,
     blog: itBlog,
     articles: itArticles,
+  },
+  fr: {
+    common: frCommon,
+    home: frHome,
+    wallet: frWallet,
+    platform: frPlatform,
+    solutions: frSolutions,
+    government: frGovernment,
+    pages: frPages,
+    blog: frBlog,
+    articles: frArticles,
   },
 }
 

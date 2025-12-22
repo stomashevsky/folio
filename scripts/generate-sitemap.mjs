@@ -12,7 +12,7 @@ const publicDir = path.join(repoRoot, 'public')
 const sitemapPath = path.join(publicDir, 'sitemap.xml')
 
 const SITE_ORIGIN = 'https://folio.id'
-const SUPPORTED_LANGUAGES = ['en', 'es', 'ja', 'it']
+const SUPPORTED_LANGUAGES = ['en', 'es', 'ja', 'it', 'fr']
 const DEFAULT_LANGUAGE = 'en'
 
 function escapeXml(value) {
