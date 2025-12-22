@@ -1,31 +1,31 @@
 {
     "meta": {
         "title": "Folio | Tu billetera digital para documentos e identidad",
-        "description": "Almacenamiento seguro de documentos para individuos. Plataforma de verificación para empresas. Credenciales digitales para gobiernos."
+        "description": "Almacenamiento seguro de documentos para ti. Plataforma de verificación para empresas. Credenciales digitales para gobiernos."
     },
     "hero": {
         "tagline": "Folio Wallet",
         "title": "Tu billetera digital para documentos e identidad",
-        "description": "Almacenamiento seguro de documentos para individuos. Plataforma de verificación para empresas. Credenciales digitales para gobiernos."
+        "description": "Almacenamiento seguro de documentos para ti. Plataforma de verificación para empresas. Credenciales digitales para gobiernos."
     },
     "wallet": {
         "tagline": "App Folio",
         "title": "Tus documentos, siempre contigo",
-        "description": "Guarda pasaportes, identificaciones, billetes y tarjetas en un lugar seguro. Folio importa cualquier documento desde email, PDF o foto, extrae los detalles clave y mantiene todo organizado y accesible."
+        "description": "Guarda pasaportes, identificaciones, billetes y tarjetas en un lugar seguro. Folio importa documentos desde email, PDF o foto, extrae los datos clave y mantiene todo organizado."
     },
     "platform": {
         "tagline": "Plataforma",
-        "title": "Genera confianza a escala",
-        "description": "Verificación de identidad, inteligencia documental, prueba de vida y más. Todo lo que necesitas para verificar clientes y prevenir fraudes.",
-        "carouselTitle": "Todo lo que necesitas para verificar la identidad"
+        "title": "Verificación de identidad que crece contigo",
+        "description": "Verificación de identidad, análisis documental, prueba de vida y más. Todo lo que necesitas para verificar clientes y prevenir fraudes.",
+        "carouselTitle": "Todo para verificar la identidad"
     },
     "solutions": {
         "tagline": "Soluciones",
-        "title": "Creado para tu industria",
-        "description": "Soluciones a medida para industrias reguladas y entornos de alta confianza.",
+        "title": "Diseñado para tu industria",
+        "description": "Soluciones para industrias reguladas y entornos de alta confianza.",
         "ageCompliance": {
-            "title": "Cumplimiento de edad",
-            "description": "Verifica la edad para industrias reguladas"
+            "title": "Verificación de edad",
+            "description": "Verifica la edad para productos restringidos"
         },
         "clientOnboarding": {
             "title": "Alta de clientes",
@@ -39,16 +39,16 @@
     "government": {
         "tagline": "Gobierno",
         "title": "Identidad digital para gobiernos",
-        "description": "Herramientas para que los gobiernos diseñen, prueben y desplieguen credenciales digitales modernas alineadas con los estándares globales. Explora nuestro sandbox para ver los flujos de identificación digital europea en acción."
+        "description": "Herramientas para diseñar, probar e implementar credenciales digitales según estándares globales. Explora Playground para ver flujos de identidad digital europea en acción."
     },
     "testimonial": {
-        "quote": "\"Trabajar con Folio ha sido una experiencia transformadora... han establecido un nuevo estándar de excelencia sobre cómo deben entregarse las soluciones de identidad digital.\"",
+        "quote": "\"Trabajar con Folio ha sido una experiencia transformadora... establecieron un nuevo estándar sobre cómo deben entregarse las soluciones de identidad digital.\"",
         "name": "Ilirjan Celibashi",
         "role": "Comisionado Estatal de Elecciones, Albania"
     },
     "security": {
         "title": "Seguridad en la que puedes confiar",
-        "description": "Tus datos están protegidos con medidas de seguridad líderes en la industria.",
+        "description": "Tus datos protegidos con las mejores medidas de seguridad.",
         "endToEndEncryption": {
             "title": "Cifrado de extremo a extremo",
             "description": "Tus datos se cifran con claves que solo tú controlas"
@@ -59,7 +59,7 @@
         },
         "biometric": {
             "title": "Protección biométrica",
-            "description": "Desbloqueo con Face ID y huella dactilar para mayor seguridad"
+            "description": "Desbloqueo con Face ID y huella para mayor seguridad"
         }
     }
 }
