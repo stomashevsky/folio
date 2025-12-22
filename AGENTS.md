@@ -602,6 +602,49 @@ This file contains all rules and principles that must be followed for every chan
 - **When translating, always check and translate meta sections** — they are often overlooked but critical for SEO
 - **Meta text must be natural and compelling** — treat it as marketing copy, not technical text
 
+#### 13.12. Japanese Language Rules
+
+**Style and tone:**
+- Use polite form (です/ます) for marketing copy
+- Avoid excessive katakana for common concepts that have Japanese equivalents
+- UI must be concise — Japanese often needs more characters, so abbreviate where possible
+- Read aloud test — text must sound natural for native speakers
+- Write like professional Japanese marketing teams (Apple Japan, Google Japan style)
+
+**Terms that are NOT translated (keep in English):**
+- Product names: Folio, Folio Wallet, Playground, EUDI Wallet
+- Technical terms: KYC, AML, API, SDK, NFC, QR
+- Trademarks: Face ID, Touch ID, Passkeys
+
+**Official glossary for Japanese:**
+
+| English | Japanese | Notes |
+|---------|----------|-------|
+| Digital Identity | デジタルID | |
+| Liveness Check | 生体認証 | |
+| Face Match | 顔照合 | |
+| ID Verification | 本人確認 | |
+| NFC Identity Scan | NFC IDスキャン | |
+| Document Intelligence | ドキュメント分析 | |
+| Data Source Checks | データソース検証 | |
+| Phone and Email Validation | 電話・メール検証 | |
+| Behavior Insights | 行動分析 | |
+| Dynamic Flow | 動的フロー | |
+| Review Workspace | レビューワークスペース | |
+| Credential Issuance | クレデンシャル発行 | |
+| Client Onboarding | 顧客オンボーディング | |
+| Age Compliance | 年齢確認 | |
+| Digital Ticketing | デジタルチケット | |
+| End-to-end encryption | エンドツーエンド暗号化 | |
+| Zero-knowledge architecture | ゼロ知識アーキテクチャ | |
+| Get in touch | お問い合わせ | |
+| Sign up | 登録する | |
+| Learn more | 詳細を見る | |
+| Download | ダウンロード | |
+| Privacy | プライバシー | |
+| Security | セキュリティ | |
+| Government | 行政機関向け | |
+
 ## Important Reminders
 
 - **Always check Figma** to understand component structure, states, and variants before implementation
