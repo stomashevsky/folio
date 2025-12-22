@@ -11,7 +11,7 @@
         },
         "trust": {
             "title": "Construido en una plataforma en la que la gente confía",
-            "description": "Tus entradas aparecen dentro de la misma billetera segura que la gente usa a diario para identificaciones, tarjetas y documentos de viaje. Sin apps extra, sin fricción de registro.",
+            "description": "Tus entradas aparecen dentro de la misma billetera segura que la gente usa a diario para identificaciones, tarjetas y documentos de viaje. Sin apps extra, sin complicaciones al registrarse.",
             "rating": {
                 "value": "4.7★",
                 "description": "Los usuarios califican a Folio altamente por su claridad, velocidad y fiabilidad en el uso diario."
@@ -88,7 +88,7 @@
             "description": "Folio te ayuda a confirmar la edad del usuario de forma rápida y segura en cualquier lugar del mundo. Eliges métodos de verificación que coincidan con tu nivel de riesgo, desde comprobaciones anónimas privadas hasta verificación de identidad completa, mientras te mantienes alineado con los estándares globales, incluidos GDPR, COPPA, DSA y otros."
         },
         "ageChecks": {
-            "title": "Verificaciones de edad sin fricción",
+            "title": "Verificaciones de edad sin verificación",
             "description": "La verificación de edad con Folio es rápida, intuitiva y fluida. Los usuarios completan una selfie, credencial de edad o escaneo de documento en unos segundos, manteniendo el registro simple y minimizando los abandonos."
         },
         "methods": {
@@ -112,7 +112,7 @@
         },
         "assurance": {
             "title": "Todas las características esenciales de garantía de edad",
-            "description": "Folio trae pruebas de vida, precisión biométrica, estimación en tiempo real y verificación respaldada por documentos en una sola plataforma. Puedes elegir el nivel correcto de garantía para tus usuarios y tu producto sin agregar fricción innecesaria."
+            "description": "Folio trae pruebas de vida, precisión biométrica, estimación en tiempo real y verificación respaldada por documentos en una sola plataforma. Puedes elegir el nivel correcto de garantía para tus usuarios y tu producto sin agregar verificación innecesaria."
         },
         "industries": {
             "title": "Hecho para tu industria",
@@ -231,7 +231,7 @@
             },
             "facialVerification": {
                 "title": "Verificación facial",
-                "description": "La coincidencia facial impulsada por IA compara selfies en vivo con fotos de ID para confirmar la identidad."
+                "description": "La coincidencia facial con IA compara selfies en vivo con fotos de ID para confirmar la identidad."
             },
             "livenessCheck": {
                 "title": "Detección de vida",
@@ -283,7 +283,7 @@
         },
         "trust": {
             "title": "Construido en una plataforma en la que la gente confía",
-            "description": "Tus entradas aparecen dentro de la misma billetera segura que la gente usa a diario para identificaciones, tarjetas y documentos de viaje. Sin apps extra, sin fricción de registro.",
+            "description": "Tus entradas aparecen dentro de la misma billetera segura que la gente usa a diario para identificaciones, tarjetas y documentos de viaje. Sin apps extra, sin complicaciones al registrarse.",
             "rating": {
                 "value": "4.7★",
                 "description": "Los usuarios califican a Folio altamente por su claridad, velocidad y fiabilidad en el uso diario."
@@ -361,7 +361,7 @@
         },
         "trust": {
             "title": "Construido en una plataforma en la que la gente confía",
-            "description": "Tus entradas aparecen dentro de la misma billetera segura que la gente usa a diario para identificaciones, tarjetas y documentos de viaje. Sin apps extra, sin fricción de registro.",
+            "description": "Tus entradas aparecen dentro de la misma billetera segura que la gente usa a diario para identificaciones, tarjetas y documentos de viaje. Sin apps extra, sin complicaciones al registrarse.",
             "rating": {
                 "value": "4.7★",
                 "description": "Los usuarios califican a Folio altamente por su claridad, velocidad y fiabilidad en el uso diario."

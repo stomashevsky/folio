@@ -2,12 +2,12 @@
     "idVerification": {
         "meta": {
             "title": "Verificación de ID | Folio Wallet",
-            "description": "Verifica documentos oficiales y confirma la identidad en más de 200 lugares alrededor del mundo."
+            "description": "Verifica documentos oficiales y confirma la identidad en más de 200 países."
         },
         "hero": {
             "tagline": "Verificación de ID",
             "title": "Verifica identificaciones gubernamentales con confianza",
-            "description": "Verifica documentos oficiales y confirma la identidad en más de 200 lugares alrededor del mundo."
+            "description": "Verifica documentos oficiales y confirma la identidad en más de 200 países."
         },
         "advanced": {
             "title": "Verificación de identidad avanzada",
@@ -92,7 +92,7 @@
                 "description": "Cumple con necesidades de garantía con documentos verificados y una comparación facial en vivo."
             },
             "friction": {
-                "title": "Fricción dinámica",
+                "title": "Verificación adaptativa",
                 "description": "Ajusta pasos de verificación basados en los datos extraídos del documento."
             }
         },
@@ -137,12 +137,12 @@
     "documentIntelligence": {
         "meta": {
             "title": "Inteligencia Documental | Folio Wallet",
-            "description": "Revisa automáticamente los documentos enviados para confirmar identidad o validar comprobantes de domicilio, ingresos o salud con un esfuerzo mínimo."
+            "description": "Revisa automáticamente los documentos enviados para confirmar identidad o validar comprobantes de domicilio, ingresos o salud fácilmente."
         },
         "hero": {
             "tagline": "Inteligencia documental",
             "title": "Automatiza la revisión de documentos a escala",
-            "description": "Revisa automáticamente los documentos enviados para confirmar identidad o validar comprobantes de domicilio, ingresos o salud con un esfuerzo mínimo."
+            "description": "Revisa automáticamente los documentos enviados para confirmar identidad o validar comprobantes de domicilio, ingresos o salud fácilmente."
         },
         "processing": {
             "title": "Procesamiento inteligente de documentos",
@@ -150,9 +150,9 @@
                 "title": "Aprueba usuarios más rápido",
                 "description": "Acelera la verificación con análisis de documentos automatizado que procesa envíos en segundos."
             },
-            "insights": {
-                "title": "Obtén insights más claros de los documentos",
-                "description": "Extrae datos estructurados de documentos no estructurados con análisis impulsado por IA."
+            "análisis": {
+                "title": "Obtén análisis más claros de los documentos",
+                "description": "Extrae datos estructurados de documentos no estructurados con análisis con IA."
             },
             "scale": {
                 "title": "Procesa más documentos con facilidad",
@@ -198,9 +198,9 @@
                     "title": "Guía para el usuario",
                     "description": "Reduce errores con consejos en la app que ayudan a los usuarios a evitar reflejos, borrosidad y otros problemas al subir documentos."
                 },
-                "aiInsights": {
-                    "title": "Insights de IA",
-                    "description": "Ahorra tiempo con clasificación impulsada por IA, extracción de datos e insights listos para revisión."
+                "aiAnálisis": {
+                    "title": "Análisis de IA",
+                    "description": "Ahorra tiempo con clasificación con IA, extracción de datos e análisis listos para revisión."
                 }
             }
         },
@@ -338,11 +338,11 @@
             },
             "reviewer": {
                 "title": "Soporte al revisor",
-                "description": "Brinda a los revisores manuales señales de vida claras e insights para ayudarlos a tomar decisiones seguras y precisas."
+                "description": "Brinda a los revisores manuales señales de vida claras e análisis para ayudarlos a tomar decisiones seguras y precisas."
             },
             "dynamic": {
                 "title": "Garantía dinámica",
-                "description": "Aplica la cantidad correcta de fricción basada en resultados de vida en tiempo real, protegiendo contra el fraude mientras mantienen el avance de los usuarios confiables."
+                "description": "Aplica la cantidad correcta de verificación basada en resultados de vida en tiempo real, protegiendo contra el fraude mientras mantienen el avance de los usuarios confiables."
             }
         },
         "cta": {
@@ -394,7 +394,7 @@
             "description": "Precisión excepcional entregada con privacidad, transparencia y una experiencia de usuario perfecta."
         },
         "protection": {
-            "title": "Protección de reconocimiento facial de siguiente nivel",
+            "title": "Protección de reconocimiento facial avanzada",
             "precision": {
                 "title": "Reconocimiento facial de alta precisión",
                 "description": "Folio combina modelos avanzados de detección, prueba de vida y emparejamiento para ofrecer un rendimiento de reconocimiento facial preciso y consistente."
@@ -634,7 +634,7 @@
             },
             "adaptive": {
                 "title": "Verificación adaptativa",
-                "description": "Ajusta la fricción en tiempo real según los resultados de coincidencia, ayudándote a agilizar usuarios confiables."
+                "description": "Ajusta la verificación en tiempo real según los resultados de coincidencia, ayudándote a agilizar usuarios confiables."
             }
         },
         "cta": {
@@ -660,7 +660,7 @@
             },
             "easy": {
                 "title": "Fácil para los usuarios",
-                "description": "Reduce abandonos con flujos simples de baja fricción que permiten a los usuarios verificar sus detalles en segundos."
+                "description": "Reduce abandonos con flujos simples de baja verificación que permiten a los usuarios verificar sus detalles en segundos."
             },
             "completion": {
                 "title": "Tasas de finalización más altas",
@@ -729,7 +729,7 @@
         "hero": {
             "tagline": "Escaneo de identidad NFC",
             "title": "Detecta fraude de pasaporte e ID al instante",
-            "description": "Usa NFC para leer datos embebidos en el chip de pasaportes e identificaciones, agregando una capa de seguridad extra sin agregar fricción al usuario."
+            "description": "Usa NFC para leer datos embebidos en el chip de pasaportes e identificaciones, agregando una capa de seguridad extra sin agregar verificación al usuario."
         },
         "verification": {
             "title": "Verificación de pasaporte e ID más fuerte con NFC",
@@ -829,7 +829,7 @@
             },
             "optimize": {
                 "title": "Optimiza con el tiempo",
-                "description": "Afina flujos usando insights de rendimiento del mundo real."
+                "description": "Afina flujos usando análisis de rendimiento del mundo real."
             }
         },
         "keyFeatures": {
@@ -850,7 +850,7 @@
                 },
                 "detection": {
                     "title": "Detección de tipo de documento",
-                    "description": "Los usuarios pueden enviar documentos sin seleccionar tipos o formatos, reduciendo la fricción."
+                    "description": "Los usuarios pueden enviar documentos sin seleccionar tipos o formatos, reduciendo la verificación."
                 },
                 "prefill": {
                     "title": "Autocompletado de datos inteligente",
@@ -882,7 +882,7 @@
             },
             "reverification": {
                 "title": "Reverificación de usuario",
-                "description": "Reconfirma a usuarios que regresan durante acciones sensibles con mínima fricción."
+                "description": "Reconfirma a usuarios que regresan durante acciones sensibles con mínima verificación."
             },
             "accountSetup": {
                 "title": "Configuración de cuenta automatizada",
@@ -894,7 +894,7 @@
             "description": "Habla con nuestro equipo para explorar cómo Folio puede mejorar tu experiencia de alta y verificación."
         }
     },
-    "behaviorInsights": {
+    "behaviorAnálisis": {
         "meta": {
             "title": "Análisis de Comportamiento | Folio Wallet",
             "description": "Analiza señales de comportamiento, dispositivo y red para identificar riesgos sin interrumpir la experiencia del usuario."
@@ -1049,8 +1049,8 @@
                 "title": "Vista de datos unificada",
                 "description": "Reúne toda la información relevante del caso en un espacio de trabajo."
             },
-            "insights": {
-                "title": "Insights de rendimiento",
+            "análisis": {
+                "title": "Análisis de rendimiento",
                 "description": "Rastrea el volumen de revisión y eficiencia del equipo para identificar cuellos de botella."
             }
         },

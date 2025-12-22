@@ -13,7 +13,7 @@
     "idVerificationDesc": "Проверка паспортов и удостоверений личности.",
     "nfcIdentityScanDesc": "Считывание данных с чипа паспорта или ID.",
     "documentIntelligenceDesc": "Извлечение данных из документов.",
-    "faceMatchDesc": "Сравнение селфи с фото на документе.",
+    "faceMatchDesc": "Сопоставление селфи с фото на документе.",
     "livenessCheckDesc": "Защита от подделок и дипфейков.",
     "dataSourceChecksDesc": "Проверка данных по внешним базам.",
     "phoneAndEmailValidationDesc": "Подтверждение владения контактами.",

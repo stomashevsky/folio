@@ -17,7 +17,7 @@
         "livenessCheckDesc": "Confirme que el usuario está físicamente presente.",
         "dataSourceChecksDesc": "Valide la información del usuario contra bases de datos confiables.",
         "phoneAndEmailValidationDesc": "Confirme la propiedad y detecte datos de contacto riesgosos.",
-        "behaviorInsightsDesc": "Patrones de dispositivo y uso para mayor contexto.",
+        "behaviorAnálisisDesc": "Patrones de dispositivo y uso para mayor contexto.",
         "dynamicFlowDesc": "Coordine verificaciones de identidad con lógica flexible.",
         "reviewWorkspaceDesc": "Organice y resuelva casos de verificación.",
         "credentialIssuanceDesc": "Cree y entregue credenciales verificables a billeteras."
@@ -46,7 +46,7 @@
         "livenessCheck": "Prueba de vida",
         "dataSourceChecks": "Verificación de fuentes de datos",
         "phoneAndEmailValidation": "Validación de teléfono y email",
-        "behaviorInsights": "Análisis de comportamiento",
+        "behaviorAnálisis": "Análisis de comportamiento",
         "dynamicFlow": "Flujo dinámico",
         "reviewWorkspace": "Espacio de revisión",
         "credentialIssuance": "Emisión de credenciales",
@@ -75,7 +75,7 @@
     },
     "blog": {
         "title": "Blog de Folio",
-        "description": "Casos de estudio, insights de producto y guías prácticas sobre viajes, documentos e identidad digital.",
+        "description": "Casos de estudio, análisis de producto y guías prácticas sobre viajes, documentos e identidad digital.",
         "loadMore": "Cargar más",
         "backToBlog": "Volver al Blog",
         "keepReading": "Seguir leyendo",

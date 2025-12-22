@@ -269,7 +269,7 @@
         "h2_2": "Características clave y soluciones",
         "p6": "<strong>Experiencia de Usuario Sin Fricción:</strong> La plataforma Folio permitió a los ciudadanos completar su registro de forma segura y fácil a través de dispositivos, con verificación biométrica y actualizaciones de la aplicación en tiempo real.",
         "p7": "<strong>Accesibilidad Omnicanal:</strong> El sistema admitió el uso móvil y de escritorio, y la mayoría de los usuarios eligieron la billetera Folio, en la que una tarjeta de registro oficial proporcionaba a los usuarios el estado en vivo de su solicitud.",
-        "p8": "<strong>Verificación de Identidad de Alta Confianza:</strong> Folio incorporó reconocimiento facial, detección de vida, coincidencia de documentos gubernamentales y procesamiento de documentos impulsado por IA para garantizar la legitimidad.",
+        "p8": "<strong>Verificación de Identidad de Alta Confianza:</strong> Folio incorporó reconocimiento facial, detección de vida, coincidencia de documentos gubernamentales y procesamiento de documentos con IA para garantizar la legitimidad.",
         "p9": "<strong>Protección de Datos por Diseño:</strong> Utilizando cifrado avanzado basado en el borde, todos los datos personales permanecieron dentro de la infraestructura controlada por el gobierno, salvaguardando la privacidad de los ciudadanos.",
         "h2_3": "Voces de la diáspora",
         "blockquote": "\"La plataforma en línea me facilitó registrarme para votar sin viajar de regreso a Albania. Fue sencillo y seguro\", dijo un registrante que vive en Italia.",
@@ -797,7 +797,7 @@
         "p15": "Los mejores trucos de viaje no son trucos ingeniosos. Son fundamentos aburridos: reserva temprano, sé flexible, haz copias de seguridad de tus documentos, viaja en temporada media. Los trucos llamativos que prometen mejoras gratuitas y descuentos secretos generalmente no funcionan. ¿Los simples que ahorran 30 minutos en el aeropuerto y 100 € en hoteles? Esos realmente lo hacen."
     },
     "document-intelligence": {
-        "title": "Inteligencia documental: procesamiento documentario impulsado por IA explicado",
+        "title": "Inteligencia documental: procesamiento documentario con IA explicado",
         "description": "La inteligencia documental utiliza IA para clasificar, extraer y verificar automáticamente información de documentos. Aprende cómo esta tecnología agiliza los procesos comerciales y mejora el cumplimiento.",
         "p1": "Cada día, las empresas procesan miles de documentos: extractos bancarios, facturas de servicios públicos, formularios de impuestos, certificados de registro, comprobantes de domicilio y un sinfín de trámites burocráticos. La revisión manual de estos documentos es lenta, costosa y propensa a errores. La <strong>inteligencia documental</strong> aplica inteligencia artificial para automatizar este trabajo, extrayendo información de manera precisa y a escala.",
         "p2": "A diferencia del OCR (Reconocimiento Óptico de Caracteres) tradicional que simplemente convierte imágenes en texto, la inteligencia documental entiende los documentos. Identifica tipos de documentos, localiza campos relevantes, extrae datos estructurados y valida esa información contra patrones esperados y fuentes externas.",
@@ -1206,7 +1206,7 @@
     "tripcase-alternative": {
         "title": "Alternativa a TripCase: El organizador de viajes que te encantará",
         "description": "TripCase se ha ido. Tu próximo viaje no tiene que ser un caos. Conoce la aplicación que mantiene cada vuelo, hotel y documento en un hermoso lugar.",
-        "p1": "El 1 de abril de 2025, TripCase cerró definitivamente. Si eras uno de los millones que dependían de él para organizar viajes, probablemente lo descubriste de la manera difícil: abriste la aplicación antes de un viaje y no encontraste nada. Todos esos correos de confirmación que habías reenviado a lo largo de los años, los itinerarios perfectamente organizados, los detalles de vuelo que habías guardado. Desaparecidos.",
+        "p1": "El 1 de abril de 2025, TripCase cerró definitivamente. Si eras uno de los millones que dependían de él para organizar viajes, probablemente lo descubriste de la manera difícil: abriste la aplicación antes de un viaje y no encontraste nada. Todos esos correos de confirmación que habías reenviado en los años, los itinerarios perfectamente organizados, los detalles de vuelo que habías guardado. Desaparecidos.",
         "p2": "TripCase era propiedad de Sabre, una de las empresas de tecnología de viajes más grandes del mundo. Decidieron centrarse en su negocio principal: mercados de viajes B2B y asociaciones con agencias. Las aplicaciones de consumo como TripCase ya no encajaban en esa estrategia. Así que cortaron el servicio, dejando a los viajeros para descubrir qué viene después.",
         "h2_1": "Lo que TripCase hacía bien",
         "p3": "TripCase resolvía un problema real. Reenviabas un correo de confirmación, y analizaba los detalles en un itinerario limpio. Vuelos, hoteles, alquiler de coches, todo organizado por viaje. Rastreaba cambios de puerta y retrasos. Se sincronizaba con tu calendario. Para viajeros de negocios especialmente, era la única aplicación que mantenía todo junto.",
