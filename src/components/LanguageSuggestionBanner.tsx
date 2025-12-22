@@ -8,10 +8,10 @@ import xIcon from '../assets/icons/X.svg'
 const LANGUAGE_PREFERENCE_KEY = 'folio-language-preference'
 
 // Banner height in pixels (measured from Figma)
-// Desktop: h-[68px] as per Figma
-// Mobile: py-6 (48px) + text (~20px) + gap (16px) + buttons (36px) = ~120px
+// Desktop: h-[68px] as per Figma (py-4 + single row)
+// Mobile: py-6 (48px) + text row (~60px with wrap) + gap (16px) + buttons (36px) = ~160px
 export const BANNER_HEIGHT_DESKTOP = 68
-export const BANNER_HEIGHT_MOBILE = 120
+export const BANNER_HEIGHT_MOBILE = 160
 
 /**
  * Spacer component that reserves space for the fixed banner.
@@ -24,7 +24,7 @@ export function BannerSpacer() {
     return null
   }
   
-  return <div className="h-[120px] md:h-[68px]" aria-hidden="true" />
+  return <div className="h-[160px] md:h-[68px]" aria-hidden="true" />
 }
 
 /**
@@ -106,8 +106,8 @@ export default function LanguageSuggestionBanner() {
         {/* Desktop: single row | Mobile: two rows with gap-4 */}
         <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-start md:items-center">
           
-          {/* Text + Close button row */}
-          <div className="flex items-center gap-6 w-full md:flex-1">
+          {/* Text + Close button row - items-start to align X to top */}
+          <div className="flex items-start gap-6 w-full md:flex-1 md:items-center">
             <p className="text-sm leading-5 flex-1">
               {t('language_banner.message', {
                 defaultValue: 'Would you like to view this page in {{language}}?',
@@ -115,10 +115,10 @@ export default function LanguageSuggestionBanner() {
               })}
             </p>
             
-            {/* Close button - visible only on mobile in first row */}
+            {/* Close button - visible only on mobile in first row, aligned to top */}
             <button
               onClick={handleClose}
-              className="md:hidden flex items-center justify-center size-9 rounded-lg shrink-0"
+              className="md:hidden flex items-center justify-center size-9 rounded-md shrink-0"
               aria-label={t('language_banner.close', 'Close')}
             >
               <img src={xIcon} alt="" aria-hidden="true" className="w-5 h-5 opacity-60" style={{ filter: 'invert(1)' }} />
