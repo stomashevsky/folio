@@ -21,7 +21,7 @@ const basePathForRouting = BASE_PATH === '/' ? '' : BASE_PATH.replace(/\/$/, '')
 const OG_IMAGE_BASE_URL = 'https://stomashevsky.github.io/folio/og-images'
 
 // Supported languages for i18n (must match src/i18n/index.ts)
-const SUPPORTED_LANGUAGES = ['en', 'ru', 'es']
+const SUPPORTED_LANGUAGES = ['en', 'es', 'ja']
 const DEFAULT_LANGUAGE = 'en'
 
 // Static page metadata (non-blog pages)
@@ -31,11 +31,9 @@ const STATIC_PAGES = [
     path: '/',
     title: {
       en: 'Folio | Identity infrastructure for everyone',
-      ru: 'Folio | Инфраструктура идентификации для всех',
     },
     description: {
       en: 'Secure document storage for individuals. Verification platform for businesses. Digital credentials for governments.',
-      ru: 'Безопасное хранение документов для людей. Платформа верификации для бизнеса. Цифровые удостоверения для государств.',
     },
     ogImage: 'folio-app-hero.png',
   },
@@ -43,11 +41,9 @@ const STATIC_PAGES = [
     path: '/wallet',
     title: {
       en: 'Folio Wallet | Digital document wallet app',
-      ru: 'Folio Wallet | Приложение цифрового кошелька',
     },
     description: {
       en: 'Folio keeps your passports, IDs, tickets and cards in one secure place, beautifully structured and instantly accessible.',
-      ru: 'Folio хранит ваши паспорта, удостоверения, билеты и карты в одном безопасном месте, красиво организованном и мгновенно доступном.',
     },
     ogImage: 'folio-app-hero.png',
   },
@@ -55,11 +51,9 @@ const STATIC_PAGES = [
     path: '/blog',
     title: {
       en: 'Blog | Folio Wallet',
-      ru: 'Блог | Folio Wallet',
     },
     description: {
       en: 'Case studies, product insights and practical guides on travel, documents and digital identity.',
-      ru: 'Кейсы, продуктовые инсайты и практические руководства о путешествиях, документах и цифровой идентификации.',
     },
     ogImage: 'folio-app-hero.png',
   },
@@ -67,11 +61,9 @@ const STATIC_PAGES = [
     path: '/government',
     title: {
       en: 'Government Solutions | Folio Wallet',
-      ru: 'Решения для государств | Folio Wallet',
     },
     description: {
       en: 'Tools for governments to design, test and deploy modern digital credentials. Digital identity aligned with global standards.',
-      ru: 'Инструменты для государств для проектирования, тестирования и развёртывания современных цифровых удостоверений.',
     },
     ogImage: 'government-solutions-hero.png',
   },
@@ -79,11 +71,9 @@ const STATIC_PAGES = [
     path: '/government/playground',
     title: {
       en: 'Playground - Issue and Verify Digital IDs | Folio Wallet',
-      ru: 'Песочница - Выпуск и проверка цифровых ID | Folio Wallet',
     },
     description: {
       en: 'A safe sandbox for issuing demo documents and testing EUDI compatible verification flows.',
-      ru: 'Безопасная песочница для выпуска демо-документов и тестирования потоков верификации, совместимых с EUDI.',
     },
     ogImage: 'identity-lab-hero.png',
   },
@@ -92,11 +82,9 @@ const STATIC_PAGES = [
     path: '/solutions/digital-ticketing',
     title: {
       en: 'Digital Ticketing | Folio Wallet',
-      ru: 'Цифровые билеты | Folio Wallet',
     },
     description: {
       en: 'Better tickets. No app to build. Give your customers clean digital tickets that are easy to find, easy to scan and work on any modern phone.',
-      ru: 'Лучшие билеты. Без разработки приложения. Предоставьте клиентам чистые цифровые билеты, которые легко найти, отсканировать и которые работают на любом современном телефоне.',
     },
     ogImage: 'ticket-issuance-hero.png',
   },
@@ -104,11 +92,9 @@ const STATIC_PAGES = [
     path: '/solutions/age-compliance',
     title: {
       en: 'Age Compliance | Folio Wallet',
-      ru: 'Проверка возраста | Folio Wallet',
     },
     description: {
       en: 'Age verification service for global compliance. Confirm user age quickly and securely with verification methods that match your risk level.',
-      ru: 'Сервис проверки возраста для глобального соответствия. Быстро и безопасно подтверждайте возраст пользователей.',
     },
     ogImage: 'folio-app-hero.png',
   },
@@ -116,11 +102,9 @@ const STATIC_PAGES = [
     path: '/solutions/client-onboarding',
     title: {
       en: 'Client Onboarding | Folio Wallet',
-      ru: 'Онбординг клиентов | Folio Wallet',
     },
     description: {
       en: 'Streamlined KYC for regulated businesses. Client verification that is fast, compliant, and audit-ready.',
-      ru: 'Оптимизированный KYC для регулируемых бизнесов. Верификация клиентов: быстрая, соответствующая требованиям и готовая к аудиту.',
     },
     ogImage: 'folio-app-hero.png',
   },
@@ -129,11 +113,9 @@ const STATIC_PAGES = [
     path: '/platform/id-verification',
     title: {
       en: 'ID Verification | Folio Wallet',
-      ru: 'Верификация личности | Folio Wallet',
     },
     description: {
       en: 'Check official documents and confirm identity in more than 200 places around the world.',
-      ru: 'Проверяйте официальные документы и подтверждайте личность более чем в 200 странах мира.',
     },
     ogImage: 'id-verification-hero.png',
   },
@@ -141,11 +123,9 @@ const STATIC_PAGES = [
     path: '/platform/document-intelligence',
     title: {
       en: 'Document Intelligence | Folio Wallet',
-      ru: 'Анализ документов | Folio Wallet',
     },
     description: {
       en: 'Transform physical and digital documents into structured, verified data. AI powered document processing and analysis.',
-      ru: 'Преобразуйте физические и цифровые документы в структурированные, проверенные данные. Обработка и анализ документов на базе ИИ.',
     },
     ogImage: 'document-intelligence-hero.png',
   },
@@ -153,11 +133,9 @@ const STATIC_PAGES = [
     path: '/platform/liveness-check',
     title: {
       en: 'Liveness Check | Folio Wallet',
-      ru: 'Проверка живости | Folio Wallet',
     },
     description: {
       en: 'Confirm that the person completing verification is physically present and not a spoof.',
-      ru: 'Подтвердите, что человек, проходящий верификацию, физически присутствует и не является подделкой.',
     },
     ogImage: 'liveness-check-hero.png',
   },
@@ -165,11 +143,9 @@ const STATIC_PAGES = [
     path: '/platform/face-match',
     title: {
       en: 'Face Match | Folio Wallet',
-      ru: 'Сопоставление лиц | Folio Wallet',
     },
     description: {
       en: 'Compare a live selfie with the photo on an ID to confirm the person behind the document.',
-      ru: 'Сравните живое селфи с фото на удостоверении для подтверждения личности владельца документа.',
     },
     ogImage: 'face-match-hero.png',
   },
@@ -177,11 +153,9 @@ const STATIC_PAGES = [
     path: '/platform/data-source-checks',
     title: {
       en: 'Data Source Checks | Folio Wallet',
-      ru: 'Проверка источников данных | Folio Wallet',
     },
     description: {
       en: 'Verify identity data against trusted sources to reduce fraud and meet compliance requirements.',
-      ru: 'Проверяйте данные о личности по доверенным источникам для снижения мошенничества и соответствия требованиям.',
     },
     ogImage: 'data-source-checks-hero.png',
   },
@@ -189,11 +163,9 @@ const STATIC_PAGES = [
     path: '/platform/phone-and-email-validation',
     title: {
       en: 'Phone and Email Validation | Folio Wallet',
-      ru: 'Проверка телефона и email | Folio Wallet',
     },
     description: {
       en: 'Confirm ownership of phone numbers and email addresses in your verification flow.',
-      ru: 'Подтвердите владение номерами телефонов и адресами электронной почты в вашем потоке верификации.',
     },
     ogImage: 'phone-email-validation-hero.png',
   },
@@ -201,11 +173,9 @@ const STATIC_PAGES = [
     path: '/platform/nfc-identity-scan',
     title: {
       en: 'NFC Identity Scan | Folio Wallet',
-      ru: 'NFC сканирование | Folio Wallet',
     },
     description: {
       en: 'Read data from the chip embedded in modern passports and ID cards for higher assurance verification.',
-      ru: 'Считывайте данные с чипа, встроенного в современные паспорта и удостоверения личности, для более надёжной верификации.',
     },
     ogImage: 'nfc-identity-scan-hero.png',
   },
@@ -213,11 +183,9 @@ const STATIC_PAGES = [
     path: '/platform/dynamic-flow',
     title: {
       en: 'Dynamic Flow | Folio Wallet',
-      ru: 'Динамические сценарии | Folio Wallet',
     },
     description: {
       en: 'Adjust verification steps in real time based on risk signals and user context.',
-      ru: 'Настраивайте шаги верификации в реальном времени на основе сигналов риска и контекста пользователя.',
     },
     ogImage: 'dynamic-flow-hero.png',
   },
@@ -225,11 +193,9 @@ const STATIC_PAGES = [
     path: '/platform/behavior-insights',
     title: {
       en: 'Behavior Insights | Folio Wallet',
-      ru: 'Анализ поведения | Folio Wallet',
     },
     description: {
       en: 'Detect suspicious patterns during verification with device and behavior analysis.',
-      ru: 'Обнаруживайте подозрительные паттерны во время верификации с помощью анализа устройства и поведения.',
     },
     ogImage: 'behavior-insights-hero.png',
   },
@@ -237,11 +203,9 @@ const STATIC_PAGES = [
     path: '/platform/review-workspace',
     title: {
       en: 'Review Workspace | Folio Wallet',
-      ru: 'Рабочее пространство | Folio Wallet',
     },
     description: {
       en: 'Review and manage verification cases with a streamlined interface for your team.',
-      ru: 'Проверяйте и управляйте кейсами верификации с помощью удобного интерфейса для вашей команды.',
     },
     ogImage: 'review-workspace-hero.png',
   },
@@ -249,11 +213,9 @@ const STATIC_PAGES = [
     path: '/platform/credential-issuance',
     title: {
       en: 'Credential Issuance | Folio Wallet',
-      ru: 'Выдача удостоверений | Folio Wallet',
     },
     description: {
       en: 'Create and deliver verifiable credentials to digital wallets.',
-      ru: 'Создавайте и доставляйте верифицируемые удостоверения в цифровые кошельки.',
     },
     ogImage: 'folio-app-hero.png',
   },
@@ -262,11 +224,9 @@ const STATIC_PAGES = [
     path: '/id-wallet-app',
     title: {
       en: 'ID card wallet app - Digital card holder for driver license | Folio',
-      ru: 'Приложение для ID карт - Цифровой держатель водительских прав | Folio',
     },
     description: {
       en: 'Folio ID card wallet app allows you to easily manage ID cards and driver licenses. Keep everything safe with end-to-end encryption. Available on iOS and Android.',
-      ru: 'Приложение Folio для ID карт позволяет легко управлять удостоверениями личности и водительскими правами. Храните всё в безопасности со сквозным шифрованием.',
     },
     ogImage: 'folio-app-hero.png',
   },
@@ -274,11 +234,9 @@ const STATIC_PAGES = [
     path: '/card-scanner-app',
     title: {
       en: 'Card scanner app for iPhone and Android | Folio',
-      ru: 'Приложение сканер карт для iPhone и Android | Folio',
     },
     description: {
       en: 'Folio card scanner app allows you to easily scan cards and documents. Keep everything safe with end-to-end encryption. Available on iOS and Android.',
-      ru: 'Приложение Folio для сканирования карт позволяет легко сканировать карты и документы. Храните всё в безопасности со сквозным шифрованием.',
     },
     ogImage: 'folio-app-hero.png',
   },
@@ -286,11 +244,9 @@ const STATIC_PAGES = [
     path: '/loyalty-card-app',
     title: {
       en: 'Loyalty card app - Membership and reward cards wallet app | Folio',
-      ru: 'Приложение для карт лояльности - Кошелёк для членских и бонусных карт | Folio',
     },
     description: {
       en: 'Folio loyalty card app allows you to easily manage loyalty cards and membership cards. Keep everything safe with end-to-end encryption. Available on iOS and Android.',
-      ru: 'Приложение Folio для карт лояльности позволяет легко управлять бонусными и членскими картами. Храните всё в безопасности со сквозным шифрованием.',
     },
     ogImage: 'folio-app-hero.png',
   },
@@ -299,11 +255,9 @@ const STATIC_PAGES = [
     path: '/terms',
     title: {
       en: 'Terms of Use | Folio',
-      ru: 'Условия использования | Folio',
     },
     description: {
       en: 'Terms and conditions for using Folio Wallet app and services.',
-      ru: 'Условия использования приложения Folio Wallet и сервисов.',
     },
     ogImage: 'folio-app-hero.png',
   },
@@ -311,11 +265,9 @@ const STATIC_PAGES = [
     path: '/privacy',
     title: {
       en: 'Privacy Policy | Folio',
-      ru: 'Политика конфиденциальности | Folio',
     },
     description: {
       en: 'How Folio collects, uses, and protects your personal data.',
-      ru: 'Как Folio собирает, использует и защищает ваши персональные данные.',
     },
     ogImage: 'folio-app-hero.png',
   },
@@ -323,11 +275,9 @@ const STATIC_PAGES = [
     path: '/security',
     title: {
       en: 'Security | Folio Wallet',
-      ru: 'Безопасность | Folio Wallet',
     },
     description: {
       en: 'Learn how Folio protects your documents with end-to-end encryption, zero-knowledge architecture, and industry-leading security standards.',
-      ru: 'Узнайте, как Folio защищает ваши документы со сквозным шифрованием, архитектурой нулевого знания и передовыми стандартами безопасности.',
     },
     ogImage: 'folio-app-hero.png',
   },
@@ -336,11 +286,9 @@ const STATIC_PAGES = [
     path: '/about',
     title: {
       en: 'About | Folio',
-      ru: 'О нас | Folio',
     },
     description: {
       en: 'Learn about Folio, the digital identity wallet for secure document storage and verification.',
-      ru: 'Узнайте о Folio - цифровом кошельке для безопасного хранения и верификации документов.',
     },
     ogImage: 'folio-app-hero.png',
   },
@@ -449,11 +397,9 @@ async function collectBlogMetadata() {
       path: `/blog/${slug}`,
       title: {
         en: `${title} | Folio Blog`,
-        ru: `${title} | Блог Folio`,
       },
       description: {
         en: description,
-        ru: description, // Keep English description for now
       },
       ogImage: BLOG_OG_IMAGES[slug] || 'folio-app-hero.png',
     })
@@ -747,7 +693,7 @@ async function main() {
         let html = await renderPageWithPuppeteer(browser, route, metadata, previewUrl)
         
         // Fix asset paths for nested routes
-        if (route !== '/' && route !== '/en' && route !== '/ru') {
+        if (route !== '/' && route !== '/en' && route !== '/es' && route !== '/ja') {
           html = fixAssetPaths(html, route)
         }
         

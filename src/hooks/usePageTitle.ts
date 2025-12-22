@@ -144,7 +144,7 @@ export function usePageTitle({
         ? '/' + pathParts.slice(1).join('/')
         : currentPath
       
-      const baseUrl = ogUrl?.replace(/\/(en|ru)(\/.*)?$/, '') || 'https://folio.id'
+      const baseUrl = ogUrl?.replace(/\/(en|es|ja)(\/.*)?$/, '') || 'https://folio.id'
       
       // Create hreflang tags for each supported language
       SUPPORTED_LANGUAGES.forEach(lang => {

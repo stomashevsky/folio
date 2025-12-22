@@ -467,67 +467,7 @@ This file contains all rules and principles that must be followed for every chan
   - If menu says "Liveness Check", the page tagline must be the same translated term, not a different wording
 - **Avoid literal translations of technical terms** — use natural terms that native speakers would use for the concept, not word-for-word translations from English
 
-#### 13.3. Russian Language Rules
-
-- **Write naturally** — every phrase must sound like it was written by a native Russian copywriter, not translated
-- **Avoid literal translations** — phrases like "Сравнивайте лица с уверенностью" (literal "Match faces with certainty") are wrong; use natural alternatives like "Точная идентификация по фото"
-- **Avoid unnatural constructions** like "для людей" (for people), "для пользователей" (for users), "с уверенностью" (with certainty) where they sound awkward
-- **Use imperative verbs for CTAs**: "Храните" (Store), "Верифицируйте" (Verify) instead of nouns "Хранение" (Storage), "Верификация" (Verification)
-- **Dropdown descriptions**: maximum 2 lines of text
-- **Keep descriptions short**: condense without losing meaning
-- Examples of good vs bad translations:
-  - Bad: "Безопасное хранение документов для людей" (literal, awkward)
-  - Good: "Храните документы в безопасности" (natural, action-oriented)
-  - Bad: "Чёткий просмотр каждого документа" (literal "A clear view of every document")
-  - Good: "Все детали на виду" (natural, idiomatic)
-  - Bad: "Проверка живости" (literal "Liveness Check")
-  - Good: "Проверка присутствия" (natural Russian term)
-
-#### 13.4. Official Terminology Glossary
-
-**Terms that ARE translated (use consistently everywhere):**
-
-| English | Russian | Notes |
-|---------|---------|-------|
-| Digital Identity | Цифровая идентификация | Never "Digital Identity" in Russian text |
-| Liveness Check | Проверка присутствия | Never "Проверка живости" |
-| Face Match | Сопоставление лиц | Never "Сравнение лиц" |
-| ID Verification | Верификация личности | |
-| NFC Identity Scan | NFC сканирование | |
-| Document Intelligence | Анализ документов | |
-| Data Source Checks | Проверка источников | |
-| Phone and Email Validation | Проверка телефона и email | |
-| Behavior Insights | Анализ поведения | |
-| Dynamic Flow | Динамические сценарии | |
-| Review Workspace | Рабочее пространство | |
-| Credential Issuance | Выдача удостоверений | |
-| Client Onboarding | Онбординг клиентов | |
-| Age Compliance | Проверка возраста | |
-| Digital Ticketing | Цифровые билеты | |
-| End-to-end encryption | Сквозное шифрование | |
-| Zero-knowledge architecture | Архитектура нулевого знания | |
-| Get in touch | Связаться с нами | Never "Связаться" alone |
-
-**Terms that are NOT translated (keep in English):**
-
-| Term | Reason |
-|------|--------|
-| Playground | Product name |
-| EUDI Wallet | Standard/specification name |
-| Folio Wallet | Product name |
-| Sandbox | Technical term in context of Playground |
-| QR-код | Standard term (QR is not translated) |
-| Face ID | Apple trademark |
-| Touch ID | Apple trademark |
-| Passkeys | Technical term |
-| KYC | Industry acronym |
-| AML | Industry acronym |
-| SDK | Technical acronym |
-| API | Technical acronym |
-| OCR | Technical acronym |
-| NFC | Technical acronym |
-
-#### 13.5. Navigation and Link Localization
+#### 13.3. Navigation and Link Localization
 
 - **All internal navigation must preserve language context** — use `getLocalizedPath()` or `LocalizedLink` component
 - **Use `LocalizedLink` component** for links in article content: `import { LocalizedLink } from '../components/ui'`
@@ -539,14 +479,14 @@ This file contains all rules and principles that must be followed for every chan
 - **FooterLink already handles localization** — no additional changes needed for footer links
 - **Never use hardcoded paths** like `to="/platform/..."` — always wrap with localization
 
-#### 13.6. File Structure
+#### 13.4. File Structure
 
 - **One namespace = one page group**: `wallet.json`, `platform.json`, `solutions.json`, `government.json`
 - **Common elements** (navbar, footer, buttons) go in `common.json`
 - **Page-specific content** goes in dedicated namespace files
 - **Location**: `src/locales/{lang}/{namespace}.json`
 
-#### 13.7. Translation Keys
+#### 13.5. Translation Keys
 
 - Use descriptive, hierarchical key names: `section_element_variant`
 - Examples:
@@ -555,14 +495,14 @@ This file contains all rules and principles that must be followed for every chan
   - `faq_question_1`, `faq_answer_1`
 - Keep keys in English regardless of content language
 
-#### 13.8. Using Translations in Components
+#### 13.6. Using Translations in Components
 
 - Import `useTranslation` hook from `react-i18next`
 - Specify namespace: `const { t } = useTranslation('wallet')` or `useTranslation(['wallet', 'common'])`
 - Use `t('key')` for simple strings, `t('key', { variable })` for interpolation
 - For SEO metadata in `usePageTitle`, use translated strings
 
-#### 13.9. Adding New Languages
+#### 13.7. Adding New Languages
 
 1. Create new language folder in `src/locales/{lang}/`
 2. Copy all JSON files from `en/` folder
@@ -570,17 +510,17 @@ This file contains all rules and principles that must be followed for every chan
 4. Add language to `SUPPORTED_LANGUAGES` in `src/i18n/index.ts`
 5. Add language option to `LanguageSwitcher` component
 
-#### 13.10. Article Translation Strategy
+#### 13.8. Article Translation Strategy
 
 - **Never translate articles.json in bulk** — translate one article at a time to avoid context confusion and hallucinations
 - **Large translation files cause AI hallucinations** — when the AI sees 1300+ lines of different articles, it may mix up information between them
 - **Request format for article translation**:
-  - Specify the exact article slug: "Translate article `best-apple-wallet-alternatives` from articles.json to Russian"
+  - Specify the exact article slug: "Translate article `best-apple-wallet-alternatives` from articles.json to Japanese"
   - This ensures the AI focuses only on one article's context
 - **Articles namespace structure**: Each article is a separate key in `articles.json` (e.g., `best-apple-wallet-alternatives`, `terms`, `privacy`)
 - **Translation order**: Translate articles in priority order based on traffic or business importance
 
-#### 13.11. Page Meta Translation
+#### 13.9. Page Meta Translation
 
 - **All pages must have translated meta tags** — title and description for SEO
 - **Meta translations are stored in `pages.json`** under the `meta` key for each page
@@ -602,7 +542,7 @@ This file contains all rules and principles that must be followed for every chan
 - **When translating, always check and translate meta sections** — they are often overlooked but critical for SEO
 - **Meta text must be natural and compelling** — treat it as marketing copy, not technical text
 
-#### 13.12. Japanese Language Rules
+#### 13.10. Japanese Language Rules
 
 **Style and tone:**
 - Use polite form (です/ます) for marketing copy

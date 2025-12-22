@@ -97,7 +97,7 @@ i18n
     },
 
     detection: {
-      // Detect language from URL path first (e.g., /ru/wallet)
+      // Detect language from URL path first (e.g., /es/wallet)
       order: ['path', 'localStorage', 'navigator'],
       lookupFromPathIndex: 0,
       caches: ['localStorage'],
