@@ -123,6 +123,11 @@ const PLATFORM_ITEMS = [
   },
 ]
 
+// Navbar height (64px) + banner height when visible
+// Mobile banner: ~104px (inline buttons layout per Figma design)
+const NAVBAR_HEIGHT = 64
+const BANNER_HEIGHT_MOBILE = 104
+
 export default function MobileMenu({ isOpen, onClose, bannerVisible = false }: MobileMenuProps) {
   const { t } = useTranslation('common')
   const navigate = useNavigate()
@@ -131,10 +136,9 @@ export default function MobileMenu({ isOpen, onClose, bannerVisible = false }: M
   const [showSolutionsSubmenu, setShowSolutionsSubmenu] = useState(false)
   const [showPlatformSubmenu, setShowPlatformSubmenu] = useState(false)
   
-  // Offset for language suggestion banner
-  // Mobile menu offset: navbar height (64px) + banner height when visible (148px on mobile)
-  const menuTopOffset = bannerVisible ? 'top-[212px]' : 'top-[64px]'
-  const menuMaxHeight = bannerVisible ? 'max-h-[calc(100dvh-212px)]' : 'max-h-[calc(100dvh-64px)]'
+  // Calculate offset based on banner visibility (mobile only, lg:hidden)
+  // Mobile: 64 + 140 = 204px when banner visible
+  const mobileOffset = bannerVisible ? NAVBAR_HEIGHT + BANNER_HEIGHT_MOBILE : NAVBAR_HEIGHT
 
   // Reset submenu state when menu closes
   useEffect(() => {
@@ -200,13 +204,16 @@ export default function MobileMenu({ isOpen, onClose, bannerVisible = false }: M
         aria-hidden="true"
       />
       <div
-        className={`lg:hidden fixed bg-white left-0 right-0 ${menuTopOffset} z-[60] w-full transition-all duration-200 ease-spring-out ${isOpen ? 'translate-y-0' : '-translate-y-full'
-          }`}
+        className={`lg:hidden fixed bg-white left-0 right-0 z-[60] w-full transition-transform duration-200 ease-spring-out ${isOpen ? 'translate-y-0' : '-translate-y-full'}`}
+        style={{ top: `${mobileOffset}px` }}
         role="dialog"
         aria-modal="true"
         aria-label="Navigation menu"
       >
-        <div className={`flex flex-col items-start overflow-y-auto ${menuMaxHeight} w-full`}>
+        <div 
+          className="flex flex-col items-start overflow-y-auto w-full"
+          style={{ maxHeight: `calc(100dvh - ${mobileOffset}px)` }}
+        >
           <div className="flex flex-col items-start justify-start w-full py-4 relative shrink-0">
             {!showSolutionsSubmenu && !showPlatformSubmenu ? (
               /* Main Menu */

@@ -36,15 +36,18 @@ export default function Navbar() {
 
   useBodyScrollLock(isMobileMenuOpen)
 
-  // Offset for language suggestion banner (mobile: ~148px with stacked buttons, desktop: 52px)
-  const bannerOffset = isBannerVisible ? 'top-[148px] sm:top-[52px]' : 'top-0'
+  // Navbar position: below banner when visible
+  // Mobile banner: ~104px, Desktop banner: 52px
+  const topOffset = isBannerVisible 
+    ? 'top-[104px] md:top-[52px]' 
+    : 'top-0'
 
   return (
     <>
       <MobileMenu isOpen={isMobileMenuOpen} onClose={toggleMobileMenu} bannerVisible={isBannerVisible} />
 
       <div 
-        className={`bg-white fixed left-0 right-0 shrink-0 w-full z-[70] transition-[top] duration-200 ${bannerOffset}`}
+        className={`bg-white fixed left-0 right-0 shrink-0 w-full z-[70] transition-[top] duration-200 ${topOffset}`}
       >
         <div className="flex flex-col gap-6 lg:gap-0 items-center px-0 py-4 w-full">
           <div className="lg:hidden flex flex-col gap-6 items-start justify-center w-full px-6 py-0 relative shrink-0">
@@ -73,4 +76,3 @@ export default function Navbar() {
     </>
   )
 }
-

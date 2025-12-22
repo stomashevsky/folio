@@ -7,9 +7,32 @@ import xIcon from '../assets/icons/X.svg'
 
 const LANGUAGE_PREFERENCE_KEY = 'folio-language-preference'
 
+// Banner height in pixels
+// Desktop: py-4 (16px*2) + content = 52px
+// Mobile: py-4 (16px*2) + text row + buttons row + gap-4 = ~104px
+export const BANNER_HEIGHT_DESKTOP = 52
+export const BANNER_HEIGHT_MOBILE = 104
+
+/**
+ * Spacer component that reserves space for the fixed banner.
+ * Place this in the document flow to push content down when banner is visible.
+ */
+export function BannerSpacer() {
+  const { isBannerVisible } = useLanguageBanner()
+  
+  if (!isBannerVisible) {
+    return null
+  }
+  
+  // h-[104px] on mobile, h-[52px] on desktop
+  return <div className="h-[104px] md:h-[52px]" aria-hidden="true" />
+}
+
 /**
  * Banner that suggests switching to the user's browser language
- * if it differs from the current URL language
+ * if it differs from the current URL language.
+ * 
+ * Design: https://www.figma.com/design/6jO5aXk21DqMTeNFCAh9rI/Folio-web?node-id=24760-8127
  */
 export default function LanguageSuggestionBanner() {
   const { t } = useTranslation('common')
@@ -75,22 +98,38 @@ export default function LanguageSuggestionBanner() {
 
   return (
     <div 
-      className="fixed top-0 left-0 right-0 z-[80] bg-[#0a0a0a] text-white"
+      className="fixed top-0 left-0 right-0 z-[80] bg-[#09090b] text-white"
       role="dialog"
       aria-label={t('language_banner.aria_label', 'Language suggestion')}
     >
-      <div className="mx-auto max-w-[1280px] px-4 py-3 sm:py-2">
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-between">
-          <p className="text-sm text-center sm:text-left">
-            {t('language_banner.message', {
-              defaultValue: 'Would you like to view this page in {{language}}?',
-              language: suggestedName
-            })}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-2 items-center w-full sm:w-auto sm:shrink-0 relative">
+      <div className="mx-auto max-w-[1280px] px-6 py-4 md:py-4">
+        {/* Desktop: single row | Mobile: two rows with gap */}
+        <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-start md:items-center">
+          
+          {/* Text + Close button row */}
+          <div className="flex items-center gap-6 w-full md:flex-1">
+            <p className="text-sm leading-5 flex-1">
+              {t('language_banner.message', {
+                defaultValue: 'Would you like to view this page in {{language}}?',
+                language: suggestedName
+              })}
+            </p>
+            
+            {/* Close button - visible only on mobile in first row */}
+            <button
+              onClick={handleClose}
+              className="md:hidden flex items-center justify-center size-9 rounded-lg shrink-0"
+              aria-label={t('language_banner.close', 'Close')}
+            >
+              <img src={xIcon} alt="" aria-hidden="true" className="w-5 h-5 opacity-60" style={{ filter: 'invert(1)' }} />
+            </button>
+          </div>
+          
+          {/* Buttons row - inline on both desktop and mobile */}
+          <div className="flex flex-row flex-wrap gap-3 items-center shrink-0">
             <button 
               onClick={handleKeep}
-              className="h-10 sm:h-9 px-4 py-2 text-sm font-medium rounded-full border border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-colors whitespace-nowrap w-full sm:w-auto"
+              className="h-9 px-4 py-2 text-sm font-medium rounded-full border border-white text-white hover:bg-white/10 transition-colors whitespace-nowrap"
             >
               {t('language_banner.keep_current', {
                 defaultValue: 'Keep {{language}}',
@@ -99,19 +138,21 @@ export default function LanguageSuggestionBanner() {
             </button>
             <button 
               onClick={handleSwitch}
-              className="h-10 sm:h-9 px-4 py-2 text-sm font-medium rounded-full bg-white text-[#0a0a0a] hover:bg-white/90 transition-colors whitespace-nowrap w-full sm:w-auto"
+              className="h-9 px-4 py-2 text-sm font-medium rounded-full bg-white text-[#0a0a0a] hover:bg-white/90 transition-colors whitespace-nowrap shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)]"
             >
               {t('language_banner.switch_to', {
                 defaultValue: 'Switch to {{language}}',
                 language: suggestedName
               })}
             </button>
+            
+            {/* Close button - visible only on desktop */}
             <button
               onClick={handleClose}
-              className="absolute -top-1 -right-1 sm:static p-1 sm:ml-1 rounded hover:bg-white/10 transition-colors"
+              className="hidden md:flex items-center justify-center size-9 rounded-lg shrink-0"
               aria-label={t('language_banner.close', 'Close')}
             >
-              <img src={xIcon} alt="" aria-hidden="true" className="w-4 h-4 invert" />
+              <img src={xIcon} alt="" aria-hidden="true" className="w-5 h-5 opacity-60" style={{ filter: 'invert(1)' }} />
             </button>
           </div>
         </div>
@@ -119,4 +160,3 @@ export default function LanguageSuggestionBanner() {
     </div>
   )
 }
-

@@ -24,13 +24,9 @@ export function LanguageBannerProvider({ children }: { children: ReactNode }) {
 export function useLanguageBanner() {
   const context = useContext(LanguageBannerContext)
   if (!context) {
-    // Return default values if not within provider (for pages outside language routes)
+    // Return default values if not within provider
     return { isBannerVisible: false, setBannerVisible: () => {} }
   }
   return context
 }
-
-// Banner height constant for consistent offset
-export const LANGUAGE_BANNER_HEIGHT = 52 // px (mobile may be taller due to wrapping)
-export const LANGUAGE_BANNER_HEIGHT_MOBILE = 88 // px (with wrapped content)
 

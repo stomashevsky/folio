@@ -76,7 +76,7 @@ import LoyaltyCardAppPage from './pages/LoyaltyCardAppPage'
 import NotFoundPage from './pages/NotFoundPage'
 import AboutPage from './pages/AboutPage'
 import CookieConsent from './components/CookieConsent'
-import LanguageSuggestionBanner from './components/LanguageSuggestionBanner'
+import LanguageSuggestionBanner, { BannerSpacer } from './components/LanguageSuggestionBanner'
 import { LanguageBannerProvider } from './contexts/LanguageBannerContext'
 
 // Fallback handler in case the script in index.html didn't run
@@ -277,9 +277,10 @@ function App() {
         <Route path="/:lang/*" element={
           <LanguageBannerProvider>
             <LanguageProvider>
-              <LanguageSuggestionBanner />
+            <LanguageSuggestionBanner />
+              <BannerSpacer />
               <LocalizedRoutes />
-            </LanguageProvider>
+          </LanguageProvider>
           </LanguageBannerProvider>
         } />
       </Routes>
