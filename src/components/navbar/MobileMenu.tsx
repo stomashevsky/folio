@@ -124,9 +124,9 @@ const PLATFORM_ITEMS = [
 ]
 
 // Navbar height (64px) + banner height when visible
-// Mobile banner: ~104px (inline buttons layout per Figma design)
+// Mobile banner: ~120px (inline buttons layout per Figma design)
 const NAVBAR_HEIGHT = 64
-const BANNER_HEIGHT_MOBILE = 104
+const BANNER_HEIGHT_MOBILE = 120
 
 export default function MobileMenu({ isOpen, onClose, bannerVisible = false }: MobileMenuProps) {
   const { t } = useTranslation('common')

@@ -7,11 +7,11 @@ import xIcon from '../assets/icons/X.svg'
 
 const LANGUAGE_PREFERENCE_KEY = 'folio-language-preference'
 
-// Banner height in pixels
-// Desktop: py-4 (16px*2) + content = 52px
-// Mobile: py-4 (16px*2) + text row + buttons row + gap-4 = ~104px
-export const BANNER_HEIGHT_DESKTOP = 52
-export const BANNER_HEIGHT_MOBILE = 104
+// Banner height in pixels (measured from Figma)
+// Desktop: h-[68px] as per Figma
+// Mobile: py-6 (48px) + text (~20px) + gap (16px) + buttons (36px) = ~120px
+export const BANNER_HEIGHT_DESKTOP = 68
+export const BANNER_HEIGHT_MOBILE = 120
 
 /**
  * Spacer component that reserves space for the fixed banner.
@@ -24,8 +24,7 @@ export function BannerSpacer() {
     return null
   }
   
-  // h-[104px] on mobile, h-[52px] on desktop
-  return <div className="h-[104px] md:h-[52px]" aria-hidden="true" />
+  return <div className="h-[120px] md:h-[68px]" aria-hidden="true" />
 }
 
 /**
@@ -102,8 +101,9 @@ export default function LanguageSuggestionBanner() {
       role="dialog"
       aria-label={t('language_banner.aria_label', 'Language suggestion')}
     >
-      <div className="mx-auto max-w-[1280px] px-6 py-4 md:py-4">
-        {/* Desktop: single row | Mobile: two rows with gap */}
+      {/* Mobile: py-6 (24px), Desktop: py-4 (16px) as per Figma */}
+      <div className="mx-auto max-w-[1280px] px-6 py-6 md:py-4">
+        {/* Desktop: single row | Mobile: two rows with gap-4 */}
         <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-start md:items-center">
           
           {/* Text + Close button row */}
@@ -125,11 +125,11 @@ export default function LanguageSuggestionBanner() {
             </button>
           </div>
           
-          {/* Buttons row - inline on both desktop and mobile */}
-          <div className="flex flex-row flex-wrap gap-3 items-center shrink-0">
+          {/* Buttons row - inline with flex-wrap on both desktop and mobile */}
+          <div className="flex flex-row flex-wrap gap-3 items-center w-full md:w-auto shrink-0">
             <button 
               onClick={handleKeep}
-              className="h-9 px-4 py-2 text-sm font-medium rounded-full border border-white text-white hover:bg-white/10 transition-colors whitespace-nowrap"
+              className="h-9 px-4 py-2 text-sm font-medium rounded-full border border-white text-white hover:bg-white/10 transition-colors whitespace-nowrap shrink-0"
             >
               {t('language_banner.keep_current', {
                 defaultValue: 'Keep {{language}}',
@@ -138,7 +138,7 @@ export default function LanguageSuggestionBanner() {
             </button>
             <button 
               onClick={handleSwitch}
-              className="h-9 px-4 py-2 text-sm font-medium rounded-full bg-white text-[#0a0a0a] hover:bg-white/90 transition-colors whitespace-nowrap shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)]"
+              className="h-9 px-4 py-2 text-sm font-medium rounded-full bg-white text-[#0a0a0a] hover:bg-white/90 transition-colors whitespace-nowrap shrink-0 shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)]"
             >
               {t('language_banner.switch_to', {
                 defaultValue: 'Switch to {{language}}',

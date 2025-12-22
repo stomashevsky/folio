@@ -37,9 +37,9 @@ export default function Navbar() {
   useBodyScrollLock(isMobileMenuOpen)
 
   // Navbar position: below banner when visible
-  // Mobile banner: ~104px, Desktop banner: 52px
+  // Mobile banner: ~120px, Desktop banner: 68px (from Figma)
   const topOffset = isBannerVisible 
-    ? 'top-[104px] md:top-[52px]' 
+    ? 'top-[120px] md:top-[68px]' 
     : 'top-0'
 
   return (
