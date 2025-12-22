@@ -570,6 +570,38 @@ This file contains all rules and principles that must be followed for every chan
 4. Add language to `SUPPORTED_LANGUAGES` in `src/i18n/index.ts`
 5. Add language option to `LanguageSwitcher` component
 
+#### 13.10. Article Translation Strategy
+
+- **Never translate articles.json in bulk** — translate one article at a time to avoid context confusion and hallucinations
+- **Large translation files cause AI hallucinations** — when the AI sees 1300+ lines of different articles, it may mix up information between them
+- **Request format for article translation**:
+  - Specify the exact article slug: "Translate article `best-apple-wallet-alternatives` from articles.json to Russian"
+  - This ensures the AI focuses only on one article's context
+- **Articles namespace structure**: Each article is a separate key in `articles.json` (e.g., `best-apple-wallet-alternatives`, `terms`, `privacy`)
+- **Translation order**: Translate articles in priority order based on traffic or business importance
+
+#### 13.11. Page Meta Translation
+
+- **All pages must have translated meta tags** — title and description for SEO
+- **Meta translations are stored in `pages.json`** under the `meta` key for each page
+- **Required meta fields for each page**:
+  - `title` — page title for browser tab and search results
+  - `description` — meta description for search results
+- **Example structure**:
+  ```json
+  {
+    "wallet": {
+      "meta": {
+        "title": "Folio Wallet — Secure Document Storage",
+        "description": "Store and manage your documents securely..."
+      }
+    }
+  }
+  ```
+- **When adding a new page, always add meta translations** for all supported languages
+- **When translating, always check and translate meta sections** — they are often overlooked but critical for SEO
+- **Meta text must be natural and compelling** — treat it as marketing copy, not technical text
+
 ## Important Reminders
 
 - **Always check Figma** to understand component structure, states, and variants before implementation
