@@ -441,7 +441,16 @@ This file contains all rules and principles that must be followed for every chan
 
 ### 13. Localization and Translations
 
-#### 13.1. Translation Principles
+#### 13.1. Key Translation Requirements
+
+**These rules must be followed strictly for all translations:**
+
+1. **NEVER translate literally** — adapt text naturally, not word-for-word
+2. **Text must sound natural for native speakers** — write as if originally written in the target language
+3. **Identical terms, names, and button texts must be translated the same way everywhere** — consistency is critical
+4. **Maintain a unified style and tone** — all translations should feel like they come from the same source
+
+#### 13.2. Translation Principles
 
 - **NEVER translate literally** — always adapt text as a native speaker professional copywriter would write it
 - **Write like Apple, Google, Yandex** — translations must sound like they were originally written in the target language by a professional marketing team
@@ -450,7 +459,7 @@ This file contains all rules and principles that must be followed for every chan
 - **Consider UI context** — dropdowns, buttons, and headings must be compact
 - **Maintain consistent terminology** — use the same terms for the same concepts across all pages
 - **Technical terms and product names must be consistent** — if a term is translated (e.g., "Digital Identity" → "Цифровая идентификация"), use the translation everywhere; if kept in English (e.g., "Playground", "EUDI Wallet"), keep it in English everywhere. Never mix translated and untranslated versions of the same term.
-- **Before adding a translation, search for existing translations** — use `grep` to find how the same term is translated elsewhere. Never create alternative translations (e.g., "Связаться" vs "Связаться с нами" for "Get in touch"). Check glossary in section 13.3 first.
+- **Before adding a translation, search for existing translations** — use `grep` to find how the same term is translated elsewhere. Never create alternative translations (e.g., "Связаться" vs "Связаться с нами" for "Get in touch"). Check glossary in section 13.4 first.
 - **Read aloud test** — if a translation sounds awkward when spoken, rewrite it
 - **Page taglines must match menu item names** — the tagline on a page (e.g., hero section) must exactly match the corresponding menu item name for consistency
   - Check `common.json` footer/nav for menu item names
@@ -458,7 +467,7 @@ This file contains all rules and principles that must be followed for every chan
   - If menu says "Liveness Check", the page tagline must be the same translated term, not a different wording
 - **Avoid literal translations of technical terms** — use natural terms that native speakers would use for the concept, not word-for-word translations from English
 
-#### 13.2. Russian Language Rules
+#### 13.3. Russian Language Rules
 
 - **Write naturally** — every phrase must sound like it was written by a native Russian copywriter, not translated
 - **Avoid literal translations** — phrases like "Сравнивайте лица с уверенностью" (literal "Match faces with certainty") are wrong; use natural alternatives like "Точная идентификация по фото"
@@ -474,7 +483,7 @@ This file contains all rules and principles that must be followed for every chan
   - Bad: "Проверка живости" (literal "Liveness Check")
   - Good: "Проверка присутствия" (natural Russian term)
 
-#### 13.3. Official Terminology Glossary
+#### 13.4. Official Terminology Glossary
 
 **Terms that ARE translated (use consistently everywhere):**
 
@@ -518,7 +527,7 @@ This file contains all rules and principles that must be followed for every chan
 | OCR | Technical acronym |
 | NFC | Technical acronym |
 
-#### 13.4. Navigation and Link Localization
+#### 13.5. Navigation and Link Localization
 
 - **All internal navigation must preserve language context** — use `getLocalizedPath()` or `LocalizedLink` component
 - **Use `LocalizedLink` component** for links in article content: `import { LocalizedLink } from '../components/ui'`
@@ -530,14 +539,14 @@ This file contains all rules and principles that must be followed for every chan
 - **FooterLink already handles localization** — no additional changes needed for footer links
 - **Never use hardcoded paths** like `to="/platform/..."` — always wrap with localization
 
-#### 13.5. File Structure
+#### 13.6. File Structure
 
 - **One namespace = one page group**: `wallet.json`, `platform.json`, `solutions.json`, `government.json`
 - **Common elements** (navbar, footer, buttons) go in `common.json`
 - **Page-specific content** goes in dedicated namespace files
 - **Location**: `src/locales/{lang}/{namespace}.json`
 
-#### 13.6. Translation Keys
+#### 13.7. Translation Keys
 
 - Use descriptive, hierarchical key names: `section_element_variant`
 - Examples:
@@ -546,14 +555,14 @@ This file contains all rules and principles that must be followed for every chan
   - `faq_question_1`, `faq_answer_1`
 - Keep keys in English regardless of content language
 
-#### 13.7. Using Translations in Components
+#### 13.8. Using Translations in Components
 
 - Import `useTranslation` hook from `react-i18next`
 - Specify namespace: `const { t } = useTranslation('wallet')` or `useTranslation(['wallet', 'common'])`
 - Use `t('key')` for simple strings, `t('key', { variable })` for interpolation
 - For SEO metadata in `usePageTitle`, use translated strings
 
-#### 13.8. Adding New Languages
+#### 13.9. Adding New Languages
 
 1. Create new language folder in `src/locales/{lang}/`
 2. Copy all JSON files from `en/` folder

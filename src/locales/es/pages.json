@@ -2,15 +2,15 @@
     "idWalletApp": {
         "meta": {
             "title": "Billetera de ID digital - Tarjetero digital para licencia de conducir | Folio",
-            "description": "La aplicación de billetera de identificación Folio te permite administrar fácilmente tarjetas de identificación y licencias de conducir. Mantén todo seguro con encriptación de extremo a extremo. Disponible en iOS y Android.",
+            "description": "La aplicación de billetera de identificación Folio te permite administrar fácilmente tarjetas de identificación y licencias de conducir. Mantén todo seguro con cifrado de extremo a extremo. Disponible en iOS y Android.",
             "ogTitle": "Aplicación de billetera de tarjetas de ID | Folio",
-            "ogDescription": "Almacena tus pasaportes, tarjetas de identificación y licencias de conducir de forma segura en una billetera digital. Encriptado de extremo a extremo."
+            "ogDescription": "Almacena tus pasaportes, tarjetas de identificación y licencias de conducir de forma segura en una billetera digital. Cifrado de extremo a extremo."
         },
         "hero": {
             "tagline": "Billetera de ID",
             "title": "Aplicación de billetera de tarjetas de ID",
-            "description": "Mantén tus pasaportes, tarjetas de identificación y licencias de conducir organizados en una billetera digital segura. Folio extrae detalles clave automáticamente, te recuerda antes de que los documentos caduquen y mantiene todo protegido con encriptación de extremo a extremo.",
-            "getApp": "Obtener la app",
+            "description": "Mantén tus pasaportes, tarjetas de identificación y licencias de conducir organizados en una billetera digital segura. Folio extrae detalles clave automáticamente, te recuerda antes de que los documentos caduquen y mantiene todo protegido con cifrado de extremo a extremo.",
+            "getApp": "Descargar la app",
             "learnMore": "Saber más",
             "imageAlt": "Vista previa de la app de billetera de ID"
         },
@@ -26,8 +26,8 @@
                 "description": "Escanea tu identificación y Folio extrae automáticamente nombres, fechas, números de documentos y otros detalles clave."
             },
             "encrypted": {
-                "title": "Encriptado de extremo a extremo",
-                "description": "Tus documentos de identificación están encriptados con claves que solo tú controlas. Ni siquiera Folio puede leer tus datos."
+                "title": "Cifrado de extremo a extremo",
+                "description": "Tus documentos de identificación están cifrados con claves que solo tú controlas. Ni siquiera Folio puede leer tus datos."
             },
             "expiryReminders": {
                 "title": "Recordatorios de vencimiento",
@@ -79,7 +79,7 @@
                 },
                 {
                     "q": "¿Es seguro almacenar mi tarjeta de identificación en una billetera digital?",
-                    "a": "Sí. Folio utiliza encriptación de extremo a extremo para proteger tus tarjetas de identificación. Tus documentos se encriptan en tu dispositivo con claves que solo tú controlas. Ni siquiera Folio puede acceder a tus datos."
+                    "a": "Sí. Folio utiliza cifrado de extremo a extremo para proteger tus tarjetas de identificación. Tus documentos se encriptan en tu dispositivo con claves que solo tú controlas. Ni siquiera Folio puede acceder a tus datos."
                 },
                 {
                     "q": "¿Puedo usar Folio como billetera de licencia de conducir?",
@@ -99,15 +99,15 @@
     "cardScannerApp": {
         "meta": {
             "title": "App de escáner de tarjetas para iPhone y Android | Folio",
-            "description": "La aplicación de escáner de tarjetas Folio te permite escanear fácilmente tarjetas y documentos. Mantén todo seguro con encriptación de extremo a extremo. Disponible en iOS y Android.",
+            "description": "La aplicación de escáner de tarjetas Folio te permite escanear fácilmente tarjetas y documentos. Mantén todo seguro con cifrado de extremo a extremo. Disponible en iOS y Android.",
             "ogTitle": "App de escáner de tarjetas | Folio",
-            "ogDescription": "Escanea y organiza tus tarjetas y documentos con Folio. OCR extrae detalles automáticamente. Encriptado de extremo a extremo."
+            "ogDescription": "Escanea y organiza tus tarjetas y documentos con Folio. OCR extrae detalles automáticamente. Cifrado de extremo a extremo."
         },
         "hero": {
             "tagline": "Escáner de tarjetas",
             "title": "App de escáner de tarjetas",
-            "description": "Escanea cualquier tarjeta o documento con la cámara de tu teléfono. Folio extrae automáticamente detalles importantes usando OCR y almacena todo de forma segura con encriptación de extremo a extremo. Disponible gratis en iPhone y Android.",
-            "getApp": "Obtener la app",
+            "description": "Escanea cualquier tarjeta o documento con la cámara de tu teléfono. Folio extrae automáticamente detalles importantes usando OCR y almacena todo de forma segura con cifrado de extremo a extremo. Disponible gratis en iPhone y Android.",
+            "getApp": "Descargar la app",
             "learnMore": "Saber más",
             "imageAlt": "Vista previa de la app de escáner de tarjetas"
         },
@@ -144,7 +144,7 @@
             },
             "secureStorage": {
                 "title": "Almacenamiento seguro",
-                "description": "Todos los escaneos están encriptados de extremo a extremo. Solo tú puedes acceder a tus datos."
+                "description": "Todos los escaneos están cifrados de extremo a extremo. Solo tú puedes acceder a tus datos."
             },
             "crossDevice": {
                 "title": "Sincronización entre dispositivos",
@@ -164,7 +164,7 @@
             },
             "step3": {
                 "title": "Almacenado de forma segura",
-                "description": "Tu tarjeta está encriptada y organizada, lista para acceder en cualquier momento."
+                "description": "Tu tarjeta está cifrada y organizada, lista para acceder en cualquier momento."
             }
         },
         "faq": {
@@ -189,7 +189,7 @@
                 },
                 {
                     "q": "¿Están seguras mis tarjetas escaneadas?",
-                    "a": "Sí. Todas las tarjetas escaneadas están encriptadas con encriptación de extremo a extremo. Tus datos están protegidos con claves que solo tú controlas, y ni siquiera Folio puede acceder a tu información."
+                    "a": "Sí. Todas las tarjetas escaneadas están cifradas con cifrado de extremo a extremo. Tus datos están protegidos con claves que solo tú controlas, y ni siquiera Folio puede acceder a tu información."
                 }
             ]
         }
@@ -197,7 +197,7 @@
     "loyaltyCardApp": {
         "meta": {
             "title": "App de tarjetas de fidelidad - Billetera para tarjetas de membresía y recompensas | Folio",
-            "description": "La aplicación de tarjetas de fidelidad Folio te permite administrar fácilmente tarjetas de fidelidad y membresía. Mantén todo seguro con encriptación de extremo a extremo. Disponible en iOS y Android.",
+            "description": "La aplicación de tarjetas de fidelidad Folio te permite administrar fácilmente tarjetas de fidelidad y membresía. Mantén todo seguro con cifrado de extremo a extremo. Disponible en iOS y Android.",
             "ogTitle": "App de tarjetas de fidelidad | Folio",
             "ogDescription": "Almacena todas tus tarjetas de fidelidad, tarjetas de membresía y tarjetas de recompensas en una billetera digital segura. Funciona en iPhone y Android."
         },
@@ -205,7 +205,7 @@
             "tagline": "Tarjetas de fidelidad",
             "title": "App de tarjetas de fidelidad",
             "description": "Mantén todas tus tarjetas de fidelidad, membresía y recompensas en una billetera digital segura. No más buscar en tu billetera o perder puntos. Folio funciona con cualquier tienda y mantiene tus tarjetas listas cuando las necesitas.",
-            "getApp": "Obtener la app",
+            "getApp": "Descargar la app",
             "learnMore": "Saber más",
             "imageAlt": "Vista previa de la app de tarjetas de fidelidad"
         },
@@ -226,7 +226,7 @@
             },
             "secure": {
                 "title": "Seguro y privado",
-                "description": "Los datos de tu tarjeta de fidelidad están encriptados. Ni siquiera Folio puede ver tu información."
+                "description": "Los datos de tu tarjeta de fidelidad están cifrados. Ni siquiera Folio puede ver tu información."
             }
         },
         "cardTypes": {
@@ -306,7 +306,7 @@
                 },
                 {
                     "q": "¿Están seguros los detalles de mi tarjeta de fidelidad?",
-                    "a": "Sí. Todas tus tarjetas de fidelidad están encriptadas con encriptación de extremo a extremo. Tus datos permanecen privados con claves que solo tú controlas."
+                    "a": "Sí. Todas tus tarjetas de fidelidad están cifradas con cifrado de extremo a extremo. Tus datos permanecen privados con claves que solo tú controlas."
                 }
             ]
         }
@@ -314,25 +314,25 @@
     "security": {
         "meta": {
             "title": "Seguridad | Folio Wallet",
-            "description": "Aprende cómo Folio protege tus documentos con encriptación de extremo a extremo, arquitectura de conocimiento cero y estándares de seguridad líderes en la industria.",
+            "description": "Aprende cómo Folio protege tus documentos con cifrado de extremo a extremo, arquitectura de conocimiento cero y estándares de seguridad líderes en la industria.",
             "ogTitle": "Seguridad | Folio Wallet",
-            "ogDescription": "Tus datos siguen siendo tuyos. Folio utiliza encriptación de extremo a extremo y arquitectura de conocimiento cero para mantener tus documentos privados y seguros."
+            "ogDescription": "Tus datos siguen siendo tuyos. Folio utiliza cifrado de extremo a extremo y arquitectura de conocimiento cero para mantener tus documentos privados y seguros."
         },
         "hero": {
             "tagline": "Seguridad",
             "title": "Tus datos siguen siendo tuyos",
-            "description": "Folio se basa en el principio de que tus documentos personales te pertenecen solo a ti. Utilizamos encriptación de extremo a extremo y arquitectura de conocimiento cero para garantizar que solo tú puedas acceder a tus datos. Ni siquiera Folio puede leer tus documentos."
+            "description": "Folio se basa en el principio de que tus documentos personales te pertenecen solo a ti. Utilizamos cifrado de extremo a extremo y arquitectura de conocimiento cero para garantizar que solo tú puedas acceder a tus datos. Ni siquiera Folio puede leer tus documentos."
         },
         "keyFeatures": {
             "title": "Cómo protegemos tus datos",
             "description": "Cada capa de Folio está diseñada con la seguridad y privacidad en su núcleo.",
             "e2e": {
-                "title": "Encriptado de extremo a extremo",
+                "title": "Cifrado de extremo a extremo",
                 "description": "Tus documentos se encriptan antes de salir de tu dispositivo. Solo tú tienes las claves para desencriptarlos."
             },
             "zeroKnowledge": {
                 "title": "Arquitectura de conocimiento cero",
-                "description": "Nunca vemos tus datos. Nuestros servidores almacenan solo información encriptada que no podemos leer ni acceder."
+                "description": "Nunca vemos tus datos. Nuestros servidores almacenan solo información cifrada que no podemos leer ni acceder."
             },
             "localFirst": {
                 "title": "Almacenamiento local primero",
@@ -340,21 +340,21 @@
             },
             "secureSync": {
                 "title": "Sincronización segura en la nube",
-                "description": "Cuando sincronizas entre dispositivos, tus datos viajan encriptados. Facilitamos la transferencia pero no podemos ver el contenido."
+                "description": "Cuando sincronizas entre dispositivos, tus datos viajan cifrados. Facilitamos la transferencia pero no podemos ver el contenido."
             }
         },
         "detailed": {
             "encryption": {
-                "title": "Encriptación en la que puedes confiar",
-                "description": "Cada documento, tarjeta y pieza de información personal que almacenas en Folio está encriptada utilizando estándares criptográficos modernos. Tus claves de encriptación se derivan de credenciales que solo tú conoces. Esto significa que tus datos permanecen privados incluso si nuestros servidores alguna vez se vieran comprometidos."
+                "title": "Cifrado en la que puedes confiar",
+                "description": "Cada documento, tarjeta y pieza de información personal que almacenas en Folio está cifrada utilizando estándares criptográficos modernos. Tus claves de cifrado se derivan de credenciales que solo tú conoces. Esto significa que tus datos permanecen privados incluso si nuestros servidores alguna vez se vieran comprometidos."
             },
             "noAccess": {
                 "title": "No podemos acceder a tus datos",
-                "description": "Folio opera bajo un modelo de conocimiento cero. Almacenamos solo blobs encriptados y hashes criptográficos en nuestros servidores. Sin tus claves personales, estos datos no tienen sentido. No podemos desencriptarlos, leerlos ni compartirlos con nadie. Tu privacidad no es una elección de política, es una garantía técnica."
+                "description": "Folio opera bajo un modelo de conocimiento cero. Almacenamos solo blobs cifrados y hashes criptográficos en nuestros servidores. Sin tus claves personales, estos datos no tienen sentido. No podemos desencriptarlos, leerlos ni compartirlos con nadie. Tu privacidad no es una elección de política, es una garantía técnica."
             },
             "yourDevice": {
                 "title": "Tu dispositivo, tus datos",
-                "description": "Folio almacena tus documentos localmente en tu dispositivo primero. Esto significa que siempre tienes acceso a tu información importante, ya sea que estés en línea o desconectado. La sincronización en la nube es opcional y siempre está encriptada. Tú mantienes el control de dónde viven tus datos."
+                "description": "Folio almacena tus documentos localmente en tu dispositivo primero. Esto significa que siempre tienes acceso a tu información importante, ya sea que estés en línea o desconectado. La sincronización en la nube es opcional y siempre está cifrada. Tú mantienes el control de dónde viven tus datos."
             },
             "biometric": {
                 "title": "Protección biométrica",
@@ -384,7 +384,7 @@
         "cta": {
             "title": "¿Listo para asegurar tus documentos?",
             "description": "Descarga Folio y experimenta el almacenamiento de documentos que pone tu privacidad primero.",
-            "button": "Obtener la app"
+            "button": "Descargar la app"
         }
     },
     "about": {
@@ -402,7 +402,7 @@
             "title": "Nuestra historia",
             "paragraphs": [
                 "Fundada en Londres, Folio comenzó con una simple observación: las personas llevan docenas de documentos importantes pero no tienen una forma segura y organizada de acceder a ellos digitalmente. Los pasaportes se pierden, las entradas caducan en hilos de correo electrónico y las tarjetas importantes se olvidan en los cajones.",
-                "Construimos Folio Wallet para resolver esto. Una aplicación donde puedes almacenar pasaportes, identificaciones, entradas, tarjetas y cualquier documento que necesites, todo encriptado con claves que solo tú controlas. Más de un millón de documentos ahora están almacenados de forma segura en Folio, utilizados por personas en más de 120 países.",
+                "Construimos Folio Wallet para resolver esto. Una aplicación donde puedes almacenar pasaportes, identificaciones, entradas, tarjetas y cualquier documento que necesites, todo cifrado con claves que solo tú controlas. Más de un millón de documentos ahora están almacenados de forma segura en Folio, utilizados por personas en más de 120 países.",
                 "A medida que crecimos, empresas y gobiernos se acercaron a nosotros con desafíos similares. ¿Cómo verificas la identidad de alguien en línea? ¿Cómo emites credenciales digitales seguras? ¿Cómo proteges datos sensibles mientras haces que la verificación sea perfecta?",
                 "Hoy, Folio ofrece una plataforma de identidad completa: almacenamiento seguro para individuos, herramientas de verificación para empresas e infraestructura de credenciales digitales para gobiernos. Nuestro trabajo con la comisión electoral de Albania, donde ayudamos a registrar a más de 365,000 votantes de la diáspora, muestra lo que es posible cuando la tecnología de identidad se construye correctamente."
             ]
@@ -422,7 +422,7 @@
             },
             "security": {
                 "title": "Seguridad por diseño",
-                "description": "Encriptación de extremo a extremo, protección biométrica y estándares de seguridad rigurosos protegen todo lo que almacenas."
+                "description": "Cifrado de extremo a extremo, protección biométrica y estándares de seguridad rigurosos protegen todo lo que almacenas."
             },
             "global": {
                 "title": "Funciona en todas partes",
@@ -437,7 +437,7 @@
             "title": "Ponte en contacto",
             "description": "¿Tienes preguntas sobre Folio? Nos encantaría saber de ti.",
             "contactUs": "Contáctanos",
-            "getApp": "Obtener la app",
+            "getApp": "Descargar la app",
             "email": {
                 "title": "Escribe un correo",
                 "value": "contact@folio.id"

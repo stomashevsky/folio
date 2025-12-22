@@ -1,13 +1,13 @@
 {
     "meta": {
         "title": "Folio Wallet | App de billetera de documentos digitales",
-        "description": "Folio mantiene tus pasaportes, identificaciones, boletos y tarjetas en un lugar seguro, bellamente estructurados y accesibles al instante. Importa cualquier documento desde email, PDF o foto, lo limpia, extrae detalles clave y mantiene todo fácil de encontrar."
+        "description": "Folio mantiene tus pasaportes, identificaciones, billetes y tarjetas en un lugar seguro, bellamente estructurados y accesibles al instante. Importa cualquier documento desde email, PDF o foto, lo limpia, extrae detalles clave y mantiene todo fácil de encontrar."
     },
     "hero": {
         "tagline": "App Folio",
         "title": "Tus documentos, siempre contigo",
-        "description": "Folio mantiene tus pasaportes, identificaciones, boletos y tarjetas en un lugar seguro, bellamente estructurados y accesibles al instante. Importa cualquier documento desde email, PDF o foto, lo limpia, extrae detalles clave y mantiene todo fácil de encontrar. Tu información esencial está siempre a mano cuando la necesitas.",
-        "cta": "Obtén la app"
+        "description": "Folio mantiene tus pasaportes, identificaciones, billetes y tarjetas en un lugar seguro, bellamente estructurados y accesibles al instante. Importa cualquier documento desde email, PDF o foto, lo limpia, extrae detalles clave y mantiene todo fácil de encontrar. Tu información esencial está siempre a mano cuando la necesitas.",
+        "cta": "Descargar la app"
     },
     "features": {
         "title": "Todo en un lugar seguro",
@@ -20,16 +20,16 @@
             "description": "Almacena pasaportes, tarjetas de identidad y permisos de residencia de forma segura y en un formato limpio y legible. Folio extrae nombres, fechas y números para un acceso rápido y te recuerda antes de que algo expire."
         },
         "tickets": {
-            "title": "Boletos y Reservas",
-            "description": "Importa vuelos, trenes, hoteles y eventos desde email, PDF o foto. Folio limpia cada boleto, extrae horarios, ubicaciones e información de pasajeros, y lo convierte en una tarjeta clara y confiable para tus viajes."
+            "title": "Billetes y Reservas",
+            "description": "Importa vuelos, trenes, hoteles y eventos desde email, PDF o foto. Folio limpia cada billete, extrae horarios, ubicaciones e información de pasajeros, y lo convierte en una tarjeta clara y confiable para tus viajes."
         },
         "timeline": {
             "title": "Cronología de Viajes",
-            "description": "Todo tu viaje se organiza automáticamente día a día. Los boletos y reservas se ordenan cronológicamente, agrupados por fecha y mostrados como una línea de tiempo limpia para que siempre sepas qué sigue."
+            "description": "Todo tu viaje se organiza automáticamente día a día. Los billetes y reservas se ordenan cronológicamente, agrupados por fecha y mostrados como una línea de tiempo limpia para que siempre sepas qué sigue."
         },
         "folders": {
             "title": "Carpetas Compartidas",
-            "description": "Crea espacios de documentos compartidos para familiares y amigos. Todos ven las últimas versiones de boletos, identificaciones o planes de viaje y pueden agregar sus propios documentos mientras los archivos originales permanecen seguros con sus dueños."
+            "description": "Crea espacios de documentos compartidos para familiares y amigos. Todos ven las últimas versiones de billetes, identificaciones o planes de viaje y pueden agregar sus propios documentos mientras los archivos originales permanecen seguros con sus dueños."
         }
     },
     "import": {
@@ -45,11 +45,11 @@
         },
         "pdf": {
             "title": "Importar PDFs",
-            "description": "Importa boletos digitales, tarjetas o confirmaciones con un toque."
+            "description": "Importa billetes digitales, tarjetas o confirmaciones con un toque."
         },
         "email": {
             "title": "Reenviar correos",
-            "description": "Envía cualquier boleto o email de reserva a docs@folio.id."
+            "description": "Envía cualquier billete o email de reserva a docs@folio.id."
         }
     },
     "trips": {
@@ -109,7 +109,7 @@
         },
         "documents": {
             "value": "1M+",
-            "description": "Documentos, tarjetas y boletos ya agregados por personas que usan Folio para mantenerse organizadas."
+            "description": "Documentos, tarjetas y billetes ya agregados por personas que usan Folio para mantenerse organizadas."
         },
         "countries": {
             "value": "120+",
@@ -121,11 +121,11 @@
         "items": [
             {
                 "q": "¿Qué es Folio?",
-                "a": "Folio es una aplicación de billetera digital que mantiene tus pasaportes, identificaciones, boletos, reservas y tarjetas organizados en un lugar seguro. Funciona en iPhone y Android."
+                "a": "Folio es una aplicación de billetera digital que mantiene tus pasaportes, identificaciones, billetes, reservas y tarjetas organizados en un lugar seguro. Funciona en iPhone y Android."
             },
             {
                 "q": "¿Qué tipos de documentos puedo almacenar?",
-                "a": "Pasaportes, tarjetas de identidad, permisos de residencia, licencias de conducir, boletos de viaje (vuelos, trenes, hoteles, eventos), tarjetas de pago, tarjetas de regalo, tarjetas de fidelidad y cualquier otro documento personal."
+                "a": "Pasaportes, tarjetas de identidad, permisos de residencia, licencias de conducir, billetes de viaje (vuelos, trenes, hoteles, eventos), tarjetas de pago, tarjetas de regalo, tarjetas de fidelidad y cualquier otro documento personal."
             },
             {
                 "q": "¿Cómo agrego documentos?",
@@ -145,7 +145,7 @@
             },
             {
                 "q": "¿Puedo compartir documentos con mi familia?",
-                "a": "Sí. Crea carpetas compartidas para compartir planes de viaje, boletos o identificaciones de forma segura con familiares y amigos. Todos ven las últimas versiones automáticamente."
+                "a": "Sí. Crea carpetas compartidas para compartir planes de viaje, billetes o identificaciones de forma segura con familiares y amigos. Todos ven las últimas versiones automáticamente."
             },
             {
                 "q": "¿En qué plataformas está disponible Folio?",
@@ -157,7 +157,7 @@
             },
             {
                 "q": "¿Cómo funciona la cronología de viajes?",
-                "a": "La cronología de viajes organiza automáticamente tus vuelos, reservas de hotel, boletos de tren y eventos en orden cronológico. Muestra tu itinerario completo para cada viaje, destaca las próximas salidas y mantiene un historial de viajes pasados. No se requiere entrada manual."
+                "a": "La cronología de viajes organiza automáticamente tus vuelos, reservas de hotel, billetes de tren y eventos en orden cronológico. Muestra tu itinerario completo para cada viaje, destaca las próximas salidas y mantiene un historial de viajes pasados. No se requiere entrada manual."
             },
             {
                 "q": "¿Funciona Folio con pases de Apple Wallet?",

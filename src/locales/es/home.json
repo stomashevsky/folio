@@ -11,7 +11,7 @@
     "wallet": {
         "tagline": "App Folio",
         "title": "Tus documentos, siempre contigo",
-        "description": "Guarda pasaportes, identificaciones, boletos y tarjetas en un lugar seguro. Folio importa cualquier documento desde email, PDF o foto, extrae los detalles clave y mantiene todo organizado y accesible."
+        "description": "Guarda pasaportes, identificaciones, billetes y tarjetas en un lugar seguro. Folio importa cualquier documento desde email, PDF o foto, extrae los detalles clave y mantiene todo organizado y accesible."
     },
     "platform": {
         "tagline": "Plataforma",
@@ -28,7 +28,7 @@
             "description": "Verifica la edad para industrias reguladas"
         },
         "clientOnboarding": {
-            "title": "Onboarding de clientes",
+            "title": "Alta de clientes",
             "description": "Simplifica el KYC y la verificación de clientes"
         },
         "digitalTicketing": {

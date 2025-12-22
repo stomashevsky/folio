@@ -98,7 +98,7 @@
         },
         "cta": {
             "title": "Construyamos una mejor verificación de identidad",
-            "description": "Habla con nuestro equipo para explorar cómo Folio puede mejorar tu experiencia de onboarding y verificación."
+            "description": "Habla con nuestro equipo para explorar cómo Folio puede mejorar tu experiencia de alta y verificación."
         },
         "faq": {
             "title": "Preguntas frecuentes",
@@ -233,7 +233,7 @@
         },
         "cta": {
             "title": "Construyamos una mejor verificación de identidad",
-            "description": "Habla con nuestro equipo para explorar cómo Folio puede mejorar tu experiencia de onboarding y verificación."
+            "description": "Habla con nuestro equipo para explorar cómo Folio puede mejorar tu experiencia de alta y verificación."
         }
     },
     "livenessCheck": {
@@ -614,7 +614,7 @@
                 },
                 "smartAddress": {
                     "title": "Autocompletado de dirección inteligente",
-                    "description": "Acelera la entrada del usuario, reduce errores y crea una experiencia de onboarding más suave completando automáticamente detalles de dirección."
+                    "description": "Acelera la entrada del usuario, reduce errores y crea una experiencia de alta más suave completando automáticamente detalles de dirección."
                 },
                 "adaptiveRouting": {
                     "title": "Enrutamiento adaptativo",
@@ -639,7 +639,7 @@
         },
         "cta": {
             "title": "Construyamos una mejor verificación de identidad",
-            "description": "Habla con nuestro equipo para explorar cómo Folio puede mejorar tu experiencia de onboarding y verificación."
+            "description": "Habla con nuestro equipo para explorar cómo Folio puede mejorar tu experiencia de alta y verificación."
         }
     },
     "phoneAndEmailValidation": {
@@ -869,7 +869,7 @@
         "useCases": {
             "title": "Casos de uso de flujo dinámico",
             "onboarding": {
-                "title": "Onboarding de usuarios",
+                "title": "Alta de usuarios",
                 "description": "Crea una primera experiencia fluida con flujos de marca que se adaptan al riesgo en tiempo real."
             },
             "identity": {
@@ -891,7 +891,7 @@
         },
         "cta": {
             "title": "Construyamos una mejor verificación de identidad",
-            "description": "Habla con nuestro equipo para explorar cómo Folio puede mejorar tu experiencia de onboarding y verificación."
+            "description": "Habla con nuestro equipo para explorar cómo Folio puede mejorar tu experiencia de alta y verificación."
         }
     },
     "behaviorInsights": {
@@ -975,7 +975,7 @@
         },
         "cta": {
             "title": "Construyamos una mejor verificación de identidad",
-            "description": "Habla con nuestro equipo para explorar cómo Folio puede mejorar tu experiencia de onboarding y verificación."
+            "description": "Habla con nuestro equipo para explorar cómo Folio puede mejorar tu experiencia de alta y verificación."
         }
     },
     "reviewWorkspace": {
@@ -1083,7 +1083,7 @@
         },
         "cta": {
             "title": "Construyamos una mejor verificación de identidad",
-            "description": "Habla con nuestro equipo para explorar cómo Folio puede mejorar tu experiencia de onboarding y verificación."
+            "description": "Habla con nuestro equipo para explorar cómo Folio puede mejorar tu experiencia de alta y verificación."
         }
     },
     "credentialIssuance": {

@@ -1,17 +1,17 @@
 {
     "digitalTicketing": {
         "meta": {
-            "title": "Boletos Digitales | Folio Wallet",
-            "description": "Crea, gestiona y valida boletos digitales con controles de fraude integrados."
+            "title": "Entradas Digitales | Folio Wallet",
+            "description": "Crea, gestiona y valida entradas digitales con controles de fraude integrados."
         },
         "hero": {
-            "tagline": "Boletos digitales",
-            "title": "Mejores boletos\nSin app que construir",
-            "description": "Ofrece a tus clientes boletos digitales limpios que son fáciles de encontrar, fáciles de escanear y funcionan en cualquier teléfono moderno."
+            "tagline": "Entradas digitales",
+            "title": "Mejores entradas\nSin app que construir",
+            "description": "Ofrece a tus clientes entradas digitales limpios que son fáciles de encontrar, fáciles de escanear y funcionan en cualquier teléfono moderno."
         },
         "trust": {
             "title": "Construido en una plataforma en la que la gente confía",
-            "description": "Tus boletos aparecen dentro de la misma billetera segura que la gente usa a diario para identificaciones, tarjetas y documentos de viaje. Sin apps extra, sin fricción de registro.",
+            "description": "Tus entradas aparecen dentro de la misma billetera segura que la gente usa a diario para identificaciones, tarjetas y documentos de viaje. Sin apps extra, sin fricción de registro.",
             "rating": {
                 "value": "4.7★",
                 "description": "Los usuarios califican a Folio altamente por su claridad, velocidad y fiabilidad en el uso diario."
@@ -27,31 +27,31 @@
         },
         "format": {
             "title": "Emite boletos en un formato listo para Folio",
-            "description": "Envíanos un JSON simple o un correo electrónico que ya generas y Folio lo convierte en un boleto digital limpio. Sin archivos pkpass, sin certificados de wallet, sin SDKs para integrar.",
+            "description": "Envíanos un JSON simple o un correo electrónico que ya generas y Folio lo convierte en un entrada digital limpio. Sin archivos pkpass, sin certificados de wallet, sin SDKs para integrar.",
             "features": {
                 "noFormats": "Sin formatos de pase especiales o certificados",
-                "fastDelivery": "Los boletos llegan en segundos al teléfono del cliente",
-                "anySystem": "Funciona con cualquier sistema de reserva o venta de boletos existente"
+                "fastDelivery": "Las entradas llegan en segundos al teléfono del cliente",
+                "anySystem": "Funciona con cualquier sistema de reserva o venta de entradas existente"
             }
         },
         "whyFolio": {
             "title": "¿Por qué Folio en lugar de Apple Wallet o Google Wallet",
-            "description": "Una forma más simple y universal de entregar boletos digitales sin límites de plataforma o formatos complejos.",
+            "description": "Una forma más simple y universal de entregar entradas digitales sin límites de plataforma o formatos complejos.",
             "noFormats": {
                 "title": "Sin formatos especiales",
                 "description": "No necesitas crear archivos de pase o gestionar certificados. Folio funciona con datos simples que ya envías."
             },
             "workflow": {
                 "title": "Se adapta a tu flujo de trabajo",
-                "description": "Si puedes enviar un PDF o correo electrónico, puedes emitir boletos para Folio. Sin nuevos sistemas, sin equipo móvil, sin configuración."
+                "description": "Si puedes enviar un PDF o correo electrónico, puedes emitir entradas para Folio. Sin nuevos sistemas, sin equipo móvil, sin configuración."
             },
             "onePlace": {
                 "title": "Todo en un solo lugar",
-                "description": "Todos los boletos y reservas aparecen en una línea de tiempo simple que ayuda a los clientes a ver sus planes de un vistazo."
+                "description": "Todos las entradas y reservas aparecen en una línea de tiempo simple que ayuda a los clientes a ver sus planes de un vistazo."
             },
             "everyone": {
                 "title": "Disponible para todos",
-                "description": "Tus boletos funcionan igual en iOS y Android en cualquier región, incluso para usuarios que no usan apps de billetera."
+                "description": "Tus entradas funcionan igual en iOS y Android en cualquier región, incluso para usuarios que no usan apps de billetera."
             }
         },
         "operators": {
@@ -59,7 +59,7 @@
             "description": "Folio funciona para cualquier servicio donde los clientes reciben boletos o confirmaciones por correo electrónico.",
             "events": {
                 "title": "Eventos y lugares",
-                "description": "Conciertos, festivales, teatros y lugares locales obtienen boletos de eventos modernos que son fáciles de escanear y entender."
+                "description": "Conciertos, festivales, teatros y lugares locales obtienen entradas de eventos modernos que son fáciles de escanear y entender."
             },
             "transport": {
                 "title": "Operadores de transporte",
@@ -164,11 +164,11 @@
     },
     "clientOnboarding": {
         "meta": {
-            "title": "Onboarding de Clientes | Folio Wallet",
+            "title": "Alta de Clientes | Folio Wallet",
             "description": "Verificación de clientes rápida, conforme y lista para auditorías. Registra clientes de forma remota en minutos mientras cumples con los requisitos AML, KYC y CDD a nivel mundial."
         },
         "hero": {
-            "tagline": "Onboarding de clientes",
+            "tagline": "Alta de clientes",
             "title": "KYC simplificado para negocios regulados",
             "description": "Verificación de clientes rápida, conforme y lista para auditorías. Registra clientes de forma remota en minutos mientras cumples con los requisitos AML, KYC y CDD a nivel mundial. Deja de perseguir documentos y mantente listo para auditorías las 24 horas."
         },
@@ -262,28 +262,28 @@
             },
             "professionalServices": {
                 "title": "Servicios profesionales",
-                "description": "Cualquier negocio regulado que necesite verificar la identidad del cliente puede beneficiarse del onboarding digital simplificado."
+                "description": "Cualquier negocio regulado que necesite verificar la identidad del cliente puede beneficiarse del alta digital simplificado."
             }
         },
         "cta": {
-            "title": "Simplifica tu onboarding de clientes hoy",
+            "title": "Simplifica tu alta de clientes hoy",
             "description": "Convierte horas de trabajo manual de cumplimiento en minutos. Habla con nuestro equipo para ver cómo Folio puede agilizar tu proceso de verificación de clientes.",
             "button": "Ponte en contacto"
         }
     },
     "ticketIssuance": {
         "meta": {
-            "title": "Emisión de Boletos | Folio Wallet",
-            "description": "Emite boletos digitales seguros directamente a las billeteras de los usuarios."
+            "title": "Emisión de Entradas | Folio Wallet",
+            "description": "Emite entradas digitales seguros directamente a las billeteras de los usuarios."
         },
         "hero": {
-            "tagline": "Emisión de boletos",
-            "title": "Mejores boletos\nSin app que construir",
-            "description": "Ofrece a tus clientes boletos digitales limpios que son fáciles de encontrar, fáciles de escanear y funcionan en cualquier teléfono moderno."
+            "tagline": "Emisión de entradas",
+            "title": "Mejores entradas\nSin app que construir",
+            "description": "Ofrece a tus clientes entradas digitales limpios que son fáciles de encontrar, fáciles de escanear y funcionan en cualquier teléfono moderno."
         },
         "trust": {
             "title": "Construido en una plataforma en la que la gente confía",
-            "description": "Tus boletos aparecen dentro de la misma billetera segura que la gente usa a diario para identificaciones, tarjetas y documentos de viaje. Sin apps extra, sin fricción de registro.",
+            "description": "Tus entradas aparecen dentro de la misma billetera segura que la gente usa a diario para identificaciones, tarjetas y documentos de viaje. Sin apps extra, sin fricción de registro.",
             "rating": {
                 "value": "4.7★",
                 "description": "Los usuarios califican a Folio altamente por su claridad, velocidad y fiabilidad en el uso diario."
@@ -299,31 +299,31 @@
         },
         "format": {
             "title": "Emite boletos en un formato listo para Folio",
-            "description": "Envíanos un JSON simple o un correo electrónico que ya generas y Folio lo convierte en un boleto digital limpio. Sin archivos pkpass, sin certificados de wallet, sin SDKs para integrar.",
+            "description": "Envíanos un JSON simple o un correo electrónico que ya generas y Folio lo convierte en un entrada digital limpio. Sin archivos pkpass, sin certificados de wallet, sin SDKs para integrar.",
             "features": {
                 "noFormats": "Sin formatos de pase especiales o certificados",
-                "fastDelivery": "Los boletos llegan en segundos al teléfono del cliente",
-                "anySystem": "Funciona con cualquier sistema de reserva o venta de boletos existente"
+                "fastDelivery": "Las entradas llegan en segundos al teléfono del cliente",
+                "anySystem": "Funciona con cualquier sistema de reserva o venta de entradas existente"
             }
         },
         "whyFolio": {
             "title": "¿Por qué Folio en lugar de Apple Wallet o Google Wallet",
-            "description": "Una forma más simple y universal de entregar boletos digitales sin límites de plataforma o formatos complejos.",
+            "description": "Una forma más simple y universal de entregar entradas digitales sin límites de plataforma o formatos complejos.",
             "noFormats": {
                 "title": "Sin formatos especiales",
                 "description": "No necesitas crear archivos de pase o gestionar certificados. Folio funciona con datos simples que ya envías."
             },
             "workflow": {
                 "title": "Se adapta a tu flujo de trabajo",
-                "description": "Si puedes enviar un PDF o correo electrónico, puedes emitir boletos para Folio. Sin nuevos sistemas, sin equipo móvil, sin configuración."
+                "description": "Si puedes enviar un PDF o correo electrónico, puedes emitir entradas para Folio. Sin nuevos sistemas, sin equipo móvil, sin configuración."
             },
             "onePlace": {
                 "title": "Todo en un solo lugar",
-                "description": "Todos los boletos y reservas aparecen en una línea de tiempo simple que ayuda a los clientes a ver sus planes de un vistazo."
+                "description": "Todos las entradas y reservas aparecen en una línea de tiempo simple que ayuda a los clientes a ver sus planes de un vistazo."
             },
             "everyone": {
                 "title": "Disponible para todos",
-                "description": "Tus boletos funcionan igual en iOS y Android en cualquier región, incluso para usuarios que no usan apps de billetera."
+                "description": "Tus entradas funcionan igual en iOS y Android en cualquier región, incluso para usuarios que no usan apps de billetera."
             }
         },
         "operators": {
@@ -331,7 +331,7 @@
             "description": "Folio funciona para cualquier servicio donde los clientes reciben boletos o confirmaciones por correo electrónico.",
             "events": {
                 "title": "Eventos y lugares",
-                "description": "Conciertos, festivales, teatros y lugares locales obtienen boletos de eventos modernos que son fáciles de escanear y entender."
+                "description": "Conciertos, festivales, teatros y lugares locales obtienen entradas de eventos modernos que son fáciles de escanear y entender."
             },
             "transport": {
                 "title": "Operadores de transporte",
@@ -356,12 +356,12 @@
         },
         "hero": {
             "tagline": "Para empresas",
-            "title": "Mejores boletos\nSin app que construir",
-            "description": "Ofrece a tus clientes boletos digitales limpios que son fáciles de encontrar, fáciles de escanear y funcionan en cualquier teléfono moderno."
+            "title": "Mejores entradas\nSin app que construir",
+            "description": "Ofrece a tus clientes entradas digitales limpios que son fáciles de encontrar, fáciles de escanear y funcionan en cualquier teléfono moderno."
         },
         "trust": {
             "title": "Construido en una plataforma en la que la gente confía",
-            "description": "Tus boletos aparecen dentro de la misma billetera segura que la gente usa a diario para identificaciones, tarjetas y documentos de viaje. Sin apps extra, sin fricción de registro.",
+            "description": "Tus entradas aparecen dentro de la misma billetera segura que la gente usa a diario para identificaciones, tarjetas y documentos de viaje. Sin apps extra, sin fricción de registro.",
             "rating": {
                 "value": "4.7★",
                 "description": "Los usuarios califican a Folio altamente por su claridad, velocidad y fiabilidad en el uso diario."
@@ -377,31 +377,31 @@
         },
         "format": {
             "title": "Emite boletos en un formato listo para Folio",
-            "description": "Envíanos un JSON simple o un correo electrónico que ya generas y Folio lo convierte en un boleto digital limpio. Sin archivos pkpass, sin certificados de wallet, sin SDKs para integrar.",
+            "description": "Envíanos un JSON simple o un correo electrónico que ya generas y Folio lo convierte en un entrada digital limpio. Sin archivos pkpass, sin certificados de wallet, sin SDKs para integrar.",
             "features": {
                 "noFormats": "Sin formatos de pase especiales o certificados",
-                "fastDelivery": "Los boletos llegan en segundos al teléfono del cliente",
-                "anySystem": "Funciona con cualquier sistema de reserva o venta de boletos existente"
+                "fastDelivery": "Las entradas llegan en segundos al teléfono del cliente",
+                "anySystem": "Funciona con cualquier sistema de reserva o venta de entradas existente"
             }
         },
         "whyFolio": {
             "title": "¿Por qué Folio en lugar de Apple Wallet o Google Wallet",
-            "description": "Una forma más simple y universal de entregar boletos digitales sin límites de plataforma o formatos complejos.",
+            "description": "Una forma más simple y universal de entregar entradas digitales sin límites de plataforma o formatos complejos.",
             "noFormats": {
                 "title": "Sin formatos especiales",
                 "description": "No necesitas crear archivos de pase o gestionar certificados. Folio funciona con datos simples que ya envías."
             },
             "workflow": {
                 "title": "Se adapta a tu flujo de trabajo",
-                "description": "Si puedes enviar un PDF o correo electrónico, puedes emitir boletos para Folio. Sin nuevos sistemas, sin equipo móvil, sin configuración."
+                "description": "Si puedes enviar un PDF o correo electrónico, puedes emitir entradas para Folio. Sin nuevos sistemas, sin equipo móvil, sin configuración."
             },
             "onePlace": {
                 "title": "Todo en un solo lugar",
-                "description": "Todos los boletos y reservas aparecen en una línea de tiempo simple que ayuda a los clientes a ver sus planes de un vistazo."
+                "description": "Todos las entradas y reservas aparecen en una línea de tiempo simple que ayuda a los clientes a ver sus planes de un vistazo."
             },
             "everyone": {
                 "title": "Disponible para todos",
-                "description": "Tus boletos funcionan igual en iOS y Android en cualquier región, incluso para usuarios que no usan apps de billetera."
+                "description": "Tus entradas funcionan igual en iOS y Android en cualquier región, incluso para usuarios que no usan apps de billetera."
             }
         },
         "operators": {
@@ -409,7 +409,7 @@
             "description": "Folio funciona para cualquier servicio donde los clientes reciben boletos o confirmaciones por correo electrónico.",
             "events": {
                 "title": "Eventos y lugares",
-                "description": "Conciertos, festivales, teatros y lugares locales obtienen boletos de eventos modernos que son fáciles de escanear y entender."
+                "description": "Conciertos, festivales, teatros y lugares locales obtienen entradas de eventos modernos que son fáciles de escanear y entender."
             },
             "transport": {
                 "title": "Operadores de transporte",
