@@ -13,16 +13,6 @@ import enPages from '../locales/en/pages.json'
 import enBlog from '../locales/en/blog.json'
 import enArticles from '../locales/en/articles.json'
 
-import ruCommon from '../locales/ru/common.json'
-import ruHome from '../locales/ru/home.json'
-import ruWallet from '../locales/ru/wallet.json'
-import ruPlatform from '../locales/ru/platform.json'
-import ruSolutions from '../locales/ru/solutions.json'
-import ruGovernment from '../locales/ru/government.json'
-import ruPages from '../locales/ru/pages.json'
-import ruBlog from '../locales/ru/blog.json'
-import ruArticles from '../locales/ru/articles.json'
-
 import esCommon from '../locales/es/common.json'
 import esHome from '../locales/es/home.json'
 import esWallet from '../locales/es/wallet.json'
@@ -43,12 +33,11 @@ import jaPages from '../locales/ja/pages.json'
 import jaBlog from '../locales/ja/blog.json'
 import jaArticles from '../locales/ja/articles.json'
 
-export const SUPPORTED_LANGUAGES = ['en', 'ru', 'es', 'ja'] as const
+export const SUPPORTED_LANGUAGES = ['en', 'es', 'ja'] as const
 export type SupportedLanguage = typeof SUPPORTED_LANGUAGES[number]
 
 export const LANGUAGE_NAMES: Record<SupportedLanguage, string> = {
   en: 'English',
-  ru: 'Русский',
   es: 'Español',
   ja: '日本語',
 }
@@ -66,17 +55,6 @@ const resources = {
     pages: enPages,
     blog: enBlog,
     articles: enArticles,
-  },
-  ru: {
-    common: ruCommon,
-    home: ruHome,
-    wallet: ruWallet,
-    platform: ruPlatform,
-    solutions: ruSolutions,
-    government: ruGovernment,
-    pages: ruPages,
-    blog: ruBlog,
-    articles: ruArticles,
   },
   es: {
     common: esCommon,
