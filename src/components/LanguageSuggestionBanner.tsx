@@ -79,7 +79,7 @@ export default function LanguageSuggestionBanner() {
       role="dialog"
       aria-label={t('language_banner.aria_label', 'Language suggestion')}
     >
-      <div className="mx-auto max-w-[1280px] px-4 py-2">
+      <div className="mx-auto max-w-[1280px] px-4 py-3 sm:py-2">
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-between">
           <p className="text-sm text-center sm:text-left">
             {t('language_banner.message', {
@@ -87,10 +87,10 @@ export default function LanguageSuggestionBanner() {
               language: suggestedName
             })}
           </p>
-          <div className="flex gap-2 items-center shrink-0">
+          <div className="flex flex-col sm:flex-row gap-2 items-center w-full sm:w-auto sm:shrink-0 relative">
             <button 
               onClick={handleKeep}
-              className="h-9 px-4 py-2 text-sm font-medium rounded-full border border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-colors whitespace-nowrap"
+              className="h-10 sm:h-9 px-4 py-2 text-sm font-medium rounded-full border border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-colors whitespace-nowrap w-full sm:w-auto"
             >
               {t('language_banner.keep_current', {
                 defaultValue: 'Keep {{language}}',
@@ -99,7 +99,7 @@ export default function LanguageSuggestionBanner() {
             </button>
             <button 
               onClick={handleSwitch}
-              className="h-9 px-4 py-2 text-sm font-medium rounded-full bg-white text-[#0a0a0a] hover:bg-white/90 transition-colors whitespace-nowrap"
+              className="h-10 sm:h-9 px-4 py-2 text-sm font-medium rounded-full bg-white text-[#0a0a0a] hover:bg-white/90 transition-colors whitespace-nowrap w-full sm:w-auto"
             >
               {t('language_banner.switch_to', {
                 defaultValue: 'Switch to {{language}}',
@@ -108,7 +108,7 @@ export default function LanguageSuggestionBanner() {
             </button>
             <button
               onClick={handleClose}
-              className="p-1 ml-1 rounded hover:bg-white/10 transition-colors"
+              className="absolute -top-1 -right-1 sm:static p-1 sm:ml-1 rounded hover:bg-white/10 transition-colors"
               aria-label={t('language_banner.close', 'Close')}
             >
               <img src={xIcon} alt="" aria-hidden="true" className="w-4 h-4 invert" />

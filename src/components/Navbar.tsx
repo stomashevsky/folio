@@ -36,8 +36,8 @@ export default function Navbar() {
 
   useBodyScrollLock(isMobileMenuOpen)
 
-  // Offset for language suggestion banner
-  const bannerOffset = isBannerVisible ? 'top-[52px] sm:top-[52px]' : 'top-0'
+  // Offset for language suggestion banner (mobile: ~148px with stacked buttons, desktop: 52px)
+  const bannerOffset = isBannerVisible ? 'top-[148px] sm:top-[52px]' : 'top-0'
 
   return (
     <>

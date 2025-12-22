@@ -132,8 +132,9 @@ export default function MobileMenu({ isOpen, onClose, bannerVisible = false }: M
   const [showPlatformSubmenu, setShowPlatformSubmenu] = useState(false)
   
   // Offset for language suggestion banner
-  const menuTopOffset = bannerVisible ? 'top-[116px]' : 'top-[64px]'
-  const menuMaxHeight = bannerVisible ? 'max-h-[calc(100dvh-116px)]' : 'max-h-[calc(100dvh-64px)]'
+  // Mobile menu offset: navbar height (64px) + banner height when visible (148px on mobile)
+  const menuTopOffset = bannerVisible ? 'top-[212px]' : 'top-[64px]'
+  const menuMaxHeight = bannerVisible ? 'max-h-[calc(100dvh-212px)]' : 'max-h-[calc(100dvh-64px)]'
 
   // Reset submenu state when menu closes
   useEffect(() => {
