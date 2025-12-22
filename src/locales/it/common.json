@@ -1,0 +1,104 @@
+{
+  "nav": {
+    "wallet": "Wallet",
+    "platform": "Piattaforma",
+    "solutions": "Soluzioni",
+    "government": "Pubblica Amministrazione",
+    "blog": "Blog",
+    "getInTouch": "Contattaci",
+    "backToMainMenu": "Torna al menu principale",
+    "clientOnboardingDesc": "Verifica KYC semplificata per aziende regolamentate.",
+    "ageComplianceDesc": "Verifica che gli utenti soddisfino i requisiti di età per prodotti o servizi soggetti a restrizioni.",
+    "digitalTicketingDesc": "Crea, gestisci e convalida biglietti digitali con controlli antifrode integrati.",
+    "idVerificationDesc": "Verifica passaporti, carte d'identità e altri documenti ufficiali.",
+    "nfcIdentityScanDesc": "Leggi i dati del chip sicuro da documenti e passaporti compatibili.",
+    "documentIntelligenceDesc": "Estrai e analizza i dati dai documenti presentati.",
+    "faceMatchDesc": "Confronta un selfie con la foto ufficiale per confermare l'identità.",
+    "livenessCheckDesc": "Verifica che l'utente sia fisicamente presente.",
+    "dataSourceChecksDesc": "Convalida le informazioni utente con database affidabili.",
+    "phoneAndEmailValidationDesc": "Conferma la proprietà e rileva contatti a rischio.",
+    "behaviorInsightsDesc": "Pattern di dispositivo e utilizzo per maggiore contesto.",
+    "dynamicFlowDesc": "Coordina i controlli d'identità con logica flessibile.",
+    "reviewWorkspaceDesc": "Organizza e risolvi i casi di verifica.",
+    "credentialIssuanceDesc": "Crea e distribuisci credenziali verificabili ai wallet."
+  },
+  "footer": {
+    "address": "Indirizzo:",
+    "addressValue": "88 Baker St, London W1U 6TQ, Regno Unito",
+    "contact": "Contatti:",
+    "folio": "Folio",
+    "folioApp": "App Folio",
+    "blog": "Blog",
+    "government": "Pubblica Amministrazione",
+    "about": "Chi siamo",
+    "features": "Funzionalità",
+    "idWallet": "Wallet ID",
+    "cardScanner": "Scansione tessere",
+    "loyaltyCards": "Carte fedeltà",
+    "getTheApp": "Scarica l'app",
+    "downloadIOS": "Scarica per iOS",
+    "downloadAndroid": "Scarica per Android",
+    "platform": "Piattaforma",
+    "idVerification": "Verifica dell'identità",
+    "nfcIdentityScan": "Scansione NFC dell'identità",
+    "documentIntelligence": "Analisi documentale",
+    "faceMatch": "Riconoscimento facciale",
+    "livenessCheck": "Verifica di presenza",
+    "dataSourceChecks": "Verifica delle fonti dati",
+    "phoneAndEmailValidation": "Validazione telefono ed email",
+    "behaviorInsights": "Analisi comportamentale",
+    "dynamicFlow": "Flusso dinamico",
+    "reviewWorkspace": "Area di revisione",
+    "credentialIssuance": "Emissione credenziali",
+    "solutions": "Soluzioni",
+    "clientOnboarding": "Onboarding clienti",
+    "ageCompliance": "Verifica dell'età",
+    "digitalTicketing": "Biglietteria digitale",
+    "termsAndPolicies": "Termini e Condizioni",
+    "termsOfUse": "Condizioni d'uso",
+    "privacyPolicy": "Informativa sulla privacy",
+    "security": "Sicurezza",
+    "copyright": "Folio Wallet © 2025"
+  },
+  "buttons": {
+    "learnMore": "Scopri di più",
+    "getInTouch": "Contattaci",
+    "explorePlayground": "Esplora Playground"
+  },
+  "exploreMore": "Scopri altro",
+  "language": {
+    "select": "Seleziona lingua"
+  },
+  "getTheApp": {
+    "title": "Porta Folio con te, ovunque tu vada",
+    "description": "I tuoi documenti restano organizzati, sincronizzati e sempre accessibili su iOS e Android."
+  },
+  "blog": {
+    "title": "Folio Blog",
+    "description": "Case study, approfondimenti sui prodotti e guide pratiche su viaggi, documenti e identità digitale.",
+    "loadMore": "Carica altro",
+    "backToBlog": "Torna al Blog",
+    "keepReading": "Continua a leggere",
+    "viewAll": "Vedi tutti",
+    "readingTime": "{{minutes}} min di lettura",
+    "categories": {
+      "All": "Tutti",
+      "Company": "Azienda",
+      "Product": "Prodotto",
+      "Guides": "Guide",
+      "Research": "Ricerca",
+      "Safety": "Sicurezza",
+      "Business": "Business"
+    }
+  },
+  "legal": {
+    "lastUpdated": "Ultimo aggiornamento"
+  },
+  "language_banner": {
+    "message": "Vuoi visualizzare questa pagina in {{language}}?",
+    "switch_to": "Passa a {{language}}",
+    "keep_current": "Mantieni {{language}}",
+    "close": "Chiudi",
+    "aria_label": "Suggerimento lingua"
+  }
+}

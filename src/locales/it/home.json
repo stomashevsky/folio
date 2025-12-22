@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "title": "Folio | Il tuo portafoglio digitale per documenti e identità",
+    "description": "Archiviazione sicura dei documenti per privati. Piattaforma di verifica per aziende. Credenziali digitali per la Pubblica Amministrazione."
+  },
+  "hero": {
+    "tagline": "Folio Wallet",
+    "title": "Il tuo portafoglio digitale per documenti e identità",
+    "description": "Archiviazione sicura dei documenti per privati. Piattaforma di verifica per aziende. Credenziali digitali per la Pubblica Amministrazione."
+  },
+  "wallet": {
+    "tagline": "App Folio",
+    "title": "I tuoi documenti, sempre con te",
+    "description": "Conserva passaporti, documenti d'identità, biglietti e tessere in un unico posto sicuro. Folio importa qualsiasi documento da email, PDF o foto, estrae le informazioni chiave e mantiene tutto organizzato e accessibile."
+  },
+  "platform": {
+    "tagline": "Piattaforma",
+    "title": "Costruisci fiducia su larga scala",
+    "description": "Verifica dell'identità, analisi documentale, rilevamento della presenza e altro ancora. Tutto ciò che serve per verificare i clienti e prevenire le frodi.",
+    "carouselTitle": "Tutto il necessario per verificare l'identità"
+  },
+  "solutions": {
+    "tagline": "Soluzioni",
+    "title": "Pensate per il tuo settore",
+    "description": "Soluzioni su misura per settori regolamentati e ambienti ad alta affidabilità.",
+    "ageCompliance": {
+      "title": "Verifica dell'età",
+      "description": "Verifica l'età per i settori regolamentati"
+    },
+    "clientOnboarding": {
+      "title": "Onboarding clienti",
+      "description": "Semplifica KYC e verifica dei clienti"
+    },
+    "digitalTicketing": {
+      "title": "Biglietteria digitale",
+      "description": "Emetti e verifica biglietti digitali sicuri"
+    }
+  },
+  "government": {
+    "tagline": "Pubblica Amministrazione",
+    "title": "Identità digitale per la Pubblica Amministrazione",
+    "description": "Strumenti per progettare, testare e implementare credenziali digitali moderne in linea con gli standard globali. Esplora la nostra sandbox per vedere i flussi di identità digitale europea in azione."
+  },
+  "testimonial": {
+    "quote": "\"Lavorare con Folio è stata un'esperienza trasformativa… hanno stabilito un nuovo standard di eccellenza per le soluzioni di identità digitale.\"",
+    "name": "Ilirjan Celibashi",
+    "role": "Commissario Elettorale di Stato, Albania"
+  },
+  "security": {
+    "title": "Sicurezza su cui contare",
+    "description": "I tuoi dati sono protetti con misure di sicurezza all'avanguardia.",
+    "endToEndEncryption": {
+      "title": "Crittografia end-to-end",
+      "description": "I tuoi dati sono cifrati con chiavi che solo tu controlli"
+    },
+    "zeroKnowledge": {
+      "title": "Architettura zero-knowledge",
+      "description": "Non possiamo accedere ai tuoi documenti, neanche volendo"
+    },
+    "biometric": {
+      "title": "Protezione biometrica",
+      "description": "Sblocco con Face ID e impronta digitale per maggiore sicurezza"
+    }
+  }
+}

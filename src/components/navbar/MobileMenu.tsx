@@ -25,6 +25,7 @@ import briefcaseIcon from '../../assets/icons/Briefcase.svg'
 interface MobileMenuProps {
   isOpen: boolean
   onClose: () => void
+  bannerVisible?: boolean
 }
 
 const SOLUTIONS_ITEMS = [
@@ -122,13 +123,17 @@ const PLATFORM_ITEMS = [
   },
 ]
 
-export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+export default function MobileMenu({ isOpen, onClose, bannerVisible = false }: MobileMenuProps) {
   const { t } = useTranslation('common')
   const navigate = useNavigate()
   const location = useLocation()
   const { getLocalizedPath, currentLang } = useLocalizedPath()
   const [showSolutionsSubmenu, setShowSolutionsSubmenu] = useState(false)
   const [showPlatformSubmenu, setShowPlatformSubmenu] = useState(false)
+  
+  // Offset for language suggestion banner
+  const menuTopOffset = bannerVisible ? 'top-[116px]' : 'top-[64px]'
+  const menuMaxHeight = bannerVisible ? 'max-h-[calc(100dvh-116px)]' : 'max-h-[calc(100dvh-64px)]'
 
   // Reset submenu state when menu closes
   useEffect(() => {
@@ -194,13 +199,13 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         aria-hidden="true"
       />
       <div
-        className={`lg:hidden fixed bg-white left-0 right-0 top-[64px] z-[60] w-full transition-transform duration-200 ease-spring-out ${isOpen ? 'translate-y-0' : '-translate-y-full'
+        className={`lg:hidden fixed bg-white left-0 right-0 ${menuTopOffset} z-[60] w-full transition-all duration-200 ease-spring-out ${isOpen ? 'translate-y-0' : '-translate-y-full'
           }`}
         role="dialog"
         aria-modal="true"
         aria-label="Navigation menu"
       >
-        <div className="flex flex-col items-start overflow-y-auto max-h-[calc(100dvh-64px)] w-full">
+        <div className={`flex flex-col items-start overflow-y-auto ${menuMaxHeight} w-full`}>
           <div className="flex flex-col items-start justify-start w-full py-4 relative shrink-0">
             {!showSolutionsSubmenu && !showPlatformSubmenu ? (
               /* Main Menu */

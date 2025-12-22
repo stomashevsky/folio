@@ -76,6 +76,8 @@ import LoyaltyCardAppPage from './pages/LoyaltyCardAppPage'
 import NotFoundPage from './pages/NotFoundPage'
 import AboutPage from './pages/AboutPage'
 import CookieConsent from './components/CookieConsent'
+import LanguageSuggestionBanner from './components/LanguageSuggestionBanner'
+import { LanguageBannerProvider } from './contexts/LanguageBannerContext'
 
 // Fallback handler in case the script in index.html didn't run
 function RedirectHandler() {
@@ -273,9 +275,12 @@ function App() {
         
         {/* All localized routes under /:lang/* */}
         <Route path="/:lang/*" element={
-          <LanguageProvider>
-            <LocalizedRoutes />
-          </LanguageProvider>
+          <LanguageBannerProvider>
+            <LanguageProvider>
+              <LanguageSuggestionBanner />
+              <LocalizedRoutes />
+            </LanguageProvider>
+          </LanguageBannerProvider>
         } />
       </Routes>
     </BrowserRouter>

@@ -93,5 +93,12 @@
     },
     "legal": {
         "lastUpdated": "Última actualización"
+    },
+    "language_banner": {
+        "message": "¿Te gustaría ver esta página en {{language}}?",
+        "switch_to": "Cambiar a {{language}}",
+        "keep_current": "Mantener {{language}}",
+        "close": "Cerrar",
+        "aria_label": "Sugerencia de idioma"
     }
 }

@@ -1,0 +1,564 @@
+{
+  "idWalletApp": {
+    "meta": {
+      "title": "App wallet per documenti d'identità - Portadocumenti digitale per patente | Folio",
+      "description": "L'app Folio per documenti d'identità ti permette di gestire facilmente carte d'identità e patenti. Tutto al sicuro con crittografia end-to-end. Disponibile su iOS e Android.",
+      "ogTitle": "App wallet per documenti d'identità | Folio",
+      "ogDescription": "Conserva passaporti, carte d'identità e patenti in modo sicuro in un unico portafoglio digitale. Crittografia end-to-end."
+    },
+    "hero": {
+      "tagline": "Wallet ID",
+      "title": "App wallet per documenti d'identità",
+      "description": "Tieni passaporti, carte d'identità e patenti organizzati in un unico portafoglio digitale sicuro. Folio estrae automaticamente i dettagli chiave, ti avvisa prima della scadenza dei documenti e protegge tutto con crittografia end-to-end.",
+      "getApp": "Scarica l'app",
+      "learnMore": "Scopri di più",
+      "imageAlt": "Anteprima app wallet per documenti d'identità"
+    },
+    "features": {
+      "title": "Tutto ciò che serve in un wallet per documenti",
+      "description": "Folio è progettato per conservare e gestire i tuoi documenti d'identità più importanti in modo sicuro.",
+      "allIds": {
+        "title": "Tutti i tuoi documenti in un unico posto",
+        "description": "Conserva passaporti, carte d'identità, patenti e permessi di soggiorno in un formato chiaro e organizzato."
+      },
+      "smartExtraction": {
+        "title": "Estrazione dati intelligente",
+        "description": "Scansiona il tuo documento e Folio estrae automaticamente nomi, date, numeri documento e altri dettagli chiave."
+      },
+      "encrypted": {
+        "title": "Crittografia end-to-end",
+        "description": "I tuoi documenti d'identità sono crittografati con chiavi che solo tu controlli. Nemmeno Folio può leggere i tuoi dati."
+      },
+      "expiryReminders": {
+        "title": "Promemoria scadenze",
+        "description": "Ricevi notifiche prima della scadenza di passaporto, carta d'identità o patente per rinnovarli in tempo."
+      }
+    },
+    "howItWorks": {
+      "title": "Come aggiungere i tuoi documenti d'identità",
+      "description": "Aggiungere i tuoi documenti d'identità a Folio richiede solo pochi secondi.",
+      "step1": {
+        "title": "Scansiona o carica",
+        "description": "Usa la fotocamera per scansionare il documento, o carica una foto dalla tua libreria."
+      },
+      "step2": {
+        "title": "Verifica i dettagli",
+        "description": "Folio estrae automaticamente tutte le informazioni importanti. Verifica e modifica se necessario."
+      },
+      "step3": {
+        "title": "Accedi ovunque",
+        "description": "Il tuo documento è ora archiviato in sicurezza e sincronizzato su tutti i tuoi dispositivi."
+      }
+    },
+    "benefits": {
+      "title": "Perché usare Folio come wallet per documenti d'identità",
+      "bankSecurity": {
+        "title": "Sicurezza di livello bancario",
+        "description": "L'architettura zero-knowledge significa che i tuoi documenti restano privati, anche per noi."
+      },
+      "originalPhotos": {
+        "title": "Foto originali salvate",
+        "description": "Conserva le scansioni originali allegate a ogni documento per riferimento quando necessario."
+      },
+      "familySharing": {
+        "title": "Condivisione familiare",
+        "description": "Crea cartelle condivise per gestire i documenti d'identità di tutta la famiglia in un unico posto."
+      },
+      "worksOffline": {
+        "title": "Funziona offline",
+        "description": "Accedi ai tuoi documenti in qualsiasi momento, anche senza connessione internet."
+      }
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "description": "Domande comuni sull'uso di Folio come app wallet per documenti d'identità.",
+      "items": [
+        {
+          "q": "Quali tipi di documenti d'identità posso conservare in Folio?",
+          "a": "Puoi conservare passaporti, carte d'identità nazionali, patenti, permessi di soggiorno e qualsiasi altro documento d'identità rilasciato dal governo."
+        },
+        {
+          "q": "È sicuro conservare la carta d'identità in un portafoglio digitale?",
+          "a": "Sì. Folio usa la crittografia end-to-end per proteggere i tuoi documenti. I documenti sono crittografati sul tuo dispositivo con chiavi che solo tu controlli. Nemmeno Folio può accedere ai tuoi dati."
+        },
+        {
+          "q": "Posso usare Folio come wallet per la patente?",
+          "a": "Sì. Folio è perfetto per conservare la patente in formato digitale. Puoi scansionarla e Folio estrarrà tutti i dettagli importanti come data di scadenza, numero patente e categorie."
+        },
+        {
+          "q": "Folio mi avviserà quando il mio documento sta per scadere?",
+          "a": "Sì. Folio rileva automaticamente le date di scadenza dai tuoi documenti e ti invia promemoria prima della scadenza, così non sarai mai colto alla sprovvista."
+        },
+        {
+          "q": "Posso condividere il mio documento con qualcun altro?",
+          "a": "Sì. Puoi creare cartelle condivise per condividere in sicurezza i tuoi documenti con familiari o contatti fidati. Vedranno sempre l'ultima versione."
+        }
+      ]
+    }
+  },
+  "cardScannerApp": {
+    "meta": {
+      "title": "App scansione tessere per iPhone e Android | Folio",
+      "description": "L'app Folio per la scansione tessere ti permette di scansionare facilmente tessere e documenti. Tutto al sicuro con crittografia end-to-end. Disponibile su iOS e Android.",
+      "ogTitle": "App scansione tessere | Folio",
+      "ogDescription": "Scansiona e organizza tessere e documenti con Folio. L'OCR estrae i dettagli automaticamente. Crittografia end-to-end."
+    },
+    "hero": {
+      "tagline": "Scansione tessere",
+      "title": "App scansione tessere",
+      "description": "Scansiona qualsiasi tessera o documento con la fotocamera del telefono. Folio estrae automaticamente le informazioni importanti usando l'OCR e archivia tutto in sicurezza con crittografia end-to-end. Disponibile gratis su iPhone e Android.",
+      "getApp": "Scarica l'app",
+      "learnMore": "Scopri di più",
+      "imageAlt": "Anteprima app scansione tessere"
+    },
+    "whatYouCanScan": {
+      "title": "Scansiona qualsiasi tessera o documento",
+      "description": "Lo scanner di tessere Folio funziona con tutti i tipi di tessere e documenti che devi organizzare.",
+      "idCards": {
+        "title": "Carte d'identità e passaporti",
+        "description": "Scansiona documenti d'identità, passaporti, patenti e permessi di soggiorno."
+      },
+      "paymentCards": {
+        "title": "Carte di pagamento",
+        "description": "Scansiona carte di credito, debito e prepagate per conservare i dettagli in sicurezza."
+      },
+      "tickets": {
+        "title": "Biglietti e prenotazioni",
+        "description": "Scansiona carte d'imbarco, biglietti eventi, conferme hotel e documenti di viaggio."
+      },
+      "anyDocument": {
+        "title": "Qualsiasi documento",
+        "description": "Scansiona ricevute, garanzie, tessere assicurative, tessere associative e altro."
+      }
+    },
+    "features": {
+      "title": "Funzionalità di scansione intelligente",
+      "description": "Più di un semplice scanner. Folio comprende i tuoi documenti.",
+      "ocr": {
+        "title": "Estrazione testo OCR",
+        "description": "Estrae automaticamente nomi, numeri, date e altro testo dalle tessere scansionate."
+      },
+      "highQuality": {
+        "title": "Acquisizione di alta qualità",
+        "description": "La guida intelligente della fotocamera ti aiuta a catturare scansioni chiare e leggibili ogni volta."
+      },
+      "secureStorage": {
+        "title": "Archiviazione sicura",
+        "description": "Tutte le scansioni sono crittografate end-to-end. Solo tu puoi accedere ai tuoi dati."
+      },
+      "crossDevice": {
+        "title": "Sincronizzazione tra dispositivi",
+        "description": "Le tessere scansionate si sincronizzano in sicurezza su tutti i tuoi dispositivi iPhone e Android."
+      }
+    },
+    "howItWorks": {
+      "title": "Come scansionare le tessere",
+      "description": "Scansionare e organizzare le tue tessere richiede solo pochi secondi.",
+      "step1": {
+        "title": "Inquadra e scansiona",
+        "description": "Apri Folio e punta la fotocamera su qualsiasi tessera o documento."
+      },
+      "step2": {
+        "title": "Estrazione automatica",
+        "description": "Folio rileva automaticamente i bordi ed estrae tutte le informazioni importanti."
+      },
+      "step3": {
+        "title": "Archiviazione sicura",
+        "description": "La tua tessera è crittografata e organizzata, pronta per l'accesso in qualsiasi momento."
+      }
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "description": "Domande comuni sull'app Folio per la scansione tessere.",
+      "items": [
+        {
+          "q": "Cosa posso scansionare con Folio?",
+          "a": "Puoi scansionare carte d'identità, passaporti, patenti, carte di credito, carte di debito, gift card, carte fedeltà, tessere associative e qualsiasi documento con testo o codici a barre."
+        },
+        {
+          "q": "Folio usa l'OCR per estrarre testo dalle tessere?",
+          "a": "Sì. Folio usa tecnologia OCR avanzata per estrarre automaticamente testo, numeri, date e altre informazioni dalle tessere e documenti scansionati."
+        },
+        {
+          "q": "Lo scanner di tessere è gratuito?",
+          "a": "Sì. Lo scanner di tessere Folio è completamente gratuito con scansioni illimitate. Non ci sono costi nascosti o funzionalità premium bloccate."
+        },
+        {
+          "q": "Posso scansionare tessere sia su iPhone che Android?",
+          "a": "Sì. L'app Folio per la scansione tessere è disponibile sia su dispositivi iOS che Android. Le tessere scansionate si sincronizzano automaticamente su tutti i tuoi dispositivi."
+        },
+        {
+          "q": "Le mie tessere scansionate sono archiviate in modo sicuro?",
+          "a": "Sì. Tutte le tessere scansionate sono crittografate con crittografia end-to-end. I tuoi dati sono protetti con chiavi che solo tu controlli, e nemmeno Folio può accedere alle tue informazioni."
+        }
+      ]
+    }
+  },
+  "loyaltyCardApp": {
+    "meta": {
+      "title": "App carte fedeltà - Wallet per tessere associative e punti | Folio",
+      "description": "L'app Folio per carte fedeltà ti permette di gestire facilmente carte fedeltà e tessere associative. Tutto al sicuro con crittografia end-to-end. Disponibile su iOS e Android.",
+      "ogTitle": "App carte fedeltà | Folio",
+      "ogDescription": "Conserva tutte le tue carte fedeltà, tessere associative e carte punti in un unico portafoglio digitale sicuro. Funziona su iPhone e Android."
+    },
+    "hero": {
+      "tagline": "Carte fedeltà",
+      "title": "App carte fedeltà",
+      "description": "Tieni tutte le tue carte fedeltà, tessere associative e carte punti in un unico portafoglio digitale sicuro. Basta cercare nel portafoglio o perdere punti. Folio funziona con qualsiasi negozio e tiene le tue tessere pronte quando ne hai bisogno.",
+      "getApp": "Scarica l'app",
+      "learnMore": "Scopri di più",
+      "imageAlt": "Anteprima app carte fedeltà"
+    },
+    "features": {
+      "title": "Tutti i tuoi premi in un unico posto",
+      "description": "Basta destreggiarsi tra più app e tessere fisiche. Folio tiene tutto organizzato.",
+      "anyProgram": {
+        "title": "Qualsiasi programma fedeltà",
+        "description": "Funziona con supermercati, caffetterie, compagnie aeree, hotel, farmacie e qualsiasi altro programma premi."
+      },
+      "quickScan": {
+        "title": "Scansione rapida per aggiungere",
+        "description": "Scansiona il codice a barre della tessera e Folio acquisisce tutti i dettagli all'istante."
+      },
+      "organized": {
+        "title": "Organizzato per categoria",
+        "description": "Raggruppa le tessere per tipo o crea etichette personalizzate per trovarle rapidamente."
+      },
+      "secure": {
+        "title": "Sicuro e privato",
+        "description": "I dati delle tue carte fedeltà sono crittografati. Nemmeno Folio può vedere le tue informazioni."
+      }
+    },
+    "cardTypes": {
+      "title": "Funziona con tutte le tue tessere",
+      "description": "Folio supporta qualsiasi tessera con codice a barre, codice QR o numero di iscrizione.",
+      "storeLoyalty": {
+        "title": "Carte fedeltà negozi",
+        "description": "Premi supermercato, punti farmacia e tessere negozi al dettaglio."
+      },
+      "membership": {
+        "title": "Tessere associative",
+        "description": "Abbonamenti palestra, tessere club, tessere biblioteca e servizi in abbonamento."
+      },
+      "rewards": {
+        "title": "Programmi premi",
+        "description": "Timbri caffetteria, punti ristorante e programmi cashback."
+      },
+      "travel": {
+        "title": "Premi viaggio",
+        "description": "Miglia aeree, punti hotel, premi autonoleggio e club di viaggio."
+      }
+    },
+    "howItWorks": {
+      "title": "Come usare Folio per le carte fedeltà",
+      "description": "Aggiungere e usare le tue carte fedeltà è rapido e facile.",
+      "step1": {
+        "title": "Scansiona la tua tessera",
+        "description": "Punta la fotocamera su qualsiasi carta fedeltà per acquisire codice a barre e dettagli."
+      },
+      "step2": {
+        "title": "Organizza",
+        "description": "Aggiungi etichette o lascia che Folio categorizzi automaticamente le tue tessere."
+      },
+      "step3": {
+        "title": "Mostra alla cassa",
+        "description": "Apri la tessera in Folio e fai scansionare lo schermo al cassiere."
+      }
+    },
+    "benefits": {
+      "title": "Perché scegliere Folio per le carte fedeltà",
+      "oneApp": {
+        "title": "Un'app per tutte le tessere",
+        "description": "Non serve scaricare un'app separata per ogni negozio. Tieni tutto in Folio."
+      },
+      "privacy": {
+        "title": "Orientato alla privacy",
+        "description": "A differenza delle app dei negozi, Folio non traccia i tuoi acquisti né vende i tuoi dati."
+      },
+      "familyShare": {
+        "title": "Condividi con la famiglia",
+        "description": "Crea una cartella condivisa così la tua famiglia può usare le stesse carte fedeltà."
+      },
+      "offline": {
+        "title": "Funziona offline",
+        "description": "Accedi alle tue carte fedeltà anche senza internet. Perfetto per negozi con segnale debole."
+      }
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "description": "Domande comuni sull'uso di Folio come wallet per carte fedeltà.",
+      "items": [
+        {
+          "q": "Quali tipi di carte fedeltà posso conservare?",
+          "a": "Puoi conservare qualsiasi carta fedeltà, tessera associativa o carta punti di qualsiasi negozio o programma. Questo include tessere supermercato, premi caffetteria, miglia aeree, punti hotel, abbonamenti palestra e altro."
+        },
+        {
+          "q": "Come aggiungo le mie carte fedeltà a Folio?",
+          "a": "Puoi scansionare la tessera fisica con la fotocamera, caricare una foto o inserire manualmente i dettagli. Folio estrarrà automaticamente il codice a barre e il numero tessera."
+        },
+        {
+          "q": "Posso usare la mia carta fedeltà digitale al negozio?",
+          "a": "Sì. Alla cassa, apri Folio e mostra il codice a barre o QR sullo schermo del telefono. Il cassiere può scansionarlo come la tessera fisica."
+        },
+        {
+          "q": "Folio è meglio dell'app del negozio?",
+          "a": "Folio ti permette di tenere TUTTE le tue carte fedeltà in un unico posto invece di scaricare un'app separata per ogni negozio. È più semplice e usa meno spazio sul telefono."
+        },
+        {
+          "q": "I dettagli delle mie carte fedeltà sono sicuri?",
+          "a": "Sì. Tutte le tue carte fedeltà sono crittografate con crittografia end-to-end. I tuoi dati restano privati con chiavi che solo tu controlli."
+        }
+      ]
+    }
+  },
+  "security": {
+    "meta": {
+      "title": "Sicurezza | Folio Wallet",
+      "description": "Scopri come Folio protegge i tuoi documenti con crittografia end-to-end, architettura zero-knowledge e standard di sicurezza all'avanguardia.",
+      "ogTitle": "Sicurezza | Folio Wallet",
+      "ogDescription": "I tuoi dati restano tuoi. Folio usa crittografia end-to-end e architettura zero-knowledge per mantenere i tuoi documenti privati e sicuri."
+    },
+    "hero": {
+      "tagline": "Sicurezza",
+      "title": "I tuoi dati restano tuoi",
+      "description": "Folio è costruito sul principio che i tuoi documenti personali appartengono solo a te. Usiamo crittografia end-to-end e architettura zero-knowledge per garantire che solo tu possa accedere ai tuoi dati. Nemmeno Folio può leggere i tuoi documenti."
+    },
+    "keyFeatures": {
+      "title": "Come proteggiamo i tuoi dati",
+      "description": "Ogni livello di Folio è progettato con sicurezza e privacy al centro.",
+      "e2e": {
+        "title": "Crittografia end-to-end",
+        "description": "I tuoi documenti sono crittografati prima di lasciare il dispositivo. Solo tu possiedi le chiavi per decifrarli."
+      },
+      "zeroKnowledge": {
+        "title": "Architettura zero-knowledge",
+        "description": "Non vediamo mai i tuoi dati. I nostri server archiviano solo informazioni crittografate che non possiamo leggere o accedere."
+      },
+      "localFirst": {
+        "title": "Archiviazione locale prima",
+        "description": "I tuoi documenti vivono prima sul tuo dispositivo. Sono sempre disponibili, anche senza internet."
+      },
+      "secureSync": {
+        "title": "Sincronizzazione cloud sicura",
+        "description": "Quando sincronizzi tra dispositivi, i dati viaggiano crittografati. Facilitiamo il trasferimento ma non possiamo vederne il contenuto."
+      }
+    },
+    "detailed": {
+      "encryption": {
+        "title": "Crittografia di cui fidarsi",
+        "description": "Ogni documento, tessera e informazione personale che conservi in Folio è crittografata usando standard crittografici moderni. Le tue chiavi di crittografia derivano da credenziali che solo tu conosci. Questo significa che i tuoi dati restano privati anche se i nostri server fossero compromessi."
+      },
+      "noAccess": {
+        "title": "Non possiamo accedere ai tuoi dati",
+        "description": "Folio opera su un modello zero-knowledge. Sui nostri server conserviamo solo blob crittografati e hash crittografici. Senza le tue chiavi personali, questi dati sono privi di significato. Non possiamo decifrarli, leggerli o condividerli con nessuno. La tua privacy non è una scelta di policy, è una garanzia tecnica."
+      },
+      "yourDevice": {
+        "title": "Il tuo dispositivo, i tuoi dati",
+        "description": "Folio archivia i tuoi documenti prima in locale sul dispositivo. Questo significa che hai sempre accesso alle tue informazioni importanti, online o offline. La sincronizzazione cloud è opzionale e sempre crittografata. Tu mantieni il controllo su dove risiedono i tuoi dati."
+      },
+      "biometric": {
+        "title": "Protezione biometrica",
+        "description": "Aggiungi un ulteriore livello di sicurezza con Face ID o autenticazione con impronta digitale. Anche se qualcuno ha il tuo telefono, non può accedere a Folio senza la tua conferma biometrica."
+      }
+    },
+    "compliance": {
+      "title": "Conformità e certificazioni",
+      "description": "Manteniamo rigorosi standard di sicurezza e rispettiamo le normative internazionali sulla protezione dei dati.",
+      "iso27001": {
+        "title": "ISO 27001",
+        "description": "Gestione della sicurezza delle informazioni certificata che garantisce la protezione sistematica dei dati sensibili."
+      },
+      "soc2": {
+        "title": "SOC 2 Type II",
+        "description": "Verifica indipendente dei nostri controlli di sicurezza, disponibilità e pratiche di riservatezza."
+      },
+      "gdpr": {
+        "title": "Conforme al GDPR",
+        "description": "Piena conformità alle normative europee sulla protezione dei dati, dandoti il controllo sui tuoi dati personali."
+      }
+    },
+    "recoveryCode": {
+      "title": "Il tuo codice di recupero è importante",
+      "description": "Durante la configurazione, Folio genera un Codice di Recupero unico. Questo codice è l'unico modo per ripristinare il tuo account se perdi l'accesso ai tuoi dispositivi. A causa del nostro design zero-knowledge, non possiamo aiutarti a recuperare i tuoi dati senza di esso. Conserva il tuo Codice di Recupero in un posto sicuro, come un password manager o un luogo fisico protetto."
+    },
+    "cta": {
+      "title": "Pronto a proteggere i tuoi documenti?",
+      "description": "Scarica Folio e scopri l'archiviazione documenti che mette la tua privacy al primo posto.",
+      "button": "Scarica l'app"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "Chi siamo | Folio",
+      "description": "Folio è un'azienda di identità digitale che crea archiviazione documenti sicura per privati, soluzioni di verifica per aziende e credenziali digitali per la Pubblica Amministrazione.",
+      "ogTitle": "Chi siamo | Folio",
+      "ogDescription": "Folio è un'azienda di identità digitale che crea archiviazione documenti sicura per privati, soluzioni di verifica per aziende e credenziali digitali per la Pubblica Amministrazione."
+    },
+    "hero": {
+      "title": "Chi siamo",
+      "description": "Folio è un'azienda di identità digitale con la missione di dare alle persone il controllo sui propri documenti personali e sulla propria identità. Creiamo soluzioni sicure che funzionano per privati, aziende e pubblica amministrazione."
+    },
+    "story": {
+      "title": "La nostra storia",
+      "paragraphs": [
+        "Fondata a Londra, Folio è nata da una semplice osservazione: le persone portano con sé decine di documenti importanti ma non hanno un modo sicuro e organizzato per accedervi digitalmente. I passaporti si perdono, i biglietti scadono nei thread email, e tessere importanti restano dimenticate nei cassetti.",
+        "Abbiamo creato Folio Wallet per risolvere questo. Un'app dove puoi conservare passaporti, documenti d'identità, biglietti, tessere e qualsiasi documento ti serva, tutto crittografato con chiavi che solo tu controlli. Oltre un milione di documenti sono ora conservati in sicurezza in Folio, usati da persone in più di 120 paesi.",
+        "Man mano che crescevamo, aziende e governi ci hanno contattato con sfide simili. Come verificare l'identità di qualcuno online? Come emettere credenziali digitali sicure? Come proteggere dati sensibili rendendo la verifica fluida?",
+        "Oggi, Folio offre una piattaforma di identità completa: archiviazione sicura per privati, strumenti di verifica per aziende e infrastruttura per credenziali digitali per la pubblica amministrazione. Il nostro lavoro con la commissione elettorale albanese, dove abbiamo aiutato a registrare oltre 365.000 elettori della diaspora, mostra cosa è possibile quando la tecnologia dell'identità è costruita nel modo giusto."
+      ]
+    },
+    "stats": {
+      "title": "Folio in numeri",
+      "documents": "Documenti archiviati",
+      "countries": "Paesi",
+      "rating": "Valutazione app",
+      "albania": "Profili creati in Albania"
+    },
+    "values": {
+      "title": "In cosa crediamo",
+      "privacy": {
+        "title": "Privacy prima di tutto",
+        "description": "I tuoi dati appartengono a te. Usiamo l'architettura zero-knowledge così nemmeno noi possiamo accedere ai tuoi documenti."
+      },
+      "security": {
+        "title": "Sicurezza by design",
+        "description": "Crittografia end-to-end, protezione biometrica e rigorosi standard di sicurezza proteggono tutto ciò che conservi."
+      },
+      "global": {
+        "title": "Funziona ovunque",
+        "description": "L'identità dovrebbe essere portabile. Folio funziona oltre i confini, le piattaforme e i casi d'uso."
+      },
+      "everyone": {
+        "title": "Costruito per tutti",
+        "description": "Dai viaggiatori che organizzano viaggi ai governi che emettono credenziali, creiamo strumenti che funzionano per persone reali."
+      }
+    },
+    "contact": {
+      "title": "Contattaci",
+      "description": "Hai domande su Folio? Saremo felici di sentirti.",
+      "contactUs": "Contattaci",
+      "getApp": "Scarica l'app",
+      "email": {
+        "title": "Scrivici un'email",
+        "value": "contact@folio.id"
+      },
+      "address": {
+        "title": "Visita il nostro ufficio",
+        "value": "88 Baker St, London W1U 6TQ, Regno Unito"
+      }
+    }
+  },
+  "notFound": {
+    "meta": {
+      "title": "Pagina non trovata | Folio Wallet",
+      "description": "La pagina che stai cercando non esiste."
+    },
+    "title": "Pagina non trovata",
+    "description": "La pagina che stai cercando non esiste o è stata spostata.",
+    "backHome": "Torna alla home"
+  },
+  "ageVerification": {
+    "meta": {
+      "title": "Verifica dell'età | Folio Wallet",
+      "description": "Servizio di verifica dell'età per la conformità globale. Conferma l'età degli utenti rapidamente e in sicurezza con metodi di verifica adatti al tuo livello di rischio."
+    },
+    "hero": {
+      "title": "Servizio di verifica dell'età per la conformità globale",
+      "description": "Folio ti aiuta a confermare l'età degli utenti rapidamente e in sicurezza in tutto il mondo. Scegli i metodi di verifica più adatti al tuo livello di rischio, da controlli anonimi privati alla verifica completa dell'identità, restando allineato con gli standard globali inclusi GDPR, COPPA, DSA e altri.",
+      "getInTouch": "Contattaci",
+      "imageAlt": "Anteprima verifica dell'età"
+    },
+    "frictionless": {
+      "title": "Controlli dell'età senza frizione",
+      "description": "La verifica dell'età con Folio è veloce, intuitiva e fluida. Gli utenti completano un selfie, una credenziale di età o una scansione documento in pochi secondi, mantenendo l'onboarding semplice e minimizzando gli abbandoni."
+    },
+    "methods": {
+      "title": "Tre modi per verificare l'età",
+      "document": {
+        "title": "Verifica basata su documento",
+        "description": "Quando serve la massima garanzia, gli utenti caricano un documento d'identità per la verifica completa dell'età. Folio ne valida l'autenticità, esegue controlli di presenza e conferma la maggiore età per soddisfare requisiti normativi rigorosi."
+      },
+      "face": {
+        "title": "Stima dell'età basata sul volto",
+        "description": "Gli utenti scattano un rapido selfie e la nostra AI stima l'età in pochi secondi. Nessun documento richiesto. I controlli di presenza integrati aiutano a prevenire frodi mantenendo il flusso leggero e mobile-friendly."
+      },
+      "anonymous": {
+        "title": "Credenziale di età anonima",
+        "description": "Una credenziale di età verificata una tantum che può essere riutilizzata senza rivelare l'identità. Gli utenti dimostrano di essere maggiorenni con un token che tutela la privacy invece di dati personali."
+      }
+    },
+    "privacy": {
+      "title": "Privacy che resta con l'utente",
+      "description": "Folio è progettato intorno alla privacy fin dal primo passo. Flussi di dati anonimi e minimi riducono ciò che devi archiviare ed elaborare. Dove vengono usati dati biometrici, restano protetti e gestiti in sicurezza per mantenerti allineato con le leggi globali sulla privacy."
+    },
+    "assurance": {
+      "title": "Tutte le funzionalità essenziali di verifica dell'età",
+      "description": "Folio riunisce controlli di presenza, precisione biometrica, stima in tempo reale e verifica supportata da documenti in un'unica piattaforma. Puoi scegliere il giusto livello di garanzia per i tuoi utenti e il tuo prodotto senza aggiungere frizioni inutili."
+    },
+    "industries": {
+      "title": "Pensato per il tuo settore",
+      "social": {
+        "title": "Piattaforme social e messaggistica",
+        "description": "Proteggi gli utenti più giovani e supporta le regole di sicurezza dei minori confermando l'età appropriata prima dell'accesso, con l'opzione di aggiungere il consenso parentale dove necessario."
+      },
+      "gaming": {
+        "title": "Gaming e gioco d'azzardo online",
+        "description": "Conferma che i giocatori soddisfino i limiti di età legali prima che giochino. Controlli dell'età rigorosi aiutano a prevenire abusi, supportano i requisiti di licenza e riducono le frodi."
+      },
+      "ecommerce": {
+        "title": "E-commerce e consegne",
+        "description": "Verifica l'età al checkout per alcol, tabacco e altri prodotti soggetti a restrizioni. Folio si integra nel tuo flusso di acquisto o consegna esistente senza rallentarlo."
+      },
+      "fintech": {
+        "title": "Fintech e servizi finanziari",
+        "description": "Assicurati che i clienti soddisfino i requisiti minimi di età per conti, wallet e prodotti finanziari mantenendo l'onboarding digitale semplice."
+      },
+      "streaming": {
+        "title": "Streaming e contenuti per adulti",
+        "description": "Assicurati che i contenuti con restrizioni di età siano mostrati solo al pubblico idoneo con metodi di verifica che si adattano alla tua esperienza di visione."
+      },
+      "telecom": {
+        "title": "Telecomunicazioni",
+        "description": "Verifica l'età dei clienti per piani, contratti e servizi che richiedono conferma dell'età legale mantenendo la registrazione rapida e semplice."
+      }
+    },
+    "integration": {
+      "title": "Facile da integrare",
+      "sdk": {
+        "title": "SDK Web e mobile",
+        "description": "Incorpora i controlli dell'età direttamente nel tuo prodotto. Gli utenti completano la verifica in un flusso nativo e brandizzato che sembra parte della tua app."
+      },
+      "api": {
+        "title": "API",
+        "description": "Controlla ogni dettaglio del percorso di verifica dell'età con la nostra API. Orchestrazione di metodi, regole e risultati dai tuoi sistemi backend."
+      },
+      "staticUrl": {
+        "title": "URL statico",
+        "description": "Avvia la verifica dell'età istantaneamente con un link ospitato sicuro. Condividilo via email, SMS o chat per iniziare i controlli senza alcun lavoro di sviluppo."
+      }
+    },
+    "cta": {
+      "title": "Porta la verifica accurata dell'età nel tuo prodotto",
+      "description": "Folio ti aiuta a proteggere gli utenti, soddisfare i regolatori e mantenere un'esperienza fluida. Parla con il nostro team per progettare un flusso di verifica dell'età adatto al tuo prodotto.",
+      "button": "Contattaci"
+    }
+  },
+  "terms": {
+    "meta": {
+      "title": "Condizioni d'uso | Folio Wallet",
+      "description": "Termini e condizioni per l'utilizzo dell'app e dei servizi Folio Wallet"
+    },
+    "title": "Condizioni d'uso",
+    "description": "Termini e condizioni per l'utilizzo dell'app e dei servizi Folio Wallet",
+    "lastUpdated": "17 dicembre 2025"
+  },
+  "privacy": {
+    "meta": {
+      "title": "Informativa sulla privacy | Folio Wallet",
+      "description": "Come Folio Wallet protegge la tua privacy e gestisce i tuoi dati"
+    },
+    "title": "Informativa sulla privacy",
+    "description": "Come Folio raccoglie, utilizza e protegge i tuoi dati personali",
+    "lastUpdated": "17 dicembre 2025"
+  }
+}

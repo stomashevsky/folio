@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "title": "Folio Wallet | App portafoglio documenti digitale",
+    "description": "Folio conserva passaporti, documenti d'identità, biglietti e tessere in un unico posto sicuro, organizzati con cura e sempre accessibili. Importa qualsiasi documento da email, PDF o foto, lo ottimizza, estrae le informazioni chiave e tiene tutto facilmente reperibile."
+  },
+  "hero": {
+    "tagline": "App Folio",
+    "title": "I tuoi documenti, sempre con te",
+    "description": "Folio conserva passaporti, documenti d'identità, biglietti e tessere in un unico posto sicuro, organizzati con cura e sempre accessibili. Importa qualsiasi documento da email, PDF o foto, lo ottimizza, estrae le informazioni chiave e tiene tutto facilmente reperibile. Le tue informazioni essenziali sono sempre a portata di mano quando ne hai bisogno.",
+    "cta": "Scarica l'app"
+  },
+  "features": {
+    "title": "Tutto in un unico posto sicuro",
+    "cards": {
+      "title": "Carte di pagamento e regalo",
+      "description": "Conserva le tue carte di debito, credito e regalo con tutti i dettagli essenziali. Accedi rapidamente a numeri, date di scadenza e altre informazioni importanti, sincronizzate e protette su tutti i tuoi dispositivi."
+    },
+    "ids": {
+      "title": "Documenti personali",
+      "description": "Conserva passaporti, carte d'identità e permessi di soggiorno in modo sicuro e in un formato chiaro e leggibile. Folio estrae nomi, date e numeri per un accesso rapido e ti avvisa prima della scadenza."
+    },
+    "tickets": {
+      "title": "Biglietti e prenotazioni",
+      "description": "Importa voli, treni, hotel ed eventi da email, PDF o foto. Folio ottimizza ogni biglietto, estrae orari, luoghi e dati dei passeggeri, trasformandolo in una scheda chiara e affidabile per i tuoi viaggi."
+    },
+    "timeline": {
+      "title": "Timeline di viaggio",
+      "description": "L'intero viaggio è organizzato automaticamente giorno per giorno. Biglietti e prenotazioni sono ordinati cronologicamente, raggruppati per data e visualizzati come una timeline chiara per sapere sempre cosa viene dopo."
+    },
+    "folders": {
+      "title": "Cartelle condivise",
+      "description": "Crea spazi documenti condivisi per famiglia e amici. Tutti vedono le ultime versioni di biglietti, documenti o piani di viaggio e possono aggiungere i propri documenti mentre i file originali restano al sicuro con i proprietari."
+    }
+  },
+  "import": {
+    "title": "Aggiungi documenti in pochi secondi",
+    "description": "Scegli il modo più semplice per portare i tuoi documenti in Folio.",
+    "scan": {
+      "title": "Scansiona documenti",
+      "description": "Cattura con la fotocamera e Folio estrae i dettagli."
+    },
+    "photos": {
+      "title": "Carica foto",
+      "description": "Aggiungi documenti salvati nella tua libreria foto."
+    },
+    "pdf": {
+      "title": "Importa PDF",
+      "description": "Importa biglietti digitali, tessere o conferme con un tap."
+    },
+    "email": {
+      "title": "Inoltra email",
+      "description": "Invia qualsiasi email di biglietti o prenotazioni a docs@folio.id."
+    }
+  },
+  "trips": {
+    "title": "I tuoi viaggi, perfettamente organizzati",
+    "titleMobile": "Piani di viaggio, organizzati con cura",
+    "unifiedFormat": {
+      "title": "Formato unificato",
+      "description": "Voli, treni, hotel ed eventi sono trasformati in un unico formato chiaro e leggibile."
+    },
+    "everyKind": {
+      "title": "Ogni tipo di prenotazione",
+      "description": "Funziona con voli, treni, autobus, traghetti, hotel ed eventi."
+    },
+    "keyDetails": {
+      "title": "Tutti i dettagli chiave estratti",
+      "description": "Orari, date, luoghi, nomi passeggeri e info prenotazione acquisiti automaticamente."
+    },
+    "originalFiles": {
+      "title": "File originali allegati",
+      "description": "Il tuo PDF o email viene salvato con il documento per riferimento rapido."
+    }
+  },
+  "viewer": {
+    "title": "Una visione chiara di ogni documento",
+    "description": "Folio visualizza i tuoi documenti in layout chiari e leggibili con i campi chiave estratti automaticamente. Puoi sfogliare le foto a schermo intero, visualizzare i PDF allegati e copiare o condividere qualsiasi dettaglio con facilità."
+  },
+  "tools": {
+    "title": "Strumenti intelligenti che aiutano davvero",
+    "description": "Folio include funzionalità pensate per semplificare l'uso quotidiano e aiutarti a tenere traccia dei viaggi, trovare documenti all'istante, condividere con sicurezza e rimanere al passo con le date importanti.",
+    "timeline": {
+      "title": "Timeline di viaggio",
+      "description": "Il tuo viaggio è organizzato in una timeline scorrevole e pulita per sapere sempre cosa viene dopo."
+    },
+    "labels": {
+      "title": "Etichette e organizzazione",
+      "description": "Raggruppa i documenti per persone, categorie o viaggi per tenere tutto strutturato e facile da trovare."
+    },
+    "expiry": {
+      "title": "Avvisi di scadenza",
+      "description": "Ricevi promemoria prima della scadenza di passaporti, documenti o tessere per non essere mai colto alla sprovvista."
+    },
+    "privacy": {
+      "title": "Privacy e sicurezza",
+      "description": "I tuoi dati sono crittografati end-to-end con chiavi che solo tu controlli. Anche con la sincronizzazione cloud, nessuno in Folio può leggere i tuoi documenti."
+    }
+  },
+  "organized": {
+    "title": "Mantieni le tue informazioni essenziali organizzate",
+    "description": "Folio ti aiuta a conservare e gestire le informazioni più importanti della tua vita. Documenti, tessere e dati personali restano organizzati in modo sicuro in un unico posto, facili da consultare in qualsiasi momento e sempre disponibili su qualsiasi dispositivo. Questo ti dà chiarezza e la certezza che tutto ciò su cui fai affidamento è protetto e pronto quando ne hai bisogno."
+  },
+  "stats": {
+    "title": "Folio Wallet in numeri",
+    "description": "Un'app semplice che già protegge documenti importanti per persone in tutto il mondo.",
+    "rating": {
+      "value": "4.7★",
+      "description": "Gli utenti valutano costantemente Folio per la sua chiarezza, velocità e affidabilità nell'uso quotidiano."
+    },
+    "documents": {
+      "value": "1M+",
+      "description": "Documenti, tessere e biglietti già aggiunti da persone che usano Folio per restare organizzate."
+    },
+    "countries": {
+      "value": "120+",
+      "description": "Paesi dove Folio aiuta gli utenti a tenere i propri documenti essenziali accessibili ovunque."
+    }
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "items": [
+      {
+        "q": "Cos'è Folio?",
+        "a": "Folio è un'app portafoglio digitale che conserva passaporti, documenti d'identità, biglietti, prenotazioni e tessere organizzati in un unico posto sicuro. Funziona su iPhone e Android."
+      },
+      {
+        "q": "Quali tipi di documenti posso conservare?",
+        "a": "Passaporti, carte d'identità, permessi di soggiorno, patenti, biglietti di viaggio (voli, treni, hotel, eventi), carte di pagamento, gift card, carte fedeltà e qualsiasi altro documento personale."
+      },
+      {
+        "q": "Come aggiungo i documenti?",
+        "a": "Puoi scansionare con la fotocamera, caricare foto dalla libreria, importare PDF o inoltrare email di prenotazione a docs@folio.id. Folio estrae automaticamente i dettagli chiave."
+      },
+      {
+        "q": "Come protegge Folio i miei documenti?",
+        "a": "Folio usa la crittografia end-to-end con AES-256. I tuoi documenti sono crittografati sul dispositivo con chiavi che solo tu controlli. Nemmeno Folio può accedere ai tuoi dati. La protezione biometrica (Face ID, impronta digitale) aggiunge un ulteriore livello di sicurezza."
+      },
+      {
+        "q": "Posso accedere ai documenti offline?",
+        "a": "Sì. I documenti sono salvati localmente sul dispositivo e disponibili senza internet. La sincronizzazione cloud mantiene tutto aggiornato quando torni online."
+      },
+      {
+        "q": "Riceverò promemoria prima della scadenza dei documenti?",
+        "a": "Sì. Folio invia promemoria prima della scadenza di passaporti, documenti d'identità o qualsiasi altro documento per non essere mai colto alla sprovvista."
+      },
+      {
+        "q": "Posso condividere documenti con la famiglia?",
+        "a": "Sì. Crea cartelle condivise per condividere in sicurezza piani di viaggio, biglietti o documenti con famiglia e amici. Tutti vedono automaticamente le ultime versioni."
+      },
+      {
+        "q": "Su quali piattaforme è disponibile Folio?",
+        "a": "Folio è disponibile su iOS (iPhone e iPad) e dispositivi Android. Puoi scaricarlo gratuitamente dall'App Store o dal Google Play Store."
+      },
+      {
+        "q": "Folio è gratuito?",
+        "a": "Sì. Folio è completamente gratuito con archiviazione documenti illimitata, timeline di viaggio, avvisi di scadenza e tutte le funzionalità principali."
+      },
+      {
+        "q": "Come funziona la timeline di viaggio?",
+        "a": "La timeline di viaggio organizza automaticamente i tuoi voli, prenotazioni hotel, biglietti del treno ed eventi in ordine cronologico. Mostra l'itinerario completo di ogni viaggio, evidenzia le partenze imminenti e mantiene uno storico dei viaggi passati. Nessun inserimento manuale richiesto."
+      },
+      {
+        "q": "Folio funziona con i pass di Apple Wallet?",
+        "a": "Sì. Puoi importare file .pkpass da Apple Wallet direttamente in Folio. A differenza di Apple Wallet, Folio estrae e organizza i dati, li aggiunge alla timeline di viaggio e mantiene tutto ricercabile."
+      },
+      {
+        "q": "Cosa succede se perdo il telefono?",
+        "a": "Se hai un account Folio, i tuoi documenti crittografati sono salvati nel backup e possono essere ripristinati su un nuovo dispositivo. Basta accedere e tutto sarà lì."
+      }
+    ]
+  },
+  "passkeys": {
+    "title": "Accesso sicuro con Passkey",
+    "description": "Le Passkey mantengono i tuoi documenti crittografati e accessibili solo a te. I tuoi dati restano sul dispositivo, protetti dalle tue credenziali biometriche, e nemmeno Folio può sbloccare i tuoi file.",
+    "privateByDesign": {
+      "title": "Privato fin dalla progettazione",
+      "description": "Ogni documento è crittografato sul tuo dispositivo e può essere aperto solo con Face ID, Touch ID o codice dispositivo. Non memorizziamo password e non possiamo accedere alle tue informazioni."
+    },
+    "simpleToUse": {
+      "title": "Semplice da usare",
+      "description": "Accedi istantaneamente con la biometria del dispositivo. Nessuna password da creare, ricordare o reimpostare. Il tuo accesso è sempre veloce e senza sforzo."
+    },
+    "worksEverywhere": {
+      "title": "Funziona ovunque",
+      "description": "Usa la tua passkey su iPhone, Android e browser moderni. Il tuo accesso sicuro ti segue su qualsiasi dispositivo."
+    }
+  },
+  "reviews": {
+    "title": "Cosa dicono i nostri utenti",
+    "description": "Recensioni reali da persone che usano Folio per organizzare documenti e viaggi."
+  }
+}

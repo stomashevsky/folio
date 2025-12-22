@@ -93,5 +93,12 @@
   },
   "legal": {
     "lastUpdated": "最終更新日"
+  },
+  "language_banner": {
+    "message": "このページを{{language}}で表示しますか？",
+    "switch_to": "{{language}}に切替",
+    "keep_current": "{{language}}のまま",
+    "close": "閉じる",
+    "aria_label": "言語の提案"
   }
 }
