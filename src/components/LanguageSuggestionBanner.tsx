@@ -9,9 +9,9 @@ const LANGUAGE_PREFERENCE_KEY = 'folio-language-preference'
 
 // Banner height in pixels (measured from Figma)
 // Desktop: h-[68px] as per Figma (py-4 + single row)
-// Mobile: py-6 (48px) + text row (~60px with wrap) + gap (16px) + buttons (36px) = ~160px
+// Mobile: py-6 (48px) + text row (~20px) + gap (16px) + buttons (36px) = ~120px
 export const BANNER_HEIGHT_DESKTOP = 68
-export const BANNER_HEIGHT_MOBILE = 160
+export const BANNER_HEIGHT_MOBILE = 120
 
 /**
  * Spacer component that reserves space for the fixed banner.
@@ -24,7 +24,7 @@ export function BannerSpacer() {
     return null
   }
   
-  return <div className="h-[160px] md:h-[68px]" aria-hidden="true" />
+  return <div className="h-[120px] md:h-[68px]" aria-hidden="true" />
 }
 
 /**
