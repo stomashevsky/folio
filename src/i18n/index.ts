@@ -21,8 +21,7 @@ import ruSolutions from '../locales/ru/solutions.json'
 import ruGovernment from '../locales/ru/government.json'
 import ruPages from '../locales/ru/pages.json'
 import ruBlog from '../locales/ru/blog.json'
-// Using English articles for Russian fallback for now
-const ruArticles = enArticles
+import ruArticles from '../locales/ru/articles.json'
 
 import esCommon from '../locales/es/common.json'
 import esHome from '../locales/es/home.json'

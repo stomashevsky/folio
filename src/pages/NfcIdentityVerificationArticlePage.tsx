@@ -34,15 +34,15 @@ export default function NfcIdentityVerificationArticlePage() {
       />
 
       <ArticleParagraph>
-        <Trans i18nKey="nfc-identity-verification.p4" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="nfc-identity-verification.p4" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="nfc-identity-verification.p5" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="nfc-identity-verification.p5" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="nfc-identity-verification.p6" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="nfc-identity-verification.p6" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
@@ -56,19 +56,19 @@ export default function NfcIdentityVerificationArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="nfc-identity-verification.p9" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="nfc-identity-verification.p9" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="nfc-identity-verification.p10" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="nfc-identity-verification.p10" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="nfc-identity-verification.p11" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="nfc-identity-verification.p11" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="nfc-identity-verification.p12" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="nfc-identity-verification.p12" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleH2>{t('nfc-identity-verification.h2_3')}</ArticleH2>
@@ -78,19 +78,19 @@ export default function NfcIdentityVerificationArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="nfc-identity-verification.p14" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="nfc-identity-verification.p14" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="nfc-identity-verification.p15" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="nfc-identity-verification.p15" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="nfc-identity-verification.p16" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="nfc-identity-verification.p16" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="nfc-identity-verification.p17" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="nfc-identity-verification.p17" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleH2>{t('nfc-identity-verification.h2_4')}</ArticleH2>
@@ -109,6 +109,7 @@ export default function NfcIdentityVerificationArticlePage() {
 
       <ArticleParagraph>
         <Trans
+          ns="articles"
           i18nKey="nfc-identity-verification.p21"
           components={{
             LocalizedLink: <LocalizedLink to="/platform/nfc-identity-scan" className="underline hover:text-[#737373] transition-colors" />
