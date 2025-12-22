@@ -33,13 +33,24 @@ import esPages from '../locales/es/pages.json'
 import esBlog from '../locales/es/blog.json'
 import esArticles from '../locales/es/articles.json'
 
-export const SUPPORTED_LANGUAGES = ['en', 'ru', 'es'] as const
+import jaCommon from '../locales/ja/common.json'
+import jaHome from '../locales/ja/home.json'
+import jaWallet from '../locales/ja/wallet.json'
+import jaPlatform from '../locales/ja/platform.json'
+import jaSolutions from '../locales/ja/solutions.json'
+import jaGovernment from '../locales/ja/government.json'
+import jaPages from '../locales/ja/pages.json'
+import jaBlog from '../locales/ja/blog.json'
+import jaArticles from '../locales/ja/articles.json'
+
+export const SUPPORTED_LANGUAGES = ['en', 'ru', 'es', 'ja'] as const
 export type SupportedLanguage = typeof SUPPORTED_LANGUAGES[number]
 
 export const LANGUAGE_NAMES: Record<SupportedLanguage, string> = {
   en: 'English',
   ru: 'Русский',
   es: 'Español',
+  ja: '日本語',
 }
 
 export const DEFAULT_LANGUAGE: SupportedLanguage = 'en'
@@ -77,6 +88,17 @@ const resources = {
     pages: esPages,
     blog: esBlog,
     articles: esArticles,
+  },
+  ja: {
+    common: jaCommon,
+    home: jaHome,
+    wallet: jaWallet,
+    platform: jaPlatform,
+    solutions: jaSolutions,
+    government: jaGovernment,
+    pages: jaPages,
+    blog: jaBlog,
+    articles: jaArticles,
   },
 }
 

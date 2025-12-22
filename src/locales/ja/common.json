@@ -1,0 +1,97 @@
+{
+  "nav": {
+    "wallet": "ウォレット",
+    "platform": "プラットフォーム",
+    "solutions": "ソリューション",
+    "government": "行政機関向け",
+    "blog": "ブログ",
+    "getInTouch": "お問い合わせ",
+    "backToMainMenu": "メインメニューに戻る",
+    "clientOnboardingDesc": "規制対象企業向けのKYC認証を効率化",
+    "ageComplianceDesc": "制限付き商品やサービスの年齢要件を確認",
+    "digitalTicketingDesc": "不正防止機能付きデジタルチケットの作成・管理・検証",
+    "idVerificationDesc": "パスポート、IDカード、その他公的書類の本人確認",
+    "nfcIdentityScanDesc": "対応IDおよびパスポートのICチップデータを読取",
+    "documentIntelligenceDesc": "提出書類からデータを抽出・分析",
+    "faceMatchDesc": "自撮り写真と公的写真を照合して本人確認",
+    "livenessCheckDesc": "本人が実際に存在することを確認",
+    "dataSourceChecksDesc": "信頼できるデータベースでユーザー情報を検証",
+    "phoneAndEmailValidationDesc": "所有権確認とリスクのある連絡先を検出",
+    "behaviorInsightsDesc": "デバイスと利用パターンで追加のコンテキストを取得",
+    "dynamicFlowDesc": "柔軟なロジックで本人確認を調整",
+    "reviewWorkspaceDesc": "認証案件の整理と解決",
+    "credentialIssuanceDesc": "検証可能なクレデンシャルを作成しウォレットに配信"
+  },
+  "footer": {
+    "address": "住所：",
+    "addressValue": "88 Baker St, London W1U 6TQ, United Kingdom",
+    "contact": "お問い合わせ：",
+    "folio": "Folio",
+    "folioApp": "Folioアプリ",
+    "blog": "ブログ",
+    "government": "行政機関向け",
+    "about": "会社概要",
+    "features": "機能",
+    "idWallet": "IDウォレット",
+    "cardScanner": "カードスキャナー",
+    "loyaltyCards": "ポイントカード",
+    "getTheApp": "アプリを入手",
+    "downloadIOS": "iOSでダウンロード",
+    "downloadAndroid": "Androidでダウンロード",
+    "platform": "プラットフォーム",
+    "idVerification": "本人確認",
+    "nfcIdentityScan": "NFC IDスキャン",
+    "documentIntelligence": "ドキュメント分析",
+    "faceMatch": "顔照合",
+    "livenessCheck": "生体認証",
+    "dataSourceChecks": "データソース検証",
+    "phoneAndEmailValidation": "電話・メール検証",
+    "behaviorInsights": "行動分析",
+    "dynamicFlow": "動的フロー",
+    "reviewWorkspace": "レビューワークスペース",
+    "credentialIssuance": "クレデンシャル発行",
+    "solutions": "ソリューション",
+    "clientOnboarding": "顧客オンボーディング",
+    "ageCompliance": "年齢確認",
+    "digitalTicketing": "デジタルチケット",
+    "termsAndPolicies": "利用規約・ポリシー",
+    "termsOfUse": "利用規約",
+    "privacyPolicy": "プライバシーポリシー",
+    "security": "セキュリティ",
+    "copyright": "Folio Wallet © 2025"
+  },
+  "buttons": {
+    "learnMore": "詳細を見る",
+    "getInTouch": "お問い合わせ",
+    "explorePlayground": "Playgroundを試す"
+  },
+  "exploreMore": "もっと見る",
+  "language": {
+    "select": "言語を選択"
+  },
+  "getTheApp": {
+    "title": "Folioをいつでもどこでも",
+    "description": "書類を整理、同期。iOSとAndroidですぐにアクセス。"
+  },
+  "blog": {
+    "title": "Folioブログ",
+    "description": "旅行、書類、デジタルIDに関する事例、製品情報、実用ガイド",
+    "loadMore": "もっと読む",
+    "backToBlog": "ブログに戻る",
+    "keepReading": "関連記事",
+    "viewAll": "すべて見る",
+    "readingTime": "{{minutes}}分で読了",
+    "categories": {
+      "All": "すべて",
+      "Company": "企業情報",
+      "Product": "製品",
+      "Guides": "ガイド",
+      "Research": "リサーチ",
+      "Safety": "安全",
+      "Business": "ビジネス"
+    }
+  },
+  "legal": {
+    "lastUpdated": "最終更新日"
+  }
+}

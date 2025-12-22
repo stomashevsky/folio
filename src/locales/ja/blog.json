@@ -1,0 +1,176 @@
+{
+  "articles": {
+    "what-is-a-digital-wallet": {
+      "title": "デジタルウォレットとは？",
+      "description": "デジタルウォレットの基本、仕組み、使い方を解説。メリット、セキュリティ機能、AndroidとiPhone向けの種類をご紹介します。"
+    },
+    "how-to-store-and-use-loyalty-cards-on-your-iphone": {
+      "title": "iPhoneでポイントカードを保存・使用する方法",
+      "description": "iPhoneでデジタルウォレットを使ってポイントカードを管理する方法。Apple Wallet、Stocard、Folio Walletを比較して最適なソリューションを見つけましょう。"
+    },
+    "regular-vs-digital-wallets": {
+      "title": "従来の財布 vs デジタルウォレット：どちらが最適？",
+      "description": "従来の財布とデジタルウォレットの違いを解説。メリット・デメリットを比較して、あなたのライフスタイルに合ったウォレットを選びましょう。"
+    },
+    "how-to-add-and-store-your-medical-card": {
+      "title": "医療証をデジタルウォレットに保存する方法",
+      "description": "医療証や健康保険証をデジタルウォレットに保存する方法。メリット、セキュリティ機能、家族の健康書類の管理方法をご紹介します。"
+    },
+    "apple-gift-card-add-to-wallet": {
+      "title": "Appleギフトカードをウォレットに追加：ステップガイド",
+      "description": "AppleギフトカードをWalletアプリに追加する方法。簡単な手順で支払いを効率化し、iPhoneで残高を確認できます。"
+    },
+    "digital-wallet-apps-for-every-need": {
+      "title": "あらゆるニーズに対応するデジタルウォレットアプリ",
+      "description": "決済、書類保存、旅行に最適なデジタルウォレットアプリを発見。あなたのニーズにぴったりのアプリを見つけましょう。"
+    },
+    "best-gift-card-wallet-apps": {
+      "title": "ギフトカード管理に最適なウォレットアプリ",
+      "description": "ギフトカードをデジタル管理・保護するための最適なウォレットアプリを発見。機能を比較して最適なソリューションを見つけましょう。"
+    },
+    "best-digital-wallet-apps-in-canada": {
+      "title": "カナダで使える最高のデジタルウォレットアプリ",
+      "description": "カナダで利用可能な最高のデジタルウォレットアプリを発見。機能、セキュリティ、用途を比較して最適なウォレットを見つけましょう。"
+    },
+    "tripcase-alternative": {
+      "title": "TripCaseの代替アプリ：使いやすいトラベルオーガナイザー",
+      "description": "TripCaseはサービス終了しました。次の旅行を混乱なく進めましょう。フライト、ホテル、書類をすべて一か所で管理できるアプリをご紹介。"
+    },
+    "document-intelligence": {
+      "title": "ドキュメントインテリジェンス：AIによる書類処理を解説",
+      "description": "ドキュメントインテリジェンスはAIを使って書類を自動分類、データ抽出、検証します。この技術がビジネスプロセスを効率化し、コンプライアンスを改善する方法を学びましょう。"
+    },
+    "pass2u-alternative": {
+      "title": "Pass2Uの代替アプリ：パスをスマートに整理",
+      "description": "Pass2UはApple Walletをカスタムカードで拡張します。でも、もっと必要なら？本当のセキュリティですべての書類を整理するアプリをご紹介。"
+    },
+    "kyc-aml-compliance": {
+      "title": "KYC・AMLコンプライアンス：企業向け完全ガイド",
+      "description": "KYC（本人確認）とAML（マネーロンダリング対策）の要件は多くの業界に影響します。規制の要件と、コンプライアンスに準拠した本人確認プロセスの構築方法を解説します。"
+    },
+    "albanian-diaspora-voter-registration": {
+      "title": "アルバニア在外国民の有権者登録がFolio Walletで525%増加",
+      "description": "アルバニアは安全なデジタルウォレットソリューションを使用して在外国民の有権者登録を成功させ、24万5千人以上の在外アルバニア人が議会選挙への投票承認を取得しました。"
+    },
+    "tripit-alternative": {
+      "title": "TripItの代替アプリ：旅行をスマートに整理",
+      "description": "TripItは旅程を整理します。でも、もっと必要なら？予約、書類、チケットを一か所で安全に保管するアプリをご紹介。"
+    },
+    "face-matching-technology": {
+      "title": "顔照合技術：オンライン本人確認の仕組み",
+      "description": "顔照合は、自撮り写真とID写真を比較して本人確認を行います。この技術の仕組み、使用場面、顔認識との違いを解説します。"
+    },
+    "checkmytrip-alternative": {
+      "title": "CheckMyTripの代替アプリ：旅行をスマートに管理",
+      "description": "CheckMyTripは予約を整理します。でもパスポート、保険、イベントチケットは？すべてを一か所で安全に保管するアプリをご紹介。"
+    },
+    "best-apple-wallet-alternatives": {
+      "title": "Apple Walletの最高の代替アプリ",
+      "description": "Apple Walletはタッチ決済と搭乗券には最適ですが、制限もあります。Walletの不足を補う5つのパワフルなiOSアプリをご紹介：安全な書類保存、複数カード管理、自動旅程計画。"
+    },
+    "best-google-wallet-alternatives": {
+      "title": "2025年に導入できるGoogle Walletの最高の代替アプリ",
+      "description": "Google Walletは優秀ですが、それだけでは足りません。Walletの不足を補う7つのパワフルな代替アプリをご紹介：安全な書類保存、多通貨決済、自動旅程計画。"
+    },
+    "client-onboarding-best-practices": {
+      "title": "顧客オンボーディングのベストプラクティス：デジタル vs 従来型",
+      "description": "デジタル顧客オンボーディングは、企業の新規顧客確認・有効化の方法を変革します。従来の方法との違いと、効果的なオンボーディングワークフローのベストプラクティスを解説します。"
+    },
+    "you-can-now-store-tickets-in-folio-wallet": {
+      "title": "バス、電車、コンサート。3つのアプリから3枚のチケット。バーコードはどこ？",
+      "description": "実際の旅行では、チケットはあちこちに散らばっています。改札口で毎回探すのをやめる方法をご紹介。"
+    },
+    "access-your-digital-wallet-anywhere": {
+      "title": "パスポート、チケット、その他すべてを1つのアプリで",
+      "description": "パスポートはPDF。搭乗券はメール。ホテル予約はスクリーンショット。もっと良い方法があります。"
+    },
+    "eudi-wallet": {
+      "title": "EUがデジタルIDウォレットを全員に提供。その意味とは。",
+      "description": "2026年までに、全EU加盟国は市民に無料のデジタルIDウォレットを提供する必要があります。生年月日を見せずに年齢を証明し、パスポートのコピーなしで銀行口座を開設できます。"
+    },
+    "how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app": {
+      "title": "友人がホテルを予約しました。今、渋滞に巻き込まれています。予約確認書はお持ちですか？",
+      "description": "グループ旅行は、一人がすべての予約を持っていると崩壊します。全員がすべてにアクセスできるようにする方法をご紹介。"
+    },
+    "flight-tickets-on-iphone": {
+      "title": "搭乗券を見つけるのに30秒。どこにある？",
+      "description": "搭乗口が閉まりかけ、スマホには47個のPDF、バーコードはどこかにある。搭乗券を二度と失くさない方法をご紹介。"
+    },
+    "the-best-event-ticket-apps": {
+      "title": "あのチケット、どこに置いた？（イベントチケット整理問題）",
+      "description": "コンサートはTicketmaster、カンファレンスバッジはメール、テーマパークはスクリーンショット。チケットを失くさない方法をご紹介。"
+    },
+    "best-apps-to-plan-travel": {
+      "title": "本当に必要な旅行アプリ（スキップしていいものも）",
+      "description": "ほとんどの旅行アプリリストには、使わない20個のアプリが含まれています。実際の問題を解決するアプリだけをご紹介。"
+    },
+    "mobile-drivers-license": {
+      "title": "運転免許証がデジタル化。実際の意味とは。",
+      "description": "モバイル運転免許証が全米で展開中。でもこれはスマホの写真だけではありません。実は財布のプラスチックカードよりプライバシーとセキュリティが高いのです。"
+    },
+    "10-travel-hacks-that-actually-work": {
+      "title": "本当に効果のある10の旅行ハック（効かない3つも）",
+      "description": "ほとんどの旅行ヒントは役に立ちません。これら10個は本当に時間とお金を節約します。さらに、よく聞くけど実際には効果がない3つのハックも。"
+    },
+    "age-verification-requirements": {
+      "title": "オンライン年齢確認の実際の仕組み",
+      "description": "オンラインでワインを買うことからアプリ登録まで、年齢確認はどこにでもあります。さまざまな確認方法の仕組み、プライバシーの違い、データの行方を解説します。"
+    },
+    "organize-tickets-bookings": {
+      "title": "すべてのチケットと予約を1つのアプリで管理する方法",
+      "description": "フライト、電車、ホテル、コンサート：メールを探すのをやめましょう。すべての旅行チケットと予約を1つの安全なアプリで整理できます。"
+    },
+    "app-in-the-air-alternative": {
+      "title": "App in the Airがサービス終了。フリークエントフライヤーの次の選択肢は。",
+      "description": "何年も何百万人の旅行者のフライトを追跡してきたApp in the Airがなくなりました。さらに多くの機能を持つ代替アプリをお探しなら、Folio Walletがその答えです。"
+    },
+    "wanderlog-alternative": {
+      "title": "Wanderlogは旅行を計画します。でも実際のチケットはどこに保管？",
+      "description": "Wanderlogは何をするか決めるのに最適です。でもフライト、ホテル、アクティビティを予約したら、それらを保管する場所が必要です。"
+    },
+    "what-is-liveness-detection": {
+      "title": "生体検知があなたの写真の不正使用を防ぐ仕組み",
+      "description": "誰かがあなたの写真を持っています。本人確認を通過できますか？生体検知があれば、答えはノーです。この技術があなたとあなたの写真を区別する方法を解説します。"
+    },
+    "end-to-end-encryption": {
+      "title": "Folioでさえあなたの書類を見ることができない理由",
+      "description": "Folioのあなたの書類は、あなただけが知る秘密で保護されています。Passkeyまたはリカバリーコードがなければ、私たちでさえあなたのデータにアクセスできません。"
+    },
+    "biometric-data-privacy": {
+      "title": "本人確認後、顔データはどうなるのか",
+      "description": "本人確認で自撮りを撮影したとき、その画像はどこへ行くのでしょうか？誰が見るのか？どのくらい保存されるのか？生体認証データについて知っておくべきことをご紹介。"
+    },
+    "digital-credentials-government": {
+      "title": "政府が紙の書類をデジタルクレデンシャルに置き換える方法",
+      "description": "海外から投票し、IDを見せずに年齢を証明し、列に並ばずに行政サービスにアクセスできたら？デジタルクレデンシャルがこれを実現しています。"
+    },
+    "nfc-identity-verification": {
+      "title": "NFCチップスキャンが数秒でパスポートを検証する方法",
+      "description": "パスポートには本物であることを証明するチップがあります。NFCスキャンの仕組み、何を検証するか、なぜ書類の真正性確認に最も安全な方法なのかを解説します。"
+    },
+    "digital-passport-copies": {
+      "title": "パスポートのデジタルコピーが必要な理由",
+      "description": "パスポートのデジタルコピーを持つメリットを発見：即時アクセス、緊急時のバックアップ、チェックインの高速化、安全な保管。すべての旅行者に必須です。"
+    },
+    "best-document-scanning-apps": {
+      "title": "iPhoneとAndroid向け最高のドキュメントスキャンアプリ",
+      "description": "スマホを強力なスキャナーに変えましょう。書類をスキャン、保存、整理する最高のアプリをご紹介。"
+    },
+    "managing-family-travel-documents": {
+      "title": "すべての親が知っている空港の悪夢（と回避方法）",
+      "description": "2人の子供、ベビーカー、バッグのどこかに4冊のパスポートがあって、セキュリティにいます。家族旅行をもっと良くする方法があります。"
+    },
+    "best-id-scanner-app": {
+      "title": "海外で財布が盗まれました。免許証のコピーはありますか？",
+      "description": "デジタルIDコピーについて、必要になるまで誰も考えません。それがあってよかったと思う状況をご紹介。"
+    },
+    "best-identity-verification-platforms": {
+      "title": "2025年の最高の本人確認プラットフォーム",
+      "description": "企業向け本人確認プラットフォームの実践的な比較。Folio、Onfido、Veriff、Yoti、Jumioから、あなたのニーズに合うソリューションを見つけましょう。"
+    },
+    "complete-guide-identity-verification": {
+      "title": "デジタル本人確認の完全ガイド",
+      "description": "本人確認の実践ガイド：仕組み、重要性、ユーザーを失わない実装方法を解説します。"
+    }
+  }
+}

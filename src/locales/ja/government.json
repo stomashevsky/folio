@@ -1,0 +1,321 @@
+{
+  "government": {
+    "meta": {
+      "title": "行政機関向け | Folio Wallet",
+      "description": "行政機関向けのデジタルIDツール。国際基準に準拠したデジタルクレデンシャルの設計、テスト、展開。"
+    },
+    "hero": {
+      "tagline": "行政機関向け",
+      "title": "国際基準に準拠したデジタルID",
+      "description": "行政機関向けにデジタルクレデンシャルを設計、テスト、展開するためのツール。実際のEUデジタルIDフローを再現した安全なサンドボックスで、デモ書類の確認、QRコードの検証、共有される情報の確認が可能です。"
+    },
+    "overview": {
+      "title": "国家規模のデジタルID向け最新インフラ",
+      "description": "公共サービス向けの安全な認証とモバイルクレデンシャルをサポート。"
+    },
+    "features": {
+      "title": "信頼できるデジタルID基盤で構築",
+      "description": "国際基準に準拠し、IDシステム間で連携する安全で最新の相互運用可能なデジタルクレデンシャルを市民に提供。セキュリティ、プライバシー、実際の使いやすさを重視した国家規模のプログラム向けに設計。",
+      "standards": {
+        "title": "標準とコンプライアンス",
+        "description": "EUDI Wallet、ISOモバイル運転免許証、検証可能クレデンシャル仕様に準拠し、公共サービス全体での互換性、相互運用性、長期的な信頼性を確保。"
+      },
+      "issuance": {
+        "title": "発行と検証",
+        "description": "暗号化検証、QRおよびバーコードスキャン、オフライン対応検証によるID、許可証、証明書の安全な発行をサポート。"
+      },
+      "presentation": {
+        "title": "提示",
+        "description": "最小限の開示、明確なユーザー同意、安全なチャネルによるプライバシー重視のID共有を実現し、市民が常にデータを管理できるようにします。"
+      }
+    },
+    "caseStudy": {
+      "title": "国家規模での実績",
+      "description": "アルバニアがFolioのデジタルIDウォレットで在外国民の安全なリモート有権者登録を実現した方法。",
+      "imageAlt": "アルバニア事例研究マップ",
+      "challenge": {
+        "title": "課題",
+        "description": "アルバニアは海外在住の160万人以上の市民がリモートで投票登録できる安全な方法を必要としていました。厳格なセキュリティと透明性要件を満たす必要がありました。"
+      },
+      "solution": {
+        "title": "ソリューション",
+        "description": "中央選挙管理委員会はFolioを活用したリモート登録プラットフォームを立ち上げました。モバイルとウェブチャネルでの安全な本人確認と、申請状況を表示するデジタル投票者カードを提供。"
+      },
+      "results": {
+        "title": "成果",
+        "stat1": {
+          "value": "525%",
+          "description": "前回選挙比での在外国民参加率の増加"
+        },
+        "stat2": {
+          "value": "36万5千+",
+          "description": "モバイルとウェブチャネルで作成されたプロフィール数"
+        }
+      },
+      "testimonial": {
+        "quote": "「Folioとの協業は変革的な経験でした...デジタルIDソリューションのあるべき姿を示す、新たな卓越性の基準を打ち立てました。」",
+        "name": "Ilirjan Celibashi",
+        "title": "アルバニア国家選挙委員長"
+      },
+      "button": "事例研究を読む"
+    },
+    "cta": {
+      "title": "国家規模のプログラムをサポート",
+      "description": "パイロット、統合、近代化の取り組みについてご相談ください。",
+      "button": "お問い合わせ",
+      "playgroundButton": "Playgroundを試す"
+    },
+    "globalPartners": {
+      "title": "グローバルパートナー",
+      "description": "Folioは世界中の政府に安全でスケーラブルなIDソリューションを提供しています。"
+    }
+  },
+  "playground": {
+    "meta": {
+      "title": "Playground | Folio Wallet",
+      "description": "EUデジタルIDシナリオを体験。クレデンシャルの発行と検証フローをテスト。"
+    },
+    "issue": {
+      "title": "Playground",
+      "description": "デモ書類を発行し、EUDI互換の検証フローをテストできる安全なサンドボックス。実際の発行手順を試し、QRコードをスキャンし、データ共有を確認し、デジタルIDの実際の動作を体験できます。"
+    },
+    "howItWorks": {
+      "title": "EUDIフローの仕組み",
+      "description": "Playgroundではデモ書類を発行し、検証フローを実行し、その背後にあるEUデジタルID（EUDI）標準を理解できます。",
+      "issuance": {
+        "title": "発行",
+        "description": "モーダルでサンプルデータを確認し、書類を承認します。QRコードが表示され、Folio Walletでスキャンすると書類がウォレットに追加されます。"
+      },
+      "presentation": {
+        "title": "提示",
+        "description": "検証者がモーダルでリクエストを設定し、必要な属性を正確に選択。ユーザーがスキャンして共有に同意するためのQRコードが生成されます。"
+      },
+      "lifecycle": {
+        "title": "ライフサイクル",
+        "description": "異なる設定で発行と検証を繰り返し、更新、選択的開示、同じ書類の再利用がどのように機能するかを確認できます。"
+      }
+    },
+    "issuanceTypes": {
+      "title": "Playgroundでの書類発行方法",
+      "description": "各書類は特定の発行タイプに従います。カードの色ラベルは使用されるフローを示します。",
+      "authorization": {
+        "title": "認可",
+        "description": "発行者があなたのアカウントを確認。ウェブサイトにサインインし、ウォレットでリクエストを承認します。"
+      },
+      "preAuthorized": {
+        "title": "事前認可",
+        "description": "デジタルIDを使用して自動発行。生体認証で確認するだけです。"
+      },
+      "transactionCode": {
+        "title": "トランザクションコード",
+        "description": "組織から提供されるワンタイムコードが必要です。"
+      },
+      "presentation": {
+        "title": "提示",
+        "description": "別の書類を提示し、必要な情報のみを共有して発行。"
+      }
+    },
+    "faq": {
+      "title": "よくある質問",
+      "items": [
+        {
+          "question": "Playgroundとは？",
+          "answer": "Playgroundは、実際のユーザーデータなしでEUDI互換の発行・検証フローを試せるサンドボックスです。"
+        },
+        {
+          "question": "これらは本物の書類ですか？",
+          "answer": "いいえ。ここにあるすべての書類はテスト用のデモサンプルです。法的効力はなく、本番環境では使用できません。"
+        },
+        {
+          "question": "本物のEUDI Walletが必要ですか？",
+          "answer": "QRコードをスキャンして書類を確認するにはFolio Walletが必要です。このサンドボックスを使用するために公式認定の国家ウォレットは必要ありません。"
+        },
+        {
+          "question": "Playgroundはどの標準に従っていますか？",
+          "answer": "フローはEUデジタルIDウォレットアーキテクチャおよびリファレンスフレームワークに基づき、内部的にはOpenID for Verifiable Credential IssuanceとVerifiable Presentationsを使用しています。"
+        },
+        {
+          "question": "なぜデジタルIDから始めるのですか？",
+          "answer": "デジタルIDは他のクレデンシャルが依存するコア書類です。一度発行すれば、多くの検証シナリオで再利用できます。"
+        },
+        {
+          "question": "別のデバイスなしで検証をテストできますか？",
+          "answer": "はい。Folio WalletとPlaygroundを同じデバイスまたは2台のデバイスで開けます。QRコードは同一デバイスとクロスデバイスの両方のシナリオで機能します。"
+        }
+      ]
+    },
+    "tabs": {
+      "issue": "発行",
+      "verify": "検証"
+    },
+    "documents": {
+      "digitalIdentity": "デジタルID",
+      "studentId": "学生証",
+      "driversLicense": "運転免許証",
+      "age18": "18歳以上",
+      "healthInsurance": "健康保険証",
+      "proofOfAddress": "住所証明",
+      "membershipCard": "会員証",
+      "libraryCard": "図書館カード"
+    },
+    "badges": {
+      "coreIdentification": "コア識別",
+      "authorization": "認可",
+      "preAuthorized": "事前認可",
+      "transactionCode": "トランザクションコード",
+      "presentation": "提示"
+    },
+    "cards": {
+      "issue": {
+        "digitalIdentity": "他の書類が正しいデータを使用するために、まずこれを設定してください。",
+        "studentId": "大学アカウントにサインイン後に発行されます。",
+        "driversLicense": "交通当局アカウントにサインイン後に発行されます。",
+        "age18": "確認された生年月日から自動的に発行されます。",
+        "healthInsurance": "IDデータを使用して自動的に発行されます。",
+        "proofOfAddress": "IDからの登録住所。",
+        "membershipCard": "ワンタイムコードを入力してカードを取得。",
+        "libraryCard": "学生証を提示して図書館カードを取得。"
+      },
+      "verify": {
+        "digitalIdentity": "完全な本人確認が必要な銀行や公共サービスをシミュレート。",
+        "studentId": "大学またはキャンパスサービスの在籍状況を確認。",
+        "driversLicense": "レンタカーやモビリティサービスの免許有効性と主要フィールドを確認。",
+        "age18": "最小限のデータで年齢制限商品の法定年齢を確認。",
+        "healthInsurance": "医療機関の保険適用状況を確認。",
+        "proofOfAddress": "KYCまたは公共料金契約の住所詳細を確認。",
+        "membershipCard": "ユーザーの有効な会員資格を確認。",
+        "libraryCard": "図書館または類似サービスのアクセス権を確認。"
+      }
+    },
+    "modals": {
+      "common": {
+        "cancel": "キャンセル",
+        "continue": "続ける",
+        "back": "戻る",
+        "done": "完了"
+      },
+      "fields": {
+        "firstName": "名",
+        "lastName": "姓",
+        "dateOfBirth": "生年月日",
+        "placeOfBirth": "出生地",
+        "nationality": "国籍",
+        "residentialAddress": "住所",
+        "cardNumber": "カード番号",
+        "issuingAuthority": "発行機関",
+        "issuingCountry": "発行国",
+        "documentType": "書類タイプ",
+        "issuedOn": "発行日",
+        "expiryDate": "有効期限",
+        "universityName": "大学名",
+        "faculty": "学部",
+        "enrollmentYear": "入学年",
+        "studentNumber": "学籍番号",
+        "licenseNumber": "免許番号",
+        "categories": "カテゴリ",
+        "restrictions": "制限",
+        "insuranceProvider": "保険会社",
+        "policyNumber": "証券番号",
+        "coverageType": "補償タイプ",
+        "memberSince": "会員開始日",
+        "street": "番地",
+        "city": "市区町村",
+        "postalCode": "郵便番号",
+        "country": "国",
+        "verifiedOn": "検証日",
+        "membershipType": "会員タイプ",
+        "membershipNumber": "会員番号",
+        "membershipStatus": "会員ステータス",
+        "libraryName": "図書館名",
+        "libraryNumber": "図書館番号",
+        "borrowingPrivileges": "貸出権限",
+        "idPhoto": "ID写真",
+        "fullName": "氏名",
+        "requesterName": "リクエスター名",
+        "age18Confirmed": "18歳以上確認済み"
+      },
+      "issue": {
+        "digitalIdentity": {
+          "title": "デジタルID",
+          "description": "書類を発行する前に詳細を確認・編集してください。"
+        },
+        "studentId": {
+          "title": "学生証",
+          "description": "書類を発行する前に詳細を確認・編集してください。"
+        },
+        "driversLicense": {
+          "title": "運転免許証",
+          "description": "書類を発行する前に詳細を確認・編集してください。"
+        },
+        "age18": {
+          "title": "18歳以上",
+          "description": "書類を発行する前に詳細を確認・編集してください。"
+        },
+        "healthInsurance": {
+          "title": "健康保険証",
+          "description": "書類を発行する前に詳細を確認・編集してください。"
+        },
+        "proofOfAddress": {
+          "title": "住所証明",
+          "description": "書類を発行する前に詳細を確認・編集してください。"
+        },
+        "membershipCard": {
+          "title": "会員証",
+          "description": "書類を発行するためにトランザクションコードを入力してください。"
+        },
+        "libraryCard": {
+          "title": "図書館カード",
+          "description": "書類を発行する前に詳細を確認・編集してください。"
+        }
+      },
+      "verify": {
+        "digitalIdentity": {
+          "title": "デジタルID",
+          "description": "検証リクエストを設定してください。"
+        },
+        "studentId": {
+          "title": "学生証",
+          "description": "検証リクエストを設定してください。"
+        },
+        "driversLicense": {
+          "title": "運転免許証",
+          "description": "検証リクエストを設定してください。"
+        },
+        "age18": {
+          "title": "18歳以上",
+          "description": "検証リクエストを設定してください。"
+        },
+        "healthInsurance": {
+          "title": "健康保険証",
+          "description": "検証リクエストを設定してください。"
+        },
+        "proofOfAddress": {
+          "title": "住所証明",
+          "description": "検証リクエストを設定してください。"
+        },
+        "membershipCard": {
+          "title": "会員証",
+          "description": "検証リクエストを設定してください。"
+        },
+        "libraryCard": {
+          "title": "図書館カード",
+          "description": "検証リクエストを設定してください。"
+        }
+      },
+      "confirmation": {
+        "issue": {
+          "title": "{{documentType}}を発行",
+          "description": "下のQRコードをスキャンして書類を追加してください。"
+        },
+        "verify": {
+          "title": "{{documentType}}を検証",
+          "description": "下のQRコードをスキャンしてこの書類を検証してください。"
+        }
+      },
+      "verified": {
+        "title": "{{title}}が検証されました",
+        "description": "以下は検証中に受信した詳細です。"
+      }
+    }
+  }
+}

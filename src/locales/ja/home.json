@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "title": "Folio | 書類とIDのデジタルウォレット",
+    "description": "個人向けの安全な書類保管。企業向けの本人確認プラットフォーム。行政向けのデジタルクレデンシャル。"
+  },
+  "hero": {
+    "tagline": "Folio Wallet",
+    "title": "書類とIDのデジタルウォレット",
+    "description": "個人向けの安全な書類保管。企業向けの本人確認プラットフォーム。行政向けのデジタルクレデンシャル。"
+  },
+  "wallet": {
+    "tagline": "Folioアプリ",
+    "title": "書類をいつでも手元に",
+    "description": "パスポート、ID、チケット、カードを1つの安全な場所に保管。Folioはメール、PDF、写真から書類を取り込み、重要な情報を抽出して整理し、すぐにアクセスできます。"
+  },
+  "platform": {
+    "tagline": "プラットフォーム",
+    "title": "信頼をスケールで構築",
+    "description": "本人確認、ドキュメント分析、生体認証など。顧客確認と不正防止に必要なすべてを提供。",
+    "carouselTitle": "本人確認に必要なすべて"
+  },
+  "solutions": {
+    "tagline": "ソリューション",
+    "title": "業界に特化したソリューション",
+    "description": "規制産業と高信頼環境向けにカスタマイズされたソリューション。",
+    "ageCompliance": {
+      "title": "年齢確認",
+      "description": "規制産業向けの年齢認証"
+    },
+    "clientOnboarding": {
+      "title": "顧客オンボーディング",
+      "description": "KYCと顧客確認を効率化"
+    },
+    "digitalTicketing": {
+      "title": "デジタルチケット",
+      "description": "安全なデジタルチケットの発行と検証"
+    }
+  },
+  "government": {
+    "tagline": "行政機関向け",
+    "title": "行政機関向けデジタルID",
+    "description": "国際基準に準拠したデジタルクレデンシャルの設計、テスト、展開ツール。サンドボックスでEUデジタルIDフローをお試しください。"
+  },
+  "testimonial": {
+    "quote": "「Folioとの協業は変革的な経験でした...デジタルIDソリューションのあるべき姿を示す、新たな卓越性の基準を打ち立てました。」",
+    "name": "Ilirjan Celibashi",
+    "role": "アルバニア国家選挙委員長"
+  },
+  "security": {
+    "title": "信頼できるセキュリティ",
+    "description": "業界最高水準のセキュリティでデータを保護します。",
+    "endToEndEncryption": {
+      "title": "エンドツーエンド暗号化",
+      "description": "あなただけが管理する鍵でデータを暗号化"
+    },
+    "zeroKnowledge": {
+      "title": "ゼロ知識アーキテクチャ",
+      "description": "私たちはあなたの書類にアクセスできません"
+    },
+    "biometric": {
+      "title": "生体認証による保護",
+      "description": "Face IDと指紋認証で安全性を強化"
+    }
+  }
+}
