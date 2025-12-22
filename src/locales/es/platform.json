@@ -97,8 +97,8 @@
             }
         },
         "cta": {
-            "title": "Construyamos una mejor verificación de identidad",
-            "description": "Habla con nuestro equipo para explorar cómo Folio puede mejorar tu experiencia de alta y verificación."
+            "title": "Hablemos de tu verificación",
+            "description": "Cuéntanos tus necesidades y encontraremos la solución adecuada."
         },
         "faq": {
             "title": "Preguntas frecuentes",
@@ -137,12 +137,12 @@
     "documentIntelligence": {
         "meta": {
             "title": "Inteligencia Documental | Folio Wallet",
-            "description": "Revisa automáticamente los documentos enviados para confirmar identidad o validar comprobantes de domicilio, ingresos o salud fácilmente."
+            "description": "Revisión automática de documentos: confirmación de identidad, domicilio, ingresos o datos médicos."
         },
         "hero": {
             "tagline": "Inteligencia documental",
-            "title": "Automatiza la revisión de documentos a escala",
-            "description": "Revisa automáticamente los documentos enviados para confirmar identidad o validar comprobantes de domicilio, ingresos o salud fácilmente."
+            "title": "Revisión automática de documentos",
+            "description": "Confirma identidad, domicilio, ingresos o datos médicos sin trabajo manual."
         },
         "processing": {
             "title": "Procesamiento inteligente de documentos",
@@ -239,12 +239,12 @@
     "livenessCheck": {
         "meta": {
             "title": "Prueba de Vida | Folio Wallet",
-            "description": "Protégete contra la gama más amplia de falsificaciones faciales a través de una solución de múltiples capas."
+            "description": "Protección multicapa contra deepfakes, máscaras, fotos y videos."
         },
         "hero": {
             "tagline": "Prueba de vida",
-            "title": "Confirma presencia real, no fotos",
-            "description": "Protégete contra la gama más amplia de falsificaciones faciales a través de una solución de múltiples capas."
+            "title": "Verifica que hay una persona real frente a la cámara",
+            "description": "Protección multicapa contra deepfakes, máscaras, fotos y videos."
         },
         "protection": {
             "title": "Protección avanzada contra suplantación y fraude",
@@ -278,7 +278,7 @@
         },
         "keyFeatures": {
             "title": "Características clave",
-            "description": "Impulsa tu flujo de verificación con señales en capas, modelos modernos y controles adaptativos.",
+            "description": "Señales multicapa, modelos modernos y controles flexibles.",
             "items": {
                 "euAligned": {
                     "title": "Detección de inyección alineada con EU",
@@ -346,8 +346,8 @@
             }
         },
         "cta": {
-            "title": "Construye una capa de identidad más fuerte",
-            "description": "Habla con nuestro equipo para ver cómo Folio puede elevar tu flujo de verificación y proteger a tus usuarios en cada paso."
+            "title": "Refuerza tu verificación",
+            "description": "Hablemos de cómo Folio puede proteger a tus usuarios."
         },
         "faq": {
             "title": "Preguntas frecuentes",
@@ -386,12 +386,12 @@
     "faceMatch": {
         "meta": {
             "title": "Comparación Facial | Folio Wallet",
-            "description": "Precisión excepcional entregada con privacidad, transparencia y una experiencia de usuario perfecta."
+            "description": "Identificación facial precisa con privacidad y experiencia de usuario fluida."
         },
         "hero": {
             "tagline": "Comparación facial",
-            "title": "Empareja rostros con certeza",
-            "description": "Precisión excepcional entregada con privacidad, transparencia y una experiencia de usuario perfecta."
+            "title": "Identificación facial de alta precisión",
+            "description": "Alta precisión, privacidad y facilidad de uso en una sola solución."
         },
         "protection": {
             "title": "Protección de reconocimiento facial avanzada",
@@ -500,8 +500,8 @@
             }
         },
         "cta": {
-            "title": "Construye una capa de identidad más fuerte",
-            "description": "Habla con nuestro equipo para ver cómo Folio puede elevar tu flujo de verificación y proteger a tus usuarios en cada paso."
+            "title": "Refuerza tu verificación",
+            "description": "Hablemos de cómo Folio puede proteger a tus usuarios."
         },
         "faq": {
             "title": "Preguntas frecuentes",
@@ -540,12 +540,12 @@
     "dataSourceChecks": {
         "meta": {
             "title": "Verificación de Fuentes de Datos | Folio Wallet",
-            "description": "Verifica usuarios en todo el mundo con fuentes de datos confiables. Confirma instantáneamente la identidad de los usuarios."
+            "description": "Verificación contra bases de datos oficiales. Confirmación instantánea de identidad y cumplimiento regulatorio."
         },
         "hero": {
             "tagline": "Verificación de fuentes de datos",
-            "title": "Verifica usuarios en todo el mundo con fuentes de datos confiables",
-            "description": "Confirma instantáneamente la identidad de los usuarios y cumple con los requisitos regulatorios utilizando coincidencias de Datos Maestros."
+            "title": "Verificación contra bases de datos oficiales",
+            "description": "Confirmación instantánea de identidad mediante comparación con fuentes autorizadas."
         },
         "verification": {
             "title": "Verificación global más inteligente",
@@ -602,7 +602,7 @@
         },
         "keyFeatures": {
             "title": "Características clave",
-            "description": "Amplía tu alcance, adapta tu flujo de trabajo y crea una experiencia más fluida para tus usuarios",
+            "description": "Alcance global, configuración flexible y experiencia fluida para usuarios",
             "items": {
                 "globalReach": {
                     "title": "Alcance global que escala",
@@ -645,12 +645,12 @@
     "phoneAndEmailValidation": {
         "meta": {
             "title": "Validación de Teléfono y Email | Folio Wallet",
-            "description": "Confirma la propiedad y detecta detalles de contacto riesgosos con validación en tiempo real."
+            "description": "Confirmación de propiedad y detección de contactos sospechosos."
         },
         "hero": {
             "tagline": "Validación de teléfono y email",
-            "title": "Validación rápida de teléfono y email",
-            "description": "Verifica si los números de teléfono y direcciones de email son reales y realmente pertenecen a tus usuarios."
+            "title": "Verificación de datos de contacto",
+            "description": "Confirma que el teléfono y email realmente pertenecen al usuario."
         },
         "why": {
             "title": "Por qué verificar teléfono y email",
@@ -724,12 +724,12 @@
     "nfcIdentityScan": {
         "meta": {
             "title": "Escaneo de Identidad NFC | Folio Wallet",
-            "description": "Lee datos seguros de chips de identificaciones y pasaportes compatibles para el nivel más alto de autenticidad documental."
+            "description": "Lectura de datos protegidos del chip de pasaportes e IDs para máxima autenticidad."
         },
         "hero": {
             "tagline": "Escaneo de identidad NFC",
-            "title": "Detecta fraude de pasaporte e ID al instante",
-            "description": "Usa NFC para leer datos embebidos en el chip de pasaportes e identificaciones, agregando una capa de seguridad extra sin agregar verificación al usuario."
+            "title": "Detección instantánea de documentos falsificados",
+            "description": "Lectura NFC del chip de pasaportes e IDs: seguridad adicional sin pasos extra."
         },
         "verification": {
             "title": "Verificación de pasaporte e ID más fuerte con NFC",
@@ -806,12 +806,12 @@
     "dynamicFlow": {
         "meta": {
             "title": "Flujo Dinámico | Folio Wallet",
-            "description": "Coordina verificaciones de identidad con lógica flexible para crear viajes de verificación adaptativos."
+            "description": "Flujos de verificación flexibles que se adaptan al nivel de riesgo."
         },
         "hero": {
             "tagline": "Flujo dinámico",
-            "title": "Verificación de identidad que encuentra el equilibrio adecuado",
-            "description": "Adapta la verificación en tiempo real usando señales de riesgo para reducir el fraude mientras mantienes la experiencia fluida."
+            "title": "Verificación que se adapta al riesgo",
+            "description": "Ajuste automático de la profundidad de verificación según señales de riesgo en tiempo real."
         },
         "howItWorks": {
             "title": "Cómo funciona",
@@ -834,7 +834,7 @@
         },
         "keyFeatures": {
             "title": "Características clave",
-            "description": "Todo lo que necesitas para diseñar viajes de identidad confiables",
+            "description": "Herramientas para construir flujos de verificación confiables",
             "items": {
                 "flexible": {
                     "title": "Métodos de verificación flexibles",
@@ -897,12 +897,12 @@
     "behaviorAnálisis": {
         "meta": {
             "title": "Análisis de Comportamiento | Folio Wallet",
-            "description": "Analiza señales de comportamiento, dispositivo y red para identificar riesgos sin interrumpir la experiencia del usuario."
+            "description": "Detección de riesgos mediante análisis de comportamiento, dispositivo y red sin interrumpir al usuario."
         },
         "hero": {
             "tagline": "Análisis de comportamiento",
-            "title": "Descubre el fraude con señales pasivas",
-            "description": "Analiza señales de comportamiento, dispositivo y red para identificar riesgos sin interrumpir la experiencia del usuario."
+            "title": "Detección de fraude en segundo plano",
+            "description": "Análisis de comportamiento, dispositivo y red sin interrumpir la experiencia del usuario."
         },
         "features": {
             "title": "Señales pasivas para una detección de fraude más inteligente",
@@ -981,12 +981,12 @@
     "reviewWorkspace": {
         "meta": {
             "title": "Espacio de Revisión | Folio Wallet",
-            "description": "Investiga usuarios y empresas más rápido con herramientas flexibles que se adaptan a tu proceso de revisión."
+            "description": "Revisión rápida de usuarios y empresas con herramientas adaptadas a tu proceso."
         },
         "hero": {
             "tagline": "Espacio de revisión",
-            "title": "Una forma más simple de gestionar casos",
-            "description": "Investiga usuarios y empresas más rápido con herramientas flexibles que se adaptan a tu proceso de revisión y reducen el esfuerzo manual."
+            "title": "Gestión de casos de verificación simplificada",
+            "description": "Revisión rápida de usuarios y empresas con herramientas adaptadas a tu proceso."
         },
         "features": {
             "title": "Revisa e investiga con confianza",
@@ -1020,7 +1020,7 @@
         },
         "keyFeatures": {
             "title": "Características clave",
-            "description": "Diseña un proceso de revisión de casos claro y escalable",
+            "description": "Proceso de revisión claro y escalable",
             "layouts": {
                 "title": "Diseños de casos flexibles",
                 "description": "Configura vistas de casos y secciones para coincidir con diferentes escenarios de revisión."
@@ -1089,12 +1089,12 @@
     "credentialIssuance": {
         "meta": {
             "title": "Emisión de Credenciales | Folio Wallet",
-            "description": "Crea credenciales digitales a prueba de manipulaciones para identidades, certificados y permisos."
+            "description": "Credenciales digitales seguras: IDs, certificados y licencias. Entrega instantánea a billeteras digitales."
         },
         "hero": {
             "tagline": "Emisión de credenciales",
-            "title": "Emite credenciales verificables a escala",
-            "description": "Crea credenciales digitales a prueba de manipulaciones para identidades, certificados y permisos. Entrégalas a las billeteras de los usuarios con control total del ciclo de vida."
+            "title": "Emisión masiva de credenciales digitales",
+            "description": "Credenciales digitales seguras: IDs, certificados y licencias. Entrega instantánea a billeteras con control total en cada etapa."
         },
         "overview": {
             "title": "Infraestructura de credenciales confiable",
@@ -1128,7 +1128,7 @@
         },
         "keyFeatures": {
             "title": "Características clave",
-            "description": "Todo lo que necesitas para emitir, gestionar y entregar credenciales verificables",
+            "description": "Conjunto completo de herramientas para emitir y gestionar credenciales",
             "w3c": {
                 "title": "Credenciales Verificables W3C",
                 "description": "Emite credenciales que siguen el estándar W3C para máxima interoperabilidad."
@@ -1182,8 +1182,8 @@
             }
         },
         "cta": {
-            "title": "Construyamos tu ecosistema de credenciales",
-            "description": "Habla con nuestro equipo para explorar cómo Folio puede ayudarte a emitir y gestionar credenciales verificables."
+            "title": "Hablemos de emisión de credenciales",
+            "description": "Cuéntanos tus necesidades y te ayudamos a construir la infraestructura."
         },
         "faq": {
             "title": "Preguntas frecuentes",

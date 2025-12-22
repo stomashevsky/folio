@@ -84,8 +84,8 @@
         },
         "hero": {
             "tagline": "Cumplimiento de edad",
-            "title": "Servicio de verificación de edad para cumplimiento global",
-            "description": "Folio te ayuda a confirmar la edad del usuario de forma rápida y segura en cualquier lugar del mundo. Eliges métodos de verificación que coincidan con tu nivel de riesgo, desde comprobaciones anónimas privadas hasta verificación de identidad completa, mientras te mantienes alineado con los estándares globales, incluidos GDPR, COPPA, DSA y otros."
+            "title": "Verificación de edad según estándares globales",
+            "description": "Confirmación de edad rápida y segura en cualquier país. Desde verificación anónima hasta identificación completa: cumplimiento con GDPR, COPPA y DSA."
         },
         "ageChecks": {
             "title": "Verificaciones de edad sin verificación",
@@ -157,8 +157,8 @@
             }
         },
         "cta": {
-            "title": "Trae una verificación de edad precisa a tu producto",
-            "description": "Folio te ayuda a proteger a los usuarios, satisfacer a los reguladores y mantener una experiencia fluida. Habla con nuestro equipo para diseñar un flujo de garantía de edad que se adapte a tu producto.",
+            "title": "Agrega verificación de edad a tu producto",
+            "description": "Protege usuarios y cumple con regulaciones sin afectar la experiencia.",
             "button": "Ponte en contacto"
         }
     },
@@ -169,8 +169,8 @@
         },
         "hero": {
             "tagline": "Alta de clientes",
-            "title": "KYC simplificado para negocios regulados",
-            "description": "Verificación de clientes rápida, conforme y lista para auditorías. Registra clientes de forma remota en minutos mientras cumples con los requisitos AML, KYC y CDD a nivel mundial. Deja de perseguir documentos y mantente listo para auditorías las 24 horas."
+            "title": "KYC rápido para negocios regulados",
+            "description": "Verificación de clientes en minutos: cumplimiento AML, KYC y CDD global. Preparado para auditorías 24/7."
         },
         "verification": {
             "title": "Verificación de clientes hecha simple",
@@ -204,7 +204,7 @@
         },
         "keyFeatures": {
             "title": "Características clave",
-            "description": "Todo lo que necesitas para verificar clientes y cumplir con los requisitos de cumplimiento",
+            "description": "Conjunto completo de herramientas para verificación y cumplimiento",
             "globalId": {
                 "title": "Soporte de ID global",
                 "description": "Verifica pasaportes, licencias de conducir e identificaciones nacionales de más de 200 países y regiones."
@@ -266,8 +266,8 @@
             }
         },
         "cta": {
-            "title": "Simplifica tu alta de clientes hoy",
-            "description": "Convierte horas de trabajo manual de cumplimiento en minutos. Habla con nuestro equipo para ver cómo Folio puede agilizar tu proceso de verificación de clientes.",
+            "title": "Simplifica tu alta de clientes",
+            "description": "Horas de trabajo manual convertidas en minutos. Hablemos de cómo Folio puede ayudarte.",
             "button": "Ponte en contacto"
         }
     },
