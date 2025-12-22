@@ -48,6 +48,7 @@ export default function ImageWithPlaceholder({
 }: ImageWithPlaceholderProps) {
   const [isLoading, setIsLoading] = useState(true)
   const imgRef = useRef<HTMLImageElement>(null)
+  const prevSrcRef = useRef<string>(src)
 
   // Check if image is already loaded on mount (hydration case)
   // When React hydrates prerendered HTML, the image may already be loaded
@@ -60,8 +61,12 @@ export default function ImageWithPlaceholder({
   }, [])
 
   // Reset loading state when src changes - critical for accordion image switching
+  // Skip on initial mount to allow hydration check to work
   useEffect(() => {
-    setIsLoading(true)
+    if (prevSrcRef.current !== src) {
+      setIsLoading(true)
+      prevSrcRef.current = src
+    }
   }, [src])
 
   // Determine animation class based on loading state and animateOnMount prop
