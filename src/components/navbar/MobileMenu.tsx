@@ -26,6 +26,7 @@ interface MobileMenuProps {
   isOpen: boolean
   onClose: () => void
   bannerVisible?: boolean
+  bannerHeight?: number
 }
 
 const SOLUTIONS_ITEMS = [
@@ -123,12 +124,10 @@ const PLATFORM_ITEMS = [
   },
 ]
 
-// Navbar height (64px) + banner height when visible
-// Mobile banner: ~120px per Figma design
+// Navbar height
 const NAVBAR_HEIGHT = 64
-const BANNER_HEIGHT_MOBILE = 120
 
-export default function MobileMenu({ isOpen, onClose, bannerVisible = false }: MobileMenuProps) {
+export default function MobileMenu({ isOpen, onClose, bannerVisible = false, bannerHeight = 0 }: MobileMenuProps) {
   const { t } = useTranslation('common')
   const navigate = useNavigate()
   const location = useLocation()
@@ -136,9 +135,10 @@ export default function MobileMenu({ isOpen, onClose, bannerVisible = false }: M
   const [showSolutionsSubmenu, setShowSolutionsSubmenu] = useState(false)
   const [showPlatformSubmenu, setShowPlatformSubmenu] = useState(false)
   
-  // Calculate offset based on banner visibility (mobile only, lg:hidden)
-  // Mobile: 64 + 140 = 204px when banner visible
-  const mobileOffset = bannerVisible ? NAVBAR_HEIGHT + BANNER_HEIGHT_MOBILE : NAVBAR_HEIGHT
+  // Calculate offset based on banner visibility using dynamic banner height
+  const mobileOffset = bannerVisible && bannerHeight > 0 
+    ? NAVBAR_HEIGHT + bannerHeight 
+    : NAVBAR_HEIGHT
 
   // Reset submenu state when menu closes
   useEffect(() => {

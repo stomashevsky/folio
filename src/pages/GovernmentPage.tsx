@@ -97,7 +97,7 @@ export default function GovernmentPage() {
                 {t('government.hero.description')}
               </p>
             </div>
-            <div className="flex flex-col gap-3 items-start relative shrink-0">
+            <div className="flex flex-wrap gap-3 items-start relative shrink-0">
               <Button
                 onClick={() => {
                   navigate(getLocalizedPath('/government/playground'))
@@ -106,7 +106,6 @@ export default function GovernmentPage() {
                   }, 100)
                 }}
                 variant="primary"
-                fullWidth
               >
                 {t('government.cta.playgroundButton')}
               </Button>
@@ -115,7 +114,6 @@ export default function GovernmentPage() {
                   window.location.href = 'mailto:contact@folio.id'
                 }}
                 variant="outline"
-                fullWidth
               >
                 {t('government.cta.button')}
               </Button>

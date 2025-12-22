@@ -14,7 +14,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const location = useLocation()
   const navigate = useNavigate()
-  const { isBannerVisible } = useLanguageBanner()
+  const { isBannerVisible, bannerHeight } = useLanguageBanner()
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
@@ -36,18 +36,18 @@ export default function Navbar() {
 
   useBodyScrollLock(isMobileMenuOpen)
 
-  // Navbar position: below banner when visible
-  // Mobile banner: ~120px, Desktop banner: 68px (from Figma)
-  const topOffset = isBannerVisible 
-    ? 'top-[120px] md:top-[68px]' 
-    : 'top-0'
+  // Navbar position: below banner when visible, using dynamic height
+  const topOffset = isBannerVisible && bannerHeight > 0
+    ? `${bannerHeight}px`
+    : '0px'
 
   return (
     <>
-      <MobileMenu isOpen={isMobileMenuOpen} onClose={toggleMobileMenu} bannerVisible={isBannerVisible} />
+      <MobileMenu isOpen={isMobileMenuOpen} onClose={toggleMobileMenu} bannerVisible={isBannerVisible} bannerHeight={bannerHeight} />
 
       <div 
-        className={`bg-white fixed left-0 right-0 shrink-0 w-full z-[70] transition-[top] duration-200 ${topOffset}`}
+        className="bg-white fixed left-0 right-0 shrink-0 w-full z-[70] transition-[top] duration-200"
+        style={{ top: topOffset }}
       >
         <div className="flex flex-col gap-6 lg:gap-0 items-center px-0 py-4 w-full">
           <div className="lg:hidden flex flex-col gap-6 items-start justify-center w-full px-6 py-0 relative shrink-0">

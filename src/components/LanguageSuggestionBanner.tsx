@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useLanguage } from '../i18n/LanguageProvider'
 import { SUPPORTED_LANGUAGES, LANGUAGE_NAMES, type SupportedLanguage } from '../i18n'
@@ -7,24 +7,18 @@ import xIcon from '../assets/icons/X.svg'
 
 const LANGUAGE_PREFERENCE_KEY = 'folio-language-preference'
 
-// Banner height in pixels (measured from Figma)
-// Desktop: h-[68px] as per Figma (py-4 + single row)
-// Mobile: py-6 (48px) + text row (~20px) + gap (16px) + buttons (36px) = ~120px
-export const BANNER_HEIGHT_DESKTOP = 68
-export const BANNER_HEIGHT_MOBILE = 120
-
 /**
  * Spacer component that reserves space for the fixed banner.
  * Place this in the document flow to push content down when banner is visible.
  */
 export function BannerSpacer() {
-  const { isBannerVisible } = useLanguageBanner()
+  const { isBannerVisible, bannerHeight } = useLanguageBanner()
   
-  if (!isBannerVisible) {
+  if (!isBannerVisible || bannerHeight === 0) {
     return null
   }
   
-  return <div className="h-[120px] md:h-[68px]" aria-hidden="true" />
+  return <div style={{ height: bannerHeight }} aria-hidden="true" />
 }
 
 /**
@@ -36,9 +30,35 @@ export function BannerSpacer() {
 export default function LanguageSuggestionBanner() {
   const { t } = useTranslation('common')
   const { currentLanguage, changeLanguage } = useLanguage()
-  const { setBannerVisible } = useLanguageBanner()
+  const { setBannerVisible, setBannerHeight } = useLanguageBanner()
   const [isVisible, setIsVisible] = useState(false)
   const [suggestedLanguage, setSuggestedLanguage] = useState<SupportedLanguage | null>(null)
+  const bannerRef = useRef<HTMLDivElement>(null)
+
+  // Measure banner height and share via context
+  const updateBannerHeight = useCallback(() => {
+    if (bannerRef.current && isVisible) {
+      const height = bannerRef.current.offsetHeight
+      setBannerHeight(height)
+    }
+  }, [isVisible, setBannerHeight])
+
+  useEffect(() => {
+    updateBannerHeight()
+    
+    // Update on resize
+    window.addEventListener('resize', updateBannerHeight)
+    return () => window.removeEventListener('resize', updateBannerHeight)
+  }, [updateBannerHeight])
+
+  // Additional effect to measure after render
+  useEffect(() => {
+    if (isVisible) {
+      // Small delay to ensure DOM is updated
+      const timer = setTimeout(updateBannerHeight, 50)
+      return () => clearTimeout(timer)
+    }
+  }, [isVisible, updateBannerHeight])
 
   useEffect(() => {
     // Get browser language (e.g., "en-US" -> "en")
@@ -97,39 +117,40 @@ export default function LanguageSuggestionBanner() {
 
   return (
     <div 
+      ref={bannerRef}
       className="fixed top-0 left-0 right-0 z-[80] bg-[#09090b] text-white"
       role="dialog"
       aria-label={t('language_banner.aria_label', 'Language suggestion')}
     >
-      {/* Mobile: py-6 (24px), Desktop: py-4 (16px) as per Figma */}
+      {/* Container: max-w-1280, px-6, Mobile: py-6, Desktop: py-4 */}
       <div className="mx-auto max-w-[1280px] px-6 py-6 md:py-4">
-        {/* Desktop: single row | Mobile: two rows with gap-4 */}
-        <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-start md:items-center">
+        {/* Mobile: column layout with gap-4, Desktop: row layout with items-center */}
+        <div className="flex flex-col md:flex-row gap-4 md:gap-6 md:items-center">
           
-          {/* Text + Close button row - items-start to align X to top */}
+          {/* Text row with close button (mobile only shows close in this row) */}
           <div className="flex items-start gap-6 w-full md:flex-1 md:items-center">
-            <p className="text-sm leading-5 flex-1">
+            <p className="text-base leading-6 flex-1">
               {t('language_banner.message', {
                 defaultValue: 'Would you like to view this page in {{language}}?',
                 language: suggestedName
               })}
             </p>
             
-            {/* Close button - visible only on mobile in first row, aligned to top */}
+            {/* Close button - mobile: in text row, aligned to top */}
             <button
               onClick={handleClose}
-              className="md:hidden flex items-center justify-center size-9 rounded-md shrink-0"
+              className="md:hidden flex items-center justify-center size-9 rounded-md shrink-0 self-start"
               aria-label={t('language_banner.close', 'Close')}
             >
               <img src={xIcon} alt="" aria-hidden="true" className="w-5 h-5 opacity-60" style={{ filter: 'invert(1)' }} />
             </button>
           </div>
           
-          {/* Buttons row - inline with flex-wrap on both desktop and mobile */}
-          <div className="flex flex-row flex-wrap gap-3 items-center w-full md:w-auto shrink-0">
+          {/* Buttons row - flex-wrap for proper wrapping on mobile */}
+          <div className="flex flex-wrap gap-3 items-center w-full md:w-auto shrink-0">
             <button 
               onClick={handleKeep}
-              className="h-9 px-4 py-2 text-sm font-medium rounded-full border border-white text-white hover:bg-white/10 transition-colors whitespace-nowrap shrink-0"
+              className="h-9 px-4 py-2 text-sm font-medium rounded-full border border-white text-white hover:bg-white/10 transition-colors whitespace-nowrap"
             >
               {t('language_banner.keep_current', {
                 defaultValue: 'Keep {{language}}',
@@ -138,7 +159,7 @@ export default function LanguageSuggestionBanner() {
             </button>
             <button 
               onClick={handleSwitch}
-              className="h-9 px-4 py-2 text-sm font-medium rounded-full bg-white text-[#0a0a0a] hover:bg-white/90 transition-colors whitespace-nowrap shrink-0 shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)]"
+              className="h-9 px-4 py-2 text-sm font-medium rounded-full bg-white text-[#0a0a0a] hover:bg-white/90 transition-colors whitespace-nowrap shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)]"
             >
               {t('language_banner.switch_to', {
                 defaultValue: 'Switch to {{language}}',
@@ -146,7 +167,7 @@ export default function LanguageSuggestionBanner() {
               })}
             </button>
             
-            {/* Close button - visible only on desktop */}
+            {/* Close button - desktop only, after buttons */}
             <button
               onClick={handleClose}
               className="hidden md:flex items-center justify-center size-9 rounded-lg shrink-0"
