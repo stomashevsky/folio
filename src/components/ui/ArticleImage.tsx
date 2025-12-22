@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 interface ArticleImageProps {
   /** Image source URL */
@@ -31,9 +31,23 @@ interface ArticleImageProps {
  */
 export default function ArticleImage({ src, alt, className = '' }: ArticleImageProps) {
   const [isLoading, setIsLoading] = useState(true)
+  const imgRef = useRef<HTMLImageElement>(null)
+  const prevSrcRef = useRef<string>(src)
 
+  // Check if image is already loaded on mount (hydration case)
   useEffect(() => {
-    setIsLoading(true)
+    const img = imgRef.current
+    if (img && img.complete && img.naturalWidth > 0) {
+      setIsLoading(false)
+    }
+  }, [])
+
+  // Reset loading state when src changes - skip on initial mount
+  useEffect(() => {
+    if (prevSrcRef.current !== src) {
+      setIsLoading(true)
+      prevSrcRef.current = src
+    }
   }, [src])
 
   return (
@@ -51,6 +65,7 @@ export default function ArticleImage({ src, alt, className = '' }: ArticleImageP
     >
       <div className="relative w-full rounded-xl overflow-hidden bg-[#f5f5f5]" style={{ aspectRatio: '3/2' }}>
         <img
+          ref={imgRef}
           src={src}
           alt={alt}
           className={`absolute inset-0 w-full h-full object-cover rounded-xl transition-opacity duration-200 ${isLoading ? 'opacity-0' : 'opacity-100'} ${className}`}

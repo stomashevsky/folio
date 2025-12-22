@@ -25,7 +25,7 @@ export default function MobileDriversLicenseArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="mobile-drivers-license.p3" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="mobile-drivers-license.p3" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleH2>{t('mobile-drivers-license.h2_1')}</ArticleH2>
@@ -109,6 +109,7 @@ export default function MobileDriversLicenseArticlePage() {
 
       <ArticleParagraph>
         <Trans
+          ns="articles"
           i18nKey="mobile-drivers-license.p20"
           components={{
             LocalizedLink: <LocalizedLink to={getLocalizedPath('/government/playground')} className="underline hover:text-[#737373] transition-colors" />

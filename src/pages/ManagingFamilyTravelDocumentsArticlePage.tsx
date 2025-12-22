@@ -39,19 +39,19 @@ export default function ManagingFamilyTravelDocumentsArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="managing-family-travel-documents.p6" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="managing-family-travel-documents.p6" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="managing-family-travel-documents.p7" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="managing-family-travel-documents.p7" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="managing-family-travel-documents.p8" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="managing-family-travel-documents.p8" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="managing-family-travel-documents.p9" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="managing-family-travel-documents.p9" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleImage
@@ -72,19 +72,20 @@ export default function ManagingFamilyTravelDocumentsArticlePage() {
       <ArticleH2>{t('managing-family-travel-documents.h2_4')}</ArticleH2>
 
       <ArticleParagraph>
-        <Trans i18nKey="managing-family-travel-documents.p12" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="managing-family-travel-documents.p12" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="managing-family-travel-documents.p13" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="managing-family-travel-documents.p13" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="managing-family-travel-documents.p14" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="managing-family-travel-documents.p14" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
         <Trans
+          ns="articles"
           i18nKey="managing-family-travel-documents.p15"
           components={{
             LocalizedLink: <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors" />

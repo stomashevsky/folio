@@ -1,4 +1,4 @@
-import { useState, useEffect, VideoHTMLAttributes } from 'react'
+import { useState, useEffect, useRef, VideoHTMLAttributes } from 'react'
 
 interface VideoWithPlaceholderProps extends Omit<VideoHTMLAttributes<HTMLVideoElement>, 'onLoadedData' | 'onError'> {
   /** Video source URL */
@@ -24,10 +24,23 @@ export default function VideoWithPlaceholder({
   ...props
 }: VideoWithPlaceholderProps) {
   const [isLoading, setIsLoading] = useState(true)
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const prevSrcRef = useRef<string>(src)
 
-  // Reset loading state when src changes
+  // Check if video is already loaded on mount (hydration case)
   useEffect(() => {
-    setIsLoading(true)
+    const video = videoRef.current
+    if (video && video.readyState >= 2) {
+      setIsLoading(false)
+    }
+  }, [])
+
+  // Reset loading state when src changes - skip on initial mount
+  useEffect(() => {
+    if (prevSrcRef.current !== src) {
+      setIsLoading(true)
+      prevSrcRef.current = src
+    }
   }, [src])
 
   return (
@@ -40,6 +53,7 @@ export default function VideoWithPlaceholder({
         />
       )}
       <video
+        ref={videoRef}
         src={src}
         className={`${className} ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-200`}
         onLoadedData={() => setIsLoading(false)}

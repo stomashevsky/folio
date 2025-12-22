@@ -14,7 +14,7 @@ export default function KycAmlComplianceArticlePage() {
       slug="kyc-aml-compliance"
     >
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p1" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p1" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
@@ -28,15 +28,15 @@ export default function KycAmlComplianceArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p4" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p4" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p5" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p5" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p6" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p6" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleH2>{t('kyc-aml-compliance.h2_2')}</ArticleH2>
@@ -46,19 +46,19 @@ export default function KycAmlComplianceArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p8" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p8" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p9" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p9" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p10" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p10" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p11" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p11" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleH2>{t('kyc-aml-compliance.h2_3')}</ArticleH2>
@@ -68,23 +68,23 @@ export default function KycAmlComplianceArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p13" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p13" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p14" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p14" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p15" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p15" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p16" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p16" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p17" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p17" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleH2>{t('kyc-aml-compliance.h2_4')}</ArticleH2>
@@ -94,23 +94,23 @@ export default function KycAmlComplianceArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p19" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p19" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p20" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p20" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p21" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p21" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p22" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p22" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p23" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p23" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleH2>{t('kyc-aml-compliance.h2_5')}</ArticleH2>
@@ -120,23 +120,23 @@ export default function KycAmlComplianceArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p25" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p25" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p26" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p26" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p27" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p27" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p28" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p28" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p29" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p29" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleH2>{t('kyc-aml-compliance.h2_6')}</ArticleH2>
@@ -146,23 +146,24 @@ export default function KycAmlComplianceArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p31" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p31" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p32" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p32" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p33" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p33" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="kyc-aml-compliance.p34" components={{ strong: <strong /> }} />
+        <Trans ns="articles" i18nKey="kyc-aml-compliance.p34" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
         <Trans
+          ns="articles"
           i18nKey="kyc-aml-compliance.p35"
           components={{
             LocalizedLink: <LocalizedLink to="/platform/id-verification" className="underline hover:text-[#737373] transition-colors" />

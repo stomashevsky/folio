@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import type { BlogArticle } from '../../data/blogArticles'
@@ -14,14 +14,29 @@ interface BlogImageProps {
 
 function BlogImage({ src, alt, priority = false }: BlogImageProps) {
   const [isLoading, setIsLoading] = useState(true)
+  const imgRef = useRef<HTMLImageElement>(null)
+  const prevSrcRef = useRef<string>(src)
 
+  // Check if image is already loaded on mount (hydration case)
   useEffect(() => {
-    setIsLoading(true)
+    const img = imgRef.current
+    if (img && img.complete && img.naturalWidth > 0) {
+      setIsLoading(false)
+    }
+  }, [])
+
+  // Reset loading state when src changes - skip on initial mount
+  useEffect(() => {
+    if (prevSrcRef.current !== src) {
+      setIsLoading(true)
+      prevSrcRef.current = src
+    }
   }, [src])
 
   return (
     <div className="relative rounded-lg w-full aspect-[3/2] overflow-hidden bg-[#f5f5f5]">
       <img 
+        ref={imgRef}
         src={src} 
         alt={alt}
         className={`absolute inset-0 w-full h-full object-cover object-center rounded-lg transition-all duration-300 ease-out group-hover:scale-105 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
