@@ -14,14 +14,17 @@ export function useLocalizedPath() {
   /**
    * Converts a path to a localized path with the current language prefix
    * @param path - The path to localize (e.g., "/wallet" or "wallet")
-   * @returns The localized path (e.g., "/en/wallet")
+   * @returns The localized path with trailing slash (e.g., "/en/wallet/")
    */
   const getLocalizedPath = (path: string): string => {
     // Remove leading slash if present for consistent handling
     const cleanPath = path.startsWith('/') ? path.slice(1) : path
     
-    // Return the localized path
-    return `/${currentLang}/${cleanPath}`.replace(/\/+$/, '') || `/${currentLang}`
+    // Return the localized path with trailing slash for consistency with GitHub Pages
+    if (!cleanPath) {
+      return `/${currentLang}/`
+    }
+    return `/${currentLang}/${cleanPath}/`
   }
 
   return {
