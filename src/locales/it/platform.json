@@ -262,7 +262,7 @@
       }
     },
     "smartDetection": {
-      "title": "Rilevamento presenza intelligente",
+      "title": "Verifica di presenza intelligente",
       "genAi": {
         "title": "Rilevamento spoofing GenAI",
         "description": "Individua inconsistenze visive legate a deepfake e volti sintetici, anche quando non sono visibili all'occhio umano."
@@ -295,13 +295,13 @@
     "faq": {
       "title": "Domande frequenti",
       "items": [
-        { "q": "Cos'è il rilevamento della presenza?", "a": "Il rilevamento della presenza conferma che la persona davanti alla fotocamera è reale e fisicamente presente. Previene tentativi di spoofing usando foto, video, maschere o deepfake." },
+        { "q": "Cos'è la verifica di presenza?", "a": "La verifica di presenza conferma che la persona davanti alla fotocamera è reale e fisicamente presente. Previene tentativi di spoofing usando foto, video, maschere o deepfake." },
         { "q": "Quali tipi di attacchi previene il controllo di presenza?", "a": "Folio rileva attacchi di presentazione (foto stampate, schermi, maschere), attacchi injection (feed fotocamera manipolati), deepfake, volti sintetici e altri tentativi di frode generati da AI." },
-        { "q": "Il rilevamento presenza è certificato?", "a": "Sì. Il rilevamento presenza di Folio soddisfa lo standard ISO/IEC 30107-3 per il rilevamento attacchi di presentazione, validato da un laboratorio di test accreditato NIST." },
+        { "q": "La verifica di presenza è certificata?", "a": "Sì. La verifica di presenza di Folio soddisfa lo standard ISO/IEC 30107-3 per il rilevamento attacchi di presentazione, validato da un laboratorio di test accreditato NIST." },
         { "q": "Come funziona la presenza passiva?", "a": "La presenza passiva analizza più frame e segnali visivi senza richiedere all'utente di eseguire azioni specifiche. Questo crea un'esperienza più fluida mantenendo una forte sicurezza." },
-        { "q": "Il rilevamento presenza funziona su tutti i dispositivi?", "a": "Sì. Folio è progettato per funzionare in modo coerente su diversi smartphone, sistemi operativi, qualità delle fotocamere e condizioni di illuminazione." },
+        { "q": "La verifica di presenza funziona su tutti i dispositivi?", "a": "Sì. Folio è progettato per funzionare in modo coerente su diversi smartphone, sistemi operativi, qualità delle fotocamere e condizioni di illuminazione." },
         { "q": "Quanto è veloce la verifica della presenza?", "a": "La maggior parte dei controlli di presenza si completa in meno di due secondi. L'acquisizione automatica e la guida in tempo reale aiutano gli utenti a completare il processo rapidamente." },
-        { "q": "Il rilevamento presenza può identificare dispositivi compromessi?", "a": "Sì. Folio rileva emulatori, dispositivi con root o jailbreak e altri ambienti non sicuri che gli attaccanti usano per iniettare immagini o video manipolati." }
+        { "q": "La verifica di presenza può identificare dispositivi compromessi?", "a": "Sì. Folio rileva emulatori, dispositivi con root o jailbreak e altri ambienti non sicuri che gli attaccanti usano per iniettare immagini o video manipolati." }
       ]
     }
   },
@@ -357,7 +357,7 @@
       },
       "resistance": {
         "title": "Forte resistenza agli attacchi",
-        "description": "Proteggi gli utenti da deepfake, volti sintetici, attacchi di presentazione e tentativi di injection con rilevamento avanzato della presenza."
+        "description": "Proteggi gli utenti da deepfake, volti sintetici, attacchi di presentazione e tentativi di injection con verifica di presenza avanzata."
       },
       "customizable": {
         "title": "Riconoscimento personalizzabile",
@@ -430,7 +430,7 @@
       "items": [
         { "q": "Come funziona il riconoscimento facciale?", "a": "Folio confronta un selfie dal vivo con la foto su un documento d'identità. Modelli AI avanzati analizzano le caratteristiche facciali per confermare che la persona che presenta il documento sia la stessa ritratta su di esso." },
         { "q": "Quanto è accurato il riconoscimento facciale?", "a": "Folio raggiunge alti tassi di accuratezza validati da laboratori di test indipendenti. Il sistema è progettato per minimizzare sia le false accettazioni che i falsi rifiuti, mantenendo prestazioni coerenti tra i gruppi demografici." },
-        { "q": "Il riconoscimento facciale può rilevare deepfake e tentativi di spoofing?", "a": "Sì. Folio include il rilevamento della presenza che identifica attacchi di presentazione, deepfake, volti sintetici e tentativi di injection. Vengono analizzati più frame per assicurarsi che il selfie provenga da una persona reale." },
+        { "q": "Il riconoscimento facciale può rilevare deepfake e tentativi di spoofing?", "a": "Sì. Folio include la verifica di presenza che identifica attacchi di presentazione, deepfake, volti sintetici e tentativi di injection. Vengono analizzati più frame per assicurarsi che il selfie provenga da una persona reale." },
         { "q": "Il riconoscimento facciale è orientato verso certi gruppi demografici?", "a": "Folio usa modelli addestrati su dati raccolti responsabilmente e testati per non mostrare bias materiali per età, sesso o tono della pelle. Valutazioni di terze parti confermano prestazioni eque tra i gruppi demografici." },
         { "q": "Quanto tempo richiede un controllo di riconoscimento facciale?", "a": "La maggior parte dei controlli si completa in meno di due secondi. L'acquisizione automatica e la guida in tempo reale aiutano gli utenti a scattare selfie di qualità rapidamente, minimizzando i ritardi." },
         { "q": "Cosa succede se il riconoscimento facciale fallisce?", "a": "Se l'abbinamento iniziale non è conclusivo, gli utenti possono riprovare con illuminazione o posizionamento migliori. I fallimenti persistenti possono essere indirizzati alla revisione manuale dove il tuo team esamina le immagini." },

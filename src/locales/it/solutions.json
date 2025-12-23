@@ -170,7 +170,7 @@
     "hero": {
       "tagline": "Onboarding clienti",
       "title": "KYC semplificato per aziende regolamentate",
-      "description": "Verifica clienti veloce, conforme e pronta per l'audit. Onboarding clienti remoto in pochi minuti rispettando i requisiti AML, KYC e CDD globali. Basta rincorrere documenti e resta pronto per l'audit 24/7."
+      "description": "Verifica clienti veloce, conforme e pronta per gli audit. Onboarding clienti remoto in pochi minuti rispettando i requisiti AML, KYC e CDD globali. Basta inseguire documenti: sei sempre pronto per le verifiche."
     },
     "verification": {
       "title": "Verifica clienti semplificata",
@@ -234,7 +234,7 @@
         "description": "Il riconoscimento facciale AI confronta selfie dal vivo con foto ID per confermare l'identità."
       },
       "livenessCheck": {
-        "title": "Rilevamento della presenza",
+        "title": "Verifica di presenza",
         "description": "Previeni le frodi con controlli avanzati di presenza che assicurano che la persona sia fisicamente presente."
       }
     },
