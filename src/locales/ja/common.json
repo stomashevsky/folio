@@ -7,20 +7,20 @@
     "blog": "ブログ",
     "getInTouch": "お問い合わせ",
     "backToMainMenu": "メインメニューに戻る",
-    "clientOnboardingDesc": "規制対象企業向けのKYC認証を効率化",
-    "ageComplianceDesc": "制限付き商品やサービスの年齢要件を確認",
-    "digitalTicketingDesc": "不正防止機能付きデジタルチケットの作成・管理・検証",
-    "idVerificationDesc": "パスポート、IDカード、その他公的書類の本人確認",
-    "nfcIdentityScanDesc": "対応IDおよびパスポートのICチップデータを読取",
-    "documentIntelligenceDesc": "提出書類からデータを抽出・分析",
-    "faceMatchDesc": "自撮り写真と公的写真を照合して本人確認",
-    "livenessCheckDesc": "本人が実際に存在することを確認",
-    "dataSourceChecksDesc": "信頼できるデータベースでユーザー情報を検証",
-    "phoneAndEmailValidationDesc": "所有権確認とリスクのある連絡先を検出",
-    "behaviorInsightsDesc": "デバイスと利用パターンで追加のコンテキストを取得",
-    "dynamicFlowDesc": "柔軟なロジックで本人確認を調整",
-    "reviewWorkspaceDesc": "認証案件の整理と解決",
-    "credentialIssuanceDesc": "検証可能なクレデンシャルを作成しウォレットに配信"
+    "clientOnboardingDesc": "規制対象企業向けKYC認証を効率化",
+    "ageComplianceDesc": "制限商品・サービスの年齢要件を確認",
+    "digitalTicketingDesc": "不正防止付きデジタルチケットの発行・管理・検証",
+    "idVerificationDesc": "パスポート、IDカード等の公的書類を検証",
+    "nfcIdentityScanDesc": "対応ID・パスポートのICチップデータを読取",
+    "documentIntelligenceDesc": "提出書類からデータを自動抽出・分析",
+    "faceMatchDesc": "自撮りと公的写真を照合し本人確認",
+    "livenessCheckDesc": "本人の実在性をリアルタイムで確認",
+    "dataSourceChecksDesc": "信頼できるデータベースで情報を検証",
+    "phoneAndEmailValidationDesc": "所有権確認とリスク連絡先の検出",
+    "behaviorInsightsDesc": "デバイス・利用パターンから追加情報を取得",
+    "dynamicFlowDesc": "柔軟なロジックで検証フローを調整",
+    "reviewWorkspaceDesc": "検証案件の整理と解決",
+    "credentialIssuanceDesc": "検証可能なクレデンシャルを発行・配信"
   },
   "footer": {
     "address": "住所：",
@@ -70,8 +70,8 @@
     "select": "言語を選択"
   },
   "getTheApp": {
-    "title": "いつでもどこでもFolioと一緒に",
-    "description": "書類を整理・同期して、iOSとAndroidですぐにアクセス。"
+    "title": "いつでもどこでもFolioと",
+    "description": "書類を整理・同期。iOSとAndroidでいつでもアクセス。"
   },
   "blog": {
     "title": "Folioブログ",

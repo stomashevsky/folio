@@ -234,7 +234,7 @@
         "description": "La reconnaissance faciale par IA compare les selfies en direct aux photos d'identité pour confirmer l'identité."
       },
       "livenessCheck": {
-        "title": "Détection de présence",
+        "title": "Vérification de présence",
         "description": "Prévenez la fraude avec des contrôles de présence avancés garantissant que la personne est physiquement présente."
       }
     },

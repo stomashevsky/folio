@@ -262,7 +262,7 @@
       }
     },
     "smartDetection": {
-      "title": "Détection de présence intelligente",
+      "title": "Vérification de présence intelligente",
       "genAi": {
         "title": "Détection d'usurpation GenAI",
         "description": "Repérez les incohérences visuelles liées aux deepfakes et visages synthétiques, même quand elles ne sont pas visibles à l'œil humain."

@@ -16,7 +16,7 @@
   "platform": {
     "tagline": "プラットフォーム",
     "title": "大規模な本人確認を実現",
-    "description": "本人確認、ドキュメント分析、生体認証など。顧客確認と不正防止に必要なすべてを提供。",
+    "description": "本人確認、ドキュメント分析、生体認証をワンストップで。顧客確認と不正防止に必要なすべてを提供。",
     "carouselTitle": "本人確認に必要なすべて"
   },
   "solutions": {
@@ -48,18 +48,18 @@
   },
   "security": {
     "title": "信頼できるセキュリティ",
-    "description": "業界最高水準のセキュリティでデータを保護します。",
+    "description": "業界最高水準のセキュリティでデータを保護。",
     "endToEndEncryption": {
       "title": "エンドツーエンド暗号化",
       "description": "あなただけが管理する鍵でデータを暗号化"
     },
     "zeroKnowledge": {
       "title": "ゼロ知識アーキテクチャ",
-      "description": "私たちはあなたの書類にアクセスできません"
+      "description": "Folioでもあなたの書類にアクセスできません"
     },
     "biometric": {
-      "title": "生体認証による保護",
-      "description": "Face IDと指紋認証で安全性を強化"
+      "title": "生体認証で保護",
+      "description": "Face IDと指紋認証でセキュリティを強化"
     }
   }
 }
