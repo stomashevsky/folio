@@ -5,29 +5,8 @@ interface Review {
   name: string
   rating: number
   text: string
-  source: 'App Store' | 'Google Play'
+  source: string
 }
-
-const REVIEWS: Review[] = [
-  {
-    name: 'Maria S.',
-    rating: 5,
-    text: 'Finally an app that keeps all my travel documents organized. I used to have screenshots scattered everywhere, now everything is in one place with automatic reminders before expiry.',
-    source: 'App Store',
-  },
-  {
-    name: 'James T.',
-    rating: 5,
-    text: 'The email forwarding feature is a game changer. I just forward my booking confirmations and they appear perfectly formatted in the app. Makes travel so much easier.',
-    source: 'Google Play',
-  },
-  {
-    name: 'Sophie L.',
-    rating: 5,
-    text: 'Love how it extracts all the important details from my documents automatically. The shared folders feature is perfect for family trips. Highly recommend!',
-    source: 'App Store',
-  },
-]
 
 function StarRating({ rating }: { rating: number }) {
   return (
@@ -73,6 +52,7 @@ function ReviewCard({ review }: { review: Review }) {
 
 export default function ReviewsSection() {
   const { t } = useTranslation('wallet')
+  const reviews = t('reviews.items', { returnObjects: true }) as Review[]
 
   return (
     <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
@@ -85,14 +65,14 @@ export default function ReviewsSection() {
         
         {/* Desktop: 3 columns */}
         <div className="hidden md:grid grid-cols-3 gap-6 items-stretch w-full">
-          {REVIEWS.map((review, index) => (
+          {reviews.map((review, index) => (
             <ReviewCard key={index} review={review} />
           ))}
         </div>
         
         {/* Mobile: single column */}
         <div className="flex md:hidden flex-col gap-4 w-full">
-          {REVIEWS.map((review, index) => (
+          {reviews.map((review, index) => (
             <ReviewCard key={index} review={review} />
           ))}
         </div>

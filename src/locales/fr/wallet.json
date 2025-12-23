@@ -187,6 +187,26 @@
   },
   "reviews": {
     "title": "Ce que disent nos utilisateurs",
-    "description": "De vrais avis de personnes qui utilisent Folio pour organiser leurs documents et voyages."
+    "description": "De vrais avis de personnes qui utilisent Folio pour organiser leurs documents et voyages.",
+    "items": [
+      {
+        "name": "Maria S.",
+        "rating": 5,
+        "text": "Enfin une app qui organise tous mes documents de voyage. Avant, j'avais des captures d'écran éparpillées partout. Maintenant tout est au même endroit avec des rappels automatiques avant expiration.",
+        "source": "App Store"
+      },
+      {
+        "name": "James T.",
+        "rating": 5,
+        "text": "La fonction de transfert d'e-mails change tout. Je transfère mes confirmations de réservation et elles apparaissent parfaitement formatées dans l'app. Les voyages deviennent tellement plus simples.",
+        "source": "Google Play"
+      },
+      {
+        "name": "Sophie L.",
+        "rating": 5,
+        "text": "J'adore la façon dont l'app extrait automatiquement tous les détails importants de mes documents. Les dossiers partagés sont parfaits pour les voyages en famille. Je recommande vivement !",
+        "source": "App Store"
+      }
+    ]
   }
 }
