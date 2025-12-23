@@ -171,18 +171,18 @@
   },
   "passkeys": {
     "title": "Passkeysで安全にアクセス",
-    "description": "Passkeysは書類を暗号化し、あなただけがアクセスできるようにします。データはデバイス上に保存され、生体認証で保護され、Folioでさえファイルのロックを解除できません。",
+    "description": "Passkeysで書類を暗号化し、あなただけがアクセス可能に。データはデバイス上に保存され、生体認証で保護。Folioでもロックを解除できません。",
     "privateByDesign": {
-      "title": "設計段階からプライベート",
-      "description": "すべての書類はデバイス上で暗号化され、Face ID、Touch ID、またはデバイスパスコードでのみ開けます。パスワードは保存せず、あなたの情報にアクセスできません。"
+      "title": "設計からプライベート",
+      "description": "書類はデバイス上で暗号化され、Face ID、Touch ID、またはパスコードでのみ開けます。パスワードは保存せず、情報にアクセスできません。"
     },
     "simpleToUse": {
       "title": "シンプルな使い心地",
-      "description": "デバイスの生体認証で即座にサインイン。パスワードの作成、記憶、リセットは不要。アクセスは常に高速で簡単です。"
+      "description": "デバイスの生体認証で即座にサインイン。パスワードの作成、記憶、リセットは不要。いつでも高速で簡単。"
     },
     "worksEverywhere": {
       "title": "どこでも使える",
-      "description": "iPhone、Android、最新のブラウザでPasskeyを使用。安全なアクセスはどのデバイスでもあなたについていきます。"
+      "description": "iPhone、Android、最新のブラウザでPasskeyを使用。安全なアクセスはどのデバイスでも。"
     }
   },
   "reviews": {
