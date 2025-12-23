@@ -50,9 +50,12 @@ export default function BestAppleWalletAlternativesArticlePage() {
       />
 
       <ArticleParagraph>
-        <Trans i18nKey="articles:best-apple-wallet-alternatives.p5">
-          The real difference shows when you travel. Apple Wallet displays your boarding pass. Folio shows your entire trip in chronological order: the flight, the hotel in Barcelona, the Sagrada Familia tickets, the train to Tarragona, the return journey. Tap any item and the barcode or QR code is ready to scan. Everything works offline because the documents live on your device with end-to-end encryption. For families, shared folders let everyone access the same documents without messaging files back and forth. <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Available free on iOS and Android.</LocalizedLink>
-        </Trans>
+        <Trans
+          i18nKey="articles:best-apple-wallet-alternatives.p5"
+          components={[
+            <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors" />
+          ]}
+        />
       </ArticleParagraph>
 
       <ArticleH2>{t('articles:best-apple-wallet-alternatives.h2_2')}</ArticleH2>

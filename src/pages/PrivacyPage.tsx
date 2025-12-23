@@ -25,9 +25,12 @@ export default function PrivacyPage() {
       <ArticleH2>{t('articles:privacy_page.who_we_are.title')}</ArticleH2>
 
       <ArticleParagraph>
-        <Trans i18nKey="articles:privacy_page.who_we_are.p1">
-          Folio Technologies Limited is a company registered in England and Wales (Company Number 07236594). Our registered office is at 88 Baker Street, London W1U 6TQ, United Kingdom. We are the data controller for personal information collected through the Folio app. For privacy questions, contact our data privacy manager at <a href="mailto:privacy@folio.id" className="underline hover:text-[#737373] transition-colors">privacy@folio.id</a>.
-        </Trans>
+        <Trans
+          i18nKey="articles:privacy_page.who_we_are.p1"
+          components={[
+            <a href="mailto:privacy@folio.id" className="underline hover:text-[#737373] transition-colors" />
+          ]}
+        />
       </ArticleParagraph>
 
       <ArticleH2>{t('articles:privacy_page.collect.title')}</ArticleH2>
@@ -135,9 +138,12 @@ export default function PrivacyPage() {
       </ArticleList>
 
       <ArticleParagraph>
-        <Trans i18nKey="articles:privacy_page.rights.p2">
-          To exercise any of these rights, email us at <a href="mailto:privacy@folio.id" className="underline hover:text-[#737373] transition-colors">privacy@folio.id</a>. We will respond within one month. We generally do not charge a fee, but we may charge a reasonable fee for manifestly unfounded or excessive requests.
-        </Trans>
+        <Trans
+          i18nKey="articles:privacy_page.rights.p2"
+          components={[
+            <a href="mailto:privacy@folio.id" className="underline hover:text-[#737373] transition-colors" />
+          ]}
+        />
       </ArticleParagraph>
 
       <ArticleH2>{t('articles:privacy_page.cookies.title')}</ArticleH2>
@@ -163,9 +169,12 @@ export default function PrivacyPage() {
       <ArticleH2>{t('articles:privacy_page.children.title')}</ArticleH2>
 
       <ArticleParagraph>
-        <Trans i18nKey="articles:privacy_page.children.p1">
-          Folio is not intended for children under 16 years of age. We do not knowingly collect personal information from children. If you believe we have inadvertently collected data from a child, please contact us immediately at <a href="mailto:privacy@folio.id" className="underline hover:text-[#737373] transition-colors">privacy@folio.id</a>, and we will take steps to delete such information.
-        </Trans>
+        <Trans
+          i18nKey="articles:privacy_page.children.p1"
+          components={[
+            <a href="mailto:privacy@folio.id" className="underline hover:text-[#737373] transition-colors" />
+          ]}
+        />
       </ArticleParagraph>
 
       <ArticleH2>{t('articles:privacy_page.changes.title')}</ArticleH2>

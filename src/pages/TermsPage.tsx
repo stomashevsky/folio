@@ -17,9 +17,12 @@ export default function TermsPage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="articles:terms.intro_privacy_link">
-          Our <LocalizedLink to="/privacy" className="underline hover:text-[#737373] transition-colors">Privacy Policy</LocalizedLink> explains how we collect, use, and protect your personal data. Please read it alongside these terms.
-        </Trans>
+        <Trans
+          i18nKey="articles:terms.intro_privacy_link"
+          components={[
+            <LocalizedLink to="/privacy" className="underline hover:text-[#737373] transition-colors" />
+          ]}
+        />
       </ArticleParagraph>
 
       <ArticleH2>{t('articles:terms.who_we_are.title')}</ArticleH2>
