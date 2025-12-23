@@ -15,14 +15,14 @@
   },
   "platform": {
     "tagline": "プラットフォーム",
-    "title": "信頼をスケールで構築",
+    "title": "大規模な本人確認を実現",
     "description": "本人確認、ドキュメント分析、生体認証など。顧客確認と不正防止に必要なすべてを提供。",
     "carouselTitle": "本人確認に必要なすべて"
   },
   "solutions": {
     "tagline": "ソリューション",
     "title": "業界に特化したソリューション",
-    "description": "規制産業と高信頼環境向けにカスタマイズされたソリューション。",
+    "description": "規制対応が必要な業界向けにカスタマイズされたソリューション。",
     "ageCompliance": {
       "title": "年齢確認",
       "description": "規制産業向けの年齢認証"
