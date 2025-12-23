@@ -177,9 +177,13 @@ export default function PrivacyPage() {
       <ArticleH2>{t('articles:privacy_page.contact.title')}</ArticleH2>
 
       <ArticleParagraph>
-        <Trans i18nKey="articles:privacy_page.contact.p1">
-          If you have questions about this Privacy Policy or how we handle your personal data, please contact our data privacy manager at <a href="mailto:privacy@folio.id" className="underline hover:text-[#737373] transition-colors">privacy@folio.id</a>. You also have the right to lodge a complaint with the UK Information Commissioner's Office (ICO) at <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#737373] transition-colors">ico.org.uk</a> if you are dissatisfied with how we have handled your personal data.
-        </Trans>
+        <Trans
+          i18nKey="articles:privacy_page.contact.p1"
+          components={[
+            <a href="mailto:privacy@folio.id" className="underline hover:text-[#737373] transition-colors" />,
+            <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#737373] transition-colors" />
+          ]}
+        />
       </ArticleParagraph>
     </LegalPageLayout>
   )

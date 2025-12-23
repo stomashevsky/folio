@@ -147,9 +147,13 @@ export default function TermsPage() {
       <ArticleH2>{t('articles:terms.contact.title')}</ArticleH2>
 
       <ArticleParagraph>
-        <Trans i18nKey="articles:terms.contact.p1">
-          If you have questions about these terms or need support, please email us at <a href="mailto:support@folio.id" className="underline hover:text-[#737373] transition-colors">support@folio.id</a>. For privacy-related inquiries, contact <a href="mailto:privacy@folio.id" className="underline hover:text-[#737373] transition-colors">privacy@folio.id</a>.
-        </Trans>
+        <Trans
+          i18nKey="articles:terms.contact.p1"
+          components={[
+            <a href="mailto:support@folio.id" className="underline hover:text-[#737373] transition-colors" />,
+            <a href="mailto:privacy@folio.id" className="underline hover:text-[#737373] transition-colors" />
+          ]}
+        />
       </ArticleParagraph>
     </LegalPageLayout>
   )
