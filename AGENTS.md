@@ -685,6 +685,57 @@ This file contains all rules and principles that must be followed for every chan
 | Government | Secteur public | |
 | Wallet | Portefeuille numérique | |
 
+#### 13.13. Spanish Language Rules
+
+**Key translation principles:**
+1. **NEVER translate literally** — adapt text naturally as a native Spanish copywriter would write it
+2. **Read aloud test** — if it sounds unnatural when spoken, rewrite it
+3. **Remove English calques** — avoid word-for-word translations that sound foreign
+4. **Keep it concise** — Spanish can be longer than English, so abbreviate where possible
+5. **Maintain term consistency** — identical terms must be translated the same way everywhere
+
+**Style and tone:**
+- Use formal "usted" form for marketing copy, not informal "tú" (Latin American neutral style)
+- Use active voice where possible
+- Write like professional Spanish marketing teams (Apple España, Google España style)
+- Before adding a translation, search for existing translations with `grep` to ensure consistency
+- Use neutral Spanish that works for both Spain and Latin America where possible
+
+**Terms that are NOT translated (keep in English):**
+- Product names: Folio, Folio Wallet, Playground, EUDI Wallet
+- Technical terms: KYC, AML, API, SDK, NFC, QR
+- Trademarks: Face ID, Touch ID, Passkeys
+
+**Official glossary for Spanish:**
+
+| English | Spanish | Notes |
+|---------|---------|-------|
+| Digital Identity | Identidad digital | |
+| Liveness Check | Prueba de vida | |
+| Face Match | Comparación facial | |
+| ID Verification | Verificación de identidad | |
+| NFC Identity Scan | Escaneo de identidad NFC | |
+| Document Intelligence | Análisis de documentos | |
+| Data Source Checks | Verificación de fuentes de datos | |
+| Phone and Email Validation | Validación de teléfono y email | |
+| Behavior Insights | Análisis de comportamiento | |
+| Dynamic Flow | Flujo dinámico | |
+| Review Workspace | Espacio de revisión | |
+| Credential Issuance | Emisión de credenciales | |
+| Client Onboarding | Alta de clientes | |
+| Age Compliance | Verificación de edad | |
+| Digital Ticketing | Entradas digitales | |
+| End-to-end encryption | Cifrado de extremo a extremo | |
+| Zero-knowledge architecture | Arquitectura de conocimiento cero | |
+| Get in touch | Contáctanos | |
+| Sign up | Registrarse | |
+| Learn more | Saber más | |
+| Download | Descargar | |
+| Privacy | Privacidad | |
+| Security | Seguridad | |
+| Government | Gobierno | |
+| Wallet | Billetera | |
+
 ## Important Reminders
 
 - **Always check Figma** to understand component structure, states, and variants before implementation
