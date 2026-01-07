@@ -1,83 +1,85 @@
 import { BrowserRouter, Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, lazy, Suspense } from 'react'
 import ScrollToTop from './components/ScrollToTop'
 import { LanguageRedirect, LanguageProvider } from './i18n/LanguageProvider'
 import { SUPPORTED_LANGUAGES, DEFAULT_LANGUAGE } from './i18n'
-
-// Pages
-import HomePage from './pages/HomePage'
-import WalletPage from './pages/WalletPage'
-import PlaygroundPage from './pages/PlaygroundPage'
-import DigitalTicketingPage from './pages/DigitalTicketingPage'
-import AgeCompliancePage from './pages/AgeCompliancePage'
-import ClientOnboardingPage from './pages/ClientOnboardingPage'
-import GovernmentPage from './pages/GovernmentPage'
-import IdVerificationPage from './pages/IdVerificationPage'
-import DocumentIntelligencePage from './pages/DocumentIntelligencePage'
-import LivenessCheckPage from './pages/LivenessCheckPage'
-import FaceMatchPage from './pages/FaceMatchPage'
-import DataSourceChecksPage from './pages/DataSourceChecksPage'
-import PhoneAndEmailValidationPage from './pages/PhoneAndEmailValidationPage'
-import NfcIdentityScanPage from './pages/NfcIdentityScanPage'
-import DynamicFlowPage from './pages/DynamicFlowPage'
-import BehaviorInsightsPage from './pages/BehaviorInsightsPage'
-import ReviewWorkspacePage from './pages/ReviewWorkspacePage'
-import CredentialIssuancePage from './pages/CredentialIssuancePage'
-import BlogPage from './pages/BlogPage'
-import AlbanianDiasporaArticlePage from './pages/AlbanianDiasporaArticlePage'
-import TripCaseAlternativeArticlePage from './pages/TripCaseAlternativeArticlePage'
-import TripItAlternativeArticlePage from './pages/TripItAlternativeArticlePage'
-import Pass2UAlternativeArticlePage from './pages/Pass2UAlternativeArticlePage'
-import AppInTheAirAlternativeArticlePage from './pages/AppInTheAirAlternativeArticlePage'
-import CheckMyTripAlternativeArticlePage from './pages/CheckMyTripAlternativeArticlePage'
-import WanderlogAlternativeArticlePage from './pages/WanderlogAlternativeArticlePage'
-import BestDocumentScanningAppsArticlePage from './pages/BestDocumentScanningAppsArticlePage'
-import BestIdScannerAppArticlePage from './pages/BestIdScannerAppArticlePage'
-import TenTravelHacksThatActuallyWorkArticlePage from './pages/TenTravelHacksThatActuallyWorkArticlePage'
-import BestAppsToPlanTravelArticlePage from './pages/BestAppsToPlanTravelArticlePage'
-import BestEventTicketAppsArticlePage from './pages/BestEventTicketAppsArticlePage'
-import FlightTicketsOnIphoneArticlePage from './pages/FlightTicketsOnIphoneArticlePage'
-import HowToShareTravelPlansArticlePage from './pages/HowToShareTravelPlansArticlePage'
-import YouCanNowStoreTicketsInFolioWalletArticlePage from './pages/YouCanNowStoreTicketsInFolioWalletArticlePage'
-import BestGoogleWalletAlternativesArticlePage from './pages/BestGoogleWalletAlternativesArticlePage'
-import BestAppleWalletAlternativesArticlePage from './pages/BestAppleWalletAlternativesArticlePage'
-import AccessYourDigitalWalletAnywhereArticlePage from './pages/AccessYourDigitalWalletAnywhereArticlePage'
-import BestDigitalWalletAppsInCanadaArticlePage from './pages/BestDigitalWalletAppsInCanadaArticlePage'
-import DigitalWalletAppsForEveryNeedArticlePage from './pages/DigitalWalletAppsForEveryNeedArticlePage'
-import BestGiftCardWalletAppsArticlePage from './pages/BestGiftCardWalletAppsArticlePage'
-import RegularVsDigitalWalletsArticlePage from './pages/RegularVsDigitalWalletsArticlePage'
-import HowToAddAndStoreYourMedicalCardArticlePage from './pages/HowToAddAndStoreYourMedicalCardArticlePage'
-import WhatIsADigitalWalletArticlePage from './pages/WhatIsADigitalWalletArticlePage'
-import HowToStoreAndUseLoyaltyCardsOnYourIphoneArticlePage from './pages/HowToStoreAndUseLoyaltyCardsOnYourIphoneArticlePage'
-import AppleGiftCardAddToWalletArticlePage from './pages/AppleGiftCardAddToWalletArticlePage'
-import WhatIsLivenessDetectionArticlePage from './pages/WhatIsLivenessDetectionArticlePage'
-import FaceMatchingTechnologyArticlePage from './pages/FaceMatchingTechnologyArticlePage'
-import NfcIdentityVerificationArticlePage from './pages/NfcIdentityVerificationArticlePage'
-import DocumentIntelligenceArticlePage from './pages/DocumentIntelligenceArticlePage'
-import KycAmlComplianceArticlePage from './pages/KycAmlComplianceArticlePage'
-import AgeVerificationRequirementsArticlePage from './pages/AgeVerificationRequirementsArticlePage'
-import ClientOnboardingBestPracticesArticlePage from './pages/ClientOnboardingBestPracticesArticlePage'
-import OrganizeTicketsBookingsArticlePage from './pages/OrganizeTicketsBookingsArticlePage'
-import EudiWalletArticlePage from './pages/EudiWalletArticlePage'
-import MobileDriversLicenseArticlePage from './pages/MobileDriversLicenseArticlePage'
-import DigitalCredentialsGovernmentArticlePage from './pages/DigitalCredentialsGovernmentArticlePage'
-import EndToEndEncryptionArticlePage from './pages/EndToEndEncryptionArticlePage'
-import BiometricDataPrivacyArticlePage from './pages/BiometricDataPrivacyArticlePage'
-import DigitalPassportCopiesArticlePage from './pages/DigitalPassportCopiesArticlePage'
-import ManagingFamilyTravelDocumentsArticlePage from './pages/ManagingFamilyTravelDocumentsArticlePage'
-import BestIdentityVerificationPlatformsArticlePage from './pages/BestIdentityVerificationPlatformsArticlePage'
-import CompleteGuideIdentityVerificationArticlePage from './pages/CompleteGuideIdentityVerificationArticlePage'
-import TermsPage from './pages/TermsPage'
-import PrivacyPage from './pages/PrivacyPage'
-import SecurityPage from './pages/SecurityPage'
-import IdWalletAppPage from './pages/IdWalletAppPage'
-import CardScannerAppPage from './pages/CardScannerAppPage'
-import LoyaltyCardAppPage from './pages/LoyaltyCardAppPage'
-import NotFoundPage from './pages/NotFoundPage'
-import AboutPage from './pages/AboutPage'
 import CookieConsent from './components/CookieConsent'
 import LanguageSuggestionBanner, { BannerSpacer } from './components/LanguageSuggestionBanner'
 import { LanguageBannerProvider } from './contexts/LanguageBannerContext'
+
+// Eager load HomePage for fast initial render (LCP)
+import HomePage from './pages/HomePage'
+
+// Lazy load all other pages for code splitting
+const WalletPage = lazy(() => import('./pages/WalletPage'))
+const PlaygroundPage = lazy(() => import('./pages/PlaygroundPage'))
+const DigitalTicketingPage = lazy(() => import('./pages/DigitalTicketingPage'))
+const AgeCompliancePage = lazy(() => import('./pages/AgeCompliancePage'))
+const ClientOnboardingPage = lazy(() => import('./pages/ClientOnboardingPage'))
+const GovernmentPage = lazy(() => import('./pages/GovernmentPage'))
+const IdVerificationPage = lazy(() => import('./pages/IdVerificationPage'))
+const DocumentIntelligencePage = lazy(() => import('./pages/DocumentIntelligencePage'))
+const LivenessCheckPage = lazy(() => import('./pages/LivenessCheckPage'))
+const FaceMatchPage = lazy(() => import('./pages/FaceMatchPage'))
+const DataSourceChecksPage = lazy(() => import('./pages/DataSourceChecksPage'))
+const PhoneAndEmailValidationPage = lazy(() => import('./pages/PhoneAndEmailValidationPage'))
+const NfcIdentityScanPage = lazy(() => import('./pages/NfcIdentityScanPage'))
+const DynamicFlowPage = lazy(() => import('./pages/DynamicFlowPage'))
+const BehaviorInsightsPage = lazy(() => import('./pages/BehaviorInsightsPage'))
+const ReviewWorkspacePage = lazy(() => import('./pages/ReviewWorkspacePage'))
+const CredentialIssuancePage = lazy(() => import('./pages/CredentialIssuancePage'))
+const BlogPage = lazy(() => import('./pages/BlogPage'))
+const AlbanianDiasporaArticlePage = lazy(() => import('./pages/AlbanianDiasporaArticlePage'))
+const TripCaseAlternativeArticlePage = lazy(() => import('./pages/TripCaseAlternativeArticlePage'))
+const TripItAlternativeArticlePage = lazy(() => import('./pages/TripItAlternativeArticlePage'))
+const Pass2UAlternativeArticlePage = lazy(() => import('./pages/Pass2UAlternativeArticlePage'))
+const AppInTheAirAlternativeArticlePage = lazy(() => import('./pages/AppInTheAirAlternativeArticlePage'))
+const CheckMyTripAlternativeArticlePage = lazy(() => import('./pages/CheckMyTripAlternativeArticlePage'))
+const WanderlogAlternativeArticlePage = lazy(() => import('./pages/WanderlogAlternativeArticlePage'))
+const BestDocumentScanningAppsArticlePage = lazy(() => import('./pages/BestDocumentScanningAppsArticlePage'))
+const BestIdScannerAppArticlePage = lazy(() => import('./pages/BestIdScannerAppArticlePage'))
+const TenTravelHacksThatActuallyWorkArticlePage = lazy(() => import('./pages/TenTravelHacksThatActuallyWorkArticlePage'))
+const BestAppsToPlanTravelArticlePage = lazy(() => import('./pages/BestAppsToPlanTravelArticlePage'))
+const BestEventTicketAppsArticlePage = lazy(() => import('./pages/BestEventTicketAppsArticlePage'))
+const FlightTicketsOnIphoneArticlePage = lazy(() => import('./pages/FlightTicketsOnIphoneArticlePage'))
+const HowToShareTravelPlansArticlePage = lazy(() => import('./pages/HowToShareTravelPlansArticlePage'))
+const YouCanNowStoreTicketsInFolioWalletArticlePage = lazy(() => import('./pages/YouCanNowStoreTicketsInFolioWalletArticlePage'))
+const BestGoogleWalletAlternativesArticlePage = lazy(() => import('./pages/BestGoogleWalletAlternativesArticlePage'))
+const BestAppleWalletAlternativesArticlePage = lazy(() => import('./pages/BestAppleWalletAlternativesArticlePage'))
+const AccessYourDigitalWalletAnywhereArticlePage = lazy(() => import('./pages/AccessYourDigitalWalletAnywhereArticlePage'))
+const BestDigitalWalletAppsInCanadaArticlePage = lazy(() => import('./pages/BestDigitalWalletAppsInCanadaArticlePage'))
+const DigitalWalletAppsForEveryNeedArticlePage = lazy(() => import('./pages/DigitalWalletAppsForEveryNeedArticlePage'))
+const BestGiftCardWalletAppsArticlePage = lazy(() => import('./pages/BestGiftCardWalletAppsArticlePage'))
+const RegularVsDigitalWalletsArticlePage = lazy(() => import('./pages/RegularVsDigitalWalletsArticlePage'))
+const HowToAddAndStoreYourMedicalCardArticlePage = lazy(() => import('./pages/HowToAddAndStoreYourMedicalCardArticlePage'))
+const WhatIsADigitalWalletArticlePage = lazy(() => import('./pages/WhatIsADigitalWalletArticlePage'))
+const HowToStoreAndUseLoyaltyCardsOnYourIphoneArticlePage = lazy(() => import('./pages/HowToStoreAndUseLoyaltyCardsOnYourIphoneArticlePage'))
+const AppleGiftCardAddToWalletArticlePage = lazy(() => import('./pages/AppleGiftCardAddToWalletArticlePage'))
+const WhatIsLivenessDetectionArticlePage = lazy(() => import('./pages/WhatIsLivenessDetectionArticlePage'))
+const FaceMatchingTechnologyArticlePage = lazy(() => import('./pages/FaceMatchingTechnologyArticlePage'))
+const NfcIdentityVerificationArticlePage = lazy(() => import('./pages/NfcIdentityVerificationArticlePage'))
+const DocumentIntelligenceArticlePage = lazy(() => import('./pages/DocumentIntelligenceArticlePage'))
+const KycAmlComplianceArticlePage = lazy(() => import('./pages/KycAmlComplianceArticlePage'))
+const AgeVerificationRequirementsArticlePage = lazy(() => import('./pages/AgeVerificationRequirementsArticlePage'))
+const ClientOnboardingBestPracticesArticlePage = lazy(() => import('./pages/ClientOnboardingBestPracticesArticlePage'))
+const OrganizeTicketsBookingsArticlePage = lazy(() => import('./pages/OrganizeTicketsBookingsArticlePage'))
+const EudiWalletArticlePage = lazy(() => import('./pages/EudiWalletArticlePage'))
+const MobileDriversLicenseArticlePage = lazy(() => import('./pages/MobileDriversLicenseArticlePage'))
+const DigitalCredentialsGovernmentArticlePage = lazy(() => import('./pages/DigitalCredentialsGovernmentArticlePage'))
+const EndToEndEncryptionArticlePage = lazy(() => import('./pages/EndToEndEncryptionArticlePage'))
+const BiometricDataPrivacyArticlePage = lazy(() => import('./pages/BiometricDataPrivacyArticlePage'))
+const DigitalPassportCopiesArticlePage = lazy(() => import('./pages/DigitalPassportCopiesArticlePage'))
+const ManagingFamilyTravelDocumentsArticlePage = lazy(() => import('./pages/ManagingFamilyTravelDocumentsArticlePage'))
+const BestIdentityVerificationPlatformsArticlePage = lazy(() => import('./pages/BestIdentityVerificationPlatformsArticlePage'))
+const CompleteGuideIdentityVerificationArticlePage = lazy(() => import('./pages/CompleteGuideIdentityVerificationArticlePage'))
+const TermsPage = lazy(() => import('./pages/TermsPage'))
+const PrivacyPage = lazy(() => import('./pages/PrivacyPage'))
+const SecurityPage = lazy(() => import('./pages/SecurityPage'))
+const IdWalletAppPage = lazy(() => import('./pages/IdWalletAppPage'))
+const CardScannerAppPage = lazy(() => import('./pages/CardScannerAppPage'))
+const LoyaltyCardAppPage = lazy(() => import('./pages/LoyaltyCardAppPage'))
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
+const AboutPage = lazy(() => import('./pages/AboutPage'))
 
 // Fallback handler in case the script in index.html didn't run
 function RedirectHandler() {
@@ -180,78 +182,80 @@ function LegacyRedirect() {
  */
 function LocalizedRoutes() {
   return (
-    <Routes>
-      <Route index element={<HomePage />} />
-      <Route path="wallet" element={<WalletPage />} />
-      <Route path="government/playground" element={<PlaygroundPage />} />
-      <Route path="solutions/digital-ticketing" element={<DigitalTicketingPage />} />
-      <Route path="solutions/age-compliance" element={<AgeCompliancePage />} />
-      <Route path="solutions/client-onboarding" element={<ClientOnboardingPage />} />
-      <Route path="government" element={<GovernmentPage />} />
-      <Route path="platform/id-verification" element={<IdVerificationPage />} />
-      <Route path="platform/document-intelligence" element={<DocumentIntelligencePage />} />
-      <Route path="platform/liveness-check" element={<LivenessCheckPage />} />
-      <Route path="platform/face-match" element={<FaceMatchPage />} />
-      <Route path="platform/data-source-checks" element={<DataSourceChecksPage />} />
-      <Route path="platform/phone-and-email-validation" element={<PhoneAndEmailValidationPage />} />
-      <Route path="platform/nfc-identity-scan" element={<NfcIdentityScanPage />} />
-      <Route path="platform/dynamic-flow" element={<DynamicFlowPage />} />
-      <Route path="platform/behavior-insights" element={<BehaviorInsightsPage />} />
-      <Route path="platform/review-workspace" element={<ReviewWorkspacePage />} />
-      <Route path="platform/credential-issuance" element={<CredentialIssuancePage />} />
-      <Route path="blog" element={<BlogPage />} />
-      <Route path="blog/albanian-diaspora-voter-registration" element={<AlbanianDiasporaArticlePage />} />
-      <Route path="blog/tripcase-alternative" element={<TripCaseAlternativeArticlePage />} />
-      <Route path="blog/tripit-alternative" element={<TripItAlternativeArticlePage />} />
-      <Route path="blog/pass2u-alternative" element={<Pass2UAlternativeArticlePage />} />
-      <Route path="blog/app-in-the-air-alternative" element={<AppInTheAirAlternativeArticlePage />} />
-      <Route path="blog/checkmytrip-alternative" element={<CheckMyTripAlternativeArticlePage />} />
-      <Route path="blog/wanderlog-alternative" element={<WanderlogAlternativeArticlePage />} />
-      <Route path="blog/best-document-scanning-apps" element={<BestDocumentScanningAppsArticlePage />} />
-      <Route path="blog/best-id-scanner-app" element={<BestIdScannerAppArticlePage />} />
-      <Route path="blog/10-travel-hacks-that-actually-work" element={<TenTravelHacksThatActuallyWorkArticlePage />} />
-      <Route path="blog/best-apps-to-plan-travel" element={<BestAppsToPlanTravelArticlePage />} />
-      <Route path="blog/the-best-event-ticket-apps" element={<BestEventTicketAppsArticlePage />} />
-      <Route path="blog/flight-tickets-on-iphone" element={<FlightTicketsOnIphoneArticlePage />} />
-      <Route path="blog/how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app" element={<HowToShareTravelPlansArticlePage />} />
-      <Route path="blog/you-can-now-store-tickets-in-folio-wallet" element={<YouCanNowStoreTicketsInFolioWalletArticlePage />} />
-      <Route path="blog/access-your-digital-wallet-anywhere" element={<AccessYourDigitalWalletAnywhereArticlePage />} />
-      <Route path="blog/best-google-wallet-alternatives" element={<BestGoogleWalletAlternativesArticlePage />} />
-      <Route path="blog/best-apple-wallet-alternatives" element={<BestAppleWalletAlternativesArticlePage />} />
-      <Route path="blog/best-digital-wallet-apps-in-canada" element={<BestDigitalWalletAppsInCanadaArticlePage />} />
-      <Route path="blog/digital-wallet-apps-for-every-need" element={<DigitalWalletAppsForEveryNeedArticlePage />} />
-      <Route path="blog/best-gift-card-wallet-apps" element={<BestGiftCardWalletAppsArticlePage />} />
-      <Route path="blog/regular-vs-digital-wallets" element={<RegularVsDigitalWalletsArticlePage />} />
-      <Route path="blog/how-to-add-and-store-your-medical-card" element={<HowToAddAndStoreYourMedicalCardArticlePage />} />
-      <Route path="blog/what-is-a-digital-wallet" element={<WhatIsADigitalWalletArticlePage />} />
-      <Route path="blog/how-to-store-and-use-loyalty-cards-on-your-iphone" element={<HowToStoreAndUseLoyaltyCardsOnYourIphoneArticlePage />} />
-      <Route path="blog/apple-gift-card-add-to-wallet" element={<AppleGiftCardAddToWalletArticlePage />} />
-      <Route path="blog/what-is-liveness-detection" element={<WhatIsLivenessDetectionArticlePage />} />
-      <Route path="blog/face-matching-technology" element={<FaceMatchingTechnologyArticlePage />} />
-      <Route path="blog/nfc-identity-verification" element={<NfcIdentityVerificationArticlePage />} />
-      <Route path="blog/document-intelligence" element={<DocumentIntelligenceArticlePage />} />
-      <Route path="blog/kyc-aml-compliance" element={<KycAmlComplianceArticlePage />} />
-      <Route path="blog/age-verification-requirements" element={<AgeVerificationRequirementsArticlePage />} />
-      <Route path="blog/client-onboarding-best-practices" element={<ClientOnboardingBestPracticesArticlePage />} />
-      <Route path="blog/organize-tickets-bookings" element={<OrganizeTicketsBookingsArticlePage />} />
-      <Route path="blog/eudi-wallet" element={<EudiWalletArticlePage />} />
-      <Route path="blog/mobile-drivers-license" element={<MobileDriversLicenseArticlePage />} />
-      <Route path="blog/digital-credentials-government" element={<DigitalCredentialsGovernmentArticlePage />} />
-      <Route path="blog/end-to-end-encryption" element={<EndToEndEncryptionArticlePage />} />
-      <Route path="blog/biometric-data-privacy" element={<BiometricDataPrivacyArticlePage />} />
-      <Route path="blog/digital-passport-copies" element={<DigitalPassportCopiesArticlePage />} />
-      <Route path="blog/managing-family-travel-documents" element={<ManagingFamilyTravelDocumentsArticlePage />} />
-      <Route path="blog/best-identity-verification-platforms" element={<BestIdentityVerificationPlatformsArticlePage />} />
-      <Route path="blog/complete-guide-identity-verification" element={<CompleteGuideIdentityVerificationArticlePage />} />
-      <Route path="id-wallet-app" element={<IdWalletAppPage />} />
-      <Route path="card-scanner-app" element={<CardScannerAppPage />} />
-      <Route path="loyalty-card-app" element={<LoyaltyCardAppPage />} />
-      <Route path="terms" element={<TermsPage />} />
-      <Route path="privacy" element={<PrivacyPage />} />
-      <Route path="security" element={<SecurityPage />} />
-      <Route path="about" element={<AboutPage />} />
-      <Route path="*" element={<NotFoundPage />} />
-    </Routes>
+    <Suspense fallback={<div className="min-h-screen" />}>
+      <Routes>
+        <Route index element={<HomePage />} />
+        <Route path="wallet" element={<WalletPage />} />
+        <Route path="government/playground" element={<PlaygroundPage />} />
+        <Route path="solutions/digital-ticketing" element={<DigitalTicketingPage />} />
+        <Route path="solutions/age-compliance" element={<AgeCompliancePage />} />
+        <Route path="solutions/client-onboarding" element={<ClientOnboardingPage />} />
+        <Route path="government" element={<GovernmentPage />} />
+        <Route path="platform/id-verification" element={<IdVerificationPage />} />
+        <Route path="platform/document-intelligence" element={<DocumentIntelligencePage />} />
+        <Route path="platform/liveness-check" element={<LivenessCheckPage />} />
+        <Route path="platform/face-match" element={<FaceMatchPage />} />
+        <Route path="platform/data-source-checks" element={<DataSourceChecksPage />} />
+        <Route path="platform/phone-and-email-validation" element={<PhoneAndEmailValidationPage />} />
+        <Route path="platform/nfc-identity-scan" element={<NfcIdentityScanPage />} />
+        <Route path="platform/dynamic-flow" element={<DynamicFlowPage />} />
+        <Route path="platform/behavior-insights" element={<BehaviorInsightsPage />} />
+        <Route path="platform/review-workspace" element={<ReviewWorkspacePage />} />
+        <Route path="platform/credential-issuance" element={<CredentialIssuancePage />} />
+        <Route path="blog" element={<BlogPage />} />
+        <Route path="blog/albanian-diaspora-voter-registration" element={<AlbanianDiasporaArticlePage />} />
+        <Route path="blog/tripcase-alternative" element={<TripCaseAlternativeArticlePage />} />
+        <Route path="blog/tripit-alternative" element={<TripItAlternativeArticlePage />} />
+        <Route path="blog/pass2u-alternative" element={<Pass2UAlternativeArticlePage />} />
+        <Route path="blog/app-in-the-air-alternative" element={<AppInTheAirAlternativeArticlePage />} />
+        <Route path="blog/checkmytrip-alternative" element={<CheckMyTripAlternativeArticlePage />} />
+        <Route path="blog/wanderlog-alternative" element={<WanderlogAlternativeArticlePage />} />
+        <Route path="blog/best-document-scanning-apps" element={<BestDocumentScanningAppsArticlePage />} />
+        <Route path="blog/best-id-scanner-app" element={<BestIdScannerAppArticlePage />} />
+        <Route path="blog/10-travel-hacks-that-actually-work" element={<TenTravelHacksThatActuallyWorkArticlePage />} />
+        <Route path="blog/best-apps-to-plan-travel" element={<BestAppsToPlanTravelArticlePage />} />
+        <Route path="blog/the-best-event-ticket-apps" element={<BestEventTicketAppsArticlePage />} />
+        <Route path="blog/flight-tickets-on-iphone" element={<FlightTicketsOnIphoneArticlePage />} />
+        <Route path="blog/how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app" element={<HowToShareTravelPlansArticlePage />} />
+        <Route path="blog/you-can-now-store-tickets-in-folio-wallet" element={<YouCanNowStoreTicketsInFolioWalletArticlePage />} />
+        <Route path="blog/access-your-digital-wallet-anywhere" element={<AccessYourDigitalWalletAnywhereArticlePage />} />
+        <Route path="blog/best-google-wallet-alternatives" element={<BestGoogleWalletAlternativesArticlePage />} />
+        <Route path="blog/best-apple-wallet-alternatives" element={<BestAppleWalletAlternativesArticlePage />} />
+        <Route path="blog/best-digital-wallet-apps-in-canada" element={<BestDigitalWalletAppsInCanadaArticlePage />} />
+        <Route path="blog/digital-wallet-apps-for-every-need" element={<DigitalWalletAppsForEveryNeedArticlePage />} />
+        <Route path="blog/best-gift-card-wallet-apps" element={<BestGiftCardWalletAppsArticlePage />} />
+        <Route path="blog/regular-vs-digital-wallets" element={<RegularVsDigitalWalletsArticlePage />} />
+        <Route path="blog/how-to-add-and-store-your-medical-card" element={<HowToAddAndStoreYourMedicalCardArticlePage />} />
+        <Route path="blog/what-is-a-digital-wallet" element={<WhatIsADigitalWalletArticlePage />} />
+        <Route path="blog/how-to-store-and-use-loyalty-cards-on-your-iphone" element={<HowToStoreAndUseLoyaltyCardsOnYourIphoneArticlePage />} />
+        <Route path="blog/apple-gift-card-add-to-wallet" element={<AppleGiftCardAddToWalletArticlePage />} />
+        <Route path="blog/what-is-liveness-detection" element={<WhatIsLivenessDetectionArticlePage />} />
+        <Route path="blog/face-matching-technology" element={<FaceMatchingTechnologyArticlePage />} />
+        <Route path="blog/nfc-identity-verification" element={<NfcIdentityVerificationArticlePage />} />
+        <Route path="blog/document-intelligence" element={<DocumentIntelligenceArticlePage />} />
+        <Route path="blog/kyc-aml-compliance" element={<KycAmlComplianceArticlePage />} />
+        <Route path="blog/age-verification-requirements" element={<AgeVerificationRequirementsArticlePage />} />
+        <Route path="blog/client-onboarding-best-practices" element={<ClientOnboardingBestPracticesArticlePage />} />
+        <Route path="blog/organize-tickets-bookings" element={<OrganizeTicketsBookingsArticlePage />} />
+        <Route path="blog/eudi-wallet" element={<EudiWalletArticlePage />} />
+        <Route path="blog/mobile-drivers-license" element={<MobileDriversLicenseArticlePage />} />
+        <Route path="blog/digital-credentials-government" element={<DigitalCredentialsGovernmentArticlePage />} />
+        <Route path="blog/end-to-end-encryption" element={<EndToEndEncryptionArticlePage />} />
+        <Route path="blog/biometric-data-privacy" element={<BiometricDataPrivacyArticlePage />} />
+        <Route path="blog/digital-passport-copies" element={<DigitalPassportCopiesArticlePage />} />
+        <Route path="blog/managing-family-travel-documents" element={<ManagingFamilyTravelDocumentsArticlePage />} />
+        <Route path="blog/best-identity-verification-platforms" element={<BestIdentityVerificationPlatformsArticlePage />} />
+        <Route path="blog/complete-guide-identity-verification" element={<CompleteGuideIdentityVerificationArticlePage />} />
+        <Route path="id-wallet-app" element={<IdWalletAppPage />} />
+        <Route path="card-scanner-app" element={<CardScannerAppPage />} />
+        <Route path="loyalty-card-app" element={<LoyaltyCardAppPage />} />
+        <Route path="terms" element={<TermsPage />} />
+        <Route path="privacy" element={<PrivacyPage />} />
+        <Route path="security" element={<SecurityPage />} />
+        <Route path="about" element={<AboutPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </Suspense>
   )
 }
 
@@ -260,7 +264,10 @@ function App() {
   // - https://folio.id/ (root)
   // - https://stomashevsky.github.io/folio/ (GitHub Pages project site)
   const runtimeBase =
-    typeof window !== 'undefined' && window.location.pathname.startsWith('/folio') ? '/folio' : undefined
+    typeof window !== 'undefined' && 
+    (window.location.pathname === '/folio' || window.location.pathname.startsWith('/folio/'))
+      ? '/folio' 
+      : undefined
   
   return (
     <BrowserRouter basename={runtimeBase}>

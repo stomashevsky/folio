@@ -2,6 +2,7 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { spawn } from 'node:child_process'
+import os from 'node:os'
 import puppeteer from 'puppeteer'
 
 const __filename = fileURLToPath(import.meta.url)
@@ -548,15 +549,12 @@ async function renderPageWithPuppeteer(browser, route, metadata, baseUrl) {
     // Navigate to the page
     const url = `${baseUrl}${route}`
     await page.goto(url, { 
-      waitUntil: 'networkidle0',
+      waitUntil: 'domcontentloaded',
       timeout: 30000 
     })
     
-    // Wait for React to render (look for content in the root div)
-    await page.waitForSelector('#root > *', { timeout: 10000 })
-    
-    // Additional wait for dynamic content
-    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 500)))
+    // Wait for React to signal render complete via #prerender-ready marker
+    await page.waitForSelector('#prerender-ready', { timeout: 15000 })
     
     // Get the rendered HTML
     let html = await page.content()
@@ -628,19 +626,16 @@ function fixAssetPaths(html, route) {
   html = html.replace(/href="\/assets\//g, `href="${prefix}assets/`)
   html = html.replace(/src="\/assets\//g, `src="${prefix}assets/`)
   html = html.replace(/href="\/favicon\.svg"/g, `href="${prefix}favicon.svg"`)
-  html = html.replace(/href="\/site\.webmanifest"/g, `href="${prefix}site.webmanifest"`)
   
   // Fix relative paths that start with ./
   html = html.replace(/href="\.\/assets\//g, `href="${prefix}assets/`)
   html = html.replace(/src="\.\/assets\//g, `src="${prefix}assets/`)
   html = html.replace(/href="\.\/favicon\.svg"/g, `href="${prefix}favicon.svg"`)
-  html = html.replace(/href="\.\/site\.webmanifest"/g, `href="${prefix}site.webmanifest"`)
   
   // Fix paths without prefix
   html = html.replace(/href="assets\//g, `href="${prefix}assets/`)
   html = html.replace(/src="assets\//g, `src="${prefix}assets/`)
   html = html.replace(/href="favicon\.svg"/g, `href="${prefix}favicon.svg"`)
-  html = html.replace(/href="site\.webmanifest"/g, `href="${prefix}site.webmanifest"`)
   
   return html
 }
@@ -672,23 +667,32 @@ async function main() {
     return
   }
   
-  // Launch Puppeteer
-  console.log('[prerender] Launching browser...')
-  const browser = await puppeteer.launch({
-    headless: 'new',
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
-  })
+  // Multi-browser parallel rendering for multi-core utilization
+  const NUM_BROWSERS = Math.min(os.cpus().length, 6) // Cap at 6 to avoid memory issues
+  const PAGES_PER_BROWSER = 3
+  const TOTAL_CONCURRENCY = NUM_BROWSERS * PAGES_PER_BROWSER
+  
+  console.log(`[prerender] Launching ${NUM_BROWSERS} browser instances (${PAGES_PER_BROWSER} pages each, ${TOTAL_CONCURRENCY} total concurrency)...`)
+  
+  const browsers = await Promise.all(
+    Array.from({ length: NUM_BROWSERS }, () =>
+      puppeteer.launch({
+        headless: 'new',
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+      })
+    )
+  )
   
   let generated = 0
   let failed = 0
   
-  try {
-    for (const metadata of allRoutes) {
+  async function processRoute(browser, metadata, retries = 2) {
+    const route = metadata.path
+    const outRel = toOutputPath(route)
+    const outAbs = path.join(distDir, outRel)
+    
+    for (let attempt = 0; attempt <= retries; attempt++) {
       try {
-        const route = metadata.path
-        const outRel = toOutputPath(route)
-        const outAbs = path.join(distDir, outRel)
-        
         // Render the page
         let html = await renderPageWithPuppeteer(browser, route, metadata, previewUrl)
         
@@ -704,14 +708,34 @@ async function main() {
         await fs.writeFile(outAbs, html, 'utf8')
         console.log(`[prerender] OK  ${route} -> ${outRel}`)
         generated++
+        return
       } catch (e) {
-        console.error(`[prerender] FAIL ${metadata.path}:`, e.message)
+        if (attempt < retries) {
+          await new Promise(r => setTimeout(r, 500))
+          continue
+        }
+        console.error(`[prerender] FAIL ${route}:`, e.message)
         failed++
       }
     }
+  }
+  
+  try {
+    // Process routes using a worker pool pattern
+    // Each browser handles multiple pages concurrently
+    for (let i = 0; i < allRoutes.length; i += TOTAL_CONCURRENCY) {
+      const batch = allRoutes.slice(i, i + TOTAL_CONCURRENCY)
+      await Promise.all(
+        batch.map((metadata, idx) => {
+          // Distribute across browsers: 0,1,2 -> browser 0; 3,4,5 -> browser 1; etc.
+          const browserIdx = Math.floor(idx / PAGES_PER_BROWSER) % NUM_BROWSERS
+          return processRoute(browsers[browserIdx], metadata)
+        })
+      )
+    }
   } finally {
-    // Cleanup
-    await browser.close()
+    // Cleanup all browsers
+    await Promise.all(browsers.map(b => b.close()))
     previewServer.kill()
   }
   
