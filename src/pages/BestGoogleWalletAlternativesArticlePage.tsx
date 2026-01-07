@@ -40,7 +40,7 @@ export default function BestGoogleWalletAlternativesArticlePage() {
       <ArticleParagraph>
         <Trans
           i18nKey="articles:best-google-wallet-alternatives.p5"
-          components={{ LocalizedLink: <LocalizedLink to="/" className="text-primary hover:underline" /> }}
+          components={{ LocalizedLink: <LocalizedLink to="/" className="underline hover:text-[#737373] transition-colors" /> }}
         />
       </ArticleParagraph>
 

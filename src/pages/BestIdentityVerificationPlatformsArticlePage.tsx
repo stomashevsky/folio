@@ -116,7 +116,7 @@ export default function BestIdentityVerificationPlatformsArticlePage() {
       <ArticleParagraph>
         <Trans
           i18nKey="articles:best-identity-verification-platforms.p5"
-          components={{ LocalizedLink: <LocalizedLink to="/platform/id-verification" className="text-primary hover:underline" /> }}
+          components={{ LocalizedLink: <LocalizedLink to="/platform/id-verification" className="underline hover:text-[#737373] transition-colors" /> }}
         />
       </ArticleParagraph>
 
@@ -131,7 +131,7 @@ export default function BestIdentityVerificationPlatformsArticlePage() {
       <ArticleParagraph>
         <Trans
           i18nKey="articles:best-identity-verification-platforms.p8"
-          components={{ LocalizedLink: <LocalizedLink to="/wallet" className="text-primary hover:underline" /> }}
+          components={{ LocalizedLink: <LocalizedLink to="/wallet" className="underline hover:text-[#737373] transition-colors" /> }}
         />
       </ArticleParagraph>
 
@@ -170,7 +170,7 @@ export default function BestIdentityVerificationPlatformsArticlePage() {
       <ArticleParagraph>
         <Trans
           i18nKey="articles:best-identity-verification-platforms.p15"
-          components={{ LocalizedLink: <LocalizedLink to="/platform/kyc" className="text-primary hover:underline" /> }}
+          components={{ LocalizedLink: <LocalizedLink to="/platform/kyc" className="underline hover:text-[#737373] transition-colors" /> }}
         />
       </ArticleParagraph>
 
@@ -205,7 +205,7 @@ export default function BestIdentityVerificationPlatformsArticlePage() {
       <ArticleParagraph>
         <Trans
           i18nKey="articles:best-identity-verification-platforms.p20"
-          components={{ LocalizedLink: <LocalizedLink to="/" className="text-primary hover:underline" /> }}
+          components={{ LocalizedLink: <LocalizedLink to="/" className="underline hover:text-[#737373] transition-colors" /> }}
         />
       </ArticleParagraph>
     </BlogArticleLayout>
