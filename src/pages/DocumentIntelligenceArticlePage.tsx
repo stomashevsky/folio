@@ -140,7 +140,7 @@ export default function DocumentIntelligenceArticlePage() {
       <ArticleParagraph>
         <Trans
           i18nKey="articles:document-intelligence.p27"
-          components={{ 0: <LocalizedLink to="/platform/document-intelligence" className="underline hover:text-[#737373] transition-colors" /> }}
+          components={{ LocalizedLink: <LocalizedLink to="/platform/document-intelligence" className="underline hover:text-[#737373] transition-colors" /> }}
         />
       </ArticleParagraph>
 

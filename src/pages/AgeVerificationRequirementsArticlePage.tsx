@@ -108,7 +108,7 @@ export default function AgeVerificationRequirementsArticlePage() {
       <ArticleParagraph>
         <Trans
           i18nKey="articles:age-verification-requirements.p20"
-          components={{ 0: <LocalizedLink to="/solutions/age-compliance" className="underline hover:text-[#737373] transition-colors" /> }}
+          components={{ LocalizedLink: <LocalizedLink to="/solutions/age-compliance" className="underline hover:text-[#737373] transition-colors" /> }}
         />
       </ArticleParagraph>
 
