@@ -79,31 +79,37 @@ function WalletPage() {
     canonicalUrl: canonicalUrl
   })
   
-  // Handle scroll to section when navigating from other pages
+  // Handle instant positioning to section when navigating from other pages
   useEffect(() => {
-    // Check if we need to scroll to a specific section
+    // Check if we need to position to a specific section
     let timeoutId1: ReturnType<typeof setTimeout> | null = null
     let timeoutId2: ReturnType<typeof setTimeout> | null = null
     
     if (location.hash) {
       const sectionId = location.hash.slice(1) // Remove #
-      // Try immediately
+      // Try immediately for instant positioning
       scrollToSection(sectionId)
       // Also try after delays to ensure element is rendered
-      timeoutId1 = setTimeout(() => {
+      requestAnimationFrame(() => {
         scrollToSection(sectionId)
-      }, 200)
-      timeoutId2 = setTimeout(() => {
-        scrollToSection(sectionId)
-      }, 400)
+        timeoutId1 = setTimeout(() => {
+          scrollToSection(sectionId)
+        }, 100)
+        timeoutId2 = setTimeout(() => {
+          scrollToSection(sectionId)
+        }, 300)
+      })
     } else if (location.state?.scrollTo === 'get-the-app') {
       scrollToSection('get-the-app')
-      timeoutId1 = setTimeout(() => {
+      requestAnimationFrame(() => {
         scrollToSection('get-the-app')
-      }, 200)
-      timeoutId2 = setTimeout(() => {
-        scrollToSection('get-the-app')
-      }, 400)
+        timeoutId1 = setTimeout(() => {
+          scrollToSection('get-the-app')
+        }, 100)
+        timeoutId2 = setTimeout(() => {
+          scrollToSection('get-the-app')
+        }, 300)
+      })
     }
     
     return () => {

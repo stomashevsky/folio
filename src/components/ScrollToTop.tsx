@@ -34,19 +34,25 @@ export default function ScrollToTop() {
       return
     }
     
-    // If URL has a hash, scroll to that element using scrollToSection
+    // If URL has a hash, position to that element instantly using scrollToSection
     if (location.hash) {
       const id = location.hash.slice(1) // Remove the # prefix
-      // Use scrollToSection which handles instant scroll and retries
+      // Use scrollToSection which handles instant positioning without animation
       // Try immediately first
       scrollToSection(id)
-      // Also try after a delay to ensure element is rendered
-      setTimeout(() => {
+      // Also try after delays to ensure element is rendered
+      requestAnimationFrame(() => {
         scrollToSection(id)
-      }, 200)
+        setTimeout(() => {
+          scrollToSection(id)
+        }, 100)
+        setTimeout(() => {
+          scrollToSection(id)
+        }, 300)
+      })
     } else {
       // No hash, scroll to top instantly
-      window.scrollTo({ top: 0, behavior: 'auto' })
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
     }
   }, [location.pathname, location.hash, location.state])
 

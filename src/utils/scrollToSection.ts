@@ -23,20 +23,33 @@ export function scrollToSection(sectionId: string) {
   const originalScrollBehavior = html.style.scrollBehavior
   html.style.scrollBehavior = 'auto'
   
-  // Scroll function
+  // Scroll function - instant positioning without animation
   const performScroll = () => {
     const element = document.getElementById(id)
     if (!element) {
       return false
     }
     
-    // Use scrollIntoView with instant behavior
-    // CSS scroll-margin-top (80px) is already set for sections with id
-    // This will automatically account for fixed navbar
-    element.scrollIntoView({
-      behavior: 'auto',
-      block: 'start',
-      inline: 'nearest'
+    // Calculate element position
+    const elementRect = element.getBoundingClientRect()
+    const elementTop = elementRect.top + window.pageYOffset
+    
+    // Calculate navbar offset (64px base + possible banner)
+    const navbar = document.querySelector('[class*="fixed"][class*="z-[70]"]')
+    let navbarOffset = 80 // Base offset including padding
+    if (navbar) {
+      const navbarRect = navbar.getBoundingClientRect()
+      navbarOffset = navbarRect.height + 16 // Navbar height + padding
+    }
+    
+    // Calculate final scroll position
+    const scrollPosition = elementTop - navbarOffset
+    
+    // Instantly position window without any animation
+    window.scrollTo({
+      top: Math.max(0, scrollPosition),
+      left: 0,
+      behavior: 'auto'
     })
     
     return true
