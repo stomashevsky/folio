@@ -52,9 +52,7 @@ export default function BestAppleWalletAlternativesArticlePage() {
       <ArticleParagraph>
         <Trans
           i18nKey="articles:best-apple-wallet-alternatives.p5"
-          components={[
-            <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" />
-          ]}
+          components={{ 0: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
         />
       </ArticleParagraph>
 

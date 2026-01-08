@@ -65,7 +65,7 @@ export default function BestGiftCardWalletAppsArticlePage() {
       <ArticleH2>{t('articles:best-gift-card-wallet-apps.h2_3')}</ArticleH2>
 
       <ArticleParagraph>
-        {t('articles:best-gift-card-wallet-apps.p11')}
+        <Trans i18nKey="articles:best-gift-card-wallet-apps.p11" components={{ 0: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>

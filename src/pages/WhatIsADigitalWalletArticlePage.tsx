@@ -21,7 +21,13 @@ export default function WhatIsADigitalWalletArticlePage() {
 
       <ArticleH2>{t(`${slug}.h2_1`)}</ArticleH2>
 
-      <ArticleParagraph>{t(`${slug}.p3`)}</ArticleParagraph>
+      <ArticleParagraph>
+        <Trans
+          i18nKey={`${slug}.p3`}
+          ns="articles"
+          components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
+        />
+      </ArticleParagraph>
 
       <ArticleParagraph>{t(`${slug}.p4`)}</ArticleParagraph>
 
