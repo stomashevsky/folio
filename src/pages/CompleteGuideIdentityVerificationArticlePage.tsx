@@ -127,15 +127,7 @@ export default function CompleteGuideIdentityVerificationArticlePage() {
 
       <ArticleParagraph>{t(`${slug}.p28`)}</ArticleParagraph>
       <ArticleParagraph>{t(`${slug}.p29`)}</ArticleParagraph>
-      <ArticleParagraph>
-        <Trans
-          i18nKey={`${slug}.p30`}
-          ns="articles"
-          components={{
-            LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" />
-          }}
-        />
-      </ArticleParagraph>
+      <ArticleParagraph>{t(`${slug}.p30`)}</ArticleParagraph>
     </BlogArticleLayout>
   )
 }

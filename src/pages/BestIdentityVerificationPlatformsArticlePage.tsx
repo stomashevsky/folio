@@ -203,10 +203,7 @@ export default function BestIdentityVerificationPlatformsArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans
-          i18nKey="articles:best-identity-verification-platforms.p20"
-          components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
-        />
+        {t('best-identity-verification-platforms.p20')}
       </ArticleParagraph>
     </BlogArticleLayout>
   );
