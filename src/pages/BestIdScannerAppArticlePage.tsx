@@ -1,7 +1,7 @@
 import { useTranslation, Trans } from 'react-i18next';
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, LocalizedLink } from '../components/ui';
 
-import idScannerImg from '../assets/images/blog-best-id-scanner-app.png';
+import idScannerImg from '../assets/images/blog-id-scanner-folio.png';
 
 export default function BestIdScannerAppArticlePage() {
   const { t } = useTranslation('articles');

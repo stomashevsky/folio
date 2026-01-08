@@ -19,8 +19,8 @@ interface UsePageTitleOptions {
  * Updates document.title, meta description, and Open Graph tags
  * Properly cleans up created elements to prevent memory leaks
  */
-export function usePageTitle({ 
-  title, 
+export function usePageTitle({
+  title,
   description,
   ogTitle,
   ogDescription,
@@ -36,7 +36,7 @@ export function usePageTitle({
     const previousDescription = document.querySelector('meta[name="description"]')?.getAttribute('content') || null
     const previousCanonical = document.querySelector('link[rel="canonical"]')?.getAttribute('href') || null
     const previousRobots = document.querySelector('meta[name="robots"]')?.getAttribute('content') || null
-    
+
     const previousOgTags: Record<string, string | null> = {}
     const ogProperties = ['og:type', 'og:title', 'og:description', 'og:image', 'og:url']
     ogProperties.forEach(prop => {
@@ -62,14 +62,14 @@ export function usePageTitle({
     // Update meta description if provided
     if (description) {
       let metaDescription = document.querySelector('meta[name="description"]') as HTMLMetaElement | null
-      
+
       if (!metaDescription) {
         metaDescription = document.createElement('meta')
         metaDescription.setAttribute('name', 'description')
         document.head.appendChild(metaDescription)
         createdElements.push(metaDescription)
       }
-      
+
       metaDescription.setAttribute('content', description)
     }
 
@@ -132,20 +132,20 @@ export function usePageTitle({
       document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(el => {
         createdElements.push(el as HTMLElement)
       })
-      
+
       // Get current path without language prefix
       const currentPath = window.location.pathname
       const pathParts = currentPath.split('/').filter(Boolean)
       const firstPart = pathParts[0]
-      
+
       // Check if first part is a language code
       const hasLangPrefix = SUPPORTED_LANGUAGES.includes(firstPart as typeof SUPPORTED_LANGUAGES[number])
-      const pathWithoutLang = hasLangPrefix 
+      const pathWithoutLang = hasLangPrefix
         ? '/' + pathParts.slice(1).join('/')
         : currentPath
-      
-      const baseUrl = ogUrl?.replace(/\/(en|es|ja)(\/.*)?$/, '') || 'https://folio.id'
-      
+
+      const baseUrl = ogUrl?.replace(/\/(en|es|ja|it|fr)(\/.*)?$/, '') || 'https://folio.id'
+
       // Create hreflang tags for each supported language
       SUPPORTED_LANGUAGES.forEach(lang => {
         const hreflangLink = document.createElement('link')
@@ -155,7 +155,7 @@ export function usePageTitle({
         document.head.appendChild(hreflangLink)
         createdElements.push(hreflangLink)
       })
-      
+
       // Add x-default hreflang (pointing to default language)
       const xDefaultLink = document.createElement('link')
       xDefaultLink.setAttribute('rel', 'alternate')
@@ -164,7 +164,7 @@ export function usePageTitle({
       document.head.appendChild(xDefaultLink)
       createdElements.push(xDefaultLink)
     }
-    
+
     updateHreflangTags()
 
     // Twitter tags (use property if present, otherwise create property tags to match index.html)

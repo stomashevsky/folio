@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useNavigate, useLocation, Navigate, useParams } from 'react-router-dom'
 import { useEffect, useState, lazy, Suspense } from 'react'
 import ScrollToTop from './components/ScrollToTop'
 import { LanguageRedirect, LanguageProvider } from './i18n/LanguageProvider'
@@ -81,57 +81,118 @@ const LoyaltyCardAppPage = lazy(() => import('./pages/LoyaltyCardAppPage'))
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
 const AboutPage = lazy(() => import('./pages/AboutPage'))
 
-// Fallback handler in case the script in index.html didn't run
+// Map of legacy slugs to new paths
+const LEGACY_MAPPING: Record<string, string> = {
+  // Main
+  'about-us': '/about',
+  'business': '/solutions/digital-ticketing',
+  'for-government': '/government',
+  'contact-us': '/about#contact',
+  'faq': '/',
+  'career': '/about',
+  // Products
+  'secure-wallet-app': '/wallet',
+  'id-wallet-app': '/id-wallet-app',
+  'card-scanner-app': '/card-scanner-app',
+  'loyalty-card-app': '/loyalty-card-app',
+  'gift-card-wallet': '/wallet',
+  'passport-wallet-app': '/id-wallet-app',
+  'health-wallet-app': '/wallet',
+  'event-ticket-scanner': '/solutions/digital-ticketing',
+  // Travel
+  'travel-wallet-app': '/wallet',
+  'travel-trip-planner': '/wallet',
+  'flight-ticket-travel': '/blog/flight-tickets-on-iphone',
+  'train-ticket-travel': '/blog/organize-tickets-bookings',
+  'bus-ticket-travel': '/blog/organize-tickets-bookings',
+  'hotel-bookings-travel': '/blog/organize-tickets-bookings',
+  // Legal
+  'folio-terms-conditions': '/terms',
+  'privacy-policy': '/privacy',
+  // Blog mappings
+  'what-is-a-digital-wallet': '/blog/what-is-a-digital-wallet',
+  'what-is-a-digital-drivers-license': '/blog/mobile-drivers-license',
+  'app-in-the-air-alternative': '/blog/app-in-the-air-alternative',
+  'albanian-diaspora': '/blog/albanian-diaspora-voter-registration',
+  'tripit-alternative': '/blog/tripit-alternative',
+  'top-10-digital-wallet-apps': '/blog/digital-wallet-apps-for-every-need',
+  'wanderlog-alternative': '/blog/wanderlog-alternative',
+  'tripcase-alternative': '/blog/tripcase-alternative',
+  'best-id-scanner-app': '/blog/best-id-scanner-app',
+  'forgemytrip-alternative': '/blog',
+  'how-to-access-your-digital-wallet-on-iphone': '/blog/access-your-digital-wallet-anywhere',
+  'best-google-wallet-alternatives': '/blog/best-google-wallet-alternatives',
+  'how-to-share-your-travel-plans': '/blog/how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app',
+  'polarsteps-alternative': '/blog',
+  'the-ultimate-guide-to-the-safest-digital-wallet-app': '/wallet',
+  'best-gift-card-wallet-apps': '/blog/best-gift-card-wallet-apps',
+  'the-best-event-ticket-apps': '/blog/the-best-event-ticket-apps',
+  'how-to-add-and-store-your-medical-card': '/blog/how-to-add-and-store-your-medical-card',
+  '10-travel-hacks-that-actually-work': '/blog/10-travel-hacks-that-actually-work',
+  'best-document-scanning-apps': '/blog/best-document-scanning-apps',
+  'how-to-add-gift-cards-to-your-wallet-app': '/blog/best-gift-card-wallet-apps',
+  'flight-tickets-on-iphone': '/blog/flight-tickets-on-iphone',
+  'checkmytrip-alternative': '/blog/checkmytrip-alternative',
+  '7-useful-apps-for-planning-your-trip': '/blog/best-apps-to-plan-travel',
+  'exploring-the-security-of-digital-wallets': '/security',
+  'stippl-alternative': '/blog',
+  'can-a-digital-wallet-be-hacked': '/security',
+  'best-apps-to-plan-travel': '/blog/best-apps-to-plan-travel',
+  'tripsy-alternative': '/blog',
+  'you-can-now-store-tickets-in-folio-wallet': '/blog/you-can-now-store-tickets-in-folio-wallet',
+  'how-to-secure-your-wallet-on-iphone': '/security',
+  'using-loyalty-card-on-your-iphone': '/blog/how-to-store-and-use-loyalty-cards-on-your-iphone',
+  'regular-vs-digital-wallets': '/blog/regular-vs-digital-wallets',
+  'the-best-digital-wallets-for-android': '/blog/best-google-wallet-alternatives',
+  'apple-gift-card-add-to-wallet': '/blog/apple-gift-card-add-to-wallet',
+  'best-digital-wallet-apps-in-canada': '/blog/best-digital-wallet-apps-in-canada',
+  'the-best-digital-wallets-for-iphone': '/blog/best-apple-wallet-alternatives',
+  'pass2u-alternative': '/blog/pass2u-alternative',
+  'best-apple-wallet-alternatives': '/blog/best-apple-wallet-alternatives',
+  // Marketing/misc pages from old site
+  'app-card': '/',
+  'producthunt': '/',
+  'support': '/about#contact',
+  'delete_account_request': '/privacy',
+  // Legal agreement pages
+  'folio-sdk-license-agreement': '/terms',
+  'folio-data-processing-agreement': '/privacy',
+  'folio-api-license-agreement': '/terms',
+  'folio-platform-terms-of-service': '/terms',
+  // Blog article with changed slug
+  'albanian-diaspora-voter-registration-surges-525-with-folio-digital-wallet': '/blog/albanian-diaspora-voter-registration'
+}
+
+// Fallback handler for GitHub Pages query string redirect (?/path)
 function RedirectHandler() {
   const location = useLocation()
   const navigate = useNavigate()
 
   useEffect(() => {
-    // Check if URL still has the query string format ?/path
-    // This is a fallback in case the script in index.html didn't execute
     const search = location.search
-    
     if (search && search[1] === '/') {
-      // Extract the path from query string (e.g., '/government' from '?/government')
-      const pathWithParams = search.slice(1) // Removes '?' -> '/government'
-      
-      // Find where the actual path ends (before any additional query params)
+      const pathWithParams = search.slice(1)
       let pathEnd = pathWithParams.length
       for (let i = 0; i < pathWithParams.length - 1; i++) {
         if (pathWithParams[i] === '&') {
-          // Check if this & is part of ~and~
           const before = i >= 4 ? pathWithParams.substring(i - 4, i) : ''
           if (before !== '~and') {
-            // This is a real query param separator
             pathEnd = i
             break
           }
         }
       }
-      
-      // Extract just the path part
-      let route = pathWithParams.substring(0, pathEnd)
-      
-      // Decode ~and~ back to &
-      route = route.replace(/~and~/g, '&')
-      
-      // Ensure route starts with /
-      if (!route.startsWith('/')) {
-        route = '/' + route
-      }
-      
-      // Extract additional query parameters if they exist
+
+      let route = pathWithParams.substring(0, pathEnd).replace(/~and~/g, '&')
+      if (!route.startsWith('/')) route = '/' + route
+
       const additionalParams = pathWithParams.substring(pathEnd)
       let finalPath = route
       if (additionalParams) {
-        // Remove leading & and decode ~and~
         const cleanParams = additionalParams.replace(/^&/, '').replace(/~and~/g, '&')
-        if (cleanParams) {
-          finalPath = route + '?' + cleanParams
-        }
+        if (cleanParams) finalPath = route + '?' + cleanParams
       }
-      
-      // Navigate to the correct path (without basename, React Router will add it)
+
       navigate(finalPath, { replace: true })
     }
   }, [location.search, navigate])
@@ -159,22 +220,58 @@ function PrerenderReadyMarker() {
 
 /**
  * Redirects old URLs without language prefix to the default language
- * e.g., /wallet -> /en/wallet
+ * Handles legacy URL patterns from the old folio.id site
  */
 function LegacyRedirect() {
   const location = useLocation()
-  const pathSegments = location.pathname.split('/').filter(Boolean)
+  const path = location.pathname.replace(/\/$/, '') || '/' // Clean trailing slash
+  const pathSegments = path.split('/').filter(Boolean)
   const firstSegment = pathSegments[0]
-  
-  // Check if the first segment is a valid language code
+
+  // Skip if already has a valid language prefix
   const isLanguagePrefix = SUPPORTED_LANGUAGES.includes(firstSegment as typeof SUPPORTED_LANGUAGES[number])
-  
-  // If not a language prefix and not the root, redirect to default language
-  if (!isLanguagePrefix && pathSegments.length > 0) {
-    return <Navigate to={`/${DEFAULT_LANGUAGE}${location.pathname}${location.search}${location.hash}`} replace />
+  if (isLanguagePrefix || pathSegments.length === 0) {
+    return null
   }
-  
-  return null
+
+  // Try different matching strategies in order of specificity
+  const lastSegment = pathSegments[pathSegments.length - 1]
+
+  // 1. First try matching the first segment (for main pages like /about-us, /business)
+  let mappedPath = LEGACY_MAPPING[firstSegment]
+
+  // 2. Then try matching the last segment (for blog slugs like /blog/article-name)
+  if (!mappedPath && lastSegment !== firstSegment) {
+    mappedPath = LEGACY_MAPPING[lastSegment]
+  }
+
+  if (mappedPath) {
+    // Build target URL with language prefix
+    const target = mappedPath.startsWith('/')
+      ? `/${DEFAULT_LANGUAGE}${mappedPath}`
+      : `/${DEFAULT_LANGUAGE}/${mappedPath}`
+    return <Navigate to={`${target}${location.search}${location.hash}`} replace />
+  }
+
+  // Fallback: prepend language prefix to current path
+  const newPath = `/${DEFAULT_LANGUAGE}${path}`
+  return <Navigate to={`${newPath}${location.search}${location.hash}`} replace />
+}
+
+
+/**
+ * Ensuring that the :lang parameter is a valid supported language.
+ * If not, it allows LegacyRedirect to handle it.
+ */
+function LanguageGuard({ children }: { children: React.ReactNode }) {
+  const { lang } = useParams()
+  const isLanguagePrefix = SUPPORTED_LANGUAGES.includes(lang as typeof SUPPORTED_LANGUAGES[number])
+
+  if (!isLanguagePrefix) {
+    return <LegacyRedirect />
+  }
+
+  return <>{children}</>
 }
 
 /**
@@ -253,7 +350,18 @@ function LocalizedRoutes() {
         <Route path="privacy" element={<PrivacyPage />} />
         <Route path="security" element={<SecurityPage />} />
         <Route path="about" element={<AboutPage />} />
+
+        {/* Legacy URL redirects for slugs accessed with language prefix */}
+        <Route path="about-us" element={<Navigate to="../about" replace />} />
+        <Route path="business" element={<Navigate to="../solutions/digital-ticketing" replace />} />
+        <Route path="for-government" element={<Navigate to="../government" replace />} />
+        <Route path="secure-wallet-app" element={<Navigate to="../wallet" replace />} />
+        <Route path="what-is-a-digital-wallet" element={<Navigate to="../blog/what-is-a-digital-wallet" replace />} />
+        <Route path="privacy-policy" element={<Navigate to="../privacy" replace />} />
+        <Route path="folio-terms-conditions" element={<Navigate to="../terms" replace />} />
+
         <Route path="*" element={<NotFoundPage />} />
+
       </Routes>
     </Suspense>
   )
@@ -264,32 +372,34 @@ function App() {
   // - https://folio.id/ (root)
   // - https://stomashevsky.github.io/folio/ (GitHub Pages project site)
   const runtimeBase =
-    typeof window !== 'undefined' && 
-    (window.location.pathname === '/folio' || window.location.pathname.startsWith('/folio/'))
-      ? '/folio' 
+    typeof window !== 'undefined' &&
+      (window.location.pathname === '/folio' || window.location.pathname.startsWith('/folio/'))
+      ? '/folio'
       : undefined
-  
+
   return (
     <BrowserRouter basename={runtimeBase}>
       <ScrollToTop />
       <RedirectHandler />
-      <LegacyRedirect />
       <PrerenderReadyMarker />
       <CookieConsent />
       <Routes>
         {/* Root path redirects to user's preferred language */}
         <Route path="/" element={<LanguageRedirect />} />
-        
+
         {/* All localized routes under /:lang/* */}
         <Route path="/:lang/*" element={
           <LanguageBannerProvider>
             <LanguageProvider>
-            <LanguageSuggestionBanner />
+              <LanguageSuggestionBanner />
               <BannerSpacer />
-              <LocalizedRoutes />
-          </LanguageProvider>
+              <LanguageGuard>
+                <LocalizedRoutes />
+              </LanguageGuard>
+            </LanguageProvider>
           </LanguageBannerProvider>
         } />
+        <Route path="*" element={<LegacyRedirect />} />
       </Routes>
     </BrowserRouter>
   )

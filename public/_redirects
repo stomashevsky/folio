@@ -1,0 +1,73 @@
+# SEO Redirects for folio.id migration
+# Format: [old path] [new path] [status]
+
+# Main Pages
+/about-us/               /en/about      301
+/business/               /en/solutions/digital-ticketing 301
+/for-government/         /en/government 301
+/contact-us/             /en/about#contact 301
+/faq/                    /en/           301
+/career/                 /en/about      301
+
+# Product Pages
+/secure-wallet-app/      /en/wallet     301
+/secure-wallet-app       /en/wallet     301
+/id-wallet-app/          /en/id-wallet-app 301
+/id-wallet-app           /en/id-wallet-app 301
+/card-scanner-app/       /en/card-scanner-app 301
+/card-scanner-app        /en/card-scanner-app 301
+/loyalty-card-app/       /en/loyalty-card-app 301
+/loyalty-card-app        /en/loyalty-card-app 301
+/gift-card-wallet/       /en/wallet     301
+/passport-wallet-app/    /en/id-wallet-app 301
+/health-wallet-app/      /en/wallet     301
+/event-ticket-scanner/   /en/solutions/digital-ticketing 301
+
+# Travel Pages
+/travel-wallet-app/      /en/wallet     301
+/travel-trip-planner/    /en/wallet     301
+/flight-ticket-travel/    /en/blog/flight-tickets-on-iphone 301
+/train-ticket-travel/     /en/blog/organize-tickets-bookings 301
+/bus-ticket-travel/       /en/blog/organize-tickets-bookings 301
+/hotel-bookings-travel/   /en/blog/organize-tickets-bookings 301
+
+# Legal
+/folio-terms-conditions/ /en/terms      301
+/privacy-policy/          /en/privacy    301
+
+# Blog Posts (Core Mappings)
+/blog/what-is-a-digital-wallet/           /en/blog/what-is-a-digital-wallet 301
+/blog/what-is-a-digital-drivers-license/  /en/blog/mobile-drivers-license 301
+/blog/how-to-access-your-digital-wallet-on-iphone/ /en/blog/access-your-digital-wallet-anywhere 301
+/blog/top-10-digital-wallet-apps/         /en/blog/digital-wallet-apps-for-every-need 301
+/blog/how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app/ /en/blog/how-to-share-your-travel-plans-with-friends-using-a-trip-planner-app 301
+/blog/using-loyalty-card-on-your-iphone/  /en/blog/how-to-store-and-use-loyalty-cards-on-your-iphone 301
+/blog/the-best-digital-wallets-for-android/ /en/blog/best-google-wallet-alternatives 301
+/blog/the-best-digital-wallets-for-iphone/ /en/blog/best-apple-wallet-alternatives 301
+/blog/the-ultimate-guide-to-the-safest-digital-wallet-app/ /en/wallet 301
+
+# Blog article with changed slug
+/blog/albanian-diaspora-voter-registration-surges-525-with-folio-digital-wallet /en/blog/albanian-diaspora-voter-registration 301
+
+# Blog pagination pages
+/blog/page/1/            /en/blog       301
+/blog/page/2/            /en/blog       301
+/blog/page/3/            /en/blog       301
+/blog/page/4/            /en/blog       301
+/blog/page/:num          /en/blog       301
+
+# Marketing/misc pages from old site
+/app-card/               /en/           301
+/producthunt/            /en/           301
+/support/                /en/about#contact 301
+/sitemap/                /en/           301
+/delete_account_request/ /en/privacy    301
+
+# Legal agreement pages
+/folio-sdk-license-agreement/     /en/terms  301
+/folio-data-processing-agreement/ /en/privacy 301
+/folio-api-license-agreement/     /en/terms  301
+/folio-platform-terms-of-service/ /en/terms  301
+
+# Catch-all for other blog posts (preserving slugs)
+/blog/:slug              /en/blog/:slug 301

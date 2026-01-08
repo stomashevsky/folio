@@ -19,6 +19,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/about"/>
   </url>
   <url>
+    <loc>https://folio.id/en/about-us</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/about-us"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/about-us"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/about-us"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/about-us"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/about-us"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/about-us"/>
+  </url>
+  <url>
     <loc>https://folio.id/en/blog</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/blog"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/blog"/>
@@ -458,6 +467,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/you-can-now-store-tickets-in-folio-wallet"/>
   </url>
   <url>
+    <loc>https://folio.id/en/business</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/business"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/business"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/business"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/business"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/business"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/business"/>
+  </url>
+  <url>
     <loc>https://folio.id/en/card-scanner-app</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/card-scanner-app"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/card-scanner-app"/>
@@ -465,6 +483,24 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/card-scanner-app"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/card-scanner-app"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/card-scanner-app"/>
+  </url>
+  <url>
+    <loc>https://folio.id/en/folio-terms-conditions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/folio-terms-conditions"/>
+  </url>
+  <url>
+    <loc>https://folio.id/en/for-government</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/for-government"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/for-government"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/for-government"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/for-government"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/for-government"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/for-government"/>
   </url>
   <url>
     <loc>https://folio.id/en/government</loc>
@@ -611,6 +647,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/privacy"/>
   </url>
   <url>
+    <loc>https://folio.id/en/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/privacy-policy"/>
+  </url>
+  <url>
+    <loc>https://folio.id/en/secure-wallet-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/secure-wallet-app"/>
+  </url>
+  <url>
     <loc>https://folio.id/en/security</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/security"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/security"/>
@@ -665,6 +719,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/wallet"/>
   </url>
   <url>
+    <loc>https://folio.id/en/what-is-a-digital-wallet</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/what-is-a-digital-wallet"/>
+  </url>
+  <url>
     <loc>https://folio.id/es</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es"/>
@@ -681,6 +744,15 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/about"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/about"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/about"/>
+  </url>
+  <url>
+    <loc>https://folio.id/es/about-us</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/about-us"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/about-us"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/about-us"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/about-us"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/about-us"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/about-us"/>
   </url>
   <url>
     <loc>https://folio.id/es/blog</loc>
@@ -1122,6 +1194,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/you-can-now-store-tickets-in-folio-wallet"/>
   </url>
   <url>
+    <loc>https://folio.id/es/business</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/business"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/business"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/business"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/business"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/business"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/business"/>
+  </url>
+  <url>
     <loc>https://folio.id/es/card-scanner-app</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/card-scanner-app"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/card-scanner-app"/>
@@ -1129,6 +1210,24 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/card-scanner-app"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/card-scanner-app"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/card-scanner-app"/>
+  </url>
+  <url>
+    <loc>https://folio.id/es/folio-terms-conditions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/folio-terms-conditions"/>
+  </url>
+  <url>
+    <loc>https://folio.id/es/for-government</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/for-government"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/for-government"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/for-government"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/for-government"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/for-government"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/for-government"/>
   </url>
   <url>
     <loc>https://folio.id/es/government</loc>
@@ -1275,6 +1374,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/privacy"/>
   </url>
   <url>
+    <loc>https://folio.id/es/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/privacy-policy"/>
+  </url>
+  <url>
+    <loc>https://folio.id/es/secure-wallet-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/secure-wallet-app"/>
+  </url>
+  <url>
     <loc>https://folio.id/es/security</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/security"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/security"/>
@@ -1329,6 +1446,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/wallet"/>
   </url>
   <url>
+    <loc>https://folio.id/es/what-is-a-digital-wallet</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/what-is-a-digital-wallet"/>
+  </url>
+  <url>
     <loc>https://folio.id/fr</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es"/>
@@ -1345,6 +1471,15 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/about"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/about"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/about"/>
+  </url>
+  <url>
+    <loc>https://folio.id/fr/about-us</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/about-us"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/about-us"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/about-us"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/about-us"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/about-us"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/about-us"/>
   </url>
   <url>
     <loc>https://folio.id/fr/blog</loc>
@@ -1786,6 +1921,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/you-can-now-store-tickets-in-folio-wallet"/>
   </url>
   <url>
+    <loc>https://folio.id/fr/business</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/business"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/business"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/business"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/business"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/business"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/business"/>
+  </url>
+  <url>
     <loc>https://folio.id/fr/card-scanner-app</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/card-scanner-app"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/card-scanner-app"/>
@@ -1793,6 +1937,24 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/card-scanner-app"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/card-scanner-app"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/card-scanner-app"/>
+  </url>
+  <url>
+    <loc>https://folio.id/fr/folio-terms-conditions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/folio-terms-conditions"/>
+  </url>
+  <url>
+    <loc>https://folio.id/fr/for-government</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/for-government"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/for-government"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/for-government"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/for-government"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/for-government"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/for-government"/>
   </url>
   <url>
     <loc>https://folio.id/fr/government</loc>
@@ -1939,6 +2101,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/privacy"/>
   </url>
   <url>
+    <loc>https://folio.id/fr/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/privacy-policy"/>
+  </url>
+  <url>
+    <loc>https://folio.id/fr/secure-wallet-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/secure-wallet-app"/>
+  </url>
+  <url>
     <loc>https://folio.id/fr/security</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/security"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/security"/>
@@ -1993,6 +2173,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/wallet"/>
   </url>
   <url>
+    <loc>https://folio.id/fr/what-is-a-digital-wallet</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/what-is-a-digital-wallet"/>
+  </url>
+  <url>
     <loc>https://folio.id/it</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es"/>
@@ -2009,6 +2198,15 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/about"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/about"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/about"/>
+  </url>
+  <url>
+    <loc>https://folio.id/it/about-us</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/about-us"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/about-us"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/about-us"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/about-us"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/about-us"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/about-us"/>
   </url>
   <url>
     <loc>https://folio.id/it/blog</loc>
@@ -2450,6 +2648,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/you-can-now-store-tickets-in-folio-wallet"/>
   </url>
   <url>
+    <loc>https://folio.id/it/business</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/business"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/business"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/business"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/business"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/business"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/business"/>
+  </url>
+  <url>
     <loc>https://folio.id/it/card-scanner-app</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/card-scanner-app"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/card-scanner-app"/>
@@ -2457,6 +2664,24 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/card-scanner-app"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/card-scanner-app"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/card-scanner-app"/>
+  </url>
+  <url>
+    <loc>https://folio.id/it/folio-terms-conditions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/folio-terms-conditions"/>
+  </url>
+  <url>
+    <loc>https://folio.id/it/for-government</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/for-government"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/for-government"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/for-government"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/for-government"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/for-government"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/for-government"/>
   </url>
   <url>
     <loc>https://folio.id/it/government</loc>
@@ -2603,6 +2828,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/privacy"/>
   </url>
   <url>
+    <loc>https://folio.id/it/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/privacy-policy"/>
+  </url>
+  <url>
+    <loc>https://folio.id/it/secure-wallet-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/secure-wallet-app"/>
+  </url>
+  <url>
     <loc>https://folio.id/it/security</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/security"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/security"/>
@@ -2657,6 +2900,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/wallet"/>
   </url>
   <url>
+    <loc>https://folio.id/it/what-is-a-digital-wallet</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/what-is-a-digital-wallet"/>
+  </url>
+  <url>
     <loc>https://folio.id/ja</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es"/>
@@ -2673,6 +2925,15 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/about"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/about"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/about"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ja/about-us</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/about-us"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/about-us"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/about-us"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/about-us"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/about-us"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/about-us"/>
   </url>
   <url>
     <loc>https://folio.id/ja/blog</loc>
@@ -3114,6 +3375,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/blog/you-can-now-store-tickets-in-folio-wallet"/>
   </url>
   <url>
+    <loc>https://folio.id/ja/business</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/business"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/business"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/business"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/business"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/business"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/business"/>
+  </url>
+  <url>
     <loc>https://folio.id/ja/card-scanner-app</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/card-scanner-app"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/card-scanner-app"/>
@@ -3121,6 +3391,24 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/card-scanner-app"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/card-scanner-app"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/card-scanner-app"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ja/folio-terms-conditions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/folio-terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/folio-terms-conditions"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ja/for-government</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/for-government"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/for-government"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/for-government"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/for-government"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/for-government"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/for-government"/>
   </url>
   <url>
     <loc>https://folio.id/ja/government</loc>
@@ -3267,6 +3555,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/privacy"/>
   </url>
   <url>
+    <loc>https://folio.id/ja/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/privacy-policy"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ja/secure-wallet-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/secure-wallet-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/secure-wallet-app"/>
+  </url>
+  <url>
     <loc>https://folio.id/ja/security</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/security"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/security"/>
@@ -3319,5 +3625,14 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/wallet"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/wallet"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/wallet"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ja/what-is-a-digital-wallet</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/what-is-a-digital-wallet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/what-is-a-digital-wallet"/>
   </url>
 </urlset>
