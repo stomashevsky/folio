@@ -22,7 +22,7 @@ import blogAppInTheAirAlternative from '../assets/images/blog-app-in-the-air-alt
 import blogCheckMyTripAlternative from '../assets/images/blog-checkmytrip-alternative.png'
 import blogWanderlogAlternative from '../assets/images/blog-wanderlog-alternative.png'
 import blogBestDocumentScanningApps from '../assets/images/blog-best-document-scanning-apps.png'
-import blogBestIdScannerApp from '../assets/images/blog-id-scanner-folio.png'
+import blogBestIdScannerApp from '../assets/images/blog-best-id-scanner-app.png'
 import blogTenTravelHacks from '../assets/images/blog-10-travel-hacks-that-actually-work.png'
 import blogBestAppsToPlanTravel from '../assets/images/blog-best-apps-to-plan-travel.png'
 import blogBestEventTicketApps from '../assets/images/blog-best-event-ticket-apps.png'
