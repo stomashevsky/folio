@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import { StrictMode, Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
@@ -57,9 +57,11 @@ import { ToastProvider } from './contexts/ToastContext'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ErrorBoundary>
-      <ToastProvider>
-        <App />
-      </ToastProvider>
+      <Suspense fallback={<div className="min-h-screen" />}>
+        <ToastProvider>
+          <App />
+        </ToastProvider>
+      </Suspense>
     </ErrorBoundary>
   </StrictMode>,
 )

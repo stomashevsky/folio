@@ -8,6 +8,10 @@ export default defineConfig({
   // For GitHub Pages deployment at /folio/, set VITE_BASE_PATH=/folio/ when building.
   // For production at folio.id or local dev, use default root path.
   base: process.env.VITE_BASE_PATH || '/',
+  define: {
+    // Build version for cache-busting i18n translations
+    'import.meta.env.VITE_BUILD_VERSION': JSON.stringify(Date.now().toString(36)),
+  },
   server: {
     allowedHosts: true,
   },
