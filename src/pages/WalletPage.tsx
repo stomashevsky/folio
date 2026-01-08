@@ -82,45 +82,47 @@ function WalletPage() {
   // Handle instant positioning to section when navigating from other pages
   useEffect(() => {
     // Check if we need to position to a specific section
-    let timeoutId1: ReturnType<typeof setTimeout> | null = null
-    let timeoutId2: ReturnType<typeof setTimeout> | null = null
+    const timeouts: ReturnType<typeof setTimeout>[] = []
     
     if (location.hash) {
       const sectionId = location.hash.slice(1) // Remove #
-      // Try immediately for instant positioning
+      // Try immediately and with multiple delays to ensure element is rendered
       scrollToSection(sectionId)
-      // Also try after delays to ensure element is rendered
+      
       requestAnimationFrame(() => {
         scrollToSection(sectionId)
-        timeoutId1 = setTimeout(() => {
-          scrollToSection(sectionId)
-        }, 100)
-        timeoutId2 = setTimeout(() => {
-          scrollToSection(sectionId)
-        }, 300)
+        
+        // Multiple retry attempts for cross-page navigation
+        const delays = [100, 200, 400, 600, 800, 1000]
+        delays.forEach(delay => {
+          const timeoutId = setTimeout(() => {
+            scrollToSection(sectionId)
+          }, delay)
+          timeouts.push(timeoutId)
+        })
       })
     } else if (location.state?.scrollTo === 'get-the-app') {
       scrollToSection('get-the-app')
+      
       requestAnimationFrame(() => {
         scrollToSection('get-the-app')
-        timeoutId1 = setTimeout(() => {
-          scrollToSection('get-the-app')
-        }, 100)
-        timeoutId2 = setTimeout(() => {
-          scrollToSection('get-the-app')
-        }, 300)
+        
+        const delays = [100, 200, 400, 600, 800, 1000]
+        delays.forEach(delay => {
+          const timeoutId = setTimeout(() => {
+            scrollToSection('get-the-app')
+          }, delay)
+          timeouts.push(timeoutId)
+        })
       })
     }
     
     return () => {
-      if (timeoutId1) {
-        clearTimeout(timeoutId1)
-      }
-      if (timeoutId2) {
-        clearTimeout(timeoutId2)
-      }
+      timeouts.forEach(timeoutId => {
+        clearTimeout(timeoutId)
+      })
     }
-  }, [location])
+  }, [location.hash, location.state])
 
   return (
     <div className="flex flex-col items-start min-h-screen relative w-full">

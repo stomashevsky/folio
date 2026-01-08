@@ -15,6 +15,7 @@ export function useLocalizedPath() {
    * Converts a path to a localized path with the current language prefix
    * @param path - The path to localize (e.g., "/wallet" or "wallet")
    * @returns The localized path with trailing slash (e.g., "/en/wallet/")
+   * Note: Hash anchors should be handled separately by components using this function
    */
   const getLocalizedPath = (path: string): string => {
     // Remove leading slash if present for consistent handling

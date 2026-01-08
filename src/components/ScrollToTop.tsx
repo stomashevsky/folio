@@ -34,27 +34,26 @@ export default function ScrollToTop() {
       return
     }
     
-    // If URL has a hash, position to that element instantly using scrollToSection
-    if (location.hash) {
-      const id = location.hash.slice(1) // Remove the # prefix
-      // Use scrollToSection which handles instant positioning without animation
-      // Try immediately first
-      scrollToSection(id)
-      // Also try after delays to ensure element is rendered
-      requestAnimationFrame(() => {
-        scrollToSection(id)
-        setTimeout(() => {
-          scrollToSection(id)
-        }, 100)
-        setTimeout(() => {
-          scrollToSection(id)
-        }, 300)
-      })
-    } else {
-      // No hash, scroll to top instantly
+    // No hash, scroll to top instantly
+    if (!location.hash) {
       window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
     }
-  }, [location.pathname, location.hash, location.state])
+  }, [location.pathname, location.state])
+
+  // Handle hash separately in useEffect to allow lazy-loaded components to render
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.slice(1) // Remove the # prefix
+      // Wait for components to render, then position to element
+      // Use scrollToSection which handles instant positioning and retries
+      const delays = [0, 50, 100, 200, 400, 600, 800, 1000, 1500]
+      delays.forEach(delay => {
+        setTimeout(() => {
+          scrollToSection(id)
+        }, delay)
+      })
+    }
+  }, [location.hash])
 
   // Handle blog scroll restoration separately
   useEffect(() => {
