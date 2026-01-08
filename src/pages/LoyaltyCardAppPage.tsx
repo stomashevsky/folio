@@ -29,7 +29,8 @@ const BACKGROUND_STYLE = {
 function LoyaltyCardAppPage() {
   const { t } = useTranslation('pages')
   const navigate = useNavigate()
-  const { getLocalizedPath } = useLocalizedPath()
+  const { getLocalizedPath, currentLang } = useLocalizedPath()
+  const canonicalUrl = `https://folio.id/${currentLang}/loyalty-card-app`
   
   usePageTitle({
     title: t('loyaltyCardApp.meta.title'),
@@ -37,7 +38,8 @@ function LoyaltyCardAppPage() {
     ogTitle: t('loyaltyCardApp.meta.ogTitle'),
     ogDescription: t('loyaltyCardApp.meta.ogDescription'),
     ogImage: getOgImageUrl('folio-app-hero.png'),
-    ogUrl: 'https://folio.id/loyalty-card-app/'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
 
   const faqData = (t('loyaltyCardApp.faq.items', { returnObjects: true }) as Array<{ q: string; a: string }>)

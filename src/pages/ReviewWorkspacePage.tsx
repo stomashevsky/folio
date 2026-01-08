@@ -8,6 +8,7 @@ import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 
 // Icons
 import zapIcon from '../assets/icons/Zap.svg'
@@ -59,6 +60,8 @@ const USE_CASE_ICONS = {
 
 export default function ReviewWorkspacePage() {
   const { t } = useTranslation('platform')
+  const { currentLang } = useLocalizedPath()
+  const canonicalUrl = `https://folio.id/${currentLang}/platform/review-workspace`
   
   usePageTitle({
     title: t('reviewWorkspace.meta.title'),
@@ -66,7 +69,8 @@ export default function ReviewWorkspacePage() {
     ogTitle: t('reviewWorkspace.meta.title'),
     ogDescription: t('reviewWorkspace.meta.description'),
     ogImage: getOgImageUrl('review-workspace-hero.png'),
-    ogUrl: 'https://folio.id/platform/review-workspace'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
 
   // Generate feature highlights from translations

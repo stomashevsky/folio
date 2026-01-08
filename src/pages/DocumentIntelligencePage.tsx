@@ -8,6 +8,7 @@ import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 
 // Icons
 import checkCheckIcon from '../assets/icons/CheckCheck.svg'
@@ -51,6 +52,8 @@ const PRACTICAL_USES_ICONS = {
 
 export default function DocumentIntelligencePage() {
   const { t } = useTranslation('platform')
+  const { currentLang } = useLocalizedPath()
+  const canonicalUrl = `https://folio.id/${currentLang}/platform/document-intelligence`
   
   usePageTitle({
     title: t('documentIntelligence.meta.title'),
@@ -58,7 +61,8 @@ export default function DocumentIntelligencePage() {
     ogTitle: t('documentIntelligence.meta.title'),
     ogDescription: t('documentIntelligence.meta.description'),
     ogImage: getOgImageUrl('document-intelligence-hero.png'),
-    ogUrl: 'https://folio.id/platform/document-intelligence'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
 
   // Generate how it works items from translations

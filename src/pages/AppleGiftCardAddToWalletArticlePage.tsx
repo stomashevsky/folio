@@ -68,7 +68,7 @@ export default function AppleGiftCardAddToWalletArticlePage() {
       <ArticleParagraph>
         <Trans
           i18nKey="articles:apple-gift-card-add-to-wallet.p11"
-          components={{ 0: <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
+          components={{ 0: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
         />
       </ArticleParagraph>
 

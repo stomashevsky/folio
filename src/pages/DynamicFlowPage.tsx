@@ -8,6 +8,7 @@ import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 
 // Icons
 import playIcon from '../assets/icons/Play.svg'
@@ -49,6 +50,8 @@ const USE_CASE_ICONS = {
 
 export default function DynamicFlowPage() {
   const { t } = useTranslation('platform')
+  const { currentLang } = useLocalizedPath()
+  const canonicalUrl = `https://folio.id/${currentLang}/platform/dynamic-flow`
   
   usePageTitle({
     title: t('dynamicFlow.meta.title'),
@@ -56,7 +59,8 @@ export default function DynamicFlowPage() {
     ogTitle: t('dynamicFlow.meta.title'),
     ogDescription: t('dynamicFlow.meta.description'),
     ogImage: getOgImageUrl('dynamic-flow-hero.png'),
-    ogUrl: 'https://folio.id/platform/dynamic-flow'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
 
   // Generate how it works items from translations

@@ -40,7 +40,7 @@ export default function HowToAddAndStoreYourMedicalCardArticlePage() {
           i18nKey={`${slug}.p3`}
           ns="articles"
           components={{
-            LocalizedLink: <LocalizedLink to="/#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors" />
+            LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors" />
           }}
         />
       </ArticleParagraph>

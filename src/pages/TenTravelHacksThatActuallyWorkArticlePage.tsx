@@ -43,7 +43,7 @@ export default function TenTravelHacksThatActuallyWorkArticlePage() {
       <ArticleParagraph>
         <Trans
           i18nKey="articles:10-travel-hacks-that-actually-work.p6"
-          components={{ 0: <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
+          components={{ 0: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
         />
       </ArticleParagraph>
 

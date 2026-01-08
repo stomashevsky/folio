@@ -66,7 +66,7 @@ export default function BestIdScannerAppArticlePage() {
       <ArticleParagraph>
         <Trans
           i18nKey="articles:best-id-scanner-app.p10"
-          components={{ LocalizedLink: <LocalizedLink to="/" className="underline hover:text-[#737373] transition-colors" /> }}
+          components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
         />
       </ArticleParagraph>
 

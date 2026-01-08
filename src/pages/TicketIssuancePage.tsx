@@ -30,7 +30,8 @@ const BACKGROUND_STYLE = {
 export default function DigitalTicketingPage() {
   const { t } = useTranslation('solutions')
   const navigate = useNavigate()
-  const { getLocalizedPath } = useLocalizedPath()
+  const { getLocalizedPath, currentLang } = useLocalizedPath()
+  const canonicalUrl = `https://folio.id/${currentLang}/solutions/ticket-issuance`
   
   usePageTitle({
     title: t('ticketIssuance.meta.title'),
@@ -38,7 +39,8 @@ export default function DigitalTicketingPage() {
     ogTitle: t('ticketIssuance.meta.title'),
     ogDescription: t('ticketIssuance.meta.description'),
     ogImage: getOgImageUrl('ticket-issuance-hero.png'),
-    ogUrl: 'https://folio.id/solutions/ticket-issuance'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
 
   const handleTryFolio = () => {

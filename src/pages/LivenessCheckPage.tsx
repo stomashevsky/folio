@@ -10,6 +10,7 @@ import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import FAQSection from '../components/sections/FAQSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 
 // Icons
 import shieldHalfIcon from '../assets/icons/ShieldHalf.svg'
@@ -45,6 +46,8 @@ const KEY_FEATURES_IDS = ['euAligned', 'signalLibrary', 'updatedModels', 'multiF
 
 export default function LivenessCheckPage() {
   const { t } = useTranslation('platform')
+  const { currentLang } = useLocalizedPath()
+  const canonicalUrl = `https://folio.id/${currentLang}/platform/liveness-check`
 
   usePageTitle({
     title: t('livenessCheck.meta.title'),
@@ -52,7 +55,8 @@ export default function LivenessCheckPage() {
     ogTitle: t('livenessCheck.meta.title'),
     ogDescription: t('livenessCheck.meta.description'),
     ogImage: getOgImageUrl('liveness-check-hero.png'),
-    ogUrl: 'https://folio.id/platform/liveness-check'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
 
   // Generate how it works items from translations

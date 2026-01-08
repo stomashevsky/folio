@@ -29,7 +29,8 @@ const BACKGROUND_STYLE = {
 function IdWalletAppPage() {
   const { t } = useTranslation('pages')
   const navigate = useNavigate()
-  const { getLocalizedPath } = useLocalizedPath()
+  const { getLocalizedPath, currentLang } = useLocalizedPath()
+  const canonicalUrl = `https://folio.id/${currentLang}/id-wallet-app`
   
   usePageTitle({
     title: t('idWalletApp.meta.title'),
@@ -37,7 +38,8 @@ function IdWalletAppPage() {
     ogTitle: t('idWalletApp.meta.ogTitle'),
     ogDescription: t('idWalletApp.meta.ogDescription'),
     ogImage: getOgImageUrl('folio-app-hero.png'),
-    ogUrl: 'https://folio.id/id-wallet-app/'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
 
   const faqData = (t('idWalletApp.faq.items', { returnObjects: true }) as Array<{ q: string; a: string }>)

@@ -7,9 +7,12 @@ import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
 import { SkipToContentLink } from '../components/ui'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 
 export default function PlaygroundPage() {
   const { t } = useTranslation('government')
+  const { currentLang } = useLocalizedPath()
+  const canonicalUrl = `https://folio.id/${currentLang}/government/playground`
   
   usePageTitle({
     title: t('playground.meta.title'),
@@ -17,7 +20,8 @@ export default function PlaygroundPage() {
     ogTitle: t('playground.meta.title'),
     ogDescription: t('playground.meta.description'),
     ogImage: getOgImageUrl('identity-lab-hero.png'),
-    ogUrl: 'https://folio.id/government/playground'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
   return (
     <div className="flex flex-col items-start min-h-screen relative w-full">

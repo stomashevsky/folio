@@ -6,6 +6,7 @@ import type { AccordionItemData } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
 import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 
 // Images
 import ageVerificationHero from '../assets/images/age-verification-hero.png'
@@ -70,13 +71,16 @@ const INTEGRATION_IDS = ['sdk', 'api', 'staticUrl'] as const
 
 export default function AgeCompliancePage() {
   const { t } = useTranslation('solutions')
+  const { currentLang } = useLocalizedPath()
+  const canonicalUrl = `https://folio.id/${currentLang}/solutions/age-compliance`
   
   usePageTitle({
     title: t('ageCompliance.meta.title'),
     description: t('ageCompliance.meta.description'),
     ogTitle: t('ageCompliance.meta.title'),
     ogDescription: t('ageCompliance.meta.description'),
-    ogUrl: 'https://folio.id/solutions/age-compliance'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
 
   const [activeMethodId, setActiveMethodId] = useState<string | null>('documentVerification')

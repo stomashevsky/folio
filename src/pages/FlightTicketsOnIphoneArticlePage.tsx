@@ -44,7 +44,7 @@ export default function FlightTicketsOnIphoneArticlePage() {
       <ArticleParagraph>
         <Trans
           i18nKey="articles:flight-tickets-on-iphone.p7"
-          components={{ 0: <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
+          components={{ 0: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
         />
       </ArticleParagraph>
 

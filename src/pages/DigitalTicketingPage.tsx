@@ -32,13 +32,17 @@ export default function DigitalTicketingPage() {
   const navigate = useNavigate()
   const { getLocalizedPath } = useLocalizedPath()
   
+  const { currentLang } = useLocalizedPath()
+  const canonicalUrl = `https://folio.id/${currentLang}/solutions/digital-ticketing`
+
   usePageTitle({
     title: t('digitalTicketing.meta.title'),
     description: t('digitalTicketing.meta.description'),
     ogTitle: t('digitalTicketing.meta.title'),
     ogDescription: t('digitalTicketing.meta.description'),
     ogImage: getOgImageUrl('ticket-issuance-hero.png'),
-    ogUrl: 'https://folio.id/solutions/digital-ticketing'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
 
   const handleTryFolio = () => {

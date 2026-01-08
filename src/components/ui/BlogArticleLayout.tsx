@@ -93,10 +93,37 @@ export default function BlogArticleLayout({
     canonicalUrl: `https://folio.id/${currentLang}/blog/${slug}`,
   })
 
+  // BreadcrumbList schema for SEO
+  const breadcrumbListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: `https://folio.id/${currentLang}`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: `https://folio.id/${currentLang}/blog`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: displayTitle,
+        item: `https://folio.id/${currentLang}/blog/${slug}`,
+      },
+    ],
+  }
+
   return (
     <div className="flex flex-col items-start min-h-screen relative w-full">
       <Navbar />
       <main className="flex-1 w-full">
+        {/* BlogPosting schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -122,6 +149,13 @@ export default function BlogArticleLayout({
                 url: 'https://folio.id',
               },
             }),
+          }}
+        />
+        {/* BreadcrumbList schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(breadcrumbListSchema),
           }}
         />
         <section className="bg-white border-[#e5e5e5] border-b border-l-0 border-r-0 border-solid border-t-0 flex flex-col gap-6 items-center px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full">

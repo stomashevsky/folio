@@ -24,15 +24,18 @@ const BACKGROUND_STYLE = {
 export default function GovernmentPage() {
   const { t } = useTranslation('government')
   const navigate = useNavigate()
-  const { getLocalizedPath } = useLocalizedPath()
+  const { getLocalizedPath, currentLang } = useLocalizedPath()
   
+  const canonicalUrl = `https://folio.id/${currentLang}/government`
+
   usePageTitle({
     title: t('government.meta.title'),
     description: t('government.meta.description'),
     ogTitle: t('government.meta.title'),
     ogDescription: t('government.meta.description'),
     ogImage: getOgImageUrl('government-solutions-hero.png'),
-    ogUrl: 'https://folio.id/government'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
 
   return (

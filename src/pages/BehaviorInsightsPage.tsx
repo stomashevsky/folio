@@ -8,6 +8,7 @@ import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 
 // Icons
 import audioWaveformIcon from '../assets/icons/AudioWaveform.svg'
@@ -55,6 +56,8 @@ const USE_CASE_ICONS = {
 
 export default function BehaviorInsightsPage() {
   const { t } = useTranslation('platform')
+  const { currentLang } = useLocalizedPath()
+  const canonicalUrl = `https://folio.id/${currentLang}/platform/behavior-insights`
   
   usePageTitle({
     title: t('behaviorInsights.meta.title'),
@@ -62,7 +65,8 @@ export default function BehaviorInsightsPage() {
     ogTitle: t('behaviorInsights.meta.title'),
     ogDescription: t('behaviorInsights.meta.description'),
     ogImage: getOgImageUrl('behavior-insights-hero.png'),
-    ogUrl: 'https://folio.id/platform/behavior-insights'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
 
   // Generate feature highlights from translations

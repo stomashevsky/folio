@@ -4,6 +4,7 @@ import FooterSection from '../sections/FooterSection'
 import { usePageTitle } from '../../hooks/usePageTitle'
 import { useScrollToTop } from '../../hooks/useScrollToTop'
 import { getOgImageUrl } from '../../configs/ogImages'
+import { useLocalizedPath } from '../../i18n/useLocalizedPath'
 
 interface LegalPageLayoutProps {
   /** Page title - displayed as H1 */
@@ -46,8 +47,10 @@ export default function LegalPageLayout({
   children,
 }: LegalPageLayoutProps) {
   useScrollToTop()
-
+  const { currentLang } = useLocalizedPath()
+  
   const ogImage = getOgImageUrl('folio-app-hero.png')
+  const canonicalUrl = `https://folio.id/${currentLang}/${slug}`
 
   usePageTitle({
     title: `${title} | Folio`,
@@ -56,14 +59,41 @@ export default function LegalPageLayout({
     ogTitle: title,
     ogDescription: description,
     ogImage,
-    ogUrl: `https://folio.id/${slug}`,
-    canonicalUrl: `https://folio.id/${slug}`,
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl,
   })
+
+  // BreadcrumbList schema for SEO
+  const breadcrumbListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: `https://folio.id/${currentLang}`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: title,
+        item: canonicalUrl,
+      },
+    ],
+  }
 
   return (
     <div className="flex flex-col items-start min-h-screen relative w-full">
       <Navbar />
       <main className="flex-1 w-full">
+        {/* BreadcrumbList schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(breadcrumbListSchema),
+          }}
+        />
         <section className="bg-white border-[#e5e5e5] border-b border-l-0 border-r-0 border-solid border-t-0 flex flex-col gap-6 items-center px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full">
           <div className="flex flex-col gap-12 items-start justify-center px-6 md:px-6 py-0 relative shrink-0 w-full max-w-[768px]">
             {/* Header with title and last updated */}

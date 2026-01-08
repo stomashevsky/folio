@@ -43,7 +43,7 @@ export default function BestGiftCardWalletAppsArticlePage() {
       />
 
       <ArticleParagraph>
-        <Trans i18nKey="articles:best-gift-card-wallet-apps.p6" components={[<LocalizedLink key="0" to="/#get-the-app" className="underline hover:text-[#737373] transition-colors">Available free on iOS and Android</LocalizedLink>]} />
+        <Trans i18nKey="articles:best-gift-card-wallet-apps.p6" components={[<LocalizedLink key="0" to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors">Available free on iOS and Android</LocalizedLink>]} />
       </ArticleParagraph>
 
       <ArticleParagraph>

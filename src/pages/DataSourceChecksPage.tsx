@@ -8,6 +8,7 @@ import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 
 // Icons
 import databaseIcon from '../assets/icons/Database.svg'
@@ -61,6 +62,8 @@ const USE_CASE_ICONS = {
 
 export default function DataSourceChecksPage() {
   const { t } = useTranslation('platform')
+  const { currentLang } = useLocalizedPath()
+  const canonicalUrl = `https://folio.id/${currentLang}/platform/data-source-checks`
 
   usePageTitle({
     title: t('dataSourceChecks.meta.title'),
@@ -68,7 +71,8 @@ export default function DataSourceChecksPage() {
     ogTitle: t('dataSourceChecks.meta.title'),
     ogDescription: t('dataSourceChecks.meta.description'),
     ogImage: getOgImageUrl('data-source-checks-hero.png'),
-    ogUrl: 'https://folio.id/platform/data-source-checks'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
 
   // Generate how it works items from translations

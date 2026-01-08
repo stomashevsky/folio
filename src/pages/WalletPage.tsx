@@ -13,6 +13,7 @@ import GetTheAppSection from '../components/sections/GetTheAppSection'
 import Accordion, { AccordionItemData } from '../components/ui/Accordion'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 import { scrollToSection } from '../utils/scrollToSection'
 import folioAppHeroVideo from '../assets/images/folio-app-hero.mp4'
 import folioFeaturesTickets from '../assets/images/folio-features-tickets.png'
@@ -65,13 +66,17 @@ function WalletPage() {
     }))
   }, [t])
   
+  const { currentLang } = useLocalizedPath()
+  const canonicalUrl = `https://folio.id/${currentLang}/wallet`
+
   usePageTitle({
     title: t('meta.title'),
     description: t('meta.description'),
     ogTitle: t('meta.title'),
     ogDescription: t('meta.description'),
     ogImage: getOgImageUrl('folio-app-hero.png'),
-    ogUrl: 'https://folio.id/wallet'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
   
   // Handle scroll to section when navigating from other pages

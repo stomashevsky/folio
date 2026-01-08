@@ -9,6 +9,7 @@ import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import FAQSection from '../components/sections/FAQSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 
 // Icons
 import scanFaceIcon from '../assets/icons/ScanFace.svg'
@@ -48,6 +49,8 @@ const KEY_FEATURES_IDS = ['flexibleControls', 'signalLibrary', 'improvingModels'
 
 export default function FaceMatchPage() {
   const { t } = useTranslation('platform')
+  const { currentLang } = useLocalizedPath()
+  const canonicalUrl = `https://folio.id/${currentLang}/platform/face-match`
 
   usePageTitle({
     title: t('faceMatch.meta.title'),
@@ -55,7 +58,8 @@ export default function FaceMatchPage() {
     ogTitle: t('faceMatch.meta.title'),
     ogDescription: t('faceMatch.meta.description'),
     ogImage: getOgImageUrl('face-match-hero.png'),
-    ogUrl: 'https://folio.id/platform/face-match'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
 
   // Generate how it works items from translations

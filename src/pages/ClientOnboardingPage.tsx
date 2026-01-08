@@ -6,6 +6,7 @@ import type { AccordionItemData } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
 import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 
 // Images
 import clientOnboardingHero from '../assets/images/client-onboarding-hero.png'
@@ -78,13 +79,16 @@ const INDUSTRY_IDS = [
 
 export default function ClientOnboardingPage() {
   const { t } = useTranslation('solutions')
+  const { currentLang } = useLocalizedPath()
+  const canonicalUrl = `https://folio.id/${currentLang}/solutions/client-onboarding`
   
   usePageTitle({
     title: t('clientOnboarding.meta.title'),
     description: t('clientOnboarding.meta.description'),
     ogTitle: t('clientOnboarding.meta.title'),
     ogDescription: t('clientOnboarding.meta.description'),
-    ogUrl: 'https://folio.id/solutions/client-onboarding'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
 
   const [activeMethodId, setActiveMethodId] = useState<string | null>('send')

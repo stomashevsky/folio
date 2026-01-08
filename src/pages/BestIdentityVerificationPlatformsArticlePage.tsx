@@ -131,7 +131,7 @@ export default function BestIdentityVerificationPlatformsArticlePage() {
       <ArticleParagraph>
         <Trans
           i18nKey="articles:best-identity-verification-platforms.p8"
-          components={{ LocalizedLink: <LocalizedLink to="/wallet" className="underline hover:text-[#737373] transition-colors" /> }}
+          components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
         />
       </ArticleParagraph>
 
@@ -205,7 +205,7 @@ export default function BestIdentityVerificationPlatformsArticlePage() {
       <ArticleParagraph>
         <Trans
           i18nKey="articles:best-identity-verification-platforms.p20"
-          components={{ LocalizedLink: <LocalizedLink to="/" className="underline hover:text-[#737373] transition-colors" /> }}
+          components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
         />
       </ArticleParagraph>
     </BlogArticleLayout>

@@ -9,6 +9,7 @@ import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import FAQSection, { FAQItem } from '../components/sections/FAQSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 
 // Icons
 import badgeCheckIcon from '../assets/icons/BadgeCheck.svg'
@@ -54,6 +55,8 @@ const USE_CASE_ICONS = {
 
 export default function CredentialIssuancePage() {
   const { t } = useTranslation('platform')
+  const { currentLang } = useLocalizedPath()
+  const canonicalUrl = `https://folio.id/${currentLang}/platform/credential-issuance`
   
   usePageTitle({
     title: t('credentialIssuance.meta.title'),
@@ -61,7 +64,8 @@ export default function CredentialIssuancePage() {
     ogTitle: t('credentialIssuance.meta.title'),
     ogDescription: t('credentialIssuance.meta.description'),
     ogImage: getOgImageUrl('credential-issuance-hero.png'),
-    ogUrl: 'https://folio.id/platform/credential-issuance'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
 
   // Generate overview items from translations

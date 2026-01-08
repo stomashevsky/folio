@@ -8,6 +8,7 @@ import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 
 // Icons
 import shieldHalfIcon from '../assets/icons/ShieldHalf.svg'
@@ -58,6 +59,8 @@ const RISK_SIGNAL_ICONS = {
 
 export default function PhoneAndEmailValidationPage() {
   const { t } = useTranslation('platform')
+  const { currentLang } = useLocalizedPath()
+  const canonicalUrl = `https://folio.id/${currentLang}/platform/phone-and-email-validation`
 
   usePageTitle({
     title: t('phoneAndEmailValidation.meta.title'),
@@ -65,7 +68,8 @@ export default function PhoneAndEmailValidationPage() {
     ogTitle: t('phoneAndEmailValidation.meta.title'),
     ogDescription: t('phoneAndEmailValidation.meta.description'),
     ogImage: getOgImageUrl('phone-email-validation-hero.png'),
-    ogUrl: 'https://folio.id/platform/phone-and-email-validation'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
 
   // Generate how it works items from translations

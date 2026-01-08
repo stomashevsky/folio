@@ -29,7 +29,8 @@ const BACKGROUND_STYLE = {
 function CardScannerAppPage() {
   const { t } = useTranslation('pages')
   const navigate = useNavigate()
-  const { getLocalizedPath } = useLocalizedPath()
+  const { getLocalizedPath, currentLang } = useLocalizedPath()
+  const canonicalUrl = `https://folio.id/${currentLang}/card-scanner-app`
   
   usePageTitle({
     title: t('cardScannerApp.meta.title'),
@@ -37,7 +38,8 @@ function CardScannerAppPage() {
     ogTitle: t('cardScannerApp.meta.ogTitle'),
     ogDescription: t('cardScannerApp.meta.ogDescription'),
     ogImage: getOgImageUrl('folio-app-hero.png'),
-    ogUrl: 'https://folio.id/card-scanner-app/'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
 
   const faqData = (t('cardScannerApp.faq.items', { returnObjects: true }) as Array<{ q: string; a: string }>)

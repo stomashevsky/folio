@@ -27,7 +27,7 @@ export default function AccessYourDigitalWalletAnywhereArticlePage() {
       <ArticleParagraph>
         <Trans
           i18nKey="articles:access-your-digital-wallet-anywhere.p3"
-          components={{ 0: <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
+          components={{ 0: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
         />
       </ArticleParagraph>
 

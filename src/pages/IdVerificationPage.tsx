@@ -9,6 +9,7 @@ import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import FAQSection from '../components/sections/FAQSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 
 // Icons
 import globeIcon from '../assets/icons/Globe.svg'
@@ -50,6 +51,8 @@ const USE_CASES_ICONS = {
 
 export default function IdVerificationPage() {
   const { t } = useTranslation('platform')
+  const { currentLang } = useLocalizedPath()
+  const canonicalUrl = `https://folio.id/${currentLang}/platform/id-verification`
   
   usePageTitle({
     title: t('idVerification.meta.title'),
@@ -57,7 +60,8 @@ export default function IdVerificationPage() {
     ogTitle: t('idVerification.meta.title'),
     ogDescription: t('idVerification.meta.description'),
     ogImage: getOgImageUrl('id-verification-hero.png'),
-    ogUrl: 'https://folio.id/platform/id-verification'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
 
   // Generate how it works items from translations

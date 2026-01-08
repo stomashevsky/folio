@@ -88,7 +88,7 @@ export default function ManagingFamilyTravelDocumentsArticlePage() {
           ns="articles"
           i18nKey="managing-family-travel-documents.p15"
           components={{
-            LocalizedLink: <LocalizedLink to="/#get-the-app" className="underline hover:text-[#737373] transition-colors" />
+            LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" />
           }}
         />
       </ArticleParagraph>

@@ -29,13 +29,17 @@ function SecurityPage() {
   const location = useLocation()
   const { getLocalizedPath } = useLocalizedPath()
   
+  const { currentLang } = useLocalizedPath()
+  const canonicalUrl = `https://folio.id/${currentLang}/security`
+
   usePageTitle({
     title: t('security.meta.title'),
     description: t('security.meta.description'),
     ogTitle: t('security.meta.ogTitle'),
     ogDescription: t('security.meta.ogDescription'),
     ogImage: getOgImageUrl('security-hero.png'),
-    ogUrl: 'https://folio.id/security'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
 
   const handleGetApp = () => {

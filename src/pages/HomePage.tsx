@@ -60,13 +60,17 @@ function HomePage() {
   const navigate = useNavigate()
   const { getLocalizedPath } = useLocalizedPath()
 
+  const { currentLang } = useLocalizedPath()
+  const canonicalUrl = `https://folio.id/${currentLang}`
+
   usePageTitle({
     title: t('meta.title'),
     description: t('meta.description'),
     ogTitle: t('meta.title'),
     ogDescription: t('meta.description'),
     ogImage: getOgImageUrl('folio-app-hero.png'),
-    ogUrl: 'https://folio.id/'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
 
   const handleNavigate = (to: string) => {

@@ -6,6 +6,7 @@ import type { AccordionItemData } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
 import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 
 // Images
 import ageVerificationHero from '../assets/images/age-verification-hero.png'
@@ -36,13 +37,16 @@ const BACKGROUND_STYLE = {
 
 export default function AgeVerificationPage() {
   const { t } = useTranslation('pages')
+  const { currentLang } = useLocalizedPath()
+  const canonicalUrl = `https://folio.id/${currentLang}/solutions/age-compliance`
   
   usePageTitle({
     title: t('ageVerification.meta.title'),
     description: t('ageVerification.meta.description'),
     ogTitle: t('ageVerification.meta.title'),
     ogDescription: t('ageVerification.meta.description'),
-    ogUrl: 'https://folio.id/solutions/age-compliance'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
 
   // Age verification methods data (using AccordionItemData format)

@@ -8,6 +8,7 @@ import FooterSection from '../components/sections/FooterSection'
 import ExploreMoreSection from '../components/sections/ExploreMoreSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
+import { useLocalizedPath } from '../i18n/useLocalizedPath'
 
 // Icons
 import triangleAlertIcon from '../assets/icons/TriangleAlert.svg'
@@ -45,6 +46,8 @@ const USE_CASE_ICONS = {
 
 export default function NfcIdentityScanPage() {
   const { t } = useTranslation('platform')
+  const { currentLang } = useLocalizedPath()
+  const canonicalUrl = `https://folio.id/${currentLang}/platform/nfc-identity-scan`
 
   usePageTitle({
     title: t('nfcIdentityScan.meta.title'),
@@ -52,7 +55,8 @@ export default function NfcIdentityScanPage() {
     ogTitle: t('nfcIdentityScan.meta.title'),
     ogDescription: t('nfcIdentityScan.meta.description'),
     ogImage: getOgImageUrl('nfc-identity-scan-hero.png'),
-    ogUrl: 'https://folio.id/platform/nfc-identity-scan'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
 
   // Generate how it works items from translations
