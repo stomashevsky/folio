@@ -133,8 +133,14 @@ export function usePageTitle({
         createdElements.push(el as HTMLElement)
       })
 
-      // Get current path without language prefix
-      const currentPath = window.location.pathname
+      // Get current path, stripping /folio/ base path if present (GitHub Pages)
+      let currentPath = window.location.pathname
+      if (currentPath.startsWith('/folio/')) {
+        currentPath = currentPath.slice(6) // Remove '/folio' prefix, keep leading slash
+      } else if (currentPath === '/folio') {
+        currentPath = '/'
+      }
+
       const pathParts = currentPath.split('/').filter(Boolean)
       const firstPart = pathParts[0]
 
@@ -144,7 +150,7 @@ export function usePageTitle({
         ? '/' + pathParts.slice(1).join('/')
         : currentPath
 
-      const baseUrl = ogUrl?.replace(/\/(en|es|ja|it|fr)(\/.*)?$/, '') || 'https://folio.id'
+      const baseUrl = 'https://folio.id'
 
       // Create hreflang tags for each supported language
       SUPPORTED_LANGUAGES.forEach(lang => {
