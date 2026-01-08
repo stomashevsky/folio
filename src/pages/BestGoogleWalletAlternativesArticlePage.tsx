@@ -1,7 +1,7 @@
 import { useTranslation, Trans } from 'react-i18next';
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, LocalizedLink } from '../components/ui';
 
-import walletAlternativesImg from '../assets/images/blog-best-google-wallet-alternatives.png';
+import blogGoogleWalletFolioScreens from '../assets/images/blog-google-wallet-folio-screens.png';
 
 export default function BestGoogleWalletAlternativesArticlePage() {
   const { t } = useTranslation('articles');
@@ -33,7 +33,7 @@ export default function BestGoogleWalletAlternativesArticlePage() {
       </ArticleParagraph>
 
       <ArticleImage
-        src={walletAlternativesImg}
+        src={blogGoogleWalletFolioScreens}
         alt={t('best-google-wallet-alternatives.img_alt1')}
       />
 

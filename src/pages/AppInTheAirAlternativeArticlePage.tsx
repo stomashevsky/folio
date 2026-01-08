@@ -83,7 +83,10 @@ export default function AppInTheAirAlternativeArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        {t('articles:app-in-the-air-alternative.p14')}
+        <Trans
+          i18nKey="articles:app-in-the-air-alternative.p14"
+          components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
+        />
       </ArticleParagraph>
     </BlogArticleLayout>
   )

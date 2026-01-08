@@ -1,6 +1,6 @@
 import { LocalizedLink } from '../components/ui'
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import passportScanning from '../assets/images/blog-scanning-passport.png'
+import blogDocumentScanningPassport from '../assets/images/blog-document-scanning-passport.png'
 import { useTranslation, Trans } from 'react-i18next'
 
 export default function BestDocumentScanningAppsArticlePage() {
@@ -33,7 +33,7 @@ export default function BestDocumentScanningAppsArticlePage() {
       </ArticleParagraph>
 
       <ArticleImage
-        src={passportScanning}
+        src={blogDocumentScanningPassport}
         alt={t('articles:best-document-scanning-apps.img_alt')}
       />
 

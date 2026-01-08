@@ -1,6 +1,6 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import { LocalizedLink } from '../components/ui'
-import eventTicketsImage from '../assets/images/blog-best-event-ticket-apps.png'
+import blogEventTicketsFolio from '../assets/images/blog-event-tickets-folio.png'
 import { useTranslation, Trans } from 'react-i18next'
 
 export default function BestEventTicketAppsArticlePage() {
@@ -53,7 +53,7 @@ export default function BestEventTicketAppsArticlePage() {
       </ArticleParagraph>
 
       <ArticleImage
-        src={eventTicketsImage}
+        src={blogEventTicketsFolio}
         alt={t('articles:the-best-event-ticket-apps.img_alt')}
       />
 

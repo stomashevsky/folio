@@ -1,5 +1,5 @@
 import { LocalizedLink, BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import giftCardScreen from '../assets/images/blog-gift-card-wallet.png'
+import blogGiftCardFolioScreen from '../assets/images/blog-gift-card-folio-screen.png'
 import { useTranslation, Trans } from 'react-i18next'
 
 export default function BestGiftCardWalletAppsArticlePage() {
@@ -38,7 +38,7 @@ export default function BestGiftCardWalletAppsArticlePage() {
       </ArticleParagraph>
 
       <ArticleImage
-        src={giftCardScreen}
+        src={blogGiftCardFolioScreen}
         alt={t('articles:best-gift-card-wallet-apps.img_alt')}
       />
 
