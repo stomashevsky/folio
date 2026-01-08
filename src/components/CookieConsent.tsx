@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Button } from './ui'
+import { Button, LocalizedLink } from './ui'
 
 const COOKIE_CONSENT_KEY = 'folio-cookie-consent'
 
@@ -55,7 +55,7 @@ export default function CookieConsent() {
             <p className="text-[#737373] text-sm leading-5">
               We use cookies to enhance your experience, analyze site traffic, and for marketing purposes. 
               By clicking "Accept all", you consent to our use of cookies. 
-              Read our <a href="/privacy" className="underline hover:text-[#0a0a0a] transition-colors">Privacy Policy</a> for more information.
+              Read our <LocalizedLink to="/privacy" className="underline hover:text-[#0a0a0a] transition-colors">Privacy Policy</LocalizedLink> for more information.
             </p>
           </div>
           <div className="flex gap-3 items-center shrink-0">

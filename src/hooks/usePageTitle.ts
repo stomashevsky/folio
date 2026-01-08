@@ -130,7 +130,7 @@ export function usePageTitle({
     const updateHreflangTags = () => {
       // Remove existing hreflang tags
       document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(el => {
-        createdElements.push(el as HTMLElement)
+        el.remove()
       })
 
       // Get current path, stripping /folio/ base path if present (GitHub Pages)
@@ -266,6 +266,13 @@ export function usePageTitle({
           } else if (createdElements.includes(metaTag)) {
             metaTag.remove()
           }
+        }
+      })
+
+      // Remove hreflang tags created by this component
+      document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(el => {
+        if (createdElements.includes(el as HTMLElement)) {
+          el.remove()
         }
       })
     }
