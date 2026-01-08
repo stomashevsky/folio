@@ -31,6 +31,8 @@ export function scrollToSection(sectionId: string) {
     }
     
     // Use scrollIntoView with instant behavior
+    // CSS scroll-margin-top (80px) is already set for sections with id
+    // This will automatically account for fixed navbar
     element.scrollIntoView({
       behavior: 'auto',
       block: 'start',

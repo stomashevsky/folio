@@ -1,6 +1,7 @@
 import { useLayoutEffect, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { isBlogScrollRestoring, restoreBlogPageState, clearBlogPageState } from '../utils/blogScrollPosition'
+import { scrollToSection } from '../utils/scrollToSection'
 
 /**
  * Component that handles scroll on every route change
@@ -33,37 +34,20 @@ export default function ScrollToTop() {
       return
     }
     
-    // Temporarily disable smooth scrolling to ensure instant scroll
-    const html = document.documentElement
-    const originalScrollBehavior = html.style.scrollBehavior
-    html.style.scrollBehavior = 'auto'
-    
-    // If URL has a hash, scroll to that element
+    // If URL has a hash, scroll to that element using scrollToSection
     if (location.hash) {
       const id = location.hash.slice(1) // Remove the # prefix
-      const element = document.getElementById(id)
-      if (element) {
-        element.scrollIntoView()
-      } else {
-        // Element not found yet, try after DOM is ready
-        requestAnimationFrame(() => {
-          const el = document.getElementById(id)
-          if (el) {
-            el.scrollIntoView()
-          } else {
-            window.scrollTo(0, 0)
-          }
-        })
-      }
+      // Use scrollToSection which handles instant scroll and retries
+      // Try immediately first
+      scrollToSection(id)
+      // Also try after a delay to ensure element is rendered
+      setTimeout(() => {
+        scrollToSection(id)
+      }, 200)
     } else {
-      // No hash, scroll to top
-      window.scrollTo(0, 0)
+      // No hash, scroll to top instantly
+      window.scrollTo({ top: 0, behavior: 'auto' })
     }
-    
-    // Restore smooth scrolling after a frame
-    requestAnimationFrame(() => {
-      html.style.scrollBehavior = originalScrollBehavior
-    })
   }, [location.pathname, location.hash, location.state])
 
   // Handle blog scroll restoration separately

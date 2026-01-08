@@ -82,22 +82,36 @@ function WalletPage() {
   // Handle scroll to section when navigating from other pages
   useEffect(() => {
     // Check if we need to scroll to a specific section
-    let timeoutId: ReturnType<typeof setTimeout> | null = null
+    let timeoutId1: ReturnType<typeof setTimeout> | null = null
+    let timeoutId2: ReturnType<typeof setTimeout> | null = null
     
     if (location.hash) {
       const sectionId = location.hash.slice(1) // Remove #
-      timeoutId = setTimeout(() => {
+      // Try immediately
+      scrollToSection(sectionId)
+      // Also try after delays to ensure element is rendered
+      timeoutId1 = setTimeout(() => {
         scrollToSection(sectionId)
-      }, 100)
+      }, 200)
+      timeoutId2 = setTimeout(() => {
+        scrollToSection(sectionId)
+      }, 400)
     } else if (location.state?.scrollTo === 'get-the-app') {
-      timeoutId = setTimeout(() => {
+      scrollToSection('get-the-app')
+      timeoutId1 = setTimeout(() => {
         scrollToSection('get-the-app')
-      }, 100)
+      }, 200)
+      timeoutId2 = setTimeout(() => {
+        scrollToSection('get-the-app')
+      }, 400)
     }
     
     return () => {
-      if (timeoutId) {
-        clearTimeout(timeoutId)
+      if (timeoutId1) {
+        clearTimeout(timeoutId1)
+      }
+      if (timeoutId2) {
+        clearTimeout(timeoutId2)
       }
     }
   }, [location])
