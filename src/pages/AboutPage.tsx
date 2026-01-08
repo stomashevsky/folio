@@ -25,7 +25,9 @@ function AboutPage() {
   const { t } = useTranslation('pages')
   const navigate = useNavigate()
   const location = useLocation()
-  const { getLocalizedPath } = useLocalizedPath()
+  const { getLocalizedPath, currentLang } = useLocalizedPath()
+
+  const canonicalUrl = `https://folio.id/${currentLang}/about`
 
   usePageTitle({
     title: t('about.meta.title'),
@@ -33,7 +35,8 @@ function AboutPage() {
     ogTitle: t('about.meta.ogTitle'),
     ogDescription: t('about.meta.ogDescription'),
     ogImage: getOgImageUrl('folio-app-hero.png'),
-    ogUrl: 'https://folio.id/about'
+    ogUrl: canonicalUrl,
+    canonicalUrl: canonicalUrl
   })
 
   const handleGetApp = () => {

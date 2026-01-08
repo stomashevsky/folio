@@ -32,6 +32,16 @@ function toLoc(pathname) {
 
 function collectRoutePathsFromApp(appSource) {
   const paths = new Set()
+  const legacyRedirectPaths = new Set()
+  
+  // First, collect legacy redirect routes (routes with <Navigate> element)
+  // These should be excluded from sitemap
+  const redirectRouteRe = /<Route\s+path=\"([^\"]+)\"\s+element=\{<Navigate[^}]+to=\"\.\.\/([^\"]+)\"[^}]*\/>\s*\}\s*\/>/g
+  let redirectMatch = redirectRouteRe.exec(appSource)
+  while (redirectMatch) {
+    legacyRedirectPaths.add(redirectMatch[1])
+    redirectMatch = redirectRouteRe.exec(appSource)
+  }
   
   // Match routes in LocalizedRoutes function
   const routePathRe = /<Route\s+(?:index|path=\"([^\"]*)\")(?:\s+element)/g
@@ -42,6 +52,12 @@ function collectRoutePathsFromApp(appSource) {
 
     // Skip any wildcard/param routes
     if (routePath && (routePath.includes('*') || routePath.includes(':'))) {
+      m = routePathRe.exec(appSource)
+      continue
+    }
+
+    // Skip legacy redirect routes - they should not be in sitemap
+    if (routePath && legacyRedirectPaths.has(routePath)) {
       m = routePathRe.exec(appSource)
       continue
     }

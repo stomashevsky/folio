@@ -67,7 +67,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   }, [lang, i18n, navigate, location])
 
   // Don't render children until language is valid, unless it might be a legacy URL
-  if (!isValidLanguage(lang) && lang.length <= 3) {
+  if (!isValidLanguage(lang) && lang && lang.length <= 3) {
     return null
   }
 
