@@ -18,7 +18,12 @@ export default function AlbanianDiasporaArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans i18nKey="articles:albanian-diaspora-voter-registration.p2" />
+        <Trans
+          i18nKey="articles:albanian-diaspora-voter-registration.p2"
+          components={{
+            LocalizedLink: <LocalizedLink to="/blog/albanian-diaspora-voter-registration" className="underline hover:text-[#737373] transition-colors" />
+          }}
+        />
       </ArticleParagraph>
 
       <ArticleH2>{t('articles:albanian-diaspora-voter-registration.h2_1')}</ArticleH2>
