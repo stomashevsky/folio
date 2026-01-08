@@ -92,7 +92,7 @@ export default function AlbanianDiasporaArticlePage() {
       <ArticleParagraph>
         <Trans
           i18nKey="articles:albanian-diaspora-voter-registration.p12"
-          components={{ 0: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
+          components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
         />
       </ArticleParagraph>
     </BlogArticleLayout>

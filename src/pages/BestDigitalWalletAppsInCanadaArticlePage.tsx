@@ -38,7 +38,7 @@ export default function BestDigitalWalletAppsInCanadaArticlePage() {
       <ArticleH2>{t('articles:best-digital-wallet-apps-in-canada.h2_4')}</ArticleH2>
 
       <ArticleParagraph>
-        <Trans i18nKey="articles:best-digital-wallet-apps-in-canada.p5" components={{ 0: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors" /> }} />
+        <Trans i18nKey="articles:best-digital-wallet-apps-in-canada.p5" components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors" /> }} />
       </ArticleParagraph>
 
       <ArticleH2>{t('articles:best-digital-wallet-apps-in-canada.h2_5')}</ArticleH2>

@@ -43,7 +43,7 @@ export default function BestGiftCardWalletAppsArticlePage() {
       />
 
       <ArticleParagraph>
-        <Trans i18nKey="articles:best-gift-card-wallet-apps.p6" components={[<LocalizedLink key="0" to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors">Available free on iOS and Android</LocalizedLink>]} />
+        <Trans i18nKey="articles:best-gift-card-wallet-apps.p6" components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
@@ -65,7 +65,7 @@ export default function BestGiftCardWalletAppsArticlePage() {
       <ArticleH2>{t('articles:best-gift-card-wallet-apps.h2_3')}</ArticleH2>
 
       <ArticleParagraph>
-        <Trans i18nKey="articles:best-gift-card-wallet-apps.p11" components={{ 0: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }} />
+        <Trans i18nKey="articles:best-gift-card-wallet-apps.p11" components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>

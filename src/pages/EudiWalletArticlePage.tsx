@@ -106,7 +106,7 @@ export default function EudiWalletArticlePage() {
       <ArticleParagraph>
         <Trans
           i18nKey="articles:eudi-wallet.p19"
-          components={{ 0: <LocalizedLink to={getLocalizedPath('/government/playground')} className="underline hover:text-[#737373] transition-colors" /> }}
+          components={{ LocalizedLink: <LocalizedLink to={getLocalizedPath('/government/playground')} className="underline hover:text-[#737373] transition-colors" /> }}
         />
       </ArticleParagraph>
 

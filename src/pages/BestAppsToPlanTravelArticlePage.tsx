@@ -41,7 +41,7 @@ export default function BestAppsToPlanTravelArticlePage() {
       <ArticleH2>{t('articles:best-apps-to-plan-travel.h2_3')}</ArticleH2>
 
       <ArticleParagraph>
-        <Trans i18nKey="articles:best-apps-to-plan-travel.p6" components={[<LocalizedLink key="0" to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors">Folio</LocalizedLink>]} />
+        <Trans i18nKey="articles:best-apps-to-plan-travel.p6" components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
