@@ -146,18 +146,28 @@ export function usePageTitle({
 
       // Check if first part is a language code
       const hasLangPrefix = SUPPORTED_LANGUAGES.includes(firstPart as typeof SUPPORTED_LANGUAGES[number])
-      const pathWithoutLang = hasLangPrefix
+      let pathWithoutLang = hasLangPrefix
         ? '/' + pathParts.slice(1).join('/')
         : currentPath
+
+      // Normalize path: remove trailing slash except for root
+      // This ensures hreflang tags use consistent format (without trailing slash, except root)
+      if (pathWithoutLang !== '/' && pathWithoutLang.endsWith('/')) {
+        pathWithoutLang = pathWithoutLang.replace(/\/$/, '')
+      }
 
       const baseUrl = 'https://folio.id'
 
       // Create hreflang tags for each supported language
+      // Root path should have trailing slash: /en/, other paths without: /en/wallet
       SUPPORTED_LANGUAGES.forEach(lang => {
         const hreflangLink = document.createElement('link')
         hreflangLink.setAttribute('rel', 'alternate')
         hreflangLink.setAttribute('hreflang', lang)
-        hreflangLink.setAttribute('href', `${baseUrl}/${lang}${pathWithoutLang === '/' ? '' : pathWithoutLang}`)
+        const href = pathWithoutLang === '/' 
+          ? `${baseUrl}/${lang}/`
+          : `${baseUrl}/${lang}${pathWithoutLang}`
+        hreflangLink.setAttribute('href', href)
         document.head.appendChild(hreflangLink)
         createdElements.push(hreflangLink)
       })
@@ -166,7 +176,10 @@ export function usePageTitle({
       const xDefaultLink = document.createElement('link')
       xDefaultLink.setAttribute('rel', 'alternate')
       xDefaultLink.setAttribute('hreflang', 'x-default')
-      xDefaultLink.setAttribute('href', `${baseUrl}/${DEFAULT_LANGUAGE}${pathWithoutLang === '/' ? '' : pathWithoutLang}`)
+      const defaultHref = pathWithoutLang === '/'
+        ? `${baseUrl}/${DEFAULT_LANGUAGE}/`
+        : `${baseUrl}/${DEFAULT_LANGUAGE}${pathWithoutLang}`
+      xDefaultLink.setAttribute('href', defaultHref)
       document.head.appendChild(xDefaultLink)
       createdElements.push(xDefaultLink)
     }

@@ -220,12 +220,40 @@ function PrerenderReadyMarker() {
 }
 
 /**
+ * Redirects URLs with trailing slash to versions without trailing slash (301 redirect)
+ * Exceptions: root paths (/en/, /es/, etc.) should keep trailing slash
+ * Only applies to clean paths (without query parameters or hash)
+ */
+function TrailingSlashRedirect() {
+  const location = useLocation()
+  const pathname = location.pathname
+  
+  // Skip if pathname doesn't end with slash
+  if (!pathname.endsWith('/')) {
+    return null
+  }
+  
+  // Allow root paths to keep trailing slash: /, /en/, /es/, etc.
+  const pathSegments = pathname.split('/').filter(Boolean)
+  if (pathSegments.length <= 1) {
+    // Root path or language root (e.g., /en/) - keep trailing slash
+    return null
+  }
+  
+  // Remove trailing slash and redirect (301)
+  const newPathname = pathname.replace(/\/$/, '')
+  const newUrl = `${newPathname}${location.search}${location.hash}`
+  
+  return <Navigate to={newUrl} replace />
+}
+
+/**
  * Redirects old URLs without language prefix to the default language
  * Handles legacy URL patterns from the old folio.id site
  */
 function LegacyRedirect() {
   const location = useLocation()
-  const path = location.pathname.replace(/\/$/, '') || '/' // Clean trailing slash
+  const path = location.pathname || '/'
   const pathSegments = path.split('/').filter(Boolean)
   const firstSegment = pathSegments[0]
 
@@ -384,6 +412,7 @@ function App() {
       <ScrollToTop />
       <RedirectHandler />
       <PrerenderReadyMarker />
+      <TrailingSlashRedirect />
       <CookieConsent />
       <Routes>
         {/* Root path redirects to user's preferred language */}

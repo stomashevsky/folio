@@ -14,7 +14,7 @@ export function useLocalizedPath() {
   /**
    * Converts a path to a localized path with the current language prefix
    * @param path - The path to localize (e.g., "/wallet" or "wallet" or "/blog?category=Research")
-   * @returns The localized path with trailing slash (e.g., "/en/wallet/") or without trailing slash if query/hash present (e.g., "/en/blog?category=Research")
+   * @returns The localized path without trailing slash (e.g., "/en/wallet") except for root ("/en/")
    * Note: Hash anchors should be handled separately by components using this function
    */
   const getLocalizedPath = (path: string): string => {
@@ -37,18 +37,19 @@ export function useLocalizedPath() {
     // Remove leading slash if present for consistent handling
     const cleanPath = basePath.startsWith('/') ? basePath.slice(1) : basePath
     
-    // Build localized base path with trailing slash
+    // Build localized base path
+    // Root path (empty) should have trailing slash: "/en/"
+    // All other paths should NOT have trailing slash: "/en/wallet", "/en/blog"
     let localizedBasePath: string
     if (!cleanPath) {
       localizedBasePath = `/${currentLang}/`
     } else {
-      localizedBasePath = `/${currentLang}/${cleanPath}/`
+      localizedBasePath = `/${currentLang}/${cleanPath}`
     }
     
-    // If there are query parameters or hash, remove trailing slash before appending them
-    // This prevents URLs like "/en/blog/?category=Research" (should be "/en/blog?category=Research")
+    // Append query parameters or hash if present
     if (queryAndHash) {
-      return `${localizedBasePath.replace(/\/$/, '')}${queryAndHash}`
+      return `${localizedBasePath}${queryAndHash}`
     }
     
     return localizedBasePath
