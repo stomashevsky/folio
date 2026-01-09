@@ -1,6 +1,16 @@
 # SEO Redirects for folio.id migration
 # Format: [old path] [new path] [status]
 
+# Remove trailing slash from localized paths (except root paths)
+# This prevents double redirects: server adds trailing slash, then React Router removes it
+# These rules must be at the top to process before other redirects
+# Using wildcard * to match any path after language prefix
+/en/*/  /en/*  301
+/es/*/  /es/*  301
+/ja/*/  /ja/*  301
+/it/*/  /it/*  301
+/fr/*/  /fr/*  301
+
 # Main Pages
 /about-us/               /en/about      301
 /business/               /en/solutions/digital-ticketing 301
