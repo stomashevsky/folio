@@ -552,6 +552,127 @@
         "description": "Términos y condiciones para el uso de la aplicación y servicios de Folio Wallet",
         "lastUpdated": "17 de diciembre de 2025"
     },
+    "tripPlannerApp": {
+        "meta": {
+            "title": "App planificador de viajes - Organiza tus viajes y billetes | Folio",
+            "description": "La app planificador de viajes de Folio organiza automáticamente tus vuelos, hoteles, trenes y eventos en una línea de tiempo. Guarda todos tus billetes y reservas en un lugar seguro. Disponible en iOS y Android.",
+            "ogTitle": "App planificador de viajes | Folio",
+            "ogDescription": "Organiza tus viajes automáticamente. Todos los billetes y reservas en una línea de tiempo. Funciona sin conexión. Disponible gratis en iPhone y Android."
+        },
+        "hero": {
+            "tagline": "Planificador de viajes",
+            "title": "App planificador de viajes",
+            "description": "Organiza tus viajes automáticamente. Importa vuelos, trenes, hoteles y eventos desde correo, PDF o fotos. Folio extrae los detalles clave y organiza todo en una línea de tiempo clara para que siempre sepas qué sigue.",
+            "getApp": "Descargar la app",
+            "learnMore": "Saber más",
+            "imageAlt": "App planificador de viajes con línea de tiempo"
+        },
+        "features": {
+            "title": "Todo para tus viajes en un solo lugar",
+            "description": "Guarda todos tus documentos de viaje y reservas en una billetera digital segura.",
+            "flights": {
+                "title": "Vuelos",
+                "description": "Importa billetes de avión desde correo o PDF. Folio extrae automáticamente horarios de salida, puertas, números de asiento y referencias de reserva."
+            },
+            "trains": {
+                "title": "Trenes y autobuses",
+                "description": "Guarda billetes de tren, pases de autobús y reservas de ferry. Todos los detalles extraídos y organizados cronológicamente."
+            },
+            "hotels": {
+                "title": "Hoteles",
+                "description": "Mantén confirmaciones de hotel, horarios de check-in y detalles de reserva organizados y fáciles de encontrar."
+            },
+            "events": {
+                "title": "Eventos",
+                "description": "Guarda entradas de conciertos, pases de eventos y reservas de lugares. Todo aparece automáticamente en tu línea de tiempo."
+            }
+        },
+        "timeline": {
+            "title": "Tu viaje, organizado automáticamente",
+            "description": "La línea de tiempo de viaje de Folio organiza automáticamente tus viajes en orden cronológico, para que siempre sepas qué sigue.",
+            "autoSort": {
+                "title": "Ordenamiento automático",
+                "description": "Los billetes y reservas se ordenan cronológicamente por fecha y hora, agrupados por viaje."
+            },
+            "groupByDate": {
+                "title": "Agrupados por fecha",
+                "description": "Tu itinerario está organizado día por día, facilitando ver tu viaje completo de un vistazo."
+            },
+            "history": {
+                "title": "Historial de viajes",
+                "description": "Mantén un registro de todos tus viajes pasados. Accede a detalles de reserva y documentos en cualquier momento, incluso después de que termine tu viaje."
+            },
+            "notifications": {
+                "title": "Recordatorios próximos",
+                "description": "Recibe notificaciones suaves antes de salidas y check-ins para que nunca te tome por sorpresa."
+            }
+        },
+        "howItWorks": {
+            "title": "Cómo organizar tus viajes",
+            "description": "Agregar tus documentos de viaje a Folio toma solo segundos.",
+            "step1": {
+                "title": "Importar billetes",
+                "description": "Escanea billetes con tu cámara, reenvía correos de reserva a docs@folio.id o importa PDFs desde tu biblioteca."
+            },
+            "step2": {
+                "title": "Folio extrae detalles",
+                "description": "Horarios, fechas, ubicaciones e información de pasajeros se capturan automáticamente desde tus billetes y confirmaciones."
+            },
+            "step3": {
+                "title": "Todo aparece en la línea de tiempo",
+                "description": "Tus viajes se organizan automáticamente en una línea de tiempo clara y desplazable. No se requiere entrada manual."
+            }
+        },
+        "benefits": {
+            "title": "Por qué usar Folio para viajar",
+            "unifiedFormat": {
+                "title": "Formato unificado",
+                "description": "Todos los billetes y reservas se transforman en un formato limpio y legible, independientemente de la fuente original."
+            },
+            "worksOffline": {
+                "title": "Funciona sin conexión",
+                "description": "Accede a tus billetes y documentos de viaje en cualquier momento, incluso sin conexión a internet. Perfecto para aeropuertos y lugares remotos."
+            },
+            "shareWithFamily": {
+                "title": "Compartir con la familia",
+                "description": "Crea carpetas compartidas para mantener planes de viaje, billetes e IDs accesibles para todos en tu grupo."
+            },
+            "originalFiles": {
+                "title": "Archivos originales adjuntos",
+                "description": "Tus confirmaciones PDF y correos se guardan con cada documento para referencia rápida cuando sea necesario."
+            }
+        },
+        "faq": {
+            "title": "Preguntas frecuentes",
+            "description": "Preguntas comunes sobre el uso de Folio como app planificador de viajes.",
+            "items": [
+                {
+                    "q": "¿Cómo funciona la línea de tiempo de viaje?",
+                    "a": "La línea de tiempo de viaje organiza automáticamente tus vuelos, reservas de hotel, billetes de tren y eventos en orden cronológico. Muestra tu itinerario completo para cada viaje, resalta salidas próximas y mantiene un historial de viajes pasados. No se requiere entrada manual."
+                },
+                {
+                    "q": "¿Qué tipos de documentos de viaje puedo guardar?",
+                    "a": "Puedes guardar billetes de avión, billetes de tren, pases de autobús, confirmaciones de hotel, entradas de eventos, reservas de alquiler de coches y cualquier otro documento relacionado con viajes. Folio funciona con PDFs, correos y fotos."
+                },
+                {
+                    "q": "¿Puedo importar billetes desde correo?",
+                    "a": "Sí. Simplemente reenvía cualquier correo de confirmación de reserva a docs@folio.id y Folio extraerá automáticamente los detalles y lo agregará a tu línea de tiempo de viaje."
+                },
+                {
+                    "q": "¿Folio funciona sin conexión?",
+                    "a": "Sí. Todos tus billetes y documentos de viaje se almacenan localmente en tu dispositivo y están disponibles sin internet. Perfecto para acceder a tarjetas de embarque en aeropuertos o confirmaciones de hotel en áreas con mala señal."
+                },
+                {
+                    "q": "¿Puedo compartir mis planes de viaje con la familia?",
+                    "a": "Sí. Crea carpetas compartidas para compartir de forma segura planes de viaje, billetes o IDs con familia y amigos. Todos ven las últimas versiones automáticamente y pueden agregar sus propios documentos."
+                },
+                {
+                    "q": "¿Folio funcionará con pases de Apple Wallet?",
+                    "a": "Sí. Puedes importar archivos .pkpass desde Apple Wallet directamente a Folio. A diferencia de Apple Wallet, Folio extrae y organiza los datos, los agrega a tu línea de tiempo de viaje y mantiene todo buscable."
+                }
+            ]
+        }
+    },
     "privacy": {
         "meta": {
             "title": "Política de privacidad | Folio Wallet",

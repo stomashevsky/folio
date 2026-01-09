@@ -78,6 +78,7 @@ const SecurityPage = lazy(() => import('./pages/SecurityPage'))
 const IdWalletAppPage = lazy(() => import('./pages/IdWalletAppPage'))
 const CardScannerAppPage = lazy(() => import('./pages/CardScannerAppPage'))
 const LoyaltyCardAppPage = lazy(() => import('./pages/LoyaltyCardAppPage'))
+const TripPlannerAppPage = lazy(() => import('./pages/TripPlannerAppPage'))
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
 const AboutPage = lazy(() => import('./pages/AboutPage'))
 
@@ -100,8 +101,8 @@ const LEGACY_MAPPING: Record<string, string> = {
   'health-wallet-app': '/wallet',
   'event-ticket-scanner': '/solutions/digital-ticketing',
   // Travel
-  'travel-wallet-app': '/wallet',
-  'travel-trip-planner': '/wallet',
+  'travel-wallet-app': '/trip-planner-app',
+  'travel-trip-planner': '/trip-planner-app',
   'flight-ticket-travel': '/blog/flight-tickets-on-iphone',
   'train-ticket-travel': '/blog/organize-tickets-bookings',
   'bus-ticket-travel': '/blog/organize-tickets-bookings',
@@ -346,6 +347,7 @@ function LocalizedRoutes() {
         <Route path="id-wallet-app" element={<IdWalletAppPage />} />
         <Route path="card-scanner-app" element={<CardScannerAppPage />} />
         <Route path="loyalty-card-app" element={<LoyaltyCardAppPage />} />
+        <Route path="trip-planner-app" element={<TripPlannerAppPage />} />
         <Route path="terms" element={<TermsPage />} />
         <Route path="privacy" element={<PrivacyPage />} />
         <Route path="security" element={<SecurityPage />} />

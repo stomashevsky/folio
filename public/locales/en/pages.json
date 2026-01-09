@@ -552,6 +552,127 @@
     "description": "Terms and conditions for using Folio Wallet app and services",
     "lastUpdated": "December 17, 2025"
   },
+  "tripPlannerApp": {
+    "meta": {
+      "title": "Trip planner app - Organize your travel and tickets | Folio",
+      "description": "Folio trip planner app automatically organizes your flights, hotels, trains, and events into a travel timeline. Keep all your tickets and bookings in one secure place. Available on iOS and Android.",
+      "ogTitle": "Trip planner app | Folio",
+      "ogDescription": "Organize your trips automatically. All tickets and bookings in one timeline. Works offline. Available free on iPhone and Android."
+    },
+    "hero": {
+      "tagline": "Trip planner",
+      "title": "Trip planner app",
+      "description": "Organize your trips automatically. Import flights, trains, hotels, and events from email, PDF, or photos. Folio extracts key details and arranges everything into a clean travel timeline so you always know what comes next.",
+      "getApp": "Get the app",
+      "learnMore": "Learn more",
+      "imageAlt": "Trip planner app with travel timeline"
+    },
+    "features": {
+      "title": "Everything for your trips in one place",
+      "description": "Store all your travel documents and bookings in one secure digital wallet.",
+      "flights": {
+        "title": "Flights",
+        "description": "Import flight tickets from email or PDF. Folio extracts departure times, gates, seat numbers, and booking references automatically."
+      },
+      "trains": {
+        "title": "Trains & Buses",
+        "description": "Store train tickets, bus passes, and ferry bookings. All details extracted and organized chronologically."
+      },
+      "hotels": {
+        "title": "Hotels",
+        "description": "Keep hotel confirmations, check-in times, and reservation details organized and easy to find."
+      },
+      "events": {
+        "title": "Events",
+        "description": "Store concert tickets, event passes, and venue bookings. Everything appears in your timeline automatically."
+      }
+    },
+    "timeline": {
+      "title": "Your journey, organized automatically",
+      "description": "Folio's travel timeline automatically arranges your trips in chronological order, so you always know what's next.",
+      "autoSort": {
+        "title": "Automatic sorting",
+        "description": "Tickets and bookings are sorted chronologically by date and time, grouped by trip."
+      },
+      "groupByDate": {
+        "title": "Grouped by date",
+        "description": "Your itinerary is organized day by day, making it easy to see your complete journey at a glance."
+      },
+      "history": {
+        "title": "Travel history",
+        "description": "Keep a record of all your past trips. Access booking details and documents anytime, even after your trip ends."
+      },
+      "notifications": {
+        "title": "Upcoming reminders",
+        "description": "Get gentle notifications before departures and check-ins so you're never caught off guard."
+      }
+    },
+    "howItWorks": {
+      "title": "How to organize your trips",
+      "description": "Adding your travel documents to Folio takes just seconds.",
+      "step1": {
+        "title": "Import tickets",
+        "description": "Scan tickets with your camera, forward booking emails to docs@folio.id, or import PDFs from your library."
+      },
+      "step2": {
+        "title": "Folio extracts details",
+        "description": "Times, dates, locations, and passenger information are captured automatically from your tickets and confirmations."
+      },
+      "step3": {
+        "title": "Everything appears in timeline",
+        "description": "Your trips are organized automatically into a clean, scrollable timeline. No manual entry required."
+      }
+    },
+    "benefits": {
+      "title": "Why use Folio for travel",
+      "unifiedFormat": {
+        "title": "Unified format",
+        "description": "All tickets and bookings are transformed into one clean, readable format, regardless of the original source."
+      },
+      "worksOffline": {
+        "title": "Works offline",
+        "description": "Access your tickets and travel documents anytime, even without internet connection. Perfect for airports and remote locations."
+      },
+      "shareWithFamily": {
+        "title": "Share with family",
+        "description": "Create shared folders to keep travel plans, tickets, and IDs accessible to everyone in your group."
+      },
+      "originalFiles": {
+        "title": "Original files attached",
+        "description": "Your PDF confirmations and emails are saved with each document for quick reference when needed."
+      }
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "description": "Common questions about using Folio as your trip planner app.",
+      "items": [
+        {
+          "q": "How does the travel timeline work?",
+          "a": "The travel timeline automatically arranges your flights, hotel bookings, train tickets, and events in chronological order. It shows your complete itinerary for each trip, highlights upcoming departures, and keeps a history of past travels. No manual entry required."
+        },
+        {
+          "q": "What types of travel documents can I store?",
+          "a": "You can store flight tickets, train tickets, bus passes, hotel confirmations, event tickets, car rental bookings, and any other travel-related documents. Folio works with PDFs, emails, and photos."
+        },
+        {
+          "q": "Can I import tickets from email?",
+          "a": "Yes. Simply forward any booking confirmation email to docs@folio.id and Folio will automatically extract the details and add it to your travel timeline."
+        },
+        {
+          "q": "Does Folio work offline?",
+          "a": "Yes. All your tickets and travel documents are stored locally on your device and available without internet. Perfect for accessing boarding passes at airports or hotel confirmations in areas with poor signal."
+        },
+        {
+          "q": "Can I share my travel plans with family?",
+          "a": "Yes. Create shared folders to safely share travel plans, tickets, or IDs with family and friends. Everyone sees the latest versions automatically and can add their own documents."
+        },
+        {
+          "q": "Will Folio work with Apple Wallet passes?",
+          "a": "Yes. You can import .pkpass files from Apple Wallet directly into Folio. Unlike Apple Wallet, Folio extracts and organizes the data, adds it to your travel timeline, and keeps everything searchable."
+        }
+      ]
+    }
+  },
   "privacy": {
     "meta": {
       "title": "Privacy Policy | Folio Wallet",

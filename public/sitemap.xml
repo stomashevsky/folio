@@ -656,6 +656,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/terms"/>
   </url>
   <url>
+    <loc>https://folio.id/en/trip-planner-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/trip-planner-app"/>
+  </url>
+  <url>
     <loc>https://folio.id/en/wallet</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/wallet"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/wallet"/>
@@ -1318,6 +1327,15 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/terms"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/terms"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/terms"/>
+  </url>
+  <url>
+    <loc>https://folio.id/es/trip-planner-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/trip-planner-app"/>
   </url>
   <url>
     <loc>https://folio.id/es/wallet</loc>
@@ -1984,6 +2002,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/terms"/>
   </url>
   <url>
+    <loc>https://folio.id/fr/trip-planner-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/trip-planner-app"/>
+  </url>
+  <url>
     <loc>https://folio.id/fr/wallet</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/wallet"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/wallet"/>
@@ -2648,6 +2675,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/terms"/>
   </url>
   <url>
+    <loc>https://folio.id/it/trip-planner-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/trip-planner-app"/>
+  </url>
+  <url>
     <loc>https://folio.id/it/wallet</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/wallet"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/wallet"/>
@@ -3310,6 +3346,15 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/terms"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/terms"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/terms"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ja/trip-planner-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/trip-planner-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/trip-planner-app"/>
   </url>
   <url>
     <loc>https://folio.id/ja/wallet</loc>

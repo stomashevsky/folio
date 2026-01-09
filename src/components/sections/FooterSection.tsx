@@ -55,6 +55,7 @@ export default function FooterSection() {
                 <FooterLink to="/id-wallet-app">{t('footer.idWallet')}</FooterLink>
                 <FooterLink to="/card-scanner-app">{t('footer.cardScanner')}</FooterLink>
                 <FooterLink to="/loyalty-card-app">{t('footer.loyaltyCards')}</FooterLink>
+                <FooterLink to="/trip-planner-app">{t('footer.tripPlanner')}</FooterLink>
               </div>
             </div>
             {/* Get the app section */}
