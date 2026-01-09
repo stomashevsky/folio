@@ -24,8 +24,10 @@
 /event-ticket-scanner/   /en/solutions/digital-ticketing 301
 
 # Travel Pages
-/travel-wallet-app/      /en/wallet     301
-/travel-trip-planner/    /en/wallet     301
+/travel-wallet-app/      /en/trip-planner-app     301
+/travel-wallet-app       /en/trip-planner-app     301
+/travel-trip-planner/    /en/trip-planner-app     301
+/travel-trip-planner     /en/trip-planner-app     301
 /flight-ticket-travel/    /en/blog/flight-tickets-on-iphone 301
 /train-ticket-travel/     /en/blog/organize-tickets-bookings 301
 /bus-ticket-travel/       /en/blog/organize-tickets-bookings 301

@@ -554,84 +554,84 @@
   },
   "tripPlannerApp": {
     "meta": {
-      "title": "App pianificatore di viaggi - Organizza i tuoi viaggi e biglietti | Folio",
-      "description": "L'app pianificatore di viaggi di Folio organizza automaticamente voli, hotel, treni ed eventi in una cronologia. Conserva tutti i tuoi biglietti e prenotazioni in un posto sicuro. Disponibile su iOS e Android.",
-      "ogTitle": "App pianificatore di viaggi | Folio",
+      "title": "Pianificatore di viaggi - Organizza i tuoi viaggi e biglietti | Folio",
+      "description": "Il pianificatore di viaggi di Folio organizza automaticamente voli, hotel, treni ed eventi in una cronologia. Conserva tutti i tuoi biglietti e prenotazioni in un posto sicuro. Disponibile su iOS e Android.",
+      "ogTitle": "Pianificatore di viaggi | Folio",
       "ogDescription": "Organizza i tuoi viaggi automaticamente. Tutti i biglietti e prenotazioni in una cronologia. Funziona offline. Disponibile gratuitamente su iPhone e Android."
     },
     "hero": {
       "tagline": "Pianificatore di viaggi",
-      "title": "App pianificatore di viaggi",
-      "description": "Organizza i tuoi viaggi automaticamente. Importa voli, treni, hotel ed eventi da email, PDF o foto. Folio estrae i dettagli chiave e organizza tutto in una cronologia chiara così sai sempre cosa viene dopo.",
+      "title": "Pianificatore di viaggi",
+      "description": "Organizza i tuoi viaggi automaticamente. Importa voli, treni, hotel ed eventi da email, PDF o foto. Folio estrae i dettagli importanti e organizza tutto in una cronologia chiara così sai sempre cosa viene dopo.",
       "getApp": "Scarica l'app",
       "learnMore": "Scopri di più",
-      "imageAlt": "App pianificatore di viaggi con cronologia"
+      "imageAlt": "Pianificatore di viaggi con cronologia"
     },
     "flights": {
       "title": "Biglietti aerei",
-      "description": "Inoltra la tua email di conferma o importa un PDF. Folio estrae il numero di volo, orario di partenza, gate, posto e riferimento di prenotazione. La tua carta d'imbarco è pronta quando ne hai bisogno, anche senza internet.",
-      "imageAlt": "Biglietto aereo nell'app Folio",
-      "feature1": "Gate e numeri di posto estratti automaticamente",
+      "description": "Inoltra la tua email di conferma o importa un PDF. Folio estrae automaticamente il numero di volo, orario di partenza, gate, posto e riferimento di prenotazione. La tua carta d'imbarco è pronta quando ne hai bisogno, anche senza connessione internet.",
+      "imageAlt": "Biglietto aereo in Folio",
+      "feature1": "Gate e posto estratti automaticamente",
       "feature2": "Funziona offline in aeroporto",
-      "feature3": "Tutti i dettagli di prenotazione in un posto"
+      "feature3": "Tutti i dettagli di prenotazione in un solo posto"
     },
     "hotels": {
       "title": "Prenotazioni hotel",
-      "description": "Importa la tua conferma hotel e Folio cattura orari di check-in, indirizzi, numeri di conferma e informazioni di contatto. Tutto ciò che serve per un arrivo senza problemi, direttamente sul tuo telefono.",
-      "imageAlt": "Prenotazione hotel nell'app Folio",
-      "feature1": "Orari di check-in e check-out chiaramente mostrati",
-      "feature2": "Indirizzo della struttura e informazioni di contatto estratte",
-      "feature3": "Numeri di conferma sempre accessibili"
+      "description": "Importa la tua conferma hotel e Folio cattura automaticamente gli orari di check-in, l'indirizzo, il numero di conferma e le informazioni di contatto. Tutto ciò che serve per un arrivo senza problemi, direttamente sul tuo telefono.",
+      "imageAlt": "Prenotazione hotel in Folio",
+      "feature1": "Orari di check-in e check-out chiaramente visibili",
+      "feature2": "Indirizzo e informazioni di contatto estratte automaticamente",
+      "feature3": "Numeri di conferma sempre a portata di mano"
     },
     "trains": {
       "title": "Biglietti treno",
-      "description": "Aggiungi il tuo biglietto treno da email, PDF o foto. Folio estrae numeri di treno, orari di partenza e arrivo, assegnazioni di posti e codici biglietto. I dettagli del tuo viaggio sono organizzati e facili da trovare.",
-      "imageAlt": "Biglietto treno nell'app Folio",
-      "feature1": "Numeri di treno e orari estratti",
-      "feature2": "Informazioni di posto e vagone catturate",
-      "feature3": "Codici biglietto pronti per la scansione"
+      "description": "Aggiungi il tuo biglietto treno da email, PDF o foto. Folio estrae automaticamente il numero di treno, gli orari di partenza e arrivo, il posto e il codice del biglietto. I dettagli del tuo viaggio sono organizzati e facili da trovare.",
+      "imageAlt": "Biglietto treno in Folio",
+      "feature1": "Numero di treno e orari estratti automaticamente",
+      "feature2": "Posto e vagone catturati",
+      "feature3": "Codici pronti per la scansione"
     },
     "bus": {
       "title": "Biglietti autobus",
-      "description": "Conserva biglietti autobus e pass in un posto. Folio estrae automaticamente orari di partenza, percorsi, numeri di posto e codici biglietto. Non più cercare tra email o screenshot.",
-      "imageAlt": "Biglietto autobus nell'app Folio",
-      "feature1": "Percorsi e orari di partenza estratti",
-      "feature2": "Codici biglietto e numeri di posto catturati",
-      "feature3": "Funziona con qualsiasi operatore autobus"
+      "description": "Conserva tutti i tuoi biglietti autobus e pass in un solo posto. Folio estrae automaticamente orari di partenza, percorsi, numeri di posto e codici. Non più cercare tra email o screenshot.",
+      "imageAlt": "Biglietto autobus in Folio",
+      "feature1": "Percorso e orario di partenza estratti automaticamente",
+      "feature2": "Codici e numeri di posto catturati",
+      "feature3": "Compatibile con qualsiasi operatore autobus"
     },
     "events": {
       "title": "Biglietti eventi",
-      "description": "Importa biglietti concerti, pass eventi e prenotazioni luoghi. Folio estrae date eventi, orari, informazioni posti e codici biglietto. I tuoi codici QR sono pronti per essere scansionati all'ingresso.",
-      "imageAlt": "Biglietto evento nell'app Folio",
-      "feature1": "Date e orari eventi estratti automaticamente",
-      "feature2": "Informazioni di posto e sezione catturate",
-      "feature3": "Codici QR pronti per l'ingresso"
+      "description": "Importa biglietti concerti, pass eventi e prenotazioni luoghi. Folio estrae automaticamente la data, l'orario, le informazioni sui posti e i codici. I tuoi codici QR sono pronti per essere scansionati all'ingresso.",
+      "imageAlt": "Biglietto evento in Folio",
+      "feature1": "Data e orario estratti automaticamente",
+      "feature2": "Posto e sezione catturati",
+      "feature3": "Codici QR pronti per la scansione"
     },
     "timeline": {
       "title": "Il tuo viaggio, organizzato automaticamente",
-      "description": "La cronologia di viaggio di Folio organizza automaticamente i tuoi viaggi in ordine cronologico, così sai sempre cosa viene dopo.",
+      "description": "La cronologia di Folio organizza automaticamente i tuoi viaggi in ordine cronologico, così sai sempre cosa viene dopo.",
       "autoSort": {
         "title": "Ordinamento automatico",
-        "description": "Biglietti e prenotazioni sono ordinati cronologicamente per data e ora, raggruppati per viaggio."
+        "description": "Tutti i tuoi biglietti e prenotazioni sono ordinati cronologicamente per data e ora, raggruppati per viaggio."
       },
       "groupByDate": {
         "title": "Raggruppati per data",
-        "description": "Il tuo itinerario è organizzato giorno per giorno, facilitando la vista completa del tuo viaggio."
+        "description": "Il tuo itinerario si organizza giorno per giorno, così puoi vedere l'intero viaggio in un colpo d'occhio."
       },
       "history": {
         "title": "Storia dei viaggi",
-        "description": "Conserva un registro di tutti i tuoi viaggi passati. Accedi a dettagli di prenotazione e documenti in qualsiasi momento, anche dopo la fine del viaggio."
+        "description": "Conserva un registro di tutti i tuoi viaggi passati. Accedi ai dettagli di prenotazione e documenti quando vuoi, anche dopo la fine del viaggio."
       },
       "notifications": {
         "title": "Promemoria imminenti",
-        "description": "Ricevi notifiche gentili prima di partenze e check-in così non vieni mai colto di sorpresa."
+        "description": "Ricevi notifiche prima di partenze e check-in così non vieni mai colto di sorpresa."
       }
     },
     "howItWorks": {
       "title": "Come organizzare i tuoi viaggi",
-      "description": "Aggiungere i tuoi documenti di viaggio a Folio richiede solo secondi.",
+      "description": "Aggiungere i tuoi documenti di viaggio a Folio richiede solo pochi secondi.",
       "step1": {
-        "title": "Importa biglietti",
+        "title": "Importa i tuoi biglietti",
         "description": "Scansiona biglietti con la tua fotocamera, inoltra email di prenotazione a docs@folio.id o importa PDF dalla tua libreria."
       },
       "step2": {
@@ -640,14 +640,14 @@
       },
       "step3": {
         "title": "Tutto appare nella cronologia",
-        "description": "I tuoi viaggi sono organizzati automaticamente in una cronologia chiara e scorrevole. Nessuna immissione manuale richiesta."
+        "description": "I tuoi viaggi si organizzano automaticamente in una cronologia chiara e facile da navigare. Nessuna immissione manuale necessaria."
       }
     },
     "benefits": {
       "title": "Perché usare Folio per viaggiare",
       "unifiedFormat": {
         "title": "Formato unificato",
-        "description": "Tutti i biglietti e prenotazioni sono trasformati in un formato pulito e leggibile, indipendentemente dalla fonte originale."
+        "description": "Tutti i tuoi biglietti e prenotazioni si trasformano in un formato pulito e leggibile, indipendentemente dalla loro fonte originale."
       },
       "worksOffline": {
         "title": "Funziona offline",
@@ -655,20 +655,20 @@
       },
       "shareWithFamily": {
         "title": "Condividi con la famiglia",
-        "description": "Crea cartelle condivise per mantenere piani di viaggio, biglietti e ID accessibili a tutti nel tuo gruppo."
+        "description": "Crea cartelle condivise per permettere a tutti nel tuo gruppo di accedere a piani di viaggio, biglietti e identificazioni."
       },
       "originalFiles": {
         "title": "File originali allegati",
-        "description": "Le tue conferme PDF ed email sono salvate con ogni documento per riferimento rapido quando necessario."
+        "description": "Le tue conferme PDF ed email sono salvate insieme a ogni documento per consultarle rapidamente quando ne hai bisogno."
       }
     },
     "faq": {
       "title": "Domande frequenti",
-      "description": "Domande comuni sull'uso di Folio come app pianificatore di viaggi.",
+      "description": "Domande comuni sull'uso di Folio come pianificatore di viaggi.",
       "items": [
         {
           "q": "Come funziona la cronologia di viaggio?",
-          "a": "La cronologia di viaggio organizza automaticamente i tuoi voli, prenotazioni di hotel, biglietti del treno ed eventi in ordine cronologico. Mostra il tuo itinerario completo per ogni viaggio, evidenzia partenze imminenti e conserva una storia di viaggi passati. Nessuna immissione manuale richiesta."
+          "a": "La cronologia organizza automaticamente i tuoi voli, prenotazioni di hotel, biglietti del treno ed eventi in ordine cronologico. Mostra il tuo itinerario completo per ogni viaggio, evidenzia le partenze imminenti e conserva una storia di tutti i tuoi viaggi passati. Non devi inserire nulla manualmente."
         },
         {
           "q": "Che tipi di documenti di viaggio posso conservare?",
@@ -684,11 +684,11 @@
         },
         {
           "q": "Posso condividere i miei piani di viaggio con la famiglia?",
-          "a": "Sì. Crea cartelle condivise per condividere in sicurezza piani di viaggio, biglietti o ID con famiglia e amici. Tutti vedono le ultime versioni automaticamente e possono aggiungere i propri documenti."
+          "a": "Sì. Crea cartelle condivise per condividere in sicurezza piani di viaggio, biglietti o identificazioni con famiglia e amici. Tutti vedono le ultime versioni automaticamente e possono aggiungere i propri documenti."
         },
         {
-          "q": "Folio funzionerà con i pass di Apple Wallet?",
-          "a": "Sì. Puoi importare file .pkpass da Apple Wallet direttamente in Folio. A differenza di Apple Wallet, Folio estrae e organizza i dati, li aggiunge alla tua cronologia di viaggio e mantiene tutto ricercabile."
+          "q": "Folio funziona con i pass di Apple Wallet?",
+          "a": "Sì. Puoi importare file .pkpass da Apple Wallet direttamente in Folio. A differenza di Apple Wallet, Folio estrae e organizza i dati, li aggiunge alla tua cronologia di viaggio e mantiene tutto facilmente ricercabile."
         }
       ]
     }
