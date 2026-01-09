@@ -90,7 +90,15 @@ export default function CompleteGuideIdentityVerificationArticlePage() {
         <Trans i18nKey={`${slug}.p21`} ns="articles" components={{ strong: <strong /> }} />
       </ArticleParagraph>
       <ArticleParagraph>
-        <Trans i18nKey={`${slug}.p22`} ns="articles" components={{ strong: <strong /> }} />
+        <Trans
+          i18nKey={`${slug}.p22`}
+          ns="articles"
+          components={{
+            strong: <strong />,
+            LivenessLink: <LocalizedLink to="/platform/liveness-check" className="underline hover:text-[#737373] transition-colors" />,
+            FaceMatchLink: <LocalizedLink to="/platform/id-verification" className="underline hover:text-[#737373] transition-colors" />
+          }}
+        />
       </ArticleParagraph>
       <ArticleParagraph>
         <Trans i18nKey={`${slug}.p23`} ns="articles" components={{ strong: <strong /> }} />
@@ -101,7 +109,10 @@ export default function CompleteGuideIdentityVerificationArticlePage() {
         <Trans
           i18nKey={`${slug}.p24`}
           ns="articles"
-          components={{ strong: <strong /> }}
+          components={{
+            strong: <strong />,
+            LocalizedLink: <LocalizedLink to="/government" className="underline hover:text-[#737373] transition-colors" />
+          }}
         />
       </ArticleParagraph>
       <ArticleParagraph>

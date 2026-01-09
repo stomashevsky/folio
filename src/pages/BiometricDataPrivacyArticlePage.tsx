@@ -115,8 +115,8 @@ export default function BiometricDataPrivacyArticlePage() {
         <Trans
           i18nKey="articles:biometric-data-privacy.p22"
           components={{
-            LocalizedLink1: <LocalizedLink to="/platform/liveness-check" className="underline hover:text-[#737373] transition-colors" />,
-            LocalizedLink2: <LocalizedLink to="/platform/face-match" className="underline hover:text-[#737373] transition-colors" />
+            LivenessLink: <LocalizedLink to="/platform/liveness-check" className="underline hover:text-[#737373] transition-colors" />,
+            FaceMatchLink: <LocalizedLink to="/platform/id-verification" className="underline hover:text-[#737373] transition-colors" />
           }}
         />
       </ArticleParagraph>
