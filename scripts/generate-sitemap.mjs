@@ -27,7 +27,13 @@ function escapeXml(value) {
 function toLoc(pathname) {
   // Ensure leading slash
   const p = pathname.startsWith('/') ? pathname : `/${pathname}`
-  return new URL(p, SITE_ORIGIN).toString()
+  const url = new URL(p, SITE_ORIGIN).toString()
+  // Normalize URL to include trailing slash for non-root paths
+  // This matches actual page URLs on GitHub Pages/CloudFront
+  if (!url.endsWith('/')) {
+    return `${url}/`
+  }
+  return url
 }
 
 function collectRoutePathsFromApp(appSource) {

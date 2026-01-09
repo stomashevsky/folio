@@ -97,12 +97,7 @@ export function usePageTitle({
     if (ogImage) {
       updateMetaTag('og:image', ogImage)
     }
-    if (ogUrl) {
-      updateMetaTag('og:url', ogUrl)
-    }
-
-    // Canonical link
-    // Normalize canonical URL to include trailing slash for non-root paths
+    // Normalize URL to include trailing slash for non-root paths
     // This matches the actual URLs on GitHub Pages/CloudFront which add trailing slash
     const normalizeCanonicalUrl = (url: string): string => {
       // If URL doesn't end with /, add trailing slash
@@ -112,6 +107,14 @@ export function usePageTitle({
       }
       return url
     }
+    
+    if (ogUrl) {
+      // Normalize og:url to include trailing slash for consistency
+      const normalizedOgUrl = normalizeCanonicalUrl(ogUrl)
+      updateMetaTag('og:url', normalizedOgUrl)
+    }
+
+    // Canonical link
     
     const finalCanonical = canonicalUrl || ogUrl
     if (finalCanonical) {
@@ -127,7 +130,11 @@ export function usePageTitle({
     }
 
     // Robots meta
-    if (robots) {
+    // Add noindex, nofollow for GitHub Pages to prevent indexing of staging version
+    const isGitHubPages = typeof window !== 'undefined' && window.location.hostname.includes('github.io')
+    const finalRobots = robots || (isGitHubPages ? 'noindex, nofollow' : undefined)
+    
+    if (finalRobots) {
       let robotsMeta = document.querySelector('meta[name="robots"]') as HTMLMetaElement | null
       if (!robotsMeta) {
         robotsMeta = document.createElement('meta')
@@ -135,7 +142,7 @@ export function usePageTitle({
         document.head.appendChild(robotsMeta)
         createdElements.push(robotsMeta)
       }
-      robotsMeta.setAttribute('content', robots)
+      robotsMeta.setAttribute('content', finalRobots)
     }
 
     // Hreflang tags for internationalization
@@ -162,16 +169,10 @@ export function usePageTitle({
         ? '/' + pathParts.slice(1).join('/')
         : currentPath
 
-      // Normalize path: remove trailing slash except for root
-      // This ensures hreflang tags use consistent format (without trailing slash, except root)
-      if (pathWithoutLang !== '/' && pathWithoutLang.endsWith('/')) {
-        pathWithoutLang = pathWithoutLang.replace(/\/$/, '')
-      }
-
       const baseUrl = 'https://folio.id'
 
       // Create hreflang tags for each supported language
-      // Root path should have trailing slash: /en/, other paths without: /en/wallet
+      // All URLs should have trailing slash to match canonical URLs and actual page URLs
       SUPPORTED_LANGUAGES.forEach(lang => {
         const hreflangLink = document.createElement('link')
         hreflangLink.setAttribute('rel', 'alternate')
@@ -179,7 +180,9 @@ export function usePageTitle({
         const href = pathWithoutLang === '/' 
           ? `${baseUrl}/${lang}/`
           : `${baseUrl}/${lang}${pathWithoutLang}`
-        hreflangLink.setAttribute('href', href)
+        // Normalize hreflang URL to include trailing slash for consistency with canonical URLs
+        const normalizedHref = normalizeCanonicalUrl(href)
+        hreflangLink.setAttribute('href', normalizedHref)
         document.head.appendChild(hreflangLink)
         createdElements.push(hreflangLink)
       })
@@ -191,7 +194,9 @@ export function usePageTitle({
       const defaultHref = pathWithoutLang === '/'
         ? `${baseUrl}/${DEFAULT_LANGUAGE}/`
         : `${baseUrl}/${DEFAULT_LANGUAGE}${pathWithoutLang}`
-      xDefaultLink.setAttribute('href', defaultHref)
+      // Normalize x-default URL to include trailing slash for consistency
+      const normalizedDefaultHref = normalizeCanonicalUrl(defaultHref)
+      xDefaultLink.setAttribute('href', normalizedDefaultHref)
       document.head.appendChild(xDefaultLink)
       createdElements.push(xDefaultLink)
     }
