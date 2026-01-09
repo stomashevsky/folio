@@ -1,5 +1,5 @@
 import { useTranslation, Trans } from 'react-i18next';
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, LocalizedLink } from '../components/ui';
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, ArticleSectionCTA } from '../components/ui';
 
 import faceScanImage from '../assets/images/blog-biometric-face-scan.png';
 
@@ -112,14 +112,15 @@ export default function BiometricDataPrivacyArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans
-          i18nKey="articles:biometric-data-privacy.p22"
-          components={{
-            LivenessLink: <LocalizedLink to="/platform/liveness-check" className="underline hover:text-[#737373] transition-colors" />,
-            FaceMatchLink: <LocalizedLink to="/platform/id-verification" className="underline hover:text-[#737373] transition-colors" />
-          }}
-        />
+        {t('articles:biometric-data-privacy.p22')}
       </ArticleParagraph>
+
+      <ArticleSectionCTA
+        to="/platform/liveness-check"
+        titleKey="livenessCheck.hero.tagline"
+        descriptionKey="livenessCheck.hero.description"
+        namespace="platform"
+      />
     </BlogArticleLayout>
   );
 }

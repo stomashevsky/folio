@@ -1,6 +1,5 @@
 import { useTranslation, Trans } from 'react-i18next'
-import { LocalizedLink } from '../components/ui'
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, ArticleSectionCTA } from '../components/ui'
 import livenessDetectionFace from '../assets/images/blog-liveness-detection-face.png'
 
 export default function WhatIsLivenessDetectionArticlePage() {
@@ -115,14 +114,15 @@ export default function WhatIsLivenessDetectionArticlePage() {
       <ArticleParagraph>{t(`${slug}.p26`)}</ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans
-          i18nKey={`${slug}.p27`}
-          ns="articles"
-          components={{
-            LocalizedLink: <LocalizedLink to="/platform/liveness-check" className="underline hover:text-[#737373] transition-colors" />
-          }}
-        />
+        {t(`${slug}.p27`, { ns: 'articles' })}
       </ArticleParagraph>
+
+      <ArticleSectionCTA
+        to="/platform/liveness-check"
+        titleKey="livenessCheck.hero.tagline"
+        descriptionKey="livenessCheck.hero.description"
+        namespace="platform"
+      />
     </BlogArticleLayout>
   )
 }

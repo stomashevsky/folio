@@ -77,6 +77,10 @@
       "subtitle": "Disponibile gratuitamente su iOS e Android"
     }
   },
+  "articleSectionCta": {
+    "learnMore": "Scopri di più",
+    "explore": "Esplora"
+  },
   "blog": {
     "title": "Folio Blog",
     "description": "Case study, approfondimenti sui prodotti e guide pratiche su viaggi, documenti e identità digitale.",

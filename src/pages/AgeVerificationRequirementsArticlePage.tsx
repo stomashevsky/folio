@@ -1,5 +1,4 @@
-import { LocalizedLink } from '../components/ui'
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, ArticleSectionCTA } from '../components/ui'
 import ageVerificationFlow from '../assets/images/blog-age-verification-flow.png'
 import { useTranslation, Trans } from 'react-i18next'
 
@@ -106,11 +105,15 @@ export default function AgeVerificationRequirementsArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans
-          i18nKey="articles:age-verification-requirements.p20"
-          components={{ LocalizedLink: <LocalizedLink to="/solutions/age-compliance" className="underline hover:text-[#737373] transition-colors" /> }}
-        />
+        {t('articles:age-verification-requirements.p20')}
       </ArticleParagraph>
+
+      <ArticleSectionCTA
+        to="/solutions/age-compliance"
+        titleKey="ageCompliance.hero.tagline"
+        descriptionKey="ageCompliance.hero.description"
+        namespace="solutions"
+      />
 
       <ArticleParagraph>
         {t('articles:age-verification-requirements.p21')}

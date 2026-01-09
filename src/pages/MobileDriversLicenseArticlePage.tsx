@@ -1,5 +1,4 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { LocalizedLink } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, ArticleSectionCTA } from '../components/ui'
 import mdlScreenImage from '../assets/images/blog-mdl-folio-screen.png'
 import { useTranslation, Trans } from 'react-i18next'
 
@@ -106,14 +105,15 @@ export default function MobileDriversLicenseArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans
-          ns="articles"
-          i18nKey="mobile-drivers-license.p20"
-          components={{
-            LocalizedLink: <LocalizedLink to="/government/playground" className="underline hover:text-[#737373] transition-colors" />
-          }}
-        />
+        {t('mobile-drivers-license.p20', { ns: 'articles' })}
       </ArticleParagraph>
+
+      <ArticleSectionCTA
+        to="/government/playground"
+        titleKey="government.hero.tagline"
+        descriptionKey="government.hero.description"
+        namespace="government"
+      />
     </BlogArticleLayout>
   )
 }

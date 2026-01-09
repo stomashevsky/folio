@@ -1,5 +1,5 @@
 import { useTranslation, Trans } from 'react-i18next'
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, ArticleSectionCTA } from '../components/ui'
 import onboardingScreens from '../assets/images/blog-client-onboarding-screens.png'
 
 export default function ClientOnboardingBestPracticesArticlePage() {
@@ -61,6 +61,13 @@ export default function ClientOnboardingBestPracticesArticlePage() {
       </ArticleParagraph>
       <ArticleParagraph>{t(`${slug}.p16`)}</ArticleParagraph>
       <ArticleParagraph>{t(`${slug}.p17`)}</ArticleParagraph>
+
+      <ArticleSectionCTA
+        to="/solutions/client-onboarding"
+        titleKey="clientOnboarding.hero.tagline"
+        descriptionKey="clientOnboarding.hero.description"
+        namespace="solutions"
+      />
     </BlogArticleLayout>
   )
 }

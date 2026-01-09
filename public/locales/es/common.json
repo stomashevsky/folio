@@ -77,6 +77,10 @@
             "subtitle": "Disponible gratis en iOS y Android"
         }
     },
+    "articleSectionCta": {
+        "learnMore": "Saber más",
+        "explore": "Explorar"
+    },
     "blog": {
         "title": "Blog de Folio",
         "description": "Casos de estudio, análisis de producto y guías sobre viajes, documentos e identidad digital.",

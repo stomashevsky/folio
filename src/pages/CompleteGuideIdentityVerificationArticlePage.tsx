@@ -1,5 +1,5 @@
 import { useTranslation, Trans } from 'react-i18next'
-import { ArticleAppCTA, ArticleH2, ArticleList, ArticleParagraph, BlogArticleLayout, LocalizedLink } from '../components/ui'
+import { ArticleAppCTA, ArticleH2, ArticleList, ArticleParagraph, BlogArticleLayout, LocalizedLink, ArticleSectionCTA } from '../components/ui'
 
 export default function CompleteGuideIdentityVerificationArticlePage() {
   const { t } = useTranslation('articles')
@@ -80,11 +80,17 @@ export default function CompleteGuideIdentityVerificationArticlePage() {
           i18nKey={`${slug}.p20`}
           ns="articles"
           components={{
-            strong: <strong />,
-            LocalizedLink: <LocalizedLink to="/platform/id-verification" className="underline hover:text-[#737373] transition-colors" />
+            strong: <strong />
           }}
         />
       </ArticleParagraph>
+
+      <ArticleSectionCTA
+        to="/platform/id-verification"
+        titleKey="idVerification.hero.tagline"
+        descriptionKey="idVerification.hero.description"
+        namespace="platform"
+      />
       <ArticleParagraph>
         <Trans i18nKey={`${slug}.p21`} ns="articles" components={{ strong: <strong /> }} />
       </ArticleParagraph>
@@ -93,9 +99,7 @@ export default function CompleteGuideIdentityVerificationArticlePage() {
           i18nKey={`${slug}.p22`}
           ns="articles"
           components={{
-            strong: <strong />,
-            LivenessLink: <LocalizedLink to="/platform/liveness-check" className="underline hover:text-[#737373] transition-colors" />,
-            FaceMatchLink: <LocalizedLink to="/platform/id-verification" className="underline hover:text-[#737373] transition-colors" />
+            strong: <strong />
           }}
         />
       </ArticleParagraph>

@@ -1,5 +1,4 @@
-import { LocalizedLink } from '../components/ui'
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, ArticleSectionCTA } from '../components/ui'
 import eudiWalletHowItWorks from '../assets/images/blog-eudi-wallet-how-it-works.png'
 import { useTranslation, Trans } from 'react-i18next'
 
@@ -102,11 +101,15 @@ export default function EudiWalletArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans
-          i18nKey="articles:eudi-wallet.p19"
-          components={{ LocalizedLink: <LocalizedLink to="/government/playground" className="underline hover:text-[#737373] transition-colors" /> }}
-        />
+        {t('articles:eudi-wallet.p19')}
       </ArticleParagraph>
+
+      <ArticleSectionCTA
+        to="/government/playground"
+        titleKey="government.hero.tagline"
+        descriptionKey="government.hero.description"
+        namespace="government"
+      />
 
       <ArticleParagraph>
         {t('articles:eudi-wallet.p20')}

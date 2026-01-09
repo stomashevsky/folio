@@ -77,6 +77,10 @@
       "subtitle": "iOSとAndroidで無料利用可能"
     }
   },
+  "articleSectionCta": {
+    "learnMore": "詳細を見る",
+    "explore": "探索する"
+  },
   "blog": {
     "title": "Folioブログ",
     "description": "旅行、書類、デジタルIDに関する事例、製品情報、実用ガイド",

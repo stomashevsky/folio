@@ -77,6 +77,10 @@
       "subtitle": "Disponible gratuitement sur iOS et Android"
     }
   },
+  "articleSectionCta": {
+    "learnMore": "En savoir plus",
+    "explore": "Explorer"
+  },
   "blog": {
     "title": "Blog Folio",
     "description": "Études de cas, analyses produit et guides pratiques sur le voyage, les documents et l'identité numérique.",

@@ -1,5 +1,4 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
-import { LocalizedLink } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleSectionCTA } from '../components/ui'
 import { useTranslation, Trans } from 'react-i18next'
 
 export default function KycAmlComplianceArticlePage() {
@@ -162,14 +161,15 @@ export default function KycAmlComplianceArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans
-          ns="articles"
-          i18nKey="kyc-aml-compliance.p35"
-          components={{
-            LocalizedLink: <LocalizedLink to="/platform/id-verification" className="underline hover:text-[#737373] transition-colors" />
-          }}
-        />
+        {t('kyc-aml-compliance.p35', { ns: 'articles' })}
       </ArticleParagraph>
+
+      <ArticleSectionCTA
+        to="/platform/id-verification"
+        titleKey="idVerification.hero.tagline"
+        descriptionKey="idVerification.hero.description"
+        namespace="platform"
+      />
 
       <ArticleParagraph>
         {t('kyc-aml-compliance.p36')}

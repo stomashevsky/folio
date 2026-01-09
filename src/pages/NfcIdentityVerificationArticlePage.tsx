@@ -1,5 +1,4 @@
-import { LocalizedLink } from '../components/ui'
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, ArticleSectionCTA } from '../components/ui'
 import nfcScanningFlow from '../assets/images/blog-nfc-scanning-flow.png'
 import { useTranslation, Trans } from 'react-i18next'
 
@@ -108,14 +107,15 @@ export default function NfcIdentityVerificationArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans
-          ns="articles"
-          i18nKey="nfc-identity-verification.p21"
-          components={{
-            LocalizedLink: <LocalizedLink to="/platform/nfc-identity-scan" className="underline hover:text-[#737373] transition-colors" />
-          }}
-        />
+        {t('nfc-identity-verification.p21', { ns: 'articles' })}
       </ArticleParagraph>
+
+      <ArticleSectionCTA
+        to="/platform/nfc-identity-scan"
+        titleKey="nfcIdentityScan.hero.tagline"
+        descriptionKey="nfcIdentityScan.hero.description"
+        namespace="platform"
+      />
     </BlogArticleLayout>
   )
 }

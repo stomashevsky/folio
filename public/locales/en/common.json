@@ -77,6 +77,10 @@
       "subtitle": "Available free on iOS and Android"
     }
   },
+  "articleSectionCta": {
+    "learnMore": "Learn more",
+    "explore": "Explore"
+  },
   "blog": {
     "title": "Folio Blog",
     "description": "Case studies, product insights and practical guides on travel, documents and digital identity.",

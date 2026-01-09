@@ -1,5 +1,4 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
-import { LocalizedLink } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleSectionCTA } from '../components/ui'
 import { useTranslation, Trans } from 'react-i18next'
 
 export default function DocumentIntelligenceArticlePage() {
@@ -138,11 +137,15 @@ export default function DocumentIntelligenceArticlePage() {
       <ArticleH2>{t('articles:document-intelligence.h2_6')}</ArticleH2>
 
       <ArticleParagraph>
-        <Trans
-          i18nKey="articles:document-intelligence.p27"
-          components={{ LocalizedLink: <LocalizedLink to="/platform/document-intelligence" className="underline hover:text-[#737373] transition-colors" /> }}
-        />
+        {t('articles:document-intelligence.p27')}
       </ArticleParagraph>
+
+      <ArticleSectionCTA
+        to="/platform/document-intelligence"
+        titleKey="documentIntelligence.hero.tagline"
+        descriptionKey="documentIntelligence.hero.description"
+        namespace="platform"
+      />
 
       <ArticleParagraph>
         {t('articles:document-intelligence.p28')}

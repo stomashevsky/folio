@@ -77,3 +77,4 @@ export { default as LocalizedLink } from './LocalizedLink'
 
 // Article CTA
 export { default as ArticleAppCTA } from './ArticleAppCTA'
+export { default as ArticleSectionCTA } from './ArticleSectionCTA'
