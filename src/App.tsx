@@ -412,7 +412,10 @@ function App() {
       <ScrollToTop />
       <RedirectHandler />
       <PrerenderReadyMarker />
-      <TrailingSlashRedirect />
+      {/* TrailingSlashRedirect disabled: CloudFront automatically adds trailing slash,
+          and _redirects rules don't work on CloudFront (only Netlify).
+          Accepting trailing slash as standard to avoid double redirects. */}
+      {/* <TrailingSlashRedirect /> */}
       <CookieConsent />
       <Routes>
         {/* Root path redirects to user's preferred language */}
