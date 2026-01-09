@@ -568,7 +568,7 @@
       "imageAlt": "App planificateur de voyage avec chronologie"
     },
     "flights": {
-      "title": "Billets d'avion, toujours prêts",
+      "title": "Billets d'avion",
       "description": "Transférez votre email de confirmation ou importez un PDF. Folio extrait votre numéro de vol, heure de départ, porte, siège et référence de réservation. Votre carte d'embarquement est prête quand vous en avez besoin, même sans internet.",
       "imageAlt": "Billet d'avion dans l'app Folio",
       "feature1": "Portes et numéros de siège extraits automatiquement",
@@ -576,7 +576,7 @@
       "feature3": "Tous les détails de réservation en un seul endroit"
     },
     "hotels": {
-      "title": "Réservations d'hôtel, organisées",
+      "title": "Réservations d'hôtel",
       "description": "Importez votre confirmation d'hôtel et Folio capture les heures d'enregistrement, adresses, numéros de confirmation et coordonnées. Tout ce dont vous avez besoin pour une arrivée sans problème, directement sur votre téléphone.",
       "imageAlt": "Réservation d'hôtel dans l'app Folio",
       "feature1": "Heures d'enregistrement et de départ clairement affichées",
@@ -584,7 +584,7 @@
       "feature3": "Numéros de confirmation toujours accessibles"
     },
     "trains": {
-      "title": "Billets de train, simplifiés",
+      "title": "Billets de train",
       "description": "Ajoutez votre billet de train depuis email, PDF ou photo. Folio extrait les numéros de train, heures de départ et d'arrivée, attributions de sièges et codes de billet. Les détails de votre voyage sont organisés et faciles à trouver.",
       "imageAlt": "Billet de train dans l'app Folio",
       "feature1": "Numéros de train et horaires extraits",
@@ -592,15 +592,15 @@
       "feature3": "Codes de billet prêts pour le scan"
     },
     "bus": {
-      "title": "Billets de bus, à portée de main",
-      "description": "Stockez billets de bus, passes et réservations de ferry en un seul endroit. Folio extrait automatiquement les heures de départ, itinéraires, numéros de siège et codes de billet. Plus besoin de chercher dans vos emails ou captures d'écran.",
+      "title": "Billets de bus",
+      "description": "Stockez billets de bus et passes en un seul endroit. Folio extrait automatiquement les heures de départ, itinéraires, numéros de siège et codes de billet. Plus besoin de chercher dans vos emails ou captures d'écran.",
       "imageAlt": "Billet de bus dans l'app Folio",
       "feature1": "Itinéraires et heures de départ extraits",
       "feature2": "Codes de billet et numéros de siège capturés",
-      "feature3": "Fonctionne avec tout opérateur de bus ou ferry"
+      "feature3": "Fonctionne avec tout opérateur de bus"
     },
     "events": {
-      "title": "Billets d'événements, accessibles",
+      "title": "Billets d'événements",
       "description": "Importez billets de concert, passes d'événements et réservations de lieux. Folio extrait les dates d'événements, horaires, informations de sièges et codes de billet. Vos codes QR sont prêts à être scannés à l'entrée.",
       "imageAlt": "Billet d'événement dans l'app Folio",
       "feature1": "Dates et horaires d'événements extraits automatiquement",

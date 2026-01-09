@@ -19,11 +19,17 @@ import folioTicketsTrain from '../assets/images/folio-tickets-train.png'
 import ticketIssuanceHero from '../assets/images/ticket-issuance-hero.png'
 import routeIcon from '../assets/icons/Route.svg'
 import calendarRangeIcon from '../assets/icons/CalendarRange.svg'
-import smartphoneIcon from '../assets/icons/Smartphone.svg'
-import userRoundCheckIcon from '../assets/icons/UserRoundCheck.svg'
 import fileSpreadsheetIcon from '../assets/icons/FileSpreadsheet.svg'
 import scanTextIcon from '../assets/icons/ScanText.svg'
 import checkIcon from '../assets/icons/Check.svg'
+import arrowDownIcon from '../assets/icons/ArrowDown.svg'
+import calendarCheckIcon from '../assets/icons/CalendarCheck.svg'
+import historyIcon from '../assets/icons/History.svg'
+import bellRingIcon from '../assets/icons/BellRing.svg'
+import ticketCheckIcon from '../assets/icons/TicketCheck.svg'
+import wifiOffIcon from '../assets/icons/WifiOff.svg'
+import shareIcon from '../assets/icons/Share.svg'
+import paperclipIcon from '../assets/icons/Paperclip.svg'
 
 const BACKGROUND_STYLE = {
   backgroundImage:
@@ -198,22 +204,22 @@ function TripPlannerAppPage() {
             
             <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
               <ToolCard
-                icon={calendarRangeIcon}
+                icon={arrowDownIcon}
                 title={t('tripPlannerApp.timeline.autoSort.title')}
                 description={t('tripPlannerApp.timeline.autoSort.description')}
               />
               <ToolCard
-                icon={calendarRangeIcon}
+                icon={calendarCheckIcon}
                 title={t('tripPlannerApp.timeline.groupByDate.title')}
                 description={t('tripPlannerApp.timeline.groupByDate.description')}
               />
               <ToolCard
-                icon={routeIcon}
+                icon={historyIcon}
                 title={t('tripPlannerApp.timeline.history.title')}
                 description={t('tripPlannerApp.timeline.history.description')}
               />
               <ToolCard
-                icon={smartphoneIcon}
+                icon={bellRingIcon}
                 title={t('tripPlannerApp.timeline.notifications.title')}
                 description={t('tripPlannerApp.timeline.notifications.description')}
               />
@@ -263,22 +269,22 @@ function TripPlannerAppPage() {
             
             <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start sm:items-stretch justify-center w-full min-w-0">
               <ToolCard
-                icon={fileSpreadsheetIcon}
+                icon={ticketCheckIcon}
                 title={t('tripPlannerApp.benefits.unifiedFormat.title')}
                 description={t('tripPlannerApp.benefits.unifiedFormat.description')}
               />
               <ToolCard
-                icon={smartphoneIcon}
+                icon={wifiOffIcon}
                 title={t('tripPlannerApp.benefits.worksOffline.title')}
                 description={t('tripPlannerApp.benefits.worksOffline.description')}
               />
               <ToolCard
-                icon={userRoundCheckIcon}
+                icon={shareIcon}
                 title={t('tripPlannerApp.benefits.shareWithFamily.title')}
                 description={t('tripPlannerApp.benefits.shareWithFamily.description')}
               />
               <ToolCard
-                icon={fileSpreadsheetIcon}
+                icon={paperclipIcon}
                 title={t('tripPlannerApp.benefits.originalFiles.title')}
                 description={t('tripPlannerApp.benefits.originalFiles.description')}
               />
