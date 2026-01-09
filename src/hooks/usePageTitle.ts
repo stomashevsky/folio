@@ -102,8 +102,20 @@ export function usePageTitle({
     }
 
     // Canonical link
+    // Normalize canonical URL to include trailing slash for non-root paths
+    // This matches the actual URLs on GitHub Pages/CloudFront which add trailing slash
+    const normalizeCanonicalUrl = (url: string): string => {
+      // If URL doesn't end with /, add trailing slash
+      // This ensures canonical URLs match actual page URLs (which have trailing slash)
+      if (!url.endsWith('/')) {
+        return `${url}/`
+      }
+      return url
+    }
+    
     const finalCanonical = canonicalUrl || ogUrl
     if (finalCanonical) {
+      const normalizedCanonical = normalizeCanonicalUrl(finalCanonical)
       let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null
       if (!canonicalLink) {
         canonicalLink = document.createElement('link')
@@ -111,7 +123,7 @@ export function usePageTitle({
         document.head.appendChild(canonicalLink)
         createdElements.push(canonicalLink)
       }
-      canonicalLink.setAttribute('href', finalCanonical)
+      canonicalLink.setAttribute('href', normalizedCanonical)
     }
 
     // Robots meta
