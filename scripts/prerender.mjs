@@ -557,9 +557,12 @@ async function renderPageWithPuppeteer(browser, route, metadata, baseUrl) {
   
   try {
     // Navigate to the page
-    const url = `${baseUrl}${route}`
+    // Add trailing slash for non-root paths to avoid Vite redirect
+    // Root paths (/, /en, /es, etc.) should remain without trailing slash
+    const isRootPath = route === '/' || route.match(/^\/[a-z]{2}$/)
+    const url = isRootPath ? `${baseUrl}${route}` : `${baseUrl}${route}/`
     await page.goto(url, { 
-      waitUntil: 'domcontentloaded',
+      waitUntil: 'load',  // Wait for page load including redirects (faster than networkidle0)
       timeout: 30000 
     })
     
