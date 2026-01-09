@@ -567,25 +567,45 @@
       "learnMore": "Learn more",
       "imageAlt": "Trip planner app with travel timeline"
     },
-    "features": {
-      "title": "Everything for your trips in one place",
-      "description": "Store all your travel documents and bookings in one secure digital wallet.",
-      "flights": {
-        "title": "Flights",
-        "description": "Import flight tickets from email or PDF. Folio extracts departure times, gates, seat numbers, and booking references automatically."
-      },
-      "trains": {
-        "title": "Trains & Buses",
-        "description": "Store train tickets, bus passes, and ferry bookings. All details extracted and organized chronologically."
-      },
-      "hotels": {
-        "title": "Hotels",
-        "description": "Keep hotel confirmations, check-in times, and reservation details organized and easy to find."
-      },
-      "events": {
-        "title": "Events",
-        "description": "Store concert tickets, event passes, and venue bookings. Everything appears in your timeline automatically."
-      }
+    "flights": {
+      "title": "Flight tickets, always ready",
+      "description": "Forward your booking confirmation email or import a PDF. Folio extracts your flight number, departure time, gate, seat, and booking reference. Your boarding pass is ready when you need it, even without internet.",
+      "imageAlt": "Flight ticket in Folio app",
+      "feature1": "Gate and seat numbers extracted automatically",
+      "feature2": "Works offline at the airport",
+      "feature3": "All booking details in one place"
+    },
+    "hotels": {
+      "title": "Hotel bookings, organized",
+      "description": "Import your hotel confirmation and Folio captures check-in times, addresses, confirmation numbers, and contact details. Everything you need for a smooth arrival, right on your phone.",
+      "imageAlt": "Hotel booking in Folio app",
+      "feature1": "Check-in and check-out times clearly displayed",
+      "feature2": "Property address and contact info extracted",
+      "feature3": "Confirmation numbers always accessible"
+    },
+    "trains": {
+      "title": "Train tickets, simplified",
+      "description": "Add your train ticket from email, PDF, or photo. Folio extracts train numbers, departure and arrival times, seat assignments, and ticket codes. Your journey details are organized and easy to find.",
+      "imageAlt": "Train ticket in Folio app",
+      "feature1": "Train numbers and schedules extracted",
+      "feature2": "Seat and wagon information captured",
+      "feature3": "Ticket codes ready for scanning"
+    },
+    "bus": {
+      "title": "Bus tickets, on hand",
+      "description": "Store bus tickets, passes, and ferry bookings in one place. Folio extracts departure times, routes, seat numbers, and ticket codes automatically. No more searching through emails or screenshots.",
+      "imageAlt": "Bus ticket in Folio app",
+      "feature1": "Route and departure times extracted",
+      "feature2": "Ticket codes and seat numbers captured",
+      "feature3": "Works with any bus or ferry operator"
+    },
+    "events": {
+      "title": "Event tickets, accessible",
+      "description": "Import concert tickets, event passes, and venue bookings. Folio extracts event dates, times, seat information, and ticket codes. Your QR codes are ready to scan at the door.",
+      "imageAlt": "Event ticket in Folio app",
+      "feature1": "Event dates and times extracted automatically",
+      "feature2": "Seat and section information captured",
+      "feature3": "QR codes ready for entry"
     },
     "timeline": {
       "title": "Your journey, organized automatically",

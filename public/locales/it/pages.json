@@ -567,25 +567,45 @@
       "learnMore": "Scopri di più",
       "imageAlt": "App pianificatore di viaggi con cronologia"
     },
-    "features": {
-      "title": "Tutto per i tuoi viaggi in un solo posto",
-      "description": "Conserva tutti i tuoi documenti di viaggio e prenotazioni in un portafoglio digitale sicuro.",
-      "flights": {
-        "title": "Voli",
-        "description": "Importa biglietti aerei da email o PDF. Folio estrae automaticamente orari di partenza, gate, numeri di posto e riferimenti di prenotazione."
-      },
-      "trains": {
-        "title": "Treni e autobus",
-        "description": "Conserva biglietti del treno, pass per autobus e prenotazioni di traghetti. Tutti i dettagli estratti e organizzati cronologicamente."
-      },
-      "hotels": {
-        "title": "Hotel",
-        "description": "Mantieni conferme di hotel, orari di check-in e dettagli di prenotazione organizzati e facili da trovare."
-      },
-      "events": {
-        "title": "Eventi",
-        "description": "Conserva biglietti per concerti, pass per eventi e prenotazioni di luoghi. Tutto appare automaticamente nella tua cronologia."
-      }
+    "flights": {
+      "title": "Biglietti aerei, sempre pronti",
+      "description": "Inoltra la tua email di conferma o importa un PDF. Folio estrae il numero di volo, orario di partenza, gate, posto e riferimento di prenotazione. La tua carta d'imbarco è pronta quando ne hai bisogno, anche senza internet.",
+      "imageAlt": "Biglietto aereo nell'app Folio",
+      "feature1": "Gate e numeri di posto estratti automaticamente",
+      "feature2": "Funziona offline in aeroporto",
+      "feature3": "Tutti i dettagli di prenotazione in un posto"
+    },
+    "hotels": {
+      "title": "Prenotazioni hotel, organizzate",
+      "description": "Importa la tua conferma hotel e Folio cattura orari di check-in, indirizzi, numeri di conferma e informazioni di contatto. Tutto ciò che serve per un arrivo senza problemi, direttamente sul tuo telefono.",
+      "imageAlt": "Prenotazione hotel nell'app Folio",
+      "feature1": "Orari di check-in e check-out chiaramente mostrati",
+      "feature2": "Indirizzo della struttura e informazioni di contatto estratte",
+      "feature3": "Numeri di conferma sempre accessibili"
+    },
+    "trains": {
+      "title": "Biglietti treno, semplificati",
+      "description": "Aggiungi il tuo biglietto treno da email, PDF o foto. Folio estrae numeri di treno, orari di partenza e arrivo, assegnazioni di posti e codici biglietto. I dettagli del tuo viaggio sono organizzati e facili da trovare.",
+      "imageAlt": "Biglietto treno nell'app Folio",
+      "feature1": "Numeri di treno e orari estratti",
+      "feature2": "Informazioni di posto e vagone catturate",
+      "feature3": "Codici biglietto pronti per la scansione"
+    },
+    "bus": {
+      "title": "Biglietti autobus, a portata di mano",
+      "description": "Conserva biglietti autobus, pass e prenotazioni traghetti in un posto. Folio estrae automaticamente orari di partenza, percorsi, numeri di posto e codici biglietto. Non più cercare tra email o screenshot.",
+      "imageAlt": "Biglietto autobus nell'app Folio",
+      "feature1": "Percorsi e orari di partenza estratti",
+      "feature2": "Codici biglietto e numeri di posto catturati",
+      "feature3": "Funziona con qualsiasi operatore autobus o traghetto"
+    },
+    "events": {
+      "title": "Biglietti eventi, accessibili",
+      "description": "Importa biglietti concerti, pass eventi e prenotazioni luoghi. Folio estrae date eventi, orari, informazioni posti e codici biglietto. I tuoi codici QR sono pronti per essere scansionati all'ingresso.",
+      "imageAlt": "Biglietto evento nell'app Folio",
+      "feature1": "Date e orari eventi estratti automaticamente",
+      "feature2": "Informazioni di posto e sezione catturate",
+      "feature3": "Codici QR pronti per l'ingresso"
     },
     "timeline": {
       "title": "Il tuo viaggio, organizzato automaticamente",

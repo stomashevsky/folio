@@ -567,25 +567,45 @@
             "learnMore": "Saber más",
             "imageAlt": "App planificador de viajes con línea de tiempo"
         },
-        "features": {
-            "title": "Todo para tus viajes en un solo lugar",
-            "description": "Guarda todos tus documentos de viaje y reservas en una billetera digital segura.",
-            "flights": {
-                "title": "Vuelos",
-                "description": "Importa billetes de avión desde correo o PDF. Folio extrae automáticamente horarios de salida, puertas, números de asiento y referencias de reserva."
-            },
-            "trains": {
-                "title": "Trenes y autobuses",
-                "description": "Guarda billetes de tren, pases de autobús y reservas de ferry. Todos los detalles extraídos y organizados cronológicamente."
-            },
-            "hotels": {
-                "title": "Hoteles",
-                "description": "Mantén confirmaciones de hotel, horarios de check-in y detalles de reserva organizados y fáciles de encontrar."
-            },
-            "events": {
-                "title": "Eventos",
-                "description": "Guarda entradas de conciertos, pases de eventos y reservas de lugares. Todo aparece automáticamente en tu línea de tiempo."
-            }
+        "flights": {
+            "title": "Billetes de avión, siempre listos",
+            "description": "Reenvía tu correo de confirmación o importa un PDF. Folio extrae tu número de vuelo, hora de salida, puerta, asiento y referencia de reserva. Tu tarjeta de embarque está lista cuando la necesitas, incluso sin internet.",
+            "imageAlt": "Billete de avión en la app Folio",
+            "feature1": "Puertas y números de asiento extraídos automáticamente",
+            "feature2": "Funciona sin conexión en el aeropuerto",
+            "feature3": "Todos los detalles de reserva en un lugar"
+        },
+        "hotels": {
+            "title": "Reservas de hotel, organizadas",
+            "description": "Importa tu confirmación de hotel y Folio captura horarios de check-in, direcciones, números de confirmación e información de contacto. Todo lo que necesitas para una llegada sin problemas, en tu teléfono.",
+            "imageAlt": "Reserva de hotel en la app Folio",
+            "feature1": "Horarios de check-in y check-out claramente mostrados",
+            "feature2": "Dirección del hotel e información de contacto extraída",
+            "feature3": "Números de confirmación siempre accesibles"
+        },
+        "trains": {
+            "title": "Billetes de tren, simplificados",
+            "description": "Añade tu billete de tren desde correo, PDF o foto. Folio extrae números de tren, horarios de salida y llegada, asignaciones de asientos y códigos de billete. Los detalles de tu viaje están organizados y fáciles de encontrar.",
+            "imageAlt": "Billete de tren en la app Folio",
+            "feature1": "Números de tren y horarios extraídos",
+            "feature2": "Información de asiento y vagón capturada",
+            "feature3": "Códigos de billete listos para escanear"
+        },
+        "bus": {
+            "title": "Billetes de autobús, a mano",
+            "description": "Guarda billetes de autobús, pases y reservas de ferry en un lugar. Folio extrae horarios de salida, rutas, números de asiento y códigos de billete automáticamente. No más buscar en correos o capturas de pantalla.",
+            "imageAlt": "Billete de autobús en la app Folio",
+            "feature1": "Rutas y horarios de salida extraídos",
+            "feature2": "Códigos de billete y números de asiento capturados",
+            "feature3": "Funciona con cualquier operador de autobús o ferry"
+        },
+        "events": {
+            "title": "Entradas de eventos, accesibles",
+            "description": "Importa entradas de conciertos, pases de eventos y reservas de lugares. Folio extrae fechas de eventos, horarios, información de asientos y códigos de billete. Tus códigos QR están listos para escanear en la entrada.",
+            "imageAlt": "Entrada de evento en la app Folio",
+            "feature1": "Fechas y horarios de eventos extraídos automáticamente",
+            "feature2": "Información de asiento y sección capturada",
+            "feature3": "Códigos QR listos para la entrada"
         },
         "timeline": {
             "title": "Tu viaje, organizado automáticamente",
