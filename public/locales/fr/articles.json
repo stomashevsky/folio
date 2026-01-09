@@ -19,7 +19,7 @@
     },
     "terms": {
         "intro": "Merci d'utiliser Folio Wallet. Les présentes Conditions d'utilisation régissent votre accès et votre utilisation de l'application mobile Folio, des services en ligne associés et de toute documentation que nous fournissons (collectivement, nos « Services »). En accédant à nos Services ou en les utilisant, vous acceptez d'être lié par ces conditions. Si vous n'êtes pas d'accord, veuillez ne pas utiliser Folio.",
-        "intro_privacy_link": "Notre <PrivacyLink>Politique de confidentialité</PrivacyLink> explique comment nous collectons, utilisons et protégeons vos données personnelles. Veuillez la lire en complément de ces conditions.",
+        "intro_privacy_link": "Notre Politique de confidentialité explique comment nous collectons, utilisons et protégeons vos données personnelles. Veuillez la lire en complément de ces conditions.",
         "who_we_are": {
             "title": "Qui sommes-nous",
             "content": "Folio Technologies Limited est une société enregistrée en Angleterre et au Pays de Galles (numéro d'entreprise 07236594). Notre siège social est situé au 88 Baker Street, Londres W1U 6TQ, Royaume-Uni. Les références à « Folio », « nous », « notre » ou « nos » désignent Folio Technologies Limited."
@@ -97,7 +97,7 @@
         },
         "contact": {
             "title": "Nous contacter",
-            "p1": "Si vous avez des questions sur ces conditions ou avez besoin d'assistance, veuillez nous envoyer un e-mail à <SupportEmail>support@folio.id</SupportEmail>. Pour les demandes relatives à la confidentialité, contactez <PrivacyEmail>privacy@folio.id</PrivacyEmail>."
+            "p1": "Si vous avez des questions sur ces conditions ou avez besoin d'assistance, veuillez nous envoyer un e-mail à support@folio.id. Pour les demandes relatives à la confidentialité, contactez privacy@folio.id."
         }
     },
     "privacy_page": {
@@ -105,7 +105,7 @@
         "commitment": "<strong>Notre engagement :</strong> Nous fonctionnons selon une architecture zéro connaissance. Vos documents personnels sont chiffrés dans votre portefeuille et nous ne pouvons ni accéder ni consulter vos informations privées. Nous ne partagerons jamais vos données personnelles avec des tiers sans votre consentement explicite.",
         "who_we_are": {
             "title": "Qui sommes-nous",
-            "p1": "Folio Technologies Limited est une société enregistrée en Angleterre et au Pays de Galles (numéro d'entreprise 07236594). Notre siège social est situé au 88 Baker Street, Londres W1U 6TQ, Royaume-Uni. Nous sommes le responsable du traitement des données personnelles collectées via l'application Folio. Pour toute question relative à la confidentialité, contactez notre responsable de la protection des données à <PrivacyEmail>privacy@folio.id</PrivacyEmail>."
+            "p1": "Folio Technologies Limited est une société enregistrée en Angleterre et au Pays de Galles (numéro d'entreprise 07236594). Notre siège social est situé au 88 Baker Street, Londres W1U 6TQ, Royaume-Uni. Nous sommes le responsable du traitement des données personnelles collectées via l'application Folio. Pour toute question relative à la confidentialité, contactez notre responsable de la protection des données à privacy@folio.id."
         },
         "collect": {
             "title": "Données personnelles que nous collectons",
@@ -179,7 +179,7 @@
                 "item6": "Opposition : vous opposer au traitement fondé sur des intérêts légitimes",
                 "item7": "Retrait du consentement : retirer votre consentement à tout moment lorsque nous nous appuyons sur celui-ci pour le traitement"
             },
-            "p2": "Pour exercer l'un de ces droits, envoyez-nous un e-mail à <PrivacyEmail>privacy@folio.id</PrivacyEmail>. Nous répondrons dans un délai d'un mois. Nous ne facturons généralement pas de frais, mais nous pouvons facturer des frais raisonnables pour les demandes manifestement infondées ou excessives."
+            "p2": "Pour exercer l'un de ces droits, envoyez-nous un e-mail à privacy@folio.id. Nous répondrons dans un délai d'un mois. Nous ne facturons généralement pas de frais, mais nous pouvons facturer des frais raisonnables pour les demandes manifestement infondées ou excessives."
         },
         "cookies": {
             "title": "Cookies et technologies similaires",
@@ -194,7 +194,7 @@
         },
         "children": {
             "title": "Protection des mineurs",
-            "p1": "Folio n'est pas destiné aux enfants de moins de 16 ans. Nous ne collectons pas sciemment de données personnelles auprès d'enfants. Si vous pensez que nous avons collecté par inadvertance des données concernant un enfant, veuillez nous contacter immédiatement à <PrivacyEmail>privacy@folio.id</PrivacyEmail>, et nous prendrons des mesures pour supprimer ces informations."
+            "p1": "Folio n'est pas destiné aux enfants de moins de 16 ans. Nous ne collectons pas sciemment de données personnelles auprès d'enfants. Si vous pensez que nous avons collecté par inadvertance des données concernant un enfant, veuillez nous contacter immédiatement à privacy@folio.id, et nous prendrons des mesures pour supprimer ces informations."
         },
         "changes": {
             "title": "Modifications de cette politique",
@@ -202,7 +202,7 @@
         },
         "contact": {
             "title": "Nous contacter",
-            "p1": "Si vous avez des questions sur cette Politique de confidentialité ou sur la façon dont nous traitons vos données personnelles, veuillez contacter notre responsable de la protection des données à <PrivacyEmail>privacy@folio.id</PrivacyEmail>. Vous avez également le droit de déposer une plainte auprès du Bureau du Commissaire à l'information du Royaume-Uni (ICO) à <IcoLink>ico.org.uk</IcoLink> si vous n'êtes pas satisfait de la façon dont nous avons traité vos données personnelles."
+            "p1": "Si vous avez des questions sur cette Politique de confidentialité ou sur la façon dont nous traitons vos données personnelles, veuillez contacter notre responsable de la protection des données à privacy@folio.id. Vous avez également le droit de déposer une plainte auprès du Bureau du Commissaire à l'information du Royaume-Uni (ICO) à ico.org.uk si vous n'êtes pas satisfait de la façon dont nous avons traité vos données personnelles."
         }
     },
     "access-your-digital-wallet-anywhere": {
@@ -566,7 +566,7 @@
         "p19": "Lorsque vous prenez un selfie pour la vérification, il est comparé à la photo de votre document d'identité pour confirmer que vous êtes la même personne. Cette comparaison produit un score de correspondance. Nous utilisons ce score pour vérifier votre identité, puis nous supprimons les images faciales brutes. Nous ne conservons pas votre selfie indéfiniment sur un serveur.",
         "p20": "Nous n'utilisons pas vos données faciales à d'autres fins que la vérification. Nous ne les utilisons pas pour entraîner des modèles d'IA, nous ne les analysons pas pour des informations, nous ne les partageons pas avec des annonceurs. Le but est la vérification, point final.",
         "p21": "Tout traitement biométrique se fait avec votre consentement explicite. Vous savez exactement ce qui se passe et pourquoi. Et si vous souhaitez que vos données soient supprimées, vous pouvez en faire la demande, et nous honorerons cette demande.",
-        "p22": "Nous sommes transparents à ce sujet car nous pensons que tout le monde devrait l'être. Si un service vous demande votre visage et ne peut pas expliquer clairement ce qu'il en advient, demandez-vous si vous avez vraiment besoin d'utiliser ce service. Vos données biométriques vous sont propres. Elles méritent d'être traitées avec soin. Apprenez-en davantage sur la façon dont nous gérons la vérification d'identité dans notre documentation sur le <LivenessLink>liveness check</LivenessLink> et le <FaceMatchLink>face match</FaceMatchLink>."
+        "p22": "Nous sommes transparents à ce sujet car nous pensons que tout le monde devrait l'être. Si un service vous demande votre visage et ne peut pas expliquer clairement ce qu'il en advient, demandez-vous si vous avez vraiment besoin d'utiliser ce service. Vos données biométriques vous sont propres. Elles méritent d'être traitées avec soin. Apprenez-en davantage sur la façon dont nous gérons la vérification d'identité dans notre documentation sur le liveness check et le face match."
     },
     "checkmytrip-alternative": {
         "title": "Alternative à CheckMyTrip : une façon plus intelligente de gérer vos voyages",
