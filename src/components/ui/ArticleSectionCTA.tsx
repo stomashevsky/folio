@@ -9,6 +9,7 @@ import livenessCheckHero from '../../assets/images/liveness-check-hero.mp4'
 import nfcIdentityScanHero from '../../assets/images/nfc-identity-scan-hero.png'
 import idVerificationHero from '../../assets/images/id-verification-hero.png'
 import documentIntelligenceHero from '../../assets/images/document-intelligence-hero.png'
+import faceMatchHero from '../../assets/images/face-match-hero.png'
 import ageVerificationHero from '../../assets/images/age-verification-hero.png'
 import clientOnboardingHero from '../../assets/images/client-onboarding-hero.png'
 import governmentSolutionsHero from '../../assets/images/government-solutions-hero.png'
@@ -19,6 +20,7 @@ const HERO_ASSETS: Record<string, { src: string; type: 'image' | 'video' }> = {
   '/platform/nfc-identity-scan': { src: nfcIdentityScanHero, type: 'image' },
   '/platform/id-verification': { src: idVerificationHero, type: 'image' },
   '/platform/document-intelligence': { src: documentIntelligenceHero, type: 'image' },
+  '/platform/face-match': { src: faceMatchHero, type: 'image' },
   '/solutions/age-compliance': { src: ageVerificationHero, type: 'image' },
   '/solutions/client-onboarding': { src: clientOnboardingHero, type: 'image' },
   '/government/': { src: governmentSolutionsHero, type: 'image' },

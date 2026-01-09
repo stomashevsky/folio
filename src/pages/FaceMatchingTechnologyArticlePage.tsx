@@ -1,4 +1,4 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, ArticleSectionCTA } from '../components/ui'
 import blogFaceMatchingVerification from '../assets/images/blog-face-matching-verification.png'
 import { useTranslation, Trans } from 'react-i18next'
 
@@ -89,6 +89,13 @@ export default function FaceMatchingTechnologyArticlePage() {
       <ArticleParagraph>
         {t('articles:face-matching-technology.p15')}
       </ArticleParagraph>
+
+      <ArticleSectionCTA
+        to="/platform/face-match"
+        titleKey="faceMatch.hero.title"
+        descriptionKey="faceMatch.hero.description"
+        namespace="platform"
+      />
     </BlogArticleLayout>
   )
 }
