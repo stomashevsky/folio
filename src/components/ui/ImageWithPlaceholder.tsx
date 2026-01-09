@@ -44,6 +44,7 @@ export default function ImageWithPlaceholder({
   placeholderColor = '#f5f5f5',
   placeholderRounded = 'rounded-2xl',
   animateOnMount = false,
+  loading = 'lazy',
   ...props
 }: ImageWithPlaceholderProps) {
   const [isLoading, setIsLoading] = useState(true)
@@ -87,6 +88,7 @@ export default function ImageWithPlaceholder({
         ref={imgRef}
         src={src}
         alt={alt}
+        loading={loading}
         className={`${className} ${animationClass}`}
         onLoad={() => setIsLoading(false)}
         onError={() => setIsLoading(false)}

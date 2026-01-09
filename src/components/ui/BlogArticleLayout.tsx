@@ -140,7 +140,7 @@ export default function BlogArticleLayout({
               },
               author: {
                 '@type': 'Organization',
-                name: 'Folio',
+                name: 'Folio Team',
                 url: 'https://folio.id',
               },
               publisher: {

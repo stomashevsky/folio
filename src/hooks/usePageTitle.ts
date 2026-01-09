@@ -32,6 +32,8 @@ export function usePageTitle({
 }: UsePageTitleOptions) {
   useEffect(() => {
     // Store previous values for restoration
+    const htmlElement = document.documentElement
+    const previousLang = htmlElement.getAttribute('lang') || DEFAULT_LANGUAGE
     const previousTitle = document.title
     const previousDescription = document.querySelector('meta[name="description"]')?.getAttribute('content') || null
     const previousCanonical = document.querySelector('link[rel="canonical"]')?.getAttribute('href') || null
@@ -58,6 +60,21 @@ export function usePageTitle({
 
     // Update title
     document.title = title
+
+    // Update HTML lang attribute based on current language
+    // Use same logic as hreflang tags to determine current language
+    let currentPath = window.location.pathname
+    if (currentPath.startsWith('/folio/')) {
+      currentPath = currentPath.slice(6) // Remove '/folio' prefix, keep leading slash
+    } else if (currentPath === '/folio') {
+      currentPath = '/'
+    }
+
+    const pathParts = currentPath.split('/').filter(Boolean)
+    const firstPart = pathParts[0]
+    const hasLangPrefix = SUPPORTED_LANGUAGES.includes(firstPart as typeof SUPPORTED_LANGUAGES[number])
+    const currentLang = hasLangPrefix ? firstPart : DEFAULT_LANGUAGE
+    htmlElement.setAttribute('lang', currentLang)
 
     // Update meta description if provided
     if (description) {
@@ -237,6 +254,10 @@ export function usePageTitle({
 
     // Cleanup function: restore previous values and remove created elements
     return () => {
+      // Restore previous lang attribute
+      if (previousLang) {
+        htmlElement.setAttribute('lang', previousLang)
+      }
       // Restore previous title
       document.title = previousTitle
 

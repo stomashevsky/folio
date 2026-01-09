@@ -68,6 +68,7 @@ export default function ArticleImage({ src, alt, className = '' }: ArticleImageP
           ref={imgRef}
           src={src}
           alt={alt}
+          loading="lazy"
           className={`absolute inset-0 w-full h-full object-cover rounded-xl transition-opacity duration-200 ${isLoading ? 'opacity-0' : 'opacity-100'} ${className}`}
           onLoad={() => setIsLoading(false)}
           onError={() => setIsLoading(false)}
