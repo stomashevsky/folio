@@ -19,7 +19,7 @@
     },
     "terms": {
         "intro": "Thank you for using Folio Wallet. These Terms of Use govern your access to and use of the Folio mobile application, related online services, and any documentation we provide (collectively, our \"Services\"). By accessing or using our Services, you agree to be bound by these terms. If you do not agree, please do not use Folio.",
-        "intro_privacy_link": "Our <0>Privacy Policy</0> explains how we collect, use, and protect your personal data. Please read it alongside these terms.",
+        "intro_privacy_link": "Our <PrivacyLink>Privacy Policy</PrivacyLink> explains how we collect, use, and protect your personal data. Please read it alongside these terms.",
         "who_we_are": {
             "title": "Who we are",
             "content": "Folio Technologies Limited is a company registered in England and Wales (Company Number 07236594). Our registered office is at 88 Baker Street, London W1U 6TQ, United Kingdom. References to \"Folio,\" \"we,\" \"us,\" or \"our\" mean Folio Technologies Limited."
@@ -97,7 +97,7 @@
         },
         "contact": {
             "title": "Contact us",
-            "p1": "If you have questions about these terms or need support, please email us at <0>support@folio.id</0>. For privacy-related inquiries, contact <1>privacy@folio.id</1>."
+            "p1": "If you have questions about these terms or need support, please email us at <SupportEmail>support@folio.id</SupportEmail>. For privacy-related inquiries, contact <PrivacyEmail>privacy@folio.id</PrivacyEmail>."
         }
     },
     "privacy_page": {
@@ -105,7 +105,7 @@
         "commitment": "<strong>Our commitment:</strong> We operate on a zero-knowledge architecture. Your personal documents are encrypted in your wallet, and we cannot access or view your private information. We will never share your personal data with third parties without your explicit consent.",
         "who_we_are": {
             "title": "Who we are",
-            "p1": "Folio Technologies Limited is a company registered in England and Wales (Company Number 07236594). Our registered office is at 88 Baker Street, London W1U 6TQ, United Kingdom. We are the data controller for personal information collected through the Folio app. For privacy questions, contact our data privacy manager at <0>privacy@folio.id</0>."
+            "p1": "Folio Technologies Limited is a company registered in England and Wales (Company Number 07236594). Our registered office is at 88 Baker Street, London W1U 6TQ, United Kingdom. We are the data controller for personal information collected through the Folio app. For privacy questions, contact our data privacy manager at <PrivacyEmail>privacy@folio.id</PrivacyEmail>."
         },
         "collect": {
             "title": "Personal information we collect",
@@ -179,7 +179,7 @@
                 "item6": "Objection: object to processing based on legitimate interests",
                 "item7": "Withdraw consent: withdraw consent at any time where we rely on it for processing"
             },
-            "p2": "To exercise any of these rights, email us at <0>privacy@folio.id</0>. We will respond within one month. We generally do not charge a fee, but we may charge a reasonable fee for manifestly unfounded or excessive requests."
+            "p2": "To exercise any of these rights, email us at <PrivacyEmail>privacy@folio.id</PrivacyEmail>. We will respond within one month. We generally do not charge a fee, but we may charge a reasonable fee for manifestly unfounded or excessive requests."
         },
         "cookies": {
             "title": "Cookies and similar technologies",
@@ -194,7 +194,7 @@
         },
         "children": {
             "title": "Children's privacy",
-            "p1": "Folio is not intended for children under 16 years of age. We do not knowingly collect personal information from children. If you believe we have inadvertently collected data from a child, please contact us immediately at <0>privacy@folio.id</0>, and we will take steps to delete such information."
+            "p1": "Folio is not intended for children under 16 years of age. We do not knowingly collect personal information from children. If you believe we have inadvertently collected data from a child, please contact us immediately at <PrivacyEmail>privacy@folio.id</PrivacyEmail>, and we will take steps to delete such information."
         },
         "changes": {
             "title": "Changes to this policy",
@@ -202,7 +202,7 @@
         },
         "contact": {
             "title": "Contact us",
-            "p1": "If you have questions about this Privacy Policy or how we handle your personal data, please contact our data privacy manager at <0>privacy@folio.id</0>. You also have the right to lodge a complaint with the UK Information Commissioner's Office (ICO) at <1>ico.org.uk</1> if you are dissatisfied with how we have handled your personal data."
+            "p1": "If you have questions about this Privacy Policy or how we handle your personal data, please contact our data privacy manager at <PrivacyEmail>privacy@folio.id</PrivacyEmail>. You also have the right to lodge a complaint with the UK Information Commissioner's Office (ICO) at <IcoLink>ico.org.uk</IcoLink> if you are dissatisfied with how we have handled your personal data."
         }
     },
     "access-your-digital-wallet-anywhere": {
@@ -401,14 +401,14 @@
         "h2_2": "The best apps for gift card storage",
         "p5": "<strong>Folio</strong> treats gift cards as first-class citizens. Add a card by tapping the + icon, selecting Any Document, then scanning with your camera, choosing an existing photo, importing a PDF, or entering details manually. Once added, you can set expiration dates and get reminders before the deadline approaches. Everything is encrypted end-to-end and protected with passkeys and biometric authentication.",
         "img_alt": "Folio app showing Amazon gift card with barcode, hidden code, $100 balance, and options to share or organize with labels",
-        "p6": "What sets Folio apart is organization. Gift cards sit alongside your other important items: payment cards, IDs, insurance documents, event tickets. You can create folders to group cards by store or occasion. When you're at Target, you see your Target gift card immediately, not buried under Starbucks and Amazon cards you won't use today. Shared folders let you give family members access to household gift cards without texting screenshots back and forth. Available free on iOS and Android.",
+        "p6": "What sets Folio apart is organization. Gift cards sit alongside your other important items: payment cards, IDs, insurance documents, event tickets. You can create folders to group cards by store or occasion. When you're at Target, you see your Target gift card immediately, not buried under Starbucks and Amazon cards you won't use today. Shared folders let you give family members access to household gift cards without texting screenshots back and forth. <LocalizedLink>Available free on iOS and Android.</LocalizedLink>",
         "p7": "<strong>Stocard</strong> started as a loyalty card app but handles gift cards too. The interface is clean, scanning works well, and most major retailers are recognized automatically. The downside: Stocard focuses heavily on loyalty programs and shopping offers, so the experience is cluttered if you just want simple gift card storage. There's also no expiration reminder feature, which defeats the main purpose of tracking gift cards digitally.",
         "p8": "<strong>Apple Wallet</strong> accepts gift cards from participating retailers, but the list is limited. If the store has issued a proper .pkpass file, you can add it. If not, you're out of luck. There's no way to manually enter a gift card number or scan a physical card. For iPhone users who happen to receive compatible digital gift cards, it works seamlessly. For everyone else, it's not a complete solution.",
         "p9": "<strong>Google Wallet</strong> has similar limitations. It stores gift cards from supported retailers and integrates with Google Pay for easy checkout. The experience is smooth when it works, but coverage is inconsistent. Many smaller retailers and restaurant chains aren't supported, leaving gaps in your collection.",
         "p10": "<strong>Gyft</strong> takes a different approach: it's primarily a gift card marketplace where you buy, send, and store cards. If you frequently purchase digital gift cards, Gyft keeps them organized and ready to use. The app also offers deals and cashback on certain purchases. The limitation is that Gyft works best with cards bought through its platform. Adding existing physical gift cards is possible but not the app's strength.",
         "h2_3": "Making the most of your gift cards",
-        "p11": "Whichever app you choose, a few habits help. Add gift cards immediately when you receive them, not \"later\" when you'll forget. Set expiration reminders if your app supports them, or add calendar events if it doesn't. Check your collection before shopping trips, especially for stores you don't visit often. That $25 Barnes & Noble card from your birthday might be the push you need to finally buy that book.",
-        "p12": "For most people, Folio offers the best combination of easy entry, expiration tracking, and organization. It's designed for people who want all their important cards and documents in one secure place, not just gift cards. If you're already using Apple Wallet or Google Wallet for payments and just need gift card support, Stocard or Gyft can fill the gap. The worst option is no app at all, leaving gift cards to expire forgotten in a drawer."
+        "p12": "Whichever app you choose, a few habits help. Add gift cards immediately when you receive them, not \"later\" when you'll forget. Set expiration reminders if your app supports them, or add calendar events if it doesn't. Check your collection before shopping trips, especially for stores you don't visit often. That $25 Barnes & Noble card from your birthday might be the push you need to finally buy that book.",
+        "p11": "For most people, Folio offers the best combination of easy entry, expiration tracking, and organization. It's designed for people who want all their important cards and documents in one secure place, not just gift cards. If you're already using Apple Wallet or Google Wallet for payments and just need gift card support, Stocard or Gyft can fill the gap. <LocalizedLink>Available free on iOS and Android.</LocalizedLink>"
     },
     "best-google-wallet-alternatives": {
         "title": "The best Google Wallet alternatives to install in 2025",
@@ -544,7 +544,7 @@
         "h2_9": "Test before you commit",
         "p18": "The best way to choose is to test. Try the platforms with real documents from your target markets. Check how they handle edge cases: expired documents, poor lighting, unusual ID formats. See how the API documentation reads. Talk to their support.",
         "p19": "Identity verification is not something you want to switch frequently. Take time to test properly, but do not let the evaluation drag on. A platform that lets you start testing quickly is often a platform that lets you integrate quickly too.",
-        "p20": "If you want to see how Folio works from the user side, download the free app and try storing your own documents. It takes two minutes and shows you what your users will experience."
+        "p20": "If you want to see how Folio works from the user side, <LocalizedLink>download the free app</LocalizedLink> and try storing your own documents. It takes two minutes and shows you what your users will experience."
     },
     "biometric-data-privacy": {
         "title": "What happens to your face data after identity verification",
@@ -654,7 +654,7 @@
         "p18": "<strong>High risk (financial services, gambling):</strong> Full verification with liveness detection, potentially NFC reading. Add database checks against sanctions lists. Higher friction, but regulatory requirements demand it.",
         "p19": "The key is proportionality. Do not ask for NFC passport scans to create a social media account. Do not skip liveness detection when opening bank accounts.",
         "h2_5": "The compliance landscape",
-        "p20": "<strong><LocalizedLink>KYC (Know Your Customer)</LocalizedLink>:</strong> Financial services must verify customer identities before providing services. The specifics vary by country, but the principle is universal: know who you are dealing with.",
+        "p20": "<strong><LocalizedLink1>KYC (Know Your Customer)</LocalizedLink1>:</strong> Financial services must verify customer identities before providing services. The specifics vary by country, but the principle is universal: know who you are dealing with.",
         "p21": "<strong>AML (Anti-Money Laundering):</strong> Goes beyond initial verification. Requires ongoing monitoring, transaction screening, and suspicious activity reporting. Applies to banks, crypto exchanges, and increasingly to other financial services.",
         "p22": "<strong>Age verification:</strong> Gambling, alcohol delivery, and adult content all require confirming users meet minimum age requirements. Different jurisdictions have different standards for what counts as sufficient proof.",
         "p23": "<strong>GDPR and privacy:</strong> Verification involves processing sensitive personal data, including biometric data. You need a legal basis for processing, clear privacy notices, and appropriate security measures. Data minimization matters: do not collect more than you need.",
@@ -671,7 +671,7 @@
         "li_10": "<strong>Remember them:</strong> Do not make verified users re-verify unnecessarily.",
         "p28": "Identity verification is a balance. Too little security creates fraud risk. Too much friction drives users away. The right approach matches your risk level, meets your compliance requirements, and respects your users' time.",
         "p29": "Start with your requirements. Test with real users and real documents. Measure pass rates and drop-off points. Iterate until verification feels like a natural part of your user experience, not an obstacle to overcome.",
-        "p30": "Want to see what good verification feels like from the user side? <LocalizedLink>Try Folio</LocalizedLink> and store your own documents. It shows you what a smooth verification experience looks like."
+        "p30": "Want to see what good verification feels like from the user side? <LocalizedLink2>Try Folio</LocalizedLink2> and store your own documents. It shows you what a smooth verification experience looks like."
     },
     "digital-credentials-government": {
         "title": "How governments are replacing paper documents with digital credentials",
@@ -705,7 +705,7 @@
         "h2_5": "What comes next",
         "p22": "The direction is clear. The EU is requiring all member states to offer digital identity wallets by 2026. Countries across the world are piloting digital credentials for specific use cases. Citizens increasingly expect digital-first government services, especially after the pandemic accelerated digital adoption.",
         "p23": "Folio works with governments to make this transition happen. Our platform handles the full credential lifecycle: secure issuance, citizen-controlled storage, and instant verification. The Albania voter registration is one example. The technology applies equally to benefits distribution, professional licensing, travel documents, and any other credential a government issues.",
-        "p24": "The transformation won't happen overnight, but it's happening. Paper documents served us for centuries. Digital credentials will serve us better. Learn more about <LocalizedLink>Folio's solutions for government</LocalizedLink>."
+        "p24": "The transformation won't happen overnight, but it's happening. Paper documents served us for centuries. Digital credentials will serve us better. Learn more about <LocalizedLink1>Folio's solutions for government</LocalizedLink1>."
     },
     "digital-passport-copies": {
         "title": "Why you need a digital copy of your passport",
@@ -793,7 +793,7 @@
         "h2_2": "The hacks that don't work",
         "p12": "<strong>Hidden city ticketing.</strong> The idea: book a cheaper flight with a connection in your actual destination, then skip the final leg. The reality: airlines actively detect this. They'll cancel your return flight, revoke loyalty miles, and potentially ban you. Lufthansa sued a passenger over this. It's not worth the risk.",
         "p13": "<strong>Incognito mode for cheaper flights.</strong> The theory: airlines track your searches and raise prices when you show interest. The reality: multiple studies have tested this, and prices are the same in incognito mode. Airlines use dynamic pricing based on demand, not your individual browsing history. This hack wastes your time.",
-        "p14": "<strong>VPN to book from \"cheaper\" countries.</strong> The idea: prices vary by country, so use a VPN to appear in a cheaper market. The reality: your payment card reveals your actual location. Airlines often reject mismatched locations. When it does work, the savings are usually minimal and not worth the risk of booking issues or fraud flags on your card.",
+        "p14": "<strong>VPN to book from \"cheaper\" countries.\"</strong> The idea: prices vary by country, so use a VPN to appear in a cheaper market. The reality: your payment card reveals your actual location. Airlines often reject mismatched locations. When it does work, the savings are usually minimal and not worth the risk of booking issues or fraud flags on your card.",
         "p15": "The best travel hacks aren't clever tricks. They're boring fundamentals: book early, stay flexible, back up your documents, travel in shoulder season. The flashy hacks that promise free upgrades and secret discounts usually don't work. The simple ones that save 30 minutes at the airport and €100 on hotels? Those actually do."
     },
     "document-intelligence": {
@@ -896,7 +896,7 @@
         "h2_5": "Why this matters beyond Europe",
         "p17": "The EUDI Wallet is built on international standards that work globally. While the legal requirement only applies to EU countries, the technology can interoperate with similar systems elsewhere. As more countries develop digital identity systems, credentials could eventually work across continents.",
         "p18": "This also sets expectations. Once 450 million EU residents have digital wallets that share only necessary information, they'll expect the same experience everywhere. Businesses outside the EU will face pressure to adopt similar privacy-respecting verification.",
-        "p19": "Folio is building for this future. Our platform works with the credential formats and verification protocols that EUDI Wallet uses, so businesses can accept these credentials alongside traditional verification methods. You can see how verifiable credentials work in our <0>interactive playground</0>, which lets you issue and verify credentials yourself.",
+        "p19": "Folio is preparing for this future. Our platform supports the credential formats and verification protocols used by the EUDI Wallet, so businesses can accept these credentials alongside traditional verification methods. You can see how verifiable credentials work in our <LocalizedLink>interactive playground</LocalizedLink>, which lets you issue and verify credentials yourself.",
         "p20": "The shift to user-controlled digital identity is coming. The EUDI Wallet puts Europe at the forefront, but the implications extend far beyond. How we prove who we are online is about to fundamentally change, and for once, the change puts users in control."
     },
     "face-matching-technology": {

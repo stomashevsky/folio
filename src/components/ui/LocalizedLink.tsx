@@ -15,35 +15,35 @@ interface LocalizedLinkProps extends Omit<LinkProps, 'to'> {
 export default function LocalizedLink({ to, children, onClick, ...props }: LocalizedLinkProps) {
   const { getLocalizedPath } = useLocalizedPath()
   const navigate = useNavigate()
-  
+
   // Extract hash if present
   const hashIndex = to.indexOf('#')
   const hash = hashIndex !== -1 ? to.slice(hashIndex) : ''
   const pathWithoutHash = hashIndex !== -1 ? to.slice(0, hashIndex) : to
-  
+
   // Get localized path without hash
   let localizedPath = getLocalizedPath(pathWithoutHash)
   // Remove trailing slash if hash exists, then add hash
   // React Router expects format like "/en/wallet/#get-the-app" not "/en/wallet//#get-the-app"
   const finalPath = hash ? `${localizedPath.replace(/\/$/, '')}${hash}` : localizedPath
-  
+
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
     // If there's a hash, handle navigation and positioning
     if (hash) {
       const targetId = hash.slice(1) // Remove #
       const currentPath = window.location.pathname
       const targetPath = localizedPath.replace(/\/$/, '') // Remove trailing slash for comparison
-      
+
       // Check if we're navigating to the same page or different page
       if (currentPath === targetPath || currentPath === `${targetPath}/`) {
-        // Same page, just position to section
+        // Same page, just position to section with smooth scroll
         e.preventDefault()
-        scrollToSection(targetId)
+        scrollToSection(targetId, true)
         // Multiple attempts to ensure positioning works
         requestAnimationFrame(() => {
-          scrollToSection(targetId)
-          setTimeout(() => scrollToSection(targetId), 100)
-          setTimeout(() => scrollToSection(targetId), 300)
+          scrollToSection(targetId, true)
+          setTimeout(() => scrollToSection(targetId, true), 100)
+          setTimeout(() => scrollToSection(targetId, true), 300)
         })
       } else {
         // Different page, navigate without hash, then position
@@ -61,17 +61,16 @@ export default function LocalizedLink({ to, children, onClick, ...props }: Local
         })
       }
     }
-    
+
     // Call original onClick if provided
     if (onClick) {
       onClick(e)
     }
   }
-  
+
   return (
     <Link to={finalPath} onClick={handleClick} {...props}>
       {children}
     </Link>
   )
 }
-

@@ -165,7 +165,7 @@ export default function BestIdentityVerificationPlatformsArticlePage() {
       <ArticleH2>{t('best-identity-verification-platforms.h2_7')}</ArticleH2>
 
       <ArticleParagraph>
-        {t('best-identity-verification-platforms.p15')}
+        <Trans i18nKey="articles:best-identity-verification-platforms.p15" components={{ strong: <strong /> }} />
       </ArticleParagraph>
 
       <ArticleParagraph>
@@ -197,7 +197,10 @@ export default function BestIdentityVerificationPlatformsArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        {t('best-identity-verification-platforms.p20')}
+        <Trans
+          i18nKey="articles:best-identity-verification-platforms.p20"
+          components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
+        />
       </ArticleParagraph>
     </BlogArticleLayout>
   );

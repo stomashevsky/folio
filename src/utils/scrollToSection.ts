@@ -2,7 +2,7 @@
  * Utility for positioning to a page section instantly without animation
  * Guarantees scroll unlock and positions to the target section instantly
  */
-export function scrollToSection(sectionId: string) {
+export function scrollToSection(sectionId: string, smooth: boolean = false) {
   // Remove # if present
   const id = sectionId.startsWith('#') ? sectionId.slice(1) : sectionId
 
@@ -11,30 +11,32 @@ export function scrollToSection(sectionId: string) {
   document.body.style.paddingRight = ''
   document.documentElement.style.overflow = ''
   document.documentElement.style.paddingRight = ''
-  
+
   // Also remove overflow from all possible parents
   const root = document.getElementById('root')
   if (root) {
     root.style.overflow = ''
   }
-  
-  // Temporarily disable smooth scrolling from CSS
+
+  // Temporarily disable smooth scrolling from CSS if we want instant positioning
   const html = document.documentElement
   const originalScrollBehavior = html.style.scrollBehavior || ''
-  html.style.scrollBehavior = 'auto'
-  
+  if (!smooth) {
+    html.style.scrollBehavior = 'auto'
+  }
+
   // Position function - instant positioning without animation
   const performPosition = () => {
     const element = document.getElementById(id)
     if (!element) {
       return false
     }
-    
+
     // Calculate element position relative to document
     const elementRect = element.getBoundingClientRect()
     const currentScrollY = window.pageYOffset || document.documentElement.scrollTop || window.scrollY
     const elementTop = elementRect.top + currentScrollY
-    
+
     // Calculate navbar offset dynamically
     const navbar = document.querySelector('[class*="fixed"][class*="z-[70]"]') as HTMLElement
     let navbarOffset = 80 // Base offset including padding
@@ -42,17 +44,17 @@ export function scrollToSection(sectionId: string) {
       const navbarRect = navbar.getBoundingClientRect()
       navbarOffset = navbarRect.height + 16 // Navbar height + padding
     }
-    
+
     // Calculate final scroll position
     const scrollPosition = Math.max(0, elementTop - navbarOffset)
-    
-    // Instantly position window without any animation
+
+    // Instantly position window
     window.scrollTo({
       top: scrollPosition,
       left: 0,
-      behavior: 'auto'
+      behavior: smooth ? 'smooth' : 'auto'
     })
-    
+
     // Verify and correct position after a frame if needed
     requestAnimationFrame(() => {
       const elementAfter = document.getElementById(id)
@@ -72,13 +74,15 @@ export function scrollToSection(sectionId: string) {
           })
         }
       }
-      // Restore original scroll behavior
-      html.style.scrollBehavior = originalScrollBehavior
+      // Restore original scroll behavior if we changed it
+      if (!smooth) {
+        html.style.scrollBehavior = originalScrollBehavior
+      }
     })
-    
+
     return true
   }
-  
+
   // Try to find and position immediately
   if (performPosition()) {
     return
@@ -90,7 +94,7 @@ export function scrollToSection(sectionId: string) {
       // If still not found, wait and try multiple times
       const retryAttempts = [100, 200, 400, 600, 800, 1000, 1500]
       let attemptIndex = 0
-      
+
       const retry = () => {
         if (attemptIndex < retryAttempts.length) {
           setTimeout(() => {
@@ -103,10 +107,12 @@ export function scrollToSection(sectionId: string) {
           }, retryAttempts[attemptIndex])
         } else {
           // Restore original scroll behavior even if failed
-          html.style.scrollBehavior = originalScrollBehavior
+          if (!smooth) {
+            html.style.scrollBehavior = originalScrollBehavior
+          }
         }
       }
-      
+
       retry()
     }
   })
