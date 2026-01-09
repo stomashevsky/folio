@@ -105,7 +105,7 @@ export default function EudiWalletArticlePage() {
       </ArticleParagraph>
 
       <ArticleSectionCTA
-        to="/government/playground"
+        to="/government/"
         titleKey="government.hero.tagline"
         descriptionKey="government.hero.description"
         namespace="government"

@@ -10,10 +10,10 @@ export default function ArticleAppCTA() {
   
   return (
     <div className="flex flex-col gap-3 items-center py-6 px-4 my-6 rounded-2xl bg-[#f5f5f5] w-full">
-      <p className="font-bold text-base text-[#0a0a0a]">
+      <p className="font-bold text-lg text-[#0a0a0a]">
         {t('getTheApp.articleCta.title')}
       </p>
-      <p className="font-normal text-sm text-[#737373] opacity-80">
+      <p className="font-normal text-base text-[#737373] opacity-80">
         {t('getTheApp.articleCta.subtitle')}
       </p>
       <div className="flex flex-wrap gap-3 items-center justify-center mt-2">
