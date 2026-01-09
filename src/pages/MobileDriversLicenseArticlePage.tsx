@@ -1,11 +1,9 @@
 import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
 import { LocalizedLink } from '../components/ui'
 import mdlScreenImage from '../assets/images/blog-mdl-folio-screen.png'
-import { useLocalizedPath } from '../i18n/useLocalizedPath'
 import { useTranslation, Trans } from 'react-i18next'
 
 export default function MobileDriversLicenseArticlePage() {
-  const { getLocalizedPath } = useLocalizedPath()
   const { t } = useTranslation('articles')
 
   return (
@@ -112,7 +110,7 @@ export default function MobileDriversLicenseArticlePage() {
           ns="articles"
           i18nKey="mobile-drivers-license.p20"
           components={{
-            LocalizedLink: <LocalizedLink to={getLocalizedPath('/government/playground')} className="underline hover:text-[#737373] transition-colors" />
+            LocalizedLink: <LocalizedLink to="/government/playground" className="underline hover:text-[#737373] transition-colors" />
           }}
         />
       </ArticleParagraph>

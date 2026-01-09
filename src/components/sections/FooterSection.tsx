@@ -5,12 +5,12 @@ import { Logo, LanguageSwitcher } from '../ui'
 
 export default function FooterSection() {
   const { t } = useTranslation('common')
-  
+
   return (
     <footer className="bg-white flex flex-col items-center relative shrink-0 w-full">
       {/* Top separator - edge to edge */}
       <div className="w-full h-px bg-[#e5e5e5]" />
-      
+
       <div className="flex flex-col items-center max-w-[1280px] relative shrink-0 w-full">
 
         {/* Main content grid */}
@@ -64,7 +64,7 @@ export default function FooterSection() {
               </p>
               <div className="flex flex-col gap-3 items-start w-full">
                 <FooterLink
-                  href="https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717"
+                  href="https://apps.apple.com/app/folio-digital-wallet-app/id1266382717"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -139,12 +139,12 @@ export default function FooterSection() {
             <SocialIcon name="facebook" href="https://www.facebook.com/foliowalletapp" />
             <SocialIcon name="linkedin" href="https://www.linkedin.com/company/folioltd/" />
           </div>
-          
+
           {/* Copyright - center */}
           <p className="font-normal leading-5 text-[#737373] text-sm text-center order-3 md:order-2">
             {t('footer.copyright')}
           </p>
-          
+
           {/* Language switcher - right on desktop, centered on mobile */}
           <div className="flex justify-center md:justify-end order-1 md:order-3">
             <LanguageSwitcher />

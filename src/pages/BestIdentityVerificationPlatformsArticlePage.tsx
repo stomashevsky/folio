@@ -114,10 +114,7 @@ export default function BestIdentityVerificationPlatformsArticlePage() {
       <ArticleH2>{t('best-identity-verification-platforms.h2_3')}</ArticleH2>
 
       <ArticleParagraph>
-        <Trans
-          i18nKey="articles:best-identity-verification-platforms.p5"
-          components={{ LocalizedLink: <LocalizedLink to="/platform/id-verification" className="underline hover:text-[#737373] transition-colors" /> }}
-        />
+        {t('best-identity-verification-platforms.p5')}
       </ArticleParagraph>
 
       <ArticleParagraph>
@@ -168,10 +165,7 @@ export default function BestIdentityVerificationPlatformsArticlePage() {
       <ArticleH2>{t('best-identity-verification-platforms.h2_7')}</ArticleH2>
 
       <ArticleParagraph>
-        <Trans
-          i18nKey="articles:best-identity-verification-platforms.p15"
-          components={{ LocalizedLink: <LocalizedLink to="/platform/kyc" className="underline hover:text-[#737373] transition-colors" /> }}
-        />
+        {t('best-identity-verification-platforms.p15')}
       </ArticleParagraph>
 
       <ArticleParagraph>

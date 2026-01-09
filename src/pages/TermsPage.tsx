@@ -19,9 +19,9 @@ export default function TermsPage() {
       <ArticleParagraph>
         <Trans
           i18nKey="articles:terms.intro_privacy_link"
-          components={[
-            <LocalizedLink to="/privacy" className="underline hover:text-[#737373] transition-colors" />
-          ]}
+          components={{
+            PrivacyLink: <LocalizedLink to="/privacy" className="underline hover:text-[#737373] transition-colors" />
+          }}
         />
       </ArticleParagraph>
 
@@ -152,10 +152,10 @@ export default function TermsPage() {
       <ArticleParagraph>
         <Trans
           i18nKey="articles:terms.contact.p1"
-          components={[
-            <a href="mailto:support@folio.id" className="underline hover:text-[#737373] transition-colors" />,
-            <a href="mailto:privacy@folio.id" className="underline hover:text-[#737373] transition-colors" />
-          ]}
+          components={{
+            SupportEmail: <a href="mailto:support@folio.id" className="underline hover:text-[#737373] transition-colors" />,
+            PrivacyEmail: <a href="mailto:privacy@folio.id" className="underline hover:text-[#737373] transition-colors" />
+          }}
         />
       </ArticleParagraph>
     </LegalPageLayout>

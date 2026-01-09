@@ -82,7 +82,7 @@ export default function CompleteGuideIdentityVerificationArticlePage() {
           ns="articles"
           components={{
             strong: <strong />,
-            LocalizedLink: <LocalizedLink to="/platform/kyc" className="underline hover:text-[#737373] transition-colors" />
+            LocalizedLink: <LocalizedLink to="/platform/id-verification" className="underline hover:text-[#737373] transition-colors" />
           }}
         />
       </ArticleParagraph>
@@ -101,10 +101,7 @@ export default function CompleteGuideIdentityVerificationArticlePage() {
         <Trans
           i18nKey={`${slug}.p24`}
           ns="articles"
-          components={{
-            strong: <strong />,
-            LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" />
-          }}
+          components={{ strong: <strong /> }}
         />
       </ArticleParagraph>
       <ArticleParagraph>

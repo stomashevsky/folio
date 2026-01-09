@@ -10,7 +10,7 @@ import qrCodeGooglePlay from '../../assets/images/qr-code-google-play.png'
 type Store = 'ios' | 'android'
 
 const STORE_URLS: Record<Store, string> = {
-  ios: 'https://apps.apple.com/us/app/folio-digital-wallet-app/id1266382717',
+  ios: 'https://apps.apple.com/app/folio-digital-wallet-app/id1266382717',
   android: 'https://play.google.com/store/apps/details?id=com.folioltd',
 }
 

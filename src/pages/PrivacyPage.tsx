@@ -27,9 +27,9 @@ export default function PrivacyPage() {
       <ArticleParagraph>
         <Trans
           i18nKey="articles:privacy_page.who_we_are.p1"
-          components={[
-            <a href="mailto:privacy@folio.id" className="underline hover:text-[#737373] transition-colors" />
-          ]}
+          components={{
+            PrivacyEmail: <a href="mailto:privacy@folio.id" className="underline hover:text-[#737373] transition-colors" />
+          }}
         />
       </ArticleParagraph>
 
@@ -140,9 +140,9 @@ export default function PrivacyPage() {
       <ArticleParagraph>
         <Trans
           i18nKey="articles:privacy_page.rights.p2"
-          components={[
-            <a href="mailto:privacy@folio.id" className="underline hover:text-[#737373] transition-colors" />
-          ]}
+          components={{
+            PrivacyEmail: <a href="mailto:privacy@folio.id" className="underline hover:text-[#737373] transition-colors" />
+          }}
         />
       </ArticleParagraph>
 
@@ -171,9 +171,9 @@ export default function PrivacyPage() {
       <ArticleParagraph>
         <Trans
           i18nKey="articles:privacy_page.children.p1"
-          components={[
-            <a href="mailto:privacy@folio.id" className="underline hover:text-[#737373] transition-colors" />
-          ]}
+          components={{
+            PrivacyEmail: <a href="mailto:privacy@folio.id" className="underline hover:text-[#737373] transition-colors" />
+          }}
         />
       </ArticleParagraph>
 
@@ -188,10 +188,10 @@ export default function PrivacyPage() {
       <ArticleParagraph>
         <Trans
           i18nKey="articles:privacy_page.contact.p1"
-          components={[
-            <a href="mailto:privacy@folio.id" className="underline hover:text-[#737373] transition-colors" />,
-            <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#737373] transition-colors" />
-          ]}
+          components={{
+            PrivacyEmail: <a href="mailto:privacy@folio.id" className="underline hover:text-[#737373] transition-colors" />,
+            IcoLink: <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#737373] transition-colors" />
+          }}
         />
       </ArticleParagraph>
     </LegalPageLayout>
