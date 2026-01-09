@@ -311,6 +311,123 @@
       ]
     }
   },
+  "giftCardApp": {
+    "meta": {
+      "title": "Gift card app - Digital gift card wallet | Folio",
+      "description": "Folio gift card app allows you to easily manage gift cards and store cards. Keep everything safe with end-to-end encryption. Available on iOS and Android.",
+      "ogTitle": "Gift card app | Folio",
+      "ogDescription": "Store all your gift cards in one secure digital wallet. Works on iPhone and Android."
+    },
+    "hero": {
+      "tagline": "Gift cards",
+      "title": "Gift card app",
+      "description": "Keep all your gift cards organized in one secure digital wallet. No more digging through your wallet or losing track of balances. Folio works with any store and keeps your cards ready when you need them.",
+      "getApp": "Get the app",
+      "learnMore": "Learn more",
+      "imageAlt": "Gift card app preview"
+    },
+    "features": {
+      "title": "All your gift cards in one place",
+      "description": "Stop juggling multiple gift cards. Folio keeps everything organized and secure.",
+      "anyStore": {
+        "title": "Any store or brand",
+        "description": "Works with retail stores, restaurants, online shops, entertainment venues, and any other gift card."
+      },
+      "quickScan": {
+        "title": "Quick scan to add",
+        "description": "Scan your card's barcode or enter the code manually. Folio captures all the details instantly."
+      },
+      "organized": {
+        "title": "Organized by category",
+        "description": "Group your cards by type or create custom labels to find them quickly."
+      },
+      "secure": {
+        "title": "Secure and private",
+        "description": "Your gift card data is encrypted. Not even Folio can see your information."
+      }
+    },
+    "cardTypes": {
+      "title": "Works with all your cards",
+      "description": "Folio supports any gift card with a barcode, QR code, or redemption code.",
+      "retail": {
+        "title": "Retail stores",
+        "description": "Department stores, clothing shops, home goods, and specialty retailers."
+      },
+      "restaurants": {
+        "title": "Restaurants",
+        "description": "Chain restaurants, cafes, fast food, and dining establishments."
+      },
+      "online": {
+        "title": "Online shops",
+        "description": "E-commerce platforms, digital services, and subscription gift cards."
+      },
+      "entertainment": {
+        "title": "Entertainment",
+        "description": "Movie theaters, streaming services, gaming platforms, and experience gifts."
+      }
+    },
+    "howItWorks": {
+      "title": "How to use Folio for gift cards",
+      "description": "Adding and using your gift cards is quick and easy.",
+      "step1": {
+        "title": "Scan or add your card",
+        "description": "Point your camera at any gift card to capture the barcode, or enter the code manually."
+      },
+      "step2": {
+        "title": "Organize",
+        "description": "Add labels or let Folio automatically categorize your cards by store type."
+      },
+      "step3": {
+        "title": "Use at checkout",
+        "description": "Open the card in Folio and let the cashier scan your screen, or enter the code when shopping online."
+      }
+    },
+    "benefits": {
+      "title": "Why choose Folio for gift cards",
+      "oneApp": {
+        "title": "One app for all cards",
+        "description": "No need to remember multiple codes or carry physical cards. Keep everything in Folio."
+      },
+      "privacy": {
+        "title": "Privacy focused",
+        "description": "Unlike store apps, Folio doesn't track your purchases or sell your data."
+      },
+      "familyShare": {
+        "title": "Share with family",
+        "description": "Create a shared folder so your family can use the same gift cards."
+      },
+      "offline": {
+        "title": "Works offline",
+        "description": "Access your gift cards even without internet. Perfect for stores with poor signal."
+      }
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "description": "Common questions about using Folio as your gift card wallet.",
+      "items": [
+        {
+          "q": "What types of gift cards can I store?",
+          "a": "You can store any gift card from any store, restaurant, or service. This includes retail store cards, restaurant gift cards, online shopping cards, entertainment cards, and more."
+        },
+        {
+          "q": "How do I add my gift cards to Folio?",
+          "a": "You can scan your physical card with your camera, upload a photo, or manually enter the card number and code. Folio will extract the barcode automatically if available."
+        },
+        {
+          "q": "Can I use my digital gift card at the store?",
+          "a": "Yes. When you check out, open Folio and show the barcode or QR code on your phone screen. The cashier can scan it just like your physical card, or you can enter the code manually."
+        },
+        {
+          "q": "Will Folio track my gift card balance?",
+          "a": "Folio stores your gift card information, but doesn't automatically check balances. You'll need to check your balance with the store or retailer directly."
+        },
+        {
+          "q": "Are my gift card details secure?",
+          "a": "Yes. All your gift cards are encrypted with end-to-end encryption. Your data stays private with keys only you control."
+        }
+      ]
+    }
+  },
   "security": {
     "meta": {
       "title": "Security | Folio Wallet",

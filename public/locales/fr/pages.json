@@ -311,6 +311,123 @@
       ]
     }
   },
+  "giftCardApp": {
+    "meta": {
+      "title": "App de cartes cadeaux - Portefeuille numérique | Folio",
+      "description": "Gérez vos cartes cadeaux avec Folio. Chiffrement de bout en bout. Disponible sur iOS et Android.",
+      "ogTitle": "App de cartes cadeaux | Folio",
+      "ogDescription": "Stockez toutes vos cartes cadeaux dans un portefeuille numérique sécurisé. iPhone et Android."
+    },
+    "hero": {
+      "tagline": "Cartes cadeaux",
+      "title": "App de cartes cadeaux",
+      "description": "Organisez toutes vos cartes cadeaux dans un portefeuille numérique sécurisé. Fini de fouiller dans votre portefeuille ou de perdre le solde. Folio fonctionne avec tous les magasins et garde vos cartes prêtes quand vous en avez besoin.",
+      "getApp": "Télécharger l'app",
+      "learnMore": "En savoir plus",
+      "imageAlt": "Aperçu de l'app de cartes cadeaux"
+    },
+    "features": {
+      "title": "Toutes vos cartes cadeaux en un seul endroit",
+      "description": "Arrêtez de jongler avec plusieurs cartes. Folio garde tout organisé et sécurisé.",
+      "anyStore": {
+        "title": "Tous les magasins et marques",
+        "description": "Compatible avec les magasins physiques, restaurants, boutiques en ligne, divertissement et toutes les cartes cadeaux."
+      },
+      "quickScan": {
+        "title": "Scan rapide pour ajouter",
+        "description": "Scannez le code-barres de votre carte ou entrez le code manuellement. Folio capture tous les détails instantanément."
+      },
+      "organized": {
+        "title": "Organisé par catégorie",
+        "description": "Groupez vos cartes par type ou créez des étiquettes personnalisées pour les trouver rapidement."
+      },
+      "secure": {
+        "title": "Sécurisé et privé",
+        "description": "Vos cartes cadeaux sont chiffrées. Même Folio ne peut pas voir vos informations."
+      }
+    },
+    "cardTypes": {
+      "title": "Fonctionne avec toutes vos cartes",
+      "description": "Folio prend en charge toutes les cartes cadeaux avec code-barres, QR ou code de remboursement.",
+      "retail": {
+        "title": "Magasins",
+        "description": "Grands magasins, vêtements, articles pour la maison et magasins spécialisés."
+      },
+      "restaurants": {
+        "title": "Restaurants",
+        "description": "Chaînes de restaurants, cafés, restauration rapide et établissements de restauration."
+      },
+      "online": {
+        "title": "Boutiques en ligne",
+        "description": "Plateformes e-commerce, services numériques et cartes cadeaux d'abonnement."
+      },
+      "entertainment": {
+        "title": "Divertissement",
+        "description": "Cinémas, services de streaming, plateformes de jeux et expériences."
+      }
+    },
+    "howItWorks": {
+      "title": "Comment utiliser Folio pour les cartes cadeaux",
+      "description": "Ajouter et utiliser vos cartes est rapide et facile.",
+      "step1": {
+        "title": "Scannez ou ajoutez votre carte",
+        "description": "Pointez votre appareil photo vers une carte cadeau pour capturer le code-barres, ou entrez le code manuellement."
+      },
+      "step2": {
+        "title": "Organisez",
+        "description": "Ajoutez des étiquettes ou laissez Folio catégoriser automatiquement par type de magasin."
+      },
+      "step3": {
+        "title": "Utilisez en caisse",
+        "description": "Ouvrez la carte dans Folio et affichez l'écran pour que le caissier scanne le code, ou entrez le code lors d'achats en ligne."
+      }
+    },
+    "benefits": {
+      "title": "Pourquoi choisir Folio pour les cartes cadeaux",
+      "oneApp": {
+        "title": "Une app pour toutes les cartes",
+        "description": "Pas besoin de retenir plusieurs codes ou de transporter des cartes physiques. Tout est dans Folio."
+      },
+      "privacy": {
+        "title": "Respect de la vie privée",
+        "description": "Contrairement aux apps des magasins, Folio ne suit pas vos achats ni ne vend vos données."
+      },
+      "familyShare": {
+        "title": "Partager en famille",
+        "description": "Créez un dossier partagé pour que votre famille utilise les mêmes cartes cadeaux."
+      },
+      "offline": {
+        "title": "Fonctionne hors ligne",
+        "description": "Accédez à vos cartes même sans internet. Parfait pour les magasins avec un mauvais signal."
+      }
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "description": "Questions communes sur l'utilisation de Folio comme portefeuille de cartes cadeaux.",
+      "items": [
+        {
+          "q": "Quels types de cartes cadeaux puis-je stocker ?",
+          "a": "Vous pouvez stocker toutes les cartes cadeaux de tous les magasins, restaurants ou services : magasins, restaurants, boutiques en ligne, divertissement et plus encore."
+        },
+        {
+          "q": "Comment ajouter mes cartes cadeaux à Folio ?",
+          "a": "Vous pouvez scanner votre carte physique avec votre appareil photo, télécharger une photo ou entrer manuellement le numéro et le code. Folio extraira automatiquement le code-barres s'il est disponible."
+        },
+        {
+          "q": "Puis-je utiliser ma carte cadeau numérique en magasin ?",
+          "a": "Oui. Lors du paiement, ouvrez Folio et affichez le code-barres ou QR sur l'écran. Le caissier peut le scanner comme votre carte physique, ou vous pouvez entrer le code manuellement."
+        },
+        {
+          "q": "Folio vérifie-t-il le solde de mes cartes cadeaux ?",
+          "a": "Folio stocke les informations de vos cartes cadeaux, mais ne vérifie pas automatiquement le solde. Vous devrez vérifier votre solde directement avec le magasin ou l'établissement."
+        },
+        {
+          "q": "Mes informations de cartes cadeaux sont-elles sécurisées ?",
+          "a": "Oui. Toutes vos cartes cadeaux sont chiffrées avec un chiffrement de bout en bout. Vos données restent privées avec des clés que vous seul contrôlez."
+        }
+      ]
+    }
+  },
   "security": {
     "meta": {
       "title": "Sécurité | Folio Wallet",

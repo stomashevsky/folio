@@ -78,6 +78,7 @@ const SecurityPage = lazy(() => import('./pages/SecurityPage'))
 const IdWalletAppPage = lazy(() => import('./pages/IdWalletAppPage'))
 const CardScannerAppPage = lazy(() => import('./pages/CardScannerAppPage'))
 const LoyaltyCardAppPage = lazy(() => import('./pages/LoyaltyCardAppPage'))
+const GiftCardAppPage = lazy(() => import('./pages/GiftCardAppPage'))
 const TripPlannerAppPage = lazy(() => import('./pages/TripPlannerAppPage'))
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
 const AboutPage = lazy(() => import('./pages/AboutPage'))
@@ -347,6 +348,7 @@ function LocalizedRoutes() {
         <Route path="id-wallet-app" element={<IdWalletAppPage />} />
         <Route path="card-scanner-app" element={<CardScannerAppPage />} />
         <Route path="loyalty-card-app" element={<LoyaltyCardAppPage />} />
+        <Route path="gift-card-app" element={<GiftCardAppPage />} />
         <Route path="trip-planner-app" element={<TripPlannerAppPage />} />
         <Route path="terms" element={<TermsPage />} />
         <Route path="privacy" element={<PrivacyPage />} />

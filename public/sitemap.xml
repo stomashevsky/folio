@@ -467,6 +467,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/card-scanner-app/"/>
   </url>
   <url>
+    <loc>https://folio.id/en/gift-card-app/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/gift-card-app/"/>
+  </url>
+  <url>
     <loc>https://folio.id/en/government/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/government/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/government/"/>
@@ -1138,6 +1147,15 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/card-scanner-app/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/card-scanner-app/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/card-scanner-app/"/>
+  </url>
+  <url>
+    <loc>https://folio.id/es/gift-card-app/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/gift-card-app/"/>
   </url>
   <url>
     <loc>https://folio.id/es/government/</loc>
@@ -1813,6 +1831,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/card-scanner-app/"/>
   </url>
   <url>
+    <loc>https://folio.id/fr/gift-card-app/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/gift-card-app/"/>
+  </url>
+  <url>
     <loc>https://folio.id/fr/government/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/government/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/government/"/>
@@ -2486,6 +2513,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/card-scanner-app/"/>
   </url>
   <url>
+    <loc>https://folio.id/it/gift-card-app/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/gift-card-app/"/>
+  </url>
+  <url>
     <loc>https://folio.id/it/government/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/government/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/government/"/>
@@ -3157,6 +3193,15 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/card-scanner-app/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/card-scanner-app/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/card-scanner-app/"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ja/gift-card-app/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/gift-card-app/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/gift-card-app/"/>
   </url>
   <url>
     <loc>https://folio.id/ja/government/</loc>

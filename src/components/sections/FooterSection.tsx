@@ -32,7 +32,7 @@ export default function FooterSection() {
             </div>
           </div>
 
-          {/* Column 2: Folio + Features + Get the app */}
+          {/* Column 2: Folio + Features */}
           <div className="flex flex-col gap-10 items-start min-w-[200px] flex-1">
             {/* Folio section */}
             <div className="flex flex-col gap-4 items-start w-full">
@@ -55,29 +55,8 @@ export default function FooterSection() {
                 <FooterLink to="/id-wallet-app">{t('footer.idWallet')}</FooterLink>
                 <FooterLink to="/card-scanner-app">{t('footer.cardScanner')}</FooterLink>
                 <FooterLink to="/loyalty-card-app">{t('footer.loyaltyCards')}</FooterLink>
+                <FooterLink to="/gift-card-app">{t('footer.giftCards')}</FooterLink>
                 <FooterLink to="/trip-planner-app">{t('footer.tripPlanner')}</FooterLink>
-              </div>
-            </div>
-            {/* Get the app section */}
-            <div className="flex flex-col gap-4 items-start w-full">
-              <p className="font-normal leading-5 text-[#737373] text-sm w-full">
-                {t('footer.getTheApp')}
-              </p>
-              <div className="flex flex-col gap-3 items-start w-full">
-                <FooterLink
-                  href="https://apps.apple.com/app/folio-digital-wallet-app/id1266382717"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {t('footer.downloadIOS')}
-                </FooterLink>
-                <FooterLink
-                  href="https://play.google.com/store/apps/details?id=com.folioltd"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {t('footer.downloadAndroid')}
-                </FooterLink>
               </div>
             </div>
           </div>
@@ -102,7 +81,7 @@ export default function FooterSection() {
             </div>
           </div>
 
-          {/* Column 4: Solutions + Terms & Policies */}
+          {/* Column 4: Solutions + Terms & Policies + Get the app */}
           <div className="flex flex-col gap-10 items-start min-w-[200px] flex-1">
             {/* Solutions section */}
             <div className="flex flex-col gap-4 items-start w-full">
@@ -124,6 +103,28 @@ export default function FooterSection() {
                 <FooterLink to="/terms">{t('footer.termsOfUse')}</FooterLink>
                 <FooterLink to="/privacy">{t('footer.privacyPolicy')}</FooterLink>
                 <FooterLink to="/security">{t('footer.security')}</FooterLink>
+              </div>
+            </div>
+            {/* Get the app section */}
+            <div className="flex flex-col gap-4 items-start w-full">
+              <p className="font-normal leading-5 text-[#737373] text-sm w-full">
+                {t('footer.getTheApp')}
+              </p>
+              <div className="flex flex-col gap-3 items-start w-full">
+                <FooterLink
+                  href="https://apps.apple.com/app/folio-digital-wallet-app/id1266382717"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t('footer.downloadIOS')}
+                </FooterLink>
+                <FooterLink
+                  href="https://play.google.com/store/apps/details?id=com.folioltd"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t('footer.downloadAndroid')}
+                </FooterLink>
               </div>
             </div>
           </div>

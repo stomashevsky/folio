@@ -311,6 +311,123 @@
       ]
     }
   },
+  "giftCardApp": {
+    "meta": {
+      "title": "App carte regalo - Portafoglio digitale | Folio",
+      "description": "Gestisci carte regalo con Folio. Crittografia end-to-end. Disponibile su iOS e Android.",
+      "ogTitle": "App carte regalo | Folio",
+      "ogDescription": "Conserva tutte le tue carte regalo in un portafoglio digitale sicuro. iPhone e Android."
+    },
+    "hero": {
+      "tagline": "Carte regalo",
+      "title": "App carte regalo",
+      "description": "Organizza tutte le tue carte regalo in un portafoglio digitale sicuro. Basta cercare nel portafoglio o perdere il saldo. Folio funziona con qualsiasi negozio e mantiene le tue carte pronte quando ne hai bisogno.",
+      "getApp": "Scarica l'app",
+      "learnMore": "Scopri di più",
+      "imageAlt": "Anteprima dell'app carte regalo"
+    },
+    "features": {
+      "title": "Tutte le tue carte regalo in un posto",
+      "description": "Smetti di gestire più carte. Folio mantiene tutto organizzato e sicuro.",
+      "anyStore": {
+        "title": "Qualsiasi negozio o marca",
+        "description": "Compatibile con negozi fisici, ristoranti, negozi online, intrattenimento e qualsiasi carta regalo."
+      },
+      "quickScan": {
+        "title": "Scansione rapida per aggiungere",
+        "description": "Scansiona il codice a barre della tua carta o inserisci il codice manualmente. Folio cattura tutti i dettagli all'istante."
+      },
+      "organized": {
+        "title": "Organizzato per categoria",
+        "description": "Raggruppa le carte per tipo o crea etichette personalizzate per trovarle rapidamente."
+      },
+      "secure": {
+        "title": "Sicuro e privato",
+        "description": "Le tue carte regalo sono crittografate. Nemmeno Folio può vedere le tue informazioni."
+      }
+    },
+    "cardTypes": {
+      "title": "Funziona con tutte le tue carte",
+      "description": "Folio supporta qualsiasi carta regalo con codice a barre, QR o codice di rimborso.",
+      "retail": {
+        "title": "Negozi",
+        "description": "Grandi magazzini, abbigliamento, articoli per la casa e negozi specializzati."
+      },
+      "restaurants": {
+        "title": "Ristoranti",
+        "description": "Catene di ristoranti, caffè, fast food e locali di ristorazione."
+      },
+      "online": {
+        "title": "Negozi online",
+        "description": "Piattaforme e-commerce, servizi digitali e carte regalo per abbonamenti."
+      },
+      "entertainment": {
+        "title": "Intrattenimento",
+        "description": "Cinema, servizi di streaming, piattaforme di gioco e esperienze."
+      }
+    },
+    "howItWorks": {
+      "title": "Come usare Folio per le carte regalo",
+      "description": "Aggiungere e usare le tue carte è veloce e semplice.",
+      "step1": {
+        "title": "Scansiona o aggiungi la tua carta",
+        "description": "Punta la fotocamera verso una carta regalo per catturare il codice a barre, o inserisci il codice manualmente."
+      },
+      "step2": {
+        "title": "Organizza",
+        "description": "Aggiungi etichette o lascia che Folio categorizzi automaticamente per tipo di negozio."
+      },
+      "step3": {
+        "title": "Usa alla cassa",
+        "description": "Apri la carta in Folio e lascia che il cassiere scansioni lo schermo, o inserisci il codice quando acquisti online."
+      }
+    },
+    "benefits": {
+      "title": "Perché scegliere Folio per le carte regalo",
+      "oneApp": {
+        "title": "Un'app per tutte le carte",
+        "description": "Non devi ricordare più codici o portare carte fisiche. Tutto è in Folio."
+      },
+      "privacy": {
+        "title": "Focalizzato sulla privacy",
+        "description": "A differenza delle app dei negozi, Folio non traccia i tuoi acquisti né vende i tuoi dati."
+      },
+      "familyShare": {
+        "title": "Condividi con la famiglia",
+        "description": "Crea una cartella condivisa per far usare alla tua famiglia le stesse carte regalo."
+      },
+      "offline": {
+        "title": "Funziona offline",
+        "description": "Accedi alle tue carte anche senza internet. Perfetto per negozi con segnale debole."
+      }
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "description": "Domande comuni sull'uso di Folio come portafoglio per carte regalo.",
+      "items": [
+        {
+          "q": "Che tipi di carte regalo posso conservare?",
+          "a": "Puoi conservare qualsiasi carta regalo di qualsiasi negozio, ristorante o servizio: negozi, ristoranti, negozi online, intrattenimento e altro ancora."
+        },
+        {
+          "q": "Come aggiungo le mie carte regalo a Folio?",
+          "a": "Puoi scansionare la carta fisica con la fotocamera, caricare una foto o inserire manualmente il numero e il codice. Folio estrarrà automaticamente il codice a barre se disponibile."
+        },
+        {
+          "q": "Posso usare la mia carta regalo digitale in negozio?",
+          "a": "Sì. Quando paghi, apri Folio e mostra il codice a barre o QR sullo schermo. Il cassiere può scansionarlo come la carta fisica, oppure puoi inserire il codice manualmente."
+        },
+        {
+          "q": "Folio verifica il saldo delle mie carte regalo?",
+          "a": "Folio conserva le informazioni delle tue carte regalo, ma non verifica automaticamente il saldo. Dovrai controllare il saldo direttamente con il negozio o l'esercizio."
+        },
+        {
+          "q": "I dati delle mie carte regalo sono sicuri?",
+          "a": "Sì. Tutte le tue carte regalo sono crittografate con crittografia end-to-end. I tuoi dati rimangono privati con chiavi che controlli solo tu."
+        }
+      ]
+    }
+  },
   "security": {
     "meta": {
       "title": "Sicurezza | Folio Wallet",

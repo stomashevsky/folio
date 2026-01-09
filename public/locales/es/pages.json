@@ -311,6 +311,123 @@
             ]
         }
     },
+    "giftCardApp": {
+        "meta": {
+            "title": "App de tarjetas de regalo - Billetera digital | Folio",
+            "description": "Gestiona tarjetas de regalo con Folio. Cifrado de extremo a extremo. Disponible en iOS y Android.",
+            "ogTitle": "App de tarjetas de regalo | Folio",
+            "ogDescription": "Guarda todas tus tarjetas de regalo en una billetera digital segura. Funciona en iPhone y Android."
+        },
+        "hero": {
+            "tagline": "Tarjetas de regalo",
+            "title": "App de tarjetas de regalo",
+            "description": "Organiza todas tus tarjetas de regalo en una billetera digital segura. Olvídate de buscar en la cartera o perder el saldo. Folio funciona con cualquier tienda y mantiene tus tarjetas listas cuando las necesitas.",
+            "getApp": "Descargar la app",
+            "learnMore": "Saber más",
+            "imageAlt": "Vista previa de la app de tarjetas de regalo"
+        },
+        "features": {
+            "title": "Todas tus tarjetas de regalo en un lugar",
+            "description": "Deja de gestionar múltiples tarjetas. Folio mantiene todo organizado y seguro.",
+            "anyStore": {
+                "title": "Cualquier tienda o marca",
+                "description": "Compatible con tiendas físicas, restaurantes, tiendas online, entretenimiento y cualquier tarjeta de regalo."
+            },
+            "quickScan": {
+                "title": "Escaneo rápido para añadir",
+                "description": "Escanea el código de barras de tu tarjeta o introduce el código manualmente. Folio captura todos los detalles al instante."
+            },
+            "organized": {
+                "title": "Organizado por categoría",
+                "description": "Agrupa tarjetas por tipo o crea etiquetas personalizadas para encontrarlas rápido."
+            },
+            "secure": {
+                "title": "Seguro y privado",
+                "description": "Tus tarjetas de regalo están cifradas. Ni siquiera Folio puede ver tu información."
+            }
+        },
+        "cardTypes": {
+            "title": "Funciona con todas tus tarjetas",
+            "description": "Folio admite cualquier tarjeta de regalo con código de barras, QR o código de canje.",
+            "retail": {
+                "title": "Tiendas",
+                "description": "Grandes almacenes, ropa, artículos para el hogar y tiendas especializadas."
+            },
+            "restaurants": {
+                "title": "Restaurantes",
+                "description": "Cadenas de restaurantes, cafeterías, comida rápida y establecimientos de comida."
+            },
+            "online": {
+                "title": "Tiendas online",
+                "description": "Plataformas de comercio electrónico, servicios digitales y tarjetas de regalo de suscripciones."
+            },
+            "entertainment": {
+                "title": "Entretenimiento",
+                "description": "Cines, servicios de streaming, plataformas de juegos y experiencias."
+            }
+        },
+        "howItWorks": {
+            "title": "Cómo usar Folio para tarjetas de regalo",
+            "description": "Añadir y usar tus tarjetas es rápido y fácil.",
+            "step1": {
+                "title": "Escanea o añade tu tarjeta",
+                "description": "Apunta la cámara a cualquier tarjeta de regalo para capturar el código de barras, o introduce el código manualmente."
+            },
+            "step2": {
+                "title": "Organiza",
+                "description": "Añade etiquetas o deja que Folio categorice automáticamente por tipo de tienda."
+            },
+            "step3": {
+                "title": "Usa en la caja",
+                "description": "Abre la tarjeta en Folio y muestra la pantalla para que el cajero escanee el código, o introduce el código al comprar online."
+            }
+        },
+        "benefits": {
+            "title": "Por qué elegir Folio para tarjetas de regalo",
+            "oneApp": {
+                "title": "Una app para todas las tarjetas",
+                "description": "No necesitas recordar múltiples códigos ni llevar tarjetas físicas. Todo está en Folio."
+            },
+            "privacy": {
+                "title": "Centrado en la privacidad",
+                "description": "A diferencia de las apps de las tiendas, Folio no rastrea tus compras ni vende tus datos."
+            },
+            "familyShare": {
+                "title": "Compartir en familia",
+                "description": "Crea una carpeta compartida para que tu familia use las mismas tarjetas de regalo."
+            },
+            "offline": {
+                "title": "Funciona sin conexión",
+                "description": "Accede a tus tarjetas incluso sin internet. Perfecto para tiendas con mala señal."
+            }
+        },
+        "faq": {
+            "title": "Preguntas frecuentes",
+            "description": "Preguntas comunes sobre Folio como billetera de tarjetas de regalo.",
+            "items": [
+                {
+                    "q": "¿Qué tipos de tarjetas de regalo puedo guardar?",
+                    "a": "Cualquier tarjeta de regalo de cualquier tienda, restaurante o servicio: tiendas, restaurantes, tiendas online, entretenimiento y más."
+                },
+                {
+                    "q": "¿Cómo añado mis tarjetas a Folio?",
+                    "a": "Escanea la tarjeta física con la cámara, sube una foto o introduce el número y código manualmente. Folio extrae el código de barras automáticamente si está disponible."
+                },
+                {
+                    "q": "¿Puedo usar mi tarjeta digital en la tienda?",
+                    "a": "Sí. Al pagar, abre Folio y muestra el código de barras o QR en la pantalla. El cajero puede escanearlo igual que la tarjeta física, o puedes introducir el código manualmente."
+                },
+                {
+                    "q": "¿Folio comprueba el saldo de mis tarjetas?",
+                    "a": "Folio guarda la información de tus tarjetas, pero no comprueba automáticamente el saldo. Debes consultar el saldo directamente con la tienda o el establecimiento."
+                },
+                {
+                    "q": "¿Están seguros los datos de mis tarjetas?",
+                    "a": "Sí. Todas las tarjetas están cifradas de extremo a extremo. Tus datos permanecen privados con claves que solo tú controlas."
+                }
+            ]
+        }
+    },
     "security": {
         "meta": {
             "title": "Seguridad | Folio Wallet",

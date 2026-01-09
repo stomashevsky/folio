@@ -252,6 +252,16 @@ const STATIC_PAGES = [
     ogImage: 'folio-app-hero.png',
   },
   {
+    path: '/gift-card-app',
+    title: {
+      en: 'Gift card app - Digital gift card wallet | Folio',
+    },
+    description: {
+      en: 'Folio gift card app allows you to easily manage gift cards and store cards. Keep everything safe with end-to-end encryption. Available on iOS and Android.',
+    },
+    ogImage: 'folio-app-hero.png',
+  },
+  {
     path: '/trip-planner-app',
     title: {
       en: 'Trip planner app - Organize your travel and tickets | Folio',
