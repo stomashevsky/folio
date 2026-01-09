@@ -1,5 +1,4 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { LocalizedLink } from '../components/ui'
+import { ArticleAppCTA, ArticleH2, ArticleImage, ArticleParagraph, BlogArticleLayout } from '../components/ui'
 import folioScreensImage from '../assets/images/blog-best-apps-folio-screens.png'
 import { useTranslation, Trans } from 'react-i18next'
 
@@ -41,7 +40,7 @@ export default function BestAppsToPlanTravelArticlePage() {
       <ArticleH2>{t('articles:best-apps-to-plan-travel.h2_3')}</ArticleH2>
 
       <ArticleParagraph>
-        <Trans i18nKey="articles:best-apps-to-plan-travel.p6" components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }} />
+        {t('articles:best-apps-to-plan-travel.p6')}
       </ArticleParagraph>
 
       <ArticleParagraph>
@@ -82,6 +81,8 @@ export default function BestAppsToPlanTravelArticlePage() {
       <ArticleParagraph>
         {t('articles:best-apps-to-plan-travel.p13')}
       </ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }

@@ -74,3 +74,6 @@ export { default as LanguageSwitcher } from './LanguageSwitcher'
 
 // Localized navigation
 export { default as LocalizedLink } from './LocalizedLink'
+
+// Article CTA
+export { default as ArticleAppCTA } from './ArticleAppCTA'

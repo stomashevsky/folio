@@ -1,6 +1,5 @@
-import { useTranslation, Trans } from 'react-i18next'
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, HowToSchema } from '../components/ui'
-import { LocalizedLink } from '../components/ui'
+import { useTranslation } from 'react-i18next'
+import { ArticleAppCTA, ArticleH2, ArticleImage, ArticleParagraph, BlogArticleLayout, HowToSchema } from '../components/ui'
 import shareTravelImage from '../assets/images/blog-share-travel-folio.png'
 
 export default function HowToShareTravelPlansArticlePage() {
@@ -38,13 +37,7 @@ export default function HowToShareTravelPlansArticlePage() {
       <ArticleH2>{t(`${slug}.h2_2`)}</ArticleH2>
       <ArticleParagraph>{t(`${slug}.p5`)}</ArticleParagraph>
       <ArticleParagraph>
-        <Trans
-          i18nKey={`${slug}.p6`}
-          ns="articles"
-          components={{
-            LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" />
-          }}
-        />
+        {t(`${slug}.p6`, { ns: 'articles' })}
       </ArticleParagraph>
 
       <ArticleImage
@@ -59,6 +52,8 @@ export default function HowToShareTravelPlansArticlePage() {
       <ArticleParagraph>{t(`${slug}.p9`)}</ArticleParagraph>
       <ArticleParagraph>{t(`${slug}.p10`)}</ArticleParagraph>
       <ArticleParagraph>{t(`${slug}.p11`)}</ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }

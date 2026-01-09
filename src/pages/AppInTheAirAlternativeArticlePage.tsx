@@ -1,7 +1,6 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { LocalizedLink } from '../components/ui'
+import { ArticleAppCTA, ArticleH2, ArticleImage, ArticleParagraph, BlogArticleLayout } from '../components/ui'
 import flightUpdatesImage from '../assets/images/blog-app-in-the-air-live-updates.png'
-import { useTranslation, Trans } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
 export default function AppInTheAirAlternativeArticlePage() {
   const { t } = useTranslation(['articles', 'blog'])
@@ -80,11 +79,10 @@ export default function AppInTheAirAlternativeArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans
-          i18nKey="articles:app-in-the-air-alternative.p14"
-          components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
-        />
+        {t('articles:app-in-the-air-alternative.p14')}
       </ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }

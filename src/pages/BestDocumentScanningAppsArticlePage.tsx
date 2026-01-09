@@ -1,5 +1,4 @@
-import { LocalizedLink } from '../components/ui'
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import { ArticleAppCTA, ArticleH2, ArticleImage, ArticleParagraph, BlogArticleLayout } from '../components/ui'
 import blogDocumentScanningPassport from '../assets/images/blog-document-scanning-passport.png'
 import { useTranslation, Trans } from 'react-i18next'
 
@@ -38,7 +37,7 @@ export default function BestDocumentScanningAppsArticlePage() {
       />
 
       <ArticleParagraph>
-        <Trans i18nKey="articles:best-document-scanning-apps.p5" components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }} />
+        {t('articles:best-document-scanning-apps.p5')}
       </ArticleParagraph>
 
       <ArticleH2>{t('articles:best-document-scanning-apps.h2_2')}</ArticleH2>
@@ -70,6 +69,8 @@ export default function BestDocumentScanningAppsArticlePage() {
       <ArticleParagraph>
         {t('articles:best-document-scanning-apps.p11')}
       </ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }

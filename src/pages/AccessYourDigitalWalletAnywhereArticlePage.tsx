@@ -1,7 +1,6 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { LocalizedLink } from '../components/ui'
+import { ArticleAppCTA, ArticleH2, ArticleImage, ArticleParagraph, BlogArticleLayout } from '../components/ui'
 import walletOverviewImage from '../assets/images/blog-wallet-overview-folio.png'
-import { useTranslation, Trans } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
 export default function AccessYourDigitalWalletAnywhereArticlePage() {
   const { t } = useTranslation(['articles', 'blog'])
@@ -25,10 +24,7 @@ export default function AccessYourDigitalWalletAnywhereArticlePage() {
       <ArticleH2>{t('articles:access-your-digital-wallet-anywhere.h2_1')}</ArticleH2>
 
       <ArticleParagraph>
-        <Trans
-          i18nKey="articles:access-your-digital-wallet-anywhere.p3"
-          components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
-        />
+        {t('articles:access-your-digital-wallet-anywhere.p3')}
       </ArticleParagraph>
 
       <ArticleParagraph>
@@ -71,6 +67,8 @@ export default function AccessYourDigitalWalletAnywhereArticlePage() {
       <ArticleParagraph>
         {t('articles:access-your-digital-wallet-anywhere.p10')}
       </ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }

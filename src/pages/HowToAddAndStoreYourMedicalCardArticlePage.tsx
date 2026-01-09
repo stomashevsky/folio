@@ -1,6 +1,5 @@
-import { useTranslation, Trans } from 'react-i18next'
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, HowToSchema } from '../components/ui'
-import { LocalizedLink } from '../components/ui'
+import { useTranslation } from 'react-i18next'
+import { ArticleAppCTA, ArticleH2, ArticleImage, ArticleParagraph, BlogArticleLayout, HowToSchema } from '../components/ui'
 import medicalScreen from '../assets/images/blog-medical-card-folio-screen.png'
 
 export default function HowToAddAndStoreYourMedicalCardArticlePage() {
@@ -36,14 +35,9 @@ export default function HowToAddAndStoreYourMedicalCardArticlePage() {
 
       <ArticleH2>{t(`${slug}.h2_1`)}</ArticleH2>
       <ArticleParagraph>
-        <Trans
-          i18nKey={`${slug}.p3`}
-          ns="articles"
-          components={{
-            LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors" />
-          }}
-        />
+        {t(`${slug}.p3`, { ns: 'articles' })}
       </ArticleParagraph>
+
       <ArticleParagraph>{t(`${slug}.p4`)}</ArticleParagraph>
 
       <ArticleH2>{t(`${slug}.h2_2`)}</ArticleH2>
@@ -56,6 +50,8 @@ export default function HowToAddAndStoreYourMedicalCardArticlePage() {
 
       <ArticleH2>{t(`${slug}.h2_4`)}</ArticleH2>
       <ArticleParagraph>{t(`${slug}.p9`)}</ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }

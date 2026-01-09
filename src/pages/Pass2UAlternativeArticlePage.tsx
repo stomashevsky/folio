@@ -1,6 +1,5 @@
-import { useTranslation, Trans } from 'react-i18next'
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleTable, ArticleImage } from '../components/ui'
-import { LocalizedLink } from '../components/ui'
+import { useTranslation } from 'react-i18next'
+import { ArticleAppCTA, ArticleH2, ArticleImage, ArticleParagraph, ArticleTable, BlogArticleLayout } from '../components/ui'
 import blogPass2uAlternativeScreens from '../assets/images/blog-pass2u-alternative-screens.png'
 
 export default function Pass2UAlternativeArticlePage() {
@@ -36,14 +35,9 @@ export default function Pass2UAlternativeArticlePage() {
       />
 
       <ArticleParagraph>
-        <Trans
-          i18nKey={`${slug}.p9`}
-          ns="articles"
-          components={{
-            LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" />
-          }}
-        />
+        {t(`${slug}.p9`, { ns: 'articles' })}
       </ArticleParagraph>
+
       <ArticleParagraph>{t(`${slug}.p10`)}</ArticleParagraph>
 
       <ArticleTable
@@ -65,6 +59,8 @@ export default function Pass2UAlternativeArticlePage() {
       />
 
       <ArticleParagraph>{t(`${slug}.p11`)}</ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }

@@ -1,5 +1,4 @@
-import { LocalizedLink } from '../components/ui'
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import { ArticleAppCTA, ArticleH2, ArticleImage, ArticleParagraph, BlogArticleLayout } from '../components/ui'
 import folioGiftCard from '../assets/images/blog-apple-gift-card-folio-screen.png'
 import { useTranslation, Trans } from 'react-i18next'
 
@@ -66,10 +65,7 @@ export default function AppleGiftCardAddToWalletArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans
-          i18nKey="articles:apple-gift-card-add-to-wallet.p11"
-          components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
-        />
+        {t('articles:apple-gift-card-add-to-wallet.p11')}
       </ArticleParagraph>
 
       <ArticleH2>{t('articles:apple-gift-card-add-to-wallet.h2_4')}</ArticleH2>
@@ -85,6 +81,8 @@ export default function AppleGiftCardAddToWalletArticlePage() {
       <ArticleParagraph>
         {t('articles:apple-gift-card-add-to-wallet.p14')}
       </ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }

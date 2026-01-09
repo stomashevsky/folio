@@ -1,5 +1,5 @@
-import { useTranslation, Trans } from 'react-i18next';
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, LocalizedLink } from '../components/ui';
+import { useTranslation } from 'react-i18next';
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, ArticleAppCTA } from '../components/ui';
 
 import idScannerImg from '../assets/images/blog-id-scanner-folio.png';
 
@@ -64,10 +64,7 @@ export default function BestIdScannerAppArticlePage() {
       <ArticleH2>{t('best-id-scanner-app.h2_4')}</ArticleH2>
 
       <ArticleParagraph>
-        <Trans
-          i18nKey="articles:best-id-scanner-app.p10"
-          components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
-        />
+        {t('articles:best-id-scanner-app.p10')}
       </ArticleParagraph>
 
       <ArticleParagraph>
@@ -81,6 +78,8 @@ export default function BestIdScannerAppArticlePage() {
       <ArticleParagraph>
         {t('best-id-scanner-app.p13')}
       </ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   );
 }

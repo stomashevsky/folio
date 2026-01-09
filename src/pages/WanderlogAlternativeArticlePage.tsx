@@ -1,6 +1,5 @@
-import { useTranslation, Trans } from 'react-i18next'
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { LocalizedLink } from '../components/ui'
+import { useTranslation } from 'react-i18next'
+import { ArticleAppCTA, ArticleH2, ArticleImage, ArticleParagraph, BlogArticleLayout } from '../components/ui'
 import timelineImage from '../assets/images/blog-wanderlog-timeline.png'
 
 export default function WanderlogAlternativeArticlePage() {
@@ -49,13 +48,7 @@ export default function WanderlogAlternativeArticlePage() {
       <ArticleParagraph>{t(`${slug}.p11`)}</ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans
-          i18nKey={`${slug}.p12`}
-          ns="articles"
-          components={{
-            LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" />
-          }}
-        />
+        {t(`${slug}.p12`, { ns: 'articles' })}
       </ArticleParagraph>
 
       <ArticleParagraph>{t(`${slug}.p13`)}</ArticleParagraph>
@@ -69,6 +62,8 @@ export default function WanderlogAlternativeArticlePage() {
       <ArticleParagraph>{t(`${slug}.p16`)}</ArticleParagraph>
 
       <ArticleParagraph>{t(`${slug}.p17`)}</ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }

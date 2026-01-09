@@ -71,7 +71,11 @@
   },
   "getTheApp": {
     "title": "いつでもどこでもFolioと",
-    "description": "書類を整理・同期。iOSとAndroidでいつでもアクセス。"
+    "description": "書類を整理・同期。iOSとAndroidでいつでもアクセス。",
+    "articleCta": {
+      "title": "Folio Walletをダウンロード",
+      "subtitle": "iOSとAndroidで無料利用可能"
+    }
   },
   "blog": {
     "title": "Folioブログ",

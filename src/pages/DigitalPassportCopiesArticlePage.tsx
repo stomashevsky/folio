@@ -1,6 +1,5 @@
 import { useTranslation, Trans } from 'react-i18next'
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { LocalizedLink } from '../components/ui'
+import { ArticleAppCTA, ArticleH2, ArticleImage, ArticleParagraph, BlogArticleLayout } from '../components/ui'
 import blogDigitalPassportCopiesHero from '../assets/images/blog-digital-passport-copies-hero.png'
 
 export default function DigitalPassportCopiesArticlePage() {
@@ -100,14 +99,11 @@ export default function DigitalPassportCopiesArticlePage() {
 
       <ArticleH2>{t(`${slug}.h2_6`)}</ArticleH2>
       <ArticleParagraph>
-        <Trans
-          i18nKey={`${slug}.p30`}
-          ns="articles"
-          components={{
-            LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" />
-          }}
-        />
+        {t(`${slug}.p30`, { ns: 'articles' })}
       </ArticleParagraph>
+
+      <ArticleAppCTA />
+
       <ArticleParagraph>{t(`${slug}.p31`)}</ArticleParagraph>
       <ArticleParagraph>{t(`${slug}.p32`)}</ArticleParagraph>
     </BlogArticleLayout>

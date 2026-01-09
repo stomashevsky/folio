@@ -1,5 +1,4 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleBlockquote } from '../components/ui'
-import { LocalizedLink } from '../components/ui'
+import { ArticleAppCTA, ArticleBlockquote, ArticleH2, ArticleParagraph, BlogArticleLayout, LocalizedLink } from '../components/ui'
 import { useTranslation, Trans } from 'react-i18next'
 
 export default function AlbanianDiasporaArticlePage() {
@@ -90,11 +89,10 @@ export default function AlbanianDiasporaArticlePage() {
       <ArticleH2>{t('articles:albanian-diaspora-voter-registration.h2_5')}</ArticleH2>
 
       <ArticleParagraph>
-        <Trans
-          i18nKey="articles:albanian-diaspora-voter-registration.p12"
-          components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
-        />
+        {t('articles:albanian-diaspora-voter-registration.p12')}
       </ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }

@@ -1,6 +1,5 @@
 import { useTranslation, Trans } from 'react-i18next';
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleList, ArticleTable, LocalizedLink } from '../components/ui';
-import type { ArticleTableColumn, ArticleTableRow } from '../components/ui';
+import { ArticleAppCTA, ArticleH2, ArticleList, ArticleParagraph, ArticleTable, ArticleTableColumn, ArticleTableRow, BlogArticleLayout } from '../components/ui'
 
 export default function BestIdentityVerificationPlatformsArticlePage() {
   const { t } = useTranslation('articles');
@@ -126,10 +125,7 @@ export default function BestIdentityVerificationPlatformsArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans
-          i18nKey="articles:best-identity-verification-platforms.p8"
-          components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
-        />
+        {t('articles:best-identity-verification-platforms.p8')}
       </ArticleParagraph>
 
       <ArticleH2>{t('best-identity-verification-platforms.h2_4')}</ArticleH2>
@@ -197,11 +193,10 @@ export default function BestIdentityVerificationPlatformsArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans
-          i18nKey="articles:best-identity-verification-platforms.p20"
-          components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
-        />
+        {t('articles:best-identity-verification-platforms.p20')}
       </ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   );
 }

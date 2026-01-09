@@ -1,5 +1,5 @@
-import { useTranslation, Trans } from 'react-i18next';
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, LocalizedLink } from '../components/ui';
+import { useTranslation } from 'react-i18next';
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, ArticleAppCTA } from '../components/ui';
 
 import checkMyTripImg from '../assets/images/blog-checkmytrip-folio-screens.png';
 
@@ -38,10 +38,7 @@ export default function CheckMyTripAlternativeArticlePage() {
       />
 
       <ArticleParagraph>
-        <Trans
-          i18nKey="articles:checkmytrip-alternative.p5"
-          components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
-        />
+        {t('articles:checkmytrip-alternative.p5')}
       </ArticleParagraph>
 
       <ArticleH2>{t('checkmytrip-alternative.h2_2')}</ArticleH2>
@@ -67,6 +64,8 @@ export default function CheckMyTripAlternativeArticlePage() {
       <ArticleParagraph>
         {t('checkmytrip-alternative.p10')}
       </ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   );
 }

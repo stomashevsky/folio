@@ -1,6 +1,5 @@
 import { useTranslation, Trans } from 'react-i18next'
-import { LocalizedLink } from '../components/ui'
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleList } from '../components/ui'
+import { ArticleAppCTA, ArticleH2, ArticleList, ArticleParagraph, BlogArticleLayout, LocalizedLink } from '../components/ui'
 
 export default function CompleteGuideIdentityVerificationArticlePage() {
   const { t } = useTranslation('articles')
@@ -136,14 +135,10 @@ export default function CompleteGuideIdentityVerificationArticlePage() {
       <ArticleParagraph>{t(`${slug}.p28`)}</ArticleParagraph>
       <ArticleParagraph>{t(`${slug}.p29`)}</ArticleParagraph>
       <ArticleParagraph>
-        <Trans
-          i18nKey={`${slug}.p30`}
-          ns="articles"
-          components={{
-            LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" />
-          }}
-        />
+        {t(`${slug}.p30`, { ns: 'articles' })}
       </ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }

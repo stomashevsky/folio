@@ -1,6 +1,5 @@
 import { useTranslation, Trans } from 'react-i18next'
-import { LocalizedLink } from '../components/ui'
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import { ArticleAppCTA, ArticleH2, ArticleImage, ArticleParagraph, BlogArticleLayout } from '../components/ui'
 import folioScreens from '../assets/images/blog-digital-wallet-apps-folio-screens.png'
 
 export default function DigitalWalletAppsForEveryNeedArticlePage() {
@@ -35,13 +34,7 @@ export default function DigitalWalletAppsForEveryNeedArticlePage() {
       />
 
       <ArticleParagraph>
-        <Trans
-          i18nKey={`${slug}.p6`}
-          ns="articles"
-          components={{
-            LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" />
-          }}
-        />
+        {t(`${slug}.p6`, { ns: 'articles' })}
       </ArticleParagraph>
 
       <ArticleH2>{t(`${slug}.h2_3`)}</ArticleH2>
@@ -65,6 +58,8 @@ export default function DigitalWalletAppsForEveryNeedArticlePage() {
       <ArticleH2>{t(`${slug}.h2_6`)}</ArticleH2>
       <ArticleParagraph>{t(`${slug}.p11`)}</ArticleParagraph>
       <ArticleParagraph>{t(`${slug}.p12`)}</ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }

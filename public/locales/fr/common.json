@@ -71,7 +71,11 @@
   },
   "getTheApp": {
     "title": "Emportez Folio partout avec vous",
-    "description": "Vos documents restent organisés, synchronisés et accessibles instantanément sur iOS et Android."
+    "description": "Vos documents restent organisés, synchronisés et accessibles instantanément sur iOS et Android.",
+    "articleCta": {
+      "title": "Télécharger Folio Wallet",
+      "subtitle": "Disponible gratuitement sur iOS et Android"
+    }
   },
   "blog": {
     "title": "Blog Folio",

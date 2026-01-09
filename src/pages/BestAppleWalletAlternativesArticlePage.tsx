@@ -1,5 +1,5 @@
 import { useTranslation, Trans } from 'react-i18next'
-import { LocalizedLink, BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, ArticleAppCTA } from '../components/ui'
 import folioScreens from '../assets/images/blog-apple-wallet-folio-screens.png'
 
 export default function BestAppleWalletAlternativesArticlePage() {
@@ -50,10 +50,7 @@ export default function BestAppleWalletAlternativesArticlePage() {
       />
 
       <ArticleParagraph>
-        <Trans
-          i18nKey="articles:best-apple-wallet-alternatives.p5"
-          components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
-        />
+        {t('articles:best-apple-wallet-alternatives.p5')}
       </ArticleParagraph>
 
       <ArticleH2>{t('articles:best-apple-wallet-alternatives.h2_2')}</ArticleH2>
@@ -91,6 +88,8 @@ export default function BestAppleWalletAlternativesArticlePage() {
       <ArticleParagraph>
         {t('articles:best-apple-wallet-alternatives.p11')}
       </ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }

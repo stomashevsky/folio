@@ -1,7 +1,6 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { LocalizedLink } from '../components/ui'
+import { ArticleAppCTA, ArticleH2, ArticleImage, ArticleParagraph, BlogArticleLayout } from '../components/ui'
 import flightTicketsImage from '../assets/images/blog-flight-tickets-folio.png'
-import { useTranslation, Trans } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
 export default function FlightTicketsOnIphoneArticlePage() {
   const { t } = useTranslation(['articles', 'blog'])
@@ -42,10 +41,7 @@ export default function FlightTicketsOnIphoneArticlePage() {
       <ArticleH2>{t('articles:flight-tickets-on-iphone.h2_2')}</ArticleH2>
 
       <ArticleParagraph>
-        <Trans
-          i18nKey="articles:flight-tickets-on-iphone.p7"
-          components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
-        />
+        {t('articles:flight-tickets-on-iphone.p7')}
       </ArticleParagraph>
 
       <ArticleImage
@@ -74,6 +70,8 @@ export default function FlightTicketsOnIphoneArticlePage() {
       <ArticleParagraph>
         {t('articles:flight-tickets-on-iphone.p12')}
       </ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }

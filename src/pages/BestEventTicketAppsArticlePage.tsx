@@ -1,5 +1,4 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { LocalizedLink } from '../components/ui'
+import { ArticleAppCTA, ArticleH2, ArticleImage, ArticleParagraph, BlogArticleLayout } from '../components/ui'
 import blogEventTicketsFolio from '../assets/images/blog-event-tickets-folio.png'
 import { useTranslation, Trans } from 'react-i18next'
 
@@ -49,7 +48,7 @@ export default function BestEventTicketAppsArticlePage() {
       <ArticleH2>{t('articles:the-best-event-ticket-apps.h2_3')}</ArticleH2>
 
       <ArticleParagraph>
-        <Trans i18nKey="articles:the-best-event-ticket-apps.p8" components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }} />
+        {t('articles:the-best-event-ticket-apps.p8')}
       </ArticleParagraph>
 
       <ArticleImage
@@ -68,6 +67,8 @@ export default function BestEventTicketAppsArticlePage() {
       <ArticleParagraph>
         {t('articles:the-best-event-ticket-apps.p11')}
       </ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }

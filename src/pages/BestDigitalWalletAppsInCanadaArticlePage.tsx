@@ -1,5 +1,4 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph } from '../components/ui'
-import { LocalizedLink } from '../components/ui'
+import { ArticleAppCTA, ArticleH2, ArticleParagraph, BlogArticleLayout } from '../components/ui'
 import { useTranslation, Trans } from 'react-i18next'
 
 export default function BestDigitalWalletAppsInCanadaArticlePage() {
@@ -38,7 +37,7 @@ export default function BestDigitalWalletAppsInCanadaArticlePage() {
       <ArticleH2>{t('articles:best-digital-wallet-apps-in-canada.h2_4')}</ArticleH2>
 
       <ArticleParagraph>
-        <Trans i18nKey="articles:best-digital-wallet-apps-in-canada.p5" components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors" /> }} />
+        {t('articles:best-digital-wallet-apps-in-canada.p5')}
       </ArticleParagraph>
 
       <ArticleH2>{t('articles:best-digital-wallet-apps-in-canada.h2_5')}</ArticleH2>
@@ -50,6 +49,8 @@ export default function BestDigitalWalletAppsInCanadaArticlePage() {
       <ArticleParagraph>
         {t('articles:best-digital-wallet-apps-in-canada.p7')}
       </ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }

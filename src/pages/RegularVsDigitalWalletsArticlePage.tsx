@@ -1,6 +1,5 @@
 import { useTranslation, Trans } from 'react-i18next'
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { LocalizedLink } from '../components/ui'
+import { ArticleAppCTA, ArticleH2, ArticleImage, ArticleParagraph, BlogArticleLayout } from '../components/ui'
 import folioScreen from '../assets/images/blog-regular-vs-digital-folio-screen.png'
 
 export default function RegularVsDigitalWalletsArticlePage() {
@@ -20,13 +19,7 @@ export default function RegularVsDigitalWalletsArticlePage() {
       <ArticleImage src={folioScreen} alt={t(`${slug}.img_alt`)} />
 
       <ArticleParagraph>
-        <Trans
-          i18nKey={`${slug}.p2`}
-          ns="articles"
-          components={{
-            LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#0a0a0a] transition-colors" />
-          }}
-        />
+        {t(`${slug}.p2`, { ns: 'articles' })}
       </ArticleParagraph>
 
       <ArticleH2>{t(`${slug}.h2_1`)}</ArticleH2>
@@ -68,6 +61,8 @@ export default function RegularVsDigitalWalletsArticlePage() {
       <ArticleParagraph>{t(`${slug}.p7`)}</ArticleParagraph>
 
       <ArticleParagraph>{t(`${slug}.p8`)}</ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }

@@ -1,6 +1,5 @@
 import { useTranslation, Trans } from 'react-i18next'
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, HowToSchema } from '../components/ui'
-import { LocalizedLink } from '../components/ui'
+import { ArticleAppCTA, ArticleH2, ArticleImage, ArticleParagraph, BlogArticleLayout, HowToSchema } from '../components/ui'
 import blogOrganizeTicketsBookingsHero from '../assets/images/blog-organize-tickets-bookings-hero.png'
 
 export default function OrganizeTicketsBookingsArticlePage() {
@@ -83,14 +82,9 @@ export default function OrganizeTicketsBookingsArticlePage() {
 
       <ArticleH2>{t(`${slug}.h2_4`)}</ArticleH2>
       <ArticleParagraph>
-        <Trans
-          i18nKey={`${slug}.p20`}
-          ns="articles"
-          components={{
-            LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" />
-          }}
-        />
+        {t(`${slug}.p20`, { ns: 'articles' })}
       </ArticleParagraph>
+
       <ArticleParagraph>
         <Trans i18nKey={`${slug}.p21`} ns="articles" components={{ strong: <strong /> }} />
       </ArticleParagraph>
@@ -107,6 +101,8 @@ export default function OrganizeTicketsBookingsArticlePage() {
       <ArticleParagraph>{t(`${slug}.p26`)}</ArticleParagraph>
       <ArticleParagraph>{t(`${slug}.p27`)}</ArticleParagraph>
       <ArticleParagraph>{t(`${slug}.p28`)}</ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }

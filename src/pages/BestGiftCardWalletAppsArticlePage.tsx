@@ -1,4 +1,4 @@
-import { LocalizedLink, BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, ArticleAppCTA } from '../components/ui'
 import blogGiftCardFolioScreen from '../assets/images/blog-gift-card-folio-screen.png'
 import { useTranslation, Trans } from 'react-i18next'
 
@@ -43,7 +43,7 @@ export default function BestGiftCardWalletAppsArticlePage() {
       />
 
       <ArticleParagraph>
-        <Trans i18nKey="articles:best-gift-card-wallet-apps.p6" components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }} />
+        {t('articles:best-gift-card-wallet-apps.p6')}
       </ArticleParagraph>
 
       <ArticleParagraph>
@@ -65,12 +65,14 @@ export default function BestGiftCardWalletAppsArticlePage() {
       <ArticleH2>{t('articles:best-gift-card-wallet-apps.h2_3')}</ArticleH2>
 
       <ArticleParagraph>
-        <Trans i18nKey="articles:best-gift-card-wallet-apps.p11" components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }} />
+        {t('articles:best-gift-card-wallet-apps.p11')}
       </ArticleParagraph>
 
       <ArticleParagraph>
         {t('articles:best-gift-card-wallet-apps.p12')}
       </ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }

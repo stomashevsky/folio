@@ -1,6 +1,5 @@
-import { useTranslation, Trans } from 'react-i18next'
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { LocalizedLink } from '../components/ui'
+import { useTranslation } from 'react-i18next'
+import { ArticleAppCTA, ArticleH2, ArticleImage, ArticleParagraph, BlogArticleLayout } from '../components/ui'
 import blogTripCaseAlternativeScreens from '../assets/images/blog-tripcase-alternative-screens.png'
 
 export default function TripCaseAlternativeArticlePage() {
@@ -41,14 +40,10 @@ export default function TripCaseAlternativeArticlePage() {
       />
 
       <ArticleParagraph>
-        <Trans
-          i18nKey={`${slug}.p8`}
-          ns="articles"
-          components={{
-            LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" />
-          }}
-        />
+        {t(`${slug}.p8`, { ns: 'articles' })}
       </ArticleParagraph>
+
+      <ArticleAppCTA />
 
       <ArticleParagraph>{t(`${slug}.p9`)}</ArticleParagraph>
 

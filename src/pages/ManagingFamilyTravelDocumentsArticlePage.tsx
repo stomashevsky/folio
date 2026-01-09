@@ -1,5 +1,4 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { LocalizedLink } from '../components/ui'
+import { ArticleAppCTA, ArticleH2, ArticleImage, ArticleParagraph, BlogArticleLayout } from '../components/ui'
 import folioScreensImage from '../assets/images/blog-family-travel-folio-screens.png'
 import { useTranslation, Trans } from 'react-i18next'
 
@@ -84,14 +83,10 @@ export default function ManagingFamilyTravelDocumentsArticlePage() {
       </ArticleParagraph>
 
       <ArticleParagraph>
-        <Trans
-          ns="articles"
-          i18nKey="managing-family-travel-documents.p15"
-          components={{
-            LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" />
-          }}
-        />
+        {t('managing-family-travel-documents.p15', { ns: 'articles' })}
       </ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }

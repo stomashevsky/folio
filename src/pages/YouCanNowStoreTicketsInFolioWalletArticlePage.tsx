@@ -1,6 +1,5 @@
-import { useTranslation, Trans } from 'react-i18next'
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
-import { LocalizedLink } from '../components/ui'
+import { useTranslation } from 'react-i18next'
+import { ArticleAppCTA, ArticleH2, ArticleImage, ArticleParagraph, BlogArticleLayout } from '../components/ui'
 import storeTicketsImage from '../assets/images/blog-store-tickets-folio.png'
 
 export default function YouCanNowStoreTicketsInFolioWalletArticlePage() {
@@ -22,13 +21,7 @@ export default function YouCanNowStoreTicketsInFolioWalletArticlePage() {
       <ArticleH2>{t(`${slug}.h2_1`)}</ArticleH2>
 
       <ArticleParagraph>
-        <Trans
-          i18nKey={`${slug}.p3`}
-          ns="articles"
-          components={{
-            LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" />
-          }}
-        />
+        {t(`${slug}.p3`, { ns: 'articles' })}
       </ArticleParagraph>
 
       <ArticleImage
@@ -51,6 +44,8 @@ export default function YouCanNowStoreTicketsInFolioWalletArticlePage() {
       <ArticleParagraph>{t(`${slug}.p7`)}</ArticleParagraph>
 
       <ArticleParagraph>{t(`${slug}.p8`)}</ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }

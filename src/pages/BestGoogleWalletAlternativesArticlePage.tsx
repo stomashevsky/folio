@@ -1,5 +1,5 @@
 import { useTranslation, Trans } from 'react-i18next';
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, LocalizedLink } from '../components/ui';
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, ArticleAppCTA } from '../components/ui';
 
 import blogGoogleWalletFolioScreens from '../assets/images/blog-google-wallet-folio-screens.png';
 
@@ -38,10 +38,7 @@ export default function BestGoogleWalletAlternativesArticlePage() {
       />
 
       <ArticleParagraph>
-        <Trans
-          i18nKey="articles:best-google-wallet-alternatives.p5"
-          components={{ LocalizedLink: <LocalizedLink to="/wallet#get-the-app" className="underline hover:text-[#737373] transition-colors" /> }}
-        />
+        {t('articles:best-google-wallet-alternatives.p5')}
       </ArticleParagraph>
 
       <ArticleH2>{t('best-google-wallet-alternatives.h2_2')}</ArticleH2>
@@ -83,6 +80,8 @@ export default function BestGoogleWalletAlternativesArticlePage() {
       <ArticleParagraph>
         {t('best-google-wallet-alternatives.p13')}
       </ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   );
 }
