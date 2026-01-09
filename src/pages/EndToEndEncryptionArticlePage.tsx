@@ -1,4 +1,4 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, ArticleAppCTA } from '../components/ui'
 import e2eEncryptionRecovery from '../assets/images/blog-e2e-encryption-recovery.png'
 import { useTranslation, Trans } from 'react-i18next'
 
@@ -96,6 +96,8 @@ export default function EndToEndEncryptionArticlePage() {
       <ArticleParagraph>
         {t('articles:end-to-end-encryption.p18')}
       </ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }

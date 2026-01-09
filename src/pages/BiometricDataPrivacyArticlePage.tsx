@@ -1,5 +1,5 @@
 import { useTranslation, Trans } from 'react-i18next';
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, ArticleSectionCTA } from '../components/ui';
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, ArticleSectionCTA, ArticleAppCTA } from '../components/ui';
 
 import faceScanImage from '../assets/images/blog-biometric-face-scan.png';
 
@@ -121,6 +121,8 @@ export default function BiometricDataPrivacyArticlePage() {
         descriptionKey="livenessCheck.hero.description"
         namespace="platform"
       />
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   );
 }

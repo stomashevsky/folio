@@ -1,4 +1,4 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, ArticleSectionCTA } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, ArticleSectionCTA, ArticleAppCTA } from '../components/ui'
 import mdlScreenImage from '../assets/images/blog-mdl-folio-screen.png'
 import { useTranslation, Trans } from 'react-i18next'
 
@@ -114,6 +114,8 @@ export default function MobileDriversLicenseArticlePage() {
         descriptionKey="government.hero.description"
         namespace="government"
       />
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }

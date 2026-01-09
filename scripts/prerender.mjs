@@ -251,6 +251,16 @@ const STATIC_PAGES = [
     },
     ogImage: 'folio-app-hero.png',
   },
+  {
+    path: '/trip-planner-app',
+    title: {
+      en: 'Trip planner app - Organize your travel and tickets | Folio',
+    },
+    description: {
+      en: 'Folio trip planner app automatically organizes your flights, hotels, trains, and events into a travel timeline. Keep all your tickets and bookings in one secure place. Available on iOS and Android.',
+    },
+    ogImage: 'folio-features-timeline.png',
+  },
   // Legal pages
   {
     path: '/terms',

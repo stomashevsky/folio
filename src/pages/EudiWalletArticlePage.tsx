@@ -1,4 +1,4 @@
-import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, ArticleSectionCTA } from '../components/ui'
+import { BlogArticleLayout, ArticleH2, ArticleParagraph, ArticleImage, ArticleSectionCTA, ArticleAppCTA } from '../components/ui'
 import eudiWalletHowItWorks from '../assets/images/blog-eudi-wallet-how-it-works.png'
 import { useTranslation, Trans } from 'react-i18next'
 
@@ -114,6 +114,8 @@ export default function EudiWalletArticlePage() {
       <ArticleParagraph>
         {t('articles:eudi-wallet.p20')}
       </ArticleParagraph>
+
+      <ArticleAppCTA />
     </BlogArticleLayout>
   )
 }
