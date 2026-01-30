@@ -213,13 +213,6 @@ export default function GovernmentPage() {
       <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
         {/* Desktop Layout */}
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <ImageWithPlaceholder
-            src={governmentAlbaniaCaseStudy}
-            alt={t('government.caseStudy.imageAlt')}
-            className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-            containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/426.67]"
-            loading="lazy"
-          />
           <div className="flex flex-1 flex-col gap-12 items-start relative min-w-0">
             <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
               <span className="font-medium leading-5 text-sm text-[#737373]">
@@ -306,6 +299,13 @@ export default function GovernmentPage() {
               {t('government.caseStudy.button')}
             </Button>
           </div>
+          <ImageWithPlaceholder
+            src={governmentAlbaniaCaseStudy}
+            alt={t('government.caseStudy.imageAlt')}
+            className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+            containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/426.67]"
+            loading="lazy"
+          />
         </div>
 
         {/* Mobile Layout */}
