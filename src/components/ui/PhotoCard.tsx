@@ -2,7 +2,6 @@ import { useTranslation } from 'react-i18next'
 import { scrollToTop } from '../../utils/scrollToTop'
 import { useLocalizedPath } from '../../i18n/useLocalizedPath'
 import Button from './Button'
-import arrowRightIcon from '../../assets/icons/ArrowRight.svg'
 
 export interface PhotoCardProps {
   image: string
@@ -61,8 +60,7 @@ export default function PhotoCard({ image, title, description, to, className = '
             variant="secondary"
             to={getLocalizedPath(to)}
             onClick={handleClick}
-            icon={<img src={arrowRightIcon} alt="" aria-hidden="true" className="w-4 h-4" />}
-            className="!h-8 !text-xs mt-auto"
+            className="mt-auto"
           >
             {t('buttons.learnMore')}
           </Button>
