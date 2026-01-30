@@ -406,6 +406,21 @@ export default function GovernmentPage() {
         </div>
       </section>
 
+      {/* Overview Section */}
+      <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
+        <div className="flex flex-col gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+          <SectionHeader
+            title={t('government.overview.title')}
+            description={t('government.overview.description')}
+            align="center"
+            maxWidth="576px"
+          />
+        </div>
+      </section>
+
+      {/* Global Partners Section */}
+      <GlobalPartnersSection />
+
       {/* Gov Features Section */}
       <section id="gov-features" className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
         <div className="flex flex-col gap-12 md:gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
@@ -439,21 +454,6 @@ export default function GovernmentPage() {
           </div>
         </div>
       </section>
-
-      {/* Overview Section */}
-      <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
-        <div className="flex flex-col gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <SectionHeader
-            title={t('government.overview.title')}
-            description={t('government.overview.description')}
-            align="center"
-            maxWidth="576px"
-          />
-        </div>
-      </section>
-
-      {/* Global Partners Section */}
-      <GlobalPartnersSection />
 
       {/* CTA Section */}
       <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-0 md:pb-24 relative shrink-0 w-full bg-white">
