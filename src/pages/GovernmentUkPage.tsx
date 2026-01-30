@@ -7,7 +7,7 @@ import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
 import { useLocalizedPath } from '../i18n/useLocalizedPath'
-import ukHero from '../assets/images/uk-hero.png'
+import ukHero from '../assets/images/uk-hero-passport.png'
 
 // Icons for govBenefits cards
 import building2Icon from '../assets/icons/Building2.svg'
