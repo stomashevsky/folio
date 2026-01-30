@@ -15,7 +15,7 @@ import { useLocalizedPath } from '../i18n/useLocalizedPath'
 
 // Images
 import folioHeroPhones from '../assets/images/folio-hero-phones.png'
-import governmentSolutionsHero from '../assets/images/government-solutions-hero.png'
+import governmentPppHero from '../assets/images/government-ppp-hero.png'
 import governmentTestimonialAvatar from '../assets/images/government-testimonial-avatar.png'
 import ageVerificationHero from '../assets/images/age-verification-hero.png'
 import clientOnboardingHero from '../assets/images/client-onboarding-hero.png'
@@ -311,7 +311,7 @@ function HomePage() {
               </div>
             </div>
             <ImageWithPlaceholder
-              src={governmentSolutionsHero}
+              src={governmentPppHero}
               alt="Government digital credentials including voter card and national ID on mobile phone"
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
@@ -339,7 +339,7 @@ function HomePage() {
               </Button>
             </div>
             <ImageWithPlaceholder
-              src={governmentSolutionsHero}
+              src={governmentPppHero}
               alt="Government digital credentials including voter card and national ID on mobile phone"
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
