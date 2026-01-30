@@ -66,7 +66,7 @@ const STATIC_PAGES = [
     description: {
       en: 'Tools for governments to design, test and deploy modern digital credentials. Digital identity aligned with global standards.',
     },
-    ogImage: 'government-solutions-hero.png',
+    ogImage: 'government-ppp-hero.png',
   },
   {
     path: '/government/playground',
