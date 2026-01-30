@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
-import { SectionHeader, Button, FeatureBlock, ToolCard } from '../components/ui'
+import { SectionHeader, Button, ToolCard } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
 import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
@@ -23,6 +23,11 @@ import userCheckIcon from '../assets/icons/UserCheck.svg'
 import creditCardIcon from '../assets/icons/CreditCard.svg'
 import fingerprintIcon from '../assets/icons/Fingerprint.svg'
 
+// Icons for whyFolio section
+import globeIcon from '../assets/icons/Globe.svg'
+import starIcon from '../assets/icons/Star.svg'
+import landmarkIcon from '../assets/icons/Landmark.svg'
+
 
 // Background style using inline styles for complex multi-layer gradient
 const BACKGROUND_STYLE = {
@@ -39,6 +44,24 @@ function StatItem({ value, description }: { value: string; description: string }
       <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full">
         {description}
       </p>
+    </div>
+  )
+}
+
+function WhyFolioBlock({ icon, title, description }: { icon: string; title: string; description: string }) {
+  return (
+    <div className="flex flex-col md:flex-row gap-6 items-start w-full">
+      <div className="bg-white border border-[#e5e5e5] border-solid flex items-center justify-center relative rounded-lg shrink-0 size-12 shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)]">
+        <img src={icon} alt="" aria-hidden="true" className="w-6 h-6" />
+      </div>
+      <div className="flex flex-col gap-2 items-start flex-1 min-w-0">
+        <h3 className="font-semibold leading-7 text-lg text-[#0a0a0a]">
+          {title}
+        </h3>
+        <p className="font-normal leading-6 text-base text-[#737373]">
+          {description}
+        </p>
+      </div>
     </div>
   )
 }
@@ -336,52 +359,44 @@ export default function GovernmentUkPage() {
 
         {/* Why Folio Section */}
         <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
-          <div className="flex flex-col gap-12 md:gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-            <div className="flex flex-col gap-10 md:gap-12 items-center relative shrink-0 w-full">
-              <SectionHeader
-                title={t('government.uk.whyFolio.title')}
-                description={t('government.uk.whyFolio.description')}
-                align="center"
-                maxWidth="576px"
+          <div className="flex flex-col gap-12 md:gap-16 items-center max-w-[768px] px-6 py-0 relative shrink-0 w-full">
+            <SectionHeader
+              title={t('government.uk.whyFolio.title')}
+              description={t('government.uk.whyFolio.description')}
+              align="center"
+              maxWidth="576px"
+            />
+            <div className="flex flex-col gap-12 md:gap-16 items-start w-full">
+              <WhyFolioBlock
+                icon={globeIcon}
+                title={t('government.uk.whyFolio.items.global.title')}
+                description={t('government.uk.whyFolio.items.global.description')}
               />
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-11 md:gap-6 items-start relative shrink-0 w-full">
-                <FeatureBlock
-                  icon="globe"
-                  title={t('government.uk.whyFolio.items.global.title')}
-                  description={t('government.uk.whyFolio.items.global.description')}
-                  align="left"
-                />
-                <FeatureBlock
-                  icon="star"
-                  title={t('government.uk.whyFolio.items.experience.title')}
-                  description={t('government.uk.whyFolio.items.experience.description')}
-                  align="left"
-                />
-                <FeatureBlock
-                  icon="sparkles"
-                  title={t('government.uk.whyFolio.items.ai.title')}
-                  description={t('government.uk.whyFolio.items.ai.description')}
-                  align="left"
-                />
-                <FeatureBlock
-                  icon="lock-keyhole"
-                  title={t('government.uk.whyFolio.items.private.title')}
-                  description={t('government.uk.whyFolio.items.private.description')}
-                  align="left"
-                />
-                <FeatureBlock
-                  icon="zap"
-                  title={t('government.uk.whyFolio.items.frictionless.title')}
-                  description={t('government.uk.whyFolio.items.frictionless.description')}
-                  align="left"
-                />
-                <FeatureBlock
-                  icon="landmark"
-                  title={t('government.uk.whyFolio.items.sovereign.title')}
-                  description={t('government.uk.whyFolio.items.sovereign.description')}
-                  align="left"
-                />
-              </div>
+              <WhyFolioBlock
+                icon={starIcon}
+                title={t('government.uk.whyFolio.items.experience.title')}
+                description={t('government.uk.whyFolio.items.experience.description')}
+              />
+              <WhyFolioBlock
+                icon={sparklesIcon}
+                title={t('government.uk.whyFolio.items.ai.title')}
+                description={t('government.uk.whyFolio.items.ai.description')}
+              />
+              <WhyFolioBlock
+                icon={lockKeyholeIcon}
+                title={t('government.uk.whyFolio.items.private.title')}
+                description={t('government.uk.whyFolio.items.private.description')}
+              />
+              <WhyFolioBlock
+                icon={zapIcon}
+                title={t('government.uk.whyFolio.items.frictionless.title')}
+                description={t('government.uk.whyFolio.items.frictionless.description')}
+              />
+              <WhyFolioBlock
+                icon={landmarkIcon}
+                title={t('government.uk.whyFolio.items.sovereign.title')}
+                description={t('government.uk.whyFolio.items.sovereign.description')}
+              />
             </div>
           </div>
         </section>
