@@ -192,7 +192,7 @@
                     },
                     "experience": {
                         "title": "Mejor experiencia",
-                        "description": "Calificado con 4.8 estrellas en App Store y 4.6 estrellas en Google Play por usuarios de todo el mundo."
+                        "description": "Calificado con 4.7 estrellas en App Store y 4.5 estrellas en Google Play por usuarios de todo el mundo."
                     },
                     "ai": {
                         "title": "Tecnología de IA",
@@ -209,6 +209,40 @@
                     "sovereign": {
                         "title": "Tecnología soberana",
                         "description": "Folio es una empresa con sede en el Reino Unido dentro del Grupo SGO, que ofrece soluciones de identidad digital para gobiernos y empresas de todo el mundo."
+                    },
+                    "lowMaintenance": {
+                        "title": "Bajo mantenimiento",
+                        "description": "Solución SaaS siempre actualizada que evoluciona continuamente sin costosas actualizaciones ni migraciones."
+                    }
+                }
+            },
+            "sgoCapabilities": {
+                "title": "Por qué Folio / SGO",
+                "description": "Un socio probado para programas gubernamentales de misión crítica.",
+                "items": {
+                    "outcomes": {
+                        "title": "Resultados, no productos",
+                        "description": "Plazos inamovibles, probabilidad cero de fracaso. El éxito es invisible. No nos escondemos detrás del alcance del contrato. Proporcionamos éxito."
+                    },
+                    "cognitive": {
+                        "title": "Reducir la carga cognitiva",
+                        "description": "Complejidad, especificaciones incompletas, requisitos ambiguos, riesgo político y operacional son nuestra especialidad. Inferimos lo necesario para el éxito y lo convertimos en sistemas, flujos de trabajo, logística y capacitación."
+                    },
+                    "risk": {
+                        "title": "Reducir el riesgo reputacional",
+                        "description": "Identificación preventiva de riesgos. Auditabilidad integrada. Disciplina de entrega bajo ataques legales, mediáticos y políticos."
+                    },
+                    "execution": {
+                        "title": "Motor de ejecución probado",
+                        "description": "Máquina logística de cero fallos madurada durante 25 años. Herramientas de software, modelos operativos, sistemas de gobernanza y gestión probados para tener éxito en implementaciones de misión crítica."
+                    },
+                    "culture": {
+                        "title": "Resiliencia cultural",
+                        "description": "La tasa de deserción más baja de la industria. Claridad moral y sólidos fundamentos éticos resultan en operadores comprometidos a largo plazo."
+                    },
+                    "fullStack": {
+                        "title": "Full stack real",
+                        "description": "Capa de dispositivos físicos, capa de software, capa de operaciones de campo. Sin excusas."
                     }
                 }
             },

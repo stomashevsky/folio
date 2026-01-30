@@ -192,7 +192,7 @@
           },
           "experience": {
             "title": "Better experience",
-            "description": "Rated 4.8 stars on App Store and 4.6 stars on Google Play by users globally."
+            "description": "Rated 4.7 stars on App Store and 4.5 stars on Google Play by users globally."
           },
           "ai": {
             "title": "AI technology",
@@ -209,6 +209,40 @@
           "sovereign": {
             "title": "Sovereign technology",
             "description": "Folio is a UK-based company within the SGO Group, delivering digital identity solutions for governments and enterprises worldwide."
+          },
+          "lowMaintenance": {
+            "title": "Low maintenance",
+            "description": "SaaS evergreen solution that evolves continuously without costly upgrades or migrations."
+          }
+        }
+      },
+      "sgoCapabilities": {
+        "title": "Why Folio / SGO",
+        "description": "A proven partner for mission-critical government programmes.",
+        "items": {
+          "outcomes": {
+            "title": "Outcomes, not products",
+            "description": "Unmovable deadlines, zero probability of failure. Success is invisible. We don't hide behind contract scope. We provide success."
+          },
+          "cognitive": {
+            "title": "Reduce cognitive load",
+            "description": "Complexity, incomplete specs, ambiguous requirements, political and operational risk are our specialty. We infer what is needed for success and turn it into systems, workflows, logistics and training."
+          },
+          "risk": {
+            "title": "Reduce reputational risk",
+            "description": "Preemptive risk identification. Embedded auditability. Delivery discipline under legal, media and political attack."
+          },
+          "execution": {
+            "title": "Proven execution engine",
+            "description": "Zero-failure logistics machine matured over 25 years. Software tools, operating models, governance and management systems proven to succeed every time for mission-critical implementations."
+          },
+          "culture": {
+            "title": "Cultural resilience",
+            "description": "Lowest attrition rate in the industry. Moral clarity and strong ethical foundations result in long-term committed operators."
+          },
+          "fullStack": {
+            "title": "Real full stack",
+            "description": "Physical device layer, software layer, field operations layer. No excuses."
           }
         }
       },

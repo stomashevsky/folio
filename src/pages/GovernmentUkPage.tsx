@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, ToolCard } from '../components/ui'
@@ -27,6 +28,7 @@ import fingerprintIcon from '../assets/icons/Fingerprint.svg'
 import globeIcon from '../assets/icons/Globe.svg'
 import starIcon from '../assets/icons/Star.svg'
 import landmarkIcon from '../assets/icons/Landmark.svg'
+import refreshCcwIcon from '../assets/icons/RefreshCcw.svg'
 
 
 // Background style using inline styles for complex multi-layer gradient
@@ -66,6 +68,34 @@ function WhyFolioBlock({ icon, title, description }: { icon: string; title: stri
   )
 }
 
+function SgoCapabilityItem({ title, description, isOpen, onClick }: { title: string; description: string; isOpen: boolean; onClick: () => void }) {
+  return (
+    <button 
+      className="flex flex-col items-start border-b border-[#e5e5e5] py-4 w-full text-left cursor-pointer"
+      onClick={onClick}
+    >
+      <div className="flex items-center justify-between w-full">
+        <p className="font-normal leading-7 text-lg text-[#0a0a0a] text-left flex-1">
+          {title}
+        </p>
+        <svg 
+          className={`w-4 h-4 text-[#737373] shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+          fill="none" 
+          stroke="currentColor" 
+          viewBox="0 0 24 24"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+      {isOpen && (
+        <p className="font-normal leading-5 text-sm text-[#737373] text-left w-full pt-2 pb-2">
+          {description}
+        </p>
+      )}
+    </button>
+  )
+}
+
 export default function GovernmentUkPage() {
   const { t } = useTranslation('government')
   const { currentLang } = useLocalizedPath()
@@ -81,6 +111,17 @@ export default function GovernmentUkPage() {
     ogUrl: canonicalUrl,
     canonicalUrl: canonicalUrl
   })
+
+  const [activeSgoCapabilityId, setActiveSgoCapabilityId] = useState<string | null>('outcomes')
+
+  const sgoCapabilities = [
+    { id: 'outcomes', title: t('government.uk.sgoCapabilities.items.outcomes.title'), description: t('government.uk.sgoCapabilities.items.outcomes.description') },
+    { id: 'cognitive', title: t('government.uk.sgoCapabilities.items.cognitive.title'), description: t('government.uk.sgoCapabilities.items.cognitive.description') },
+    { id: 'risk', title: t('government.uk.sgoCapabilities.items.risk.title'), description: t('government.uk.sgoCapabilities.items.risk.description') },
+    { id: 'execution', title: t('government.uk.sgoCapabilities.items.execution.title'), description: t('government.uk.sgoCapabilities.items.execution.description') },
+    { id: 'culture', title: t('government.uk.sgoCapabilities.items.culture.title'), description: t('government.uk.sgoCapabilities.items.culture.description') },
+    { id: 'fullStack', title: t('government.uk.sgoCapabilities.items.fullStack.title'), description: t('government.uk.sgoCapabilities.items.fullStack.description') },
+  ]
 
   return (
     <div className="flex flex-col items-start min-h-screen relative w-full">
@@ -403,6 +444,34 @@ export default function GovernmentUkPage() {
                 title={t('government.uk.whyFolio.items.sovereign.title')}
                 description={t('government.uk.whyFolio.items.sovereign.description')}
               />
+              <WhyFolioBlock
+                icon={refreshCcwIcon}
+                title={t('government.uk.whyFolio.items.lowMaintenance.title')}
+                description={t('government.uk.whyFolio.items.lowMaintenance.description')}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* SGO Capabilities Section */}
+        <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full bg-[#f5f5f5]">
+          <div className="flex flex-col gap-12 md:gap-16 items-center max-w-[768px] px-6 py-0 relative shrink-0 w-full">
+            <SectionHeader
+              title={t('government.uk.sgoCapabilities.title')}
+              description={t('government.uk.sgoCapabilities.description')}
+              align="center"
+              maxWidth="576px"
+            />
+            <div className="flex flex-col items-start w-full">
+              {sgoCapabilities.map((capability) => (
+                <SgoCapabilityItem
+                  key={capability.id}
+                  title={capability.title}
+                  description={capability.description}
+                  isOpen={activeSgoCapabilityId === capability.id}
+                  onClick={() => setActiveSgoCapabilityId(activeSgoCapabilityId === capability.id ? null : capability.id)}
+                />
+              ))}
             </div>
           </div>
         </section>

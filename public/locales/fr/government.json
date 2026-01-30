@@ -192,7 +192,7 @@
           },
           "experience": {
             "title": "Meilleure expérience",
-            "description": "Noté 4,8 étoiles sur l'App Store et 4,6 étoiles sur Google Play par les utilisateurs du monde entier."
+            "description": "Noté 4,7 étoiles sur l'App Store et 4,5 étoiles sur Google Play par les utilisateurs du monde entier."
           },
           "ai": {
             "title": "Technologie IA",
@@ -209,6 +209,40 @@
           "sovereign": {
             "title": "Technologie souveraine",
             "description": "Folio est une entreprise basée au Royaume-Uni au sein du Groupe SGO, fournissant des solutions d'identité numérique pour les gouvernements et les entreprises du monde entier."
+          },
+          "lowMaintenance": {
+            "title": "Faible maintenance",
+            "description": "Solution SaaS évolutive qui évolue en continu sans mises à niveau ni migrations coûteuses."
+          }
+        }
+      },
+      "sgoCapabilities": {
+        "title": "Pourquoi Folio / SGO",
+        "description": "Un partenaire éprouvé pour les programmes gouvernementaux critiques.",
+        "items": {
+          "outcomes": {
+            "title": "Des résultats, pas des produits",
+            "description": "Délais immuables, probabilité d'échec nulle. Le succès est invisible. Nous ne nous cachons pas derrière la portée du contrat. Nous fournissons le succès."
+          },
+          "cognitive": {
+            "title": "Réduire la charge cognitive",
+            "description": "La complexité, les spécifications incomplètes, les exigences ambiguës, les risques politiques et opérationnels sont notre spécialité. Nous déduisons ce qui est nécessaire au succès et le transformons en systèmes, workflows, logistique et formation."
+          },
+          "risk": {
+            "title": "Réduire le risque réputationnel",
+            "description": "Identification préventive des risques. Auditabilité intégrée. Discipline de livraison sous attaque juridique, médiatique et politique."
+          },
+          "execution": {
+            "title": "Moteur d'exécution éprouvé",
+            "description": "Machine logistique zéro échec mûrie pendant 25 ans. Outils logiciels, modèles opérationnels, systèmes de gouvernance et de gestion éprouvés pour réussir à chaque fois pour les implémentations critiques."
+          },
+          "culture": {
+            "title": "Résilience culturelle",
+            "description": "Le taux d'attrition le plus bas de l'industrie. Clarté morale et solides fondements éthiques résultant en des opérateurs engagés à long terme."
+          },
+          "fullStack": {
+            "title": "Véritable full stack",
+            "description": "Couche dispositifs physiques, couche logicielle, couche opérations terrain. Aucune excuse."
           }
         }
       },

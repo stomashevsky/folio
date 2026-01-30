@@ -192,7 +192,7 @@
           },
           "experience": {
             "title": "Esperienza migliore",
-            "description": "Valutato 4,8 stelle sull'App Store e 4,6 stelle su Google Play dagli utenti di tutto il mondo."
+            "description": "Valutato 4,7 stelle sull'App Store e 4,5 stelle su Google Play dagli utenti di tutto il mondo."
           },
           "ai": {
             "title": "Tecnologia IA",
@@ -209,6 +209,40 @@
           "sovereign": {
             "title": "Tecnologia sovrana",
             "description": "Folio è un'azienda con sede nel Regno Unito all'interno del Gruppo SGO, che fornisce soluzioni di identità digitale per governi e aziende in tutto il mondo."
+          },
+          "lowMaintenance": {
+            "title": "Bassa manutenzione",
+            "description": "Soluzione SaaS evergreen che evolve continuamente senza costosi aggiornamenti o migrazioni."
+          }
+        }
+      },
+      "sgoCapabilities": {
+        "title": "Perché Folio / SGO",
+        "description": "Un partner affidabile per programmi governativi mission-critical.",
+        "items": {
+          "outcomes": {
+            "title": "Risultati, non prodotti",
+            "description": "Scadenze immutabili, probabilità zero di fallimento. Il successo è invisibile. Non ci nascondiamo dietro l'ambito del contratto. Forniamo successo."
+          },
+          "cognitive": {
+            "title": "Ridurre il carico cognitivo",
+            "description": "Complessità, specifiche incomplete, requisiti ambigui, rischi politici e operativi sono la nostra specialità. Deduciamo ciò che serve per il successo e lo trasformiamo in sistemi, workflow, logistica e formazione."
+          },
+          "risk": {
+            "title": "Ridurre il rischio reputazionale",
+            "description": "Identificazione preventiva dei rischi. Auditabilità integrata. Disciplina di consegna sotto attacco legale, mediatico e politico."
+          },
+          "execution": {
+            "title": "Motore di esecuzione collaudato",
+            "description": "Macchina logistica a zero fallimenti maturata in 25 anni. Strumenti software, modelli operativi, sistemi di governance e gestione provati per avere successo ogni volta per implementazioni mission-critical."
+          },
+          "culture": {
+            "title": "Resilienza culturale",
+            "description": "Il tasso di abbandono più basso del settore. Chiarezza morale e solide basi etiche risultano in operatori impegnati a lungo termine."
+          },
+          "fullStack": {
+            "title": "Vero full stack",
+            "description": "Livello dispositivi fisici, livello software, livello operazioni sul campo. Nessuna scusa."
           }
         }
       },
