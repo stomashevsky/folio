@@ -30,6 +30,7 @@
       }
     },
     "caseStudy": {
+      "tagline": "Albania",
       "title": "Real results at national scale",
       "description": "How Albania enabled secure remote voter registration for its diaspora with Folio's digital identity wallet.",
       "imageAlt": "Albania case study map",
@@ -100,6 +101,10 @@
           "value": "£2",
           "description": "Per-citizen registration cost including verification and issuance of digital documents"
         }
+      },
+      "mckinsey": {
+        "quote": "\"Countries that adopt ecosystems with digital IDs will increase their GDP by 6% to 13% within 5 years.\"",
+        "source": "McKinsey Global Institute"
       },
       "govBenefits": {
         "title": "Benefits for government & country",

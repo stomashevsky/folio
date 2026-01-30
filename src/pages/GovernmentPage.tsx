@@ -134,25 +134,22 @@ export default function GovernmentPage() {
         </div>
       </section>
 
-      {/* Overview Section */}
-      <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
-        <div className="flex flex-col gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <SectionHeader
-            title={t('government.overview.title')}
-            description={t('government.overview.description')}
-            align="center"
-            maxWidth="576px"
-          />
-        </div>
-      </section>
-
       {/* UK Section */}
-      <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
+      <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
         {/* Desktop Layout */}
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+          <ImageWithPlaceholder
+            src={ukHero}
+            alt={t('government.ukSection.title')}
+            className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+            containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
+            loading="lazy"
+          />
           <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
             <div className="flex flex-col gap-2 items-start relative shrink-0 w-full">
-              <HeroTagline icon={landmarkIcon}>{t('government.ukSection.tagline')}</HeroTagline>
+              <span className="font-medium leading-5 text-sm text-[#737373]">
+                {t('government.ukSection.tagline')}
+              </span>
               <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
                 {t('government.ukSection.title')}
               </h2>
@@ -174,19 +171,14 @@ export default function GovernmentPage() {
               </Button>
             </div>
           </div>
-          <ImageWithPlaceholder
-            src={ukHero}
-            alt={t('government.ukSection.title')}
-            className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-            containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
-            loading="lazy"
-          />
         </div>
 
         {/* Mobile Layout */}
         <div className="flex md:hidden flex-col gap-8 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-            <HeroTagline icon={landmarkIcon}>{t('government.ukSection.tagline')}</HeroTagline>
+            <span className="font-medium leading-5 text-sm text-[#737373]">
+              {t('government.ukSection.tagline')}
+            </span>
             <h2 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
               {t('government.ukSection.title')}
             </h2>
@@ -217,42 +209,8 @@ export default function GovernmentPage() {
         </div>
       </section>
 
-      {/* Gov Features Section */}
-      <section id="gov-features" className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
-        <div className="flex flex-col gap-12 md:gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex flex-col gap-10 md:gap-12 items-center relative shrink-0 w-full">
-            <SectionHeader
-              title={t('government.features.title')}
-              description={t('government.features.description')}
-              align="center"
-              maxWidth="576px"
-            />
-            <div className="flex flex-col md:flex-row gap-11 md:gap-6 items-start relative shrink-0 w-full">
-              <FeatureBlock
-                icon="shield-check"
-                title={t('government.features.standards.title')}
-                description={t('government.features.standards.description')}
-                align="left"
-              />
-              <FeatureBlock
-                icon="qr-code"
-                title={t('government.features.issuance.title')}
-                description={t('government.features.issuance.description')}
-                align="left"
-              />
-              <FeatureBlock
-                icon="lock-keyhole"
-                title={t('government.features.presentation.title')}
-                description={t('government.features.presentation.description')}
-                align="left"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Case Study Section */}
-      <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
+      <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
         {/* Desktop Layout */}
         <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
           <ImageWithPlaceholder
@@ -263,11 +221,16 @@ export default function GovernmentPage() {
             loading="lazy"
           />
           <div className="flex flex-1 flex-col gap-12 items-start relative min-w-0">
-            <SectionHeader
-              title={t('government.caseStudy.title')}
-              description={t('government.caseStudy.description')}
-              align="left"
-            />
+            <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
+              <span className="font-medium leading-5 text-sm text-[#737373]">
+                {t('government.caseStudy.tagline')}
+              </span>
+              <SectionHeader
+                title={t('government.caseStudy.title')}
+                description={t('government.caseStudy.description')}
+                align="left"
+              />
+            </div>
             <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
               {/* Challenge */}
               <div className="flex flex-col gap-1 items-start leading-6 relative shrink-0 text-base w-full">
@@ -348,11 +311,16 @@ export default function GovernmentPage() {
         {/* Mobile Layout */}
         <div className="flex md:hidden flex-col gap-12 items-start justify-center max-w-[672px] px-6 py-0 relative shrink-0 w-full">
           <div className="flex flex-col gap-10 items-start relative shrink-0 w-full">
-            <SectionHeader
-              title={t('government.caseStudy.title')}
-              description={t('government.caseStudy.description')}
-              align="left"
-            />
+            <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
+              <span className="font-medium leading-5 text-sm text-[#737373]">
+                {t('government.caseStudy.tagline')}
+              </span>
+              <SectionHeader
+                title={t('government.caseStudy.title')}
+                description={t('government.caseStudy.description')}
+                align="left"
+              />
+            </div>
             <div className="flex flex-col gap-8 items-start relative shrink-0 w-full">
               {/* Challenge */}
               <div className="flex flex-col gap-1 items-start leading-6 relative shrink-0 text-base w-full">
@@ -434,6 +402,52 @@ export default function GovernmentPage() {
             className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
             containerClassName="aspect-[240/426.67] relative rounded-2xl shrink-0 w-full"
             loading="lazy"
+          />
+        </div>
+      </section>
+
+      {/* Gov Features Section */}
+      <section id="gov-features" className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
+        <div className="flex flex-col gap-12 md:gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+          <div className="flex flex-col gap-10 md:gap-12 items-center relative shrink-0 w-full">
+            <SectionHeader
+              title={t('government.features.title')}
+              description={t('government.features.description')}
+              align="center"
+              maxWidth="576px"
+            />
+            <div className="flex flex-col md:flex-row gap-11 md:gap-6 items-start relative shrink-0 w-full">
+              <FeatureBlock
+                icon="shield-check"
+                title={t('government.features.standards.title')}
+                description={t('government.features.standards.description')}
+                align="left"
+              />
+              <FeatureBlock
+                icon="qr-code"
+                title={t('government.features.issuance.title')}
+                description={t('government.features.issuance.description')}
+                align="left"
+              />
+              <FeatureBlock
+                icon="lock-keyhole"
+                title={t('government.features.presentation.title')}
+                description={t('government.features.presentation.description')}
+                align="left"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Overview Section */}
+      <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
+        <div className="flex flex-col gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+          <SectionHeader
+            title={t('government.overview.title')}
+            description={t('government.overview.description')}
+            align="center"
+            maxWidth="576px"
           />
         </div>
       </section>

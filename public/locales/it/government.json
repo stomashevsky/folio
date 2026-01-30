@@ -30,6 +30,7 @@
       }
     },
     "caseStudy": {
+      "tagline": "Albania",
       "title": "Risultati reali su scala nazionale",
       "description": "Come l'Albania ha permesso la registrazione elettorale remota sicura per la sua diaspora con il portafoglio di identità digitale Folio.",
       "imageAlt": "Mappa del caso studio Albania",
@@ -100,6 +101,10 @@
           "value": "£2",
           "description": "Costo di registrazione per cittadino inclusa verifica ed emissione di documenti digitali"
         }
+      },
+      "mckinsey": {
+        "quote": "\"I paesi che adottano ecosistemi con identità digitali aumentano il loro PIL dal 6% al 13% in 5 anni.\"",
+        "source": "McKinsey Global Institute"
       },
       "govBenefits": {
         "title": "Vantaggi per il governo e il paese",

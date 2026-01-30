@@ -30,6 +30,7 @@
             }
         },
         "caseStudy": {
+            "tagline": "Albania",
             "title": "Resultados a nivel gubernamental",
             "description": "Cómo Albania habilitó el registro de votantes remoto para su diáspora con la billetera de identidad digital de Folio.",
             "imageAlt": "Mapa del caso de estudio de Albania",
@@ -100,6 +101,10 @@
                     "value": "£2",
                     "description": "Costo de registro por ciudadano incluyendo verificación y emisión de documentos digitales"
                 }
+            },
+            "mckinsey": {
+                "quote": "\"Los países que adoptan ecosistemas con IDs digitales aumentan su PIB entre un 6% y un 13% en 5 años.\"",
+                "source": "McKinsey Global Institute"
             },
             "govBenefits": {
                 "title": "Beneficios para el gobierno y el país",

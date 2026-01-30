@@ -30,6 +30,7 @@
       }
     },
     "caseStudy": {
+      "tagline": "Albanie",
       "title": "Des résultats réels à l'échelle nationale",
       "description": "Comment l'Albanie a permis l'inscription sécurisée des électeurs de la diaspora à distance avec le portefeuille d'identité numérique Folio.",
       "imageAlt": "Carte de l'étude de cas Albanie",
@@ -100,6 +101,10 @@
           "value": "£2",
           "description": "Coût d'enregistrement par citoyen incluant la vérification et l'émission de documents numériques"
         }
+      },
+      "mckinsey": {
+        "quote": "\"Les pays qui adoptent des écosystèmes avec des identités numériques augmentent leur PIB de 6 % à 13 % en 5 ans.\"",
+        "source": "McKinsey Global Institute"
       },
       "govBenefits": {
         "title": "Avantages pour le gouvernement et le pays",

@@ -30,6 +30,7 @@
       }
     },
     "caseStudy": {
+      "tagline": "アルバニア",
       "title": "国家規模での実績",
       "description": "アルバニアがFolioのデジタルIDウォレットで在外国民の安全なリモート有権者登録を実現した事例。",
       "imageAlt": "アルバニア事例研究マップ",
@@ -100,6 +101,10 @@
           "value": "£2",
           "description": "市民1人あたりの登録コスト。検証とデジタル文書発行を含む"
         }
+      },
+      "mckinsey": {
+        "quote": "「デジタルIDエコシステムを導入した国は、5年以内にGDPが6%〜13%増加する。」",
+        "source": "McKinsey Global Institute"
       },
       "govBenefits": {
         "title": "政府と国へのメリット",

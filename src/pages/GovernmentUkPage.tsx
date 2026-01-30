@@ -1,10 +1,12 @@
 import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import { SectionHeader, Button, FeatureBlock, ToolCard } from '../components/ui'
+import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
 import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
 import { useLocalizedPath } from '../i18n/useLocalizedPath'
+import ukHero from '../assets/images/uk-hero.png'
 
 // Icons for govBenefits cards
 import building2Icon from '../assets/icons/Building2.svg'
@@ -80,6 +82,14 @@ export default function GovernmentUkPage() {
             >
               {t('government.uk.cta.button')}
             </Button>
+            <ImageWithPlaceholder
+              src={ukHero}
+              alt={t('government.uk.hero.title')}
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="w-full max-w-[768px] relative rounded-2xl aspect-[16/9]"
+              fetchPriority="high"
+              loading="eager"
+            />
           </div>
         </section>
 
@@ -134,6 +144,18 @@ export default function GovernmentUkPage() {
                 />
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* McKinsey Quote Section */}
+        <section className="bg-white flex flex-col items-center px-0 py-16 md:py-24 relative w-full">
+          <div className="flex flex-col gap-4 items-center max-w-[672px] px-6 w-full">
+            <p className="font-medium leading-7 md:leading-7 text-lg md:text-xl text-[#0a0a0a] text-center">
+              {t('government.uk.mckinsey.quote')}
+            </p>
+            <span className="font-normal text-base text-[#737373]">
+              {t('government.uk.mckinsey.source')}
+            </span>
           </div>
         </section>
 
