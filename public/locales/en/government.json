@@ -68,6 +68,132 @@
     "globalPartners": {
       "title": "Global Partners",
       "description": "Folio supports governments worldwide with secure, scalable identity solutions."
+    },
+    "ukSection": {
+      "title": "Digital identity for the United Kingdom",
+      "description": "A public-private partnership to deliver national digital identity infrastructure, providing sovereign technology that serves citizens and government alike.",
+      "features": {
+        "sovereign": {
+          "title": "Sovereign infrastructure",
+          "description": "UK-based technology that provides a trusted alternative to global big-tech platforms for national identity services."
+        },
+        "growth": {
+          "title": "GDP growth",
+          "description": "Countries with digital identity ecosystems see GDP increases of 6% to 13% within five years, according to McKinsey Global Institute."
+        },
+        "citizens": {
+          "title": "Citizen benefits",
+          "description": "Enhanced privacy, convenience and protection against identity fraud with clear control over personal data."
+        }
+      },
+      "button": "Learn more"
+    },
+    "uk": {
+      "meta": {
+        "title": "UK Digital Identity | Folio",
+        "description": "Public-private partnership for UK digital credentials and government wallet. Sovereign technology delivering better services for citizens and government."
+      },
+      "hero": {
+        "tagline": "United Kingdom",
+        "title": "UK digital credentials & government wallet",
+        "description": "A public-private partnership proposal to create digital identity issuance, distribution, storage and validation services for all British citizens and businesses, covering the public and private sectors."
+      },
+      "govBenefits": {
+        "title": "Benefits for government & country",
+        "description": "Digital identity infrastructure delivers measurable value for the nation.",
+        "items": {
+          "services": {
+            "title": "Better government services",
+            "description": "Streamlined digital services for citizens and businesses, reducing friction and improving accessibility across all public sector touchpoints."
+          },
+          "gdp": {
+            "title": "GDP growth",
+            "description": "Countries that adopt ecosystems with digital IDs increase their GDP by 6% to 13% within five years, according to McKinsey Global Institute."
+          },
+          "revenue": {
+            "title": "Revenue center",
+            "description": "Transform identity services from a cost center into a revenue-generating asset for the government."
+          },
+          "security": {
+            "title": "National security",
+            "description": "Strengthen national security through trusted, verifiable digital identities that reduce fraud and increase accountability."
+          },
+          "trust": {
+            "title": "Increased trust",
+            "description": "Build trust in all transactions across public and private sectors with cryptographically verified credentials."
+          },
+          "ai": {
+            "title": "Enabling technology for AI",
+            "description": "Provide the identity foundation needed for the AI age, enabling secure and trusted interactions in an increasingly automated world."
+          }
+        }
+      },
+      "citizenBenefits": {
+        "title": "Benefits for citizens",
+        "description": "Digital identity that puts people first.",
+        "items": {
+          "convenience": {
+            "title": "Enhanced convenience",
+            "description": "Access government and private services quickly and easily from any device, anywhere."
+          },
+          "privacy": {
+            "title": "Enhanced trust and privacy",
+            "description": "Know exactly what data is shared and with whom, with full transparency and control."
+          },
+          "control": {
+            "title": "Clear control over personal data",
+            "description": "Own and manage your digital identity with the ability to grant and revoke access at any time."
+          },
+          "transactions": {
+            "title": "Fast, secure transactions",
+            "description": "Complete identity verification in seconds with both government and private sector services."
+          },
+          "kyc": {
+            "title": "One-click KYC",
+            "description": "Simplify know-your-customer processes across banking, finance and regulated industries."
+          },
+          "fraud": {
+            "title": "Protection against identity fraud",
+            "description": "Cryptographic security and biometric verification protect against identity theft and fraud."
+          }
+        }
+      },
+      "whyFolio": {
+        "title": "Why Folio",
+        "description": "Sovereign technology that can compete with Apple and Google.",
+        "items": {
+          "global": {
+            "title": "Global reach",
+            "description": "Support for 10,000+ identity documents from countries worldwide."
+          },
+          "experience": {
+            "title": "Better experience",
+            "description": "Rated 4.8 stars on App Store and 4.6 stars on Google Play by users globally."
+          },
+          "ai": {
+            "title": "AI technology",
+            "description": "Highest levels of identity assurance powered by advanced AI verification."
+          },
+          "private": {
+            "title": "Private by definition",
+            "description": "Data is user-owned and controlled. Privacy is built into the architecture, not added on."
+          },
+          "frictionless": {
+            "title": "Frictionless",
+            "description": "Quick registration and multiple uses of identity across services."
+          },
+          "sovereign": {
+            "title": "Sovereign technology",
+            "description": "Folio is a UK-based company within the SGO Group, delivering digital identity solutions for governments and enterprises worldwide."
+          }
+        }
+      },
+      "cta": {
+        "title": "Ready to discuss?",
+        "description": "Learn how Folio can support the UK's digital identity ambitions.",
+        "button": "Get in touch",
+        "playgroundButton": "Explore Playground"
+      }
     }
   },
   "playground": {

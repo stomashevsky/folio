@@ -68,6 +68,132 @@
     "globalPartners": {
       "title": "グローバルパートナー",
       "description": "Folioは世界中の政府に安全でスケーラブルなIDソリューションを提供しています。"
+    },
+    "ukSection": {
+      "title": "英国向けデジタルID",
+      "description": "市民と政府の両方に貢献するソブリン技術を提供する、国家デジタルIDインフラのための官民パートナーシップ。",
+      "features": {
+        "sovereign": {
+          "title": "ソブリンインフラ",
+          "description": "国家IDサービスにおいて、グローバルビッグテックプラットフォームに代わる信頼できる選択肢を提供する英国拠点の技術。"
+        },
+        "growth": {
+          "title": "GDP成長",
+          "description": "McKinsey Global Instituteによると、デジタルIDエコシステムを持つ国は5年以内にGDPが6%から13%増加。"
+        },
+        "citizens": {
+          "title": "市民へのメリット",
+          "description": "個人データの明確な管理による、プライバシー、利便性、ID詐欺からの保護の向上。"
+        }
+      },
+      "button": "詳細を見る"
+    },
+    "uk": {
+      "meta": {
+        "title": "英国デジタルID | Folio",
+        "description": "英国デジタルクレデンシャルと政府ウォレットのための官民パートナーシップ。市民と政府により良いサービスを提供するソブリン技術。"
+      },
+      "hero": {
+        "tagline": "英国",
+        "title": "英国デジタルクレデンシャルと政府ウォレット",
+        "description": "すべての英国市民と企業向けに、公共・民間セクターをカバーするデジタルID発行、配布、保管、検証サービスを創設するための官民パートナーシップ提案。"
+      },
+      "govBenefits": {
+        "title": "政府と国へのメリット",
+        "description": "デジタルIDインフラは国に測定可能な価値をもたらします。",
+        "items": {
+          "services": {
+            "title": "より良い行政サービス",
+            "description": "市民と企業向けの効率化されたデジタルサービス。すべての公共セクター接点での摩擦を削減し、アクセシビリティを向上。"
+          },
+          "gdp": {
+            "title": "GDP成長",
+            "description": "McKinsey Global Instituteによると、デジタルIDエコシステムを採用した国は5年以内にGDPが6%から13%増加。"
+          },
+          "revenue": {
+            "title": "収益センター",
+            "description": "IDサービスをコストセンターから政府の収益創出資産へ転換。"
+          },
+          "security": {
+            "title": "国家安全保障",
+            "description": "詐欺を減少させ説明責任を高める、信頼性のある検証可能なデジタルIDによる国家安全保障の強化。"
+          },
+          "trust": {
+            "title": "信頼の向上",
+            "description": "暗号化検証されたクレデンシャルにより、公共・民間セクターのすべての取引における信頼を構築。"
+          },
+          "ai": {
+            "title": "AI時代の基盤技術",
+            "description": "自動化が進む世界で安全で信頼できるインタラクションを可能にする、AI時代に必要なID基盤を提供。"
+          }
+        }
+      },
+      "citizenBenefits": {
+        "title": "市民へのメリット",
+        "description": "人を第一に考えるデジタルID。",
+        "items": {
+          "convenience": {
+            "title": "利便性の向上",
+            "description": "どこからでも、どのデバイスからでも、行政・民間サービスに迅速かつ簡単にアクセス。"
+          },
+          "privacy": {
+            "title": "信頼とプライバシーの向上",
+            "description": "完全な透明性と管理により、どのデータが誰と共有されるかを正確に把握。"
+          },
+          "control": {
+            "title": "個人データの明確な管理",
+            "description": "いつでもアクセス権を付与・取り消しできる、デジタルIDの所有と管理。"
+          },
+          "transactions": {
+            "title": "迅速で安全な取引",
+            "description": "政府・民間サービスの両方で数秒で本人確認を完了。"
+          },
+          "kyc": {
+            "title": "ワンクリックKYC",
+            "description": "銀行、金融、規制対象業界での顧客確認プロセスを簡素化。"
+          },
+          "fraud": {
+            "title": "ID詐欺からの保護",
+            "description": "暗号化セキュリティと生体認証がなりすましや詐欺から保護。"
+          }
+        }
+      },
+      "whyFolio": {
+        "title": "なぜFolioか",
+        "description": "AppleやGoogleと競争できるソブリン技術。",
+        "items": {
+          "global": {
+            "title": "グローバルリーチ",
+            "description": "世界中の国から10,000以上のID書類をサポート。"
+          },
+          "experience": {
+            "title": "優れた体験",
+            "description": "世界中のユーザーからApp Storeで4.8、Google Playで4.6の評価。"
+          },
+          "ai": {
+            "title": "AI技術",
+            "description": "高度なAI検証による最高レベルのID保証。"
+          },
+          "private": {
+            "title": "本質的なプライバシー",
+            "description": "データはユーザーが所有・管理。プライバシーはアーキテクチャに組み込まれており、後付けではありません。"
+          },
+          "frictionless": {
+            "title": "シームレス",
+            "description": "迅速な登録とサービス間でのID多重利用。"
+          },
+          "sovereign": {
+            "title": "ソブリン技術",
+            "description": "FolioはSGOグループ内の英国拠点企業であり、世界中の政府と企業にデジタルIDソリューションを提供。"
+          }
+        }
+      },
+      "cta": {
+        "title": "ご相談の準備はできていますか？",
+        "description": "Folioが英国のデジタルID構想をどのようにサポートできるかをご覧ください。",
+        "button": "お問い合わせ",
+        "playgroundButton": "Playgroundを試す"
+      }
     }
   },
   "playground": {

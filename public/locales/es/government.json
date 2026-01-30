@@ -68,6 +68,132 @@
         "globalPartners": {
             "title": "Socios globales",
             "description": "Folio apoya a gobiernos de todo el mundo con soluciones de identidad seguras y escalables."
+        },
+        "ukSection": {
+            "title": "Identidad digital para el Reino Unido",
+            "description": "Una asociación público-privada para proporcionar infraestructura de identidad digital nacional, ofreciendo tecnología soberana que sirve tanto a ciudadanos como al gobierno.",
+            "features": {
+                "sovereign": {
+                    "title": "Infraestructura soberana",
+                    "description": "Tecnología con sede en el Reino Unido que ofrece una alternativa de confianza a las plataformas globales de big-tech para servicios de identidad nacional."
+                },
+                "growth": {
+                    "title": "Crecimiento del PIB",
+                    "description": "Los países con ecosistemas de identidad digital ven aumentos del PIB del 6% al 13% en cinco años, según McKinsey Global Institute."
+                },
+                "citizens": {
+                    "title": "Beneficios para los ciudadanos",
+                    "description": "Mayor privacidad, comodidad y protección contra el fraude de identidad con control claro sobre los datos personales."
+                }
+            },
+            "button": "Saber más"
+        },
+        "uk": {
+            "meta": {
+                "title": "Identidad digital del Reino Unido | Folio",
+                "description": "Asociación público-privada para credenciales digitales del Reino Unido y billetera gubernamental. Tecnología soberana que ofrece mejores servicios para ciudadanos y gobierno."
+            },
+            "hero": {
+                "tagline": "Reino Unido",
+                "title": "Credenciales digitales y billetera gubernamental del Reino Unido",
+                "description": "Una propuesta de asociación público-privada para crear servicios de emisión, distribución, almacenamiento y validación de identidad digital para todos los ciudadanos y empresas británicos, cubriendo los sectores público y privado."
+            },
+            "govBenefits": {
+                "title": "Beneficios para el gobierno y el país",
+                "description": "La infraestructura de identidad digital aporta valor medible para la nación.",
+                "items": {
+                    "services": {
+                        "title": "Mejores servicios gubernamentales",
+                        "description": "Servicios digitales optimizados para ciudadanos y empresas, reduciendo la fricción y mejorando la accesibilidad en todos los puntos de contacto del sector público."
+                    },
+                    "gdp": {
+                        "title": "Crecimiento del PIB",
+                        "description": "Los países que adoptan ecosistemas con IDs digitales aumentan su PIB entre un 6% y un 13% en cinco años, según McKinsey Global Institute."
+                    },
+                    "revenue": {
+                        "title": "Centro de ingresos",
+                        "description": "Transformar los servicios de identidad de un centro de costos a un activo generador de ingresos para el gobierno."
+                    },
+                    "security": {
+                        "title": "Seguridad nacional",
+                        "description": "Fortalecer la seguridad nacional mediante identidades digitales verificables que reducen el fraude y aumentan la responsabilidad."
+                    },
+                    "trust": {
+                        "title": "Mayor confianza",
+                        "description": "Generar confianza en todas las transacciones de los sectores público y privado con credenciales verificadas criptográficamente."
+                    },
+                    "ai": {
+                        "title": "Tecnología habilitadora para la IA",
+                        "description": "Proporcionar la base de identidad necesaria para la era de la IA, permitiendo interacciones seguras y confiables en un mundo cada vez más automatizado."
+                    }
+                }
+            },
+            "citizenBenefits": {
+                "title": "Beneficios para los ciudadanos",
+                "description": "Identidad digital que pone a las personas primero.",
+                "items": {
+                    "convenience": {
+                        "title": "Mayor comodidad",
+                        "description": "Accede a servicios gubernamentales y privados de forma rápida y fácil desde cualquier dispositivo, en cualquier lugar."
+                    },
+                    "privacy": {
+                        "title": "Mayor confianza y privacidad",
+                        "description": "Sabe exactamente qué datos se comparten y con quién, con total transparencia y control."
+                    },
+                    "control": {
+                        "title": "Control claro sobre los datos personales",
+                        "description": "Posee y gestiona tu identidad digital con la capacidad de otorgar y revocar acceso en cualquier momento."
+                    },
+                    "transactions": {
+                        "title": "Transacciones rápidas y seguras",
+                        "description": "Completa la verificación de identidad en segundos tanto con servicios gubernamentales como privados."
+                    },
+                    "kyc": {
+                        "title": "KYC con un clic",
+                        "description": "Simplifica los procesos de conoce a tu cliente en banca, finanzas e industrias reguladas."
+                    },
+                    "fraud": {
+                        "title": "Protección contra el fraude de identidad",
+                        "description": "La seguridad criptográfica y la verificación biométrica protegen contra el robo y fraude de identidad."
+                    }
+                }
+            },
+            "whyFolio": {
+                "title": "Por qué Folio",
+                "description": "Tecnología soberana que puede competir con Apple y Google.",
+                "items": {
+                    "global": {
+                        "title": "Alcance global",
+                        "description": "Soporte para más de 10.000 documentos de identidad de países de todo el mundo."
+                    },
+                    "experience": {
+                        "title": "Mejor experiencia",
+                        "description": "Calificado con 4.8 estrellas en App Store y 4.6 estrellas en Google Play por usuarios de todo el mundo."
+                    },
+                    "ai": {
+                        "title": "Tecnología de IA",
+                        "description": "Los más altos niveles de garantía de identidad impulsados por verificación avanzada de IA."
+                    },
+                    "private": {
+                        "title": "Privado por definición",
+                        "description": "Los datos son propiedad y control del usuario. La privacidad está integrada en la arquitectura, no añadida."
+                    },
+                    "frictionless": {
+                        "title": "Sin fricciones",
+                        "description": "Registro rápido y múltiples usos de la identidad en diferentes servicios."
+                    },
+                    "sovereign": {
+                        "title": "Tecnología soberana",
+                        "description": "Folio es una empresa con sede en el Reino Unido dentro del Grupo SGO, que ofrece soluciones de identidad digital para gobiernos y empresas de todo el mundo."
+                    }
+                }
+            },
+            "cta": {
+                "title": "¿Listo para conversar?",
+                "description": "Descubre cómo Folio puede apoyar las ambiciones de identidad digital del Reino Unido.",
+                "button": "Contáctanos",
+                "playgroundButton": "Explorar Playground"
+            }
         }
     },
     "playground": {

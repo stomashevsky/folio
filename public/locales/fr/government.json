@@ -68,6 +68,132 @@
     "globalPartners": {
       "title": "Partenaires mondiaux",
       "description": "Folio soutient les gouvernements du monde entier avec des solutions d'identité sécurisées et évolutives."
+    },
+    "ukSection": {
+      "title": "Identité numérique pour le Royaume-Uni",
+      "description": "Un partenariat public-privé pour fournir une infrastructure d'identité numérique nationale, offrant une technologie souveraine au service des citoyens et du gouvernement.",
+      "features": {
+        "sovereign": {
+          "title": "Infrastructure souveraine",
+          "description": "Une technologie basée au Royaume-Uni qui offre une alternative de confiance aux plateformes big-tech mondiales pour les services d'identité nationale."
+        },
+        "growth": {
+          "title": "Croissance du PIB",
+          "description": "Les pays dotés d'écosystèmes d'identité numérique voient leur PIB augmenter de 6 % à 13 % en cinq ans, selon McKinsey Global Institute."
+        },
+        "citizens": {
+          "title": "Avantages pour les citoyens",
+          "description": "Confidentialité renforcée, commodité et protection contre la fraude à l'identité avec un contrôle clair sur les données personnelles."
+        }
+      },
+      "button": "En savoir plus"
+    },
+    "uk": {
+      "meta": {
+        "title": "Identité numérique UK | Folio",
+        "description": "Partenariat public-privé pour les credentials numériques britanniques et le portefeuille gouvernemental. Technologie souveraine offrant de meilleurs services aux citoyens et au gouvernement."
+      },
+      "hero": {
+        "tagline": "Royaume-Uni",
+        "title": "Credentials numériques et portefeuille gouvernemental UK",
+        "description": "Une proposition de partenariat public-privé pour créer des services d'émission, de distribution, de stockage et de validation d'identité numérique pour tous les citoyens et entreprises britanniques, couvrant les secteurs public et privé."
+      },
+      "govBenefits": {
+        "title": "Avantages pour le gouvernement et le pays",
+        "description": "L'infrastructure d'identité numérique apporte une valeur mesurable pour la nation.",
+        "items": {
+          "services": {
+            "title": "Meilleurs services gouvernementaux",
+            "description": "Services numériques simplifiés pour les citoyens et les entreprises, réduisant les frictions et améliorant l'accessibilité à tous les points de contact du secteur public."
+          },
+          "gdp": {
+            "title": "Croissance du PIB",
+            "description": "Les pays qui adoptent des écosystèmes avec des identités numériques augmentent leur PIB de 6 % à 13 % en cinq ans, selon McKinsey Global Institute."
+          },
+          "revenue": {
+            "title": "Centre de revenus",
+            "description": "Transformer les services d'identité d'un centre de coûts en un actif générateur de revenus pour le gouvernement."
+          },
+          "security": {
+            "title": "Sécurité nationale",
+            "description": "Renforcer la sécurité nationale grâce à des identités numériques de confiance et vérifiables qui réduisent la fraude et augmentent la responsabilité."
+          },
+          "trust": {
+            "title": "Confiance accrue",
+            "description": "Construire la confiance dans toutes les transactions des secteurs public et privé avec des credentials vérifiés cryptographiquement."
+          },
+          "ai": {
+            "title": "Technologie habilitante pour l'IA",
+            "description": "Fournir la base d'identité nécessaire à l'ère de l'IA, permettant des interactions sécurisées et fiables dans un monde de plus en plus automatisé."
+          }
+        }
+      },
+      "citizenBenefits": {
+        "title": "Avantages pour les citoyens",
+        "description": "Une identité numérique qui place les personnes au premier plan.",
+        "items": {
+          "convenience": {
+            "title": "Commodité renforcée",
+            "description": "Accédez aux services gouvernementaux et privés rapidement et facilement depuis n'importe quel appareil, n'importe où."
+          },
+          "privacy": {
+            "title": "Confiance et confidentialité renforcées",
+            "description": "Sachez exactement quelles données sont partagées et avec qui, avec une transparence et un contrôle total."
+          },
+          "control": {
+            "title": "Contrôle clair sur les données personnelles",
+            "description": "Possédez et gérez votre identité numérique avec la possibilité d'accorder et de révoquer l'accès à tout moment."
+          },
+          "transactions": {
+            "title": "Transactions rapides et sécurisées",
+            "description": "Effectuez la vérification d'identité en quelques secondes avec les services gouvernementaux et privés."
+          },
+          "kyc": {
+            "title": "KYC en un clic",
+            "description": "Simplifiez les processus de connaissance client dans la banque, la finance et les industries réglementées."
+          },
+          "fraud": {
+            "title": "Protection contre la fraude à l'identité",
+            "description": "La sécurité cryptographique et la vérification biométrique protègent contre le vol et la fraude d'identité."
+          }
+        }
+      },
+      "whyFolio": {
+        "title": "Pourquoi Folio",
+        "description": "Une technologie souveraine capable de concurrencer Apple et Google.",
+        "items": {
+          "global": {
+            "title": "Portée mondiale",
+            "description": "Prise en charge de plus de 10 000 documents d'identité de pays du monde entier."
+          },
+          "experience": {
+            "title": "Meilleure expérience",
+            "description": "Noté 4,8 étoiles sur l'App Store et 4,6 étoiles sur Google Play par les utilisateurs du monde entier."
+          },
+          "ai": {
+            "title": "Technologie IA",
+            "description": "Les plus hauts niveaux d'assurance d'identité alimentés par une vérification IA avancée."
+          },
+          "private": {
+            "title": "Privé par définition",
+            "description": "Les données appartiennent et sont contrôlées par l'utilisateur. La confidentialité est intégrée à l'architecture, pas ajoutée."
+          },
+          "frictionless": {
+            "title": "Sans friction",
+            "description": "Inscription rapide et utilisations multiples de l'identité à travers les services."
+          },
+          "sovereign": {
+            "title": "Technologie souveraine",
+            "description": "Folio est une entreprise basée au Royaume-Uni au sein du Groupe SGO, fournissant des solutions d'identité numérique pour les gouvernements et les entreprises du monde entier."
+          }
+        }
+      },
+      "cta": {
+        "title": "Prêt à en discuter ?",
+        "description": "Découvrez comment Folio peut soutenir les ambitions d'identité numérique du Royaume-Uni.",
+        "button": "Nous contacter",
+        "playgroundButton": "Explorer le Playground"
+      }
     }
   },
   "playground": {

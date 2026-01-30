@@ -494,6 +494,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/government/playground/"/>
   </url>
   <url>
+    <loc>https://folio.id/en/government/uk/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/government/uk/"/>
+  </url>
+  <url>
     <loc>https://folio.id/en/id-wallet-app/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/id-wallet-app/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/id-wallet-app/"/>
@@ -1174,6 +1183,15 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/government/playground/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/government/playground/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/government/playground/"/>
+  </url>
+  <url>
+    <loc>https://folio.id/es/government/uk/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/government/uk/"/>
   </url>
   <url>
     <loc>https://folio.id/es/id-wallet-app/</loc>
@@ -1858,6 +1876,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/government/playground/"/>
   </url>
   <url>
+    <loc>https://folio.id/fr/government/uk/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/government/uk/"/>
+  </url>
+  <url>
     <loc>https://folio.id/fr/id-wallet-app/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/id-wallet-app/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/id-wallet-app/"/>
@@ -2540,6 +2567,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/government/playground/"/>
   </url>
   <url>
+    <loc>https://folio.id/it/government/uk/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/government/uk/"/>
+  </url>
+  <url>
     <loc>https://folio.id/it/id-wallet-app/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/id-wallet-app/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/id-wallet-app/"/>
@@ -3220,6 +3256,15 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/government/playground/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/government/playground/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/government/playground/"/>
+  </url>
+  <url>
+    <loc>https://folio.id/ja/government/uk/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://folio.id/en/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://folio.id/es/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://folio.id/ja/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://folio.id/it/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://folio.id/fr/government/uk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://folio.id/en/government/uk/"/>
   </url>
   <url>
     <loc>https://folio.id/ja/id-wallet-app/</loc>

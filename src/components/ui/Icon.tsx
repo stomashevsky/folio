@@ -16,6 +16,16 @@ import copyPlusIcon from '../../assets/icons/CopyPlus.svg'
 import qrCodeIcon from '../../assets/icons/QrCode.svg'
 import refreshCwIcon from '../../assets/icons/RefreshCw.svg'
 import arrowRightIcon from '../../assets/icons/ArrowRight.svg'
+import landmarkIcon from '../../assets/icons/Landmark.svg'
+import barChart4Icon from '../../assets/icons/BarChart4.svg'
+import userCheckIcon from '../../assets/icons/UserCheck.svg'
+import globeIcon from '../../assets/icons/Globe.svg'
+import sparklesIcon from '../../assets/icons/Sparkles.svg'
+import zapIcon from '../../assets/icons/Zap.svg'
+import building2Icon from '../../assets/icons/Building2.svg'
+import handCoinsIcon from '../../assets/icons/HandCoins.svg'
+import heartHandshakeIcon from '../../assets/icons/HeartHandshake.svg'
+import creditCardIcon from '../../assets/icons/CreditCard.svg'
 
 export type IconName = 
   | 'fingerprint' 
@@ -36,6 +46,16 @@ export type IconName =
   | 'qr-code'
   | 'refresh-cw'
   | 'arrow-right'
+  | 'landmark'
+  | 'bar-chart'
+  | 'user-check'
+  | 'globe'
+  | 'sparkles'
+  | 'zap'
+  | 'building'
+  | 'hand-coins'
+  | 'heart-handshake'
+  | 'credit-card'
 
 interface IconProps {
   name: IconName
@@ -62,6 +82,16 @@ const iconMap: Record<IconName, string> = {
   'qr-code': qrCodeIcon,
   'refresh-cw': refreshCwIcon,
   'arrow-right': arrowRightIcon,
+  'landmark': landmarkIcon,
+  'bar-chart': barChart4Icon,
+  'user-check': userCheckIcon,
+  'globe': globeIcon,
+  'sparkles': sparklesIcon,
+  'zap': zapIcon,
+  'building': building2Icon,
+  'hand-coins': handCoinsIcon,
+  'heart-handshake': heartHandshakeIcon,
+  'credit-card': creditCardIcon,
 }
 
 export default function Icon({ name, className = '', size = 20 }: IconProps) {
