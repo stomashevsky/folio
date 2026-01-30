@@ -9,7 +9,7 @@ import { getOgImageUrl } from '../configs/ogImages'
 import { SkipToContentLink, Button } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
 import { useLocalizedPath } from '../i18n/useLocalizedPath'
-import governmentSolutionsHero from '../assets/images/government-solutions-hero.png'
+import credentialIssuanceHero from '../assets/images/credential-issuance-hero.png'
 
 export default function PlaygroundPage() {
   const { t } = useTranslation('government')
@@ -62,7 +62,7 @@ export default function PlaygroundPage() {
               </Button>
             </div>
             <ImageWithPlaceholder
-              src={governmentSolutionsHero}
+              src={credentialIssuanceHero}
               alt={t('playground.hero.tagline')}
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
@@ -93,7 +93,7 @@ export default function PlaygroundPage() {
               </Button>
             </div>
             <ImageWithPlaceholder
-              src={governmentSolutionsHero}
+              src={credentialIssuanceHero}
               alt={t('playground.hero.tagline')}
               className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
               containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
