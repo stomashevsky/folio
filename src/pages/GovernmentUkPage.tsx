@@ -87,24 +87,24 @@ export default function GovernmentUkPage() {
     canonicalUrl: canonicalUrl
   })
 
-  const [activeWhyFolioId, setActiveWhyFolioId] = useState<string | null>('global')
+  const [activeWhyFolioId, setActiveWhyFolioId] = useState<number | null>(0)
 
-  // Combined list of all Why Folio items (product features + company capabilities)
+  // Combined list of all Why Folio items - ordered by description length and logical flow
   const whyFolioItems = [
-    // Product features
-    { id: 'global', title: t('government.uk.whyFolio.items.global.title'), description: t('government.uk.whyFolio.items.global.description') },
-    { id: 'experience', title: t('government.uk.whyFolio.items.experience.title'), description: t('government.uk.whyFolio.items.experience.description') },
-    { id: 'ai', title: t('government.uk.whyFolio.items.ai.title'), description: t('government.uk.whyFolio.items.ai.description') },
-    { id: 'private', title: t('government.uk.whyFolio.items.private.title'), description: t('government.uk.whyFolio.items.private.description') },
-    { id: 'frictionless', title: t('government.uk.whyFolio.items.frictionless.title'), description: t('government.uk.whyFolio.items.frictionless.description') },
+    // Start with company identity and capabilities
     { id: 'sovereign', title: t('government.uk.whyFolio.items.sovereign.title'), description: t('government.uk.whyFolio.items.sovereign.description') },
-    { id: 'lowMaintenance', title: t('government.uk.whyFolio.items.lowMaintenance.title'), description: t('government.uk.whyFolio.items.lowMaintenance.description') },
-    // Company capabilities (SGO)
+    { id: 'execution', title: t('government.uk.sgoCapabilities.items.execution.title'), description: t('government.uk.sgoCapabilities.items.execution.description') },
     { id: 'outcomes', title: t('government.uk.sgoCapabilities.items.outcomes.title'), description: t('government.uk.sgoCapabilities.items.outcomes.description') },
     { id: 'cognitive', title: t('government.uk.sgoCapabilities.items.cognitive.title'), description: t('government.uk.sgoCapabilities.items.cognitive.description') },
     { id: 'risk', title: t('government.uk.sgoCapabilities.items.risk.title'), description: t('government.uk.sgoCapabilities.items.risk.description') },
-    { id: 'execution', title: t('government.uk.sgoCapabilities.items.execution.title'), description: t('government.uk.sgoCapabilities.items.execution.description') },
     { id: 'culture', title: t('government.uk.sgoCapabilities.items.culture.title'), description: t('government.uk.sgoCapabilities.items.culture.description') },
+    // Product features
+    { id: 'private', title: t('government.uk.whyFolio.items.private.title'), description: t('government.uk.whyFolio.items.private.description') },
+    { id: 'ai', title: t('government.uk.whyFolio.items.ai.title'), description: t('government.uk.whyFolio.items.ai.description') },
+    { id: 'global', title: t('government.uk.whyFolio.items.global.title'), description: t('government.uk.whyFolio.items.global.description') },
+    { id: 'experience', title: t('government.uk.whyFolio.items.experience.title'), description: t('government.uk.whyFolio.items.experience.description') },
+    { id: 'frictionless', title: t('government.uk.whyFolio.items.frictionless.title'), description: t('government.uk.whyFolio.items.frictionless.description') },
+    { id: 'lowMaintenance', title: t('government.uk.whyFolio.items.lowMaintenance.title'), description: t('government.uk.whyFolio.items.lowMaintenance.description') },
     { id: 'fullStack', title: t('government.uk.sgoCapabilities.items.fullStack.title'), description: t('government.uk.sgoCapabilities.items.fullStack.description') },
   ]
 
@@ -389,27 +389,27 @@ export default function GovernmentUkPage() {
           </div>
         </section>
 
-        {/* Why Folio Section */}
-        <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
-          <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-            {/* Left side: Title + description */}
-            <div className="flex flex-col gap-5 items-start max-w-full md:max-w-[512px] relative shrink-0 w-full md:w-auto md:flex-1">
-              <h2 className="font-bold leading-[36px] md:leading-[40px] text-[30px] md:text-[36px] text-[#0a0a0a] tracking-[0px] w-full">
+        {/* Why Folio Section - FAQ style centered */}
+        <section className="bg-white flex flex-col gap-6 items-center px-0 py-16 md:py-24 relative shrink-0 w-full">
+          <div className="flex flex-col gap-10 md:gap-16 items-center max-w-[672px] px-6 py-0 relative shrink-0 w-full">
+            {/* Title and description - centered */}
+            <div className="flex flex-col gap-4 md:gap-5 items-center relative shrink-0 w-full">
+              <h2 className="font-bold leading-[36px] md:leading-[40px] text-[30px] md:text-[36px] text-[#0a0a0a] tracking-[0px] text-center w-full">
                 {t('government.uk.whyFolio.title')}
               </h2>
-              <p className="font-normal leading-6 text-[#737373] text-base w-full">
+              <p className="font-normal leading-6 text-[#737373] text-base text-center w-full">
                 {t('government.uk.whyFolio.combinedDescription')}
               </p>
             </div>
-            {/* Right side: All items as accordion */}
-            <div className="flex flex-col gap-0 items-start relative shrink-0 w-full md:flex-1">
-              {whyFolioItems.map((item) => (
+            {/* Accordion items */}
+            <div className="flex flex-col items-start relative shrink-0 w-full">
+              {whyFolioItems.map((item, index) => (
                 <SgoCapabilityItem
                   key={item.id}
                   title={item.title}
                   description={item.description}
-                  isOpen={activeWhyFolioId === item.id}
-                  onClick={() => setActiveWhyFolioId(activeWhyFolioId === item.id ? null : item.id)}
+                  isOpen={activeWhyFolioId === index}
+                  onClick={() => setActiveWhyFolioId(activeWhyFolioId === index ? null : index)}
                 />
               ))}
             </div>
