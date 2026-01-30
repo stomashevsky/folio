@@ -227,7 +227,7 @@
       "description": "EUデジタルIDシナリオを体験。クレデンシャルの発行・検証フローをテスト。"
     },
     "hero": {
-      "tagline": "Playground",
+      "tagline": "EUDI Playground",
       "title": "EUDIフローを体験",
       "description": "デモ書類でクレデンシャルの発行と検証を試してください。QRコードをスキャンし、選択的開示を確認し、本番実装前にEUDI互換フローの動作を確認できます。",
       "button": "詳細を見る"

@@ -227,7 +227,7 @@
       "description": "Esplora scenari di identità digitale europea in azione. Testa i flussi di emissione e verifica delle credenziali."
     },
     "hero": {
-      "tagline": "Playground",
+      "tagline": "EUDI Playground",
       "title": "Scopri i flussi EUDI in azione",
       "description": "Prova l'emissione e la verifica delle credenziali con documenti demo. Scansiona codici QR, esplora la divulgazione selettiva e scopri esattamente come si comportano i flussi compatibili con EUDI prima di implementarli in produzione.",
       "button": "Scopri di più"

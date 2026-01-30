@@ -227,7 +227,7 @@
       "description": "Explorez les scénarios d'identité numérique européenne en action. Testez les flux d'émission et de vérification de credentials."
     },
     "hero": {
-      "tagline": "Playground",
+      "tagline": "EUDI Playground",
       "title": "Découvrez les flux EUDI en action",
       "description": "Testez l'émission et la vérification de credentials avec des documents de démonstration. Scannez des QR codes, explorez la divulgation sélective et voyez exactement comment les flux compatibles EUDI se comportent avant de les implémenter en production.",
       "button": "En savoir plus"

@@ -227,7 +227,7 @@
       "description": "Explore European digital identity scenarios in action. Test credential issuance and verification flows."
     },
     "hero": {
-      "tagline": "Playground",
+      "tagline": "EUDI Playground",
       "title": "Experience EUDI flows in action",
       "description": "Try credential issuance and verification with demo documents. Scan QR codes, explore selective disclosure and see exactly how EUDI-compatible flows behave before implementing them in production.",
       "button": "Learn more"
