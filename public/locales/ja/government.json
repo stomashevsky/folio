@@ -70,22 +70,9 @@
       "description": "Folioは世界中の政府に安全でスケーラブルなIDソリューションを提供しています。"
     },
     "ukSection": {
+      "tagline": "英国",
       "title": "英国向けデジタルID",
-      "description": "市民と政府の両方に貢献するソブリン技術を提供する、国家デジタルIDインフラのための官民パートナーシップ。",
-      "features": {
-        "sovereign": {
-          "title": "ソブリンインフラ",
-          "description": "国家IDサービスにおいて、グローバルビッグテックプラットフォームに代わる信頼できる選択肢を提供する英国拠点の技術。"
-        },
-        "growth": {
-          "title": "GDP成長",
-          "description": "McKinsey Global Instituteによると、デジタルIDエコシステムを持つ国は5年以内にGDPが6%から13%増加。"
-        },
-        "citizens": {
-          "title": "市民へのメリット",
-          "description": "個人データの明確な管理による、プライバシー、利便性、ID詐欺からの保護の向上。"
-        }
-      },
+      "description": "市民と政府の両方に貢献するソブリン技術を提供する、国家デジタルIDインフラのための官民パートナーシップ提案。",
       "button": "詳細を見る"
     },
     "uk": {
@@ -97,6 +84,22 @@
         "tagline": "英国",
         "title": "英国デジタルクレデンシャルと政府ウォレット",
         "description": "すべての英国市民と企業向けに、公共・民間セクターをカバーするデジタルID発行、配布、保管、検証サービスを創設するための官民パートナーシップ提案。"
+      },
+      "ukStats": {
+        "title": "英国",
+        "description": "国家デジタルIDインフラに適した市場。",
+        "population": {
+          "value": "6,780万人",
+          "description": "デジタルIDの対象となる英国人口。76%が15歳以上、84%が都市部居住"
+        },
+        "smartphone": {
+          "value": "131%",
+          "description": "スマートフォン普及率。国内で8,800万のモバイルアカウント"
+        },
+        "cost": {
+          "value": "£2",
+          "description": "市民1人あたりの登録コスト。検証とデジタル文書発行を含む"
+        }
       },
       "govBenefits": {
         "title": "政府と国へのメリット",
@@ -156,6 +159,22 @@
             "title": "ID詐欺からの保護",
             "description": "暗号化セキュリティと生体認証がなりすましや詐欺から保護。"
           }
+        }
+      },
+      "investmentStats": {
+        "title": "投資とインパクト",
+        "description": "雇用創出とリターンを生み出すプログラム。",
+        "investment": {
+          "value": "£2億",
+          "description": "プログラム総投資額。Folioが最大80%を負担"
+        },
+        "jobs": {
+          "value": "550+",
+          "description": "創出される雇用。直接雇用50名、間接雇用500名以上"
+        },
+        "revenue": {
+          "value": "£1億+/年",
+          "description": "完全稼働時の政府への潜在的収益。IDサービスをコストセンターから収益センターへ転換"
         }
       },
       "whyFolio": {

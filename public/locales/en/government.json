@@ -70,22 +70,9 @@
       "description": "Folio supports governments worldwide with secure, scalable identity solutions."
     },
     "ukSection": {
+      "tagline": "United Kingdom",
       "title": "Digital identity for the United Kingdom",
-      "description": "A public-private partnership to deliver national digital identity infrastructure, providing sovereign technology that serves citizens and government alike.",
-      "features": {
-        "sovereign": {
-          "title": "Sovereign infrastructure",
-          "description": "UK-based technology that provides a trusted alternative to global big-tech platforms for national identity services."
-        },
-        "growth": {
-          "title": "GDP growth",
-          "description": "Countries with digital identity ecosystems see GDP increases of 6% to 13% within five years, according to McKinsey Global Institute."
-        },
-        "citizens": {
-          "title": "Citizen benefits",
-          "description": "Enhanced privacy, convenience and protection against identity fraud with clear control over personal data."
-        }
-      },
+      "description": "A public-private partnership proposal to deliver national digital identity infrastructure, providing sovereign technology that serves citizens and government alike.",
       "button": "Learn more"
     },
     "uk": {
@@ -97,6 +84,22 @@
         "tagline": "United Kingdom",
         "title": "UK digital credentials & government wallet",
         "description": "A public-private partnership proposal to create digital identity issuance, distribution, storage and validation services for all British citizens and businesses, covering the public and private sectors."
+      },
+      "ukStats": {
+        "title": "United Kingdom",
+        "description": "A ready market for national digital identity infrastructure.",
+        "population": {
+          "value": "67.8M",
+          "description": "UK population eligible for digital identity, with 76% over 15 years old and 84% living in urban areas"
+        },
+        "smartphone": {
+          "value": "131%",
+          "description": "Smartphone penetration rate with 88 million mobile accounts across the country"
+        },
+        "cost": {
+          "value": "£2",
+          "description": "Per-citizen registration cost including verification and issuance of digital documents"
+        }
       },
       "govBenefits": {
         "title": "Benefits for government & country",
@@ -156,6 +159,22 @@
             "title": "Protection against identity fraud",
             "description": "Cryptographic security and biometric verification protect against identity theft and fraud."
           }
+        }
+      },
+      "investmentStats": {
+        "title": "Investment and impact",
+        "description": "A programme that creates jobs and generates returns.",
+        "investment": {
+          "value": "£200M",
+          "description": "Total programme investment with up to 80% contribution from Folio"
+        },
+        "jobs": {
+          "value": "550+",
+          "description": "Jobs created including 50 direct positions and 500+ indirect roles"
+        },
+        "revenue": {
+          "value": "£100M+/year",
+          "description": "Potential government revenue when fully operational, transforming identity services from cost to profit center"
         }
       },
       "whyFolio": {

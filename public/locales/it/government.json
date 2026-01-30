@@ -70,22 +70,9 @@
       "description": "Folio supporta governi in tutto il mondo con soluzioni di identità sicure e scalabili."
     },
     "ukSection": {
+      "tagline": "Regno Unito",
       "title": "Identità digitale per il Regno Unito",
-      "description": "Una partnership pubblico-privata per fornire infrastruttura di identità digitale nazionale, offrendo tecnologia sovrana al servizio di cittadini e governo.",
-      "features": {
-        "sovereign": {
-          "title": "Infrastruttura sovrana",
-          "description": "Tecnologia con sede nel Regno Unito che offre un'alternativa affidabile alle piattaforme big-tech globali per i servizi di identità nazionale."
-        },
-        "growth": {
-          "title": "Crescita del PIL",
-          "description": "I paesi con ecosistemi di identità digitale vedono aumenti del PIL dal 6% al 13% in cinque anni, secondo McKinsey Global Institute."
-        },
-        "citizens": {
-          "title": "Vantaggi per i cittadini",
-          "description": "Privacy migliorata, comodità e protezione dalle frodi d'identità con chiaro controllo sui dati personali."
-        }
-      },
+      "description": "Una proposta di partnership pubblico-privata per fornire infrastruttura di identità digitale nazionale, offrendo tecnologia sovrana al servizio di cittadini e governo.",
       "button": "Scopri di più"
     },
     "uk": {
@@ -97,6 +84,22 @@
         "tagline": "Regno Unito",
         "title": "Credenziali digitali e portafoglio governativo UK",
         "description": "Una proposta di partnership pubblico-privata per creare servizi di emissione, distribuzione, archiviazione e validazione dell'identità digitale per tutti i cittadini e le aziende britanniche, coprendo i settori pubblico e privato."
+      },
+      "ukStats": {
+        "title": "Regno Unito",
+        "description": "Un mercato pronto per l'infrastruttura di identità digitale nazionale.",
+        "population": {
+          "value": "67,8M",
+          "description": "Popolazione britannica idonea per l'identità digitale, con il 76% oltre i 15 anni e l'84% residente in aree urbane"
+        },
+        "smartphone": {
+          "value": "131%",
+          "description": "Tasso di penetrazione degli smartphone con 88 milioni di account mobili nel paese"
+        },
+        "cost": {
+          "value": "£2",
+          "description": "Costo di registrazione per cittadino inclusa verifica ed emissione di documenti digitali"
+        }
       },
       "govBenefits": {
         "title": "Vantaggi per il governo e il paese",
@@ -156,6 +159,22 @@
             "title": "Protezione dalle frodi d'identità",
             "description": "La sicurezza crittografica e la verifica biometrica proteggono dal furto d'identità e dalle frodi."
           }
+        }
+      },
+      "investmentStats": {
+        "title": "Investimento e impatto",
+        "description": "Un programma che crea occupazione e genera ritorni.",
+        "investment": {
+          "value": "£200M",
+          "description": "Investimento totale del programma con contributo fino all'80% da parte di Folio"
+        },
+        "jobs": {
+          "value": "550+",
+          "description": "Posti di lavoro creati incluse 50 posizioni dirette e oltre 500 ruoli indiretti"
+        },
+        "revenue": {
+          "value": "£100M+/anno",
+          "description": "Potenziali entrate per il governo a pieno regime, trasformando i servizi di identità da centro di costo a centro di profitto"
         }
       },
       "whyFolio": {

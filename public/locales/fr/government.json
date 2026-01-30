@@ -70,22 +70,9 @@
       "description": "Folio soutient les gouvernements du monde entier avec des solutions d'identité sécurisées et évolutives."
     },
     "ukSection": {
+      "tagline": "Royaume-Uni",
       "title": "Identité numérique pour le Royaume-Uni",
-      "description": "Un partenariat public-privé pour fournir une infrastructure d'identité numérique nationale, offrant une technologie souveraine au service des citoyens et du gouvernement.",
-      "features": {
-        "sovereign": {
-          "title": "Infrastructure souveraine",
-          "description": "Une technologie basée au Royaume-Uni qui offre une alternative de confiance aux plateformes big-tech mondiales pour les services d'identité nationale."
-        },
-        "growth": {
-          "title": "Croissance du PIB",
-          "description": "Les pays dotés d'écosystèmes d'identité numérique voient leur PIB augmenter de 6 % à 13 % en cinq ans, selon McKinsey Global Institute."
-        },
-        "citizens": {
-          "title": "Avantages pour les citoyens",
-          "description": "Confidentialité renforcée, commodité et protection contre la fraude à l'identité avec un contrôle clair sur les données personnelles."
-        }
-      },
+      "description": "Une proposition de partenariat public-privé pour fournir une infrastructure d'identité numérique nationale, offrant une technologie souveraine au service des citoyens et du gouvernement.",
       "button": "En savoir plus"
     },
     "uk": {
@@ -97,6 +84,22 @@
         "tagline": "Royaume-Uni",
         "title": "Credentials numériques et portefeuille gouvernemental UK",
         "description": "Une proposition de partenariat public-privé pour créer des services d'émission, de distribution, de stockage et de validation d'identité numérique pour tous les citoyens et entreprises britanniques, couvrant les secteurs public et privé."
+      },
+      "ukStats": {
+        "title": "Royaume-Uni",
+        "description": "Un marché prêt pour l'infrastructure d'identité numérique nationale.",
+        "population": {
+          "value": "67,8M",
+          "description": "Population britannique éligible à l'identité numérique, dont 76 % ont plus de 15 ans et 84 % vivent en zone urbaine"
+        },
+        "smartphone": {
+          "value": "131%",
+          "description": "Taux de pénétration des smartphones avec 88 millions de comptes mobiles dans le pays"
+        },
+        "cost": {
+          "value": "£2",
+          "description": "Coût d'enregistrement par citoyen incluant la vérification et l'émission de documents numériques"
+        }
       },
       "govBenefits": {
         "title": "Avantages pour le gouvernement et le pays",
@@ -156,6 +159,22 @@
             "title": "Protection contre la fraude à l'identité",
             "description": "La sécurité cryptographique et la vérification biométrique protègent contre le vol et la fraude d'identité."
           }
+        }
+      },
+      "investmentStats": {
+        "title": "Investissement et impact",
+        "description": "Un programme qui crée des emplois et génère des retours.",
+        "investment": {
+          "value": "£200M",
+          "description": "Investissement total du programme avec jusqu'à 80 % de contribution de Folio"
+        },
+        "jobs": {
+          "value": "550+",
+          "description": "Emplois créés dont 50 postes directs et plus de 500 rôles indirects"
+        },
+        "revenue": {
+          "value": "£100M+/an",
+          "description": "Revenus potentiels pour le gouvernement une fois pleinement opérationnel, transformant les services d'identité d'un centre de coûts en centre de profit"
         }
       },
       "whyFolio": {

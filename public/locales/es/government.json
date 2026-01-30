@@ -70,22 +70,9 @@
             "description": "Folio apoya a gobiernos de todo el mundo con soluciones de identidad seguras y escalables."
         },
         "ukSection": {
+            "tagline": "Reino Unido",
             "title": "Identidad digital para el Reino Unido",
-            "description": "Una asociación público-privada para proporcionar infraestructura de identidad digital nacional, ofreciendo tecnología soberana que sirve tanto a ciudadanos como al gobierno.",
-            "features": {
-                "sovereign": {
-                    "title": "Infraestructura soberana",
-                    "description": "Tecnología con sede en el Reino Unido que ofrece una alternativa de confianza a las plataformas globales de big-tech para servicios de identidad nacional."
-                },
-                "growth": {
-                    "title": "Crecimiento del PIB",
-                    "description": "Los países con ecosistemas de identidad digital ven aumentos del PIB del 6% al 13% en cinco años, según McKinsey Global Institute."
-                },
-                "citizens": {
-                    "title": "Beneficios para los ciudadanos",
-                    "description": "Mayor privacidad, comodidad y protección contra el fraude de identidad con control claro sobre los datos personales."
-                }
-            },
+            "description": "Una propuesta de asociación público-privada para proporcionar infraestructura de identidad digital nacional, ofreciendo tecnología soberana que sirve tanto a ciudadanos como al gobierno.",
             "button": "Saber más"
         },
         "uk": {
@@ -97,6 +84,22 @@
                 "tagline": "Reino Unido",
                 "title": "Credenciales digitales y billetera gubernamental del Reino Unido",
                 "description": "Una propuesta de asociación público-privada para crear servicios de emisión, distribución, almacenamiento y validación de identidad digital para todos los ciudadanos y empresas británicos, cubriendo los sectores público y privado."
+            },
+            "ukStats": {
+                "title": "Reino Unido",
+                "description": "Un mercado listo para la infraestructura de identidad digital nacional.",
+                "population": {
+                    "value": "67,8M",
+                    "description": "Población del Reino Unido elegible para identidad digital, con 76% mayores de 15 años y 84% viviendo en áreas urbanas"
+                },
+                "smartphone": {
+                    "value": "131%",
+                    "description": "Tasa de penetración de smartphones con 88 millones de cuentas móviles en todo el país"
+                },
+                "cost": {
+                    "value": "£2",
+                    "description": "Costo de registro por ciudadano incluyendo verificación y emisión de documentos digitales"
+                }
             },
             "govBenefits": {
                 "title": "Beneficios para el gobierno y el país",
@@ -156,6 +159,22 @@
                         "title": "Protección contra el fraude de identidad",
                         "description": "La seguridad criptográfica y la verificación biométrica protegen contra el robo y fraude de identidad."
                     }
+                }
+            },
+            "investmentStats": {
+                "title": "Inversión e impacto",
+                "description": "Un programa que crea empleo y genera retornos.",
+                "investment": {
+                    "value": "£200M",
+                    "description": "Inversión total del programa con hasta 80% de contribución de Folio"
+                },
+                "jobs": {
+                    "value": "550+",
+                    "description": "Empleos creados incluyendo 50 posiciones directas y más de 500 roles indirectos"
+                },
+                "revenue": {
+                    "value": "£100M+/año",
+                    "description": "Ingresos potenciales del gobierno cuando esté totalmente operativo, transformando los servicios de identidad de costo a centro de beneficios"
                 }
             },
             "whyFolio": {

@@ -28,6 +28,19 @@ const BACKGROUND_STYLE = {
     'linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(90deg, rgba(229, 229, 229, 1) 0%, rgba(229, 229, 229, 1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%)',
 }
 
+function StatItem({ value, description }: { value: string; description: string }) {
+  return (
+    <div className="flex flex-1 flex-col gap-2 items-start relative shrink-0">
+      <p className="font-bold leading-8 md:leading-[36px] text-2xl md:text-[30px] relative shrink-0 text-[#0a0a0a] w-full">
+        {value}
+      </p>
+      <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full">
+        {description}
+      </p>
+    </div>
+  )
+}
+
 export default function GovernmentUkPage() {
   const { t } = useTranslation('government')
   const { currentLang } = useLocalizedPath()
@@ -67,6 +80,60 @@ export default function GovernmentUkPage() {
             >
               {t('government.uk.cta.button')}
             </Button>
+          </div>
+        </section>
+
+        {/* UK Market Stats Section */}
+        <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
+          {/* Desktop Layout */}
+          <div className="hidden md:flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+            <div className="flex flex-col gap-12 items-start relative shrink-0 w-full">
+              <SectionHeader
+                title={t('government.uk.ukStats.title')}
+                description={t('government.uk.ukStats.description')}
+                align="left"
+                maxWidth="576px"
+              />
+              <div className="flex gap-8 items-start relative shrink-0 w-full">
+                <StatItem
+                  value={t('government.uk.ukStats.population.value')}
+                  description={t('government.uk.ukStats.population.description')}
+                />
+                <StatItem
+                  value={t('government.uk.ukStats.smartphone.value')}
+                  description={t('government.uk.ukStats.smartphone.description')}
+                />
+                <StatItem
+                  value={t('government.uk.ukStats.cost.value')}
+                  description={t('government.uk.ukStats.cost.description')}
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Layout */}
+          <div className="flex md:hidden flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+            <div className="flex flex-col gap-10 items-start relative shrink-0 w-full">
+              <SectionHeader
+                title={t('government.uk.ukStats.title')}
+                description={t('government.uk.ukStats.description')}
+                align="left"
+              />
+              <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
+                <StatItem
+                  value={t('government.uk.ukStats.population.value')}
+                  description={t('government.uk.ukStats.population.description')}
+                />
+                <StatItem
+                  value={t('government.uk.ukStats.smartphone.value')}
+                  description={t('government.uk.ukStats.smartphone.description')}
+                />
+                <StatItem
+                  value={t('government.uk.ukStats.cost.value')}
+                  description={t('government.uk.ukStats.cost.description')}
+                />
+              </div>
+            </div>
           </div>
         </section>
 
@@ -154,6 +221,60 @@ export default function GovernmentUkPage() {
                 title={t('government.uk.citizenBenefits.items.fraud.title')}
                 description={t('government.uk.citizenBenefits.items.fraud.description')}
               />
+            </div>
+          </div>
+        </section>
+
+        {/* Investment Stats Section */}
+        <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
+          {/* Desktop Layout */}
+          <div className="hidden md:flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+            <div className="flex flex-col gap-12 items-start relative shrink-0 w-full">
+              <SectionHeader
+                title={t('government.uk.investmentStats.title')}
+                description={t('government.uk.investmentStats.description')}
+                align="left"
+                maxWidth="576px"
+              />
+              <div className="flex gap-8 items-start relative shrink-0 w-full">
+                <StatItem
+                  value={t('government.uk.investmentStats.investment.value')}
+                  description={t('government.uk.investmentStats.investment.description')}
+                />
+                <StatItem
+                  value={t('government.uk.investmentStats.jobs.value')}
+                  description={t('government.uk.investmentStats.jobs.description')}
+                />
+                <StatItem
+                  value={t('government.uk.investmentStats.revenue.value')}
+                  description={t('government.uk.investmentStats.revenue.description')}
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Layout */}
+          <div className="flex md:hidden flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+            <div className="flex flex-col gap-10 items-start relative shrink-0 w-full">
+              <SectionHeader
+                title={t('government.uk.investmentStats.title')}
+                description={t('government.uk.investmentStats.description')}
+                align="left"
+              />
+              <div className="flex flex-col gap-6 items-start relative shrink-0 w-full">
+                <StatItem
+                  value={t('government.uk.investmentStats.investment.value')}
+                  description={t('government.uk.investmentStats.investment.description')}
+                />
+                <StatItem
+                  value={t('government.uk.investmentStats.jobs.value')}
+                  description={t('government.uk.investmentStats.jobs.description')}
+                />
+                <StatItem
+                  value={t('government.uk.investmentStats.revenue.value')}
+                  description={t('government.uk.investmentStats.revenue.description')}
+                />
+              </div>
             </div>
           </div>
         </section>
