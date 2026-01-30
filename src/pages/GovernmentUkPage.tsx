@@ -24,13 +24,6 @@ import userCheckIcon from '../assets/icons/UserCheck.svg'
 import creditCardIcon from '../assets/icons/CreditCard.svg'
 import fingerprintIcon from '../assets/icons/Fingerprint.svg'
 
-// Icons for whyFolio section
-import globeIcon from '../assets/icons/Globe.svg'
-import starIcon from '../assets/icons/Star.svg'
-import landmarkIcon from '../assets/icons/Landmark.svg'
-import refreshCcwIcon from '../assets/icons/RefreshCcw.svg'
-
-
 // Background style using inline styles for complex multi-layer gradient
 const BACKGROUND_STYLE = {
   backgroundImage:
@@ -46,24 +39,6 @@ function StatItem({ value, description }: { value: string; description: string }
       <p className="font-normal leading-6 relative shrink-0 text-[#737373] text-base w-full">
         {description}
       </p>
-    </div>
-  )
-}
-
-function WhyFolioBlock({ icon, title, description }: { icon: string; title: string; description: string }) {
-  return (
-    <div className="flex flex-col md:flex-row gap-6 items-start w-full">
-      <div className="bg-white border border-[#e5e5e5] border-solid flex items-center justify-center relative rounded-lg shrink-0 size-12 shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)]">
-        <img src={icon} alt="" aria-hidden="true" className="w-6 h-6" />
-      </div>
-      <div className="flex flex-col gap-2 items-start flex-1 min-w-0">
-        <h3 className="font-semibold leading-7 text-lg text-[#0a0a0a]">
-          {title}
-        </h3>
-        <p className="font-normal leading-6 text-base text-[#737373]">
-          {description}
-        </p>
-      </div>
     </div>
   )
 }
@@ -112,9 +87,19 @@ export default function GovernmentUkPage() {
     canonicalUrl: canonicalUrl
   })
 
-  const [activeSgoCapabilityId, setActiveSgoCapabilityId] = useState<string | null>('outcomes')
+  const [activeWhyFolioId, setActiveWhyFolioId] = useState<string | null>('global')
 
-  const sgoCapabilities = [
+  // Combined list of all Why Folio items (product features + company capabilities)
+  const whyFolioItems = [
+    // Product features
+    { id: 'global', title: t('government.uk.whyFolio.items.global.title'), description: t('government.uk.whyFolio.items.global.description') },
+    { id: 'experience', title: t('government.uk.whyFolio.items.experience.title'), description: t('government.uk.whyFolio.items.experience.description') },
+    { id: 'ai', title: t('government.uk.whyFolio.items.ai.title'), description: t('government.uk.whyFolio.items.ai.description') },
+    { id: 'private', title: t('government.uk.whyFolio.items.private.title'), description: t('government.uk.whyFolio.items.private.description') },
+    { id: 'frictionless', title: t('government.uk.whyFolio.items.frictionless.title'), description: t('government.uk.whyFolio.items.frictionless.description') },
+    { id: 'sovereign', title: t('government.uk.whyFolio.items.sovereign.title'), description: t('government.uk.whyFolio.items.sovereign.description') },
+    { id: 'lowMaintenance', title: t('government.uk.whyFolio.items.lowMaintenance.title'), description: t('government.uk.whyFolio.items.lowMaintenance.description') },
+    // Company capabilities (SGO)
     { id: 'outcomes', title: t('government.uk.sgoCapabilities.items.outcomes.title'), description: t('government.uk.sgoCapabilities.items.outcomes.description') },
     { id: 'cognitive', title: t('government.uk.sgoCapabilities.items.cognitive.title'), description: t('government.uk.sgoCapabilities.items.cognitive.description') },
     { id: 'risk', title: t('government.uk.sgoCapabilities.items.risk.title'), description: t('government.uk.sgoCapabilities.items.risk.description') },
@@ -404,77 +389,29 @@ export default function GovernmentUkPage() {
           </div>
         </section>
 
-        {/* Why Folio Section - Combined with SGO Capabilities */}
+        {/* Why Folio Section */}
         <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-            {/* Left side: Title + description + product features */}
-            <div className="flex flex-col gap-8 items-start max-w-full md:max-w-[512px] relative shrink-0 w-full md:w-auto md:flex-1">
-              <div className="flex flex-col gap-5 items-start w-full">
-                <h2 className="font-bold leading-[36px] md:leading-[40px] text-[30px] md:text-[36px] text-[#0a0a0a] tracking-[0px] w-full">
-                  {t('government.uk.whyFolio.title')}
-                </h2>
-                <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                  {t('government.uk.whyFolio.description')}
-                </p>
-              </div>
-              {/* Product features as compact list */}
-              <div className="flex flex-col gap-4 items-start w-full">
-                <WhyFolioBlock
-                  icon={globeIcon}
-                  title={t('government.uk.whyFolio.items.global.title')}
-                  description={t('government.uk.whyFolio.items.global.description')}
-                />
-                <WhyFolioBlock
-                  icon={starIcon}
-                  title={t('government.uk.whyFolio.items.experience.title')}
-                  description={t('government.uk.whyFolio.items.experience.description')}
-                />
-                <WhyFolioBlock
-                  icon={sparklesIcon}
-                  title={t('government.uk.whyFolio.items.ai.title')}
-                  description={t('government.uk.whyFolio.items.ai.description')}
-                />
-                <WhyFolioBlock
-                  icon={lockKeyholeIcon}
-                  title={t('government.uk.whyFolio.items.private.title')}
-                  description={t('government.uk.whyFolio.items.private.description')}
-                />
-                <WhyFolioBlock
-                  icon={zapIcon}
-                  title={t('government.uk.whyFolio.items.frictionless.title')}
-                  description={t('government.uk.whyFolio.items.frictionless.description')}
-                />
-                <WhyFolioBlock
-                  icon={landmarkIcon}
-                  title={t('government.uk.whyFolio.items.sovereign.title')}
-                  description={t('government.uk.whyFolio.items.sovereign.description')}
-                />
-                <WhyFolioBlock
-                  icon={refreshCcwIcon}
-                  title={t('government.uk.whyFolio.items.lowMaintenance.title')}
-                  description={t('government.uk.whyFolio.items.lowMaintenance.description')}
-                />
-              </div>
-            </div>
-            {/* Right side: SGO Capabilities Accordion */}
-            <div className="flex flex-col gap-5 items-start relative shrink-0 w-full md:flex-1">
-              <h3 className="font-semibold leading-7 text-lg text-[#0a0a0a]">
-                {t('government.uk.sgoCapabilities.title')}
-              </h3>
+            {/* Left side: Title + description */}
+            <div className="flex flex-col gap-5 items-start max-w-full md:max-w-[512px] relative shrink-0 w-full md:w-auto md:flex-1">
+              <h2 className="font-bold leading-[36px] md:leading-[40px] text-[30px] md:text-[36px] text-[#0a0a0a] tracking-[0px] w-full">
+                {t('government.uk.whyFolio.title')}
+              </h2>
               <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                {t('government.uk.sgoCapabilities.description')}
+                {t('government.uk.whyFolio.combinedDescription')}
               </p>
-              <div className="flex flex-col gap-0 items-start w-full">
-                {sgoCapabilities.map((capability) => (
-                  <SgoCapabilityItem
-                    key={capability.id}
-                    title={capability.title}
-                    description={capability.description}
-                    isOpen={activeSgoCapabilityId === capability.id}
-                    onClick={() => setActiveSgoCapabilityId(activeSgoCapabilityId === capability.id ? null : capability.id)}
-                  />
-                ))}
-              </div>
+            </div>
+            {/* Right side: All items as accordion */}
+            <div className="flex flex-col gap-0 items-start relative shrink-0 w-full md:flex-1">
+              {whyFolioItems.map((item) => (
+                <SgoCapabilityItem
+                  key={item.id}
+                  title={item.title}
+                  description={item.description}
+                  isOpen={activeWhyFolioId === item.id}
+                  onClick={() => setActiveWhyFolioId(activeWhyFolioId === item.id ? null : item.id)}
+                />
+              ))}
             </div>
           </div>
         </section>
