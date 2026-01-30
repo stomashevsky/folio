@@ -12,6 +12,7 @@ interface FAQSectionProps {
   title?: string
   description?: string
   defaultOpenIndex?: number | null
+  id?: string
 }
 
 export default function FAQSection({ 
@@ -19,6 +20,7 @@ export default function FAQSection({
   title,
   description,
   defaultOpenIndex,
+  id,
 }: FAQSectionProps) {
   const { t } = useTranslation('government')
   
@@ -58,7 +60,7 @@ export default function FAQSection({
   }
 
   return (
-    <div className="bg-white box-border flex flex-col gap-6 items-center px-0 py-16 md:py-24 relative shrink-0 w-full">
+    <div id={id} className="bg-white box-border flex flex-col gap-6 items-center px-0 py-16 md:py-24 relative shrink-0 w-full">
       {/* FAQPage Schema for SEO */}
       <script
         type="application/ld+json"

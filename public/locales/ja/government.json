@@ -6,8 +6,158 @@
     },
     "hero": {
       "tagline": "行政機関向け",
+      "title": "デジタルクレデンシャルと政府ウォレット",
+      "description": "官民パートナーシップによるデジタルID発行・配布・保管・検証サービスの提案。公共・民間セクターを網羅。"
+    },
+    "eudiSection": {
+      "tagline": "EUDI",
       "title": "国際基準に準拠したデジタルID",
       "description": "デジタルクレデンシャルを設計・テスト・展開するツール。EUデジタルIDフローを再現した安全なサンドボックスで、デモ書類の確認、QRコードの検証、共有情報の確認が可能。"
+    },
+    "mckinsey": {
+      "quote": "「デジタルIDエコシステムを導入した国は、5年以内にGDPが6%〜13%増加する。」",
+      "source": "McKinsey Global Institute"
+    },
+    "govBenefits": {
+      "title": "政府・国家へのメリット",
+      "description": "デジタルIDインフラは国家に測定可能な価値を提供。",
+      "items": {
+        "services": {
+          "title": "より良い行政サービス",
+          "description": "市民と企業向けのデジタルサービスを最適化し、公共セクター全体での摩擦を軽減し、アクセシビリティを向上。"
+        },
+        "gdp": {
+          "title": "GDP成長",
+          "description": "McKinsey Global Instituteによると、デジタルIDエコシステムを導入した国は5年以内にGDPが6%〜13%増加。"
+        },
+        "revenue": {
+          "title": "収益センター",
+          "description": "IDサービスをコストセンターから政府の収益源となる資産に転換。"
+        },
+        "security": {
+          "title": "国家安全保障",
+          "description": "信頼性が高く検証可能なデジタルIDにより、詐欺を削減し説明責任を強化して国家安全保障を強化。"
+        },
+        "trust": {
+          "title": "信頼の向上",
+          "description": "暗号技術で検証されたクレデンシャルにより、官民セクター全体の取引における信頼を構築。"
+        },
+        "ai": {
+          "title": "AI時代の基盤技術",
+          "description": "AI時代に必要なID基盤を提供し、ますます自動化される世界で安全で信頼できるインタラクションを実現。"
+        }
+      }
+    },
+    "citizenBenefits": {
+      "title": "市民へのメリット",
+      "description": "人を第一に考えたデジタルID。",
+      "items": {
+        "convenience": {
+          "title": "利便性の向上",
+          "description": "あらゆるデバイスから、どこからでも素早く簡単に行政・民間サービスにアクセス。"
+        },
+        "privacy": {
+          "title": "信頼とプライバシーの向上",
+          "description": "どのデータが誰と共有されるかを正確に把握し、完全な透明性とコントロールを実現。"
+        },
+        "control": {
+          "title": "個人データの明確な管理",
+          "description": "いつでもアクセスの付与と取り消しができ、デジタルIDを所有・管理。"
+        },
+        "transactions": {
+          "title": "高速で安全な取引",
+          "description": "行政・民間サービスの両方で数秒で本人確認を完了。"
+        },
+        "kyc": {
+          "title": "ワンクリックKYC",
+          "description": "銀行、金融、規制業界での顧客確認プロセスを簡素化。"
+        },
+        "fraud": {
+          "title": "ID詐欺からの保護",
+          "description": "暗号技術によるセキュリティと生体認証により、ID盗難と詐欺から保護。"
+        }
+      }
+    },
+    "investmentStats": {
+      "title": "投資とインパクト",
+      "description": "雇用を創出し、リターンを生み出すプログラム。",
+      "investment": {
+        "value": "最大80%",
+        "description": "プログラム総投資額に対するFolioの貢献"
+      },
+      "jobs": {
+        "value": "500+",
+        "description": "プログラム実施により創出される直接・間接雇用"
+      },
+      "revenue": {
+        "value": "収益センター",
+        "description": "IDサービスをコストセンターから収益を生み出す資産に転換する可能性"
+      }
+    },
+    "whyFolio": {
+      "title": "Folioを選ぶ理由",
+      "description": "AppleやGoogleと競争できるソブリン技術。",
+      "combinedDescription": "グローバルなビッグテック企業と競争するソブリン技術。ミッションクリティカルな政府プログラムの実績あるパートナー。",
+      "items": {
+        "global": {
+          "title": "グローバルな対応力",
+          "description": "世界各国から10,000以上のID書類をサポート。Folioは世界中の政府にデジタルIDフレームワークのベストプラクティスについてもアドバイス。"
+        },
+        "experience": {
+          "title": "優れた体験",
+          "description": "世界中のユーザーからApp Storeで4.7つ星、Google Playで4.5つ星の評価。"
+        },
+        "ai": {
+          "title": "AI技術",
+          "description": "高度なAI検証による最高レベルのID保証。"
+        },
+        "private": {
+          "title": "プライバシー・バイ・デザイン",
+          "description": "データはユーザーが所有・管理。プライバシーは後付けではなくアーキテクチャに組み込まれています。"
+        },
+        "frictionless": {
+          "title": "フリクションレス",
+          "description": "素早い登録と、サービス間でのID多重利用。"
+        },
+        "sovereign": {
+          "title": "ソブリン技術",
+          "description": "Folioはグローバルなビッグテック企業と競争するソブリン技術を提供。SGOグループの一員として、世界中の政府と企業にデジタルIDソリューションを提供。"
+        },
+        "lowMaintenance": {
+          "title": "低メンテナンス",
+          "description": "高額なアップグレードや移行なしに継続的に進化するSaaSエバーグリーンソリューション。"
+        }
+      }
+    },
+    "sgoCapabilities": {
+      "title": "Folio / SGOを選ぶ理由",
+      "description": "ミッションクリティカルな政府プログラムの実績あるパートナー。",
+      "items": {
+        "outcomes": {
+          "title": "製品ではなく成果",
+          "description": "動かせない期限、失敗確率ゼロ。成功は見えない。契約範囲の背後に隠れない。成功を提供。"
+        },
+        "cognitive": {
+          "title": "認知的・政治的負荷の軽減",
+          "description": "複雑さ、不完全な仕様、曖昧な要件、政治的・運用上のリスクは私たちの専門。成功に必要なことを推測し、システム、ワークフロー、ロジスティクス、トレーニングに変換。"
+        },
+        "risk": {
+          "title": "評判リスクの軽減",
+          "description": "予防的リスク特定。監査可能性の組み込み。法的、メディア、政治的攻撃下での納品規律。"
+        },
+        "execution": {
+          "title": "実証済みの実行エンジン",
+          "description": "25年間で成熟したゼロ失敗のロジスティクスマシン。ミッションクリティカルな実装で毎回成功する実証済みのソフトウェアツール、運用モデル、ガバナンス・管理システム。"
+        },
+        "culture": {
+          "title": "文化的レジリエンス",
+          "description": "業界最低の離職率。道徳的明確さと強固な倫理的基盤により、長期的にコミットしたオペレーターを実現。"
+        },
+        "fullStack": {
+          "title": "真のフルスタック",
+          "description": "物理デバイス層、ソフトウェア層、フィールドオペレーション層。言い訳なし。"
+        }
+      }
     },
     "overview": {
       "title": "国家規模のデジタルID向け最新インフラ",
@@ -69,196 +219,18 @@
     "globalPartners": {
       "title": "グローバルパートナー",
       "description": "Folioは世界中の政府に安全でスケーラブルなIDソリューションを提供しています。"
-    },
-    "ukSection": {
-      "tagline": "英国",
-      "title": "英国向けデジタルID",
-      "description": "市民と政府の両方に貢献するソブリン技術を提供する、国家デジタルIDインフラのための官民パートナーシップ提案。",
-      "button": "詳細を見る"
-    },
-    "uk": {
-      "meta": {
-        "title": "英国デジタルID | Folio",
-        "description": "英国デジタルクレデンシャルと政府ウォレットのための官民パートナーシップ。市民と政府により良いサービスを提供するソブリン技術。"
-      },
-      "hero": {
-        "tagline": "英国",
-        "title": "英国デジタルクレデンシャルと政府ウォレット",
-        "description": "すべての英国市民と企業向けに、公共・民間セクターをカバーするデジタルID発行、配布、保管、検証サービスを創設するための官民パートナーシップ提案。"
-      },
-      "ukStats": {
-        "title": "英国",
-        "description": "国家デジタルIDインフラに適した市場。",
-        "population": {
-          "value": "6,780万人",
-          "description": "デジタルIDの対象となる英国人口。76%が15歳以上、84%が都市部居住"
-        },
-        "smartphone": {
-          "value": "131%",
-          "description": "スマートフォン普及率。国内で8,800万のモバイルアカウント"
-        },
-        "cost": {
-          "value": "£2",
-          "description": "市民1人あたりの登録コスト。検証とデジタル文書発行を含む"
-        }
-      },
-      "mckinsey": {
-        "quote": "「デジタルIDエコシステムを導入した国は、5年以内にGDPが6%〜13%増加する。」",
-        "source": "McKinsey Global Institute"
-      },
-      "govBenefits": {
-        "title": "政府と国へのメリット",
-        "description": "デジタルIDインフラは国に測定可能な価値をもたらします。",
-        "items": {
-          "services": {
-            "title": "より良い行政サービス",
-            "description": "市民と企業向けの効率化されたデジタルサービス。すべての公共セクター接点での摩擦を削減し、アクセシビリティを向上。"
-          },
-          "gdp": {
-            "title": "GDP成長",
-            "description": "McKinsey Global Instituteによると、デジタルIDエコシステムを採用した国は5年以内にGDPが6%から13%増加。"
-          },
-          "revenue": {
-            "title": "収益センター",
-            "description": "IDサービスをコストセンターから政府の収益創出資産へ転換。"
-          },
-          "security": {
-            "title": "国家安全保障",
-            "description": "詐欺を減少させ説明責任を高める、信頼性のある検証可能なデジタルIDによる国家安全保障の強化。"
-          },
-          "trust": {
-            "title": "信頼の向上",
-            "description": "暗号化検証されたクレデンシャルにより、公共・民間セクターのすべての取引における信頼を構築。"
-          },
-          "ai": {
-            "title": "AI時代の基盤技術",
-            "description": "自動化が進む世界で安全で信頼できるインタラクションを可能にする、AI時代に必要なID基盤を提供。"
-          }
-        }
-      },
-      "citizenBenefits": {
-        "title": "市民へのメリット",
-        "description": "人を第一に考えるデジタルID。",
-        "items": {
-          "convenience": {
-            "title": "利便性の向上",
-            "description": "どこからでも、どのデバイスからでも、行政・民間サービスに迅速かつ簡単にアクセス。"
-          },
-          "privacy": {
-            "title": "信頼とプライバシーの向上",
-            "description": "完全な透明性と管理により、どのデータが誰と共有されるかを正確に把握。"
-          },
-          "control": {
-            "title": "個人データの明確な管理",
-            "description": "いつでもアクセス権を付与・取り消しできる、デジタルIDの所有と管理。"
-          },
-          "transactions": {
-            "title": "迅速で安全な取引",
-            "description": "政府・民間サービスの両方で数秒で本人確認を完了。"
-          },
-          "kyc": {
-            "title": "ワンクリックKYC",
-            "description": "銀行、金融、規制対象業界での顧客確認プロセスを簡素化。"
-          },
-          "fraud": {
-            "title": "ID詐欺からの保護",
-            "description": "暗号化セキュリティと生体認証がなりすましや詐欺から保護。"
-          }
-        }
-      },
-      "investmentStats": {
-        "title": "投資とインパクト",
-        "description": "雇用創出とリターンを生み出すプログラム。",
-        "investment": {
-          "value": "£2億",
-          "description": "プログラム総投資額。Folioが最大80%を負担"
-        },
-        "jobs": {
-          "value": "550+",
-          "description": "創出される雇用。直接雇用50名、間接雇用500名以上"
-        },
-        "revenue": {
-          "value": "£1億 – £5億 / 年",
-          "description": "完全稼働時の政府への潜在的収益。IDサービスをコストセンターから収益センターへ転換"
-        }
-      },
-      "whyFolio": {
-        "title": "なぜFolioか",
-        "description": "AppleやGoogleと競争できるソブリン技術。",
-        "combinedDescription": "グローバル・ビッグテックと競合するソブリン技術を提供する英国のナショナルチャンピオン。ミッションクリティカルな政府プログラムのための実績あるパートナー。",
-        "items": {
-          "global": {
-            "title": "グローバルリーチ",
-            "description": "世界中の国から10,000以上のID書類をサポート。Folioはまた、デジタルIDフレームワークのベストプラクティスについて世界中の政府にアドバイスを提供しています。"
-          },
-          "experience": {
-            "title": "優れた体験",
-            "description": "世界中のユーザーからApp Storeで4.7、Google Playで4.5の評価。"
-          },
-          "ai": {
-            "title": "AI技術",
-            "description": "高度なAI検証による最高レベルのID保証。"
-          },
-          "private": {
-            "title": "本質的なプライバシー",
-            "description": "データはユーザーが所有・管理。プライバシーはアーキテクチャに組み込まれており、後付けではありません。"
-          },
-          "frictionless": {
-            "title": "シームレス",
-            "description": "迅速な登録とサービス間でのID多重利用。"
-          },
-          "sovereign": {
-            "title": "ソブリン技術",
-            "description": "Folioは、グローバル・ビッグテックと競合するソブリン技術を提供する英国のナショナルチャンピオンです。SGOグループの一員として、世界中の政府や企業にデジタルIDソリューションを提供しています。"
-          },
-          "lowMaintenance": {
-            "title": "低メンテナンス",
-            "description": "高額なアップグレードや移行なしに継続的に進化するSaaSエバーグリーンソリューション。"
-          }
-        }
-      },
-      "sgoCapabilities": {
-        "title": "なぜFolio / SGOか",
-        "description": "ミッションクリティカルな政府プログラムのための実績あるパートナー。",
-        "items": {
-          "outcomes": {
-            "title": "製品ではなく成果",
-            "description": "動かせない期限、失敗の確率ゼロ。成功は目に見えない。契約範囲の裏に隠れない。私たちは成功を提供する。"
-          },
-          "cognitive": {
-            "title": "認知および政治的負荷の軽減",
-            "description": "複雑さ、不完全な仕様、曖昧な要件、政治的・運用上のリスクが私たちの専門。成功に必要なものを推測し、システム、ワークフロー、ロジスティクス、トレーニングに変換。"
-          },
-          "risk": {
-            "title": "評判リスクの軽減",
-            "description": "予防的なリスク特定。組み込まれた監査可能性。法的、メディア、政治的攻撃下での納品規律。"
-          },
-          "execution": {
-            "title": "実績ある実行エンジン",
-            "description": "25年にわたり成熟したゼロ失敗のロジスティクスマシン。ミッションクリティカルな実装で毎回成功することが証明されたソフトウェアツール、運用モデル、ガバナンスと管理システム。"
-          },
-          "culture": {
-            "title": "文化的レジリエンス",
-            "description": "業界最低の離職率。道徳的明確さと強固な倫理的基盤が長期的にコミットしたオペレーターを生み出す。"
-          },
-          "fullStack": {
-            "title": "真のフルスタック",
-            "description": "物理デバイス層、ソフトウェア層、フィールドオペレーション層。言い訳なし。"
-          }
-        }
-      },
-      "cta": {
-        "title": "ご相談の準備はできていますか？",
-        "description": "Folioが英国のデジタルID構想をどのようにサポートできるかをご覧ください。",
-        "button": "お問い合わせ",
-        "playgroundButton": "Playgroundを試す"
-      }
     }
   },
   "playground": {
     "meta": {
       "title": "Playground | Folio Wallet",
       "description": "EUデジタルIDシナリオを体験。クレデンシャルの発行・検証フローをテスト。"
+    },
+    "hero": {
+      "tagline": "Playground",
+      "title": "EUDIフローを体験",
+      "description": "デモ書類でクレデンシャルの発行と検証を試してください。QRコードをスキャンし、選択的開示を確認し、本番実装前にEUDI互換フローの動作を確認できます。",
+      "button": "詳細を見る"
     },
     "issue": {
       "title": "Playground",

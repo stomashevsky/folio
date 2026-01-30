@@ -17,7 +17,6 @@ const DigitalTicketingPage = lazy(() => import('./pages/DigitalTicketingPage'))
 const AgeCompliancePage = lazy(() => import('./pages/AgeCompliancePage'))
 const ClientOnboardingPage = lazy(() => import('./pages/ClientOnboardingPage'))
 const GovernmentPage = lazy(() => import('./pages/GovernmentPage'))
-const GovernmentUkPage = lazy(() => import('./pages/GovernmentUkPage'))
 const IdVerificationPage = lazy(() => import('./pages/IdVerificationPage'))
 const DocumentIntelligencePage = lazy(() => import('./pages/DocumentIntelligencePage'))
 const LivenessCheckPage = lazy(() => import('./pages/LivenessCheckPage'))
@@ -291,7 +290,6 @@ function LocalizedRoutes() {
         <Route path="solutions/age-compliance" element={<AgeCompliancePage />} />
         <Route path="solutions/client-onboarding" element={<ClientOnboardingPage />} />
         <Route path="government" element={<GovernmentPage />} />
-        <Route path="government/uk" element={<GovernmentUkPage />} />
         <Route path="platform/id-verification" element={<IdVerificationPage />} />
         <Route path="platform/document-intelligence" element={<DocumentIntelligencePage />} />
         <Route path="platform/liveness-check" element={<LivenessCheckPage />} />

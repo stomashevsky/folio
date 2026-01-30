@@ -6,8 +6,158 @@
         },
         "hero": {
             "tagline": "Gobierno",
+            "title": "Credenciales digitales y billetera gubernamental",
+            "description": "Una propuesta de asociación público-privada para crear servicios de emisión, distribución, almacenamiento y validación de identidad digital, cubriendo los sectores público y privado."
+        },
+        "eudiSection": {
+            "tagline": "EUDI",
             "title": "Identidad digital según estándares globales",
             "description": "Herramientas para diseñar, probar e implementar credenciales digitales modernas, con un entorno de pruebas que refleja flujos reales de identidad digital europea."
+        },
+        "mckinsey": {
+            "quote": "\"Los países que adoptan ecosistemas con identificaciones digitales aumentarán su PIB entre un 6% y un 13% en 5 años.\"",
+            "source": "McKinsey Global Institute"
+        },
+        "govBenefits": {
+            "title": "Beneficios para el gobierno y el país",
+            "description": "La infraestructura de identidad digital ofrece valor medible para la nación.",
+            "items": {
+                "services": {
+                    "title": "Mejores servicios gubernamentales",
+                    "description": "Servicios digitales optimizados para ciudadanos y empresas, reduciendo fricción y mejorando accesibilidad en todos los puntos de contacto del sector público."
+                },
+                "gdp": {
+                    "title": "Crecimiento del PIB",
+                    "description": "Los países que adoptan ecosistemas con identificaciones digitales aumentan su PIB entre un 6% y un 13% en cinco años, según McKinsey Global Institute."
+                },
+                "revenue": {
+                    "title": "Centro de ingresos",
+                    "description": "Transforme los servicios de identidad de un centro de costos en un activo generador de ingresos para el gobierno."
+                },
+                "security": {
+                    "title": "Seguridad nacional",
+                    "description": "Fortalezca la seguridad nacional mediante identidades digitales confiables y verificables que reducen el fraude y aumentan la responsabilidad."
+                },
+                "trust": {
+                    "title": "Mayor confianza",
+                    "description": "Genere confianza en todas las transacciones de los sectores público y privado con credenciales verificadas criptográficamente."
+                },
+                "ai": {
+                    "title": "Tecnología habilitadora para IA",
+                    "description": "Proporcione la base de identidad necesaria para la era de la IA, habilitando interacciones seguras y confiables en un mundo cada vez más automatizado."
+                }
+            }
+        },
+        "citizenBenefits": {
+            "title": "Beneficios para los ciudadanos",
+            "description": "Identidad digital que pone a las personas primero.",
+            "items": {
+                "convenience": {
+                    "title": "Mayor comodidad",
+                    "description": "Acceda a servicios gubernamentales y privados de forma rápida y fácil desde cualquier dispositivo, en cualquier lugar."
+                },
+                "privacy": {
+                    "title": "Mayor confianza y privacidad",
+                    "description": "Sepa exactamente qué datos se comparten y con quién, con total transparencia y control."
+                },
+                "control": {
+                    "title": "Control claro sobre datos personales",
+                    "description": "Posea y gestione su identidad digital con la capacidad de otorgar y revocar acceso en cualquier momento."
+                },
+                "transactions": {
+                    "title": "Transacciones rápidas y seguras",
+                    "description": "Complete la verificación de identidad en segundos con servicios gubernamentales y del sector privado."
+                },
+                "kyc": {
+                    "title": "KYC con un clic",
+                    "description": "Simplifique los procesos de conocimiento del cliente en banca, finanzas e industrias reguladas."
+                },
+                "fraud": {
+                    "title": "Protección contra fraude de identidad",
+                    "description": "La seguridad criptográfica y la verificación biométrica protegen contra el robo de identidad y el fraude."
+                }
+            }
+        },
+        "investmentStats": {
+            "title": "Inversión e impacto",
+            "description": "Un programa que crea empleo y genera retornos.",
+            "investment": {
+                "value": "Hasta 80%",
+                "description": "Contribución de Folio a la inversión total del programa"
+            },
+            "jobs": {
+                "value": "500+",
+                "description": "Empleos directos e indirectos creados a través de la implementación del programa"
+            },
+            "revenue": {
+                "value": "Centro de ingresos",
+                "description": "Potencial para transformar los servicios de identidad de un centro de costos a un activo generador de ingresos"
+            }
+        },
+        "whyFolio": {
+            "title": "Por qué Folio",
+            "description": "Tecnología soberana que puede competir con Apple y Google.",
+            "combinedDescription": "Tecnología soberana que compite con las grandes tecnológicas globales. Un socio probado para programas gubernamentales de misión crítica.",
+            "items": {
+                "global": {
+                    "title": "Alcance global",
+                    "description": "Soporte para más de 10.000 documentos de identidad de países de todo el mundo. Folio también asesora a gobiernos a nivel global sobre marcos de identidad digital de mejores prácticas."
+                },
+                "experience": {
+                    "title": "Mejor experiencia",
+                    "description": "Calificado con 4.7 estrellas en App Store y 4.5 estrellas en Google Play por usuarios de todo el mundo."
+                },
+                "ai": {
+                    "title": "Tecnología de IA",
+                    "description": "Los más altos niveles de garantía de identidad impulsados por verificación avanzada de IA."
+                },
+                "private": {
+                    "title": "Privado por definición",
+                    "description": "Los datos son propiedad y control del usuario. La privacidad está integrada en la arquitectura, no añadida."
+                },
+                "frictionless": {
+                    "title": "Sin fricciones",
+                    "description": "Registro rápido y múltiples usos de la identidad en diferentes servicios."
+                },
+                "sovereign": {
+                    "title": "Tecnología soberana",
+                    "description": "Folio proporciona tecnología soberana que compite con las grandes tecnológicas globales. Parte del Grupo SGO, ofrecemos soluciones de identidad digital para gobiernos y empresas de todo el mundo."
+                },
+                "lowMaintenance": {
+                    "title": "Bajo mantenimiento",
+                    "description": "Solución SaaS siempre actualizada que evoluciona continuamente sin costosas actualizaciones ni migraciones."
+                }
+            }
+        },
+        "sgoCapabilities": {
+            "title": "Por qué Folio / SGO",
+            "description": "Un socio probado para programas gubernamentales de misión crítica.",
+            "items": {
+                "outcomes": {
+                    "title": "Resultados, no productos",
+                    "description": "Plazos inamovibles, probabilidad cero de fracaso. El éxito es invisible. No nos escondemos detrás del alcance del contrato. Proporcionamos éxito."
+                },
+                "cognitive": {
+                    "title": "Reducir la carga cognitiva y política",
+                    "description": "Complejidad, especificaciones incompletas, requisitos ambiguos, riesgo político y operacional son nuestra especialidad. Inferimos lo necesario para el éxito y lo convertimos en sistemas, flujos de trabajo, logística y capacitación."
+                },
+                "risk": {
+                    "title": "Reducir el riesgo reputacional",
+                    "description": "Identificación preventiva de riesgos. Auditabilidad integrada. Disciplina de entrega bajo ataques legales, mediáticos y políticos."
+                },
+                "execution": {
+                    "title": "Motor de ejecución probado",
+                    "description": "Máquina logística de cero fallos madurada durante 25 años. Herramientas de software, modelos operativos, sistemas de gobernanza y gestión probados para tener éxito en implementaciones de misión crítica."
+                },
+                "culture": {
+                    "title": "Resiliencia cultural",
+                    "description": "La tasa de deserción más baja de la industria. Claridad moral y sólidos fundamentos éticos resultan en operadores comprometidos a largo plazo."
+                },
+                "fullStack": {
+                    "title": "Full stack real",
+                    "description": "Capa de dispositivos físicos, capa de software, capa de operaciones de campo. Sin excusas."
+                }
+            }
         },
         "overview": {
             "title": "Infraestructura moderna para identidad digital nacional",
@@ -69,196 +219,18 @@
         "globalPartners": {
             "title": "Socios globales",
             "description": "Folio apoya a gobiernos de todo el mundo con soluciones de identidad seguras y escalables."
-        },
-        "ukSection": {
-            "tagline": "Reino Unido",
-            "title": "Identidad digital para el Reino Unido",
-            "description": "Una propuesta de asociación público-privada para proporcionar infraestructura de identidad digital nacional, ofreciendo tecnología soberana que sirve tanto a ciudadanos como al gobierno.",
-            "button": "Saber más"
-        },
-        "uk": {
-            "meta": {
-                "title": "Identidad digital del Reino Unido | Folio",
-                "description": "Asociación público-privada para credenciales digitales del Reino Unido y billetera gubernamental. Tecnología soberana que ofrece mejores servicios para ciudadanos y gobierno."
-            },
-            "hero": {
-                "tagline": "Reino Unido",
-                "title": "Credenciales digitales y billetera gubernamental del Reino Unido",
-                "description": "Una propuesta de asociación público-privada para crear servicios de emisión, distribución, almacenamiento y validación de identidad digital para todos los ciudadanos y empresas británicos, cubriendo los sectores público y privado."
-            },
-            "ukStats": {
-                "title": "Reino Unido",
-                "description": "Un mercado listo para la infraestructura de identidad digital nacional.",
-                "population": {
-                    "value": "67,8M",
-                    "description": "Población del Reino Unido elegible para identidad digital, con 76% mayores de 15 años y 84% viviendo en áreas urbanas"
-                },
-                "smartphone": {
-                    "value": "131%",
-                    "description": "Tasa de penetración de smartphones con 88 millones de cuentas móviles en todo el país"
-                },
-                "cost": {
-                    "value": "£2",
-                    "description": "Costo de registro por ciudadano incluyendo verificación y emisión de documentos digitales"
-                }
-            },
-            "mckinsey": {
-                "quote": "\"Los países que adoptan ecosistemas con IDs digitales aumentan su PIB entre un 6% y un 13% en 5 años.\"",
-                "source": "McKinsey Global Institute"
-            },
-            "govBenefits": {
-                "title": "Beneficios para el gobierno y el país",
-                "description": "La infraestructura de identidad digital aporta valor medible para la nación.",
-                "items": {
-                    "services": {
-                        "title": "Mejores servicios gubernamentales",
-                        "description": "Servicios digitales optimizados para ciudadanos y empresas, reduciendo la fricción y mejorando la accesibilidad en todos los puntos de contacto del sector público."
-                    },
-                    "gdp": {
-                        "title": "Crecimiento del PIB",
-                        "description": "Los países que adoptan ecosistemas con IDs digitales aumentan su PIB entre un 6% y un 13% en cinco años, según McKinsey Global Institute."
-                    },
-                    "revenue": {
-                        "title": "Centro de ingresos",
-                        "description": "Transformar los servicios de identidad de un centro de costos a un activo generador de ingresos para el gobierno."
-                    },
-                    "security": {
-                        "title": "Seguridad nacional",
-                        "description": "Fortalecer la seguridad nacional mediante identidades digitales verificables que reducen el fraude y aumentan la responsabilidad."
-                    },
-                    "trust": {
-                        "title": "Mayor confianza",
-                        "description": "Generar confianza en todas las transacciones de los sectores público y privado con credenciales verificadas criptográficamente."
-                    },
-                    "ai": {
-                        "title": "Tecnología habilitadora para la IA",
-                        "description": "Proporcionar la base de identidad necesaria para la era de la IA, permitiendo interacciones seguras y confiables en un mundo cada vez más automatizado."
-                    }
-                }
-            },
-            "citizenBenefits": {
-                "title": "Beneficios para los ciudadanos",
-                "description": "Identidad digital que pone a las personas primero.",
-                "items": {
-                    "convenience": {
-                        "title": "Mayor comodidad",
-                        "description": "Acceda a servicios gubernamentales y privados de forma rápida y fácil desde cualquier dispositivo, en cualquier lugar."
-                    },
-                    "privacy": {
-                        "title": "Mayor confianza y privacidad",
-                        "description": "Sepa exactamente qué datos se comparten y con quién, con total transparencia y control."
-                    },
-                    "control": {
-                        "title": "Control claro sobre los datos personales",
-                        "description": "Posea y gestione su identidad digital con la capacidad de otorgar y revocar acceso en cualquier momento."
-                    },
-                    "transactions": {
-                        "title": "Transacciones rápidas y seguras",
-                        "description": "Complete la verificación de identidad en segundos tanto con servicios gubernamentales como privados."
-                    },
-                    "kyc": {
-                        "title": "KYC con un clic",
-                        "description": "Simplifique los procesos de conocimiento del cliente en banca, finanzas e industrias reguladas."
-                    },
-                    "fraud": {
-                        "title": "Protección contra el fraude de identidad",
-                        "description": "La seguridad criptográfica y la verificación biométrica protegen contra el robo y fraude de identidad."
-                    }
-                }
-            },
-            "investmentStats": {
-                "title": "Inversión e impacto",
-                "description": "Un programa que crea empleo y genera retornos.",
-                "investment": {
-                    "value": "£200M",
-                    "description": "Inversión total del programa con hasta 80% de contribución de Folio"
-                },
-                "jobs": {
-                    "value": "550+",
-                    "description": "Empleos creados incluyendo 50 posiciones directas y más de 500 roles indirectos"
-                },
-                "revenue": {
-                    "value": "£100M – £500M / año",
-                    "description": "Ingresos potenciales del gobierno cuando esté totalmente operativo, transformando los servicios de identidad de un centro de costos a un centro de ingresos"
-                }
-            },
-            "whyFolio": {
-                "title": "Por qué Folio",
-                "description": "Tecnología soberana que puede competir con Apple y Google.",
-                "combinedDescription": "Un campeón nacional del Reino Unido que ofrece tecnología soberana que compite con las grandes tecnológicas globales. Un socio probado para programas gubernamentales de misión crítica.",
-                "items": {
-                    "global": {
-                        "title": "Alcance global",
-                        "description": "Soporte para más de 10.000 documentos de identidad de países de todo el mundo. Folio también asesora a gobiernos a nivel global sobre marcos de identidad digital de mejores prácticas."
-                    },
-                    "experience": {
-                        "title": "Mejor experiencia",
-                        "description": "Calificado con 4.7 estrellas en App Store y 4.5 estrellas en Google Play por usuarios de todo el mundo."
-                    },
-                    "ai": {
-                        "title": "Tecnología de IA",
-                        "description": "Los más altos niveles de garantía de identidad impulsados por verificación avanzada de IA."
-                    },
-                    "private": {
-                        "title": "Privado por definición",
-                        "description": "Los datos son propiedad y control del usuario. La privacidad está integrada en la arquitectura, no añadida."
-                    },
-                    "frictionless": {
-                        "title": "Sin fricciones",
-                        "description": "Registro rápido y múltiples usos de la identidad en diferentes servicios."
-                    },
-                    "sovereign": {
-                        "title": "Tecnología soberana",
-                        "description": "Folio es un campeón nacional del Reino Unido que ofrece tecnología soberana que compite con las grandes tecnológicas globales. Parte del Grupo SGO, ofrecemos soluciones de identidad digital para gobiernos y empresas de todo el mundo."
-                    },
-                    "lowMaintenance": {
-                        "title": "Bajo mantenimiento",
-                        "description": "Solución SaaS siempre actualizada que evoluciona continuamente sin costosas actualizaciones ni migraciones."
-                    }
-                }
-            },
-            "sgoCapabilities": {
-                "title": "Por qué Folio / SGO",
-                "description": "Un socio probado para programas gubernamentales de misión crítica.",
-                "items": {
-                    "outcomes": {
-                        "title": "Resultados, no productos",
-                        "description": "Plazos inamovibles, probabilidad cero de fracaso. El éxito es invisible. No nos escondemos detrás del alcance del contrato. Proporcionamos éxito."
-                    },
-                    "cognitive": {
-                        "title": "Reducir la carga cognitiva y política",
-                        "description": "Complejidad, especificaciones incompletas, requisitos ambiguos, riesgo político y operacional son nuestra especialidad. Inferimos lo necesario para el éxito y lo convertimos en sistemas, flujos de trabajo, logística y capacitación."
-                    },
-                    "risk": {
-                        "title": "Reducir el riesgo reputacional",
-                        "description": "Identificación preventiva de riesgos. Auditabilidad integrada. Disciplina de entrega bajo ataques legales, mediáticos y políticos."
-                    },
-                    "execution": {
-                        "title": "Motor de ejecución probado",
-                        "description": "Máquina logística de cero fallos madurada durante 25 años. Herramientas de software, modelos operativos, sistemas de gobernanza y gestión probados para tener éxito en implementaciones de misión crítica."
-                    },
-                    "culture": {
-                        "title": "Resiliencia cultural",
-                        "description": "La tasa de deserción más baja de la industria. Claridad moral y sólidos fundamentos éticos resultan en operadores comprometidos a largo plazo."
-                    },
-                    "fullStack": {
-                        "title": "Full stack real",
-                        "description": "Capa de dispositivos físicos, capa de software, capa de operaciones de campo. Sin excusas."
-                    }
-                }
-            },
-            "cta": {
-                "title": "¿Listo para conversar?",
-                "description": "Descubre cómo Folio puede apoyar las ambiciones de identidad digital del Reino Unido.",
-                "button": "Contáctanos",
-                "playgroundButton": "Explorar Playground"
-            }
         }
     },
     "playground": {
         "meta": {
             "title": "Playground | Folio Wallet",
             "description": "Explora escenarios de identidad digital europea. Prueba flujos de emisión y verificación de credenciales."
+        },
+        "hero": {
+            "tagline": "Playground",
+            "title": "Experimenta los flujos EUDI en acción",
+            "description": "Prueba la emisión y verificación de credenciales con documentos de demostración. Escanea códigos QR, explora la divulgación selectiva y observa exactamente cómo se comportan los flujos compatibles con EUDI antes de implementarlos en producción.",
+            "button": "Saber más"
         },
         "issue": {
             "title": "Playground",
