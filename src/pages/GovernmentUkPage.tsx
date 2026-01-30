@@ -196,8 +196,20 @@ export default function GovernmentUkPage() {
           </div>
         </section>
 
+        {/* McKinsey Quote Section */}
+        <section className="flex flex-col items-center px-0 py-16 md:py-24 relative w-full" style={BACKGROUND_STYLE}>
+          <div className="flex flex-col gap-4 items-center max-w-[672px] px-6 w-full">
+            <p className="font-medium leading-7 md:leading-7 text-lg md:text-xl text-[#0a0a0a] text-center">
+              {t('government.uk.mckinsey.quote')}
+            </p>
+            <span className="font-normal text-base text-[#737373]">
+              {t('government.uk.mckinsey.source')}
+            </span>
+          </div>
+        </section>
+
         {/* UK Market Stats Section */}
-        <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
+        <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           {/* Desktop Layout */}
           <div className="hidden md:flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-12 items-start relative shrink-0 w-full">
@@ -247,18 +259,6 @@ export default function GovernmentUkPage() {
                 />
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* McKinsey Quote Section */}
-        <section className="bg-white flex flex-col items-center px-0 py-16 md:py-24 relative w-full">
-          <div className="flex flex-col gap-4 items-center max-w-[672px] px-6 w-full">
-            <p className="font-medium leading-7 md:leading-7 text-lg md:text-xl text-[#0a0a0a] text-center">
-              {t('government.uk.mckinsey.quote')}
-            </p>
-            <span className="font-normal text-base text-[#737373]">
-              {t('government.uk.mckinsey.source')}
-            </span>
           </div>
         </section>
 
@@ -404,74 +404,77 @@ export default function GovernmentUkPage() {
           </div>
         </section>
 
-        {/* Why Folio Section */}
+        {/* Why Folio Section - Combined with SGO Capabilities */}
         <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
-          <div className="flex flex-col gap-12 md:gap-16 items-center max-w-[768px] px-6 py-0 relative shrink-0 w-full">
-            <SectionHeader
-              title={t('government.uk.whyFolio.title')}
-              description={t('government.uk.whyFolio.description')}
-              align="center"
-              maxWidth="576px"
-            />
-            <div className="flex flex-col gap-12 md:gap-16 items-start w-full">
-              <WhyFolioBlock
-                icon={globeIcon}
-                title={t('government.uk.whyFolio.items.global.title')}
-                description={t('government.uk.whyFolio.items.global.description')}
-              />
-              <WhyFolioBlock
-                icon={starIcon}
-                title={t('government.uk.whyFolio.items.experience.title')}
-                description={t('government.uk.whyFolio.items.experience.description')}
-              />
-              <WhyFolioBlock
-                icon={sparklesIcon}
-                title={t('government.uk.whyFolio.items.ai.title')}
-                description={t('government.uk.whyFolio.items.ai.description')}
-              />
-              <WhyFolioBlock
-                icon={lockKeyholeIcon}
-                title={t('government.uk.whyFolio.items.private.title')}
-                description={t('government.uk.whyFolio.items.private.description')}
-              />
-              <WhyFolioBlock
-                icon={zapIcon}
-                title={t('government.uk.whyFolio.items.frictionless.title')}
-                description={t('government.uk.whyFolio.items.frictionless.description')}
-              />
-              <WhyFolioBlock
-                icon={landmarkIcon}
-                title={t('government.uk.whyFolio.items.sovereign.title')}
-                description={t('government.uk.whyFolio.items.sovereign.description')}
-              />
-              <WhyFolioBlock
-                icon={refreshCcwIcon}
-                title={t('government.uk.whyFolio.items.lowMaintenance.title')}
-                description={t('government.uk.whyFolio.items.lowMaintenance.description')}
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* SGO Capabilities Section */}
-        <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full bg-[#f5f5f5]">
-          <div className="flex flex-col gap-12 md:gap-16 items-center max-w-[768px] px-6 py-0 relative shrink-0 w-full">
-            <SectionHeader
-              title={t('government.uk.sgoCapabilities.title')}
-              description={t('government.uk.sgoCapabilities.description')}
-              align="center"
-              maxWidth="576px"
-            />
-            <div className="flex flex-col items-start w-full">
-              {sgoCapabilities.map((capability) => (
-                <SgoCapabilityItem
-                  key={capability.id}
-                  title={capability.title}
-                  description={capability.description}
-                  isOpen={activeSgoCapabilityId === capability.id}
-                  onClick={() => setActiveSgoCapabilityId(activeSgoCapabilityId === capability.id ? null : capability.id)}
+          <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+            {/* Left side: Title + description + product features */}
+            <div className="flex flex-col gap-8 items-start max-w-full md:max-w-[512px] relative shrink-0 w-full md:w-auto md:flex-1">
+              <div className="flex flex-col gap-5 items-start w-full">
+                <h2 className="font-bold leading-[36px] md:leading-[40px] text-[30px] md:text-[36px] text-[#0a0a0a] tracking-[0px] w-full">
+                  {t('government.uk.whyFolio.title')}
+                </h2>
+                <p className="font-normal leading-6 text-[#737373] text-base w-full">
+                  {t('government.uk.whyFolio.description')}
+                </p>
+              </div>
+              {/* Product features as compact list */}
+              <div className="flex flex-col gap-4 items-start w-full">
+                <WhyFolioBlock
+                  icon={globeIcon}
+                  title={t('government.uk.whyFolio.items.global.title')}
+                  description={t('government.uk.whyFolio.items.global.description')}
                 />
-              ))}
+                <WhyFolioBlock
+                  icon={starIcon}
+                  title={t('government.uk.whyFolio.items.experience.title')}
+                  description={t('government.uk.whyFolio.items.experience.description')}
+                />
+                <WhyFolioBlock
+                  icon={sparklesIcon}
+                  title={t('government.uk.whyFolio.items.ai.title')}
+                  description={t('government.uk.whyFolio.items.ai.description')}
+                />
+                <WhyFolioBlock
+                  icon={lockKeyholeIcon}
+                  title={t('government.uk.whyFolio.items.private.title')}
+                  description={t('government.uk.whyFolio.items.private.description')}
+                />
+                <WhyFolioBlock
+                  icon={zapIcon}
+                  title={t('government.uk.whyFolio.items.frictionless.title')}
+                  description={t('government.uk.whyFolio.items.frictionless.description')}
+                />
+                <WhyFolioBlock
+                  icon={landmarkIcon}
+                  title={t('government.uk.whyFolio.items.sovereign.title')}
+                  description={t('government.uk.whyFolio.items.sovereign.description')}
+                />
+                <WhyFolioBlock
+                  icon={refreshCcwIcon}
+                  title={t('government.uk.whyFolio.items.lowMaintenance.title')}
+                  description={t('government.uk.whyFolio.items.lowMaintenance.description')}
+                />
+              </div>
+            </div>
+            {/* Right side: SGO Capabilities Accordion */}
+            <div className="flex flex-col gap-5 items-start relative shrink-0 w-full md:flex-1">
+              <h3 className="font-semibold leading-7 text-lg text-[#0a0a0a]">
+                {t('government.uk.sgoCapabilities.title')}
+              </h3>
+              <p className="font-normal leading-6 text-[#737373] text-base w-full">
+                {t('government.uk.sgoCapabilities.description')}
+              </p>
+              <div className="flex flex-col gap-0 items-start w-full">
+                {sgoCapabilities.map((capability) => (
+                  <SgoCapabilityItem
+                    key={capability.id}
+                    title={capability.title}
+                    description={capability.description}
+                    isOpen={activeSgoCapabilityId === capability.id}
+                    onClick={() => setActiveSgoCapabilityId(activeSgoCapabilityId === capability.id ? null : capability.id)}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </section>
