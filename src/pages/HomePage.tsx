@@ -302,10 +302,7 @@ function HomePage() {
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 items-start relative shrink-0">
-                <Button variant="primary" onClick={() => handleNavigate('/government/playground')}>
-                  {tCommon('buttons.explorePlayground')}
-                </Button>
-                <Button variant="outline" onClick={() => handleNavigate('/government')}>
+                <Button variant="primary" onClick={() => handleNavigate('/government')}>
                   {tCommon('buttons.learnMore')}
                 </Button>
               </div>
@@ -331,10 +328,7 @@ function HomePage() {
               </p>
             </div>
             <div className="flex flex-wrap gap-3 items-start relative shrink-0 w-full">
-              <Button variant="primary" onClick={() => handleNavigate('/government/playground')}>
-                {tCommon('buttons.explorePlayground')}
-              </Button>
-              <Button variant="outline" onClick={() => handleNavigate('/government')}>
+              <Button variant="primary" onClick={() => handleNavigate('/government')}>
                 {tCommon('buttons.learnMore')}
               </Button>
             </div>
