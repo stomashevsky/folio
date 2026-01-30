@@ -142,23 +142,23 @@
                 "items": {
                     "convenience": {
                         "title": "Mayor comodidad",
-                        "description": "Accede a servicios gubernamentales y privados de forma rápida y fácil desde cualquier dispositivo, en cualquier lugar."
+                        "description": "Acceda a servicios gubernamentales y privados de forma rápida y fácil desde cualquier dispositivo, en cualquier lugar."
                     },
                     "privacy": {
                         "title": "Mayor confianza y privacidad",
-                        "description": "Sabe exactamente qué datos se comparten y con quién, con total transparencia y control."
+                        "description": "Sepa exactamente qué datos se comparten y con quién, con total transparencia y control."
                     },
                     "control": {
                         "title": "Control claro sobre los datos personales",
-                        "description": "Posee y gestiona tu identidad digital con la capacidad de otorgar y revocar acceso en cualquier momento."
+                        "description": "Posea y gestione su identidad digital con la capacidad de otorgar y revocar acceso en cualquier momento."
                     },
                     "transactions": {
                         "title": "Transacciones rápidas y seguras",
-                        "description": "Completa la verificación de identidad en segundos tanto con servicios gubernamentales como privados."
+                        "description": "Complete la verificación de identidad en segundos tanto con servicios gubernamentales como privados."
                     },
                     "kyc": {
                         "title": "KYC con un clic",
-                        "description": "Simplifica los procesos de conoce a tu cliente en banca, finanzas e industrias reguladas."
+                        "description": "Simplifique los procesos de conocimiento del cliente en banca, finanzas e industrias reguladas."
                     },
                     "fraud": {
                         "title": "Protección contra el fraude de identidad",
