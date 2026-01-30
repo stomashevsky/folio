@@ -178,18 +178,18 @@
           "description": "Emplois créés dont 50 postes directs et plus de 500 rôles indirects"
         },
         "revenue": {
-          "value": "£100M+/an",
-          "description": "Revenus potentiels pour le gouvernement une fois pleinement opérationnel, transformant les services d'identité d'un centre de coûts en centre de profit"
+          "value": "£100M – £500M / an",
+          "description": "Revenus potentiels pour le gouvernement une fois pleinement opérationnel, transformant les services d'identité d'un centre de coûts en centre de revenus"
         }
       },
       "whyFolio": {
         "title": "Pourquoi Folio",
         "description": "Une technologie souveraine capable de concurrencer Apple et Google.",
-        "combinedDescription": "Une technologie souveraine capable de concurrencer Apple et Google. Un partenaire éprouvé pour les programmes gouvernementaux critiques.",
+        "combinedDescription": "Un champion national britannique fournissant une technologie souveraine qui concurrence les géants mondiaux du secteur. Un partenaire éprouvé pour les programmes gouvernementaux critiques.",
         "items": {
           "global": {
             "title": "Portée mondiale",
-            "description": "Prise en charge de plus de 10 000 documents d'identité de pays du monde entier."
+            "description": "Prise en charge de plus de 10 000 documents d'identité de pays du monde entier. Folio conseille également les gouvernements du monde entier sur les cadres d'identité numérique de référence."
           },
           "experience": {
             "title": "Meilleure expérience",
@@ -209,7 +209,7 @@
           },
           "sovereign": {
             "title": "Technologie souveraine",
-            "description": "Folio est une entreprise basée au Royaume-Uni au sein du Groupe SGO, fournissant des solutions d'identité numérique pour les gouvernements et les entreprises du monde entier."
+            "description": "Folio est un champion national britannique fournissant une technologie souveraine qui concurrence les géants mondiaux. Membre du Groupe SGO, nous fournissons des solutions d'identité numérique pour les gouvernements et les entreprises du monde entier."
           },
           "lowMaintenance": {
             "title": "Faible maintenance",
@@ -226,7 +226,7 @@
             "description": "Délais immuables, probabilité d'échec nulle. Le succès est invisible. Nous ne nous cachons pas derrière la portée du contrat. Nous fournissons le succès."
           },
           "cognitive": {
-            "title": "Réduire la charge cognitive",
+            "title": "Réduire la charge cognitive et politique",
             "description": "La complexité, les spécifications incomplètes, les exigences ambiguës, les risques politiques et opérationnels sont notre spécialité. Nous déduisons ce qui est nécessaire au succès et le transformons en systèmes, workflows, logistique et formation."
           },
           "risk": {

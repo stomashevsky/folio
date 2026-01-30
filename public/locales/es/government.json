@@ -178,18 +178,18 @@
                     "description": "Empleos creados incluyendo 50 posiciones directas y más de 500 roles indirectos"
                 },
                 "revenue": {
-                    "value": "£100M+/año",
-                    "description": "Ingresos potenciales del gobierno cuando esté totalmente operativo, transformando los servicios de identidad de costo a centro de beneficios"
+                    "value": "£100M – £500M / año",
+                    "description": "Ingresos potenciales del gobierno cuando esté totalmente operativo, transformando los servicios de identidad de un centro de costos a un centro de ingresos"
                 }
             },
             "whyFolio": {
                 "title": "Por qué Folio",
                 "description": "Tecnología soberana que puede competir con Apple y Google.",
-                "combinedDescription": "Tecnología soberana que puede competir con Apple y Google. Un socio probado para programas gubernamentales de misión crítica.",
+                "combinedDescription": "Un campeón nacional del Reino Unido que ofrece tecnología soberana que compite con las grandes tecnológicas globales. Un socio probado para programas gubernamentales de misión crítica.",
                 "items": {
                     "global": {
                         "title": "Alcance global",
-                        "description": "Soporte para más de 10.000 documentos de identidad de países de todo el mundo."
+                        "description": "Soporte para más de 10.000 documentos de identidad de países de todo el mundo. Folio también asesora a gobiernos a nivel global sobre marcos de identidad digital de mejores prácticas."
                     },
                     "experience": {
                         "title": "Mejor experiencia",
@@ -209,7 +209,7 @@
                     },
                     "sovereign": {
                         "title": "Tecnología soberana",
-                        "description": "Folio es una empresa con sede en el Reino Unido dentro del Grupo SGO, que ofrece soluciones de identidad digital para gobiernos y empresas de todo el mundo."
+                        "description": "Folio es un campeón nacional del Reino Unido que ofrece tecnología soberana que compite con las grandes tecnológicas globales. Parte del Grupo SGO, ofrecemos soluciones de identidad digital para gobiernos y empresas de todo el mundo."
                     },
                     "lowMaintenance": {
                         "title": "Bajo mantenimiento",
@@ -226,7 +226,7 @@
                         "description": "Plazos inamovibles, probabilidad cero de fracaso. El éxito es invisible. No nos escondemos detrás del alcance del contrato. Proporcionamos éxito."
                     },
                     "cognitive": {
-                        "title": "Reducir la carga cognitiva",
+                        "title": "Reducir la carga cognitiva y política",
                         "description": "Complejidad, especificaciones incompletas, requisitos ambiguos, riesgo político y operacional son nuestra especialidad. Inferimos lo necesario para el éxito y lo convertimos en sistemas, flujos de trabajo, logística y capacitación."
                     },
                     "risk": {
