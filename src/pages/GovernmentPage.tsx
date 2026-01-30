@@ -91,7 +91,7 @@ export default function GovernmentPage() {
     description: t('government.meta.description'),
     ogTitle: t('government.meta.title'),
     ogDescription: t('government.meta.description'),
-    ogImage: getOgImageUrl('government-solutions-hero.png'),
+    ogImage: getOgImageUrl('government-ppp-hero.png'),
     ogUrl: canonicalUrl,
     canonicalUrl: canonicalUrl
   })
