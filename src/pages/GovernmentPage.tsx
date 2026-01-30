@@ -121,7 +121,7 @@ export default function GovernmentPage() {
     <div className="flex flex-col items-start min-h-screen relative w-full">
       <Navbar />
       <main className="flex-1 w-full">
-        {/* Hero Section */}
+        {/* 1. Hero Section */}
         <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full">
           {/* Desktop Layout */}
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
@@ -135,27 +135,14 @@ export default function GovernmentPage() {
                   {t('government.hero.description')}
                 </p>
               </div>
-              <div className="flex flex-wrap gap-3 items-start relative">
-                <Button
-                  onClick={() => {
-                    window.location.href = 'mailto:contact@folio.id'
-                  }}
-                  variant="primary"
-                >
-                  {t('government.cta.button')}
-                </Button>
-                <Button
-                  onClick={() => {
-                    navigate(getLocalizedPath('/government/playground'))
-                    setTimeout(() => {
-                      scrollToTop()
-                    }, 100)
-                  }}
-                  variant="outline"
-                >
-                  {t('government.cta.playgroundButton')}
-                </Button>
-              </div>
+              <Button
+                onClick={() => {
+                  window.location.href = 'mailto:contact@folio.id'
+                }}
+                variant="primary"
+              >
+                {t('government.cta.button')}
+              </Button>
             </div>
             <ImageWithPlaceholder
               src={governmentPppHero}
@@ -179,27 +166,14 @@ export default function GovernmentPage() {
                   {t('government.hero.description')}
                 </p>
               </div>
-              <div className="flex flex-wrap gap-3 items-start relative shrink-0">
-                <Button
-                  onClick={() => {
-                    window.location.href = 'mailto:contact@folio.id'
-                  }}
-                  variant="primary"
-                >
-                  {t('government.cta.button')}
-                </Button>
-                <Button
-                  onClick={() => {
-                    navigate(getLocalizedPath('/government/playground'))
-                    setTimeout(() => {
-                      scrollToTop()
-                    }, 100)
-                  }}
-                  variant="outline"
-                >
-                  {t('government.cta.playgroundButton')}
-                </Button>
-              </div>
+              <Button
+                onClick={() => {
+                  window.location.href = 'mailto:contact@folio.id'
+                }}
+                variant="primary"
+              >
+                {t('government.cta.button')}
+              </Button>
             </div>
             <ImageWithPlaceholder
               src={governmentPppHero}
@@ -212,83 +186,8 @@ export default function GovernmentPage() {
           </div>
         </section>
 
-        {/* EUDI Section (former Hero) */}
-        <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
-          {/* Desktop Layout */}
-          <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-            <ImageWithPlaceholder
-              src={governmentSolutionsHero}
-              alt={t('government.eudiSection.title')}
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
-              loading="lazy"
-            />
-            <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
-              <div className="flex flex-col gap-2 items-start relative shrink-0 w-full">
-                <span className="font-medium leading-5 text-sm text-[#737373]">
-                  {t('government.eudiSection.tagline')}
-                </span>
-                <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
-                  {t('government.eudiSection.title')}
-                </h2>
-                <p className="font-normal leading-6 text-[#737373] text-base w-full mt-2">
-                  {t('government.eudiSection.description')}
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-3 items-start relative shrink-0">
-                <Button
-                  variant="primary"
-                  onClick={() => {
-                    navigate(getLocalizedPath('/government/playground'))
-                    setTimeout(() => {
-                      scrollToTop()
-                    }, 100)
-                  }}
-                >
-                  {t('government.cta.playgroundButton')}
-                </Button>
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile Layout */}
-          <div className="flex md:hidden flex-col gap-8 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-            <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
-              <span className="font-medium leading-5 text-sm text-[#737373]">
-                {t('government.eudiSection.tagline')}
-              </span>
-              <h2 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
-                {t('government.eudiSection.title')}
-              </h2>
-              <p className="font-normal leading-6 text-[#737373] text-base w-full">
-                {t('government.eudiSection.description')}
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3 items-start relative shrink-0 w-full">
-              <Button
-                variant="primary"
-                onClick={() => {
-                  navigate(getLocalizedPath('/government/playground'))
-                  setTimeout(() => {
-                    scrollToTop()
-                  }, 100)
-                }}
-              >
-                {t('government.cta.playgroundButton')}
-              </Button>
-            </div>
-            <ImageWithPlaceholder
-              src={governmentSolutionsHero}
-              alt={t('government.eudiSection.title')}
-              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
-              containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
-              loading="lazy"
-            />
-          </div>
-        </section>
-
-        {/* McKinsey Quote Section */}
-        <section className="bg-white flex flex-col items-center px-0 py-16 md:py-24 relative w-full">
+        {/* 2. McKinsey Quote Section */}
+        <section className="flex flex-col items-center px-0 py-16 md:py-24 relative w-full" style={BACKGROUND_STYLE}>
           <div className="flex flex-col gap-4 items-center max-w-[672px] px-6 w-full">
             <p className="font-medium leading-7 md:leading-7 text-lg md:text-xl text-[#0a0a0a] text-center">
               {t('government.mckinsey.quote')}
@@ -299,8 +198,8 @@ export default function GovernmentPage() {
           </div>
         </section>
 
-        {/* Benefits for Government Section */}
-        <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
+        {/* 3. Benefits for Government Section */}
+        <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           <div className="flex flex-col gap-10 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
               title={t('government.govBenefits.title')}
@@ -343,8 +242,8 @@ export default function GovernmentPage() {
           </div>
         </section>
 
-        {/* Benefits for Citizens Section */}
-        <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
+        {/* 4. Benefits for Citizens Section */}
+        <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
           <div className="flex flex-col gap-10 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
               title={t('government.citizenBenefits.title')}
@@ -387,8 +286,8 @@ export default function GovernmentPage() {
           </div>
         </section>
 
-        {/* Investment Stats Section */}
-        <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
+        {/* 5. Investment Stats Section */}
+        <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           {/* Desktop Layout */}
           <div className="hidden md:flex flex-col gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-12 items-start relative shrink-0 w-full">
@@ -441,34 +340,7 @@ export default function GovernmentPage() {
           </div>
         </section>
 
-        {/* Why Folio Section - FAQ style centered */}
-        <section className="bg-white flex flex-col gap-6 items-center px-0 py-16 md:py-24 relative shrink-0 w-full">
-          <div className="flex flex-col gap-10 md:gap-16 items-center max-w-[672px] px-6 py-0 relative shrink-0 w-full">
-            {/* Title and description - centered */}
-            <div className="flex flex-col gap-4 md:gap-5 items-center relative shrink-0 w-full">
-              <h2 className="font-bold leading-[36px] md:leading-[40px] text-[30px] md:text-[36px] text-[#0a0a0a] tracking-[0px] text-center w-full">
-                {t('government.whyFolio.title')}
-              </h2>
-              <p className="font-normal leading-6 text-[#737373] text-base text-center w-full">
-                {t('government.whyFolio.combinedDescription')}
-              </p>
-            </div>
-            {/* Accordion items */}
-            <div className="flex flex-col items-start relative shrink-0 w-full">
-              {whyFolioItems.map((item, index) => (
-                <SgoCapabilityItem
-                  key={item.id}
-                  title={item.title}
-                  description={item.description}
-                  isOpen={activeWhyFolioId === index}
-                  onClick={() => setActiveWhyFolioId(activeWhyFolioId === index ? null : index)}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Case Study Section */}
+        {/* 6. Case Study Section */}
         <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
           {/* Desktop Layout */}
           <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
@@ -665,7 +537,7 @@ export default function GovernmentPage() {
           </div>
         </section>
 
-        {/* Overview Section */}
+        {/* 7. Overview Section */}
         <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           <div className="flex flex-col gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <SectionHeader
@@ -677,10 +549,10 @@ export default function GovernmentPage() {
           </div>
         </section>
 
-        {/* Global Partners Section */}
+        {/* 8. Global Partners Section */}
         <GlobalPartnersSection />
 
-        {/* Gov Features Section */}
+        {/* 9. Gov Features Section */}
         <section id="gov-features" className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           <div className="flex flex-col gap-12 md:gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-10 md:gap-12 items-center relative shrink-0 w-full">
@@ -714,7 +586,109 @@ export default function GovernmentPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* 10. EUDI Section */}
+        <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
+          {/* Desktop Layout */}
+          <div className="hidden md:flex gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+            <ImageWithPlaceholder
+              src={governmentSolutionsHero}
+              alt={t('government.eudiSection.title')}
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="flex-1 min-h-0 min-w-0 relative rounded-2xl aspect-[240/240]"
+              loading="lazy"
+            />
+            <div className="flex flex-1 flex-col gap-8 items-start relative min-w-0">
+              <div className="flex flex-col gap-2 items-start relative shrink-0 w-full">
+                <span className="font-medium leading-5 text-sm text-[#737373]">
+                  {t('government.eudiSection.tagline')}
+                </span>
+                <h2 className="font-bold leading-[40px] text-[36px] text-[#0a0a0a] tracking-[0px]">
+                  {t('government.eudiSection.title')}
+                </h2>
+                <p className="font-normal leading-6 text-[#737373] text-base w-full mt-2">
+                  {t('government.eudiSection.description')}
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-3 items-start relative shrink-0">
+                <Button
+                  variant="primary"
+                  onClick={() => {
+                    navigate(getLocalizedPath('/government/playground'))
+                    setTimeout(() => {
+                      scrollToTop()
+                    }, 100)
+                  }}
+                >
+                  {t('government.cta.playgroundButton')}
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Layout */}
+          <div className="flex md:hidden flex-col gap-8 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+            <div className="flex flex-col gap-4 items-start relative shrink-0 w-full">
+              <span className="font-medium leading-5 text-sm text-[#737373]">
+                {t('government.eudiSection.tagline')}
+              </span>
+              <h2 className="font-bold leading-9 text-[30px] text-[#0a0a0a] tracking-[0px]">
+                {t('government.eudiSection.title')}
+              </h2>
+              <p className="font-normal leading-6 text-[#737373] text-base w-full">
+                {t('government.eudiSection.description')}
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 items-start relative shrink-0 w-full">
+              <Button
+                variant="primary"
+                onClick={() => {
+                  navigate(getLocalizedPath('/government/playground'))
+                  setTimeout(() => {
+                    scrollToTop()
+                  }, 100)
+                }}
+              >
+                {t('government.cta.playgroundButton')}
+              </Button>
+            </div>
+            <ImageWithPlaceholder
+              src={governmentSolutionsHero}
+              alt={t('government.eudiSection.title')}
+              className="absolute inset-0 max-w-none object-center object-cover rounded-2xl w-full h-full"
+              containerClassName="aspect-[240/240] relative rounded-2xl shrink-0 w-full"
+              loading="lazy"
+            />
+          </div>
+        </section>
+
+        {/* 11. Why Folio Section - FAQ style centered */}
+        <section className="bg-white flex flex-col gap-6 items-center px-0 py-16 md:py-24 relative shrink-0 w-full">
+          <div className="flex flex-col gap-10 md:gap-16 items-center max-w-[672px] px-6 py-0 relative shrink-0 w-full">
+            {/* Title and description - centered */}
+            <div className="flex flex-col gap-4 md:gap-5 items-center relative shrink-0 w-full">
+              <h2 className="font-bold leading-[36px] md:leading-[40px] text-[30px] md:text-[36px] text-[#0a0a0a] tracking-[0px] text-center w-full">
+                {t('government.whyFolio.title')}
+              </h2>
+              <p className="font-normal leading-6 text-[#737373] text-base text-center w-full">
+                {t('government.whyFolio.combinedDescription')}
+              </p>
+            </div>
+            {/* Accordion items */}
+            <div className="flex flex-col items-start relative shrink-0 w-full">
+              {whyFolioItems.map((item, index) => (
+                <SgoCapabilityItem
+                  key={item.id}
+                  title={item.title}
+                  description={item.description}
+                  isOpen={activeWhyFolioId === index}
+                  onClick={() => setActiveWhyFolioId(activeWhyFolioId === index ? null : index)}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 12. CTA Section */}
         <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-0 md:pb-24 relative shrink-0 w-full bg-white">
           {/* Desktop Layout */}
           <div className="hidden md:flex items-center max-w-[1280px] px-6 relative shrink-0 w-full">
@@ -732,20 +706,9 @@ export default function GovernmentPage() {
                   onClick={() => {
                     window.location.href = 'mailto:contact@folio.id'
                   }}
-                  variant="secondary"
-                >
-                  {t('government.cta.button')}
-                </Button>
-                <Button
-                  onClick={() => {
-                    navigate(getLocalizedPath('/government/playground'))
-                    setTimeout(() => {
-                      scrollToTop()
-                    }, 100)
-                  }}
                   variant="primary"
                 >
-                  {t('government.cta.playgroundButton')}
+                  {t('government.cta.button')}
                 </Button>
               </div>
             </div>
@@ -766,22 +729,10 @@ export default function GovernmentPage() {
                 onClick={() => {
                   window.location.href = 'mailto:contact@folio.id'
                 }}
-                variant="secondary"
-                fullWidth
-              >
-                {t('government.cta.button')}
-              </Button>
-              <Button
-                onClick={() => {
-                  navigate(getLocalizedPath('/government/playground'))
-                  setTimeout(() => {
-                    scrollToTop()
-                  }, 100)
-                }}
                 variant="primary"
                 fullWidth
               >
-                {t('government.cta.playgroundButton')}
+                {t('government.cta.button')}
               </Button>
             </div>
           </div>
