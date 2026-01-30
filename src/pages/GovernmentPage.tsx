@@ -537,22 +537,7 @@ export default function GovernmentPage() {
           </div>
         </section>
 
-        {/* 7. Overview Section */}
-        <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
-          <div className="flex flex-col gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-            <SectionHeader
-              title={t('government.overview.title')}
-              description={t('government.overview.description')}
-              align="center"
-              maxWidth="576px"
-            />
-          </div>
-        </section>
-
-        {/* 8. Global Partners Section */}
-        <GlobalPartnersSection />
-
-        {/* 9. Gov Features Section */}
+        {/* 7. Gov Features Section */}
         <section id="gov-features" className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           <div className="flex flex-col gap-12 md:gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-10 md:gap-12 items-center relative shrink-0 w-full">
@@ -585,6 +570,21 @@ export default function GovernmentPage() {
             </div>
           </div>
         </section>
+
+        {/* 8. Overview Section */}
+        <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
+          <div className="flex flex-col gap-16 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+            <SectionHeader
+              title={t('government.overview.title')}
+              description={t('government.overview.description')}
+              align="center"
+              maxWidth="576px"
+            />
+          </div>
+        </section>
+
+        {/* 9. Global Partners Section */}
+        <GlobalPartnersSection />
 
         {/* 10. EUDI Section */}
         <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
