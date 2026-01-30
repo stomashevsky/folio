@@ -1,13 +1,26 @@
-import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
-import { SectionHeader, Button, FeatureBlock, HeroTagline } from '../components/ui'
+import { SectionHeader, Button, FeatureBlock, ToolCard } from '../components/ui'
 import FooterSection from '../components/sections/FooterSection'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { getOgImageUrl } from '../configs/ogImages'
-import { scrollToTop } from '../utils/scrollToTop'
 import { useLocalizedPath } from '../i18n/useLocalizedPath'
-import landmarkIcon from '../assets/icons/Landmark.svg'
+
+// Icons for govBenefits cards
+import building2Icon from '../assets/icons/Building2.svg'
+import barChart4Icon from '../assets/icons/BarChart4.svg'
+import handCoinsIcon from '../assets/icons/HandCoins.svg'
+import shieldCheckIcon from '../assets/icons/ShieldCheck.svg'
+import heartHandshakeIcon from '../assets/icons/HeartHandshake.svg'
+import sparklesIcon from '../assets/icons/Sparkles.svg'
+
+// Icons for citizenBenefits cards
+import zapIcon from '../assets/icons/Zap.svg'
+import lockKeyholeIcon from '../assets/icons/LockKeyhole.svg'
+import userCheckIcon from '../assets/icons/UserCheck.svg'
+import creditCardIcon from '../assets/icons/CreditCard.svg'
+import fingerprintIcon from '../assets/icons/Fingerprint.svg'
+
 
 // Background style using inline styles for complex multi-layer gradient
 const BACKGROUND_STYLE = {
@@ -17,8 +30,7 @@ const BACKGROUND_STYLE = {
 
 export default function GovernmentUkPage() {
   const { t } = useTranslation('government')
-  const navigate = useNavigate()
-  const { getLocalizedPath, currentLang } = useLocalizedPath()
+  const { currentLang } = useLocalizedPath()
   
   const canonicalUrl = `https://folio.id/${currentLang}/government/uk`
 
@@ -40,7 +52,6 @@ export default function GovernmentUkPage() {
         <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 pt-32 md:pt-[164px] pb-16 md:pb-24 relative shrink-0 w-full">
           <div className="flex flex-col gap-8 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-6 items-center relative shrink-0 w-full max-w-[768px] text-center">
-              <HeroTagline icon={landmarkIcon}>{t('government.uk.hero.tagline')}</HeroTagline>
               <h1 className="font-bold leading-[48px] md:leading-[56px] text-[30px] md:text-[48px] text-[#0a0a0a] tracking-[0px]">
                 {t('government.uk.hero.title')}
               </h1>
@@ -48,136 +59,107 @@ export default function GovernmentUkPage() {
                 {t('government.uk.hero.description')}
               </p>
             </div>
-            <div className="flex flex-wrap gap-3 items-center justify-center relative">
-              <Button
-                onClick={() => {
-                  window.location.href = 'mailto:contact@folio.id'
-                }}
-                variant="primary"
-              >
-                {t('government.uk.cta.button')}
-              </Button>
-              <Button
-                onClick={() => {
-                  navigate(getLocalizedPath('/government/playground'))
-                  setTimeout(() => {
-                    scrollToTop()
-                  }, 100)
-                }}
-                variant="outline"
-              >
-                {t('government.uk.cta.playgroundButton')}
-              </Button>
-            </div>
+            <Button
+              onClick={() => {
+                window.location.href = 'mailto:contact@folio.id'
+              }}
+              variant="primary"
+            >
+              {t('government.uk.cta.button')}
+            </Button>
           </div>
         </section>
 
         {/* Benefits for Government Section */}
         <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
-          <div className="flex flex-col gap-12 md:gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-            <div className="flex flex-col gap-10 md:gap-12 items-center relative shrink-0 w-full">
-              <SectionHeader
-                title={t('government.uk.govBenefits.title')}
-                description={t('government.uk.govBenefits.description')}
-                align="center"
-                maxWidth="576px"
+          <div className="flex flex-col gap-10 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+            <SectionHeader
+              title={t('government.uk.govBenefits.title')}
+              description={t('government.uk.govBenefits.description')}
+              align="center"
+              maxWidth="576px"
+            />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start justify-center relative shrink-0 w-full">
+              <ToolCard
+                icon={building2Icon}
+                title={t('government.uk.govBenefits.items.services.title')}
+                description={t('government.uk.govBenefits.items.services.description')}
               />
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-11 md:gap-6 items-start relative shrink-0 w-full">
-                <FeatureBlock
-                  icon="building"
-                  title={t('government.uk.govBenefits.items.services.title')}
-                  description={t('government.uk.govBenefits.items.services.description')}
-                  align="left"
-                />
-                <FeatureBlock
-                  icon="bar-chart"
-                  title={t('government.uk.govBenefits.items.gdp.title')}
-                  description={t('government.uk.govBenefits.items.gdp.description')}
-                  align="left"
-                />
-                <FeatureBlock
-                  icon="hand-coins"
-                  title={t('government.uk.govBenefits.items.revenue.title')}
-                  description={t('government.uk.govBenefits.items.revenue.description')}
-                  align="left"
-                />
-                <FeatureBlock
-                  icon="shield-check"
-                  title={t('government.uk.govBenefits.items.security.title')}
-                  description={t('government.uk.govBenefits.items.security.description')}
-                  align="left"
-                />
-                <FeatureBlock
-                  icon="heart-handshake"
-                  title={t('government.uk.govBenefits.items.trust.title')}
-                  description={t('government.uk.govBenefits.items.trust.description')}
-                  align="left"
-                />
-                <FeatureBlock
-                  icon="sparkles"
-                  title={t('government.uk.govBenefits.items.ai.title')}
-                  description={t('government.uk.govBenefits.items.ai.description')}
-                  align="left"
-                />
-              </div>
+              <ToolCard
+                icon={barChart4Icon}
+                title={t('government.uk.govBenefits.items.gdp.title')}
+                description={t('government.uk.govBenefits.items.gdp.description')}
+              />
+              <ToolCard
+                icon={handCoinsIcon}
+                title={t('government.uk.govBenefits.items.revenue.title')}
+                description={t('government.uk.govBenefits.items.revenue.description')}
+              />
+              <ToolCard
+                icon={shieldCheckIcon}
+                title={t('government.uk.govBenefits.items.security.title')}
+                description={t('government.uk.govBenefits.items.security.description')}
+              />
+              <ToolCard
+                icon={heartHandshakeIcon}
+                title={t('government.uk.govBenefits.items.trust.title')}
+                description={t('government.uk.govBenefits.items.trust.description')}
+              />
+              <ToolCard
+                icon={sparklesIcon}
+                title={t('government.uk.govBenefits.items.ai.title')}
+                description={t('government.uk.govBenefits.items.ai.description')}
+              />
             </div>
           </div>
         </section>
 
         {/* Benefits for Citizens Section */}
         <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
-          <div className="flex flex-col gap-12 md:gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-            <div className="flex flex-col gap-10 md:gap-12 items-center relative shrink-0 w-full">
-              <SectionHeader
-                title={t('government.uk.citizenBenefits.title')}
-                description={t('government.uk.citizenBenefits.description')}
-                align="center"
-                maxWidth="576px"
+          <div className="flex flex-col gap-10 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+            <SectionHeader
+              title={t('government.uk.citizenBenefits.title')}
+              description={t('government.uk.citizenBenefits.description')}
+              align="center"
+              maxWidth="576px"
+            />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start justify-center relative shrink-0 w-full">
+              <ToolCard
+                icon={zapIcon}
+                title={t('government.uk.citizenBenefits.items.convenience.title')}
+                description={t('government.uk.citizenBenefits.items.convenience.description')}
               />
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-11 md:gap-6 items-start relative shrink-0 w-full">
-                <FeatureBlock
-                  icon="zap"
-                  title={t('government.uk.citizenBenefits.items.convenience.title')}
-                  description={t('government.uk.citizenBenefits.items.convenience.description')}
-                  align="left"
-                />
-                <FeatureBlock
-                  icon="lock-keyhole"
-                  title={t('government.uk.citizenBenefits.items.privacy.title')}
-                  description={t('government.uk.citizenBenefits.items.privacy.description')}
-                  align="left"
-                />
-                <FeatureBlock
-                  icon="user-check"
-                  title={t('government.uk.citizenBenefits.items.control.title')}
-                  description={t('government.uk.citizenBenefits.items.control.description')}
-                  align="left"
-                />
-                <FeatureBlock
-                  icon="credit-card"
-                  title={t('government.uk.citizenBenefits.items.transactions.title')}
-                  description={t('government.uk.citizenBenefits.items.transactions.description')}
-                  align="left"
-                />
-                <FeatureBlock
-                  icon="fingerprint"
-                  title={t('government.uk.citizenBenefits.items.kyc.title')}
-                  description={t('government.uk.citizenBenefits.items.kyc.description')}
-                  align="left"
-                />
-                <FeatureBlock
-                  icon="shield-check"
-                  title={t('government.uk.citizenBenefits.items.fraud.title')}
-                  description={t('government.uk.citizenBenefits.items.fraud.description')}
-                  align="left"
-                />
-              </div>
+              <ToolCard
+                icon={lockKeyholeIcon}
+                title={t('government.uk.citizenBenefits.items.privacy.title')}
+                description={t('government.uk.citizenBenefits.items.privacy.description')}
+              />
+              <ToolCard
+                icon={userCheckIcon}
+                title={t('government.uk.citizenBenefits.items.control.title')}
+                description={t('government.uk.citizenBenefits.items.control.description')}
+              />
+              <ToolCard
+                icon={creditCardIcon}
+                title={t('government.uk.citizenBenefits.items.transactions.title')}
+                description={t('government.uk.citizenBenefits.items.transactions.description')}
+              />
+              <ToolCard
+                icon={fingerprintIcon}
+                title={t('government.uk.citizenBenefits.items.kyc.title')}
+                description={t('government.uk.citizenBenefits.items.kyc.description')}
+              />
+              <ToolCard
+                icon={shieldCheckIcon}
+                title={t('government.uk.citizenBenefits.items.fraud.title')}
+                description={t('government.uk.citizenBenefits.items.fraud.description')}
+              />
             </div>
           </div>
         </section>
 
         {/* Why Folio Section */}
-        <section className="flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full" style={BACKGROUND_STYLE}>
+        <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
           <div className="flex flex-col gap-12 md:gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
             <div className="flex flex-col gap-10 md:gap-12 items-center relative shrink-0 w-full">
               <SectionHeader
@@ -246,20 +228,9 @@ export default function GovernmentUkPage() {
                   onClick={() => {
                     window.location.href = 'mailto:contact@folio.id'
                   }}
-                  variant="secondary"
-                >
-                  {t('government.uk.cta.button')}
-                </Button>
-                <Button
-                  onClick={() => {
-                    navigate(getLocalizedPath('/government/playground'))
-                    setTimeout(() => {
-                      scrollToTop()
-                    }, 100)
-                  }}
                   variant="primary"
                 >
-                  {t('government.uk.cta.playgroundButton')}
+                  {t('government.uk.cta.button')}
                 </Button>
               </div>
             </div>
@@ -275,29 +246,15 @@ export default function GovernmentUkPage() {
                 {t('government.uk.cta.description')}
               </p>
             </div>
-            <div className="flex flex-col gap-3 items-center relative shrink-0 w-full">
-              <Button
-                onClick={() => {
-                  window.location.href = 'mailto:contact@folio.id'
-                }}
-                variant="secondary"
-                fullWidth
-              >
-                {t('government.uk.cta.button')}
-              </Button>
-              <Button
-                onClick={() => {
-                  navigate(getLocalizedPath('/government/playground'))
-                  setTimeout(() => {
-                    scrollToTop()
-                  }, 100)
-                }}
-                variant="primary"
-                fullWidth
-              >
-                {t('government.uk.cta.playgroundButton')}
-              </Button>
-            </div>
+            <Button
+              onClick={() => {
+                window.location.href = 'mailto:contact@folio.id'
+              }}
+              variant="primary"
+              fullWidth
+            >
+              {t('government.uk.cta.button')}
+            </Button>
           </div>
         </section>
       </main>

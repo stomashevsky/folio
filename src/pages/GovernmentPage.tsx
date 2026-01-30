@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
-import { SectionHeader, Button, FeatureBlock, HeroTagline } from '../components/ui'
+import { SectionHeader, Button, FeatureBlock, HeroTagline, ToolCard } from '../components/ui'
 import ImageWithPlaceholder from '../components/ui/ImageWithPlaceholder'
 import FooterSection from '../components/sections/FooterSection'
 import GlobalPartnersSection from '../components/sections/GlobalPartnersSection'
@@ -13,6 +13,8 @@ import governmentSolutionsHero from '../assets/images/government-solutions-hero.
 import governmentAlbaniaCaseStudy from '../assets/images/government-albania-case-study.png'
 import governmentTestimonialAvatar from '../assets/images/government-testimonial-avatar.png'
 import landmarkIcon from '../assets/icons/Landmark.svg'
+import barChart4Icon from '../assets/icons/BarChart4.svg'
+import userCheckIcon from '../assets/icons/UserCheck.svg'
 
 // Background style using inline styles for complex multi-layer gradient
 // This cannot be easily expressed in Tailwind CSS, so inline style is used
@@ -142,6 +144,38 @@ export default function GovernmentPage() {
             align="center"
             maxWidth="576px"
           />
+        </div>
+      </section>
+
+      {/* UK Section */}
+      <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
+        <div className="flex flex-col gap-10 items-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
+          <SectionHeader
+            title={t('government.ukSection.title')}
+            description={t('government.ukSection.description')}
+            align="center"
+            maxWidth="576px"
+          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start justify-center relative shrink-0 w-full">
+            <ToolCard
+              icon={landmarkIcon}
+              title={t('government.ukSection.features.sovereign.title')}
+              description={t('government.ukSection.features.sovereign.description')}
+              to={getLocalizedPath('/government/uk')}
+            />
+            <ToolCard
+              icon={barChart4Icon}
+              title={t('government.ukSection.features.growth.title')}
+              description={t('government.ukSection.features.growth.description')}
+              to={getLocalizedPath('/government/uk')}
+            />
+            <ToolCard
+              icon={userCheckIcon}
+              title={t('government.ukSection.features.citizens.title')}
+              description={t('government.ukSection.features.citizens.description')}
+              to={getLocalizedPath('/government/uk')}
+            />
+          </div>
         </div>
       </section>
 
@@ -363,51 +397,6 @@ export default function GovernmentPage() {
             containerClassName="aspect-[240/426.67] relative rounded-2xl shrink-0 w-full"
             loading="lazy"
           />
-        </div>
-      </section>
-
-      {/* UK Section */}
-      <section className="bg-white flex flex-col gap-6 items-center overflow-hidden px-0 py-16 md:py-24 relative shrink-0 w-full">
-        <div className="flex flex-col gap-12 md:gap-16 items-start justify-center max-w-[1280px] px-6 py-0 relative shrink-0 w-full">
-          <div className="flex flex-col gap-10 md:gap-12 items-center relative shrink-0 w-full">
-            <SectionHeader
-              title={t('government.ukSection.title')}
-              description={t('government.ukSection.description')}
-              align="center"
-              maxWidth="576px"
-            />
-            <div className="flex flex-col md:flex-row gap-11 md:gap-6 items-start relative shrink-0 w-full">
-              <FeatureBlock
-                icon="landmark"
-                title={t('government.ukSection.features.sovereign.title')}
-                description={t('government.ukSection.features.sovereign.description')}
-                align="left"
-              />
-              <FeatureBlock
-                icon="bar-chart"
-                title={t('government.ukSection.features.growth.title')}
-                description={t('government.ukSection.features.growth.description')}
-                align="left"
-              />
-              <FeatureBlock
-                icon="user-check"
-                title={t('government.ukSection.features.citizens.title')}
-                description={t('government.ukSection.features.citizens.description')}
-                align="left"
-              />
-            </div>
-            <Button
-              onClick={() => {
-                navigate(getLocalizedPath('/government/uk'))
-                setTimeout(() => {
-                  scrollToTop()
-                }, 100)
-              }}
-              variant="secondary"
-            >
-              {t('government.ukSection.button')}
-            </Button>
-          </div>
         </div>
       </section>
 
